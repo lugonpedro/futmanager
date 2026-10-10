@@ -1,11 +1,12 @@
 import { generateWorld } from '../generate/world.ts'
-import { autoLineup } from '../match/lineup.ts'
+import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
 import type {
   Fixture,
   FixtureResult,
   GameState,
   LeagueOutcome,
+  Lineup,
   MatchResult,
   Season,
   SeasonSummary,
@@ -79,19 +80,25 @@ export function unavailablePlayers(season: Season): Set<string> {
   return new Set([...Object.keys(season.injuries), ...Object.keys(season.suspensions)])
 }
 
+/**
+ * The lineup a club takes into its next match. The user's saved one is patched
+ * up for injuries and bans; AI clubs pick their best formation and XI.
+ */
+export function clubLineup(game: GameState, clubId: string): Lineup {
+  const { world } = game
+  const squad = world.clubs[clubId].playerIds.map((id) => world.players[id])
+  const out = unavailablePlayers(game.season)
+  if (clubId === game.userClubId && game.userLineup) {
+    return repairLineup(game.userLineup, squad, out)
+  }
+  return autoLineup(squad, autoFormation(squad, out), 'normal', out)
+}
+
 export function matchInput(game: GameState, fixture: Fixture): MatchInput {
   const { world } = game
-  const out = unavailablePlayers(game.season)
-  const lineup = (clubId: string) =>
-    autoLineup(
-      world.clubs[clubId].playerIds.map((id) => world.players[id]),
-      '4-4-2',
-      'normal',
-      out,
-    )
   return {
-    home: { club: world.clubs[fixture.homeId], lineup: lineup(fixture.homeId) },
-    away: { club: world.clubs[fixture.awayId], lineup: lineup(fixture.awayId) },
+    home: { club: world.clubs[fixture.homeId], lineup: clubLineup(game, fixture.homeId) },
+    away: { club: world.clubs[fixture.awayId], lineup: clubLineup(game, fixture.awayId) },
     players: world.players,
   }
 }

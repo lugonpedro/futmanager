@@ -84,19 +84,25 @@ Cada fase termina com algo jogável e testes do motor passando.
 - Escalação automática por formação já entrou aqui (`autoLineup`), e a partida pode ser jogada minuto a minuto (`createMatch` + `playMinute`) com substituições e troca de postura, prontas para a fase 4
 - Tela de amistoso em `/amistoso` para ver a narração rodando
 
-### Fase 3: Temporada
+### Fase 3: Temporada (feita)
 
 - Calendário turno e returno, rodada simula todos os jogos (no Worker)
 - Tabela com critérios de desempate, artilharia
 - Fim de temporada: acesso/rebaixamento, premiação em dinheiro, nova temporada
 - UI: Tabela, Calendário, tela de Partida "ao vivo" (eventos aparecendo minuto a minuto, placares dos outros jogos ao lado)
 
-### Fase 4: Elenco e escalação
+### Fase 4: Elenco e escalação (feita, PR #5)
 
 - Tela de elenco ordenável/filtrável
 - Escalação com formações (4-4-2, 4-3-3, 3-5-2, 4-5-1, 5-3-2) e postura (defensiva, normal, ofensiva)
 - Escalação automática para a IA e botão "escalar automaticamente" para o jogador
 - Substituições e troca de tática durante a partida
+
+### Fase 4.5: Interface com shadcn/ui e menu
+
+- Instalar shadcn/ui (em cima do Tailwind que já está no projeto) e trocar botões, abas, tabelas, selects e diálogos pelos componentes dele
+- Menu de navegação do jogo: barra lateral no computador e menu sanfona (hambúrguer) no celular, com Resumo, Escalação, Elenco, Tabela, Calendário e Artilharia, e acesso ao menu principal
+- Tema claro/escuro e visual consistente em todas as telas, inclusive Partida e Amistoso
 
 ### Fase 5: Finanças e mercado
 

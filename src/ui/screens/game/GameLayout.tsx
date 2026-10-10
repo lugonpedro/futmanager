@@ -6,6 +6,8 @@ import { divisionName, formatMoney } from '../../format.ts'
 
 const TABS = [
   { to: '/jogo', label: 'Resumo', end: true },
+  { to: '/jogo/escalacao', label: 'Escalação' },
+  { to: '/jogo/elenco', label: 'Elenco' },
   { to: '/jogo/tabela', label: 'Tabela' },
   { to: '/jogo/calendario', label: 'Calendário' },
   { to: '/jogo/artilharia', label: 'Artilharia' },

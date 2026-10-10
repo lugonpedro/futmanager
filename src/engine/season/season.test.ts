@@ -1,12 +1,15 @@
 import { describe, expect, it } from 'vitest'
+import { autoLineup } from '../match/lineup.ts'
 import { matchResult, playMinute } from '../match/simulate.ts'
 import type { GameState, MatchResult } from '../model/types.ts'
 import {
   applyRound,
+  clubLineup,
   createRoundMatches,
   isSeasonOver,
   leagueScorers,
   leagueStandings,
+  matchInput,
   newGame,
   PROMOTION_SPOTS,
   playRound,
@@ -199,5 +202,42 @@ describe('end of season', () => {
     expect(roundFixtures(next.season).every((f) => !f.result)).toBe(true)
     const third = playSeason(next)
     expect(leagueStandings(third, 'L1').every((row) => row.played === 38)).toBe(true)
+  })
+})
+
+describe('lineups', () => {
+  const squadOf = (game: GameState) =>
+    game.world.clubs[game.userClubId].playerIds.map((id) => game.world.players[id])
+
+  it('plays the user with the lineup they saved', () => {
+    const saved = autoLineup(squadOf(start), '5-3-2', 'defensiva')
+    const game = { ...start, userLineup: saved }
+    const fixture = userFixture(game)!
+    const input = matchInput(game, fixture)
+    const side = fixture.homeId === game.userClubId ? input.home : input.away
+    expect(side.lineup).toEqual(saved)
+    expect(clubLineup(game, game.userClubId)).toEqual(saved)
+  })
+
+  it('replaces saved starters who are injured', () => {
+    const saved = autoLineup(squadOf(start), '4-4-2')
+    const hurt = saved.starters[3].playerId
+    const game = {
+      ...start,
+      userLineup: saved,
+      season: { ...start.season, injuries: { [hurt]: 2 } },
+    }
+    const lineup = clubLineup(game, game.userClubId)
+    expect(lineup.starters).toHaveLength(11)
+    expect(lineup.starters.map((s) => s.playerId)).not.toContain(hurt)
+    expect(lineup.bench).not.toContain(hurt)
+  })
+
+  it('lets AI clubs pick a full lineup of their own', () => {
+    const fixture = userFixture(start)!
+    const rival = fixture.homeId === start.userClubId ? fixture.awayId : fixture.homeId
+    const lineup = clubLineup(start, rival)
+    expect(lineup.starters).toHaveLength(11)
+    expect(lineup.posture).toBe('normal')
   })
 })

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import type { GameState } from '../../../engine/model/types.ts'
 import {
+  clubLineup,
   isSeasonOver,
   leagueOf,
   leagueStandings,
@@ -12,7 +13,7 @@ import {
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { simulateRounds } from '../../../worker/simulate.ts'
 import { ClubName } from '../../components/ClubName.tsx'
-import { divisionName, formatMoney } from '../../format.ts'
+import { divisionName, formatMoney, POSTURE_NAMES } from '../../format.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 
 export function OverviewScreen() {
@@ -29,6 +30,7 @@ function NextRound({ game }: { game: GameState }) {
   const table = leagueStandings(game, leagueId)
   const position = table.findIndex((row) => row.clubId === userClubId) + 1
   const lastRound = season.round > 1 ? season.fixtures[leagueId][season.round - 2] : []
+  const lineup = clubLineup(game, userClubId)
   const squad = new Set(world.clubs[userClubId].playerIds)
   const out = [
     ...Object.entries(season.injuries).map(([id, rounds]) => ({ id, rounds, why: 'lesionado' })),
@@ -55,6 +57,12 @@ function NextRound({ game }: { game: GameState }) {
             <FixtureLine fixture={fixture} world={world} userClubId={userClubId} />
           </div>
         )}
+        <p className="text-sm text-green-200">
+          Escalação: {lineup.formation}, postura {POSTURE_NAMES[lineup.posture].toLowerCase()}.{' '}
+          <Link to="/jogo/escalacao" className="underline">
+            Mudar
+          </Link>
+        </p>
         <div className="flex flex-wrap gap-2">
           <Link
             to="/jogo/partida"
