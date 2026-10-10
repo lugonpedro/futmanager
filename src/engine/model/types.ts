@@ -180,6 +180,8 @@ export type SeasonSummary = {
 export type GameState = {
   world: World
   userClubId: string
+  /** The user's lineup and tactics as last set; patched up before each match. */
+  userLineup?: Lineup
   season: Season
   history: SeasonSummary[]
 }

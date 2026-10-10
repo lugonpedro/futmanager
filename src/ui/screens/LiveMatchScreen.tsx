@@ -10,6 +10,7 @@ import {
 } from '../../engine/season/season.ts'
 import { useGameStore } from '../../store/game.ts'
 import { ClubName } from '../components/ClubName.tsx'
+import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
 import { divisionName } from '../format.ts'
 
@@ -36,6 +37,7 @@ function LiveRound({ game }: { game: GameState }) {
 
   const own = matches.find((m) => involves(m, game.userClubId))!
   const { state } = own
+  const side = own.fixture.homeId === game.userClubId ? 'home' : 'away'
   const finished = matches.every((m) => m.state.finished)
   const halftime = state.minute === 45 && paused
 
@@ -138,6 +140,13 @@ function LiveRound({ game }: { game: GameState }) {
           </div>
 
           <MatchFeed events={state.events} className="max-h-[50vh] min-h-48" />
+
+          <MatchControls
+            state={state}
+            side={side}
+            onPause={() => setPaused(true)}
+            onChange={() => setTick((t) => t + 1)}
+          />
 
           {result && (
             <table className="mx-auto text-sm tabular-nums">

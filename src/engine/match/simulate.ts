@@ -1,5 +1,6 @@
 import type {
   Club,
+  Formation,
   Lineup,
   MatchEvent,
   MatchResult,
@@ -9,6 +10,7 @@ import type {
   TeamStats,
 } from '../model/types.ts'
 import type { Rng } from '../rng.ts'
+import { fillSlots, formationSlots } from './lineup.ts'
 import { narrate, type GoalKind } from './narration.ts'
 import { effectiveStrength, positionFit, POSTURE_EFFECT, sectorStrength } from './strength.ts'
 
@@ -54,10 +56,11 @@ export type MatchInput = {
   players: Readonly<Record<string, Player>>
 }
 
-type OnPitch = { player: Player; position: Position; energy: number; booked: boolean }
+export type OnPitch = { player: Player; position: Position; energy: number; booked: boolean }
 
-type TeamState = {
+export type TeamState = {
   club: Club
+  formation: Formation
   posture: Posture
   onPitch: OnPitch[]
   bench: Player[]
@@ -89,6 +92,7 @@ const emptyStats = (): TeamStats => ({
 function teamState(input: MatchTeamInput, players: MatchInput['players']): TeamState {
   return {
     club: input.club,
+    formation: input.lineup.formation,
     posture: input.lineup.posture,
     onPitch: input.lineup.starters.map(({ playerId, position }) => ({
       player: players[playerId],
@@ -250,6 +254,27 @@ export function substitute(
 
 export function setPosture(state: MatchState, side: MatchSide, posture: Posture) {
   state[side].posture = posture
+}
+
+/**
+ * Redraws the side in a new formation. Whoever is in goal stays there; everyone
+ * else moves to the slot they fit best. Down to ten, the midfield gives way first.
+ */
+export function setFormation(state: MatchState, side: MatchSide, formation: Formation) {
+  const team = state[side]
+  team.formation = formation
+  const keeper = team.onPitch.find((p) => p.position === 'G')
+  const outfield = team.onPitch.filter((p) => p !== keeper)
+  const positions = formationSlots(formation)
+  if (keeper) positions.splice(positions.indexOf('G'), 1)
+  const slots = fillSlots(
+    outfield.map((p) => p.player),
+    positions,
+  )
+  for (const p of outfield) {
+    const slot = slots.find((s) => s.playerId === p.player.id)
+    if (slot) p.position = slot.position
+  }
 }
 
 /** The bench player who best fills a position, if any. */

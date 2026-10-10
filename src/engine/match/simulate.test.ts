@@ -7,6 +7,7 @@ import {
   createMatch,
   MAX_SUBSTITUTIONS,
   playMinute,
+  setFormation,
   simulateMatch,
   substitute,
 } from './simulate.ts'
@@ -187,5 +188,19 @@ describe('match state', () => {
     expect(made.filter(Boolean)).toHaveLength(MAX_SUBSTITUTIONS)
     expect(match.events.filter((e) => e.type === 'substituicao')).toHaveLength(MAX_SUBSTITUTIONS)
     expect(match.home.onPitch).toHaveLength(11)
+  })
+
+  it('reshapes a side mid-match without moving the keeper', () => {
+    const match = createMatch(input('C1', 'C2'), createRng(3))
+    playMinute(match)
+    const keeper = match.home.onPitch.find((p) => p.position === 'G')!.player.id
+    setFormation(match, 'home', '3-5-2')
+    expect(match.home.formation).toBe('3-5-2')
+    const shape = match.home.onPitch.reduce<Record<string, number>>(
+      (counts, p) => ({ ...counts, [p.position]: (counts[p.position] ?? 0) + 1 }),
+      {},
+    )
+    expect(shape).toEqual({ G: 1, Z: 3, M: 5, A: 2 })
+    expect(match.home.onPitch.find((p) => p.position === 'G')!.player.id).toBe(keeper)
   })
 })
