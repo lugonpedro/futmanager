@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import { generateWorld } from '../../engine/generate/world.ts'
 import { autoLineup, FORMATIONS } from '../../engine/match/lineup.ts'
@@ -8,21 +8,12 @@ import {
   playMinute,
   type MatchState,
 } from '../../engine/match/simulate.ts'
-import type { Formation, MatchEvent, Posture, World } from '../../engine/model/types.ts'
+import type { Formation, Posture, World } from '../../engine/model/types.ts'
 import { createRng } from '../../engine/rng.ts'
+import { MatchFeed } from '../components/MatchFeed.tsx'
 
 const SPEEDS = { Lento: 400, Normal: 150, Rápido: 40 } as const
 const POSTURES: Posture[] = ['defensiva', 'normal', 'ofensiva']
-
-const EVENT_STYLE: Partial<Record<MatchEvent['type'], string>> = {
-  gol: 'font-bold text-yellow-300',
-  amarelo: 'text-yellow-100',
-  vermelho: 'font-semibold text-red-300',
-  lesao: 'text-orange-200',
-  inicio: 'italic text-green-200',
-  intervalo: 'italic text-green-200',
-  fim: 'font-semibold text-green-100',
-}
 
 const randomSeed = () => Math.floor(Math.random() * 2 ** 31)
 
@@ -45,7 +36,6 @@ export function FriendlyScreen() {
   const [speed, setSpeed] = useState<keyof typeof SPEEDS>('Normal')
   const [match, setMatch] = useState<MatchState>()
   const [, setTick] = useState(0)
-  const feedRef = useRef<HTMLOListElement>(null)
 
   const newWorld = () => {
     const next = randomSeed()
@@ -80,10 +70,6 @@ export function FriendlyScreen() {
     }, SPEEDS[speed])
     return () => clearInterval(timer)
   }, [match, speed])
-
-  useEffect(() => {
-    feedRef.current?.scrollTo({ top: feedRef.current.scrollHeight })
-  })
 
   const result = match?.finished ? matchResult(match) : undefined
 
@@ -173,16 +159,7 @@ export function FriendlyScreen() {
             <p className="text-center text-sm text-green-200">
               {match.finished ? 'Encerrado' : `${match.minute}'`}
             </p>
-            <ol ref={feedRef} className="flex max-h-80 flex-col gap-1 overflow-y-auto text-sm">
-              {match.events.map((event, i) => (
-                <li key={i} className={EVENT_STYLE[event.type] ?? 'text-green-50'}>
-                  <span className="mr-2 inline-block w-8 text-right text-green-300 tabular-nums">
-                    {event.minute}'
-                  </span>
-                  {event.text}
-                </li>
-              ))}
-            </ol>
+            <MatchFeed events={match.events} />
             {result && (
               <table className="mx-auto text-sm tabular-nums">
                 <tbody>
