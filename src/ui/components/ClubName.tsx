@@ -5,7 +5,7 @@ export function ClubName(props: { club: Club; short?: boolean; highlight?: boole
   const { club } = props
   return (
     <span
-      className={`inline-flex min-w-0 items-center gap-2 ${props.highlight ? 'font-bold text-yellow-300' : ''}`}
+      className={`inline-flex min-w-0 items-center gap-2 ${props.highlight ? 'font-bold text-highlight' : ''}`}
     >
       <span
         aria-hidden

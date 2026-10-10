@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
+import { PauseIcon, PlayIcon, SkipForwardIcon } from 'lucide-react'
 import { Navigate, useNavigate } from 'react-router'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import { matchResult, playMinute, type MatchState } from '../../engine/match/simulate.ts'
 import type { GameState } from '../../engine/model/types.ts'
 import {
@@ -9,6 +12,7 @@ import {
   type LiveMatch,
 } from '../../engine/season/season.ts'
 import { useGameStore } from '../../store/game.ts'
+import { Choices } from '../components/Choices.tsx'
 import { ClubName } from '../components/ClubName.tsx'
 import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
@@ -76,10 +80,10 @@ function LiveRound({ game }: { game: GameState }) {
   const result = finished ? matchResult(state) : undefined
 
   return (
-    <main className="min-h-screen bg-green-900 p-4 text-white">
+    <main className="min-h-screen p-4">
       <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]">
-        <section className="flex flex-col gap-3 rounded bg-green-950/60 p-4">
-          <p className="text-center text-sm text-green-200">
+        <Card className="gap-3 px-4">
+          <p className="text-center text-sm text-muted-foreground">
             {divisionName(game.world.clubs[game.userClubId].division)} {game.season.year} · rodada{' '}
             {game.season.round}
           </p>
@@ -87,55 +91,39 @@ function LiveRound({ game }: { game: GameState }) {
             <span className="flex min-w-0 flex-1 justify-end text-right">
               <ClubName club={state.home.club} />
             </span>
-            <span className="shrink-0 rounded bg-black/40 px-3 py-1 whitespace-nowrap tabular-nums">
+            <span className="shrink-0 rounded-md bg-primary px-3 py-1 whitespace-nowrap text-primary-foreground tabular-nums">
               {state.home.stats.goals} x {state.away.stats.goals}
             </span>
             <span className="flex min-w-0 flex-1">
               <ClubName club={state.away.club} />
             </span>
           </div>
-          <p className="text-center text-sm text-green-200">
+          <p className="text-center text-sm text-muted-foreground">
             {finished ? 'Encerrado' : halftime ? 'Intervalo' : `${state.minute}'`}
           </p>
 
           <div className="flex flex-wrap items-center gap-2">
             {finished ? (
-              <button
-                type="button"
-                onClick={finish}
-                className="rounded bg-yellow-400 px-4 py-2 font-semibold text-green-950"
-              >
-                Continuar
-              </button>
+              <Button onClick={finish}>Continuar</Button>
             ) : (
               <>
-                <button
-                  type="button"
-                  onClick={() => setPaused(!paused)}
-                  className="rounded bg-yellow-400 px-4 py-2 font-semibold text-green-950"
-                >
+                <Button onClick={() => setPaused(!paused)}>
+                  {paused ? <PlayIcon /> : <PauseIcon />}
                   {halftime ? 'Começar 2º tempo' : paused ? 'Continuar' : 'Pausar'}
-                </button>
-                <button
-                  type="button"
-                  onClick={skipToEnd}
-                  className="rounded border border-green-400 px-4 py-2 text-green-100"
-                >
+                </Button>
+                <Button variant="outline" onClick={skipToEnd}>
+                  <SkipForwardIcon />
                   Pular para o fim
-                </button>
+                </Button>
               </>
             )}
-            <div className="ml-auto flex items-center gap-1 text-sm">
-              {(Object.keys(SPEEDS) as Speed[]).map((s) => (
-                <button
-                  key={s}
-                  type="button"
-                  onClick={() => setSpeed(s)}
-                  className={`rounded px-2 py-1 ${s === speed ? 'bg-green-600' : 'bg-green-800'}`}
-                >
-                  {s}
-                </button>
-              ))}
+            <div className="ml-auto">
+              <Choices
+                ariaLabel="Velocidade"
+                options={Object.keys(SPEEDS) as Speed[]}
+                value={speed}
+                onChange={setSpeed}
+              />
             </div>
           </div>
 
@@ -162,19 +150,19 @@ function LiveRound({ game }: { game: GameState }) {
                 ).map(([label, key]) => (
                   <tr key={key}>
                     <td className="px-3 text-right">{result.stats.home[key]}</td>
-                    <td className="px-3 text-center text-green-200">{label}</td>
+                    <td className="px-3 text-center text-muted-foreground">{label}</td>
                     <td className="px-3">{result.stats.away[key]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           )}
-        </section>
+        </Card>
 
         <aside className="flex flex-col gap-4">
           {leagues.map((league) => (
-            <section key={league.id} className="rounded bg-green-950/60 p-3">
-              <h2 className="mb-2 text-sm font-semibold">{divisionName(league.division)}</h2>
+            <Card key={league.id} className="gap-2 px-3 py-3">
+              <h2 className="text-sm font-semibold">{divisionName(league.division)}</h2>
               <ul className="flex flex-col gap-1">
                 {matches
                   .filter((m) => m.fixture.leagueId === league.id && m !== own)
@@ -182,7 +170,7 @@ function LiveRound({ game }: { game: GameState }) {
                     <OtherMatch key={m.fixture.id} state={m.state} />
                   ))}
               </ul>
-            </section>
+            </Card>
           ))}
         </aside>
       </div>
@@ -195,10 +183,10 @@ function OtherMatch({ state }: { state: MatchState }) {
   const lastGoal = state.events.findLast((e) => e.type === 'gol')
   const recent = lastGoal && !state.finished && state.minute - lastGoal.minute < 3
   const scorer = (clubId: string) =>
-    recent && lastGoal.clubId === clubId ? 'font-bold text-yellow-300' : ''
+    recent && lastGoal.clubId === clubId ? 'font-bold text-highlight' : ''
   return (
     <li
-      className={`grid grid-cols-[1fr_auto_1fr] gap-2 rounded px-1 text-sm tabular-nums ${recent ? 'bg-yellow-400/20' : ''}`}
+      className={`grid grid-cols-[1fr_auto_1fr] gap-2 rounded px-1 text-sm tabular-nums ${recent ? 'bg-highlight-soft' : ''}`}
     >
       <span className={`text-right ${scorer(state.home.club.id)}`}>
         {state.home.club.shortName}

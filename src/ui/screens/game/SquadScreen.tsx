@@ -1,7 +1,20 @@
-import { useState, type ReactNode } from 'react'
+import { ArrowDownIcon, ArrowUpIcon } from 'lucide-react'
+import { useState } from 'react'
+import { Badge } from '@/components/ui/badge'
+import { Card } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
 import { POSITIONS, type Player, type Position } from '../../../engine/model/types.ts'
 import { clubLineup } from '../../../engine/season/season.ts'
 import { useGame } from '../../../store/game.ts'
+import { Choices } from '../../components/Choices.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import { formatMoney, POSITION_NAMES, POSITION_ORDER, TRAIT_NAMES } from '../../format.ts'
 
@@ -74,102 +87,83 @@ export function SquadScreen() {
   return (
     <section className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-2">
-        <div className="flex gap-1">
-          <FilterButton active={!position} onClick={() => setPosition(undefined)}>
-            Todos
-          </FilterButton>
-          {POSITIONS.map((p) => (
-            <FilterButton
-              key={p}
-              active={position === p}
-              onClick={() => setPosition(p)}
-              title={POSITION_NAMES[p]}
-            >
-              {p}
-            </FilterButton>
-          ))}
-        </div>
-        <input
+        <Choices
+          ariaLabel="Filtrar por posição"
+          options={['Todos', ...POSITIONS]}
+          value={position ?? 'Todos'}
+          onChange={(value) => setPosition(value === 'Todos' ? undefined : (value as Position))}
+          title={(value) =>
+            value === 'Todos' ? 'Todas as posições' : POSITION_NAMES[value as Position]
+          }
+        />
+        <Input
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Buscar jogador"
-          className="min-w-0 flex-1 rounded bg-green-950/60 px-3 py-1 text-sm placeholder:text-green-400 sm:max-w-60"
+          className="h-8 sm:max-w-60"
         />
-        <span className="text-sm text-green-200">
+        <span className="text-sm text-muted-foreground">
           {rows.length} {rows.length === 1 ? 'jogador' : 'jogadores'}
         </span>
       </div>
 
-      <div className="overflow-x-auto rounded bg-green-950/60">
-        <table className="w-full text-sm whitespace-nowrap tabular-nums">
-          <thead className="text-green-300">
-            <tr>
+      <Card className="py-0">
+        <Table className="tabular-nums">
+          <TableHeader>
+            <TableRow>
               {COLUMNS.map((c) => (
-                <th key={c.key} className="px-2 py-2 text-left">
+                <TableHead key={c.key}>
                   <button
                     type="button"
                     onClick={() => sortBy(c.key)}
                     title={'title' in c ? c.title : undefined}
-                    className="hover:text-white"
+                    className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"
                   >
                     {c.label}
-                    {sort.key === c.key && (sort.ascending ? ' ▲' : ' ▼')}
+                    {sort.key === c.key &&
+                      (sort.ascending ? (
+                        <ArrowUpIcon className="size-3" />
+                      ) : (
+                        <ArrowDownIcon className="size-3" />
+                      ))}
                   </button>
-                </th>
+                </TableHead>
               ))}
-            </tr>
-          </thead>
-          <tbody>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
             {rows.map((p) => (
-              <tr key={p.id} className="border-t border-green-900">
-                <td className="px-2 py-1 font-semibold" title={POSITION_NAMES[p.position]}>
+              <TableRow key={p.id}>
+                <TableCell className="font-semibold" title={POSITION_NAMES[p.position]}>
                   {p.position}
-                </td>
-                <td className="px-2">
+                </TableCell>
+                <TableCell>
                   {p.name} <PlayerStatus playerId={p.id} season={season} />
-                </td>
-                <td className="px-2">{p.age}</td>
-                <td className="px-2 font-bold">{p.strength}</td>
-                <td className="px-2 text-green-200">{p.potential}</td>
-                <td className="px-2 text-xs text-green-200">
+                </TableCell>
+                <TableCell>{p.age}</TableCell>
+                <TableCell className="font-bold">{p.strength}</TableCell>
+                <TableCell className="text-muted-foreground">{p.potential}</TableCell>
+                <TableCell className="text-xs text-muted-foreground">
                   {p.traits.map((t) => TRAIT_NAMES[t]).join(', ') || '-'}
-                </td>
-                <td className="px-2">{formatMoney(p.wage)}</td>
-                <td className="px-2">{formatMoney(p.marketValue)}</td>
-                <td className="px-2">{p.contractUntil}</td>
-                <td className="px-2">
+                </TableCell>
+                <TableCell>{formatMoney(p.wage)}</TableCell>
+                <TableCell>{formatMoney(p.marketValue)}</TableCell>
+                <TableCell>{p.contractUntil}</TableCell>
+                <TableCell>
                   {p.role === 'titular' ? (
-                    <span className="text-yellow-300">Titular</span>
+                    <Badge>Titular</Badge>
                   ) : p.role === 'reserva' ? (
-                    <span className="text-green-100">Reserva</span>
+                    <Badge variant="secondary">Reserva</Badge>
                   ) : (
-                    <span className="text-green-400">-</span>
+                    <span className="text-muted-foreground">-</span>
                   )}
-                </td>
-              </tr>
+                </TableCell>
+              </TableRow>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </TableBody>
+        </Table>
+      </Card>
     </section>
-  )
-}
-
-function FilterButton(props: {
-  active: boolean
-  onClick: () => void
-  title?: string
-  children: ReactNode
-}) {
-  return (
-    <button
-      type="button"
-      onClick={props.onClick}
-      title={props.title}
-      className={`rounded px-3 py-1 text-sm ${props.active ? 'bg-green-600 font-semibold' : 'bg-green-800'}`}
-    >
-      {props.children}
-    </button>
   )
 }

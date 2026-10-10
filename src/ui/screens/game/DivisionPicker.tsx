@@ -1,3 +1,4 @@
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import type { League } from '../../../engine/model/types.ts'
 import { divisionName } from '../../format.ts'
 
@@ -7,17 +8,18 @@ export function DivisionPicker(props: {
   onChange: (leagueId: string) => void
 }) {
   return (
-    <div className="flex gap-1">
+    <ToggleGroup
+      type="single"
+      variant="outline"
+      size="sm"
+      value={props.value}
+      onValueChange={(value) => value && props.onChange(value)}
+    >
       {props.leagues.map((league) => (
-        <button
-          key={league.id}
-          type="button"
-          onClick={() => props.onChange(league.id)}
-          className={`rounded px-3 py-1 text-sm ${league.id === props.value ? 'bg-green-600 font-semibold' : 'bg-green-800'}`}
-        >
+        <ToggleGroupItem key={league.id} value={league.id} className="px-3">
           {divisionName(league.division)}
-        </button>
+        </ToggleGroupItem>
       ))}
-    </div>
+    </ToggleGroup>
   )
 }

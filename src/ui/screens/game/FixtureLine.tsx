@@ -10,7 +10,7 @@ export function FixtureLine(props: { fixture: Fixture; world: World; userClubId:
       <span className="flex min-w-0 justify-end text-right">
         <ClubName club={world.clubs[fixture.homeId]} highlight={fixture.homeId === userClubId} />
       </span>
-      <span className="rounded bg-black/30 px-2 text-center whitespace-nowrap tabular-nums">
+      <span className="rounded bg-muted px-2 font-semibold text-center whitespace-nowrap tabular-nums">
         {result ? `${result.homeGoals} x ${result.awayGoals}` : 'x'}
       </span>
       <span className="flex min-w-0">

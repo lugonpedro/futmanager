@@ -21,7 +21,7 @@ export function Pitch(props: {
   onSelect?: (playerId: string) => void
 }) {
   return (
-    <div className="flex flex-col justify-between gap-3 rounded border-2 border-white/30 bg-gradient-to-b from-green-700 to-green-800 p-3">
+    <div className="flex flex-col justify-between gap-3 rounded-lg border-2 border-white/40 bg-gradient-to-b from-pitch to-pitch-dark p-3 text-white">
       {ROWS.map((positions) => {
         const row = props.slots.filter((s) => positions.includes(s.position))
         const ordered = positions.includes('Z') ? defenceRow(row) : row
@@ -55,7 +55,7 @@ function PitchPlayer(props: {
       type="button"
       onClick={() => props.onSelect?.(player.id)}
       title={`${player.name} (${player.position}), força ${player.strength}`}
-      className={`flex max-w-20 min-w-0 flex-1 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-400 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
+      className={`flex max-w-20 min-w-0 flex-1 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
     >
       <span className="w-full truncate text-center font-semibold">
         {booked && (
