@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 export function HomeScreen() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-green-900 p-4 text-white">
@@ -10,6 +12,9 @@ export function HomeScreen() {
       >
         Novo jogo (em breve)
       </button>
+      <Link to="/amistoso" className="text-green-100 underline">
+        Jogar um amistoso
+      </Link>
     </main>
   )
 }

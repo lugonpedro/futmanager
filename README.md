@@ -13,7 +13,7 @@ Requer Node 22+.
 
 ```bash
 npm install
-npm run dev        # servidor local
+npm run dev        # servidor local (/amistoso joga uma partida de teste)
 npm test           # testes do motor (Vitest)
 npm run lint       # Oxlint
 npm run format     # Prettier

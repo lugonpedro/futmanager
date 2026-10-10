@@ -75,12 +75,14 @@ Cada fase termina com algo jogável e testes do motor passando.
 - Gera 40 clubes com elencos de ~25 jogadores, forças coerentes com a reputação
 - Testes: mesma semente gera o mesmo mundo; todo elenco tem goleiros suficientes
 
-### Fase 2: Simulação da partida (o coração do jogo)
+### Fase 2: Simulação da partida (feita, em `src/engine/match`)
 
 - Força do time = média ponderada por setor (defesa, meio, ataque) da escalação + fator casa + tática
 - Simulação por minuto (90 passos): chance de lance de ataque, finalização e gol a partir da comparação entre setores; cartões, lesões e cansaço
 - Saída: lista de eventos com texto narrado ("32' GOL! Fulano de cabeça")
 - Testes de balanceamento: simular milhares de jogos e checar média de gols (~2,5 por jogo), taxa de vitória do mandante (~45%) e que o time mais forte vence mais
+- Escalação automática por formação já entrou aqui (`autoLineup`), e a partida pode ser jogada minuto a minuto (`createMatch` + `playMinute`) com substituições e troca de postura, prontas para a fase 4
+- Tela de amistoso em `/amistoso` para ver a narração rodando
 
 ### Fase 3: Temporada
 
