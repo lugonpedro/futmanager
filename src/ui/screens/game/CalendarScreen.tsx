@@ -1,4 +1,12 @@
 import { useState } from 'react'
+import { Card } from '@/components/ui/card'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import type { Fixture } from '../../../engine/model/types.ts'
 import { leagueOf, userFixture } from '../../../engine/season/season.ts'
 import { useGame } from '../../../store/game.ts'
@@ -6,7 +14,11 @@ import { ClubName } from '../../components/ClubName.tsx'
 import { DivisionPicker } from './DivisionPicker.tsx'
 import { FixtureLine } from './FixtureLine.tsx'
 
-const OUTCOME_STYLE = { V: 'text-green-300', E: 'text-gray-300', D: 'text-red-300' }
+const OUTCOME_STYLE = {
+  V: 'text-green-600 dark:text-green-400',
+  E: 'text-muted-foreground',
+  D: 'text-red-600 dark:text-red-400',
+}
 
 export function CalendarScreen() {
   const game = useGame()
@@ -20,7 +32,7 @@ export function CalendarScreen() {
 
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      <section className="flex flex-col gap-2 rounded bg-green-950/60 p-3">
+      <Card className="gap-2 px-3">
         <h2 className="font-semibold">Seus jogos</h2>
         <ol className="flex flex-col text-sm">
           {ownFixtures.map((fixture) => {
@@ -45,10 +57,10 @@ export function CalendarScreen() {
                 <button
                   type="button"
                   onClick={() => setRound(fixture.round)}
-                  className={`grid w-full grid-cols-[2.5rem_1.5rem_1fr_auto] items-center gap-2 rounded px-1 py-0.5 text-left hover:bg-green-800 ${fixture.round === season.round ? 'bg-green-700/60' : ''}`}
+                  className={`grid w-full grid-cols-[2.5rem_1.5rem_1fr_auto] items-center gap-2 rounded px-1 py-0.5 text-left cursor-pointer hover:bg-accent ${fixture.round === season.round ? 'bg-highlight-soft' : ''}`}
                 >
-                  <span className="text-green-300 tabular-nums">{fixture.round}ª</span>
-                  <span className="text-xs text-green-300" title={home ? 'Em casa' : 'Fora'}>
+                  <span className="text-muted-foreground tabular-nums">{fixture.round}ª</span>
+                  <span className="text-xs text-muted-foreground" title={home ? 'Em casa' : 'Fora'}>
                     {home ? 'C' : 'F'}
                   </span>
                   <ClubName club={opponent} />
@@ -60,25 +72,26 @@ export function CalendarScreen() {
             )
           })}
         </ol>
-      </section>
+      </Card>
 
-      <section className="flex flex-col gap-3 rounded bg-green-950/60 p-3">
+      <Card className="gap-3 self-start px-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <DivisionPicker leagues={world.leagues} value={leagueId} onChange={setLeagueId} />
-          <label className="flex items-center gap-2 text-sm">
+          <div className="flex items-center gap-2 text-sm">
             Rodada
-            <select
-              className="rounded bg-green-800 p-1"
-              value={round}
-              onChange={(e) => setRound(Number(e.target.value))}
-            >
-              {rounds.map((r) => (
-                <option key={r} value={r}>
-                  {r}
-                </option>
-              ))}
-            </select>
-          </label>
+            <Select value={String(round)} onValueChange={(value) => setRound(Number(value))}>
+              <SelectTrigger size="sm" aria-label="Rodada">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className="max-h-72">
+                {rounds.map((r) => (
+                  <SelectItem key={r} value={String(r)}>
+                    {r}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
         <ul className="flex flex-col gap-1">
           {season.fixtures[leagueId][round - 1].map((fixture) => (
@@ -87,7 +100,7 @@ export function CalendarScreen() {
             </li>
           ))}
         </ul>
-      </section>
+      </Card>
     </div>
   )
 }

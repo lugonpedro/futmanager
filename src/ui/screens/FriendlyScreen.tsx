@@ -1,7 +1,17 @@
-import { useEffect, useMemo, useState } from 'react'
+import { PlayIcon, RefreshCwIcon } from 'lucide-react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { Link } from 'react-router'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { generateWorld } from '../../engine/generate/world.ts'
-import { autoLineup, FORMATIONS } from '../../engine/match/lineup.ts'
+import { autoLineup, FORMATION_LIST } from '../../engine/match/lineup.ts'
 import {
   createMatch,
   matchResult,
@@ -10,10 +20,12 @@ import {
 } from '../../engine/match/simulate.ts'
 import type { Formation, Posture, World } from '../../engine/model/types.ts'
 import { createRng } from '../../engine/rng.ts'
+import { Choices } from '../components/Choices.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
+import { ThemeToggle } from '../components/ThemeToggle.tsx'
+import { divisionName, POSTURE_NAMES } from '../format.ts'
 
 const SPEEDS = { Lento: 400, Normal: 150, Rápido: 40 } as const
-const POSTURES: Posture[] = ['defensiva', 'normal', 'ofensiva']
 
 const randomSeed = () => Math.floor(Math.random() * 2 ** 31)
 
@@ -74,117 +86,107 @@ export function FriendlyScreen() {
   const result = match?.finished ? matchResult(match) : undefined
 
   return (
-    <main className="min-h-screen bg-green-900 p-4 text-white">
-      <div className="mx-auto flex max-w-3xl flex-col gap-4">
-        <header className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Amistoso</h1>
-          <Link to="/" className="text-sm text-green-200 underline">
-            Voltar
-          </Link>
-        </header>
+    <main className="mx-auto flex max-w-3xl flex-col gap-4 p-4">
+      <header className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Amistoso</h1>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/">Voltar</Link>
+          </Button>
+        </div>
+      </header>
 
-        <section className="grid gap-3 rounded bg-green-950/60 p-4 sm:grid-cols-2">
-          <label className="flex flex-col gap-1 text-sm">
-            Mandante (você)
-            <ClubSelect clubs={clubs} value={homeId} onChange={setHomeId} />
-          </label>
-          <label className="flex flex-col gap-1 text-sm">
-            Visitante
-            <ClubSelect clubs={clubs} value={awayId} onChange={setAwayId} />
-          </label>
-          <label className="flex flex-col gap-1 text-sm">
-            Formação
-            <select
-              className="rounded bg-green-800 p-2"
-              value={formation}
-              onChange={(e) => setFormation(e.target.value as Formation)}
-            >
-              {Object.keys(FORMATIONS).map((f) => (
-                <option key={f}>{f}</option>
-              ))}
-            </select>
-          </label>
-          <label className="flex flex-col gap-1 text-sm">
-            Postura
-            <select
-              className="rounded bg-green-800 p-2"
-              value={posture}
-              onChange={(e) => setPosture(e.target.value as Posture)}
-            >
-              {POSTURES.map((p) => (
-                <option key={p}>{p}</option>
-              ))}
-            </select>
-          </label>
-          <div className="flex flex-wrap gap-2 sm:col-span-2">
-            <button
-              type="button"
-              onClick={start}
-              disabled={homeId === awayId || (match && !match.finished)}
-              className="rounded bg-yellow-400 px-4 py-2 font-semibold text-green-950 disabled:opacity-50"
-            >
-              Jogar
-            </button>
-            <button
-              type="button"
-              onClick={newWorld}
-              className="rounded border border-green-400 px-4 py-2 text-green-100"
-            >
-              Gerar outros times
-            </button>
-            <div className="ml-auto flex items-center gap-1 text-sm">
-              {(Object.keys(SPEEDS) as (keyof typeof SPEEDS)[]).map((s) => (
-                <button
-                  key={s}
-                  type="button"
-                  onClick={() => setSpeed(s)}
-                  className={`rounded px-2 py-1 ${s === speed ? 'bg-green-600' : 'bg-green-800'}`}
-                >
-                  {s}
-                </button>
-              ))}
-            </div>
+      <Card className="grid gap-3 px-4 sm:grid-cols-2">
+        <Field label="Mandante (você)">
+          <ClubSelect clubs={clubs} value={homeId} onChange={setHomeId} />
+        </Field>
+        <Field label="Visitante">
+          <ClubSelect clubs={clubs} value={awayId} onChange={setAwayId} />
+        </Field>
+        <Field label="Formação">
+          <Choices
+            ariaLabel="Formação"
+            options={FORMATION_LIST}
+            value={formation}
+            onChange={setFormation}
+          />
+        </Field>
+        <Field label="Postura">
+          <Choices
+            ariaLabel="Postura"
+            options={Object.keys(POSTURE_NAMES) as Posture[]}
+            value={posture}
+            onChange={setPosture}
+            label={(p) => POSTURE_NAMES[p]}
+          />
+        </Field>
+        <div className="flex flex-wrap items-center gap-2 sm:col-span-2">
+          <Button onClick={start} disabled={homeId === awayId || (match && !match.finished)}>
+            <PlayIcon />
+            Jogar
+          </Button>
+          <Button variant="outline" onClick={newWorld}>
+            <RefreshCwIcon />
+            Gerar outros times
+          </Button>
+          <div className="ml-auto">
+            <Choices
+              ariaLabel="Velocidade"
+              options={Object.keys(SPEEDS) as (keyof typeof SPEEDS)[]}
+              value={speed}
+              onChange={setSpeed}
+            />
           </div>
-        </section>
+        </div>
+      </Card>
 
-        {match && (
-          <section className="flex flex-col gap-3 rounded bg-green-950/60 p-4">
-            <div className="flex items-center justify-center gap-4 text-xl font-bold">
-              <span className="flex-1 text-right">{match.home.club.name}</span>
-              <span className="rounded bg-black/40 px-3 py-1 tabular-nums">
-                {match.home.stats.goals} x {match.away.stats.goals}
-              </span>
-              <span className="flex-1">{match.away.club.name}</span>
-            </div>
-            <p className="text-center text-sm text-green-200">
-              {match.finished ? 'Encerrado' : `${match.minute}'`}
-            </p>
-            <MatchFeed events={match.events} />
-            {result && (
-              <table className="mx-auto text-sm tabular-nums">
-                <tbody>
-                  {(
-                    [
-                      ['Posse de bola (%)', 'possession'],
-                      ['Finalizações', 'shots'],
-                      ['No gol', 'shotsOnTarget'],
-                      ['Amarelos', 'yellowCards'],
-                      ['Vermelhos', 'redCards'],
-                    ] as const
-                  ).map(([label, key]) => (
-                    <tr key={key}>
-                      <td className="px-3 text-right">{result.stats.home[key]}</td>
-                      <td className="px-3 text-center text-green-200">{label}</td>
-                      <td className="px-3">{result.stats.away[key]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-          </section>
-        )}
-      </div>
+      {match && (
+        <Card className="gap-3 px-4">
+          <div className="flex items-center justify-center gap-4 text-xl font-bold">
+            <span className="flex-1 text-right">{match.home.club.name}</span>
+            <span className="rounded-md bg-primary px-3 py-1 text-primary-foreground tabular-nums">
+              {match.home.stats.goals} x {match.away.stats.goals}
+            </span>
+            <span className="flex-1">{match.away.club.name}</span>
+          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            {match.finished ? 'Encerrado' : `${match.minute}'`}
+          </p>
+          <MatchFeed events={match.events} />
+          {result && (
+            <table className="mx-auto text-sm tabular-nums">
+              <tbody>
+                {(
+                  [
+                    ['Posse de bola (%)', 'possession'],
+                    ['Finalizações', 'shots'],
+                    ['No gol', 'shotsOnTarget'],
+                    ['Amarelos', 'yellowCards'],
+                    ['Vermelhos', 'redCards'],
+                  ] as const
+                ).map(([label, key]) => (
+                  <tr key={key}>
+                    <td className="px-3 text-right">{result.stats.home[key]}</td>
+                    <td className="px-3 text-center text-muted-foreground">{label}</td>
+                    <td className="px-3">{result.stats.away[key]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </Card>
+      )}
     </main>
+  )
+}
+
+function Field(props: { label: string; children: ReactNode }) {
+  return (
+    <div className="flex flex-col gap-1.5 text-sm">
+      <span className="text-muted-foreground">{props.label}</span>
+      {props.children}
+    </div>
   )
 }
 
@@ -194,16 +196,17 @@ function ClubSelect(props: {
   onChange: (id: string) => void
 }) {
   return (
-    <select
-      className="rounded bg-green-800 p-2"
-      value={props.value}
-      onChange={(e) => props.onChange(e.target.value)}
-    >
-      {props.clubs.map((club) => (
-        <option key={club.id} value={club.id}>
-          {club.name} (Série {club.division === 1 ? 'A' : 'B'}, rep. {club.reputation})
-        </option>
-      ))}
-    </select>
+    <Select value={props.value} onValueChange={props.onChange}>
+      <SelectTrigger className="w-full">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent className="max-h-80">
+        {props.clubs.map((club) => (
+          <SelectItem key={club.id} value={club.id}>
+            {club.name} ({divisionName(club.division)}, rep. {club.reputation})
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

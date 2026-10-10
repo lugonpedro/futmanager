@@ -11,7 +11,7 @@ export function PlayerStatus(props: { playerId: string; season: Season }) {
     <span className="inline-flex flex-wrap gap-1 text-xs">
       {injured && (
         <span
-          className="rounded bg-orange-500/30 px-1 text-orange-200"
+          className="rounded bg-orange-500/20 px-1 text-orange-700 dark:text-orange-200"
           title={`Lesionado, volta em ${injured} ${injured === 1 ? 'rodada' : 'rodadas'}`}
         >
           lesão {injured}
@@ -19,7 +19,7 @@ export function PlayerStatus(props: { playerId: string; season: Season }) {
       )}
       {suspended && (
         <span
-          className="rounded bg-red-500/30 px-1 text-red-200"
+          className="rounded bg-red-500/20 px-1 text-red-700 dark:text-red-200"
           title={`Suspenso por ${suspended} ${suspended === 1 ? 'rodada' : 'rodadas'}`}
         >
           suspenso
@@ -27,7 +27,7 @@ export function PlayerStatus(props: { playerId: string; season: Season }) {
       )}
       {yellows && (
         <span
-          className="rounded bg-yellow-400/20 px-1 text-yellow-200"
+          className="rounded bg-yellow-400/25 px-1 text-amber-800 dark:text-yellow-200"
           title={`${yellows} de ${YELLOWS_FOR_SUSPENSION} amarelos para suspensão`}
         >
           {yellows} amarelo{yellows > 1 ? 's' : ''}

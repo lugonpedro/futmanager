@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react'
 import type { MatchEvent } from '../../engine/model/types.ts'
 
 const EVENT_STYLE: Partial<Record<MatchEvent['type'], string>> = {
-  gol: 'font-bold text-yellow-300',
-  amarelo: 'text-yellow-100',
-  vermelho: 'font-semibold text-red-300',
-  lesao: 'text-orange-200',
-  inicio: 'italic text-green-200',
-  intervalo: 'italic text-green-200',
-  fim: 'font-semibold text-green-100',
+  gol: 'font-bold text-highlight',
+  amarelo: 'text-amber-700 dark:text-amber-200',
+  vermelho: 'font-semibold text-red-600 dark:text-red-300',
+  lesao: 'text-orange-700 dark:text-orange-300',
+  inicio: 'italic text-muted-foreground',
+  intervalo: 'italic text-muted-foreground',
+  fim: 'font-semibold',
 }
 
 /** Narrated events, newest at the bottom, kept scrolled to the latest. */
@@ -24,8 +24,8 @@ export function MatchFeed(props: { events: readonly MatchEvent[]; className?: st
       className={`flex flex-col gap-1 overflow-y-auto text-sm ${props.className ?? 'max-h-80'}`}
     >
       {props.events.map((event, i) => (
-        <li key={i} className={EVENT_STYLE[event.type] ?? 'text-green-50'}>
-          <span className="mr-2 inline-block w-8 text-right text-green-300 tabular-nums">
+        <li key={i} className={EVENT_STYLE[event.type] ?? ''}>
+          <span className="mr-2 inline-block w-8 text-right text-muted-foreground tabular-nums">
             {event.minute}'
           </span>
           {event.text}

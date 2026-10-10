@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router'
+import { useApplyTheme } from './store/theme.ts'
 import { FriendlyScreen } from './ui/screens/FriendlyScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { GameLayout } from './ui/screens/game/GameLayout.tsx'
@@ -12,6 +13,7 @@ import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
 
 export default function App() {
+  useApplyTheme()
   return (
     <Routes>
       <Route path="/" element={<HomeScreen />} />
