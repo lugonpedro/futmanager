@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import type { GameState } from '../engine/model/types.ts'
+import { upgradeGame } from '../engine/save.ts'
 
 type GameStore = {
   game?: GameState
@@ -17,7 +18,15 @@ export const useGameStore = create<GameStore>()(
       game: undefined,
       setGame: (game) => set({ game }),
     }),
-    { name: 'futmanager-carreira', version: 1, storage: createJSONStorage(() => localStorage) },
+    {
+      name: 'futmanager-carreira',
+      version: 2,
+      storage: createJSONStorage(() => localStorage),
+      migrate: (persisted) => {
+        const state = persisted as { game?: Parameters<typeof upgradeGame>[0] }
+        return { ...state, game: state.game && upgradeGame(state.game) } as GameStore
+      },
+    },
   ),
 )
 

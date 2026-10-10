@@ -1,3 +1,4 @@
+import { fairTicketPrice, startingCash } from '../finance/economy.ts'
 import type { Club, League, Player, Position, World } from '../model/types.ts'
 import { createRng, type Rng } from '../rng.ts'
 import { allCityNames, CLUB_COLORS, clubName, shortNameCandidates } from './names.ts'
@@ -31,7 +32,8 @@ function generateClub(
     colors: rng.pick(CLUB_COLORS),
     reputation,
     stadiumCapacity: roundTo(5000 + reputation * 600 * (0.7 + rng.next() * 0.6), 500),
-    cash: roundTo(reputation ** 2 * 1000 * (0.5 + rng.next()), 10000),
+    ticketPrice: fairTicketPrice(reputation),
+    cash: startingCash(reputation, rng.next()),
     division,
     playerIds: [],
   }

@@ -13,16 +13,19 @@ const TRAITS_BY_POSITION: Record<Position, readonly Trait[]> = {
 const clamp = (value: number, min: number, max: number) =>
   Math.min(max, Math.max(min, Math.round(value)))
 
-/** Monthly wage grows exponentially with strength, rounded to the nearest 100. */
+/** Monthly wage of a strength-30 player, in reais. */
+export const BASE_WAGE = 15_000
+
+/** Monthly wage grows exponentially with strength, rounded to the nearest 1000. */
 export function wageFor(strength: number): number {
-  return Math.round((500 * Math.exp(0.06 * (strength - 30))) / 100) * 100
+  return Math.round((BASE_WAGE * Math.exp(0.06 * (strength - 30))) / 1000) * 1000
 }
 
 /** Young players with room to grow are worth more; veterans lose value fast. */
 export function marketValueFor(strength: number, potential: number, age: number): number {
   const ageFactor = age <= 23 ? 1.3 : age <= 29 ? 1 : age <= 32 ? 0.6 : 0.3
   const growth = 1 + (potential - strength) / 50
-  return Math.round((wageFor(strength) * 24 * ageFactor * growth) / 1000) * 1000
+  return Math.round((wageFor(strength) * 24 * ageFactor * growth) / 10_000) * 10_000
 }
 
 export type PlayerSeed = {

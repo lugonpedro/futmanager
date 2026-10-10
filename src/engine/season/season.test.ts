@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import { monthlySponsorship } from '../finance/economy.ts'
+import { monthsInSeason, wageBill } from '../finance/finance.ts'
 import { autoLineup } from '../match/lineup.ts'
 import { matchResult, playMinute } from '../match/simulate.ts'
 import type { GameState, MatchResult } from '../model/types.ts'
@@ -184,10 +186,15 @@ describe('end of season', () => {
   it('pays prize money by final position', () => {
     expect(prizeMoney(1, 1, 20)).toBeGreaterThan(prizeMoney(1, 20, 20))
     expect(prizeMoney(1, 20, 20)).toBeGreaterThan(prizeMoney(2, 1, 20) / 4)
-    const champion = serieA.table[0]
-    expect(next.world.clubs[champion].cash).toBe(
-      finished.world.clubs[champion].cash + summary.prizes[champion],
+    // The user's club makes no deals at the close, so its cash moves by prize and the last wages only.
+    const user = finished.world.clubs[finished.userClubId]
+    const closingMonths = 12 - monthsInSeason(finished.season.totalRounds)
+    expect(next.world.clubs[user.id].cash).toBe(
+      user.cash +
+        summary.prizes[user.id] +
+        closingMonths * (monthlySponsorship(user) - wageBill(finished.world, user)),
     )
+    expect(next.history[0].userFinances?.premiacao).toBe(summary.prizes[user.id])
   })
 
   it('names each division top scorer', () => {
@@ -198,7 +205,8 @@ describe('end of season', () => {
   it('starts a fresh season with a new calendar', () => {
     expect(next.season).toMatchObject({ year: 2028, round: 1, injuries: {}, suspensions: {} })
     expect(next.world.season).toBe(2028)
-    expect(next.history).toEqual([summary])
+    expect(next.history).toEqual([{ ...summary, userFinances: expect.any(Object) }])
+    expect(next.ledger).toEqual([])
     expect(roundFixtures(next.season).every((f) => !f.result)).toBe(true)
     const third = playSeason(next)
     expect(leagueStandings(third, 'L1').every((row) => row.played === 38)).toBe(true)
