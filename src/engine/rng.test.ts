@@ -23,3 +23,24 @@ describe('createRng', () => {
     expect(() => createRng(1).pick([])).toThrow()
   })
 })
+
+describe('normal', () => {
+  it('centres on the mean with roughly the requested spread', () => {
+    const rng = createRng(3)
+    const values = Array.from({ length: 5000 }, () => rng.normal(50, 10))
+    const mean = values.reduce((a, b) => a + b, 0) / values.length
+    const variance = values.reduce((a, b) => a + (b - mean) ** 2, 0) / values.length
+    expect(mean).toBeCloseTo(50, 0)
+    expect(Math.sqrt(variance)).toBeGreaterThan(9)
+    expect(Math.sqrt(variance)).toBeLessThan(11)
+  })
+})
+
+describe('shuffle', () => {
+  it('keeps every item and leaves the input untouched', () => {
+    const input = [1, 2, 3, 4, 5, 6, 7, 8]
+    const result = createRng(9).shuffle(input)
+    expect(input).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
+    expect([...result].sort((a, b) => a - b)).toEqual(input)
+  })
+})

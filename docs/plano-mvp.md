@@ -68,7 +68,7 @@ Cada fase termina com algo jogável e testes do motor passando.
 - CI no GitHub Actions rodando lint, testes e build
 - Página inicial com "Novo jogo"
 
-### Fase 1: Gerador de mundo
+### Fase 1: Gerador de mundo (feita, em `src/engine/generate`)
 
 - PRNG com semente (já entrou no esqueleto: `src/engine/rng.ts`)
 - Gerador de nomes (listas de nomes e sobrenomes brasileiros) e de nomes de clubes
