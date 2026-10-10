@@ -123,3 +123,63 @@ export type MatchResult = {
   sentOff: string[]
   injured: string[]
 }
+
+/** A goal as the season remembers it, for the top scorers list. */
+export type GoalRecord = { playerId: string; clubId: string; minute: number }
+
+/** What a played fixture keeps: the score, the scorers and the cards for tiebreakers. */
+export type FixtureResult = {
+  homeGoals: number
+  awayGoals: number
+  goals: GoalRecord[]
+  cards: { home: { yellow: number; red: number }; away: { yellow: number; red: number } }
+}
+
+export type Fixture = {
+  id: string
+  leagueId: string
+  /** 1-based. */
+  round: number
+  homeId: string
+  awayId: string
+  result?: FixtureResult
+}
+
+export type Season = {
+  year: number
+  /** Next round to play, 1-based; past the last round once the season is over. */
+  round: number
+  totalRounds: number
+  /** Fixtures per league id, indexed by round - 1. */
+  fixtures: Record<string, Fixture[][]>
+  /** Rounds each player still has to miss. */
+  injuries: Record<string, number>
+  suspensions: Record<string, number>
+  /** Yellow cards building up towards a suspension. */
+  yellowCards: Record<string, number>
+}
+
+export type LeagueOutcome = {
+  leagueId: string
+  division: number
+  /** Club ids in final order. */
+  table: string[]
+  promoted: string[]
+  relegated: string[]
+  topScorer?: { playerId: string; clubId: string; goals: number }
+}
+
+export type SeasonSummary = {
+  year: number
+  leagues: LeagueOutcome[]
+  /** Prize money paid per club. */
+  prizes: Record<string, number>
+}
+
+/** Everything a career needs; plain JSON so it can be saved as is. */
+export type GameState = {
+  world: World
+  userClubId: string
+  season: Season
+  history: SeasonSummary[]
+}

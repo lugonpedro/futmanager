@@ -13,7 +13,7 @@ Requer Node 22+.
 
 ```bash
 npm install
-npm run dev        # servidor local (/amistoso joga uma partida de teste)
+npm run dev        # servidor local: Novo jogo começa uma carreira, /amistoso joga uma partida avulsa
 npm test           # testes do motor (Vitest)
 npm run lint       # Oxlint
 npm run format     # Prettier
@@ -25,6 +25,9 @@ npm run build      # build de produção em dist/
 ```
 docs/          documentação do projeto
 src/engine/    motor do jogo em TypeScript puro (sem React), testável
+  season/      calendário, tabela, artilharia, acesso e rebaixamento
+src/store/     estado da carreira (Zustand), salvo no localStorage
+src/worker/    Web Worker que simula rodadas sem travar a tela
 src/ui/        telas e componentes React
 ```
 
