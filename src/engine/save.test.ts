@@ -36,4 +36,17 @@ describe('upgradeGame', () => {
     expect(player.wage).toBe(wageFor(player.strength))
     expect(playRound(upgraded).season.round).toBe(2)
   })
+
+  it('gives a version 2 save a board, appearances and, early on, the cup', () => {
+    const { career: _, ...rest } = current
+    const { appearances: __, cup: ___, ...season } = current.season
+    const upgraded = upgradeGame({ ...rest, version: 2, season })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.career.status).toBe('empregado')
+    expect(upgraded.season.appearances).toEqual({})
+    expect(upgraded.season.cup?.stages[0].ties).toHaveLength(8)
+    const late = upgradeGame({ ...rest, version: 2, season: { ...season, round: 20 } })
+    expect(late.season.cup).toBeUndefined()
+    expect(playRound(upgraded).season.round).toBe(2)
+  })
 })

@@ -140,6 +140,11 @@ export function SquadScreen() {
                 </TableCell>
                 <TableCell>
                   {p.name} <PlayerStatus playerId={p.id} season={season} />
+                  {p.id.startsWith('B') && p.id.split('-')[1] === userClubId && (
+                    <Badge variant="outline" className="ml-1" title="Revelado pela base do clube">
+                      Base
+                    </Badge>
+                  )}
                 </TableCell>
                 <TableCell>{p.age}</TableCell>
                 <TableCell className="font-bold">{p.strength}</TableCell>

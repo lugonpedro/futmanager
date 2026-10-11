@@ -44,9 +44,7 @@ export function generatePlayer(rng: Rng, seed: PlayerSeed): Player {
   const room =
     age <= 21 ? rng.int(5, 25) : age <= 25 ? rng.int(0, 12) : age <= 29 ? rng.int(0, 4) : 0
   const potential = clamp(strength + room, strength, 99)
-
-  const traitCount = strength >= 70 ? 2 : strength >= 50 ? rng.int(1, 2) : rng.int(0, 1)
-  const traits = rng.shuffle(TRAITS_BY_POSITION[seed.position]).slice(0, traitCount)
+  const traits = pickTraits(rng, seed.position, strength)
 
   return {
     id: seed.id,
@@ -59,6 +57,35 @@ export function generatePlayer(rng: Rng, seed: PlayerSeed): Player {
     wage: wageFor(strength),
     marketValue: marketValueFor(strength, potential, age),
     contractUntil: seed.season + rng.int(0, 3),
+    clubId: seed.clubId,
+  }
+}
+
+/** Strong players stand out in a skill or two; weak ones in one at most. */
+export function pickTraits(rng: Rng, position: Position, strength: number): Trait[] {
+  const count = strength >= 70 ? 2 : strength >= 50 ? rng.int(1, 2) : rng.int(0, 1)
+  return rng.shuffle(TRAITS_BY_POSITION[position]).slice(0, count)
+}
+
+/**
+ * A 16 to 18 year old from the club's academy: well below the first team for
+ * now, with plenty of room to grow, on a cheap three-season contract.
+ */
+export function generateYouth(rng: Rng, seed: PlayerSeed): Player {
+  const age = rng.int(16, 18)
+  const strength = clamp(rng.normal(seed.level - 15, 6), 15, 80)
+  const potential = clamp(strength + rng.int(10, 35), strength, 99)
+  return {
+    id: seed.id,
+    name: playerName(rng),
+    age,
+    position: seed.position,
+    strength,
+    potential,
+    traits: pickTraits(rng, seed.position, strength),
+    wage: wageFor(strength),
+    marketValue: marketValueFor(strength, potential, age),
+    contractUntil: seed.season + 2,
     clubId: seed.clubId,
   }
 }

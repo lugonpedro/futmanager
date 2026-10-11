@@ -4,6 +4,7 @@ import { autoFormation, autoLineup } from '../match/lineup.ts'
 import { formatMoney } from '../money.ts'
 import {
   FREE_AGENT,
+  RETIRED,
   type GameState,
   type Player,
   type Position,
@@ -54,6 +55,7 @@ export const freeAgents = (world: World) =>
 
 /** A club lets a player go only if it keeps a squad and two keepers. */
 export function canLeave(world: World, player: Player): boolean {
+  if (player.clubId === RETIRED) return false
   if (player.clubId === FREE_AGENT) return true
   const squad = squadOf(world, player.clubId)
   if (squad.length <= MARKET.minSquad) return false
@@ -330,6 +332,7 @@ function aiSign(
   const budget = club.cash * MARKET.aiSpendShare
   const candidates = Object.values(world.players).filter((p) => {
     if (p.position !== position || p.clubId === clubId || p.clubId === game.userClubId) return false
+    if (p.clubId === RETIRED) return false
     if (p.clubId === FREE_AGENT) return true
     const seller = squadOf(world, p.clubId)
     return countAt(seller, position) > SQUAD_SHAPE[position] && canLeave(world, p)
@@ -437,7 +440,8 @@ export function closeContracts(game: GameState, nextYear: number, rng: Rng): Gam
   let world = game.world
   let market = game.market
   for (const player of Object.values(game.world.players).sort((a, b) => a.id.localeCompare(b.id))) {
-    if (player.clubId === FREE_AGENT || player.contractUntil >= nextYear) continue
+    if (player.clubId === FREE_AGENT || player.clubId === RETIRED) continue
+    if (player.contractUntil >= nextYear) continue
     const club = world.clubs[player.clubId]
     const squad = squadOf(world, club.id)
     const average = squad.reduce((sum, p) => sum + p.strength, 0) / squad.length

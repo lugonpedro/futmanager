@@ -39,6 +39,8 @@ export type Player = {
 
 /** clubId of a player without a club, free to sign for wages alone. */
 export const FREE_AGENT = ''
+/** clubId of a player who has hung up his boots; he stays on file for the history. */
+export const RETIRED = 'aposentado'
 
 export type Club = {
   id: string
@@ -139,6 +141,8 @@ export type FixtureResult = {
   awayGoals: number
   goals: GoalRecord[]
   cards: { home: { yellow: number; red: number }; away: { yellow: number; red: number } }
+  /** Shootout score, for a cup tie level after 90 minutes. */
+  penalties?: { home: number; away: number }
 }
 
 export type Fixture = {
@@ -163,6 +167,24 @@ export type Season = {
   suspensions: Record<string, number>
   /** Yellow cards building up towards a suspension. */
   yellowCards: Record<string, number>
+  /** Matches each player started or came on in, which drives his development. */
+  appearances: Record<string, number>
+  /** The national cup, played in midweek after some league rounds. */
+  cup?: Cup
+}
+
+/** One knockout round of the cup; its ties are drawn once the round before is over. */
+export type CupStage = {
+  name: string
+  /** League round after which this stage is played. */
+  round: number
+  ties: Fixture[]
+}
+
+export type Cup = {
+  stages: CupStage[]
+  /** Clubs that skip the first stage and join in the second. */
+  byes: string[]
 }
 
 export type LeagueOutcome = {
@@ -175,6 +197,29 @@ export type LeagueOutcome = {
   topScorer?: { playerId: string; clubId: string; goals: number }
 }
 
+/** How the user's job is going, and the seasons behind it. */
+export type Career = {
+  status: 'empregado' | 'demitido'
+  /** Final position the board expects this season. */
+  target: number
+  /** Board confidence, 0 to 100; at 0 the manager is sacked. */
+  confidence: number
+  /** Clubs inviting the manager, when sacked or after a good season. */
+  jobOffers: string[]
+  history: CareerSeason[]
+}
+
+export type CareerSeason = {
+  year: number
+  clubId: string
+  division: number
+  position: number
+  target: number
+  /** How far the club went in the cup. */
+  cup?: string
+  fired?: boolean
+}
+
 export type SeasonSummary = {
   year: number
   leagues: LeagueOutcome[]
@@ -182,6 +227,10 @@ export type SeasonSummary = {
   prizes: Record<string, number>
   /** The user's season totals per category, filled in once the season closes. */
   userFinances?: Partial<Record<LedgerCategory, number>>
+  cupWinnerId?: string
+  /** The user's players who retired, and the youngsters who came up, as the next season began. */
+  userRetired?: string[]
+  userYouth?: string[]
 }
 
 export type LedgerCategory =
@@ -234,5 +283,6 @@ export type GameState = {
   /** The user's money movements this season. */
   ledger: LedgerEntry[]
   market: Market
+  career: Career
   history: SeasonSummary[]
 }

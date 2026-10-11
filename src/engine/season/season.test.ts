@@ -194,7 +194,10 @@ describe('end of season', () => {
         summary.prizes[user.id] +
         closingMonths * (monthlySponsorship(user) - wageBill(finished.world, user)),
     )
-    expect(next.history[0].userFinances?.premiacao).toBe(summary.prizes[user.id])
+    const cupPrizes = finished.ledger
+      .filter((e) => e.category === 'premiacao')
+      .reduce((sum, e) => sum + e.amount, 0)
+    expect(next.history[0].userFinances?.premiacao).toBe(summary.prizes[user.id] + cupPrizes)
   })
 
   it('names each division top scorer', () => {
@@ -205,7 +208,7 @@ describe('end of season', () => {
   it('starts a fresh season with a new calendar', () => {
     expect(next.season).toMatchObject({ year: 2028, round: 1, injuries: {}, suspensions: {} })
     expect(next.world.season).toBe(2028)
-    expect(next.history).toEqual([{ ...summary, userFinances: expect.any(Object) }])
+    expect(next.history).toEqual([expect.objectContaining(summary)])
     expect(next.ledger).toEqual([])
     expect(roundFixtures(next.season).every((f) => !f.result)).toBe(true)
     const third = playSeason(next)

@@ -7,8 +7,8 @@ import { matchResult, playMinute, type MatchState } from '../../engine/match/sim
 import type { GameState } from '../../engine/model/types.ts'
 import {
   applyRound,
+  canPlayRound,
   createRoundMatches,
-  isSeasonOver,
   type LiveMatch,
 } from '../../engine/season/season.ts'
 import { useGameStore } from '../../store/game.ts'
@@ -24,7 +24,7 @@ type Speed = keyof typeof SPEEDS
 /** The user's match narrated minute by minute, with the rest of the round alongside. */
 export function LiveMatchScreen() {
   const game = useGameStore((s) => s.game)
-  if (!game || isSeasonOver(game.season)) return <Navigate to="/jogo" replace />
+  if (!game || !canPlayRound(game)) return <Navigate to="/jogo" replace />
   return <LiveRound key={`${game.season.year}-${game.season.round}`} game={game} />
 }
 

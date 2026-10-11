@@ -3,12 +3,15 @@ import { FastForwardIcon, PlayIcon } from 'lucide-react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import type { GameState } from '../../../engine/model/types.ts'
+import { objectiveText, takeJob } from '../../../engine/career/board.ts'
+import type { Fixture, GameState } from '../../../engine/model/types.ts'
+import { CUP_NAME, cupProgress, nextCupTie, tieWinner } from '../../../engine/season/cup.ts'
 import {
   clubLineup,
   isSeasonOver,
   leagueOf,
   leagueStandings,
+  seasonReview,
   seasonSummary,
   startNextSeason,
   userFixture,
@@ -17,12 +20,65 @@ import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { simulateRounds } from '../../../worker/simulate.ts'
 import { ClubName } from '../../components/ClubName.tsx'
+import { ConfidenceBar } from '../../components/Confidence.tsx'
 import { divisionName, formatMoney, POSTURE_NAMES } from '../../format.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 
 export function OverviewScreen() {
   const game = useGame()
-  return isSeasonOver(game.season) ? <SeasonEnd game={game} /> : <NextRound game={game} />
+  if (isSeasonOver(game.season)) return <SeasonEnd game={game} />
+  if (game.career.status === 'demitido') return <Fired game={game} />
+  return <NextRound game={game} />
+}
+
+/** Sacked mid-season: the manager picks one of the clubs that called before the season goes on. */
+function Fired({ game }: { game: GameState }) {
+  const setGame = useGameStore((s) => s.setGame)
+  const club = game.world.clubs[game.userClubId]
+  return (
+    <Card className="gap-3 px-4">
+      <h2 className="text-2xl font-bold">Você foi demitido</h2>
+      <p>
+        A diretoria do {club.name} perdeu a paciência depois da rodada {game.season.round - 1}.
+        Estes clubes querem você para o resto da temporada:
+      </p>
+      <JobOffers
+        game={game}
+        offers={game.career.jobOffers}
+        onPick={(id) => setGame(takeJob(game, id))}
+      />
+    </Card>
+  )
+}
+
+/** Clubs inviting the manager, each with a button to take the job. */
+function JobOffers(props: { game: GameState; offers: string[]; onPick: (clubId: string) => void }) {
+  const { world } = props.game
+  return (
+    <ul className="flex flex-col gap-2">
+      {props.offers.map((id) => {
+        const club = world.clubs[id]
+        const table = leagueStandings(props.game, leagueOf(world, id))
+        const position = table.findIndex((row) => row.clubId === id) + 1
+        return (
+          <li
+            key={id}
+            className="flex flex-wrap items-center justify-between gap-2 rounded-md border p-2"
+          >
+            <span className="flex min-w-0 flex-col">
+              <ClubName club={club} />
+              <span className="text-xs text-muted-foreground">
+                {divisionName(club.division)}, {position}º lugar, caixa {formatMoney(club.cash)}
+              </span>
+            </span>
+            <Button size="sm" onClick={() => props.onPick(id)}>
+              Assumir
+            </Button>
+          </li>
+        )
+      })}
+    </ul>
+  )
 }
 
 function NextRound({ game }: { game: GameState }) {
@@ -61,6 +117,7 @@ function NextRound({ game }: { game: GameState }) {
             <FixtureLine fixture={fixture} world={world} userClubId={userClubId} />
           </div>
         )}
+        <CupLine game={game} />
         <p className="text-sm text-muted-foreground">
           Escalação: {lineup.formation}, postura {POSTURE_NAMES[lineup.posture].toLowerCase()}.{' '}
           <Link to="/jogo/escalacao" className="text-primary underline">
@@ -86,6 +143,7 @@ function NextRound({ game }: { game: GameState }) {
       </Card>
 
       <Notices game={game} />
+      <NewSeason game={game} />
 
       <Card className="gap-2 px-4">
         <h2 className="font-semibold">
@@ -98,6 +156,13 @@ function NextRound({ game }: { game: GameState }) {
             ? 'Ainda sem jogos na temporada.'
             : `${table[position - 1].points} pontos em ${table[position - 1].played} ${table[position - 1].played === 1 ? 'jogo' : 'jogos'}.`}
         </p>
+        <p className="text-sm">
+          Meta da diretoria: {objectiveText(world, userClubId, game.career.target).toLowerCase()}.{' '}
+          <Link to="/jogo/carreira" className="text-primary underline">
+            Carreira
+          </Link>
+        </p>
+        <ConfidenceBar confidence={game.career.confidence} />
         <h3 className="mt-2 text-sm font-semibold">Desfalques</h3>
         {out.length === 0 ? (
           <p className="text-sm text-muted-foreground">Elenco completo.</p>
@@ -131,6 +196,7 @@ function NextRound({ game }: { game: GameState }) {
             ))}
           </ul>
         )}
+        <LastCupTie game={game} />
       </Card>
     </div>
   )
@@ -139,7 +205,11 @@ function NextRound({ game }: { game: GameState }) {
 function SeasonEnd({ game }: { game: GameState }) {
   const setGame = useGameStore((s) => s.setGame)
   const summary = seasonSummary(game)
+  const review = seasonReview(game)
   const { world, userClubId } = game
+  const club = world.clubs[userClubId]
+  const campaign = game.season.cup && cupProgress(game.season.cup, userClubId)
+  const final = game.season.cup?.stages.at(-1)?.ties[0]
 
   const userOutcome = summary.leagues.find((l) => l.table.includes(userClubId))!
   const userPosition = userOutcome.table.indexOf(userClubId) + 1
@@ -160,11 +230,50 @@ function SeasonEnd({ game }: { game: GameState }) {
           {divisionName(userOutcome.division)} {summary.year} e recebe{' '}
           {formatMoney(summary.prizes[userClubId])} de premiação.
         </p>
-        <ExpiringWarning game={game} />
-        <Button className="self-start" onClick={() => setGame(startNextSeason(game))}>
-          Iniciar temporada {summary.year + 1}
-        </Button>
+        {review.fired ? (
+          <p className="text-destructive">
+            {game.career.status === 'demitido'
+              ? `Você foi demitido do ${club.name} durante a temporada.`
+              : `A diretoria do ${club.name} decidiu não continuar com você.`}
+          </p>
+        ) : (
+          <p className="text-sm">
+            Meta: {objectiveText(world, userClubId, review.target).toLowerCase()} (até o{' '}
+            {review.target}º). {review.position <= review.target ? 'Cumprida.' : 'Não cumprida.'}{' '}
+            Confiança da diretoria: {review.confidence}%.
+          </p>
+        )}
+        {!review.fired && <ExpiringWarning game={game} />}
+        {review.offers.length > 0 && (
+          <>
+            <h3 className="mt-2 font-semibold">
+              {review.fired ? 'Clubes interessados em você' : 'Propostas de outros clubes'}
+            </h3>
+            <JobOffers
+              game={game}
+              offers={review.offers}
+              onPick={(id) => setGame(startNextSeason(game, id))}
+            />
+          </>
+        )}
+        {!review.fired && (
+          <Button className="self-start" onClick={() => setGame(startNextSeason(game))}>
+            Iniciar temporada {summary.year + 1}
+            {review.offers.length > 0 && ` no ${club.shortName}`}
+          </Button>
+        )}
       </Card>
+      {final?.result && (
+        <Card className="gap-1 px-4">
+          <h2 className="font-semibold">{CUP_NAME}</h2>
+          <p className="text-sm">
+            Campeão: <ClubName club={world.clubs[tieWinner(final)!]} />
+          </p>
+          <p className="text-sm text-muted-foreground">Final</p>
+          <FixtureLine fixture={final} world={world} userClubId={userClubId} />
+          {campaign && <p className="text-sm text-muted-foreground">Sua campanha: {campaign}.</p>}
+        </Card>
+      )}
       <div className="grid gap-4 md:grid-cols-2">
         {summary.leagues.map((outcome) => (
           <Card key={outcome.leagueId} className="gap-2 px-4">
@@ -206,6 +315,78 @@ function ClubList(props: { title: string; ids: string[]; game: GameState }) {
   )
 }
 
+/** The user's cup tie for midweek, if one follows this round. */
+function CupLine({ game }: { game: GameState }) {
+  const { season, world, userClubId } = game
+  const tie = nextCupTie(season.cup, userClubId)
+  if (!tie || tie.round !== season.round) return null
+  const stage = season.cup!.stages.find((s) => s.ties.includes(tie))!
+  const home = tie.homeId === userClubId
+  return (
+    <p className="flex flex-wrap items-center gap-1 text-sm">
+      No meio da semana, {CUP_NAME} ({stage.name.toLowerCase()}), {home ? 'em casa' : 'fora'} contra{' '}
+      <ClubName club={world.clubs[home ? tie.awayId : tie.homeId]} />
+    </p>
+  )
+}
+
+/** The user's cup tie played after the last round, if there was one. */
+function LastCupTie({ game }: { game: GameState }) {
+  const { season, world, userClubId } = game
+  const stage = season.cup?.stages.find((s) => s.round === season.round - 1)
+  const tie: Fixture | undefined = stage?.ties.find(
+    (t) => t.result && (t.homeId === userClubId || t.awayId === userClubId),
+  )
+  if (!stage || !tie) return null
+  return (
+    <div className="mt-2 flex flex-col gap-1">
+      <h3 className="text-sm font-semibold">
+        <Link to="/jogo/copa" className="underline">
+          {CUP_NAME}
+        </Link>
+        , {stage.name.toLowerCase()}
+      </h3>
+      <FixtureLine fixture={tie} world={world} userClubId={userClubId} />
+    </div>
+  )
+}
+
+/** At the first round: who came up from the academy and who retired over the break. */
+function NewSeason({ game }: { game: GameState }) {
+  const { season, world, userClubId, history, career } = game
+  const last = history.at(-1)
+  if (season.round !== 1 || !last) return null
+  const youth = (last.userYouth ?? [])
+    .map((id) => world.players[id])
+    .filter((p) => p.clubId === userClubId)
+  const stayed = career.history.at(-1)?.clubId === userClubId
+  const retired = stayed ? (last.userRetired ?? []).map((id) => world.players[id]) : []
+  if (youth.length === 0 && retired.length === 0) return null
+  return (
+    <Card className="gap-1 px-4 md:col-span-2">
+      <h2 className="font-semibold">Novidades no elenco</h2>
+      {youth.length > 0 && (
+        <p className="text-sm">
+          Subiram da base:{' '}
+          {youth
+            .map(
+              (p) =>
+                `${p.name} (${p.position}, ${p.age} anos, força ${p.strength}, potencial ${p.potential})`,
+            )
+            .join('; ')}
+          .
+        </p>
+      )}
+      {retired.length > 0 && (
+        <p className="text-sm text-muted-foreground">
+          Se aposentaram:{' '}
+          {retired.map((p) => `${p.name} (${p.position}, ${p.age} anos)`).join(', ')}.
+        </p>
+      )}
+    </Card>
+  )
+}
+
 function expiringPlayers(game: GameState) {
   return squadOf(game.world, game.userClubId).filter((p) => p.contractUntil <= game.season.year)
 }
@@ -215,7 +396,8 @@ function Notices({ game }: { game: GameState }) {
   const offers = game.market.offers.length
   const expiring = expiringPlayers(game).length
   const cash = game.world.clubs[game.userClubId].cash
-  if (offers === 0 && expiring === 0 && cash >= 0) return null
+  const shaky = game.career.confidence < 25
+  if (offers === 0 && expiring === 0 && cash >= 0 && !shaky) return null
   return (
     <Card className="gap-1 border-highlight px-4 md:col-span-2">
       {offers > 0 && (
@@ -233,6 +415,11 @@ function Notices({ game }: { game: GameState }) {
           <Link to="/jogo/mercado" className="text-primary underline">
             Renovar
           </Link>
+        </p>
+      )}
+      {shaky && (
+        <p className="text-sm text-destructive">
+          A diretoria está perdendo a paciência. Se a confiança chegar a zero, você é demitido.
         </p>
       )}
       {cash < 0 && (
