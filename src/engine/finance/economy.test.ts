@@ -69,7 +69,10 @@ describe('a season of money', () => {
       for (const id of c.playerIds) expect(closed.world.players[id].clubId).toBe(c.id)
     }
     const all = Object.values(closed.world.players)
-    expect(all).toHaveLength(Object.keys(start.world.players).length)
+    // Nobody is lost: the youngsters come in and the retired stay on file.
+    const youth = all.filter((p) => !start.world.players[p.id])
+    expect(all).toHaveLength(Object.keys(start.world.players).length + youth.length)
+    expect(youth.length).toBeGreaterThanOrEqual(Object.keys(closed.world.clubs).length)
     expect(all.some((p) => p.clubId === FREE_AGENT)).toBe(true)
   })
 })

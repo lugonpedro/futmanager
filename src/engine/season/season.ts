@@ -1,3 +1,10 @@
+import {
+  BOARD,
+  confidenceAfterMatch,
+  confidenceAtClose,
+  findJobOffers,
+  newCareer,
+} from '../career/board.ts'
 import { ECONOMY } from '../finance/economy.ts'
 import {
   applyPayments,
@@ -7,13 +14,15 @@ import {
   mergePayments,
   monthsInSeason,
   payday,
+  type Payments,
 } from '../finance/finance.ts'
 import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
+import { ageWorld, youthIntake } from '../progression/progression.ts'
 import type {
+  CareerSeason,
   Fixture,
-  FixtureResult,
   GameState,
   LeagueOutcome,
   Lineup,
@@ -24,17 +33,29 @@ import type {
 } from '../model/types.ts'
 import { createRng, type Rng } from '../rng.ts'
 import { closeContracts, marketRound } from '../transfer/market.ts'
+import {
+  CUP_NAME,
+  cupPrize,
+  cupProgress,
+  cupStageAt,
+  cupWinner,
+  createCup,
+  playCupStage,
+} from './cup.ts'
+import { toFixtureResult } from './results.ts'
+import { PROMOTION_SPOTS } from './rules.ts'
 import { createSchedule } from './schedule.ts'
 import { standings, topScorers } from './standings.ts'
 
-/** Clubs that go up from each division and down from the one above. */
-export const PROMOTION_SPOTS = 4
+export { PROMOTION_SPOTS } from './rules.ts'
+export { toFixtureResult } from './results.ts'
+
 /** Yellow cards that add up to a one-match ban. */
 export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 2
+export const SAVE_VERSION = 3
 
 /** Turns any mix of numbers and labels into a 32-bit seed (FNV-1a). */
 export function mixSeed(...parts: (number | string)[]): number {
@@ -59,6 +80,8 @@ export function startSeason(world: World, year = world.season): Season {
     injuries: {},
     suspensions: {},
     yellowCards: {},
+    appearances: {},
+    cup: createCup(Object.values(world.clubs), createRng(mixSeed(world.seed, year, 'copa'))),
   }
 }
 
@@ -72,6 +95,7 @@ export function newGame(seed: number, userClubId: string): GameState {
     season: startSeason(world),
     ledger: [],
     market: { listed: {}, offers: [], news: [] },
+    career: newCareer(world, userClubId),
     history: [],
   }
 }
@@ -84,6 +108,10 @@ export function leagueOf(world: World, clubId: string): string {
 }
 
 export const isSeasonOver = (season: Season) => season.round > season.totalRounds
+
+/** Whether the next round can be played: the season goes on and the manager has a job. */
+export const canPlayRound = (game: GameState) =>
+  !isSeasonOver(game.season) && game.career.status === 'empregado'
 
 /** Fixtures of the round about to be played, across every league. */
 export function roundFixtures(season: Season, round = season.round): Fixture[] {
@@ -138,20 +166,6 @@ export function createRoundMatches(game: GameState): LiveMatch[] {
   }))
 }
 
-export function toFixtureResult(result: MatchResult): FixtureResult {
-  return {
-    homeGoals: result.homeGoals,
-    awayGoals: result.awayGoals,
-    goals: result.events
-      .filter((e) => e.type === 'gol' && e.playerId && e.clubId)
-      .map((e) => ({ playerId: e.playerId!, clubId: e.clubId!, minute: e.minute })),
-    cards: {
-      home: { yellow: result.stats.home.yellowCards, red: result.stats.home.redCards },
-      away: { yellow: result.stats.away.yellowCards, red: result.stats.away.redCards },
-    },
-  }
-}
-
 /** Counts down every ban and injury by one round, dropping the ones that are over. */
 function countDown(record: Record<string, number>): Record<string, number> {
   return Object.fromEntries(
@@ -185,6 +199,7 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
   )
 
   const injuries = countDown(season.injuries)
+  const appearances = { ...season.appearances }
   const suspensions = countDown(season.suspensions)
   const yellowCards = { ...season.yellowCards }
   const rng = createRng(mixSeed(game.world.seed, season.year, season.round, 'lesoes'))
@@ -206,6 +221,15 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
     }
   }
 
+  for (const result of results) countAppearances(game, result, appearances)
+
+  const recorded: GameState = {
+    ...game,
+    season: { ...season, fixtures, injuries, suspensions, yellowCards, appearances },
+  }
+  const cup = playCup(recorded)
+  const judged = judgeManager(cup.game, results)
+
   // Gate money uses the table as it stood before these results.
   const played = roundFixtures(season)
   const payments = mergePayments(
@@ -213,15 +237,143 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
     isPayday(season.round)
       ? payday(game, 1, `Mês ${season.round / ECONOMY.roundsPerMonth}`)
       : mergePayments(),
+    cup.payments,
   )
   const settled = marketRound(
-    applyPayments(
-      { ...game, season: { ...season, fixtures, injuries, suspensions, yellowCards } },
-      payments,
-    ),
+    applyPayments(judged, payments),
     createRng(mixSeed(game.world.seed, season.year, season.round, 'mercado')),
   )
   return { ...settled, season: { ...settled.season, round: season.round + 1 } }
+}
+
+/** Counts a match for every player who started it or came on. */
+function countAppearances(
+  game: GameState,
+  result: MatchResult,
+  appearances: Record<string, number>,
+) {
+  const ids = [
+    ...clubLineup(game, result.homeId).starters.map((s) => s.playerId),
+    ...clubLineup(game, result.awayId).starters.map((s) => s.playerId),
+    ...result.events.flatMap((e) =>
+      e.type === 'substituicao' && e.otherPlayerId ? [e.otherPlayerId] : [],
+    ),
+  ]
+  for (const id of ids) appearances[id] = (appearances[id] ?? 0) + 1
+}
+
+/**
+ * The cup stage due after this league round, if any: every tie simulated,
+ * injuries carried into the league (cards stay in the cup), prize money for
+ * each winner.
+ */
+function playCup(game: GameState): { game: GameState; payments: Payments } {
+  const { season, world } = game
+  const stage = cupStageAt(season.cup, season.round)
+  if (stage < 0 || !season.cup) return { game, payments: mergePayments() }
+  const rng = createRng(mixSeed(world.seed, season.year, 'copa', stage))
+  const played = playCupStage(
+    season.cup,
+    stage,
+    (tie) => simulateMatch(matchInput(game, tie), matchRng(game, tie)),
+    rng,
+  )
+  const injuries = { ...season.injuries }
+  const appearances = { ...season.appearances }
+  for (const result of played.results) {
+    countAppearances(game, result, appearances)
+    for (const id of result.injured) {
+      injuries[id] = Math.max(injuries[id] ?? 0, 1 + Math.floor(rng.next() ** 2 * 5))
+    }
+  }
+  const prize = cupPrize(season.cup, stage)
+  const payments: Payments = { cash: {}, entries: [] }
+  for (const id of played.winners) payments.cash[id] = prize
+  if (played.winners.includes(game.userClubId)) {
+    payments.entries.push({
+      round: season.round,
+      category: 'premiacao',
+      amount: prize,
+      note: `${CUP_NAME}, ${season.cup.stages[stage].name.toLowerCase()}`,
+    })
+  }
+  return {
+    game: { ...game, season: { ...season, cup: played.cup, injuries, appearances } },
+    payments,
+  }
+}
+
+/** The board reacts to the user's league result, and sacks the manager when it runs out of patience. */
+function judgeManager(game: GameState, results: readonly MatchResult[]): GameState {
+  const { career, world, userClubId, season } = game
+  if (career.status !== 'empregado') return game
+  const match = results.find((r) => r.homeId === userClubId || r.awayId === userClubId)
+  if (!match) return game
+  const home = match.homeId === userClubId
+  const position = userPosition(game)
+  const confidence = confidenceAfterMatch(
+    career,
+    home ? match.homeGoals : match.awayGoals,
+    home ? match.awayGoals : match.homeGoals,
+    position,
+    season.round,
+  )
+  if (confidence > 0) return { ...game, career: { ...career, confidence } }
+  const rng = createRng(mixSeed(world.seed, season.year, season.round, 'diretoria'))
+  return {
+    ...game,
+    career: {
+      ...career,
+      confidence,
+      status: 'demitido',
+      jobOffers: findJobOffers(game, 'demitido', rng),
+      history: [...career.history, { ...careerSeason(game, position), fired: true }],
+    },
+  }
+}
+
+function userPosition(game: GameState): number {
+  const table = leagueStandings(game, leagueOf(game.world, game.userClubId))
+  return table.findIndex((row) => row.clubId === game.userClubId) + 1
+}
+
+function careerSeason(game: GameState, position: number): CareerSeason {
+  const { world, userClubId, season, career } = game
+  const cup = cupProgress(season.cup, userClubId)
+  return {
+    year: season.year,
+    clubId: userClubId,
+    division: world.clubs[userClubId].division,
+    position,
+    target: career.target,
+    ...(cup && { cup }),
+  }
+}
+
+/** How the board sees the season that just ended, and who wants the manager next. */
+export type SeasonReview = {
+  position: number
+  target: number
+  confidence: number
+  fired: boolean
+  offers: string[]
+}
+
+export function seasonReview(game: GameState): SeasonReview {
+  const { career, world, season } = game
+  const position = userPosition(game)
+  if (career.status === 'demitido') {
+    return { position, target: career.target, confidence: 0, fired: true, offers: career.jobOffers }
+  }
+  const confidence = confidenceAtClose(career, position)
+  const fired = confidence <= 0
+  const rng = createRng(mixSeed(world.seed, season.year, 'diretoria'))
+  const offers = fired
+    ? findJobOffers(game, 'demitido', rng)
+    : confidence >= BOARD.goodSeason
+      ? findJobOffers(game, 'sucesso', rng)
+      : []
+  return { position, target: career.target, confidence, fired, offers }
 }
 
 /** Plays the whole current round at once. */
@@ -272,9 +424,18 @@ export function seasonSummary(game: GameState): SeasonSummary {
   return { year: game.season.year, leagues: outcomes, prizes }
 }
 
-/** Closes a finished season: pays prizes, swaps promoted and relegated clubs, and draws the next calendar. */
-export function startNextSeason(game: GameState): GameState {
+/**
+ * Closes a finished season: pays prizes, ages the players and brings up the
+ * youngsters, settles contracts, swaps promoted and relegated clubs and draws
+ * the next calendar. The manager stays put unless he takes one of the offers
+ * from seasonReview(), which he must when sacked.
+ */
+export function startNextSeason(game: GameState, nextClubId = game.userClubId): GameState {
   if (!isSeasonOver(game.season)) throw new Error('The season is not over yet')
+  const review = seasonReview(game)
+  const moving = nextClubId !== game.userClubId
+  if (!moving && review.fired) throw new Error('O técnico foi demitido: escolha um novo clube.')
+  if (moving && !review.offers.includes(nextClubId)) throw new Error('Esse clube não fez proposta.')
   const nextYear = game.season.year + 1
   const prizes = seasonSummary(game).prizes
   // The months the calendar's paydays didn't reach, then prizes, then contracts running out.
@@ -296,12 +457,30 @@ export function startNextSeason(game: GameState): GameState {
       ],
     },
   )
-  const paid = closeContracts(
-    applyPayments(game, closing),
-    nextYear,
-    createRng(mixSeed(game.world.seed, game.season.year, 'contratos')),
+  const seed = (label: string) => createRng(mixSeed(game.world.seed, game.season.year, label))
+  const settled = applyPayments(game, closing)
+  const aged = ageWorld(settled.world, game.season.appearances, seed('idade'))
+  const listed = Object.fromEntries(
+    Object.entries(settled.market.listed).filter(
+      ([id]) => aged.world.players[id]?.clubId === game.userClubId,
+    ),
   )
-  const summary = { ...seasonSummary(paid), userFinances: ledgerTotals(paid.ledger) }
+  const youth = youthIntake(
+    { ...settled, world: aged.world, market: { ...settled.market, listed } },
+    nextYear,
+    seed('base'),
+  )
+  const paid = closeContracts(youth.game, nextYear, seed('contratos'))
+  const cupWinnerId = cupWinner(game.season.cup)
+  const summary: SeasonSummary = {
+    ...seasonSummary(paid),
+    userFinances: ledgerTotals(paid.ledger),
+    ...(cupWinnerId && { cupWinnerId }),
+    userRetired: aged.retired
+      .filter((p) => game.world.players[p.id].clubId === game.userClubId)
+      .map((p) => p.id),
+    userYouth: youth.userYouth.map((p) => p.id),
+  }
   const { world } = paid
 
   const clubIdsByDivision = new Map<number, string[]>()
@@ -330,11 +509,31 @@ export function startNextSeason(game: GameState): GameState {
   })
 
   const nextWorld: World = { ...world, season: nextYear, clubs, leagues }
+  // A manager sacked mid-season already has that season on his record.
+  const careerHistory =
+    game.career.status === 'demitido'
+      ? game.career.history
+      : [...game.career.history, careerSeason(game, review.position)]
+  const career = newCareer(nextWorld, nextClubId, careerHistory)
   return {
     ...paid,
     world: nextWorld,
     season: startSeason(nextWorld),
     ledger: [],
     history: [...game.history, summary],
+    ...(moving && {
+      userClubId: nextClubId,
+      userLineup: undefined,
+      market: { ...paid.market, listed: {}, offers: [] },
+    }),
+    career: moving
+      ? career
+      : {
+          ...career,
+          confidence: Math.min(
+            BOARD.newSeasonCeiling,
+            Math.max(BOARD.newSeasonFloor, review.confidence),
+          ),
+        },
   }
 }

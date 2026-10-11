@@ -1,5 +1,6 @@
 import {
   ArrowLeftRightIcon,
+  BriefcaseIcon,
   CalendarDaysIcon,
   GoalIcon,
   HouseIcon,
@@ -7,6 +8,7 @@ import {
   LogOutIcon,
   MenuIcon,
   ShirtIcon,
+  TrophyIcon,
   UsersIcon,
   WalletIcon,
   type LucideIcon,
@@ -33,6 +35,8 @@ const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = 
   { to: '/jogo/tabela', label: 'Tabela', icon: ListOrderedIcon },
   { to: '/jogo/calendario', label: 'Calendário', icon: CalendarDaysIcon },
   { to: '/jogo/artilharia', label: 'Artilharia', icon: GoalIcon },
+  { to: '/jogo/copa', label: 'Copa', icon: TrophyIcon },
+  { to: '/jogo/carreira', label: 'Carreira', icon: BriefcaseIcon },
 ]
 
 /**

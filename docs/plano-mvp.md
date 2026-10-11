@@ -104,14 +104,14 @@ Cada fase termina com algo jogável e testes do motor passando.
 - Menu de navegação do jogo: barra lateral no computador e menu sanfona (hambúrguer) no celular, com Resumo, Escalação, Elenco, Tabela, Calendário e Artilharia, e acesso ao menu principal
 - Tema claro/escuro e visual consistente em todas as telas, inclusive Partida e Amistoso
 
-### Fase 5: Finanças e mercado (PR #7)
+### Fase 5: Finanças e mercado (feita, PR #7)
 
 - Receitas: bilheteria (público depende de reputação, fase e preço), premiação, patrocínio fixo por divisão
 - Despesas: salários mensais
 - Mercado: lista de jogadores, comprar/vender, propostas recebidas, negociação simples de salário e contrato
 - IA dos clubes: vende quem sobra, compra para preencher carências, respeitando o caixa
 
-### Fase 6: Carreira e progressão
+### Fase 6: Carreira e progressão (PR #8)
 
 - Evolução por idade e minutos jogados, declínio após ~30, aposentadoria
 - Jogadores da base surgindo a cada temporada

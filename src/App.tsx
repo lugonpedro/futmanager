@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router'
 import { useApplyTheme } from './store/theme.ts'
 import { FriendlyScreen } from './ui/screens/FriendlyScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
+import { CareerScreen } from './ui/screens/game/CareerScreen.tsx'
+import { CupScreen } from './ui/screens/game/CupScreen.tsx'
 import { FinanceScreen } from './ui/screens/game/FinanceScreen.tsx'
 import { GameLayout } from './ui/screens/game/GameLayout.tsx'
 import { LineupScreen } from './ui/screens/game/LineupScreen.tsx'
@@ -30,6 +32,8 @@ export default function App() {
         <Route path="tabela" element={<TableScreen />} />
         <Route path="calendario" element={<CalendarScreen />} />
         <Route path="artilharia" element={<ScorersScreen />} />
+        <Route path="copa" element={<CupScreen />} />
+        <Route path="carreira" element={<CareerScreen />} />
       </Route>
       <Route path="/jogo/partida" element={<LiveMatchScreen />} />
     </Routes>

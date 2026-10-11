@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import type { GameState } from '../engine/model/types.ts'
 import { upgradeGame } from '../engine/save.ts'
+import { SAVE_VERSION } from '../engine/season/season.ts'
 
 type GameStore = {
   game?: GameState
@@ -20,7 +21,7 @@ export const useGameStore = create<GameStore>()(
     }),
     {
       name: 'futmanager-carreira',
-      version: 2,
+      version: SAVE_VERSION,
       storage: createJSONStorage(() => localStorage),
       migrate: (persisted) => {
         const state = persisted as { game?: Parameters<typeof upgradeGame>[0] }

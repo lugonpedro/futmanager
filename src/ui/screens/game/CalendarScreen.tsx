@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import type { Fixture } from '../../../engine/model/types.ts'
+import { CUP_ID, tieWinner } from '../../../engine/season/cup.ts'
 import { leagueOf, userFixture } from '../../../engine/season/season.ts'
 import { useGame } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
@@ -26,8 +27,12 @@ export function CalendarScreen() {
   const [leagueId, setLeagueId] = useState(() => leagueOf(world, userClubId))
   const [round, setRound] = useState(() => Math.min(season.round, season.totalRounds))
   const rounds = Array.from({ length: season.totalRounds }, (_, i) => i + 1)
+  const cupTies = (season.cup?.stages ?? []).flatMap((s) =>
+    s.ties.filter((t) => t.homeId === userClubId || t.awayId === userClubId),
+  )
+  // Cup ties are played in midweek, right after the league round they follow.
   const ownFixtures = rounds
-    .map((r) => userFixture(game, r))
+    .flatMap((r) => [userFixture(game, r), ...cupTies.filter((t) => t.round === r)])
     .filter((f): f is Fixture => f !== undefined)
 
   return (
@@ -44,12 +49,14 @@ export function CalendarScreen() {
                 ? [result.homeGoals, result.awayGoals]
                 : [result.awayGoals, result.homeGoals]
               : []
+            const cup = fixture.leagueId === CUP_ID
             const outcome =
               scored === undefined
                 ? undefined
-                : scored > conceded!
+                : scored > conceded! ||
+                    (cup && scored === conceded && tieWinner(fixture) === userClubId)
                   ? 'V'
-                  : scored === conceded
+                  : scored === conceded && !cup
                     ? 'E'
                     : 'D'
             return (
@@ -59,13 +66,17 @@ export function CalendarScreen() {
                   onClick={() => setRound(fixture.round)}
                   className={`grid w-full grid-cols-[2.5rem_1.5rem_1fr_auto] items-center gap-2 rounded px-1 py-0.5 text-left cursor-pointer hover:bg-accent ${fixture.round === season.round ? 'bg-highlight-soft' : ''}`}
                 >
-                  <span className="text-muted-foreground tabular-nums">{fixture.round}ª</span>
+                  <span className="text-muted-foreground tabular-nums">
+                    {cup ? 'Copa' : `${fixture.round}ª`}
+                  </span>
                   <span className="text-xs text-muted-foreground" title={home ? 'Em casa' : 'Fora'}>
                     {home ? 'C' : 'F'}
                   </span>
                   <ClubName club={opponent} />
                   <span className={`tabular-nums ${outcome ? OUTCOME_STYLE[outcome] : ''}`}>
-                    {outcome ? `${outcome} ${scored}-${conceded}` : ''}
+                    {outcome
+                      ? `${outcome} ${scored}-${conceded}${result?.penalties ? ' pên.' : ''}`
+                      : ''}
                   </span>
                 </button>
               </li>
