@@ -13,6 +13,7 @@ import {
   startNextSeason,
   userFixture,
 } from '../../../engine/season/season.ts'
+import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { simulateRounds } from '../../../worker/simulate.ts'
 import { ClubName } from '../../components/ClubName.tsx'
@@ -83,6 +84,8 @@ function NextRound({ game }: { game: GameState }) {
           {busy && <span className="self-center text-sm text-muted-foreground">Simulando...</span>}
         </div>
       </Card>
+
+      <Notices game={game} />
 
       <Card className="gap-2 px-4">
         <h2 className="font-semibold">
@@ -157,6 +160,7 @@ function SeasonEnd({ game }: { game: GameState }) {
           {divisionName(userOutcome.division)} {summary.year} e recebe{' '}
           {formatMoney(summary.prizes[userClubId])} de premiação.
         </p>
+        <ExpiringWarning game={game} />
         <Button className="self-start" onClick={() => setGame(startNextSeason(game))}>
           Iniciar temporada {summary.year + 1}
         </Button>
@@ -199,5 +203,61 @@ function ClubList(props: { title: string; ids: string[]; game: GameState }) {
         ))}
       </ul>
     </div>
+  )
+}
+
+function expiringPlayers(game: GameState) {
+  return squadOf(game.world, game.userClubId).filter((p) => p.contractUntil <= game.season.year)
+}
+
+/** Things that need the manager: bids waiting, contracts running out, money running out. */
+function Notices({ game }: { game: GameState }) {
+  const offers = game.market.offers.length
+  const expiring = expiringPlayers(game).length
+  const cash = game.world.clubs[game.userClubId].cash
+  if (offers === 0 && expiring === 0 && cash >= 0) return null
+  return (
+    <Card className="gap-1 border-highlight px-4 md:col-span-2">
+      {offers > 0 && (
+        <p className="text-sm">
+          <Link to="/jogo/mercado" className="font-semibold text-primary underline">
+            {offers} {offers === 1 ? 'proposta' : 'propostas'}
+          </Link>{' '}
+          por jogadores seus, válidas até a próxima rodada.
+        </p>
+      )}
+      {expiring > 0 && (
+        <p className="text-sm">
+          {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim da
+          temporada.{' '}
+          <Link to="/jogo/mercado" className="text-primary underline">
+            Renovar
+          </Link>
+        </p>
+      )}
+      {cash < 0 && (
+        <p className="text-sm text-destructive">
+          Caixa negativo: {formatMoney(cash)}. Venda jogadores ou ajuste o ingresso em{' '}
+          <Link to="/jogo/financas" className="underline">
+            Finanças
+          </Link>
+          .
+        </p>
+      )}
+    </Card>
+  )
+}
+
+function ExpiringWarning({ game }: { game: GameState }) {
+  const players = expiringPlayers(game)
+  if (players.length === 0) return null
+  return (
+    <p className="text-sm text-muted-foreground">
+      Ao iniciar a nova temporada saem de graça, por fim de contrato:{' '}
+      {players.map((p) => `${p.name} (${p.position}, ${p.strength})`).join(', ')}.{' '}
+      <Link to="/jogo/mercado" className="text-primary underline">
+        Renovar antes
+      </Link>
+    </p>
   )
 }

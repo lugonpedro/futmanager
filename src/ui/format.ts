@@ -1,13 +1,6 @@
-import type { Position, Posture, Trait } from '../engine/model/types.ts'
+import type { LedgerCategory, Position, Posture, Trait } from '../engine/model/types.ts'
 
-const millions = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 })
-const thousands = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 })
-
-/** R$ 12,5 mi / R$ 750 mil */
-export function formatMoney(value: number): string {
-  if (Math.abs(value) >= 1_000_000) return `R$ ${millions.format(value / 1_000_000)} mi`
-  return `R$ ${thousands.format(value / 1000)} mil`
-}
+export { formatMoney, formatReais } from '../engine/money.ts'
 
 export const divisionName = (division: number) => `Série ${String.fromCharCode(64 + division)}`
 
@@ -41,4 +34,13 @@ export const POSTURE_NAMES: Record<Posture, string> = {
   defensiva: 'Defensiva',
   normal: 'Normal',
   ofensiva: 'Ofensiva',
+}
+
+export const LEDGER_NAMES: Record<LedgerCategory, string> = {
+  bilheteria: 'Bilheteria',
+  patrocinio: 'Patrocínio',
+  premiacao: 'Premiação',
+  vendas: 'Venda de jogadores',
+  salarios: 'Salários',
+  compras: 'Compra de jogadores',
 }

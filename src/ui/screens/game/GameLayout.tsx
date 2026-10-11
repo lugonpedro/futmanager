@@ -1,4 +1,5 @@
 import {
+  ArrowLeftRightIcon,
   CalendarDaysIcon,
   GoalIcon,
   HouseIcon,
@@ -7,6 +8,7 @@ import {
   MenuIcon,
   ShirtIcon,
   UsersIcon,
+  WalletIcon,
   type LucideIcon,
 } from 'lucide-react'
 import { useState } from 'react'
@@ -26,6 +28,8 @@ const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = 
   { to: '/jogo', label: 'Resumo', icon: HouseIcon, end: true },
   { to: '/jogo/escalacao', label: 'Escalação', icon: ShirtIcon },
   { to: '/jogo/elenco', label: 'Elenco', icon: UsersIcon },
+  { to: '/jogo/mercado', label: 'Mercado', icon: ArrowLeftRightIcon },
+  { to: '/jogo/financas', label: 'Finanças', icon: WalletIcon },
   { to: '/jogo/tabela', label: 'Tabela', icon: ListOrderedIcon },
   { to: '/jogo/calendario', label: 'Calendário', icon: CalendarDaysIcon },
   { to: '/jogo/artilharia', label: 'Artilharia', icon: GoalIcon },

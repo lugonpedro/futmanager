@@ -33,8 +33,12 @@ export type Player = {
   marketValue: number
   /** Last season covered by the contract. */
   contractUntil: number
+  /** FREE_AGENT when the player has no club. */
   clubId: string
 }
+
+/** clubId of a player without a club, free to sign for wages alone. */
+export const FREE_AGENT = ''
 
 export type Club = {
   id: string
@@ -45,6 +49,8 @@ export type Club = {
   /** How big the club is, 1 to 99; drives squad strength, crowds and money. */
   reputation: number
   stadiumCapacity: number
+  /** Price of a ticket for home matches, in reais. */
+  ticketPrice: number
   cash: number
   division: number
   playerIds: string[]
@@ -174,14 +180,59 @@ export type SeasonSummary = {
   leagues: LeagueOutcome[]
   /** Prize money paid per club. */
   prizes: Record<string, number>
+  /** The user's season totals per category, filled in once the season closes. */
+  userFinances?: Partial<Record<LedgerCategory, number>>
+}
+
+export type LedgerCategory =
+  'bilheteria' | 'patrocinio' | 'premiacao' | 'vendas' | 'salarios' | 'compras'
+
+/** One movement of the user's club money; incomes positive, costs negative. */
+export type LedgerEntry = {
+  round: number
+  category: LedgerCategory
+  amount: number
+  note: string
+}
+
+/** A club wanting to buy one of the user's players; it lapses after a round. */
+export type TransferOffer = {
+  id: string
+  playerId: string
+  clubId: string
+  fee: number
+  round: number
+}
+
+/** A completed transfer, for the market news. */
+export type TransferNews = {
+  season: number
+  round: number
+  playerId: string
+  fromClubId: string
+  toClubId: string
+  fee: number
+}
+
+export type Market = {
+  /** User players up for sale, with the asking price. */
+  listed: Record<string, number>
+  offers: TransferOffer[]
+  /** Latest transfers, newest first. */
+  news: TransferNews[]
 }
 
 /** Everything a career needs; plain JSON so it can be saved as is. */
 export type GameState = {
+  /** Save format, so older careers can be upgraded on load. */
+  version: number
   world: World
   userClubId: string
   /** The user's lineup and tactics as last set; patched up before each match. */
   userLineup?: Lineup
   season: Season
+  /** The user's money movements this season. */
+  ledger: LedgerEntry[]
+  market: Market
   history: SeasonSummary[]
 }

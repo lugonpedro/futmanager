@@ -1,3 +1,13 @@
+import { ECONOMY } from '../finance/economy.ts'
+import {
+  applyPayments,
+  isPayday,
+  ledgerTotals,
+  matchdayPayments,
+  mergePayments,
+  monthsInSeason,
+  payday,
+} from '../finance/finance.ts'
 import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
@@ -13,6 +23,7 @@ import type {
   World,
 } from '../model/types.ts'
 import { createRng, type Rng } from '../rng.ts'
+import { closeContracts, marketRound } from '../transfer/market.ts'
 import { createSchedule } from './schedule.ts'
 import { standings, topScorers } from './standings.ts'
 
@@ -21,7 +32,9 @@ export const PROMOTION_SPOTS = 4
 /** Yellow cards that add up to a one-match ban. */
 export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
-export const CHAMPION_PRIZE: Record<number, number> = { 1: 12_000_000, 2: 3_000_000 }
+export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
+/** Bumped when the save format changes; see upgradeGame(). */
+export const SAVE_VERSION = 2
 
 /** Turns any mix of numbers and labels into a 32-bit seed (FNV-1a). */
 export function mixSeed(...parts: (number | string)[]): number {
@@ -52,7 +65,15 @@ export function startSeason(world: World, year = world.season): Season {
 export function newGame(seed: number, userClubId: string): GameState {
   const world = generateWorld(seed)
   if (!world.clubs[userClubId]) throw new Error(`Unknown club ${userClubId}`)
-  return { world, userClubId, season: startSeason(world), history: [] }
+  return {
+    version: SAVE_VERSION,
+    world,
+    userClubId,
+    season: startSeason(world),
+    ledger: [],
+    market: { listed: {}, offers: [], news: [] },
+    history: [],
+  }
 }
 
 /** The league a club plays in this season. */
@@ -185,10 +206,22 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
     }
   }
 
-  return {
-    ...game,
-    season: { ...season, round: season.round + 1, fixtures, injuries, suspensions, yellowCards },
-  }
+  // Gate money uses the table as it stood before these results.
+  const played = roundFixtures(season)
+  const payments = mergePayments(
+    matchdayPayments(game, played),
+    isPayday(season.round)
+      ? payday(game, 1, `Mês ${season.round / ECONOMY.roundsPerMonth}`)
+      : mergePayments(),
+  )
+  const settled = marketRound(
+    applyPayments(
+      { ...game, season: { ...season, fixtures, injuries, suspensions, yellowCards } },
+      payments,
+    ),
+    createRng(mixSeed(game.world.seed, season.year, season.round, 'mercado')),
+  )
+  return { ...settled, season: { ...settled.season, round: season.round + 1 } }
 }
 
 /** Plays the whole current round at once. */
@@ -242,8 +275,34 @@ export function seasonSummary(game: GameState): SeasonSummary {
 /** Closes a finished season: pays prizes, swaps promoted and relegated clubs, and draws the next calendar. */
 export function startNextSeason(game: GameState): GameState {
   if (!isSeasonOver(game.season)) throw new Error('The season is not over yet')
-  const summary = seasonSummary(game)
-  const { world } = game
+  const nextYear = game.season.year + 1
+  const prizes = seasonSummary(game).prizes
+  // The months the calendar's paydays didn't reach, then prizes, then contracts running out.
+  const closing = mergePayments(
+    payday(
+      game,
+      ECONOMY.monthsPerYear - monthsInSeason(game.season.totalRounds),
+      'Meses fora da temporada',
+    ),
+    {
+      cash: {},
+      entries: [
+        {
+          round: game.season.round,
+          category: 'premiacao',
+          amount: prizes[game.userClubId] ?? 0,
+          note: `Premiação da temporada ${game.season.year}`,
+        },
+      ],
+    },
+  )
+  const paid = closeContracts(
+    applyPayments(game, closing),
+    nextYear,
+    createRng(mixSeed(game.world.seed, game.season.year, 'contratos')),
+  )
+  const summary = { ...seasonSummary(paid), userFinances: ledgerTotals(paid.ledger) }
+  const { world } = paid
 
   const clubIdsByDivision = new Map<number, string[]>()
   summary.leagues.forEach((outcome, i) => {
@@ -270,11 +329,12 @@ export function startNextSeason(game: GameState): GameState {
     return { ...league, clubIds }
   })
 
-  const nextWorld: World = { ...world, season: game.season.year + 1, clubs, leagues }
+  const nextWorld: World = { ...world, season: nextYear, clubs, leagues }
   return {
-    ...game,
+    ...paid,
     world: nextWorld,
     season: startSeason(nextWorld),
+    ledger: [],
     history: [...game.history, summary],
   }
 }

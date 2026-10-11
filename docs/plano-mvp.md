@@ -91,20 +91,20 @@ Cada fase termina com algo jogável e testes do motor passando.
 - Fim de temporada: acesso/rebaixamento, premiação em dinheiro, nova temporada
 - UI: Tabela, Calendário, tela de Partida "ao vivo" (eventos aparecendo minuto a minuto, placares dos outros jogos ao lado)
 
-### Fase 4: Elenco e escalação (feita, PR #5)
+### Fase 4: Elenco e escalação (feita)
 
 - Tela de elenco ordenável/filtrável
 - Escalação com formações (4-4-2, 4-3-3, 3-5-2, 4-5-1, 5-3-2) e postura (defensiva, normal, ofensiva)
 - Escalação automática para a IA e botão "escalar automaticamente" para o jogador
 - Substituições e troca de tática durante a partida
 
-### Fase 4.5: Interface com shadcn/ui e menu
+### Fase 4.5: Interface com shadcn/ui e menu (feita, PR #6)
 
 - Instalar shadcn/ui (em cima do Tailwind que já está no projeto) e trocar botões, abas, tabelas, selects e diálogos pelos componentes dele
 - Menu de navegação do jogo: barra lateral no computador e menu sanfona (hambúrguer) no celular, com Resumo, Escalação, Elenco, Tabela, Calendário e Artilharia, e acesso ao menu principal
 - Tema claro/escuro e visual consistente em todas as telas, inclusive Partida e Amistoso
 
-### Fase 5: Finanças e mercado
+### Fase 5: Finanças e mercado (PR #7)
 
 - Receitas: bilheteria (público depende de reputação, fase e preço), premiação, patrocínio fixo por divisão
 - Despesas: salários mensais
