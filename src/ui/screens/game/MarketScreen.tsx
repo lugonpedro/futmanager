@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, Navigate, useNavigate, useParams } from 'react-router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -25,31 +26,35 @@ import {
   askingPrice,
   canLeave,
   rejectOffer,
-  squadOf,
   wageDemand,
 } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
-import { formatMoney, POSITION_NAMES, POSITION_ORDER } from '../../format.ts'
-import { ListDialog, RenewDialog, SignDialog } from './MarketDialogs.tsx'
+import { formatMoney, POSITION_NAMES } from '../../format.ts'
+import { SignDialog } from './MarketDialogs.tsx'
 
 const SHOWN = 50
 const SORTS = { Força: 'strength', Preço: 'price', Idade: 'age' } as const
 type Sort = keyof typeof SORTS
 
+const TABS = ['contratar', 'propostas', 'noticias']
+
+/** Players from other clubs: buying, bids for the user's players and the transfer news. */
 export function MarketScreen() {
   const game = useGame()
+  const navigate = useNavigate()
+  const { tab } = useParams()
   const offers = game.market.offers.length
+  if (tab && !TABS.includes(tab)) return <Navigate to="/jogo/mercado" replace />
   return (
-    <Tabs defaultValue="contratar">
+    <Tabs value={tab ?? 'contratar'} onValueChange={(value) => navigate(`/jogo/mercado/${value}`)}>
       <TabsList>
         <TabsTrigger value="contratar">Contratar</TabsTrigger>
         <TabsTrigger value="propostas">
           Propostas
           {offers > 0 && <Badge className="h-5 min-w-5 px-1">{offers}</Badge>}
         </TabsTrigger>
-        <TabsTrigger value="elenco">Vender e renovar</TabsTrigger>
         <TabsTrigger value="noticias">Movimentações</TabsTrigger>
       </TabsList>
       <TabsContent value="contratar">
@@ -57,9 +62,6 @@ export function MarketScreen() {
       </TabsContent>
       <TabsContent value="propostas">
         <OffersTab game={game} />
-      </TabsContent>
-      <TabsContent value="elenco">
-        <SquadTab game={game} />
       </TabsContent>
       <TabsContent value="noticias">
         <NewsTab game={game} />
@@ -187,7 +189,10 @@ function OffersTab({ game }: { game: GameState }) {
   if (market.offers.length === 0) {
     return (
       <p className="text-sm text-muted-foreground">
-        Nenhuma proposta no momento. Coloque jogadores à venda na aba &quot;Vender e renovar&quot;
+        Nenhuma proposta no momento. Coloque jogadores à venda em{' '}
+        <Link to="/jogo/time" className="text-primary underline">
+          Time
+        </Link>{' '}
         para atrair ofertas. As propostas valem até a próxima rodada.
       </p>
     )
@@ -229,82 +234,6 @@ function OffersTab({ game }: { game: GameState }) {
           </Card>
         )
       })}
-    </div>
-  )
-}
-
-function SquadTab({ game }: { game: GameState }) {
-  const { world, userClubId, market, season } = game
-  const [listing, setListing] = useState<Player>()
-  const [renewing, setRenewing] = useState<Player>()
-  const squad = squadOf(world, userClubId).sort(
-    (a, b) =>
-      a.contractUntil - b.contractUntil ||
-      POSITION_ORDER[a.position] - POSITION_ORDER[b.position] ||
-      b.strength - a.strength,
-  )
-  const expiring = squad.filter((p) => p.contractUntil <= season.year).length
-
-  return (
-    <div className="flex flex-col gap-3">
-      <p className="text-sm text-muted-foreground">
-        {expiring > 0
-          ? `${expiring} ${expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim desta temporada: renove ou o jogador sai de graça.`
-          : 'Nenhum contrato termina nesta temporada.'}
-      </p>
-      <Card className="py-0">
-        <Table className="tabular-nums">
-          <TableHeader>
-            <TableRow>
-              <TableHead>Pos</TableHead>
-              <TableHead>Nome</TableHead>
-              <TableHead>Força</TableHead>
-              <TableHead className="text-right">Valor</TableHead>
-              <TableHead className="text-right">Salário</TableHead>
-              <TableHead>Contrato</TableHead>
-              <TableHead />
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {squad.map((p) => {
-              const price = market.listed[p.id]
-              return (
-                <TableRow key={p.id}>
-                  <TableCell className="font-semibold">{p.position}</TableCell>
-                  <TableCell>
-                    {p.name}{' '}
-                    {price !== undefined && (
-                      <Badge variant="secondary">à venda por {formatMoney(price)}</Badge>
-                    )}
-                  </TableCell>
-                  <TableCell className="font-bold">{p.strength}</TableCell>
-                  <TableCell className="text-right">{formatMoney(p.marketValue)}</TableCell>
-                  <TableCell className="text-right">{formatMoney(p.wage)}</TableCell>
-                  <TableCell
-                    className={cn(
-                      p.contractUntil <= season.year && 'font-semibold text-destructive',
-                    )}
-                  >
-                    {p.contractUntil}
-                  </TableCell>
-                  <TableCell className="flex justify-end gap-1">
-                    <Button size="sm" variant="outline" onClick={() => setListing(p)}>
-                      {price === undefined ? 'Vender' : 'Preço'}
-                    </Button>
-                    <Button size="sm" variant="outline" onClick={() => setRenewing(p)}>
-                      Renovar
-                    </Button>
-                  </TableCell>
-                </TableRow>
-              )
-            })}
-          </TableBody>
-        </Table>
-      </Card>
-      {listing && <ListDialog game={game} player={listing} onClose={() => setListing(undefined)} />}
-      {renewing && (
-        <RenewDialog game={game} player={renewing} onClose={() => setRenewing(undefined)} />
-      )}
     </div>
   )
 }

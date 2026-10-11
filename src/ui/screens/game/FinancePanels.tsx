@@ -22,17 +22,13 @@ const RECENT = 20
 
 const signed = (value: number) => cn('tabular-nums', value < 0 ? 'text-destructive' : '')
 
-export function FinanceScreen() {
+/** Money in and out: the balance, this season by category, the latest entries and past seasons. */
+export function FinancePanel() {
   const game = useGame()
-  const setGame = useGameStore((s) => s.setGame)
   const { world, userClubId, ledger, history } = game
   const club = world.clubs[userClubId]
   const totals = ledgerTotals(ledger)
   const balance = Object.values(totals).reduce((a, b) => a + b, 0)
-  const standing = standingsShare(game)[userClubId] ?? 0.5
-  const crowd = attendance(club, standing)
-  const fair = fairTicketPrice(club.reputation)
-  const setPrice = (price: number) => setGame(setTicketPrice(game, price))
   const past = history
     .filter((h) => h.userFinances)
     .slice(-3)
@@ -48,54 +44,6 @@ export function FinanceScreen() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <Card className="gap-3">
-          <CardHeader>
-            <CardTitle>Ingressos</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3">
-            <Label htmlFor="ticket-price">Preço do ingresso (R$)</Label>
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                aria-label="Baixar R$ 5"
-                onClick={() => setPrice(club.ticketPrice - 5)}
-              >
-                <MinusIcon />
-              </Button>
-              <Input
-                id="ticket-price"
-                type="number"
-                inputMode="numeric"
-                min={1}
-                className="w-24 text-center"
-                key={club.ticketPrice}
-                defaultValue={club.ticketPrice}
-                onBlur={(e) => setPrice(Number(e.target.value) || club.ticketPrice)}
-                onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
-              />
-              <Button
-                variant="outline"
-                size="icon"
-                aria-label="Subir R$ 5"
-                onClick={() => setPrice(club.ticketPrice + 5)}
-              >
-                <PlusIcon />
-              </Button>
-              <Button variant="link" onClick={() => setPrice(fair)}>
-                Preço justo: {formatReais(fair)}
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Público previsto: {crowd.toLocaleString('pt-BR')} de{' '}
-              {club.stadiumCapacity.toLocaleString('pt-BR')} lugares (
-              {Math.round((100 * crowd) / club.stadiumCapacity)}%), renda de{' '}
-              {formatMoney(crowd * club.ticketPrice)} por jogo em casa. O público cresce com a boa
-              fase e cai com ingresso caro.
-            </p>
-          </CardContent>
-        </Card>
-
         <Card className="gap-3">
           <CardHeader>
             <CardTitle>Temporada {game.season.year}</CardTitle>
@@ -125,6 +73,31 @@ export function FinanceScreen() {
             </p>
           </CardContent>
         </Card>
+
+        {past.length > 0 && (
+          <Card className="gap-3 self-start">
+            <CardHeader>
+              <CardTitle>Temporadas anteriores</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableBody>
+                  {past.map((h) => {
+                    const net = Object.values(h.userFinances!).reduce((a, b) => a + b, 0)
+                    return (
+                      <TableRow key={h.year}>
+                        <TableCell>{h.year}</TableCell>
+                        <TableCell className={cn('text-right', signed(net))}>
+                          {formatMoney(net)}
+                        </TableCell>
+                      </TableRow>
+                    )
+                  })}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        )}
       </div>
 
       <Card className="gap-3">
@@ -159,32 +132,68 @@ export function FinanceScreen() {
           )}
         </CardContent>
       </Card>
-
-      {past.length > 0 && (
-        <Card className="gap-3">
-          <CardHeader>
-            <CardTitle>Temporadas anteriores</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableBody>
-                {past.map((h) => {
-                  const net = Object.values(h.userFinances!).reduce((a, b) => a + b, 0)
-                  return (
-                    <TableRow key={h.year}>
-                      <TableCell>{h.year}</TableCell>
-                      <TableCell className={cn('text-right', signed(net))}>
-                        {formatMoney(net)}
-                      </TableCell>
-                    </TableRow>
-                  )
-                })}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
-      )}
     </div>
+  )
+}
+
+/** The ground: capacity, the expected crowd and the ticket price. */
+export function StadiumPanel() {
+  const game = useGame()
+  const setGame = useGameStore((s) => s.setGame)
+  const club = game.world.clubs[game.userClubId]
+  const standing = standingsShare(game)[game.userClubId] ?? 0.5
+  const crowd = attendance(club, standing)
+  const fair = fairTicketPrice(club.reputation)
+  const setPrice = (price: number) => setGame(setTicketPrice(game, price))
+
+  return (
+    <Card className="gap-3">
+      <CardHeader>
+        <CardTitle>Ingressos</CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-3">
+        <Label htmlFor="ticket-price">Preço do ingresso (R$)</Label>
+        <div className="flex flex-wrap items-center gap-2">
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label="Baixar R$ 5"
+            onClick={() => setPrice(club.ticketPrice - 5)}
+          >
+            <MinusIcon />
+          </Button>
+          <Input
+            id="ticket-price"
+            type="number"
+            inputMode="numeric"
+            min={1}
+            className="w-24 text-center"
+            key={club.ticketPrice}
+            defaultValue={club.ticketPrice}
+            onBlur={(e) => setPrice(Number(e.target.value) || club.ticketPrice)}
+            onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
+          />
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label="Subir R$ 5"
+            onClick={() => setPrice(club.ticketPrice + 5)}
+          >
+            <PlusIcon />
+          </Button>
+          <Button variant="link" onClick={() => setPrice(fair)}>
+            Preço justo: {formatReais(fair)}
+          </Button>
+        </div>
+        <p className="text-sm text-muted-foreground">
+          Público previsto: {crowd.toLocaleString('pt-BR')} de{' '}
+          {club.stadiumCapacity.toLocaleString('pt-BR')} lugares (
+          {Math.round((100 * crowd) / club.stadiumCapacity)}%), renda de{' '}
+          {formatMoney(crowd * club.ticketPrice)} por jogo em casa. O público cresce com a boa fase
+          e cai com ingresso caro.
+        </p>
+      </CardContent>
+    </Card>
   )
 }
 

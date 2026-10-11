@@ -2,7 +2,15 @@ import { describe, expect, it } from 'vitest'
 import { generateWorld } from '../generate/world.ts'
 import type { GameState } from '../model/types.ts'
 import { createRng } from '../rng.ts'
-import { createCup, CUP_ROUNDS, cupProgress, cupWinner, shootout, tieWinner } from './cup.ts'
+import {
+  createCup,
+  CUP_ROUNDS,
+  cupProgress,
+  cupScorers,
+  cupWinner,
+  shootout,
+  tieWinner,
+} from './cup.ts'
 import { isSeasonOver, newGame, playRound } from './season.ts'
 
 describe('the cup draw', () => {
@@ -64,6 +72,16 @@ describe('a season of cup football', () => {
         .flat(2)
         .every((f) => f.result),
     ).toBe(true)
+  })
+
+  it('counts cup goals for its own top scorers list', () => {
+    const scorers = cupScorers(cup)
+    const goals = cup.stages
+      .flatMap((s) => s.ties)
+      .reduce((sum, t) => sum + t.result!.homeGoals + t.result!.awayGoals, 0)
+    expect(scorers.reduce((sum, row) => sum + row.goals, 0)).toBe(goals)
+    expect(scorers[0].goals).toBeGreaterThanOrEqual(scorers.at(-1)!.goals)
+    expect(cupScorers(undefined)).toEqual([])
   })
 
   it('tells how far the user went', () => {
