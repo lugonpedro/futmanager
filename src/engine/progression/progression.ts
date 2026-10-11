@@ -16,7 +16,7 @@ export const PROGRESSION = {
   /** Appearances that count as a full season of football. */
   fullSeason: 25,
   /** From this age a player may retire; at the last one he always does. */
-  retireFrom: 34,
+  retireFrom: 35,
   retireBy: 38,
   /** Youngsters each club's academy sends up every season, at least and at most. */
   youth: { min: 1, max: 2 },

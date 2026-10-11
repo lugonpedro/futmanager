@@ -1,3 +1,4 @@
+import { typicalWageBill } from '../finance/economy.ts'
 import { wageFor } from '../generate/player.ts'
 import { SQUAD_SHAPE } from '../generate/world.ts'
 import { autoFormation, autoLineup } from '../match/lineup.ts'
@@ -34,6 +35,10 @@ export const MARKET = {
   listedBidChance: 0.5,
   unlistedBidChance: 0.08,
   newsKept: 40,
+  /** Most players an AI club in debt sells or releases at the close of a season. */
+  debtSales: 4,
+  /** AI clubs keep their wage bill under this share of a typical one for their reputation. */
+  aiWageCap: 1.1,
 }
 
 /** Fewest players of each position a club tries to keep. */
@@ -301,8 +306,25 @@ export function renewContract(
   }
 }
 
+/** Monthly wages an AI club is willing to carry, from what a club its size earns. */
+function wageCap(world: World, clubId: string): number {
+  const club = world.clubs[clubId]
+  const typical = typicalWageBill(club.reputation)
+  // Money in the bank lets a club stretch: half a year of wages more for every two years saved.
+  const savedYears = Math.max(0, club.cash) / (typical * 12)
+  return typical * (MARKET.aiWageCap + Math.min(0.5, savedYears * 0.25))
+}
+
+const monthlyWages = (world: World, clubId: string) =>
+  squadOf(world, clubId).reduce((sum, p) => sum + p.wage, 0)
+
 const countAt = (squad: readonly Player[], position: Position) =>
   squad.filter((p) => p.position === position).length
+
+/** Fewer players than a squad needs, overall or in some position. */
+const isShort = (squad: readonly Player[]) =>
+  squad.length < MARKET.minSquad ||
+  (Object.keys(MIN_SHAPE) as Position[]).some((p) => countAt(squad, p) < MIN_SHAPE[p])
 
 /** The position a club most needs, if it is short anywhere. */
 export function neededPosition(squad: readonly Player[]): Position | undefined {
@@ -326,6 +348,8 @@ function aiSign(
   position: Position,
   rng: Rng,
   anyCost: boolean,
+  /** First season of the contract: the next one when signing at the close. */
+  fromYear = game.season.year,
 ): GameState {
   const { world } = game
   const club = world.clubs[clubId]
@@ -338,7 +362,10 @@ function aiSign(
     return countAt(seller, position) > SQUAD_SHAPE[position] && canLeave(world, p)
   })
   const cost = (p: Player) => askingPrice(game, p) + 12 * wageDemand(world, p, clubId)
-  const affordable = candidates.filter((p) => cost(p) <= budget)
+  const wageRoom = wageCap(world, clubId) - monthlyWages(world, clubId)
+  const affordable = candidates.filter(
+    (p) => cost(p) <= budget && wageDemand(world, p, clubId) <= wageRoom,
+  )
   const pool =
     affordable.length > 0
       ? affordable
@@ -357,10 +384,49 @@ function aiSign(
     world: transferPlayer(world, choice.id, clubId, {
       fee,
       wage: wageDemand(world, choice, clubId),
-      contractUntil: game.season.year + rng.int(0, 2),
+      contractUntil: fromYear + rng.int(0, 2),
     }),
     market: { ...game.market, news: withNews(game, choice.id, from, clubId, fee) },
   }
+}
+
+/**
+ * An AI club in the red, or paying more than it can carry, sells its best-paid
+ * spares to clubs that can afford them, or lets them go to cut the wage bill.
+ */
+function aiClearDebt(game: GameState, clubId: string): GameState {
+  let next = game
+  const struggling = (world: World) =>
+    world.clubs[clubId].cash < 0 || monthlyWages(world, clubId) > wageCap(world, clubId)
+  for (let sold = 0; sold < MARKET.debtSales && struggling(next.world); sold++) {
+    const { world } = next
+    const player = squadOf(world, clubId)
+      .filter((p) => canLeave(world, p) && !isShort(squadOf(world, clubId).filter((q) => q !== p)))
+      .sort((a, b) => b.wage - a.wage || a.id.localeCompare(b.id))[0]
+    if (!player) break
+    const fee = round10k(player.marketValue)
+    const buyer = aiClubIds(next)
+      .filter((id) => id !== clubId)
+      .map((id) => world.clubs[id])
+      .filter(
+        (c) => c.cash * MARKET.aiSpendShare >= fee && c.playerIds.length < MARKET.maxSquad - 4,
+      )
+      .sort((a, b) => b.cash - a.cash)[0]
+    const toClubId = buyer?.id ?? FREE_AGENT
+    next = {
+      ...next,
+      world: transferPlayer(world, player.id, toClubId, {
+        fee: buyer ? fee : 0,
+        wage: buyer ? wageDemand(world, player, buyer.id) : player.wage,
+        contractUntil: next.season.year + 3,
+      }),
+      market: {
+        ...next.market,
+        news: buyer ? withNews(next, player.id, clubId, buyer.id, fee) : next.market.news,
+      },
+    }
+  }
+  return next
 }
 
 const aiClubIds = (game: GameState) =>
@@ -421,9 +487,12 @@ export function marketRound(game: GameState, rng: Rng): GameState {
     },
   }
   for (const clubId of aiClubIds(next)) {
-    const position = neededPosition(squadOf(next.world, clubId))
-    if (position && rng.next() < MARKET.aiBuyChance)
-      next = aiSign(next, clubId, position, rng, false)
+    const squad = squadOf(next.world, clubId)
+    const position = neededPosition(squad)
+    if (!position) continue
+    // A club that can't field a proper side signs a free agent at once, money or not.
+    if (isShort(squad)) next = aiSign(next, clubId, position, rng, true)
+    else if (rng.next() < MARKET.aiBuyChance) next = aiSign(next, clubId, position, rng, false)
   }
   return {
     ...next,
@@ -439,13 +508,24 @@ export function marketRound(game: GameState, rng: Rng): GameState {
 export function closeContracts(game: GameState, nextYear: number, rng: Rng): GameState {
   let world = game.world
   let market = game.market
-  for (const player of Object.values(game.world.players).sort((a, b) => a.id.localeCompare(b.id))) {
+  // The best players are offered new terms first, while there is still room in the wage bill.
+  const players = Object.values(game.world.players).sort(
+    (a, b) => b.strength - a.strength || a.id.localeCompare(b.id),
+  )
+  for (const player of players) {
     if (player.clubId === FREE_AGENT || player.clubId === RETIRED) continue
     if (player.contractUntil >= nextYear) continue
     const club = world.clubs[player.clubId]
     const squad = squadOf(world, club.id)
     const average = squad.reduce((sum, p) => sum + p.strength, 0) / squad.length
-    const keep = club.id !== game.userClubId && player.age <= 32 && player.strength >= average - 10
+    // A club in debt only keeps the players who are worth their wages.
+    const margin = club.cash < 0 ? 0 : 10
+    const wage = Math.max(player.wage, wageFor(player.strength))
+    const keep =
+      club.id !== game.userClubId &&
+      player.age <= 33 &&
+      player.strength >= average - margin &&
+      monthlyWages(world, club.id) - player.wage + wage <= wageCap(world, club.id)
     if (keep) {
       world = {
         ...world,
@@ -453,7 +533,7 @@ export function closeContracts(game: GameState, nextYear: number, rng: Rng): Gam
           ...world.players,
           [player.id]: {
             ...player,
-            wage: Math.max(player.wage, wageFor(player.strength)),
+            wage,
             contractUntil: nextYear + rng.int(0, 2),
           },
         },
@@ -468,13 +548,14 @@ export function closeContracts(game: GameState, nextYear: number, rng: Rng): Gam
     }
   }
   let next: GameState = { ...game, world, market: { ...market, offers: [] } }
+  for (const clubId of aiClubIds(next)) next = aiClearDebt(next, clubId)
   for (const clubId of aiClubIds(next)) {
     // Bounded so a club with no money and no fitting free agents can't loop forever.
     for (let i = 0; i < 15; i++) {
       const position = neededPosition(squadOf(next.world, clubId))
       if (!position) break
       const before = next
-      next = aiSign(next, clubId, position, rng, true)
+      next = aiSign(next, clubId, position, rng, true, nextYear)
       if (next === before) break
     }
   }

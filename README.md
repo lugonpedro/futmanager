@@ -4,8 +4,8 @@ Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Nome provis�
 
 ## Documentação
 
-- [Plano do MVP](docs/plano-mvp.md): escopo, stack, estrutura e fases
-- [Pesquisa](docs/pesquisa.md): features do Brasfoot, escolha de stack e monetização
+- [Plano do MVP](docs/01-plano-mvp.md): escopo, stack, estrutura e fases
+- [Pesquisa](docs/00-pesquisa.md): features do Brasfoot, escolha de stack e monetização
 
 ## Rodando
 
@@ -18,6 +18,7 @@ npm test           # testes do motor (Vitest)
 npm run lint       # Oxlint
 npm run format     # Prettier
 npm run build      # build de produção em dist/
+npm run balance -- 50   # simula 50 temporadas e mostra se o mundo se mantém equilibrado
 ```
 
 ## Estrutura
@@ -26,7 +27,8 @@ npm run build      # build de produção em dist/
 docs/          documentação do projeto
 src/engine/    motor do jogo em TypeScript puro (sem React), testável
   season/      calendário, tabela, artilharia, acesso e rebaixamento
-src/store/     estado da carreira (Zustand), salvo no localStorage
+src/store/     estado da carreira (Zustand)
+src/db/        saves no IndexedDB (Dexie), um slot por carreira
 src/worker/    Web Worker que simula rodadas sem travar a tela
 src/ui/        telas e componentes React
 ```

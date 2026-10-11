@@ -16,16 +16,12 @@ const randomSeed = () => Math.floor(Math.random() * 2 ** 31)
 export function NewGameScreen() {
   const [seed, setSeed] = useState(randomSeed)
   const world = useMemo(() => generateWorld(seed), [seed])
-  const existing = useGameStore((s) => s.game)
-  const setGame = useGameStore((s) => s.setGame)
+  const startGame = useGameStore((s) => s.startGame)
   const navigate = useNavigate()
 
+  // Each new career gets its own save slot, so starting one never loses another.
   const choose = (clubId: string) => {
-    const club = world.clubs[clubId]
-    if (existing && !window.confirm(`Começar com ${club.name}? A carreira atual será perdida.`)) {
-      return
-    }
-    setGame(newGame(seed, clubId))
+    startGame(newGame(seed, clubId))
     navigate('/jogo')
   }
 

@@ -1,6 +1,6 @@
 # Plano de implementação do MVP
 
-Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Base: [pesquisa.md](pesquisa.md).
+Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Base: [00-pesquisa.md](00-pesquisa.md).
 
 ## Objetivo do MVP
 
@@ -111,14 +111,14 @@ Cada fase termina com algo jogável e testes do motor passando.
 - Mercado: lista de jogadores, comprar/vender, propostas recebidas, negociação simples de salário e contrato
 - IA dos clubes: vende quem sobra, compra para preencher carências, respeitando o caixa
 
-### Fase 6: Carreira e progressão (PR #8)
+### Fase 6: Carreira e progressão (feita, PR #8)
 
 - Evolução por idade e minutos jogados, declínio após ~30, aposentadoria
 - Jogadores da base surgindo a cada temporada
 - Diretoria: meta da temporada, demissão por mau desempenho, propostas de outros clubes
 - Copa nacional mata-mata (se der tempo)
 
-### Fase 7: Save e acabamento
+### Fase 7: Save e acabamento (PR #9)
 
 - Salvar/carregar em IndexedDB, vários slots, autosave por rodada
 - Exportar/importar save em arquivo

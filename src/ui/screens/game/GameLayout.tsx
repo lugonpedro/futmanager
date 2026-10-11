@@ -2,6 +2,7 @@ import {
   ArrowLeftRightIcon,
   BriefcaseIcon,
   CalendarDaysIcon,
+  DownloadIcon,
   GoalIcon,
   HouseIcon,
   ListOrderedIcon,
@@ -20,10 +21,12 @@ import { Separator } from '@/components/ui/separator'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import type { GameState } from '../../../engine/model/types.ts'
+import { exportSave, saveFileName } from '../../../db/saves.ts'
 import { isSeasonOver } from '../../../engine/season/season.ts'
 import { useGameStore } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ThemeToggle } from '../../components/ThemeToggle.tsx'
+import { download } from '../../download.ts'
 import { divisionName, formatMoney } from '../../format.ts'
 
 const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
@@ -45,9 +48,16 @@ const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = 
  */
 export function GameLayout() {
   const game = useGameStore((s) => s.game)
+  const loading = useGameStore((s) => s.loading)
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
-  if (!game) return <Navigate to="/novo" replace />
+  if (!game) {
+    return loading ? (
+      <p className="p-6 text-center text-muted-foreground">Carregando a carreira...</p>
+    ) : (
+      <Navigate to="/" replace />
+    )
+  }
   const current = PAGES.find((p) => (p.end ? pathname === p.to : pathname.startsWith(p.to)))
 
   return (
@@ -126,6 +136,15 @@ function Sidebar(props: { game: GameState; onNavigate?: () => void }) {
       <Separator />
       <div className="mt-auto flex flex-col gap-1">
         <ThemeToggle withLabel />
+        <Button
+          variant="ghost"
+          className="justify-start"
+          title="O jogo salva sozinho a cada rodada; o arquivo serve de cópia ou para outro aparelho"
+          onClick={() => download(saveFileName(game), exportSave(game))}
+        >
+          <DownloadIcon />
+          Exportar save
+        </Button>
         <Button asChild variant="ghost" className="justify-start">
           <Link to="/" onClick={props.onNavigate}>
             <LogOutIcon />
