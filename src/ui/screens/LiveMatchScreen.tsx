@@ -24,6 +24,8 @@ type Speed = keyof typeof SPEEDS
 /** The user's match narrated minute by minute, with the rest of the round alongside. */
 export function LiveMatchScreen() {
   const game = useGameStore((s) => s.game)
+  const loading = useGameStore((s) => s.loading)
+  if (loading) return null
   if (!game || !canPlayRound(game)) return <Navigate to="/jogo" replace />
   return <LiveRound key={`${game.season.year}-${game.season.round}`} game={game} />
 }

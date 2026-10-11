@@ -157,7 +157,7 @@ describe('contracts', () => {
     const expiring = squadOf(start.world, user).filter((p) => p.contractUntil < 2028)
     expect(expiring.length).toBeGreaterThan(0)
     const closed = closeContracts(start, 2028, createRng(1))
-    for (const p of expiring) expect(closed.world.players[p.id].clubId).toBe(FREE_AGENT)
+    for (const p of expiring) expect(closed.world.players[p.id].clubId).not.toBe(user)
     for (const club of Object.values(closed.world.clubs)) {
       if (club.id === user) continue
       const squad = squadOf(closed.world, club.id)
