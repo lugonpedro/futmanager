@@ -148,9 +148,6 @@ export function HomeScreen() {
               Editor de times
             </Link>
           </Button>
-          <Button asChild variant="link">
-            <Link to="/amistoso">Jogar um amistoso</Link>
-          </Button>
           <nav className="flex justify-center gap-4 text-xs text-muted-foreground">
             <Link to="/aviso-legal" className="underline-offset-2 hover:underline">
               Aviso legal

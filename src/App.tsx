@@ -4,7 +4,6 @@ import { CUP_SLUG } from './ui/routes.ts'
 import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { CloudScreen } from './ui/screens/CloudScreen.tsx'
 import { EditorScreen } from './ui/screens/EditorScreen.tsx'
-import { FriendlyScreen } from './ui/screens/FriendlyScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { ClubScreen } from './ui/screens/game/ClubScreen.tsx'
 import { CompetitionsScreen, OwnDivision } from './ui/screens/game/CompetitionsScreen.tsx'
@@ -33,7 +32,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomeScreen />} />
       <Route path="/novo" element={<NewGameScreen />} />
-      <Route path="/amistoso" element={<FriendlyScreen />} />
+      <Route path="/amistoso" element={<Navigate to="/" replace />} />
       <Route path="/editor" element={<EditorScreen />} />
       <Route path="/aviso-legal" element={<LegalScreen />} />
       <Route path="/privacidade" element={<PrivacyScreen />} />
