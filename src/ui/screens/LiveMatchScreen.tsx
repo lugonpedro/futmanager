@@ -12,14 +12,21 @@ import {
   type LiveMatch,
 } from '../../engine/season/season.ts'
 import { useGameStore } from '../../store/game.ts'
+import { useMatchViewStore, type MatchView } from '../../store/matchView.ts'
 import { Choices } from '../components/Choices.tsx'
 import { ClubName } from '../components/ClubName.tsx'
 import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
+import { MatchPitch } from '../components/MatchPitch.tsx'
 import { divisionName } from '../format.ts'
+import { playDuration } from '../pitchScene.ts'
+import { useShownScore } from '../useShownScore.ts'
 
+/** Milliseconds per minute in text only, and per shortest play on the pitch. */
 const SPEEDS = { Lento: 500, Normal: 200, Rápido: 50 } as const
+const PLAY_SPEEDS = { Lento: 1100, Normal: 650, Rápido: 300 } as const
 type Speed = keyof typeof SPEEDS
+const VIEWS: MatchView[] = ['Campo', 'Só texto']
 
 /** The user's match narrated minute by minute, with the rest of the round alongside. */
 export function LiveMatchScreen() {
@@ -39,7 +46,10 @@ function LiveRound({ game }: { game: GameState }) {
   const [matches] = useState(() => createRoundMatches(game))
   const [speed, setSpeed] = useState<Speed>('Normal')
   const [paused, setPaused] = useState(false)
-  const [, setTick] = useState(0)
+  const [tick, setTick] = useState(0)
+  const view = useMatchViewStore((s) => s.view)
+  const setView = useMatchViewStore((s) => s.setView)
+  const onPitch = view === 'Campo'
 
   const own = matches.find((m) => involves(m, game.userClubId))!
   const { state } = own
@@ -47,16 +57,18 @@ function LiveRound({ game }: { game: GameState }) {
   const finished = matches.every((m) => m.state.finished)
   const halftime = state.minute === 45 && paused
 
+  // On the pitch the next minute waits for the last play to be acted out.
   useEffect(() => {
     if (paused || finished) return
-    const timer = setInterval(() => {
+    const delay = onPitch ? playDuration(state.plays.at(-1)) * PLAY_SPEEDS[speed] : SPEEDS[speed]
+    const timer = setTimeout(() => {
       for (const { state } of matches) playMinute(state)
       // Stop at half-time, like the radio going to the studio.
       if (matches[0].state.minute === 45) setPaused(true)
       setTick((t) => t + 1)
-    }, SPEEDS[speed])
-    return () => clearInterval(timer)
-  }, [matches, speed, paused, finished])
+    }, delay)
+    return () => clearTimeout(timer)
+  }, [matches, state, speed, paused, finished, onPitch, tick])
 
   const skipToEnd = () => {
     for (const { state } of matches) while (!state.finished) playMinute(state)
@@ -80,6 +92,7 @@ function LiveRound({ game }: { game: GameState }) {
       a.division - b.division,
   )
   const result = finished ? matchResult(state) : undefined
+  const score = useShownScore(state, onPitch, PLAY_SPEEDS[speed])
 
   return (
     <main className="min-h-screen p-4">
@@ -93,8 +106,10 @@ function LiveRound({ game }: { game: GameState }) {
             <span className="flex min-w-0 flex-1 justify-end text-right">
               <ClubName club={state.home.club} />
             </span>
-            <span className="shrink-0 rounded-md bg-primary px-3 py-1 whitespace-nowrap text-primary-foreground tabular-nums">
-              {state.home.stats.goals} x {state.away.stats.goals}
+            <span
+              className={`shrink-0 rounded-md bg-primary px-3 py-1 whitespace-nowrap text-primary-foreground tabular-nums ${score.flash ? 'animate-pulse' : ''}`}
+            >
+              {score.home} x {score.away}
             </span>
             <span className="flex min-w-0 flex-1">
               <ClubName club={state.away.club} />
@@ -119,7 +134,8 @@ function LiveRound({ game }: { game: GameState }) {
                 </Button>
               </>
             )}
-            <div className="ml-auto">
+            <div className="ml-auto flex flex-wrap gap-2">
+              <Choices ariaLabel="Visualização" options={VIEWS} value={view} onChange={setView} />
               <Choices
                 ariaLabel="Velocidade"
                 options={Object.keys(SPEEDS) as Speed[]}
@@ -129,7 +145,12 @@ function LiveRound({ game }: { game: GameState }) {
             </div>
           </div>
 
-          <MatchFeed events={state.events} className="max-h-[50vh] min-h-48" />
+          {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[speed]} />}
+
+          <MatchFeed
+            events={state.events}
+            className={onPitch ? 'max-h-48 min-h-32' : 'max-h-[50vh] min-h-48'}
+          />
 
           <MatchControls
             state={state}

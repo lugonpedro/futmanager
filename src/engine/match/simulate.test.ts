@@ -5,6 +5,7 @@ import { createRng } from '../rng.ts'
 import { autoLineup } from './lineup.ts'
 import {
   createMatch,
+  MATCH_MINUTES,
   MAX_SUBSTITUTIONS,
   playMinute,
   setFormation,
@@ -202,5 +203,65 @@ describe('match state', () => {
     )
     expect(shape).toEqual({ G: 1, Z: 3, M: 5, A: 2 })
     expect(match.home.onPitch.find((p) => p.position === 'G')!.player.id).toBe(keeper)
+  })
+})
+
+describe('plays', () => {
+  const played = (seed: number) => {
+    const match = createMatch(input('C1', 'C2'), createRng(seed))
+    while (!match.finished) playMinute(match)
+    return match
+  }
+
+  it('records one play a minute, for the side with the ball', () => {
+    const match = played(7)
+    expect(match.plays.map((p) => p.minute)).toEqual(
+      Array.from({ length: MATCH_MINUTES }, (_, i) => i + 1),
+    )
+    const homeMinutes = match.plays.filter((p) => p.side === 'home').length
+    expect(homeMinutes).toBe(match.home.possessionMinutes)
+  })
+
+  it('matches every shot in the commentary, in the same minute', () => {
+    for (const seed of [1, 2, 3, 4, 5]) {
+      const match = played(seed)
+      const shots = match.events.filter((e) => ['gol', 'defesa', 'chance'].includes(e.type))
+      const ends = { gol: 'goal', defesa: 'saved', chance: 'wide' } as const
+      const shotPlays = match.plays.filter((p) => p.end !== 'lost' && p.end !== 'foul')
+      expect(
+        shotPlays.map((p) => ({
+          minute: p.minute,
+          end: p.end,
+          playerId: p.playerId,
+          side: p.side,
+        })),
+      ).toEqual(
+        shots.map((e) => ({
+          minute: e.minute,
+          end: ends[e.type as keyof typeof ends],
+          playerId: e.playerId,
+          side: e.clubId === match.home.club.id ? 'home' : 'away',
+        })),
+      )
+      for (const play of shotPlays) expect(play.depth).toBe('attack')
+    }
+  })
+
+  it('ends at a foul only when the defending side was booked that minute', () => {
+    const match = played(11)
+    for (const play of match.plays.filter((p) => p.end === 'foul')) {
+      const defending = play.side === 'home' ? match.away.club.id : match.home.club.id
+      const card = match.events.find(
+        (e) =>
+          e.minute === play.minute &&
+          e.clubId === defending &&
+          (e.type === 'amarelo' || e.type === 'vermelho'),
+      )
+      expect(card?.playerId).toBe(play.playerId)
+    }
+  })
+
+  it('describes the same match the same way for the same seed', () => {
+    expect(played(21).plays).toEqual(played(21).plays)
   })
 })

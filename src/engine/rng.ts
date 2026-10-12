@@ -48,3 +48,13 @@ export function createRng(seed: number): Rng {
     },
   }
 }
+
+/** Turns any mix of numbers and labels into a 32-bit seed (FNV-1a). */
+export function mixSeed(...parts: (number | string)[]): number {
+  let hash = 0x811c9dc5
+  for (const char of parts.join(':')) {
+    hash ^= char.charCodeAt(0)
+    hash = Math.imul(hash, 0x01000193)
+  }
+  return hash >>> 0
+}
