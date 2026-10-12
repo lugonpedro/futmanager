@@ -31,7 +31,7 @@ import type {
   SeasonSummary,
   World,
 } from '../model/types.ts'
-import { createRng, type Rng } from '../rng.ts'
+import { createRng, mixSeed, type Rng } from '../rng.ts'
 import { closeContracts, marketRound } from '../transfer/market.ts'
 import {
   CUP_NAME,
@@ -57,15 +57,7 @@ export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_
 /** Bumped when the save format changes; see upgradeGame(). */
 export const SAVE_VERSION = 3
 
-/** Turns any mix of numbers and labels into a 32-bit seed (FNV-1a). */
-export function mixSeed(...parts: (number | string)[]): number {
-  let hash = 0x811c9dc5
-  for (const char of parts.join(':')) {
-    hash ^= char.charCodeAt(0)
-    hash = Math.imul(hash, 0x01000193)
-  }
-  return hash >>> 0
-}
+export { mixSeed } from '../rng.ts'
 
 export function startSeason(world: World, year = world.season): Season {
   const rng = createRng(mixSeed(world.seed, year, 'calendario'))

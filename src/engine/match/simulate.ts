@@ -9,7 +9,7 @@ import type {
   Posture,
   TeamStats,
 } from '../model/types.ts'
-import type { Rng } from '../rng.ts'
+import { createRng, mixSeed, type Rng } from '../rng.ts'
 import { fillSlots, formationSlots } from './lineup.ts'
 import { narrate, type GoalKind } from './narration.ts'
 import { effectiveStrength, positionFit, POSTURE_EFFECT, sectorStrength } from './strength.ts'
@@ -56,6 +56,27 @@ export type MatchInput = {
   players: Readonly<Record<string, Player>>
 }
 
+/** Side of the pitch a move goes down, as the attacking side sees it. */
+export type PlayLane = 'left' | 'center' | 'right'
+/** Third of the pitch a move reaches, counted from the attacking side's own goal. */
+export type PlayDepth = 'defense' | 'midfield' | 'attack'
+export type PlayEnd = 'lost' | 'foul' | 'wide' | 'saved' | 'goal'
+
+/**
+ * One minute's move, for the pitch view to act out: who had the ball, where it
+ * went and how it ended. The engine has already decided the minute; this only
+ * describes it, so drawing it can never change a result.
+ */
+export type Play = {
+  minute: number
+  side: MatchSide
+  lane: PlayLane
+  depth: PlayDepth
+  end: PlayEnd
+  /** The shooter, or the defender who gave away the foul. */
+  playerId?: string
+}
+
 export type OnPitch = { player: Player; position: Position; energy: number; booked: boolean }
 
 export type TeamState = {
@@ -77,7 +98,13 @@ export type MatchState = {
   events: MatchEvent[]
   sentOff: string[]
   injured: string[]
+  plays: Play[]
   rng: Rng
+  /**
+   * Draws the details of each play. Kept apart from `rng` so describing the
+   * moves leaves the results exactly as they were.
+   */
+  playRng: Rng
 }
 
 const emptyStats = (): TeamStats => ({
@@ -132,7 +159,17 @@ export function createMatch(input: MatchInput, rng: Rng): MatchState {
     events: [{ minute: 0, type: 'inicio', text: narrate.kickoff(home.club.name, away.club.name) }],
     sentOff: [],
     injured: [],
+    plays: [],
     rng,
+    playRng: createRng(
+      mixSeed(
+        home.club.id,
+        away.club.id,
+        ...input.home.lineup.starters.map((s) => s.playerId),
+        ...input.away.lineup.starters.map((s) => s.playerId),
+        'lances',
+      ),
+    ),
   }
 }
 
@@ -171,7 +208,9 @@ function goalKind(rng: Rng, scorer: OnPitch): GoalKind {
   return 'fora'
 }
 
-function attack(state: MatchState, side: MatchSide) {
+type AttackOutcome = { end: 'none' | 'wide' | 'saved' | 'goal'; shooterId?: string }
+
+function attack(state: MatchState, side: MatchSide): AttackOutcome {
   const { rng } = state
   const team = state[side]
   const opponent = state[side === 'home' ? 'away' : 'home']
@@ -179,11 +218,11 @@ function attack(state: MatchState, side: MatchSide) {
     sectors(state, side).attack,
     sectors(state, side === 'home' ? 'away' : 'home').defense,
   )
-  if (rng.next() >= BALANCE.shotRate * ratio ** BALANCE.chancePower) return
+  if (rng.next() >= BALANCE.shotRate * ratio ** BALANCE.chancePower) return { end: 'none' }
   const quality = ratio ** BALANCE.qualityPower
 
   const outfield = team.onPitch.filter((p) => p.position !== 'G')
-  if (outfield.length === 0) return
+  if (outfield.length === 0) return { end: 'none' }
   const shooter = weightedPick(rng, outfield, (p) => {
     const finisher = p.player.traits.includes('finalizacao') ? 1.5 : 1
     return SCORING_WEIGHT[p.position] * finisher * effectiveStrength(p.player, p.position, p.energy)
@@ -197,7 +236,7 @@ function attack(state: MatchState, side: MatchSide) {
       playerId: shooter.player.id,
       text: narrate.miss(rng, shooter.player.name),
     })
-    return
+    return { end: 'wide', shooterId: shooter.player.id }
   }
   team.stats.shotsOnTarget++
 
@@ -209,6 +248,7 @@ function attack(state: MatchState, side: MatchSide) {
       playerId: shooter.player.id,
       text: narrate.goal(rng, goalKind(rng, shooter), shooter.player.name),
     })
+    return { end: 'goal', shooterId: shooter.player.id }
   } else {
     addEvent(state, {
       type: 'defesa',
@@ -216,7 +256,33 @@ function attack(state: MatchState, side: MatchSide) {
       playerId: shooter.player.id,
       text: narrate.save(rng, shooter.player.name, keeperName(opponent)),
     })
+    return { end: 'saved', shooterId: shooter.player.id }
   }
+}
+
+const LANES: readonly PlayLane[] = ['left', 'center', 'right']
+const BUILD_UP: readonly PlayDepth[] = ['defense', 'midfield', 'midfield', 'attack']
+
+/**
+ * Describes the minute as a move. A shot always reaches the attacking third; a
+ * move that broke down stops at a foul when the defending side was booked this
+ * minute, or is simply lost somewhere up the pitch.
+ */
+function recordPlay(state: MatchState, side: MatchSide, outcome: AttackOutcome, from: number) {
+  const { playRng } = state
+  const defending = state[side === 'home' ? 'away' : 'home'].club.id
+  const card = state.events
+    .slice(from)
+    .find((e) => (e.type === 'amarelo' || e.type === 'vermelho') && e.clubId === defending)
+  const lane = playRng.pick(LANES)
+  const play: Play =
+    outcome.end !== 'none'
+      ? { minute: state.minute, side, lane, depth: 'attack', end: outcome.end }
+      : card
+        ? { minute: state.minute, side, lane, depth: playRng.pick(BUILD_UP), end: 'foul' }
+        : { minute: state.minute, side, lane, depth: playRng.pick(BUILD_UP), end: 'lost' }
+  const playerId = outcome.shooterId ?? card?.playerId
+  state.plays.push(playerId ? { ...play, playerId } : play)
 }
 
 function removeFromPitch(team: TeamState, leaving: OnPitch) {
@@ -365,13 +431,14 @@ export function playMinute(state: MatchState): MatchEvent[] {
   const homeShare = homeEdge / (homeEdge + 1)
   const side: MatchSide = rng.next() < homeShare ? 'home' : 'away'
   state[side].possessionMinutes++
-  attack(state, side)
+  const outcome = attack(state, side)
 
   for (const s of ['home', 'away'] as const) {
     discipline(state, s)
     injuries(state, s)
     tire(state[s], rng)
   }
+  recordPlay(state, side, outcome, before)
 
   const { home, away } = state
   if (state.minute === 45) {
