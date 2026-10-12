@@ -49,11 +49,26 @@ create policy "own saves: change" on public.saves
   using (user_id = (select auth.uid()))
   with check (user_id = (select auth.uid()));
 
--- Keeps the free database small: at most 10 careers per account.
+-- How many careers an account keeps in the cloud: one for free, up to five for
+-- paying players. Only the server (the future payment flow) writes here.
+create table public.entitlements (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  cloud_slots smallint not null check (cloud_slots between 1 and 5),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.entitlements enable row level security;
+
+create policy "own entitlement: read" on public.entitlements
+  for select to authenticated using (user_id = (select auth.uid()));
+
 create function public.saves_limit() returns trigger
 language plpgsql set search_path = '' as $$
+declare
+  slots integer := coalesce(
+    (select e.cloud_slots from public.entitlements e where e.user_id = new.user_id), 1);
 begin
-  if (select count(*) from public.saves where user_id = new.user_id) >= 10 then
+  if (select count(*) from public.saves where user_id = new.user_id) >= slots then
     raise exception 'save limit reached' using errcode = 'P0001', hint = 'limite';
   end if;
   return new;

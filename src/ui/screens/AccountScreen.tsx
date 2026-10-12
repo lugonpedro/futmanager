@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 import { cloudEnabled } from '../../cloud/client.ts'
-import { CLOUD_SLOTS } from '../../cloud/sync.ts'
+import { FREE_CLOUD_SLOTS } from '../../cloud/sync.ts'
 import {
   deleteAccount,
   saveProfile,
@@ -45,7 +45,7 @@ export function AccountScreen() {
         <Card>
           <CardContent className="text-sm leading-relaxed">
             Contas ainda não estão disponíveis nesta versão do jogo. Suas carreiras continuam salvas
-            neste aparelho, e dá para levá-las a outro com &quot;Exportar save&quot;.
+            neste aparelho.
           </CardContent>
         </Card>
       ) : !ready ? (
@@ -246,7 +246,7 @@ function ProfileCard() {
 }
 
 function CloudCard() {
-  const { status, lastSyncAt, notes } = useAccountStore()
+  const { status, lastSyncAt, notes, cloud, cloudSlots } = useAccountStore()
   useEffect(() => {
     void syncNow()
   }, [])
@@ -258,8 +258,13 @@ function CloudCard() {
           Save na nuvem
         </CardTitle>
         <CardDescription>
-          Suas carreiras vão para a conta enquanto você joga e voltam em qualquer aparelho em que
-          você entrar. Cabem até {CLOUD_SLOTS} carreiras.
+          {cloudSlots > FREE_CLOUD_SLOTS
+            ? `Sua conta guarda até ${cloudSlots} carreiras na nuvem.`
+            : 'Sua conta grátis guarda uma carreira na nuvem.'}{' '}
+          Ela é salva enquanto você joga e aparece em qualquer aparelho em que você entrar.{' '}
+          <Link to="/nuvem" className="underline underline-offset-2">
+            Como funciona
+          </Link>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-2 text-sm">
@@ -272,6 +277,15 @@ function CloudCard() {
                 ? `Tudo sincronizado às ${syncTime.format(lastSyncAt)}.`
                 : 'Ainda não sincronizado.'}
         </p>
+        {cloud.length > 0 && (
+          <ul className="flex flex-col gap-1">
+            {cloud.map((save) => (
+              <li key={save.id} className="rounded-md border px-2 py-1">
+                Na nuvem: <span className="font-semibold">{save.club_name}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         {notes.map((note) => (
           <p key={note} className="text-amber-700 dark:text-amber-400">
             {note}

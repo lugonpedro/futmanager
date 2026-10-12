@@ -2,7 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import { db, type SaveSlot } from '../db/saves.ts'
 import { SAVE_VERSION } from '../engine/season/season.ts'
 import { packGame, unpackGame } from './codec.ts'
-import { planSync, type SyncBase } from './plan.ts'
+import { planSync, type SyncBase, type SyncStep } from './plan.ts'
 
 /** A career in the account, without the game itself. */
 export type RemoteSave = {
@@ -23,12 +23,18 @@ export type SyncReport = {
   conflicts: SyncConflict[]
   /** Slots whose game was replaced by the account's copy. */
   downloaded: string[]
-  /** Something for the player, like the slot limit or a save from a newer version. */
+  /** Something for the player, like a save from a newer version. */
   notes: string[]
+  /** How many careers this account can keep in the cloud. */
+  cloudSlots: number
+  /** The careers in the account once the sync is done. */
+  cloud: RemoteSave[]
 }
 
-/** Careers an account can keep in the cloud, as set on the server. */
-export const CLOUD_SLOTS = 10
+/** Careers a free account keeps in the cloud; the server holds each account's real number. */
+export const FREE_CLOUD_SLOTS = 1
+/** Careers a paying player keeps in the cloud. */
+export const PAID_CLOUD_SLOTS = 5
 
 const SUMMARY = 'id, club_name, year, round, today, season_over, updated_at, version'
 
@@ -36,6 +42,16 @@ async function listRemote(client: SupabaseClient): Promise<RemoteSave[]> {
   const { data, error } = await client.from('saves').select(SUMMARY)
   if (error) throw error
   return data as RemoteSave[]
+}
+
+async function cloudSlotsOf(client: SupabaseClient, userId: string): Promise<number> {
+  const { data, error } = await client
+    .from('entitlements')
+    .select('cloud_slots')
+    .eq('user_id', userId)
+    .maybeSingle()
+  if (error) throw error
+  return (data as { cloud_slots: number } | null)?.cloud_slots ?? FREE_CLOUD_SLOTS
 }
 
 async function remember(base: SyncBase) {
@@ -94,9 +110,11 @@ async function download(client: SupabaseClient, userId: string, id: string): Pro
   return true
 }
 
-async function deleteRemote(client: SupabaseClient, id: string, base: number) {
-  // Only if no other device saved it since; otherwise it stays for the next sync.
-  const { error } = await client.from('saves').delete().eq('id', id).eq('updated_at', base)
+async function deleteRemote(client: SupabaseClient, id: string, base?: number) {
+  // Given a base, only if no other device saved it since; otherwise it stays for the next sync.
+  let query = client.from('saves').delete().eq('id', id)
+  if (base !== undefined) query = query.eq('updated_at', base)
+  const { error } = await query
   if (error) throw error
   await db.synced.delete(id)
 }
@@ -106,30 +124,39 @@ function describeError(error: unknown): string {
     error instanceof Error
       ? error.message
       : String((error as { message?: string }).message ?? error)
-  if (message.includes('save limit reached')) {
-    return `Sua conta já tem ${CLOUD_SLOTS} carreiras na nuvem. Apague alguma para guardar outra.`
-  }
+  if (message.includes('save limit reached')) return 'A nuvem da sua conta já está cheia.'
   return message
 }
 
-/** Brings this device and the account up to date with each other. */
+/**
+ * Brings this device and the account up to date with each other. Careers the
+ * account has never seen go up while there is room, the most recently played
+ * first; the rest stay only on this device.
+ */
 export async function syncAll(client: SupabaseClient, userId: string): Promise<SyncReport> {
-  const [remote, local, bases] = await Promise.all([
+  const [remote, local, bases, cloudSlots] = await Promise.all([
     listRemote(client),
     db.saves.toArray(),
     db.synced.toArray(),
+    cloudSlotsOf(client, userId),
   ])
   const slots = new Map(local.map((s) => [s.id, s]))
   const rows = new Map(remote.map((r) => [r.id, r]))
-  const report: SyncReport = { conflicts: [], downloaded: [], notes: [] }
+  const report: SyncReport = { conflicts: [], downloaded: [], notes: [], cloudSlots, cloud: [] }
+  const note = (error: unknown) => {
+    const text = describeError(error)
+    if (!report.notes.includes(text)) report.notes.push(text)
+  }
   let newer = 0
 
-  for (const step of planSync(
+  const steps = planSync(
     userId,
     local,
     remote.map((r) => ({ id: r.id, updatedAt: r.updated_at })),
     bases,
-  )) {
+  )
+  const isNew = (step: SyncStep) => step.kind === 'upload' && !rows.has(step.id)
+  for (const step of steps.filter((step) => !isNew(step))) {
     try {
       switch (step.kind) {
         case 'upload':
@@ -163,16 +190,49 @@ export async function syncAll(client: SupabaseClient, userId: string): Promise<S
           break
       }
     } catch (error) {
-      const note = describeError(error)
-      if (!report.notes.includes(note)) report.notes.push(note)
+      note(error)
     }
   }
+
+  let room = cloudSlots - (await listRemote(client)).length
+  const fresh = steps
+    .filter(isNew)
+    .map((step) => slots.get(step.id)!)
+    .sort((a, b) => b.updatedAt - a.updatedAt)
+  for (const slot of fresh) {
+    if (room <= 0) break
+    try {
+      if (await upload(client, userId, slot, undefined)) room--
+    } catch (error) {
+      note(error)
+    }
+  }
+
   if (newer > 0) {
     report.notes.push(
       'Há carreiras salvas por uma versão mais nova do jogo. Atualize a página para trazê-las.',
     )
   }
+  report.cloud = await listRemote(client)
   return report
+}
+
+/**
+ * Puts a career that is only on this device into the cloud, taking the place
+ * of `replacing` when the account has no room. The replaced career leaves the
+ * cloud and the other devices, but stays on this one.
+ */
+export async function moveToCloud(
+  client: SupabaseClient,
+  userId: string,
+  id: string,
+  replacing?: string,
+) {
+  const slot = await db.saves.get(id)
+  if (!slot) return
+  if (replacing) await deleteRemote(client, replacing)
+  await db.synced.delete(id)
+  await upload(client, userId, slot, undefined)
 }
 
 /** Settles a conflict with the copy the player chose; true if the slot's game changed here. */

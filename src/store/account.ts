@@ -1,7 +1,15 @@
 import type { User } from '@supabase/supabase-js'
 import { create } from 'zustand'
 import { supabase } from '../cloud/client.ts'
-import { pushSlot, resolveConflict, syncAll, type SyncConflict } from '../cloud/sync.ts'
+import {
+  FREE_CLOUD_SLOTS,
+  moveToCloud,
+  pushSlot,
+  resolveConflict,
+  syncAll,
+  type RemoteSave,
+  type SyncConflict,
+} from '../cloud/sync.ts'
 import { db } from '../db/saves.ts'
 import { autosaveListeners, useGameStore } from './game.ts'
 
@@ -21,6 +29,10 @@ type AccountStore = {
   /** Messages from the last sync, or the error that stopped it. */
   notes: string[]
   conflicts: SyncConflict[]
+  /** How many careers the account keeps in the cloud. */
+  cloudSlots: number
+  /** The careers in the account, as of the last sync. */
+  cloud: RemoteSave[]
 }
 
 export const useAccountStore = create<AccountStore>()(() => ({
@@ -29,6 +41,8 @@ export const useAccountStore = create<AccountStore>()(() => ({
   status: 'idle',
   notes: [],
   conflicts: [],
+  cloudSlots: FREE_CLOUD_SLOTS,
+  cloud: [],
 }))
 
 const set = useAccountStore.setState
@@ -86,6 +100,8 @@ export function syncNow(): Promise<void> {
         lastSyncAt: Date.now(),
         notes: report.notes,
         conflicts: report.conflicts,
+        cloudSlots: report.cloudSlots,
+        cloud: report.cloud,
       })
     } catch (error) {
       set({
@@ -116,6 +132,19 @@ export async function settleConflict(id: string, keep: 'local' | 'remote') {
   } catch (error) {
     set({ notes: [messageOf(error)] })
   }
+}
+
+/** Puts a career from this device in the cloud, in place of `replacing` if there is no room. */
+export async function moveCareerToCloud(id: string, replacing?: string) {
+  const user = get().user
+  if (!user) return
+  await syncing
+  try {
+    await moveToCloud(client(), user.id, id, replacing)
+  } catch (error) {
+    set({ notes: [messageOf(error)] })
+  }
+  await syncNow()
 }
 
 // Careers saved during play go up a little later, once per burst of rounds.
@@ -212,6 +241,7 @@ export function initAccount() {
         profile: undefined,
         profileIsDefault: true,
         conflicts: [],
+        cloud: [],
         notes: [],
         lastSyncAt: undefined,
       })

@@ -66,8 +66,8 @@ export function LegalScreen() {
               partir das cores e da sigla do clube.
             </li>
             <li>
-              O jogo é oferecido como está, sem garantia. Faça cópias das suas carreiras com
-              &quot;Exportar save&quot; se não quiser perdê-las.
+              O jogo é oferecido como está, sem garantia. Carreiras que não estão na nuvem ficam só
+              no navegador e se perdem se os dados dele forem apagados.
             </li>
           </ol>
         </CardContent>

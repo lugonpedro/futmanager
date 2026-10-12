@@ -73,8 +73,8 @@ export function PrivacyScreen() {
           <Link to="/conta" className="underline underline-offset-2">
             Conta
           </Link>
-          , cada carreira pode ser baixada com &quot;Exportar save&quot; e o botão &quot;Apagar
-          conta e dados&quot; apaga tudo o que está na nuvem. Para qualquer outro pedido,{' '}
+          e o botão &quot;Apagar conta e dados&quot; apaga tudo o que está na nuvem. Para receber
+          uma cópia dos seus dados ou qualquer outro pedido,{' '}
           <a href={CONTACT_URL} className="underline underline-offset-2">
             fale com a gente
           </a>

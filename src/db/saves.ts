@@ -2,7 +2,7 @@ import Dexie, { type EntityTable } from 'dexie'
 import type { SyncBase } from '../cloud/plan.ts'
 import type { GameState } from '../engine/model/types.ts'
 import { upgradeGame } from '../engine/save.ts'
-import { isSeasonOver, SAVE_VERSION } from '../engine/season/season.ts'
+import { isSeasonOver } from '../engine/season/season.ts'
 
 /** One career in its own slot, with enough on the side to list it without loading the game. */
 export type SaveSlot = {
@@ -78,42 +78,4 @@ export function deleteSave(id: string) {
     await db.saves.delete(id)
     await db.synced.update(id, { deleted: true })
   })
-}
-
-const FILE_FORMAT = 'futmanager-save'
-
-/** A career as a JSON file the player can keep or move to another device. */
-export function exportSave(game: GameState): string {
-  return JSON.stringify({ format: FILE_FORMAT, version: SAVE_VERSION, game })
-}
-
-/** Reads a file made by exportSave(); throws with a message for the player when it isn't one. */
-export function parseSaveFile(text: string): GameState {
-  let data: unknown
-  try {
-    data = JSON.parse(text)
-  } catch {
-    throw new Error('O arquivo não é um save do futmanager.')
-  }
-  const file = data as { format?: string; version?: number; game?: GameState }
-  if (file?.format !== FILE_FORMAT || !file.game?.world || !file.game.season) {
-    throw new Error('O arquivo não é um save do futmanager.')
-  }
-  if ((file.version ?? 0) > SAVE_VERSION) {
-    throw new Error(
-      'Este save é de uma versão mais nova do jogo. Atualize a página e tente de novo.',
-    )
-  }
-  return upgradeGame(file.game)
-}
-
-/** File name for an exported career, like futmanager-barra-verde-2029.json. */
-export function saveFileName(game: GameState): string {
-  const club = game.world.clubs[game.userClubId].name
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-  return `futmanager-${club}-${game.season.year}.json`
 }

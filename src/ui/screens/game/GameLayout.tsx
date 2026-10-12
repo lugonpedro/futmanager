@@ -1,7 +1,6 @@
 import {
   ArrowLeftRightIcon,
   CalendarDaysIcon,
-  DownloadIcon,
   HouseIcon,
   LogOutIcon,
   MenuIcon,
@@ -17,12 +16,10 @@ import { Separator } from '@/components/ui/separator'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import type { GameState } from '../../../engine/model/types.ts'
-import { exportSave, saveFileName } from '../../../db/saves.ts'
 import { isSeasonOver } from '../../../engine/season/season.ts'
 import { useGameStore } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ThemeToggle } from '../../components/ThemeToggle.tsx'
-import { download } from '../../download.ts'
 import { divisionName, formatDayDate, formatMoney, formatShortDate } from '../../format.ts'
 
 const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
@@ -151,15 +148,6 @@ function Sidebar(props: { game: GameState; onNavigate?: () => void }) {
       <Separator />
       <div className="mt-auto flex flex-col gap-1">
         <ThemeToggle withLabel />
-        <Button
-          variant="ghost"
-          className="justify-start"
-          title="O jogo salva sozinho a cada rodada; o arquivo serve de cópia ou para outro aparelho"
-          onClick={() => download(saveFileName(game), exportSave(game))}
-        >
-          <DownloadIcon />
-          Exportar save
-        </Button>
         <Button asChild variant="ghost" className="justify-start">
           <Link to="/" onClick={props.onNavigate}>
             <LogOutIcon />

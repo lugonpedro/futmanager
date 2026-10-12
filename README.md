@@ -66,6 +66,6 @@ Para montar o servidor:
 
 Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails de login aparecem no Mailpit em `http://127.0.0.1:54324`.
 
-Cada carreira vai para a nuvem compactada (cerca de 150 KB) e cada conta guarda até 10. Quando a mesma carreira foi jogada em dois aparelhos desde a última sincronização, o jogo pergunta qual fica e sugere a mais recente.
+Cada carreira vai para a nuvem compactada (cerca de 150 KB). A conta grátis guarda uma carreira na nuvem; as outras ficam só no aparelho. Quem pagar vai guardar até 5: o número de cada conta fica na tabela `entitlements`, que só o servidor altera (o pagamento da fase 14 vai preenchê-la). Quando a mesma carreira foi jogada em dois aparelhos desde a última sincronização, o jogo pergunta qual fica e sugere a mais recente.
 
 O motor nunca usa `Math.random`: toda aleatoriedade passa por `src/engine/rng.ts`, com semente, para que mundos e partidas sejam reproduzíveis.
