@@ -4,20 +4,24 @@ import { useGame } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { FixtureLine } from './FixtureLine.tsx'
 
-export function CupScreen() {
+/** Shown in place of the cup for saves from before the cup existed. */
+export function NoCup() {
+  return (
+    <Card className="px-4">
+      <p className="text-sm text-muted-foreground">
+        A {CUP_NAME} desta temporada começou antes desta versão do jogo. Ela volta na próxima
+        temporada.
+      </p>
+    </Card>
+  )
+}
+
+/** The user's campaign and every stage of the cup, drawn or still to be drawn. */
+export function CupBracket() {
   const game = useGame()
   const { season, world, userClubId } = game
   const { cup } = season
-  if (!cup) {
-    return (
-      <Card className="px-4">
-        <p className="text-sm text-muted-foreground">
-          A {CUP_NAME} desta temporada começou antes desta versão do jogo. Ela volta na próxima
-          temporada.
-        </p>
-      </Card>
-    )
-  }
+  if (!cup) return <NoCup />
   const progress = cupProgress(cup, userClubId)
   const next = nextCupTie(cup, userClubId)
   const opponent = next && world.clubs[next.homeId === userClubId ? next.awayId : next.homeId]

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import {
   Table,
@@ -8,22 +7,20 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { leagueOf, leagueScorers } from '../../../engine/season/season.ts'
+import type { ScorerRow } from '../../../engine/season/standings.ts'
 import { useGame } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
-import { DivisionPicker } from './DivisionPicker.tsx'
 
 const SHOWN = 20
 
-export function ScorersScreen() {
+/** The top scorers of a competition, ties sharing a place. */
+export function ScorersTable(props: { scorers: readonly ScorerRow[] }) {
   const game = useGame()
-  const { leagues, players, clubs } = game.world
-  const [leagueId, setLeagueId] = useState(() => leagueOf(game.world, game.userClubId))
-  const rows = leagueScorers(game, leagueId).slice(0, SHOWN)
+  const { players, clubs } = game.world
+  const rows = props.scorers.slice(0, SHOWN)
 
   return (
     <section className="flex flex-col gap-3">
-      <DivisionPicker leagues={leagues} value={leagueId} onChange={setLeagueId} />
       {rows.length === 0 ? (
         <p className="text-muted-foreground">Nenhum gol marcado ainda.</p>
       ) : (

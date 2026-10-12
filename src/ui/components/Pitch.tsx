@@ -1,10 +1,14 @@
+import { Fragment, type ReactNode } from 'react'
 import type { Player, Position } from '../../engine/model/types.ts'
 import { positionFit } from '../../engine/match/strength.ts'
+import { fitClass } from '../format.ts'
 
 export type PitchSlot = { player: Player; position: Position; energy?: number; booked?: boolean }
 
 /** Rows from attack down to goal; laterais flank the centre-backs. */
 const ROWS: Position[][] = [['A'], ['M'], ['L', 'Z'], ['G']]
+
+const SLOT_CLASS = 'flex max-w-20 min-w-0 flex-1'
 
 function defenceRow(slots: PitchSlot[]): PitchSlot[] {
   const fullbacks = slots.filter((s) => s.position === 'L')
@@ -14,11 +18,16 @@ function defenceRow(slots: PitchSlot[]): PitchSlot[] {
     : [...fullbacks, ...centre]
 }
 
-/** The XI drawn on a pitch; tapping a player selects them. */
+/**
+ * The XI drawn on a pitch; tapping a player selects them. `wrap` lets a
+ * screen put each player inside its own element, such as a drag handle,
+ * as long as that element keeps {@link SLOT_CLASS}.
+ */
 export function Pitch(props: {
   slots: PitchSlot[]
   selected?: string
   onSelect?: (playerId: string) => void
+  wrap?: (playerId: string, className: string, player: ReactNode) => ReactNode
 }) {
   return (
     <div className="flex flex-col justify-between gap-3 rounded-lg border-2 border-white/40 bg-gradient-to-b from-pitch to-pitch-dark p-3 text-white">
@@ -27,14 +36,24 @@ export function Pitch(props: {
         const ordered = positions.includes('Z') ? defenceRow(row) : row
         return (
           <div key={positions.join()} className="flex min-h-12 justify-around gap-1">
-            {ordered.map((slot) => (
-              <PitchPlayer
-                key={slot.player.id}
-                slot={slot}
-                selected={props.selected === slot.player.id}
-                onSelect={props.onSelect}
-              />
-            ))}
+            {ordered.map((slot) => {
+              const player = (
+                <PitchPlayer
+                  slot={slot}
+                  selected={props.selected === slot.player.id}
+                  onSelect={props.onSelect}
+                />
+              )
+              return props.wrap ? (
+                <Fragment key={slot.player.id}>
+                  {props.wrap(slot.player.id, SLOT_CLASS, player)}
+                </Fragment>
+              ) : (
+                <div key={slot.player.id} className={SLOT_CLASS}>
+                  {player}
+                </div>
+              )
+            })}
           </div>
         )
       })}
@@ -55,7 +74,7 @@ function PitchPlayer(props: {
       type="button"
       onClick={() => props.onSelect?.(player.id)}
       title={`${player.name} (${player.position}), força ${player.strength}`}
-      className={`flex max-w-20 min-w-0 flex-1 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
+      className={`flex w-full min-w-0 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
     >
       <span className="w-full truncate text-center font-semibold">
         {booked && (
@@ -67,9 +86,7 @@ function PitchPlayer(props: {
         {lastName}
       </span>
       <span className="tabular-nums">
-        <span className={fit < 1 && !props.selected ? 'text-orange-300' : ''}>
-          {player.position}
-        </span>{' '}
+        <span className={props.selected ? '' : fitClass(fit, true)}>{player.position}</span>{' '}
         {player.strength}
         {energy !== undefined && ` · ${Math.round(energy)}%`}
       </span>

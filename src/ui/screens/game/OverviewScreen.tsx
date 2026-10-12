@@ -10,6 +10,7 @@ import {
   clubLineup,
   isSeasonOver,
   leagueOf,
+  leagueScorers,
   leagueStandings,
   seasonReview,
   seasonSummary,
@@ -22,6 +23,7 @@ import { simulateRounds } from '../../../worker/simulate.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ConfidenceBar } from '../../components/Confidence.tsx'
 import { divisionName, formatMoney, POSTURE_NAMES } from '../../format.ts'
+import { competitionsPath, CUP_SLUG } from '../../routes.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 
 export function OverviewScreen() {
@@ -120,7 +122,7 @@ function NextRound({ game }: { game: GameState }) {
         <CupLine game={game} />
         <p className="text-sm text-muted-foreground">
           Escalação: {lineup.formation}, postura {POSTURE_NAMES[lineup.posture].toLowerCase()}.{' '}
-          <Link to="/jogo/escalacao" className="text-primary underline">
+          <Link to="/jogo/time" className="text-primary underline">
             Mudar
           </Link>
         </p>
@@ -158,8 +160,8 @@ function NextRound({ game }: { game: GameState }) {
         </p>
         <p className="text-sm">
           Meta da diretoria: {objectiveText(world, userClubId, game.career.target).toLowerCase()}.{' '}
-          <Link to="/jogo/carreira" className="text-primary underline">
-            Carreira
+          <Link to="/jogo/clube/diretoria" className="text-primary underline">
+            Diretoria
           </Link>
         </p>
         <ConfidenceBar confidence={game.career.confidence} />
@@ -197,6 +199,7 @@ function NextRound({ game }: { game: GameState }) {
           </ul>
         )}
         <LastCupTie game={game} />
+        <TopScorers game={game} leagueId={leagueId} />
       </Card>
     </div>
   )
@@ -341,12 +344,46 @@ function LastCupTie({ game }: { game: GameState }) {
   return (
     <div className="mt-2 flex flex-col gap-1">
       <h3 className="text-sm font-semibold">
-        <Link to="/jogo/copa" className="underline">
+        <Link to={`/jogo/competicoes/${CUP_SLUG}`} className="underline">
           {CUP_NAME}
         </Link>
         , {stage.name.toLowerCase()}
       </h3>
       <FixtureLine fixture={tie} world={world} userClubId={userClubId} />
+    </div>
+  )
+}
+
+/** The three leading scorers of the user's division. */
+function TopScorers({ game, leagueId }: { game: GameState; leagueId: string }) {
+  const { world, userClubId } = game
+  const top = leagueScorers(game, leagueId).slice(0, 3)
+  if (top.length === 0) return null
+  return (
+    <div className="mt-2 flex flex-col gap-1">
+      <h3 className="text-sm font-semibold">
+        <Link to={competitionsPath(game, 'artilharia')} className="underline">
+          Artilharia
+        </Link>
+      </h3>
+      <ol className="text-sm">
+        {top.map((row, i) => (
+          <li key={row.playerId} className="flex items-center gap-2">
+            <span className="w-4 text-right text-muted-foreground tabular-nums">{i + 1}</span>
+            <span className="min-w-0 flex-1 truncate">
+              {world.players[row.playerId].name}{' '}
+              <span className="text-xs text-muted-foreground">
+                {world.clubs[row.clubId].shortName}
+              </span>
+            </span>
+            <span
+              className={`font-semibold tabular-nums ${row.clubId === userClubId ? 'text-highlight' : ''}`}
+            >
+              {row.goals}
+            </span>
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
@@ -402,7 +439,7 @@ function Notices({ game }: { game: GameState }) {
     <Card className="gap-1 border-highlight px-4 md:col-span-2">
       {offers > 0 && (
         <p className="text-sm">
-          <Link to="/jogo/mercado" className="font-semibold text-primary underline">
+          <Link to="/jogo/mercado/propostas" className="font-semibold text-primary underline">
             {offers} {offers === 1 ? 'proposta' : 'propostas'}
           </Link>{' '}
           por jogadores seus, válidas até a próxima rodada.
@@ -412,21 +449,24 @@ function Notices({ game }: { game: GameState }) {
         <p className="text-sm">
           {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim da
           temporada.{' '}
-          <Link to="/jogo/mercado" className="text-primary underline">
+          <Link to="/jogo/time" className="text-primary underline">
             Renovar
           </Link>
         </p>
       )}
       {shaky && (
         <p className="text-sm text-destructive">
-          A diretoria está perdendo a paciência. Se a confiança chegar a zero, você é demitido.
+          A diretoria está perdendo a paciência. Se a confiança chegar a zero, você é demitido.{' '}
+          <Link to="/jogo/clube/diretoria" className="underline">
+            Diretoria
+          </Link>
         </p>
       )}
       {cash < 0 && (
         <p className="text-sm text-destructive">
           Caixa negativo: {formatMoney(cash)}. Venda jogadores ou ajuste o ingresso em{' '}
-          <Link to="/jogo/financas" className="underline">
-            Finanças
+          <Link to="/jogo/clube/estadio" className="underline">
+            Estádio
           </Link>
           .
         </p>
@@ -442,7 +482,7 @@ function ExpiringWarning({ game }: { game: GameState }) {
     <p className="text-sm text-muted-foreground">
       Ao iniciar a nova temporada saem de graça, por fim de contrato:{' '}
       {players.map((p) => `${p.name} (${p.position}, ${p.strength})`).join(', ')}.{' '}
-      <Link to="/jogo/mercado" className="text-primary underline">
+      <Link to="/jogo/time" className="text-primary underline">
         Renovar antes
       </Link>
     </p>

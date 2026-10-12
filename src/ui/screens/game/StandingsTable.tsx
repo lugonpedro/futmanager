@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import {
   Table,
@@ -9,11 +8,10 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { cn } from '@/lib/utils'
-import { leagueOf, leagueStandings, PROMOTION_SPOTS } from '../../../engine/season/season.ts'
+import { leagueStandings, PROMOTION_SPOTS } from '../../../engine/season/season.ts'
 import type { Outcome } from '../../../engine/season/standings.ts'
 import { useGame } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
-import { DivisionPicker } from './DivisionPicker.tsx'
 
 const FORM_STYLE: Record<Outcome, string> = {
   V: 'bg-green-500',
@@ -32,10 +30,10 @@ const COLUMNS: { label: string; title: string; hide?: string }[] = [
   { label: 'SG', title: 'Saldo de gols' },
 ]
 
-export function TableScreen() {
+/** A division's table, with promotion and relegation spots marked. */
+export function StandingsTable({ leagueId }: { leagueId: string }) {
   const game = useGame()
   const { leagues } = game.world
-  const [leagueId, setLeagueId] = useState(() => leagueOf(game.world, game.userClubId))
   const index = leagues.findIndex((league) => league.id === leagueId)
   const rows = leagueStandings(game, leagueId)
   const goesUp = (position: number) => index > 0 && position < PROMOTION_SPOTS
@@ -44,7 +42,6 @@ export function TableScreen() {
 
   return (
     <section className="flex flex-col gap-3">
-      <DivisionPicker leagues={leagues} value={leagueId} onChange={setLeagueId} />
       <Card className="py-0">
         <Table className="tabular-nums">
           <TableHeader>

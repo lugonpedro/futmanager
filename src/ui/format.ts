@@ -1,4 +1,4 @@
-import type { LedgerCategory, Position, Posture, Trait } from '../engine/model/types.ts'
+import type { LedgerCategory, Player, Position, Posture, Trait } from '../engine/model/types.ts'
 
 export { formatMoney, formatReais } from '../engine/money.ts'
 
@@ -44,3 +44,37 @@ export const LEDGER_NAMES: Record<LedgerCategory, string> = {
   salarios: 'Salários',
   compras: 'Compra de jogadores',
 }
+
+/** Green in his own position, yellow next to it, red anywhere else. */
+export function fitLevel(fit: number): 'good' | 'fair' | 'poor' {
+  return fit >= 1 ? 'good' : fit >= 0.85 ? 'fair' : 'poor'
+}
+
+/** Text colour for a player's fit, on the pitch (dark green) or on a page. */
+export function fitClass(fit: number, onPitch = false): string {
+  const level = fitLevel(fit)
+  if (onPitch) {
+    return level === 'good'
+      ? 'text-green-300'
+      : level === 'fair'
+        ? 'text-yellow-300'
+        : 'text-red-300'
+  }
+  return level === 'good'
+    ? 'text-green-700 dark:text-green-400'
+    : level === 'fair'
+      ? 'text-amber-600 dark:text-yellow-300'
+      : 'text-red-600 dark:text-red-400'
+}
+
+export type Role = 'titular' | 'reserva' | 'fora'
+
+export const ROLE_NAMES: Record<Role, string> = {
+  titular: 'Titular',
+  reserva: 'Reserva',
+  fora: 'Fora do jogo',
+}
+
+/** Came up through this club's academy. */
+export const isHomegrown = (player: Player, clubId: string) =>
+  player.id.startsWith('B') && player.id.split('-')[1] === clubId

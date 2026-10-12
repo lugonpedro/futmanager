@@ -1,17 +1,13 @@
 import {
   ArrowLeftRightIcon,
-  BriefcaseIcon,
   CalendarDaysIcon,
   DownloadIcon,
-  GoalIcon,
   HouseIcon,
-  ListOrderedIcon,
   LogOutIcon,
   MenuIcon,
+  ShieldIcon,
   ShirtIcon,
   TrophyIcon,
-  UsersIcon,
-  WalletIcon,
   type LucideIcon,
 } from 'lucide-react'
 import { useState } from 'react'
@@ -31,20 +27,17 @@ import { divisionName, formatMoney } from '../../format.ts'
 
 const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/jogo', label: 'Resumo', icon: HouseIcon, end: true },
-  { to: '/jogo/escalacao', label: 'Escalação', icon: ShirtIcon },
-  { to: '/jogo/elenco', label: 'Elenco', icon: UsersIcon },
+  { to: '/jogo/time', label: 'Time', icon: ShirtIcon },
   { to: '/jogo/mercado', label: 'Mercado', icon: ArrowLeftRightIcon },
-  { to: '/jogo/financas', label: 'Finanças', icon: WalletIcon },
-  { to: '/jogo/tabela', label: 'Tabela', icon: ListOrderedIcon },
+  { to: '/jogo/competicoes', label: 'Competições', icon: TrophyIcon },
   { to: '/jogo/calendario', label: 'Calendário', icon: CalendarDaysIcon },
-  { to: '/jogo/artilharia', label: 'Artilharia', icon: GoalIcon },
-  { to: '/jogo/copa', label: 'Copa', icon: TrophyIcon },
-  { to: '/jogo/carreira', label: 'Carreira', icon: BriefcaseIcon },
+  { to: '/jogo/clube', label: 'Clube', icon: ShieldIcon },
 ]
 
 /**
  * Every screen of a running career sits in this frame: a sidebar on wide
- * screens, a top bar with a slide-out menu on phones.
+ * screens; on phones, a top bar with a slide-out menu and the pages in a bar
+ * along the bottom.
  */
 export function GameLayout() {
   const game = useGameStore((s) => s.game)
@@ -85,10 +78,32 @@ export function GameLayout() {
         </span>
       </header>
 
-      <main className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">
+      <main className="mx-auto flex w-full max-w-6xl flex-col gap-4 p-4 pb-24 md:p-6">
         <h1 className="hidden text-2xl font-bold md:block">{current?.label}</h1>
         <Outlet />
       </main>
+
+      <nav
+        aria-label="Páginas"
+        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-6 border-t bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden"
+      >
+        {PAGES.map((page) => (
+          <NavLink
+            key={page.to}
+            to={page.to}
+            end={page.end}
+            className={({ isActive }) =>
+              cn(
+                'flex min-w-0 flex-col items-center gap-0.5 py-2 text-[0.6rem] leading-tight tracking-tight',
+                isActive ? 'font-semibold text-primary' : 'text-muted-foreground',
+              )
+            }
+          >
+            <page.icon className="size-5" />
+            <span className="max-w-full overflow-hidden">{page.label}</span>
+          </NavLink>
+        ))}
+      </nav>
     </div>
   )
 }

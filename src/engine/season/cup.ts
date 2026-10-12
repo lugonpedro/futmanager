@@ -1,6 +1,7 @@
 import type { Club, Cup, CupStage, Fixture, MatchResult } from '../model/types.ts'
 import type { Rng } from '../rng.ts'
 import { toFixtureResult } from './results.ts'
+import { topScorers, type ScorerRow } from './standings.ts'
 
 export const CUP_ID = 'COPA'
 export const CUP_NAME = 'Copa Nacional'
@@ -124,6 +125,11 @@ export function playCupStage(
 export function cupWinner(cup: Cup | undefined): string | undefined {
   const final = cup?.stages.at(-1)?.ties[0]
   return final && tieWinner(final)
+}
+
+/** Goals scored in the cup so far, most first. Shootout kicks don't count. */
+export function cupScorers(cup: Cup | undefined): ScorerRow[] {
+  return topScorers(cup?.stages.flatMap((s) => s.ties) ?? [])
 }
 
 /** The club's cup tie still to be played, if it is alive and drawn. */
