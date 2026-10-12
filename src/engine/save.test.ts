@@ -3,16 +3,52 @@ import { fairTicketPrice } from './finance/economy.ts'
 import { wageFor } from './generate/player.ts'
 import { addDays } from './season/calendar.ts'
 import { newGame, playRound, roundDate, SAVE_VERSION } from './season/season.ts'
+import type { World } from './model/types.ts'
 import { upgradeGame } from './save.ts'
 
 /** A save as an older version left it in the database: whatever JSON it was. */
 const upgradeOld = (saved: unknown) => upgradeGame(saved as Parameters<typeof upgradeGame>[0])
 
+/** Players as they were before version 5: a strength and some traits. */
+function oldPlayers(world: World) {
+  return Object.fromEntries(
+    Object.values(world.players).map(
+      ({ overall, attributes: _a, secondary: _s, styles: _y, foot: _f, weakFoot: _w, ...p }) => [
+        p.id,
+        { ...p, strength: overall, traits: overall > 60 ? ['passe', 'cabeceio'] : [] },
+      ],
+    ),
+  )
+}
+
 describe('upgradeGame', () => {
-  const current = newGame(3, 'C10')
+  const fresh = newGame(3, 'C10')
+  const { fitness: _f, ratings: _r, roundStars: _s, ...v4Season } = fresh.season
+  /** The same career as version 4 stored it, the starting point for the older versions. */
+  const current = {
+    ...fresh,
+    world: { ...fresh.world, players: oldPlayers(fresh.world) },
+    season: v4Season,
+  } as unknown as typeof fresh
 
   it('leaves a current save alone', () => {
-    expect(upgradeGame(current)).toBe(current)
+    expect(upgradeGame(fresh)).toBe(fresh)
+  })
+
+  it('gives a version 4 save attributes that keep each overall at the old strength', () => {
+    const upgraded = upgradeOld({ ...current, version: 4 })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.season).toMatchObject({ fitness: {}, ratings: {}, roundStars: [] })
+    const old = oldPlayers(fresh.world)
+    for (const player of Object.values(upgraded.world.players)) {
+      expect(Math.abs(player.overall - old[player.id].strength)).toBeLessThanOrEqual(1)
+      expect(player.potential).toBeGreaterThanOrEqual(player.overall)
+      expect(player.attributes.finishing).toBeGreaterThanOrEqual(1)
+      if (old[player.id].traits.length > 0) expect(player.styles).toHaveLength(2)
+    }
+    // The same save always upgrades to the same players.
+    expect(upgradeOld({ ...current, version: 4 }).world.players).toEqual(upgraded.world.players)
+    expect(playRound(upgraded).season.round).toBe(2)
   })
 
   it('brings a version 1 save up to date and playable', () => {
@@ -37,7 +73,7 @@ describe('upgradeGame', () => {
     expect(club.ticketPrice).toBe(fairTicketPrice(club.reputation))
     expect(club.cash).toBeGreaterThan(1_000_000)
     const player = upgraded.world.players[club.playerIds[0]]
-    expect(player.wage).toBe(wageFor(player.strength))
+    expect(player.wage).toBe(wageFor(player.overall))
     expect(playRound(upgraded).season.round).toBe(2)
   })
 

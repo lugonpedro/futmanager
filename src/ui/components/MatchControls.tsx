@@ -96,7 +96,7 @@ export function MatchControls(props: {
                       {player.position}
                     </span>
                     <span className="min-w-0 flex-1 truncate">{player.name}</span>
-                    <span className="font-bold tabular-nums">{player.strength}</span>
+                    <span className="font-bold tabular-nums">{player.overall}</span>
                   </button>
                 </li>
               )

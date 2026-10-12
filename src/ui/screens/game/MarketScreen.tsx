@@ -34,9 +34,10 @@ import { ClubName } from '../../components/ClubName.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
 import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES } from '../../format.ts'
 import { SignDialog } from './MarketDialogs.tsx'
+import { PlayerSheet } from './PlayerSheet.tsx'
 
 const SHOWN = 50
-const SORTS = { Força: 'strength', Preço: 'price', Idade: 'age' } as const
+const SORTS = { Geral: 'overall', Preço: 'price', Idade: 'age' } as const
 type Sort = keyof typeof SORTS
 
 const TABS = ['contratar', 'propostas', 'noticias']
@@ -76,8 +77,9 @@ function BuyTab({ game }: { game: GameState }) {
   const [position, setPosition] = useState<Position | 'Todos'>('Todos')
   const [search, setSearch] = useState('')
   const [onlyAffordable, setOnlyAffordable] = useState<'Todos' | 'Cabem no caixa'>('Todos')
-  const [sort, setSort] = useState<Sort>('Força')
+  const [sort, setSort] = useState<Sort>('Geral')
   const [selected, setSelected] = useState<Player>()
+  const [viewing, setViewing] = useState<Player>()
   const cash = world.clubs[userClubId].cash
   const query = search.trim().toLocaleLowerCase('pt-BR')
 
@@ -93,7 +95,7 @@ function BuyTab({ game }: { game: GameState }) {
         ? a.price - b.price
         : sort === 'Idade'
           ? a.player.age - b.player.age
-          : b.player.strength - a.player.strength,
+          : b.player.overall - a.player.overall,
     )
 
   return (
@@ -129,7 +131,7 @@ function BuyTab({ game }: { game: GameState }) {
       <TransferWindowNote today={game.today} />
       <p className="text-sm text-muted-foreground">
         {rows.length > SHOWN ? `Mostrando ${SHOWN} de ${rows.length}` : `${rows.length}`} jogadores.
-        Caixa: {formatMoney(cash)}. Toque em um jogador para negociar.
+        Caixa: {formatMoney(cash)}. Toque no nome para ver a carta, ou na linha para negociar.
       </p>
       <Card className="py-0">
         <Table className="tabular-nums">
@@ -138,7 +140,7 @@ function BuyTab({ game }: { game: GameState }) {
               <TableHead>Pos</TableHead>
               <TableHead>Nome</TableHead>
               <TableHead className="hidden sm:table-cell">Idade</TableHead>
-              <TableHead>Força</TableHead>
+              <TableHead>Geral</TableHead>
               <TableHead className="hidden sm:table-cell">Pot</TableHead>
               <TableHead>Clube</TableHead>
               <TableHead className="text-right">Preço</TableHead>
@@ -153,9 +155,20 @@ function BuyTab({ game }: { game: GameState }) {
                 onClick={() => setSelected(player)}
               >
                 <TableCell className="font-semibold">{player.position}</TableCell>
-                <TableCell>{player.name}</TableCell>
+                <TableCell>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setViewing(player)
+                    }}
+                    className="cursor-pointer text-left font-medium hover:underline"
+                  >
+                    {player.name}
+                  </button>
+                </TableCell>
                 <TableCell className="hidden sm:table-cell">{player.age}</TableCell>
-                <TableCell className="font-bold">{player.strength}</TableCell>
+                <TableCell className="font-bold">{player.overall}</TableCell>
                 <TableCell className="hidden text-muted-foreground sm:table-cell">
                   {player.potential}
                 </TableCell>
@@ -179,6 +192,9 @@ function BuyTab({ game }: { game: GameState }) {
       </Card>
       {selected && (
         <SignDialog game={game} player={selected} onClose={() => setSelected(undefined)} />
+      )}
+      {viewing && (
+        <PlayerSheet game={game} player={viewing} onClose={() => setViewing(undefined)} />
       )}
     </div>
   )
@@ -219,7 +235,7 @@ function OffersTab({ game }: { game: GameState }) {
               <span className="font-semibold">
                 {player.name}{' '}
                 <span className="text-sm font-normal text-muted-foreground">
-                  ({player.position}, {player.strength})
+                  ({player.position}, {player.overall})
                 </span>
               </span>
               <span className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">

@@ -1,4 +1,14 @@
-import type { LedgerCategory, Player, Position, Posture, Trait } from '../engine/model/types.ts'
+import type {
+  Attribute,
+  Foot,
+  GameState,
+  LedgerCategory,
+  Player,
+  PlayStyle,
+  Position,
+  Posture,
+} from '../engine/model/types.ts'
+import type { AnyFace } from '../engine/player/attributes.ts'
 
 export { formatMoney, formatReais } from '../engine/money.ts'
 export {
@@ -23,19 +33,101 @@ export const POSITION_NAMES: Record<Position, string> = {
 /** Display order on team sheets: from the goal outwards. */
 export const POSITION_ORDER: Record<Position, number> = { G: 0, Z: 1, L: 2, M: 3, A: 4 }
 
-export const TRAIT_NAMES: Record<Trait, string> = {
-  reflexo: 'Reflexo',
-  colocacao: 'Colocação',
-  saida: 'Saída do gol',
-  marcacao: 'Marcação',
-  desarme: 'Desarme',
-  cabeceio: 'Cabeceio',
-  cruzamento: 'Cruzamento',
-  velocidade: 'Velocidade',
-  passe: 'Passe',
-  armacao: 'Armação',
-  drible: 'Drible',
-  finalizacao: 'Finalização',
+export const STYLE_NAMES: Record<PlayStyle, string> = {
+  paredao: 'Paredão',
+  colocacao: 'Bem colocado',
+  saida: 'Goleiro-líbero',
+  muralha: 'Muralha',
+  desarmador: 'Desarmador',
+  cabeceador: 'Cabeceador',
+  cruzador: 'Cruzador',
+  velocista: 'Velocista',
+  passador: 'Passe preciso',
+  armador: 'Armador',
+  driblador: 'Driblador',
+  finalizador: 'Finalizador',
+}
+
+/** "Finalizador+" for the "+" version. */
+export const styleName = (style: PlayStyle, level: number) =>
+  `${STYLE_NAMES[style]}${level === 2 ? '+' : ''}`
+
+/** Card abbreviations and what they stand for. */
+export const FACE_NAMES: Record<AnyFace, { short: string; name: string }> = {
+  RIT: { short: 'RIT', name: 'Ritmo' },
+  FIN: { short: 'FIN', name: 'Finalização' },
+  PAS: { short: 'PAS', name: 'Passe' },
+  DRI: { short: 'DRI', name: 'Drible' },
+  DEF: { short: 'DEF', name: 'Defesa' },
+  FIS: { short: 'FIS', name: 'Físico' },
+  ELA: { short: 'ELA', name: 'Elasticidade' },
+  MAO: { short: 'MÃO', name: 'Manejo' },
+  REP: { short: 'REP', name: 'Reposição' },
+  REF: { short: 'REF', name: 'Reflexo' },
+  VEL: { short: 'VEL', name: 'Velocidade' },
+  POS: { short: 'POS', name: 'Posicionamento' },
+}
+
+export const ATTRIBUTE_NAMES: Record<Attribute, string> = {
+  acceleration: 'Aceleração',
+  sprintSpeed: 'Velocidade',
+  finishing: 'Finalização',
+  shotPower: 'Força do chute',
+  attackPositioning: 'Posicionamento ofensivo',
+  penalties: 'Pênalti',
+  shortPassing: 'Passe curto',
+  longPassing: 'Passe longo',
+  vision: 'Visão',
+  crossing: 'Cruzamento',
+  dribbling: 'Drible',
+  ballControl: 'Controle de bola',
+  agility: 'Agilidade',
+  marking: 'Marcação',
+  tackling: 'Desarme',
+  interceptions: 'Interceptação',
+  heading: 'Cabeceio',
+  strength: 'Força',
+  stamina: 'Resistência',
+  jumping: 'Impulsão',
+  aggression: 'Agressividade',
+  diving: 'Elasticidade',
+  handling: 'Manejo',
+  kicking: 'Reposição',
+  reflexes: 'Reflexo',
+  keeperPositioning: 'Posicionamento',
+}
+
+export const FOOT_NAMES: Record<Foot, string> = { direito: 'Direito', esquerdo: 'Esquerdo' }
+
+/** Card colour: by overall band, or a special card for the round's best XI and the player of the season. */
+export type CardTier = 'bronze' | 'prata' | 'ouro' | 'rodada' | 'craque'
+
+export const CARD_TIER_NAMES: Record<CardTier, string> = {
+  bronze: 'Bronze',
+  prata: 'Prata',
+  ouro: 'Ouro',
+  rodada: 'Seleção da rodada',
+  craque: 'Craque da temporada',
+}
+
+/**
+ * Bands set by our own spread of overalls, not FC's numbers: about two in
+ * five players are bronze, a bit less are silver, the top fifth gold.
+ */
+export const CARD_CUTS = { prata: 50, ouro: 70 }
+
+/** Player of the season in any division last season. */
+export const isSeasonStar = (game: GameState, playerId: string) =>
+  game.history.at(-1)?.leagues.some((l) => l.bestPlayer?.playerId === playerId) ?? false
+
+export function cardTier(player: Player, game?: GameState): CardTier {
+  if (game && isSeasonStar(game, player.id)) return 'craque'
+  if (game?.season.roundStars.includes(player.id)) return 'rodada'
+  return player.overall >= CARD_CUTS.ouro
+    ? 'ouro'
+    : player.overall >= CARD_CUTS.prata
+      ? 'prata'
+      : 'bronze'
 }
 
 export const POSTURE_NAMES: Record<Posture, string> = {

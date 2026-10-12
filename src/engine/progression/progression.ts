@@ -1,7 +1,16 @@
 import { generateYouth, marketValueFor } from '../generate/player.ts'
 import { SQUAD_SHAPE } from '../generate/world.ts'
 import {
+  ATTRIBUTES,
+  FACE_PARTS,
+  OVERALL_WEIGHTS,
+  overallAt,
+  type AnyFace,
+} from '../player/attributes.ts'
+import {
   FREE_AGENT,
+  type Attribute,
+  type Attributes,
   POSITIONS,
   RETIRED,
   type GameState,
@@ -24,8 +33,92 @@ export const PROGRESSION = {
   aiSquadCap: 28,
 }
 
-const clamp = (value: number, min: number, max: number) =>
-  Math.min(max, Math.max(min, Math.round(value)))
+type Group = 'physical' | 'technical' | 'mental'
+
+/** Body first to go, technique learnt young, reading of the game coming last. */
+const GROUP: Record<Attribute, Group> = {
+  acceleration: 'physical',
+  sprintSpeed: 'physical',
+  agility: 'physical',
+  strength: 'physical',
+  stamina: 'physical',
+  jumping: 'physical',
+  vision: 'mental',
+  attackPositioning: 'mental',
+  interceptions: 'mental',
+  keeperPositioning: 'mental',
+  aggression: 'mental',
+  finishing: 'technical',
+  shotPower: 'technical',
+  penalties: 'technical',
+  shortPassing: 'technical',
+  longPassing: 'technical',
+  crossing: 'technical',
+  dribbling: 'technical',
+  ballControl: 'technical',
+  marking: 'technical',
+  tackling: 'technical',
+  heading: 'technical',
+  diving: 'technical',
+  handling: 'technical',
+  kicking: 'technical',
+  reflexes: 'technical',
+}
+
+/**
+ * How a year's change spreads over the groups. Youngsters gain most in
+ * technique; past 30 the body goes first while vision and positioning still
+ * grow, until about 32.
+ */
+function groupWeights(age: number, growing: boolean): Record<Group, number> {
+  if (growing) {
+    if (age <= 21) return { technical: 1.3, physical: 1, mental: 0.6 }
+    if (age <= 25) return { technical: 1.1, physical: 0.8, mental: 1.1 }
+    return { technical: 1, physical: 0.8, mental: 1.2 }
+  }
+  if (age <= 29) return { technical: 1, physical: 1.2, mental: 0.6 }
+  if (age <= 32) return { technical: 0.6, physical: 2, mental: -0.5 }
+  return { technical: 1, physical: 1.8, mental: 0.3 }
+}
+
+/** How much each attribute counts towards the overall in a position. */
+function overallShares(position: Position): Record<Attribute, number> {
+  const shares = Object.fromEntries(ATTRIBUTES.map((a) => [a, 0])) as Record<Attribute, number>
+  for (const [face, weight] of Object.entries(OVERALL_WEIGHTS[position])) {
+    for (const [attribute, part] of Object.entries(FACE_PARTS[face as AnyFace])) {
+      shares[attribute as Attribute] += weight! * part!
+    }
+  }
+  return shares
+}
+
+/** Rounds up or down at random, in proportion, so small changes still add up over the years. */
+const roundRandom = (value: number, rng: Rng) => Math.floor(value + rng.next())
+
+/**
+ * Moves the attributes so the overall changes by about `change`, spread over
+ * the groups as the age says, each attribute with a little of its own.
+ */
+export function developAttributes(
+  attributes: Attributes,
+  position: Position,
+  age: number,
+  change: number,
+  rng: Rng,
+): Attributes {
+  const weights = groupWeights(age, change > 0)
+  const shares = overallShares(position)
+  const spread = ATTRIBUTES.reduce((sum, a) => sum + shares[a] * weights[GROUP[a]], 0)
+  const base = change / Math.max(0.3, spread)
+  const next = { ...attributes }
+  for (const attribute of ATTRIBUTES) {
+    // Skills that don't count for his position just drift along.
+    const step = shares[attribute] > 0 ? base : change
+    const delta = step * weights[GROUP[attribute]] + rng.normal(0, 0.8)
+    next[attribute] = Math.min(99, Math.max(1, attributes[attribute] + roundRandom(delta, rng)))
+  }
+  return next
+}
 
 /**
  * A year older: young players grow towards their potential, faster the more
@@ -34,7 +127,7 @@ const clamp = (value: number, min: number, max: number) =>
 export function developPlayer(player: Player, appearances: number, rng: Rng): Player {
   const age = player.age + 1
   const playing = Math.min(1, appearances / PROGRESSION.fullSeason)
-  const room = player.potential - player.strength
+  const room = player.potential - player.overall
   let change: number
   if (age <= 21) change = room * (0.12 + 0.28 * playing) + rng.normal(0, 1.5)
   else if (age <= 25) change = room * (0.1 + 0.2 * playing) + rng.normal(0, 1.5)
@@ -42,15 +135,23 @@ export function developPlayer(player: Player, appearances: number, rng: Rng): Pl
   else if (age <= 32) change = -rng.int(1, 3)
   else change = -rng.int(2, 5)
 
-  const strength = clamp(player.strength + Math.min(change, room), 1, 99)
+  const attributes = developAttributes(
+    player.attributes,
+    player.position,
+    age,
+    Math.min(change, room),
+    rng,
+  )
+  const overall = overallAt(attributes, player.position)
   // Past the peak the ceiling comes down with the player.
-  const potential = age >= 30 ? strength : Math.max(player.potential, strength)
+  const potential = age >= 30 ? overall : Math.max(player.potential, overall)
   return {
     ...player,
     age,
-    strength,
+    attributes,
+    overall,
     potential,
-    marketValue: marketValueFor(strength, potential, age),
+    marketValue: marketValueFor(overall, potential, age),
   }
 }
 
@@ -144,7 +245,7 @@ export function youthIntake(
       const count = (position: Position) => squad.filter((p) => p.position === position).length
       const spare = squad
         .filter((p) => count(p.position) > SQUAD_SHAPE[p.position] && p.age >= 20)
-        .sort((a, b) => a.strength - b.strength || byId(a, b))[0]
+        .sort((a, b) => a.overall - b.overall || byId(a, b))[0]
       if (!spare) break
       world = transferPlayer(world, spare.id, FREE_AGENT, {
         fee: 0,

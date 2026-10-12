@@ -45,9 +45,9 @@ describe('generateWorld', () => {
 
   it('keeps every player within valid ranges', () => {
     for (const player of players) {
-      expect(player.strength).toBeGreaterThanOrEqual(1)
-      expect(player.strength).toBeLessThanOrEqual(99)
-      expect(player.potential).toBeGreaterThanOrEqual(player.strength)
+      expect(player.overall).toBeGreaterThanOrEqual(1)
+      expect(player.overall).toBeLessThanOrEqual(99)
+      expect(player.potential).toBeGreaterThanOrEqual(player.overall)
       expect(player.potential).toBeLessThanOrEqual(99)
       expect(player.age).toBeGreaterThanOrEqual(17)
       expect(player.age).toBeLessThanOrEqual(37)
@@ -59,7 +59,7 @@ describe('generateWorld', () => {
   it('makes Série A squads stronger than Série B squads', () => {
     const strengthOf = (division: number) =>
       average(
-        players.filter((p) => world.clubs[p.clubId].division === division).map((p) => p.strength),
+        players.filter((p) => world.clubs[p.clubId].division === division).map((p) => p.overall),
       )
     expect(strengthOf(1)).toBeGreaterThan(strengthOf(2) + 10)
   })
@@ -67,7 +67,7 @@ describe('generateWorld', () => {
   it('makes bigger clubs field stronger squads', () => {
     const [top, bottom] = [world.leagues[0].clubIds[0], world.leagues[1].clubIds.at(-1)!]
     const squadStrength = (id: string) =>
-      average(world.clubs[id].playerIds.map((pid) => world.players[pid].strength))
+      average(world.clubs[id].playerIds.map((pid) => world.players[pid].overall))
     expect(squadStrength(top)).toBeGreaterThan(squadStrength(bottom))
   })
 })

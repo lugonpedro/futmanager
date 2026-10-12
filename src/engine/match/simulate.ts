@@ -12,7 +12,18 @@ import type {
 import { createRng, mixSeed, type Rng } from '../rng.ts'
 import { fillSlots, formationSlots } from './lineup.ts'
 import { narrate, type GoalKind } from './narration.ts'
-import { effectiveStrength, positionFit, POSTURE_EFFECT, sectorStrength } from './strength.ts'
+import {
+  finishingSkill,
+  headingSkill,
+  keeperSkill,
+  matchShape,
+  paceSkill,
+  positionFit,
+  POSTURE_EFFECT,
+  sectorStrength,
+  styleBonus,
+} from './strength.ts'
+import { styleLevel } from '../player/attributes.ts'
 
 export const MATCH_MINUTES = 90
 export const MAX_SUBSTITUTIONS = 5
@@ -23,27 +34,35 @@ export const MAX_SUBSTITUTIONS = 5
  */
 export const BALANCE = {
   /** Points added to every sector of the home side. */
-  homeAdvantage: 4,
+  homeAdvantage: 9,
   /**
    * Points of difference between two sectors that make one e times "better" than
    * the other. Using differences, not ratios, keeps Série B as balanced as Série A.
    */
-  strengthScale: 90,
+  strengthScale: 115,
   /** How sharply a midfield edge turns into possession: share = edge^k / (edge^k + 1). */
   possessionPower: 1,
   /** Chance per minute that the side in possession creates a shot, at equal strength. */
-  shotRate: 0.24,
+  shotRate: 0.25,
   /** The attack-over-defense edge raised to these powers scales shot rate and shot quality. */
   chancePower: 0.7,
-  qualityPower: 0.5,
+  qualityPower: 0.3,
   onTarget: 0.4,
   /** Chance that a shot on target beats the keeper, at equal strength. */
-  conversion: 0.25,
+  conversion: 0.27,
   yellowPerMinute: 0.019,
   redPerMinute: 0.0003,
   injuryPerMinute: 0.0012,
-  /** Energy lost per minute at normal posture, out of 100. */
+  /** Energy lost per minute at normal posture, out of 100, for a player of average stamina. */
   tiring: 0.22,
+  /** How much stamina changes that: 1.35 - staminaEffect * stamina / 100. */
+  staminaEffect: 0.7,
+  /** Points of attack per point of pace the forwards have over the defenders, when countering. */
+  paceWeight: 0.25,
+  /** Share of chances that come in the air: crosses, corners, free kicks. */
+  aerialShare: 0.22,
+  /** Points of shooter-over-keeper difference that make a shot e times likelier to go in. */
+  finishScale: 300,
 }
 
 export type MatchSide = 'home' | 'away'
@@ -54,6 +73,10 @@ export type MatchInput = {
   home: MatchTeamInput
   away: MatchTeamInput
   players: Readonly<Record<string, Player>>
+  /** Energy each player starts with, out of 100; missing means fresh. */
+  condition?: Readonly<Record<string, number>>
+  /** Form from -2 to +2; missing means 0. */
+  form?: Readonly<Record<string, number>>
 }
 
 /** Side of the pitch a move goes down, as the attacking side sees it. */
@@ -77,7 +100,13 @@ export type Play = {
   playerId?: string
 }
 
-export type OnPitch = { player: Player; position: Position; energy: number; booked: boolean }
+export type OnPitch = {
+  player: Player
+  position: Position
+  energy: number
+  form: number
+  booked: boolean
+}
 
 export type TeamState = {
   club: Club
@@ -88,6 +117,10 @@ export type TeamState = {
   subsLeft: number
   stats: TeamStats
   possessionMinutes: number
+  /** Everyone who played, in the order they came on, with the slot they last played in. */
+  played: Record<string, Position>
+  /** Energy of the players who left the pitch, as they left it. */
+  energyLeft: Record<string, number>
 }
 
 export type MatchState = {
@@ -99,6 +132,10 @@ export type MatchState = {
   sentOff: string[]
   injured: string[]
   plays: Play[]
+  /** Rating points earned or lost in play: goals, saves, cards. */
+  marks: Record<string, number>
+  condition: Readonly<Record<string, number>>
+  form: Readonly<Record<string, number>>
   rng: Rng
   /**
    * Draws the details of each play. Kept apart from `rng` so describing the
@@ -116,21 +153,24 @@ const emptyStats = (): TeamStats => ({
   redCards: 0,
 })
 
-function teamState(input: MatchTeamInput, players: MatchInput['players']): TeamState {
+function teamState(input: MatchTeamInput, match: MatchInput): TeamState {
   return {
     club: input.club,
     formation: input.lineup.formation,
     posture: input.lineup.posture,
     onPitch: input.lineup.starters.map(({ playerId, position }) => ({
-      player: players[playerId],
+      player: match.players[playerId],
       position,
-      energy: 100,
+      energy: match.condition?.[playerId] ?? 100,
+      form: match.form?.[playerId] ?? 0,
       booked: false,
     })),
-    bench: input.lineup.bench.map((id) => players[id]),
+    bench: input.lineup.bench.map((id) => match.players[id]),
     subsLeft: MAX_SUBSTITUTIONS,
     stats: emptyStats(),
     possessionMinutes: 0,
+    played: Object.fromEntries(input.lineup.starters.map((s) => [s.playerId, s.position])),
+    energyLeft: {},
   }
 }
 
@@ -145,12 +185,14 @@ function weightedPick<T>(rng: Rng, items: readonly T[], weight: (item: T) => num
 }
 
 const SCORING_WEIGHT: Record<Position, number> = { G: 0, Z: 0.6, L: 0.6, M: 2.2, A: 5 }
+/** Who gets on the end of a cross or a corner. */
+const AERIAL_WEIGHT: Record<Position, number> = { G: 0, Z: 2.2, L: 0.4, M: 0.8, A: 3 }
 const FOUL_WEIGHT: Record<Position, number> = { G: 0.2, Z: 1.6, L: 1.2, M: 1.2, A: 0.6 }
 
 /** Sets up a match ready to be played minute by minute with playMinute(). */
 export function createMatch(input: MatchInput, rng: Rng): MatchState {
-  const home = teamState(input.home, input.players)
-  const away = teamState(input.away, input.players)
+  const home = teamState(input.home, input)
+  const away = teamState(input.away, input)
   return {
     minute: 0,
     finished: false,
@@ -160,6 +202,9 @@ export function createMatch(input: MatchInput, rng: Rng): MatchState {
     sentOff: [],
     injured: [],
     plays: [],
+    marks: {},
+    condition: input.condition ?? {},
+    form: input.form ?? {},
     rng,
     playRng: createRng(
       mixSeed(
@@ -199,23 +244,53 @@ function keeperName(team: TeamState): string {
   return team.onPitch.find((p) => p.position === 'G')?.player.name ?? 'o goleiro improvisado'
 }
 
-function goalKind(rng: Rng, scorer: OnPitch): GoalKind {
+function goalKind(rng: Rng, aerial: boolean): GoalKind {
+  if (aerial) return 'cabeca'
   const roll = rng.next()
-  if (roll < 0.08) return 'penalti'
-  const header = scorer.player.traits.includes('cabeceio') || scorer.position === 'Z' ? 0.55 : 0.2
-  if (roll < 0.08 + header) return 'cabeca'
-  if (roll < 0.8) return rng.next() < 0.5 ? 'chute' : 'jogada'
+  if (roll < 0.1) return 'penalti'
+  if (roll < 0.75) return rng.next() < 0.5 ? 'chute' : 'jogada'
   return 'fora'
+}
+
+const shape = (p: OnPitch) => matchShape(p.player, p.position, p.energy, p.form)
+/** Forwards are usually this much quicker for their level than defenders. */
+const PACE_GAP = 6
+const average = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0)
+
+/**
+ * Extra attack from forwards quicker than their level would say against
+ * defenders slower than theirs. It counts most for the side seeing less of
+ * the ball, which plays on the counter.
+ */
+function paceEdge(team: TeamState, opponent: TeamState, possession: number): number {
+  const runners = team.onPitch.filter((p) => p.position === 'A' || p.position === 'L')
+  const chasers = opponent.onPitch.filter((p) => p.position === 'Z' || p.position === 'L')
+  if (runners.length === 0 || chasers.length === 0) return 0
+  const quickness = (p: OnPitch) => (paceSkill(p.player) - p.player.overall) * shape(p)
+  const gap = average(runners.map(quickness)) - average(chasers.map(quickness)) - PACE_GAP
+  return BALANCE.paceWeight * gap * 2 * (1 - possession)
+}
+
+/** The keeper's shot-stopping right now; an outfield player in goal barely has any. */
+function keeperValue(team: TeamState): number {
+  const keeper = team.onPitch.find((p) => p.position === 'G')
+  if (!keeper) return 10
+  const skill = keeper.player.position === 'G' ? keeperSkill(keeper.player) : 15
+  return skill * shape(keeper)
+}
+
+const mark = (state: MatchState, playerId: string, points: number) => {
+  state.marks[playerId] = (state.marks[playerId] ?? 0) + points
 }
 
 type AttackOutcome = { end: 'none' | 'wide' | 'saved' | 'goal'; shooterId?: string }
 
-function attack(state: MatchState, side: MatchSide): AttackOutcome {
+function attack(state: MatchState, side: MatchSide, possession: number): AttackOutcome {
   const { rng } = state
   const team = state[side]
   const opponent = state[side === 'home' ? 'away' : 'home']
   const ratio = edge(
-    sectors(state, side).attack,
+    sectors(state, side).attack + paceEdge(team, opponent, possession),
     sectors(state, side === 'home' ? 'away' : 'home').defense,
   )
   if (rng.next() >= BALANCE.shotRate * ratio ** BALANCE.chancePower) return { end: 'none' }
@@ -223,10 +298,30 @@ function attack(state: MatchState, side: MatchSide): AttackOutcome {
 
   const outfield = team.onPitch.filter((p) => p.position !== 'G')
   if (outfield.length === 0) return { end: 'none' }
-  const shooter = weightedPick(rng, outfield, (p) => {
-    const finisher = p.player.traits.includes('finalizacao') ? 1.5 : 1
-    return SCORING_WEIGHT[p.position] * finisher * effectiveStrength(p.player, p.position, p.energy)
-  })
+  const crossers = outfield.reduce((sum, p) => sum + styleBonus(p.player, 'cruzador'), 0)
+  const aerial = rng.next() < BALANCE.aerialShare * (1 + crossers / 20)
+  const shooter = aerial
+    ? weightedPick(
+        rng,
+        outfield,
+        (p) =>
+          AERIAL_WEIGHT[p.position] *
+          (1 + 0.25 * styleLevel(p.player, 'cabeceador')) *
+          Math.max(1, headingSkill(p.player)) *
+          shape(p),
+      )
+    : weightedPick(
+        rng,
+        outfield,
+        (p) =>
+          SCORING_WEIGHT[p.position] *
+          (1 + 0.25 * styleLevel(p.player, 'finalizador')) *
+          Math.max(1, finishingSkill(p.player)) *
+          shape(p),
+      )
+  const skill =
+    (aerial ? headingSkill(shooter.player) : finishingSkill(shooter.player)) * shape(shooter)
+  const finish = Math.exp((skill - keeperValue(opponent)) / BALANCE.finishScale)
   team.stats.shots++
 
   if (rng.next() >= Math.min(0.85, BALANCE.onTarget * quality)) {
@@ -239,17 +334,21 @@ function attack(state: MatchState, side: MatchSide): AttackOutcome {
     return { end: 'wide', shooterId: shooter.player.id }
   }
   team.stats.shotsOnTarget++
+  mark(state, shooter.player.id, 0.15)
 
-  if (rng.next() < Math.min(0.75, BALANCE.conversion * quality)) {
+  if (rng.next() < Math.min(0.75, BALANCE.conversion * quality * finish)) {
     team.stats.goals++
+    mark(state, shooter.player.id, 1)
     addEvent(state, {
       type: 'gol',
       clubId: team.club.id,
       playerId: shooter.player.id,
-      text: narrate.goal(rng, goalKind(rng, shooter), shooter.player.name),
+      text: narrate.goal(rng, goalKind(rng, aerial), shooter.player.name),
     })
     return { end: 'goal', shooterId: shooter.player.id }
   } else {
+    const keeper = opponent.onPitch.find((p) => p.position === 'G')
+    if (keeper) mark(state, keeper.player.id, 0.3)
     addEvent(state, {
       type: 'defesa',
       clubId: team.club.id,
@@ -286,6 +385,7 @@ function recordPlay(state: MatchState, side: MatchSide, outcome: AttackOutcome, 
 }
 
 function removeFromPitch(team: TeamState, leaving: OnPitch) {
+  team.energyLeft[leaving.player.id] = leaving.energy
   team.onPitch = team.onPitch.filter((p) => p !== leaving)
 }
 
@@ -302,10 +402,13 @@ export function substitute(
   if (!leaving || !coming || team.subsLeft <= 0 || state.finished) return false
   team.subsLeft--
   team.bench = team.bench.filter((p) => p !== coming)
+  team.energyLeft[outId] = leaving.energy
+  team.played[inId] = leaving.position
   team.onPitch[team.onPitch.indexOf(leaving)] = {
     player: coming,
     position: leaving.position,
-    energy: 100,
+    energy: state.condition[inId] ?? 100,
+    form: state.form[inId] ?? 0,
     booked: false,
   }
   addEvent(state, {
@@ -345,7 +448,7 @@ export function setFormation(state: MatchState, side: MatchSide, formation: Form
 
 /** The bench player who best fills a position, if any. */
 function bestReplacement(team: TeamState, position: Position): Player | undefined {
-  const value = (p: Player) => p.strength * positionFit(p, position)
+  const value = (p: Player) => p.overall * positionFit(p, position)
   return [...team.bench].sort((a, b) => value(b) - value(a))[0]
 }
 
@@ -377,7 +480,7 @@ function sendOff(state: MatchState, side: MatchSide, offender: OnPitch) {
   const keeper = team.bench.find((p) => p.position === 'G')
   const outfield = team.onPitch.filter((p) => p.position !== 'G')
   if (keeper && outfield.length > 0 && team.subsLeft > 0) {
-    const weakest = outfield.reduce((a, b) => (a.player.strength <= b.player.strength ? a : b))
+    const weakest = outfield.reduce((a, b) => (a.player.overall <= b.player.overall ? a : b))
     weakest.position = 'G'
     substitute(state, side, weakest.player.id, keeper.id)
   } else if (outfield.length > 0) {
@@ -399,6 +502,7 @@ function discipline(state: MatchState, side: MatchSide) {
   )
   const base = { clubId: team.club.id, playerId: offender.player.id }
 
+  mark(state, offender.player.id, roll < BALANCE.redPerMinute || offender.booked ? -1.5 : -0.3)
   if (roll < BALANCE.redPerMinute) {
     addEvent(state, { ...base, type: 'vermelho', text: narrate.red(rng, offender.player.name) })
     sendOff(state, side, offender)
@@ -413,9 +517,13 @@ function discipline(state: MatchState, side: MatchSide) {
   }
 }
 
+/** Everyone tires each minute; stamina decides how fast. */
 function tire(team: TeamState, rng: Rng) {
   const rate = BALANCE.tiring * POSTURE_EFFECT[team.posture].tiring
-  for (const p of team.onPitch) p.energy = Math.max(0, p.energy - rate * (0.7 + 0.6 * rng.next()))
+  for (const p of team.onPitch) {
+    const stamina = 1.35 - (BALANCE.staminaEffect * p.player.attributes.stamina) / 100
+    p.energy = Math.max(0, p.energy - rate * stamina * (0.7 + 0.6 * rng.next()))
+  }
 }
 
 /** Plays the next minute and returns the events it produced. */
@@ -431,7 +539,7 @@ export function playMinute(state: MatchState): MatchEvent[] {
   const homeShare = homeEdge / (homeEdge + 1)
   const side: MatchSide = rng.next() < homeShare ? 'home' : 'away'
   state[side].possessionMinutes++
-  const outcome = attack(state, side)
+  const outcome = attack(state, side, side === 'home' ? homeShare : 1 - homeShare)
 
   for (const s of ['home', 'away'] as const) {
     discipline(state, s)
@@ -457,6 +565,50 @@ export function playMinute(state: MatchState): MatchEvent[] {
   return state.events.slice(before)
 }
 
+/** Rating swing for the result, and for each goal let in by a keeper or a defender. */
+const RESULT_POINTS = { win: 0.6, draw: 0.1, loss: -0.4 }
+const CONCEDED_POINTS: Record<Position, number> = { G: 0.3, Z: 0.2, L: 0.15, M: 0.05, A: 0 }
+const CLEAN_SHEET_POINTS: Record<Position, number> = { G: 0.6, Z: 0.4, L: 0.3, M: 0.1, A: 0 }
+
+/**
+ * Everyone's rating out of 10: 6 to start, the result, goals and saves and
+ * cards, goals let in at the back, and a little of what the numbers miss.
+ */
+function ratings(state: MatchState): Record<string, number> {
+  const out: Record<string, number> = {}
+  for (const side of ['home', 'away'] as const) {
+    const team = state[side]
+    const scored = team.stats.goals
+    const conceded = state[side === 'home' ? 'away' : 'home'].stats.goals
+    const result =
+      scored > conceded
+        ? RESULT_POINTS.win
+        : scored < conceded
+          ? RESULT_POINTS.loss
+          : RESULT_POINTS.draw
+    for (const [id, position] of Object.entries(team.played)) {
+      const back =
+        conceded === 0 ? CLEAN_SHEET_POINTS[position] : -CONCEDED_POINTS[position] * conceded
+      const noise = (mixSeed(team.club.id, id, state.events.length, 'nota') % 1000) / 1000 - 0.5
+      const rating = 6 + result + back + (state.marks[id] ?? 0) + 0.8 * noise
+      out[id] = Math.round(10 * Math.min(10, Math.max(3, rating))) / 10
+    }
+  }
+  return out
+}
+
+/** Energy everyone who played was left with. */
+function energyLeft(state: MatchState): Record<string, number> {
+  const out: Record<string, number> = {}
+  for (const side of ['home', 'away'] as const) {
+    const team = state[side]
+    Object.assign(out, team.energyLeft)
+    for (const p of team.onPitch) out[p.player.id] = p.energy
+  }
+  for (const [id, energy] of Object.entries(out)) out[id] = Math.round(energy)
+  return out
+}
+
 export function matchResult(state: MatchState): MatchResult {
   const total = state.home.possessionMinutes + state.away.possessionMinutes || 1
   const homePossession = Math.round((100 * state.home.possessionMinutes) / total)
@@ -472,6 +624,8 @@ export function matchResult(state: MatchState): MatchResult {
     },
     sentOff: state.sentOff,
     injured: state.injured,
+    ratings: ratings(state),
+    energy: energyLeft(state),
   }
 }
 
