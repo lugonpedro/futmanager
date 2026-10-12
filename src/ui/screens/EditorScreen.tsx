@@ -1,6 +1,8 @@
 import {
   ArrowDownIcon,
   ArrowUpIcon,
+  CheckIcon,
+  CopyIcon,
   DownloadIcon,
   PlayIcon,
   RotateCcwIcon,
@@ -54,6 +56,7 @@ import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { download } from '../download.ts'
 import { divisionName, POSITION_NAMES } from '../format.ts'
 import { usePackMessage } from '../usePackMessage.ts'
+import { AI_PACK_PROMPT } from '../aiPackPrompt.ts'
 
 /** The world the editor shows behind the pack; a real career draws its own. */
 const PREVIEW_SEED = 1
@@ -189,6 +192,7 @@ export function EditorScreen() {
             A planilha tem uma linha por jogador, com as colunas ordem, clube, sigla, cidade, cor1,
             cor2, jogador, posicao (G, Z, L, M ou A), idade e overall.
           </p>
+          <AiPrompt />
           <PackLegalNote />
         </CardContent>
       </Card>
@@ -334,6 +338,43 @@ export function EditorScreen() {
         </div>
       </div>
     </main>
+  )
+}
+
+/** A prompt to put a pack of real squads together with an AI assistant, ready to copy. */
+function AiPrompt() {
+  const [copied, setCopied] = useState(false)
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(AI_PACK_PROMPT)
+      setCopied(true)
+    } catch {
+      // Without clipboard access the text is still there to select by hand.
+    }
+  }
+  return (
+    <details className="rounded-md border p-3 text-sm">
+      <summary className="cursor-pointer font-medium">Montar o pacote com uma IA</summary>
+      <div className="mt-3 flex flex-col gap-2">
+        <p className="text-muted-foreground">
+          Cole este texto num assistente de IA que pesquisa na internet, troque [ANO] e [DATA],
+          salve a planilha da resposta como .csv e importe aqui. O texto pede fontes e manda deixar
+          de fora o que a IA não confirmar, mas ela ainda pode errar: confira os elencos antes de
+          jogar. O pacote é seu e fica só no seu navegador.
+        </p>
+        <textarea
+          readOnly
+          aria-label="Prompt para a IA"
+          value={AI_PACK_PROMPT}
+          className="h-48 w-full resize-y rounded-md border bg-muted/40 p-2 font-mono text-xs"
+          onFocus={(e) => e.target.select()}
+        />
+        <Button variant="outline" size="sm" className="self-start" onClick={copy}>
+          {copied ? <CheckIcon /> : <CopyIcon />}
+          {copied ? 'Copiado' : 'Copiar o texto'}
+        </Button>
+      </div>
+    </details>
   )
 }
 

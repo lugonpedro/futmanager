@@ -45,6 +45,6 @@ ordem;clube;sigla;cidade;cor1;cor2;jogador;posicao;idade;overall
 ;;;;;;Beltrano;Z;;
 ```
 
-`ordem` é a posição do clube na força do mundo (1 a 20 na Série A, 21 a 40 na Série B); uma linha sem os campos do clube continua o clube de cima. Só `clube` e `jogador` são obrigatórios; o que faltar é gerado. O Editor também exporta e importa o mesmo pacote em JSON. Veja o aviso legal em `/aviso-legal`.
+`ordem` é a posição do clube na força do mundo (1 a 20 na Série A, 21 a 40 na Série B); uma linha sem os campos do clube continua o clube de cima. Só `clube` e `jogador` são obrigatórios; o que faltar é gerado. O Editor também exporta e importa o mesmo pacote em JSON. Para montar um pacote com elencos reais, o Editor traz um prompt pronto para colar num assistente de IA com busca na internet: ele pede fontes e manda deixar de fora o que não for confirmado (`src/ui/aiPackPrompt.ts`). Veja o aviso legal em `/aviso-legal`.
 
 O motor nunca usa `Math.random`: toda aleatoriedade passa por `src/engine/rng.ts`, com semente, para que mundos e partidas sejam reproduzíveis.
