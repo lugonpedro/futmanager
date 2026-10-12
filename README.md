@@ -30,7 +30,9 @@ src/engine/    motor do jogo em TypeScript puro (sem React), testável
 src/store/     estado da carreira (Zustand)
 src/db/        saves no IndexedDB (Dexie), um slot por carreira
 src/worker/    Web Worker que simula rodadas sem travar a tela
+src/cloud/     conta e save na nuvem (Supabase), opcionais
 src/ui/        telas e componentes React
+supabase/      tabelas, regras de acesso e funções do servidor
 ```
 
 ## Times de verdade: editor e pacotes de dados
@@ -46,5 +48,24 @@ ordem;clube;sigla;cidade;cor1;cor2;jogador;posicao;idade;overall
 ```
 
 `ordem` é a posição do clube na força do mundo (1 a 20 na Série A, 21 a 40 na Série B); uma linha sem os campos do clube continua o clube de cima. Só `clube` e `jogador` são obrigatórios; o que faltar é gerado. O Editor também exporta e importa o mesmo pacote em JSON. Para montar um pacote com elencos reais, o Editor traz um prompt pronto para colar num assistente de IA com busca na internet: ele pede fontes e manda deixar de fora o que não for confirmado (`src/ui/aiPackPrompt.ts`). Veja o aviso legal em `/aviso-legal`.
+
+## Contas e save na nuvem
+
+A conta é opcional: sem ela o jogo roda inteiro offline, como antes. Com ela, as carreiras sincronizam entre aparelhos. O servidor é um projeto do [Supabase](https://supabase.com), e o jogo só mostra a conta quando estas variáveis existem no build (em `.env.local` ou nas variáveis de ambiente da Vercel):
+
+```
+VITE_SUPABASE_URL=https://<projeto>.supabase.co
+VITE_SUPABASE_ANON_KEY=<chave anon ou publishable>
+```
+
+Para montar o servidor:
+
+1. Crie um projeto no Supabase e rode `supabase/migrations/*.sql` no SQL Editor (ou `npx supabase link` e `npx supabase db push`).
+2. Em Authentication > URL Configuration, use o endereço do jogo como Site URL e acrescente `https://<seu-dominio>/conta` (e as prévias da Vercel, se quiser) em Redirect URLs.
+3. Para o "Entrar com Google", ative o provedor Google em Authentication > Providers com um Client ID do Google Cloud.
+
+Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails de login aparecem no Mailpit em `http://127.0.0.1:54324`.
+
+Cada carreira vai para a nuvem compactada (cerca de 150 KB) e cada conta guarda até 10. Quando a mesma carreira foi jogada em dois aparelhos desde a última sincronização, o jogo pergunta qual fica e sugere a mais recente.
 
 O motor nunca usa `Math.random`: toda aleatoriedade passa por `src/engine/rng.ts`, com semente, para que mundos e partidas sejam reproduzíveis.

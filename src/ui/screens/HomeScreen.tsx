@@ -1,10 +1,20 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { DownloadIcon, PencilIcon, PlayIcon, Trash2Icon, UploadIcon } from 'lucide-react'
-import { useRef, useState } from 'react'
+import {
+  CloudCheckIcon,
+  DownloadIcon,
+  PencilIcon,
+  PlayIcon,
+  Trash2Icon,
+  UploadIcon,
+  UserIcon,
+} from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { cloudEnabled } from '../../cloud/client.ts'
 import {
+  db,
   deleteSave,
   exportSave,
   listSaves,
@@ -14,12 +24,13 @@ import {
   writeSave,
   type SaveInfo,
 } from '../../db/saves.ts'
+import { syncNow, useAccountStore } from '../../store/account.ts'
 import { useGameStore } from '../../store/game.ts'
+import { ConflictDialog } from '../components/ConflictDialog.tsx'
+import { ManagerCrest } from '../components/ManagerCrest.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { download } from '../download.ts'
-import { formatDate } from '../format.ts'
-
-const when = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+import { formatSavedAt, slotProgress } from '../format.ts'
 
 export function HomeScreen() {
   const saves = useLiveQuery(listSaves)
@@ -27,6 +38,17 @@ export function HomeScreen() {
   const navigate = useNavigate()
   const fileInput = useRef<HTMLInputElement>(null)
   const [message, setMessage] = useState<string>()
+  const user = useAccountStore((s) => s.user)
+  const synced = useLiveQuery(() => db.synced.toArray())
+  const inCloud = (save: SaveInfo) =>
+    synced?.some(
+      (base) =>
+        base.id === save.id && base.userId === user?.id && base.updatedAt === save.updatedAt,
+    )
+
+  useEffect(() => {
+    void syncNow()
+  }, [user?.id])
 
   const open = async (id: string) => {
     if (await openSave(id)) navigate('/jogo')
@@ -41,6 +63,7 @@ export function HomeScreen() {
     if (!window.confirm(`Apagar a carreira com ${save.clubName}? Não dá para desfazer.`)) return
     if (save.id === slotId) closeGame()
     await deleteSave(save.id)
+    void syncNow()
   }
 
   const importFile = async (file: File | undefined) => {
@@ -48,6 +71,7 @@ export function HomeScreen() {
     try {
       const game = parseSaveFile(await file.text())
       await writeSave(game)
+      void syncNow()
       setMessage(`Carreira com ${game.world.clubs[game.userClubId].name} importada.`)
     } catch (error) {
       setMessage(error instanceof Error ? error.message : String(error))
@@ -58,6 +82,11 @@ export function HomeScreen() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center p-4">
+      {cloudEnabled && (
+        <div className="absolute top-3 left-3">
+          <AccountButton />
+        </div>
+      )}
       <div className="absolute top-3 right-3">
         <ThemeToggle />
       </div>
@@ -79,14 +108,17 @@ export function HomeScreen() {
                       onClick={() => open(save.id)}
                       className="flex min-w-0 flex-1 cursor-pointer flex-col rounded px-1 text-left hover:bg-accent"
                     >
-                      <span className="truncate font-semibold">{save.clubName}</span>
+                      <span className="flex items-center gap-1 font-semibold">
+                        <span className="truncate">{save.clubName}</span>
+                        {inCloud(save) && (
+                          <CloudCheckIcon
+                            className="size-4 shrink-0 text-muted-foreground"
+                            aria-label="Salva na nuvem"
+                          />
+                        )}
+                      </span>
                       <span className="text-xs text-muted-foreground">
-                        {save.seasonOver
-                          ? `${save.year}, fim da temporada`
-                          : save.today
-                            ? formatDate(save.today)
-                            : `${save.year}, rodada ${save.round}`}{' '}
-                        · salvo em {when.format(new Date(save.updatedAt))}
+                        {slotProgress(save)} · salvo em {formatSavedAt(save.updatedAt)}
                       </span>
                     </button>
                     <Button
@@ -149,14 +181,40 @@ export function HomeScreen() {
           <Button asChild variant="link">
             <Link to="/amistoso">Jogar um amistoso</Link>
           </Button>
-          <Link
-            to="/aviso-legal"
-            className="text-center text-xs text-muted-foreground underline-offset-2 hover:underline"
-          >
-            Aviso legal
-          </Link>
+          <nav className="flex justify-center gap-4 text-xs text-muted-foreground">
+            <Link to="/aviso-legal" className="underline-offset-2 hover:underline">
+              Aviso legal
+            </Link>
+            <Link to="/privacidade" className="underline-offset-2 hover:underline">
+              Privacidade
+            </Link>
+          </nav>
         </CardContent>
       </Card>
+      <ConflictDialog />
     </main>
+  )
+}
+
+/** "Entrar" while signed out; the manager's crest and nickname once signed in. */
+function AccountButton() {
+  const { ready, user, profile } = useAccountStore()
+  if (!ready) return null
+  return (
+    <Button asChild variant="ghost" size="sm">
+      <Link to="/conta">
+        {user && profile ? (
+          <>
+            <ManagerCrest crest={profile.crest} nickname={profile.nickname} className="size-5" />
+            <span className="max-w-32 truncate">{profile.nickname}</span>
+          </>
+        ) : (
+          <>
+            <UserIcon />
+            Entrar
+          </>
+        )}
+      </Link>
+    </Button>
   )
 }

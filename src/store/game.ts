@@ -41,10 +41,16 @@ const storage = {
   },
 }
 
+/** Called with the slot id after each autosave lands, so the cloud copy can follow. */
+export const autosaveListeners = new Set<(slotId: string) => void>()
+
 // Writes go one after another, so an older state never lands after a newer one.
 let writes: Promise<unknown> = Promise.resolve()
 function autosave(game: GameState, slotId: string) {
-  writes = writes.then(() => writeSave(game, slotId)).catch((error) => console.error(error))
+  writes = writes
+    .then(() => writeSave(game, slotId))
+    .then(() => autosaveListeners.forEach((listener) => listener(slotId)))
+    .catch((error) => console.error(error))
 }
 
 export const useGameStore = create<GameStore>()((set, get) => ({

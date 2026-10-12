@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie'
+import type { SyncBase } from '../cloud/plan.ts'
 import type { GameState } from '../engine/model/types.ts'
 import { upgradeGame } from '../engine/save.ts'
 import { isSeasonOver, SAVE_VERSION } from '../engine/season/season.ts'
@@ -21,9 +22,12 @@ export type SaveInfo = Omit<SaveSlot, 'game'>
 
 class SavesDb extends Dexie {
   saves!: EntityTable<SaveSlot, 'id'>
+  /** What each slot looked like at its last sync with an account. */
+  synced!: EntityTable<SyncBase, 'id'>
   constructor() {
     super('futmanager')
     this.version(1).stores({ saves: 'id, updatedAt' })
+    this.version(2).stores({ saves: 'id, updatedAt', synced: 'id' })
   }
 }
 
@@ -32,7 +36,7 @@ export const db = new SavesDb()
 export const newSlotId = () =>
   `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
 
-function slotOf(id: string, game: GameState): SaveSlot {
+export function slotOf(id: string, game: GameState, updatedAt = Date.now()): SaveSlot {
   return {
     id,
     clubId: game.userClubId,
@@ -41,7 +45,7 @@ function slotOf(id: string, game: GameState): SaveSlot {
     round: game.season.round,
     today: game.today,
     seasonOver: isSeasonOver(game.season),
-    updatedAt: Date.now(),
+    updatedAt,
     game,
   }
 }
@@ -68,7 +72,13 @@ export async function readSave(id: string): Promise<GameState | undefined> {
   return slot && upgradeGame(slot.game)
 }
 
-export const deleteSave = (id: string) => db.saves.delete(id)
+/** Deletes a career; if it was in the cloud, the next sync deletes it there too. */
+export function deleteSave(id: string) {
+  return db.transaction('rw', db.saves, db.synced, async () => {
+    await db.saves.delete(id)
+    await db.synced.update(id, { deleted: true })
+  })
+}
 
 const FILE_FORMAT = 'futmanager-save'
 

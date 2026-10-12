@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router'
 import { useApplyTheme } from './store/theme.ts'
 import { CUP_SLUG } from './ui/routes.ts'
+import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { EditorScreen } from './ui/screens/EditorScreen.tsx'
 import { FriendlyScreen } from './ui/screens/FriendlyScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
@@ -14,6 +15,7 @@ import { HomeScreen } from './ui/screens/HomeScreen.tsx'
 import { LegalScreen } from './ui/screens/LegalScreen.tsx'
 import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
+import { PrivacyScreen } from './ui/screens/PrivacyScreen.tsx'
 
 /** Pages that were merged into others, kept so old bookmarks and the installed app still land. */
 const MOVED: Record<string, string> = {
@@ -33,6 +35,8 @@ export default function App() {
       <Route path="/amistoso" element={<FriendlyScreen />} />
       <Route path="/editor" element={<EditorScreen />} />
       <Route path="/aviso-legal" element={<LegalScreen />} />
+      <Route path="/privacidade" element={<PrivacyScreen />} />
+      <Route path="/conta" element={<AccountScreen />} />
       <Route path="/jogo" element={<GameLayout />}>
         <Route index element={<OverviewScreen />} />
         <Route path="time" element={<TeamScreen />} />
