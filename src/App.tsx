@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router'
 import { useApplyTheme } from './store/theme.ts'
 import { CUP_SLUG } from './ui/routes.ts'
+import { EditorScreen } from './ui/screens/EditorScreen.tsx'
 import { FriendlyScreen } from './ui/screens/FriendlyScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { ClubScreen } from './ui/screens/game/ClubScreen.tsx'
@@ -10,6 +11,7 @@ import { MarketScreen } from './ui/screens/game/MarketScreen.tsx'
 import { OverviewScreen } from './ui/screens/game/OverviewScreen.tsx'
 import { TeamScreen } from './ui/screens/game/TeamScreen.tsx'
 import { HomeScreen } from './ui/screens/HomeScreen.tsx'
+import { LegalScreen } from './ui/screens/LegalScreen.tsx'
 import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
 
@@ -29,6 +31,8 @@ export default function App() {
       <Route path="/" element={<HomeScreen />} />
       <Route path="/novo" element={<NewGameScreen />} />
       <Route path="/amistoso" element={<FriendlyScreen />} />
+      <Route path="/editor" element={<EditorScreen />} />
+      <Route path="/aviso-legal" element={<LegalScreen />} />
       <Route path="/jogo" element={<GameLayout />}>
         <Route index element={<OverviewScreen />} />
         <Route path="time" element={<TeamScreen />} />

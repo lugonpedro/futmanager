@@ -350,6 +350,14 @@ export type Market = {
   news: TransferNews[]
 }
 
+/** Where a career's club and player names came from, so the game knows what it can put back. */
+export type NameOrigin = {
+  /** The data pack the career started with or took names from. */
+  pack?: string
+  /** Whether names were changed in the editor along the way. */
+  edited?: boolean
+}
+
 /** Everything a career needs; plain JSON so it can be saved as is. */
 export type GameState = {
   /** Save format, so older careers can be upgraded on load. */
@@ -366,4 +374,6 @@ export type GameState = {
   market: Market
   career: Career
   history: SeasonSummary[]
+  /** Generated names unless this says otherwise. */
+  names: NameOrigin
 }

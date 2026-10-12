@@ -15,6 +15,7 @@ import {
 import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
+import { applyPack, type DataPack } from '../pack/pack.ts'
 import { ageWorld, youthIntake } from '../progression/progression.ts'
 import type {
   CareerSeason,
@@ -73,7 +74,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 5
+export const SAVE_VERSION = 6
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -110,8 +111,10 @@ export function startSeason(world: World, year = world.season): Season {
   }
 }
 
-export function newGame(seed: number, userClubId: string): GameState {
-  const world = generateWorld(seed)
+/** A new career in a generated world, with a data pack's names on it when one is given. */
+export function newGame(seed: number, userClubId: string, pack?: DataPack): GameState {
+  const generated = generateWorld(seed)
+  const world = pack ? applyPack(generated, pack).world : generated
   if (!world.clubs[userClubId]) throw new Error(`Unknown club ${userClubId}`)
   return {
     version: SAVE_VERSION,
@@ -123,6 +126,7 @@ export function newGame(seed: number, userClubId: string): GameState {
     market: { listed: {}, offers: [], news: [] },
     career: newCareer(world, userClubId),
     history: [],
+    names: pack ? { pack: pack.name } : {},
   }
 }
 

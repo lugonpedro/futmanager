@@ -20,6 +20,9 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 6 (phase 11), before data packs and the editor. */
+type V5Game = Omit<GameState, 'version' | 'names'> & { version: 5 }
+
 /** Brasfoot-style skills a player had before version 5 (phase 10), now play styles. */
 type Trait =
   | 'reflexo'
@@ -57,7 +60,7 @@ type V4Player = Omit<
 > & { strength: number; traits: Trait[] }
 
 /** A career as stored before version 5 (phase 10), before attributes, form and fitness. */
-type V4Game = Omit<GameState, 'version' | 'world' | 'season'> & {
+type V4Game = Omit<V5Game, 'version' | 'world' | 'season'> & {
   version: 4
   world: Omit<World, 'players'> & { players: Record<string, V4Player> }
   season: Omit<Season, 'fitness' | 'ratings' | 'roundStars'>
@@ -194,7 +197,7 @@ function fromV3(saved: V3Game): V4Game {
  * traits, from a seed of his own, so the overall lands on the old strength
  * and careers under way stay as balanced as they were.
  */
-function fromV4(saved: V4Game): GameState {
+function fromV4(saved: V4Game): V5Game {
   const { world, season } = saved
   const players = mapValues(world.players, ({ strength, traits, ...player }): Player => {
     const rng = createRng(mixSeed(world.seed, player.id))
@@ -208,18 +211,26 @@ function fromV4(saved: V4Game): GameState {
   })
   return {
     ...saved,
-    version: SAVE_VERSION,
+    version: 5,
     world: { ...world, players },
     season: { ...season, fitness: {}, ratings: {}, roundStars: [] },
   }
 }
 
+/** Every career before data packs had generated names. */
+function fromV5(saved: V5Game): GameState {
+  return { ...saved, version: SAVE_VERSION, names: {} }
+}
+
 /** Brings a saved career up to the current format, so old saves keep working. */
-export function upgradeGame(saved: GameState | V4Game | V3Game | V2Game | V1Game): GameState {
+export function upgradeGame(
+  saved: GameState | V5Game | V4Game | V3Game | V2Game | V1Game,
+): GameState {
   const version = saved.version ?? 1
   if (version >= SAVE_VERSION) return saved as GameState
   const v2 = version < 2 ? fromV1(saved as V1Game) : (saved as V2Game)
   const v3 = version < 3 ? fromV2(v2) : (saved as V3Game)
   const v4 = version < 4 ? fromV3(v3) : (saved as V4Game)
-  return fromV4(v4)
+  const v5 = version < 5 ? fromV4(v4) : (saved as V5Game)
+  return fromV5(v5)
 }
