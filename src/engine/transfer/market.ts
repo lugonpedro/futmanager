@@ -87,7 +87,7 @@ export function askingPrice(game: GameState, player: Player): number {
 
 /** Monthly wage the player wants to join a club (or stay at his own). */
 export function wageDemand(world: World, player: Player, clubId: string): number {
-  const base = Math.max(player.wage, wageFor(player.strength))
+  const base = Math.max(player.wage, wageFor(player.overall))
   if (clubId === player.clubId) return round1k(base * (1 + MARKET.renewRaise))
   const from = world.clubs[player.clubId]?.reputation ?? 0
   const stepDown = Math.max(0, from - world.clubs[clubId].reputation) * MARKET.stepDownPremium
@@ -387,7 +387,7 @@ function aiSign(
   if (pool.length === 0) return game
   const choice =
     affordable.length > 0
-      ? pool.reduce((a, b) => (b.strength > a.strength ? b : a))
+      ? pool.reduce((a, b) => (b.overall > a.overall ? b : a))
       : pool.reduce((a, b) => (cost(b) < cost(a) ? b : a))
   const fee = askingPrice(game, choice)
   const from = choice.clubId
@@ -484,7 +484,7 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
   if (rng.next() < MARKET.unlistedBidChance) {
     const squad = squadOf(world, userClubId)
       .filter((p) => game.market.listed[p.id] === undefined && canLeave(world, p))
-      .sort((a, b) => b.strength - a.strength)
+      .sort((a, b) => b.overall - a.overall)
       .slice(0, 15)
     if (squad.length > 0) {
       const player = rng.pick(squad)
@@ -527,21 +527,21 @@ export function closeContracts(game: GameState, nextYear: number, rng: Rng): Gam
   let market = game.market
   // The best players are offered new terms first, while there is still room in the wage bill.
   const players = Object.values(game.world.players).sort(
-    (a, b) => b.strength - a.strength || a.id.localeCompare(b.id),
+    (a, b) => b.overall - a.overall || a.id.localeCompare(b.id),
   )
   for (const player of players) {
     if (player.clubId === FREE_AGENT || player.clubId === RETIRED) continue
     if (player.contractUntil >= nextYear) continue
     const club = world.clubs[player.clubId]
     const squad = squadOf(world, club.id)
-    const average = squad.reduce((sum, p) => sum + p.strength, 0) / squad.length
+    const average = squad.reduce((sum, p) => sum + p.overall, 0) / squad.length
     // A club in debt only keeps the players who are worth their wages.
     const margin = club.cash < 0 ? 0 : 10
-    const wage = Math.max(player.wage, wageFor(player.strength))
+    const wage = Math.max(player.wage, wageFor(player.overall))
     const keep =
       club.id !== game.userClubId &&
       player.age <= 33 &&
-      player.strength >= average - margin &&
+      player.overall >= average - margin &&
       monthlyWages(world, club.id) - player.wage + wage <= wageCap(world, club.id)
     if (keep) {
       world = {

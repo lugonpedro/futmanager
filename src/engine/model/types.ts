@@ -5,31 +5,84 @@ export type Position = 'G' | 'Z' | 'L' | 'M' | 'A'
 
 export const POSITIONS: readonly Position[] = ['G', 'Z', 'L', 'M', 'A']
 
-/** Brasfoot-style traits: a player has a strength plus a few standout skills. */
-export type Trait =
-  | 'reflexo'
+/**
+ * A player's skills, 1 to 99. Everyone has every one of them: a centre-back
+ * has keeping numbers too, they are just very low.
+ */
+export type Attributes = {
+  acceleration: number
+  sprintSpeed: number
+  finishing: number
+  shotPower: number
+  attackPositioning: number
+  penalties: number
+  shortPassing: number
+  longPassing: number
+  vision: number
+  crossing: number
+  dribbling: number
+  ballControl: number
+  agility: number
+  marking: number
+  tackling: number
+  interceptions: number
+  heading: number
+  strength: number
+  stamina: number
+  jumping: number
+  aggression: number
+  diving: number
+  handling: number
+  kicking: number
+  reflexes: number
+  keeperPositioning: number
+}
+
+export type Attribute = keyof Attributes
+
+/** Named play styles, the standout skills of a player; the best have the "+" version. */
+export type PlayStyle =
+  | 'paredao'
   | 'colocacao'
   | 'saida'
-  | 'marcacao'
-  | 'desarme'
-  | 'cabeceio'
-  | 'cruzamento'
-  | 'velocidade'
-  | 'passe'
-  | 'armacao'
-  | 'drible'
-  | 'finalizacao'
+  | 'muralha'
+  | 'desarmador'
+  | 'cabeceador'
+  | 'cruzador'
+  | 'velocista'
+  | 'passador'
+  | 'armador'
+  | 'driblador'
+  | 'finalizador'
+
+export type Foot = 'direito' | 'esquerdo'
+
+/** One season of a player's career, kept once the season closes. */
+export type PlayerSeason = {
+  year: number
+  clubId: string
+  games: number
+  goals: number
+  /** Average match rating, 0 to 10. */
+  rating: number
+}
 
 export type Player = {
   id: string
   name: string
   age: number
   position: Position
-  /** Current ability, 1 to 99. */
-  strength: number
-  /** Ability the player can grow into, never below strength. */
+  /** Positions he also plays well in. */
+  secondary: Position[]
+  /** Current ability, 1 to 99, worked out from the attributes for his position. */
+  overall: number
+  /** Overall the player can grow into, never below it. */
   potential: number
-  traits: Trait[]
+  attributes: Attributes
+  foot: Foot
+  /** How good the other foot is, 1 to 5 stars. */
+  weakFoot: number
+  styles: PlayStyle[]
   /** Monthly wage. */
   wage: number
   marketValue: number
@@ -37,6 +90,8 @@ export type Player = {
   contractUntil: number
   /** FREE_AGENT when the player has no club. */
   clubId: string
+  /** Past seasons, oldest first; only the ones he played in. */
+  history?: PlayerSeason[]
 }
 
 /** clubId of a player without a club, free to sign for wages alone. */
@@ -132,6 +187,10 @@ export type MatchResult = {
   /** Players sent off or injured, for the season to turn into suspensions. */
   sentOff: string[]
   injured: string[]
+  /** Match rating, 0 to 10, of everyone who played. */
+  ratings: Record<string, number>
+  /** Energy left at the final whistle, out of 100, of everyone who played. */
+  energy: Record<string, number>
 }
 
 /** A goal as the season remembers it, for the top scorers list. */
@@ -175,7 +234,17 @@ export type Season = {
   appearances: Record<string, number>
   /** The national cup, played in midweek after some league rounds. */
   cup?: Cup
+  /** Energy each player was left with after his last match, and when; missing means fresh. */
+  fitness: Record<string, Fitness>
+  /** Match ratings this season: how many, their sum and the latest five, newest last. */
+  ratings: Record<string, SeasonRatings>
+  /** Best XI of the last league round, every division together. */
+  roundStars: string[]
 }
+
+export type Fitness = { energy: number; date: GameDate }
+
+export type SeasonRatings = { games: number; total: number; last: number[] }
 
 /** One knockout round of the cup; its ties are drawn once the round before is over. */
 export type CupStage = {
@@ -201,6 +270,8 @@ export type LeagueOutcome = {
   promoted: string[]
   relegated: string[]
   topScorer?: { playerId: string; clubId: string; goals: number }
+  /** Best average rating of the season among regular starters. */
+  bestPlayer?: { playerId: string; clubId: string; rating: number }
 }
 
 /** How the user's job is going, and the seasons behind it. */

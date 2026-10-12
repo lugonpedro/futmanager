@@ -166,6 +166,8 @@ describe('bans and injuries', () => {
         },
         sentOff: [],
         injured: [],
+        ratings: {},
+        energy: {},
       }
     })
     results[0] = { ...results[0], ...overrides }
@@ -242,6 +244,25 @@ describe('end of season', () => {
       expect(nextB.clubIds).toContain(id)
       expect(next.world.clubs[id].division).toBe(2)
     }
+  })
+
+  it('names a player of the season in each division and files every career', () => {
+    for (const league of summary.leagues) {
+      const best = league.bestPlayer!
+      expect(best.rating).toBeGreaterThan(6.5)
+      expect(finished.world.clubs[best.clubId].division).toBe(league.division)
+      expect(
+        next.history[0].leagues.find((l) => l.leagueId === league.leagueId)?.bestPlayer,
+      ).toEqual(best)
+    }
+    const regular = Object.entries(finished.season.ratings).find(([, r]) => r.games > 30)![0]
+    const record = next.world.players[regular].history!.at(-1)!
+    expect(record).toMatchObject({
+      year: finished.season.year,
+      games: finished.season.ratings[regular].games,
+    })
+    expect(record.rating).toBeGreaterThan(3)
+    expect(next.season).toMatchObject({ fitness: {}, ratings: {}, roundStars: [] })
   })
 
   it('pays prize money by final position', () => {

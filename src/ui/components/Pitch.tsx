@@ -73,7 +73,7 @@ function PitchPlayer(props: {
     <button
       type="button"
       onClick={() => props.onSelect?.(player.id)}
-      title={`${player.name} (${player.position}), força ${player.strength}`}
+      title={`${player.name} (${player.position}), geral ${player.overall}`}
       className={`flex w-full min-w-0 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
     >
       <span className="w-full truncate text-center font-semibold">
@@ -87,7 +87,7 @@ function PitchPlayer(props: {
       </span>
       <span className="tabular-nums">
         <span className={props.selected ? '' : fitClass(fit, true)}>{player.position}</span>{' '}
-        {player.strength}
+        {player.overall}
         {energy !== undefined && ` · ${Math.round(energy)}%`}
       </span>
     </button>

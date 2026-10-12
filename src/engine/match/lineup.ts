@@ -34,7 +34,7 @@ export function autoLineup(
 ): Lineup {
   const available = squad
     .filter((player) => !unavailable.has(player.id))
-    .sort((a, b) => b.strength - a.strength)
+    .sort((a, b) => b.overall - a.overall)
   const used = new Set<string>()
   const starters: LineupSlot[] = []
 
@@ -76,7 +76,7 @@ export function formationSlots(formation: Formation): Position[] {
 
 /** Natural position first, then strength: a centre-back beats a stronger midfielder at the back. */
 const slotScore = (player: Player, position: Position) =>
-  positionFit(player, position) * 1000 + player.strength
+  positionFit(player, position) * 1000 + player.overall
 
 function bestFor(candidates: readonly Player[], position: Position): Player | undefined {
   let best: Player | undefined
@@ -174,7 +174,7 @@ export function repairLineup(
 
   const rest = available
     .filter((player) => !used.has(player.id))
-    .sort((a, b) => b.strength - a.strength)
+    .sort((a, b) => b.overall - a.overall)
   if (!bench.some((id) => byId.get(id)?.position === 'G')) {
     const keeper = rest.find((player) => player.position === 'G')
     if (keeper && bench.length < BENCH_SIZE) {
@@ -199,7 +199,7 @@ export function autoFormation(
   const total = (formation: Formation) =>
     autoLineup(squad, formation, 'normal', unavailable).starters.reduce(
       (sum, { playerId, position }) =>
-        sum + byId.get(playerId)!.strength * positionFit(byId.get(playerId)!, position),
+        sum + byId.get(playerId)!.overall * positionFit(byId.get(playerId)!, position),
       0,
     )
   let best = FORMATION_LIST[0]

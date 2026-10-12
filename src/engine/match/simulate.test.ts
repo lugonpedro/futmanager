@@ -132,7 +132,7 @@ describe('match balance', () => {
   it('lets the stronger side win more, without making upsets impossible', () => {
     const [best, worst] = [world.leagues[0].clubIds[0], world.leagues[0].clubIds.at(-1)!]
     const rng = createRng(5)
-    const games = Array.from({ length: 500 }, (_, i) =>
+    const games = Array.from({ length: 1000 }, (_, i) =>
       i % 2 === 0 ? simulateMatch(input(best, worst), rng) : simulateMatch(input(worst, best), rng),
     )
     const bestWins = share(games, (r) =>
@@ -263,5 +263,72 @@ describe('plays', () => {
 
   it('describes the same match the same way for the same seed', () => {
     expect(played(21).plays).toEqual(played(21).plays)
+  })
+})
+
+describe('attributes in the match', () => {
+  const many = (n: number, make: (i: number) => MatchResult) =>
+    Array.from({ length: n }, (_, i) => make(i))
+
+  it('rates everyone who played and reports the energy they were left with', () => {
+    const result = simulateMatch(input('C1', 'C2'), createRng(7))
+    const lineups = input('C1', 'C2')
+    const starters = [...lineups.home.lineup.starters, ...lineups.away.lineup.starters]
+    for (const { playerId } of starters) {
+      expect(result.ratings[playerId]).toBeGreaterThanOrEqual(3)
+      expect(result.ratings[playerId]).toBeLessThanOrEqual(10)
+      expect(result.energy[playerId]).toBeLessThan(100)
+    }
+    const scorers = result.events.filter((e) => e.type === 'gol').map((e) => e.playerId!)
+    const average =
+      Object.values(result.ratings).reduce((a, b) => a + b, 0) / Object.keys(result.ratings).length
+    for (const id of scorers) expect(result.ratings[id]).toBeGreaterThan(average)
+  })
+
+  it('tires players with little stamina faster', () => {
+    const base = input('C1', 'C2')
+    const withStamina = (stamina: number) => ({
+      ...base,
+      players: Object.fromEntries(
+        Object.entries(base.players).map(([id, p]) => [
+          id,
+          { ...p, attributes: { ...p.attributes, stamina } },
+        ]),
+      ),
+    })
+    const energy = (stamina: number) => {
+      const r = simulateMatch(withStamina(stamina), createRng(8))
+      const values = Object.values(r.energy)
+      return values.reduce((a, b) => a + b, 0) / values.length
+    }
+    expect(energy(95)).toBeGreaterThan(energy(30) + 5)
+  })
+
+  it('makes a tired side worse', () => {
+    const fresh = input('C5', 'C6')
+    const tired = {
+      ...fresh,
+      condition: Object.fromEntries(fresh.home.lineup.starters.map((s) => [s.playerId, 55])),
+    }
+    const rngFresh = createRng(9)
+    const rngTired = createRng(9)
+    const scored = (rs: MatchResult[]) => rs.reduce((s, r) => s + r.homeGoals - r.awayGoals, 0)
+    expect(scored(many(400, () => simulateMatch(fresh, rngFresh)))).toBeGreaterThan(
+      scored(many(400, () => simulateMatch(tired, rngTired))),
+    )
+  })
+
+  it('scores headers mostly through good headers of the ball', () => {
+    const results = roundRobin(1, [6])
+    const goals = results.flatMap((r) => r.events.filter((e) => e.type === 'gol'))
+    const isHeader = (text: string) => /testa|cabeceia/.test(text)
+    const headers = goals.filter((e) => isHeader(e.text))
+    const others = goals.filter((e) => !isHeader(e.text))
+    expect(headers.length / goals.length).toBeGreaterThan(0.1)
+    expect(headers.length / goals.length).toBeLessThan(0.4)
+    const players = generateWorld(6).players
+    const heading = (events: typeof goals) =>
+      events.reduce((sum, e) => sum + players[e.playerId!].attributes.heading, 0) / events.length
+    expect(heading(headers)).toBeGreaterThan(heading(others) + 5)
   })
 })

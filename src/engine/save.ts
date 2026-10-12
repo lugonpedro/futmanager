@@ -1,6 +1,6 @@
 import { newCareer } from './career/board.ts'
 import { fairTicketPrice, startingCash } from './finance/economy.ts'
-import { marketValueFor, wageFor } from './generate/player.ts'
+import { marketValueFor, playerProfile, wageFor } from './generate/player.ts'
 import type {
   Club,
   CupStage,
@@ -8,9 +8,11 @@ import type {
   GameState,
   LedgerEntry,
   Player,
+  PlayStyle,
   Season,
   TransferNews,
   TransferOffer,
+  World,
 } from './model/types.ts'
 import { addDays, seasonDates, type GameDate } from './season/calendar.ts'
 import { createCup, CUP_ROUNDS } from './season/cup.ts'
@@ -18,11 +20,54 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** Brasfoot-style skills a player had before version 5 (phase 10), now play styles. */
+type Trait =
+  | 'reflexo'
+  | 'colocacao'
+  | 'saida'
+  | 'marcacao'
+  | 'desarme'
+  | 'cabeceio'
+  | 'cruzamento'
+  | 'velocidade'
+  | 'passe'
+  | 'armacao'
+  | 'drible'
+  | 'finalizacao'
+
+const TRAIT_STYLES: Record<Trait, PlayStyle> = {
+  reflexo: 'paredao',
+  colocacao: 'colocacao',
+  saida: 'saida',
+  marcacao: 'muralha',
+  desarme: 'desarmador',
+  cabeceio: 'cabeceador',
+  cruzamento: 'cruzador',
+  velocidade: 'velocista',
+  passe: 'passador',
+  armacao: 'armador',
+  drible: 'driblador',
+  finalizacao: 'finalizador',
+}
+
+/** A player before version 5: one strength number and a few traits. */
+type V4Player = Omit<
+  Player,
+  'overall' | 'attributes' | 'secondary' | 'styles' | 'foot' | 'weakFoot' | 'history'
+> & { strength: number; traits: Trait[] }
+
+/** A career as stored before version 5 (phase 10), before attributes, form and fitness. */
+type V4Game = Omit<GameState, 'version' | 'world' | 'season'> & {
+  version: 4
+  world: Omit<World, 'players'> & { players: Record<string, V4Player> }
+  season: Omit<Season, 'fitness' | 'ratings' | 'roundStars'>
+}
+
 type Undated<T> = Omit<T, 'date'> & { round: number }
 type V3Fixture = Omit<Fixture, 'date'>
 
 /** A career as stored before version 4 (phase 9), counting time in rounds instead of days. */
-type V3Game = Omit<GameState, 'version' | 'today' | 'season' | 'ledger' | 'market'> & {
+type V3Game = Omit<V4Game, 'version' | 'today' | 'season' | 'ledger' | 'market'> & {
   version: 3
   season: Omit<Season, 'injuries' | 'fixtures' | 'cup'> & {
     /** Rounds each player still had to miss. */
@@ -47,7 +92,7 @@ type V2Game = Omit<V3Game, 'version' | 'career' | 'season'> & {
 /** A career as stored before version 2 (phase 5), without money and market fields. */
 type V1Game = Omit<V2Game, 'version' | 'ledger' | 'market' | 'world'> & {
   version?: 1
-  world: Omit<GameState['world'], 'clubs'> & {
+  world: Omit<V4Game['world'], 'clubs'> & {
     clubs: Record<string, Omit<Club, 'ticketPrice'> & { ticketPrice?: number }>
   }
 }
@@ -65,7 +110,7 @@ function fromV1(saved: V1Game): V2Game {
       (club.cash * startingCash(club.reputation, 0.5)) / (club.reputation ** 2 * 1000),
     ),
   }))
-  const players = mapValues(world.players, (player: Player) => ({
+  const players = mapValues(world.players, (player: V4Player) => ({
     ...player,
     wage: wageFor(player.strength),
     marketValue: marketValueFor(player.strength, player.potential, player.age),
@@ -94,11 +139,12 @@ function fromV2(saved: V2Game): V3Game {
     ...saved,
     version: 3,
     season: { ...season, appearances: {}, ...(cup && { cup }) },
-    career: newCareer(world, saved.userClubId),
+    // The board only looks at the clubs.
+    career: newCareer({ ...world, players: {} }, saved.userClubId),
   }
 }
 
-function fromV3(saved: V3Game): GameState {
+function fromV3(saved: V3Game): V4Game {
   // The rounds get the days the calendar gives them, and the career goes to the next one.
   const { season, ledger, market } = saved
   const { cup: undatedCup, ...rest } = season
@@ -124,7 +170,7 @@ function fromV3(saved: V3Game): GameState {
   const injuries = mapValues(season.injuries, (rounds) => addDays(today, 7 * rounds - 3))
   return {
     ...saved,
-    version: SAVE_VERSION,
+    version: 4,
     today,
     season: { ...rest, fixtures, injuries, ...(cup && { cup }) },
     ledger: ledger.map(({ round, ...entry }) => ({ ...entry, date: dayOf(round) })),
@@ -143,11 +189,37 @@ function fromV3(saved: V3Game): GameState {
   }
 }
 
+/**
+ * Every player gets attributes worked out from his strength, position and
+ * traits, from a seed of his own, so the overall lands on the old strength
+ * and careers under way stay as balanced as they were.
+ */
+function fromV4(saved: V4Game): GameState {
+  const { world, season } = saved
+  const players = mapValues(world.players, ({ strength, traits, ...player }): Player => {
+    const rng = createRng(mixSeed(world.seed, player.id))
+    const profile = playerProfile(
+      rng,
+      player.position,
+      strength,
+      traits.map((t) => TRAIT_STYLES[t]),
+    )
+    return { ...player, ...profile, potential: Math.max(player.potential, profile.overall) }
+  })
+  return {
+    ...saved,
+    version: SAVE_VERSION,
+    world: { ...world, players },
+    season: { ...season, fitness: {}, ratings: {}, roundStars: [] },
+  }
+}
+
 /** Brings a saved career up to the current format, so old saves keep working. */
-export function upgradeGame(saved: GameState | V3Game | V2Game | V1Game): GameState {
+export function upgradeGame(saved: GameState | V4Game | V3Game | V2Game | V1Game): GameState {
   const version = saved.version ?? 1
   if (version >= SAVE_VERSION) return saved as GameState
   const v2 = version < 2 ? fromV1(saved as V1Game) : (saved as V2Game)
   const v3 = version < 3 ? fromV2(v2) : (saved as V3Game)
-  return fromV3(v3)
+  const v4 = version < 4 ? fromV3(v3) : (saved as V4Game)
+  return fromV4(v4)
 }

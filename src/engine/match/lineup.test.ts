@@ -35,7 +35,7 @@ describe('autoLineup', () => {
   it('picks the strongest player for each position', () => {
     const lineup = autoLineup(squad)
     const starters = new Set(lineup.starters.map((s) => s.playerId))
-    const keepers = squad.filter((p) => p.position === 'G').sort((a, b) => b.strength - a.strength)
+    const keepers = squad.filter((p) => p.position === 'G').sort((a, b) => b.overall - a.overall)
     expect(starters.has(keepers[0].id)).toBe(true)
     expect(starters.has(keepers[1].id)).toBe(false)
   })
@@ -146,9 +146,9 @@ describe('repairLineup', () => {
 
 describe('autoFormation', () => {
   it('suits the formation to the squad', () => {
-    const noForwards = squad.filter((p) => p.position !== 'A')
+    const noForwards = squad.filter((p) => p.position !== 'A').map((p) => ({ ...p, secondary: [] }))
     expect(FORMATIONS[autoFormation(noForwards)].A).toBe(1)
-    const lotsOfForwards = squad.filter((p) => p.position !== 'M' || p.strength > 90)
+    const lotsOfForwards = squad.filter((p) => p.position !== 'M' || p.overall > 90)
     expect(FORMATIONS[autoFormation(lotsOfForwards)].M).toBeLessThanOrEqual(3)
   })
 })

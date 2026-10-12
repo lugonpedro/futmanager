@@ -24,16 +24,19 @@ import {
 import { useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { MoneyInput } from '../../components/MoneyInput.tsx'
-import { formatMoney, POSITION_NAMES, TRAIT_NAMES } from '../../format.ts'
+import { styleLevel } from '../../../engine/player/attributes.ts'
+import { formatMoney, POSITION_NAMES, styleName } from '../../format.ts'
 
 const YEARS = Array.from({ length: MARKET.maxContractYears }, (_, i) => String(i + 1))
 
 function PlayerSummary({ game, player }: { game: GameState; player: Player }) {
   return (
     <p className="text-sm text-muted-foreground">
-      {POSITION_NAMES[player.position]}, {player.age} anos, força {player.strength} (potencial{' '}
+      {POSITION_NAMES[player.position]}, {player.age} anos, geral {player.overall} (potencial{' '}
       {player.potential})
-      {player.traits.length > 0 && `, ${player.traits.map((t) => TRAIT_NAMES[t]).join(', ')}`}.{' '}
+      {player.styles.length > 0 &&
+        `, ${player.styles.map((s) => styleName(s, styleLevel(player, s))).join(', ')}`}
+      .{' '}
       {player.clubId === FREE_AGENT
         ? 'Sem clube.'
         : `${game.world.clubs[player.clubId].name}, contrato até ${player.contractUntil}.`}

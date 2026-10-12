@@ -36,7 +36,7 @@ describe('a world left to run for years', () => {
         average(
           Object.values(world.clubs)
             .filter((c) => c.division === division)
-            .flatMap((c) => c.playerIds.map((id) => world.players[id].strength)),
+            .flatMap((c) => c.playerIds.map((id) => world.players[id].overall)),
         )
       expect(average(active.map((p) => p.age))).toBeGreaterThan(24)
       expect(average(active.map((p) => p.age))).toBeLessThan(27.5)

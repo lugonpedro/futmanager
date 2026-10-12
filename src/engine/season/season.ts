@@ -52,6 +52,14 @@ import {
   nextCupStage,
   playCupStage,
 } from './cup.ts'
+import {
+  bestPlayer,
+  conditionOn,
+  formOf,
+  recordMatchDay,
+  recordSeasonHistory,
+  roundStars,
+} from './form.ts'
 import { toFixtureResult } from './results.ts'
 import { PROMOTION_SPOTS } from './rules.ts'
 import { createSchedule } from './schedule.ts'
@@ -65,7 +73,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 4
+export const SAVE_VERSION = 5
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -96,6 +104,9 @@ export function startSeason(world: World, year = world.season): Season {
     yellowCards: {},
     appearances: {},
     cup: createCup(Object.values(world.clubs), cupRng, dates.cup),
+    fitness: {},
+    ratings: {},
+    roundStars: [],
   }
 }
 
@@ -205,11 +216,18 @@ export function clubLineup(game: GameState, clubId: string): Lineup {
 }
 
 export function matchInput(game: GameState, fixture: Fixture): MatchInput {
-  const { world } = game
+  const { world, season } = game
+  const home = clubLineup(game, fixture.homeId)
+  const away = clubLineup(game, fixture.awayId)
+  const ids = [home, away].flatMap((l) => [...l.starters.map((s) => s.playerId), ...l.bench])
   return {
-    home: { club: world.clubs[fixture.homeId], lineup: clubLineup(game, fixture.homeId) },
-    away: { club: world.clubs[fixture.awayId], lineup: clubLineup(game, fixture.awayId) },
+    home: { club: world.clubs[fixture.homeId], lineup: home },
+    away: { club: world.clubs[fixture.awayId], lineup: away },
     players: world.players,
+    condition: Object.fromEntries(
+      ids.map((id) => [id, conditionOn(season, world.players[id], fixture.date)]),
+    ),
+    form: Object.fromEntries(ids.map((id) => [id, formOf(season, id)])),
   }
 }
 
@@ -349,7 +367,16 @@ function applyRound(game: GameState, results: readonly MatchResult[]): GameState
 
   const recorded: GameState = {
     ...game,
-    season: { ...season, fixtures, injuries, suspensions, yellowCards, appearances },
+    season: {
+      ...season,
+      fixtures,
+      injuries,
+      suspensions,
+      yellowCards,
+      appearances,
+      ...recordMatchDay(season, results, game.today),
+      roundStars: roundStars(results, game.world.players),
+    },
   }
   const judged = judgeManager(recorded, results)
 
@@ -417,7 +444,16 @@ function playCup(game: GameState, stage: number, results: readonly MatchResult[]
     })
   }
   return applyPayments(
-    { ...game, season: { ...season, cup: played.cup, injuries, appearances } },
+    {
+      ...game,
+      season: {
+        ...season,
+        cup: played.cup,
+        injuries,
+        appearances,
+        ...recordMatchDay(season, played.results, game.today),
+      },
+    },
     payments,
   )
 }
@@ -567,6 +603,7 @@ export function seasonSummary(game: GameState): SeasonSummary {
       prizes[clubId] = prizeMoney(league.division, position + 1, table.length)
     })
     const [scorer] = leagueScorers(game, league.id)
+    const best = bestPlayer(game.world, game.season, league.clubIds)
     return {
       leagueId: league.id,
       division: league.division,
@@ -574,6 +611,7 @@ export function seasonSummary(game: GameState): SeasonSummary {
       promoted: i > 0 ? table.slice(0, PROMOTION_SPOTS) : [],
       relegated: i < leagues.length - 1 ? table.slice(-PROMOTION_SPOTS) : [],
       ...(scorer && { topScorer: scorer }),
+      ...(best && { bestPlayer: best }),
     }
   })
   return { year: game.season.year, leagues: outcomes, prizes }
@@ -592,7 +630,8 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   if (!moving && review.fired) throw new Error('O técnico foi demitido: escolha um novo clube.')
   if (moving && !review.offers.includes(nextClubId)) throw new Error('Esse clube não fez proposta.')
   const nextYear = game.season.year + 1
-  const prizes = seasonSummary(game).prizes
+  const final = seasonSummary(game)
+  const prizes = final.prizes
   // December goes by with its wages paid, then prizes, then contracts running out.
   const december = passDays(game, dateOf(game.season.year, 12, 31)).game
   const seed = (label: string) => createRng(mixSeed(game.world.seed, game.season.year, label))
@@ -607,7 +646,11 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
       },
     ],
   })
-  const aged = ageWorld(settled.world, game.season.appearances, seed('idade'))
+  const aged = ageWorld(
+    recordSeasonHistory(settled.world, game.season),
+    game.season.appearances,
+    seed('idade'),
+  )
   const listed = Object.fromEntries(
     Object.entries(settled.market.listed).filter(
       ([id]) => aged.world.players[id]?.clubId === game.userClubId,
@@ -621,7 +664,7 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   const paid = closeContracts(youth.game, nextYear, seed('contratos'))
   const cupWinnerId = cupWinner(game.season.cup)
   const summary: SeasonSummary = {
-    ...seasonSummary(paid),
+    ...final,
     userFinances: ledgerTotals(paid.ledger),
     ...(cupWinnerId && { cupWinnerId }),
     userRetired: aged.retired

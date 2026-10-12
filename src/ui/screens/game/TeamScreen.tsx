@@ -47,6 +47,7 @@ import {
   type Position,
   type Posture,
 } from '../../../engine/model/types.ts'
+import { conditionOn, formOf } from '../../../engine/season/form.ts'
 import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
@@ -62,9 +63,9 @@ import {
   type Role,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
-import { PlayerSheet } from './PlayerSheet.tsx'
+import { FormArrow, PlayerSheet } from './PlayerSheet.tsx'
 
-type Row = Player & { role: Role; slot?: Position }
+type Row = Player & { role: Role; slot?: Position; condition: number; form: number }
 
 const GROUPS: { role: Role; label: string }[] = [
   { role: 'titular', label: 'Titulares' },
@@ -81,12 +82,19 @@ const COLUMNS = [
   },
   { key: 'name', label: 'Nome', value: (r: Row) => r.name },
   { key: 'age', label: 'Idade', value: (r: Row) => r.age, hide: 'hidden sm:table-cell' },
-  { key: 'strength', label: 'Força', value: (r: Row) => r.strength },
+  { key: 'overall', label: 'Geral', value: (r: Row) => r.overall },
   {
     key: 'potential',
     label: 'Pot',
     title: 'Potencial',
     value: (r: Row) => r.potential,
+    hide: 'hidden sm:table-cell',
+  },
+  {
+    key: 'condition',
+    label: 'Cond',
+    title: 'Condição física e forma',
+    value: (r: Row) => r.condition,
     hide: 'hidden sm:table-cell',
   },
   { key: 'wage', label: 'Salário', value: (r: Row) => r.wage, hide: 'hidden md:table-cell' },
@@ -169,8 +177,13 @@ export function TeamScreen() {
     player: world.players[s.playerId],
     position: s.position,
   }))
+  const conditionOf = (id: string) => conditionOn(season, world.players[id], game.today)
   const sectors = sectorStrength(
-    starters.map((s) => ({ ...s, energy: 100 })),
+    starters.map((s) => ({
+      ...s,
+      energy: conditionOf(s.player.id),
+      form: formOf(season, s.player.id),
+    })),
     lineup.posture,
   )
 
@@ -179,13 +192,19 @@ export function TeamScreen() {
   const rows: Row[] = squad
     .filter((p) => !position || p.position === position)
     .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
-    .map((p) => ({ ...p, role: roleOf(p.id), slot: slots.get(p.id) }))
+    .map((p) => ({
+      ...p,
+      role: roleOf(p.id),
+      slot: slots.get(p.id),
+      condition: conditionOf(p.id),
+      form: formOf(season, p.id),
+    }))
   rows.sort((a, b) => {
     const x = column.value(a)
     const y = column.value(b)
     const order = typeof x === 'string' ? x.localeCompare(y as string, 'pt-BR') : x - (y as number)
     // Ties fall back to the strongest first, so equal positions read best to worst.
-    return (sort.ascending ? order : -order) || b.strength - a.strength
+    return (sort.ascending ? order : -order) || b.overall - a.overall
   })
   const sortBy = (key: SortKey) =>
     setSort((current) =>
@@ -244,7 +263,7 @@ export function TeamScreen() {
           <p className="text-xs text-muted-foreground">
             Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de lugar.
             A cor da posição mostra o encaixe: <span className={fitClass(1)}>na posição</span>,{' '}
-            <span className={fitClass(0.88)}>vizinha</span> ou{' '}
+            <span className={fitClass(0.95)}>secundária</span> ou{' '}
             <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
             vender ou renovar.
           </p>
@@ -371,9 +390,19 @@ export function TeamScreen() {
                             )}
                           </TableCell>
                           <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
-                          <TableCell className="font-bold">{p.strength}</TableCell>
+                          <TableCell className="font-bold">{p.overall}</TableCell>
                           <TableCell className="hidden text-muted-foreground sm:table-cell">
                             {p.potential}
+                          </TableCell>
+                          <TableCell className="hidden whitespace-nowrap sm:table-cell">
+                            <span
+                              className={cn(
+                                p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
+                              )}
+                            >
+                              {p.condition}%
+                            </span>{' '}
+                            <FormArrow form={p.form} />
                           </TableCell>
                           <TableCell className="hidden md:table-cell">
                             {formatMoney(p.wage)}
@@ -403,7 +432,7 @@ export function TeamScreen() {
       <DragOverlay dropAnimation={null}>
         {dragged && (
           <span className="inline-flex items-center gap-2 rounded-md bg-yellow-300 px-2 py-1 text-sm font-semibold text-green-950 shadow-lg">
-            {dragged.position} {dragged.name} {dragged.strength}
+            {dragged.position} {dragged.name} {dragged.overall}
           </span>
         )}
       </DragOverlay>

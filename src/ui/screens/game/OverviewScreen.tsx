@@ -34,7 +34,9 @@ import {
   POSTURE_NAMES,
 } from '../../format.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
+import { PlayerCard } from '../../components/PlayerCard.tsx'
 import { FixtureLine } from './FixtureLine.tsx'
+import { PlayerSheet } from './PlayerSheet.tsx'
 
 export function OverviewScreen() {
   const game = useGame()
@@ -245,7 +247,46 @@ function NextRound({ game }: { game: GameState }) {
         <LastCupTie game={game} />
         <TopScorers game={game} leagueId={leagueId} />
       </Card>
+
+      <RoundStars game={game} />
     </div>
+  )
+}
+
+/** The best XI of the last league round, every division together, as cards. */
+function RoundStars({ game }: { game: GameState }) {
+  const [viewing, setViewing] = useState<string>()
+  const { season, world } = game
+  if (season.roundStars.length === 0) return null
+  const stars = season.roundStars.map((id) => world.players[id])
+  return (
+    <Card className="gap-2 px-4 md:col-span-2">
+      <h2 className="font-semibold">Seleção da rodada {season.round - 1}</h2>
+      <p className="text-sm text-muted-foreground">
+        Os melhores de cada posição na última rodada, de todas as divisões. Eles ficam com a carta
+        especial até a próxima rodada.
+      </p>
+      <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2">
+        {stars.map((player) => (
+          <button
+            key={player.id}
+            type="button"
+            className="cursor-pointer rounded-t-[2.5rem] rounded-b-2xl text-left transition-transform hover:-translate-y-1"
+            onClick={() => setViewing(player.id)}
+            aria-label={`Ver ${player.name}`}
+          >
+            <PlayerCard player={player} game={game} />
+          </button>
+        ))}
+      </div>
+      {viewing && (
+        <PlayerSheet
+          game={game}
+          player={world.players[viewing]}
+          onClose={() => setViewing(undefined)}
+        />
+      )}
+    </Card>
   )
 }
 
@@ -337,6 +378,14 @@ function SeasonEnd({ game }: { game: GameState }) {
               <p className="text-sm">
                 Artilheiro: {world.players[outcome.topScorer.playerId].name} (
                 {world.clubs[outcome.topScorer.clubId].shortName}), {outcome.topScorer.goals} gols
+              </p>
+            )}
+            {outcome.bestPlayer && (
+              <p className="text-sm">
+                Craque da temporada: {world.players[outcome.bestPlayer.playerId].name} (
+                {world.clubs[outcome.bestPlayer.clubId].shortName}), nota média{' '}
+                {outcome.bestPlayer.rating.toFixed(1)}. Ele ganha a carta de craque na próxima
+                temporada.
               </p>
             )}
             {outcome.promoted.length > 0 && (
@@ -460,7 +509,7 @@ function NewSeason({ game }: { game: GameState }) {
           {youth
             .map(
               (p) =>
-                `${p.name} (${p.position}, ${p.age} anos, força ${p.strength}, potencial ${p.potential})`,
+                `${p.name} (${p.position}, ${p.age} anos, geral ${p.overall}, potencial ${p.potential})`,
             )
             .join('; ')}
           .
@@ -539,7 +588,7 @@ function ExpiringWarning({ game }: { game: GameState }) {
   return (
     <p className="text-sm text-muted-foreground">
       Ao iniciar a nova temporada saem de graça, por fim de contrato:{' '}
-      {players.map((p) => `${p.name} (${p.position}, ${p.strength})`).join(', ')}.{' '}
+      {players.map((p) => `${p.name} (${p.position}, ${p.overall})`).join(', ')}.{' '}
       <Link to="/jogo/time" className="text-primary underline">
         Renovar antes
       </Link>

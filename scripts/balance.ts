@@ -1,6 +1,6 @@
 /**
  * Plays many seasons with nobody at the wheel and prints how the world holds
- * up: ages, strength, squads, money, goals. Run with `npm run balance -- 50`.
+ * up: ages, overall, squads, money, goals. Run with `npm run balance -- 50`.
  */
 import { wageBill } from '../src/engine/finance/finance.ts'
 import { FREE_AGENT, RETIRED, type GameState } from '../src/engine/model/types.ts'
@@ -21,7 +21,7 @@ const fixed = (x: number, digits = 1) => x.toFixed(digits)
 
 let game: GameState = newGame(seed, 'C40')
 console.log(
-  'ano  idade forçaA topoA forçaB elenco gols casa empate campeão(rank rep) caixa(p10/mediana) negativos copa(div)',
+  'ano  idade geralA topoA geralB elenco gols casa empate campeão(rank rep) caixa(p10/mediana) negativos copa(div)',
 )
 for (let s = 0; s < seasons; s++) {
   while (!isSeasonOver(game.season)) {
@@ -39,7 +39,7 @@ for (let s = 0; s < seasons; s++) {
   const strengths = (division: number) =>
     ai
       .filter((c) => c.division === division)
-      .flatMap((c) => c.playerIds.map((id) => world.players[id].strength))
+      .flatMap((c) => c.playerIds.map((id) => world.players[id].overall))
   const top = [...strengths(1)].sort((a, b) => b - a).slice(0, 40)
   const played = Object.values(game.season.fixtures)
     .flat(2)

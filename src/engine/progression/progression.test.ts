@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { playerProfile } from '../generate/player.ts'
 import { generateWorld } from '../generate/world.ts'
 import { RETIRED, type Player } from '../model/types.ts'
 import { createRng } from '../rng.ts'
@@ -12,14 +13,14 @@ import {
   youthIntake,
 } from './progression.ts'
 
-const player = (overrides: Partial<Player>): Player => ({
+/** A player of the given overall, with attributes to match. */
+const player = ({ overall = 50, ...overrides }: Partial<Player>): Player => ({
   id: 'X1',
   name: 'Fulano',
   age: 19,
   position: 'M',
-  strength: 50,
+  ...playerProfile(createRng(7), overrides.position ?? 'M', overall, []),
   potential: 80,
-  traits: [],
   wage: 10_000,
   marketValue: 1_000_000,
   contractUntil: 2028,
@@ -33,20 +34,33 @@ describe('developing players', () => {
     const benched = developPlayer(young, 0, createRng(1))
     const starter = developPlayer(young, 30, createRng(1))
     expect(benched.age).toBe(20)
-    expect(starter.strength).toBeGreaterThan(benched.strength)
-    expect(starter.strength).toBeLessThanOrEqual(young.potential)
-    const capped = developPlayer(player({ strength: 79, potential: 80 }), 30, createRng(2))
-    expect(capped.strength).toBeLessThanOrEqual(80)
+    expect(starter.overall).toBeGreaterThan(benched.overall)
+    expect(starter.overall).toBeLessThanOrEqual(young.potential)
+    const capped = developPlayer(player({ overall: 79, potential: 80 }), 30, createRng(2))
+    expect(capped.overall).toBeLessThanOrEqual(80)
   })
 
   it('declines veterans and brings their ceiling down with them', () => {
-    const veteran = developPlayer(
-      player({ age: 33, strength: 70, potential: 75 }),
-      30,
-      createRng(3),
-    )
-    expect(veteran.strength).toBeLessThan(70)
-    expect(veteran.potential).toBe(veteran.strength)
+    const veteran = developPlayer(player({ age: 33, overall: 70, potential: 75 }), 30, createRng(3))
+    expect(veteran.overall).toBeLessThan(70)
+    expect(veteran.potential).toBe(veteran.overall)
+  })
+
+  it('loses pace before vision past 30, and teaches youngsters technique first', () => {
+    const sum = (list: Player[], key: keyof Player['attributes']) =>
+      list.reduce((total, p) => total + p.attributes[key], 0)
+    const veteran = player({ age: 30, overall: 75, potential: 75 })
+    const older = Array.from({ length: 40 }, (_, i) => developPlayer(veteran, 30, createRng(i)))
+    const n = older.length
+    expect(sum(older, 'sprintSpeed') / n).toBeLessThan(veteran.attributes.sprintSpeed - 1)
+    expect(sum(older, 'vision') / n).toBeGreaterThan(veteran.attributes.vision)
+    expect(older.reduce((t, p) => t + p.overall, 0) / n).toBeLessThan(veteran.overall - 1)
+
+    const youngster = player({ age: 18, overall: 50, potential: 85 })
+    const grown = Array.from({ length: 40 }, (_, i) => developPlayer(youngster, 30, createRng(i)))
+    const gain = (key: keyof Player['attributes']) =>
+      sum(grown, key) / n - youngster.attributes[key]
+    expect(gain('shortPassing')).toBeGreaterThan(gain('vision'))
   })
 
   it('retires players from their mid thirties and always by the limit', () => {
@@ -93,7 +107,7 @@ describe('the close of a season', () => {
     for (const p of youth) {
       expect(p.age).toBeGreaterThanOrEqual(16)
       expect(p.age).toBeLessThanOrEqual(18)
-      expect(p.potential).toBeGreaterThan(p.strength)
+      expect(p.potential).toBeGreaterThan(p.overall)
       expect(p.contractUntil).toBe(2030)
     }
     for (const id of Object.keys(next.world.clubs)) {
