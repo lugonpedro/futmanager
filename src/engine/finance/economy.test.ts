@@ -34,9 +34,11 @@ describe('a season of money', () => {
   while (!isSeasonOver(game.season)) game = playRound(game)
   const closed = startNextSeason(game)
 
-  it('pays wages on every fourth round and the rest of the year at the close', () => {
+  it('pays wages on the 1st of every month', () => {
     const paydays = game.ledger.filter((e) => e.category === 'salarios')
-    expect(paydays.map((e) => e.round)).toEqual([4, 8, 12, 16, 20, 24, 28, 32, 36])
+    expect(paydays.map((e) => e.date)).toEqual(
+      Array.from({ length: 12 }, (_, i) => `2027-${String(i + 1).padStart(2, '0')}-01`),
+    )
     const totals = closed.history[0].userFinances!
     expect(-totals.salarios! / wageBill(start.world, club)).toBeCloseTo(ECONOMY.monthsPerYear, 0)
   })

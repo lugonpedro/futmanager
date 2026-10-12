@@ -5,14 +5,10 @@ import {
   findJobOffers,
   newCareer,
 } from '../career/board.ts'
-import { ECONOMY } from '../finance/economy.ts'
 import {
   applyPayments,
-  isPayday,
   ledgerTotals,
   matchdayPayments,
-  mergePayments,
-  monthsInSeason,
   payday,
   type Payments,
 } from '../finance/finance.ts'
@@ -32,14 +28,28 @@ import type {
   World,
 } from '../model/types.ts'
 import { createRng, mixSeed, type Rng } from '../rng.ts'
-import { closeContracts, marketRound } from '../transfer/market.ts'
+import { closeContracts, dropLapsedOffers, marketRound } from '../transfer/market.ts'
+import {
+  addDays,
+  dateOf,
+  dateParts,
+  daysFrom,
+  inTransferWindow,
+  MONTH_NAMES,
+  SATURDAY,
+  seasonDates,
+  seasonStart,
+  weekday,
+  type GameDate,
+} from './calendar.ts'
 import {
   CUP_NAME,
+  CUP_ROUNDS,
   cupPrize,
   cupProgress,
-  cupStageAt,
   cupWinner,
   createCup,
+  nextCupStage,
   playCupStage,
 } from './cup.ts'
 import { toFixtureResult } from './results.ts'
@@ -55,25 +65,37 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 3
+export const SAVE_VERSION = 4
+/** An injury keeps a player out from this many days to this many more, short ones far more often. */
+export const INJURY_DAYS = { min: 8, spread: 30 }
 
 export { mixSeed } from '../rng.ts'
 
+/** Rounds of a double round robin among the clubs of the biggest league. */
+const roundsFor = (world: World) =>
+  Math.max(...world.leagues.map((league) => 2 * (league.clubIds.length - 1)))
+
 export function startSeason(world: World, year = world.season): Season {
   const rng = createRng(mixSeed(world.seed, year, 'calendario'))
+  const totalRounds = roundsFor(world)
+  const dates = seasonDates(year, totalRounds, CUP_ROUNDS)
   const fixtures = Object.fromEntries(
-    world.leagues.map((league) => [league.id, createSchedule(league.id, league.clubIds, rng)]),
+    world.leagues.map((league) => [
+      league.id,
+      createSchedule(league.id, league.clubIds, rng, dates.league),
+    ]),
   )
+  const cupRng = createRng(mixSeed(world.seed, year, 'copa'))
   return {
     year,
     round: 1,
-    totalRounds: Math.max(...Object.values(fixtures).map((rounds) => rounds.length)),
+    totalRounds,
     fixtures,
     injuries: {},
     suspensions: {},
     yellowCards: {},
     appearances: {},
-    cup: createCup(Object.values(world.clubs), createRng(mixSeed(world.seed, year, 'copa'))),
+    cup: createCup(Object.values(world.clubs), cupRng, dates.cup),
   }
 }
 
@@ -82,6 +104,7 @@ export function newGame(seed: number, userClubId: string): GameState {
   if (!world.clubs[userClubId]) throw new Error(`Unknown club ${userClubId}`)
   return {
     version: SAVE_VERSION,
+    today: seasonStart(world.season),
     world,
     userClubId,
     season: startSeason(world),
@@ -101,9 +124,55 @@ export function leagueOf(world: World, clubId: string): string {
 
 export const isSeasonOver = (season: Season) => season.round > season.totalRounds
 
-/** Whether the next round can be played: the season goes on and the manager has a job. */
+/** The day a league round is played on. */
+export const roundDate = (season: Season, round = season.round): GameDate | undefined =>
+  Object.values(season.fixtures)[0]?.[round - 1]?.[0]?.date
+
+/** A day with football: a league round, or a stage of the cup. */
+export type MatchDay = { date: GameDate } & ({ kind: 'liga' } | { kind: 'copa'; stage: number })
+
+/** The next day with football in the calendar, if the season still has one. */
+export function nextMatchDay(season: Season): MatchDay | undefined {
+  const stage = nextCupStage(season.cup)
+  const cupDate = stage >= 0 ? season.cup!.stages[stage].date : undefined
+  const leagueDate = isSeasonOver(season) ? undefined : roundDate(season)
+  if (cupDate && (!leagueDate || cupDate < leagueDate))
+    return { date: cupDate, kind: 'copa', stage }
+  return leagueDate ? { date: leagueDate, kind: 'liga' } : undefined
+}
+
+/** Every fixture of a match day. */
+export function dayFixtures(season: Season, day: MatchDay): Fixture[] {
+  return day.kind === 'liga' ? roundFixtures(season) : season.cup!.stages[day.stage].ties
+}
+
+const involves = (fixture: Fixture, clubId: string) =>
+  fixture.homeId === clubId || fixture.awayId === clubId
+
+/** The user's game on a match day, if the club plays. */
+export const userGameOn = (game: GameState, day: MatchDay) =>
+  dayFixtures(game.season, day).find((f) => involves(f, game.userClubId))
+
+/** The user's next game as far as the calendar knows: a cup tie drawn before it, or the league. */
+export function nextUserGame(game: GameState): Fixture | undefined {
+  const league = userFixture(game)
+  const stage = game.season.cup?.stages.find((s) =>
+    s.ties.some((t) => !t.result && involves(t, game.userClubId)),
+  )
+  const tie = stage?.ties.find((t) => involves(t, game.userClubId))
+  if (tie && (!league || tie.date < league.date)) return tie
+  return league
+}
+
+/** Whether football goes on: the season has games left and the manager has a job. */
 export const canPlayRound = (game: GameState) =>
-  !isSeasonOver(game.season) && game.career.status === 'empregado'
+  nextMatchDay(game.season) !== undefined && game.career.status === 'empregado'
+
+/** The user's match day, when the calendar has reached it. */
+export function todaysMatchDay(game: GameState): MatchDay | undefined {
+  const day = nextMatchDay(game.season)
+  return canPlayRound(game) && day?.date === game.today && userGameOn(game, day) ? day : undefined
+}
 
 /** Fixtures of the round about to be played, across every league. */
 export function roundFixtures(season: Season, round = season.round): Fixture[] {
@@ -150,15 +219,66 @@ export const matchRng = (game: GameState, fixture: Fixture): Rng =>
 
 export type LiveMatch = { fixture: Fixture; state: MatchState }
 
-/** Every match of the current round, ready to be played minute by minute. */
-export function createRoundMatches(game: GameState): LiveMatch[] {
-  return roundFixtures(game.season).map((fixture) => ({
+/** Every match of the next match day, ready to be played minute by minute. */
+export function createMatchDayMatches(game: GameState): LiveMatch[] {
+  const day = nextMatchDay(game.season)
+  if (!day) throw new Error('The season is over')
+  return dayFixtures(game.season, day).map((fixture) => ({
     fixture,
     state: createMatch(matchInput(game, fixture), matchRng(game, fixture)),
   }))
 }
 
-/** Counts down every ban and injury by one round, dropping the ones that are over. */
+/** The calendar reaches a day: injured players who are fit again return, old bids lapse. */
+function arrive(game: GameState, date: GameDate): GameState {
+  if (date === game.today) return game
+  const injuries = Object.fromEntries(
+    Object.entries(game.season.injuries).filter(([, back]) => back > date),
+  )
+  return {
+    ...game,
+    today: date,
+    season: { ...game.season, injuries },
+    market: dropLapsedOffers(game.market, date),
+  }
+}
+
+/** "Mês de abril", for the payday lines. */
+const monthNote = (date: GameDate) => `Mês de ${MONTH_NAMES[dateParts(date).month - 1]}`
+
+/**
+ * Moves the calendar on to `to`. Each month is paid as the calendar leaves its
+ * 1st day; on Saturdays with no league in a transfer window the market has its
+ * turn too. With `stopOnOffers`, it stops on the day a club bids for one of the
+ * user's players, so the manager can answer before the bid lapses.
+ */
+export function passDays(
+  game: GameState,
+  to: GameDate,
+  stopOnOffers = false,
+): { game: GameState; stopped: boolean } {
+  if (to <= game.today) return { game, stopped: false }
+  const leagueDays = new Set(Object.values(game.season.fixtures)[0]?.map((round) => round[0].date))
+  let next = game
+  for (const day of daysFrom(game.today, to)) {
+    if (dateParts(day).day === 1) {
+      next = arrive(next, day)
+      next = applyPayments(next, payday(next, monthNote(day)))
+    }
+    const tomorrow = addDays(day, 1)
+    if (weekday(tomorrow) === SATURDAY && inTransferWindow(tomorrow) && !leagueDays.has(tomorrow)) {
+      next = arrive(next, tomorrow)
+      const offers = next.market.offers.length
+      next = marketRound(next, createRng(mixSeed(next.world.seed, tomorrow, 'mercado')))
+      if (stopOnOffers && next.market.offers.length > offers && tomorrow < to) {
+        return { game: next, stopped: true }
+      }
+    }
+  }
+  return { game: arrive(next, to), stopped: false }
+}
+
+/** Counts down every ban by one round, dropping the ones that are over. */
 function countDown(record: Record<string, number>): Record<string, number> {
   return Object.fromEntries(
     Object.entries(record)
@@ -167,14 +287,26 @@ function countDown(record: Record<string, number>): Record<string, number> {
   )
 }
 
+const injuryDays = (rng: Rng) => INJURY_DAYS.min + Math.floor(rng.next() ** 2 * INJURY_DAYS.spread)
+
 /**
- * Records the results of the current round and moves on to the next. Red cards
- * ban a player for the next match, three yellows too, and injuries keep a
- * player out for one to five rounds, short ones far more often.
+ * Records the results of the next match day, a league round or a cup stage,
+ * after moving the calendar to it.
  */
-export function applyRound(game: GameState, results: readonly MatchResult[]): GameState {
+export function applyMatchDay(game: GameState, results: readonly MatchResult[]): GameState {
+  const day = nextMatchDay(game.season)
+  if (!day) throw new Error('The season is over')
+  const ready = passDays(game, day.date).game
+  return day.kind === 'liga' ? applyRound(ready, results) : playCup(ready, day.stage, results)
+}
+
+/**
+ * Records the results of the current league round and moves on to the next.
+ * Red cards ban a player for the next league match, three yellows too, and
+ * injuries keep a player out for a week to a month, short ones far more often.
+ */
+function applyRound(game: GameState, results: readonly MatchResult[]): GameState {
   const { season } = game
-  if (isSeasonOver(season)) throw new Error('The season is over')
   const byClubs = new Map(results.map((r) => [`${r.homeId}>${r.awayId}`, r]))
   const index = season.round - 1
 
@@ -190,14 +322,14 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
     }),
   )
 
-  const injuries = countDown(season.injuries)
+  const injuries = { ...season.injuries }
   const appearances = { ...season.appearances }
   const suspensions = countDown(season.suspensions)
   const yellowCards = { ...season.yellowCards }
   const rng = createRng(mixSeed(game.world.seed, season.year, season.round, 'lesoes'))
 
   for (const result of results) {
-    for (const id of result.injured) injuries[id] = 1 + Math.floor(rng.next() ** 2 * 5)
+    for (const id of result.injured) injuries[id] = addDays(game.today, injuryDays(rng))
     const sentOff = new Set(result.sentOff)
     for (const id of sentOff) suspensions[id] = (suspensions[id] ?? 0) + 1
     for (const event of result.events) {
@@ -219,20 +351,11 @@ export function applyRound(game: GameState, results: readonly MatchResult[]): Ga
     ...game,
     season: { ...season, fixtures, injuries, suspensions, yellowCards, appearances },
   }
-  const cup = playCup(recorded)
-  const judged = judgeManager(cup.game, results)
+  const judged = judgeManager(recorded, results)
 
   // Gate money uses the table as it stood before these results.
-  const played = roundFixtures(season)
-  const payments = mergePayments(
-    matchdayPayments(game, played),
-    isPayday(season.round)
-      ? payday(game, 1, `Mês ${season.round / ECONOMY.roundsPerMonth}`)
-      : mergePayments(),
-    cup.payments,
-  )
   const settled = marketRound(
-    applyPayments(judged, payments),
+    applyPayments(judged, matchdayPayments(game, roundFixtures(season))),
     createRng(mixSeed(game.world.seed, season.year, season.round, 'mercado')),
   )
   return { ...settled, season: { ...settled.season, round: season.round + 1 } }
@@ -255,19 +378,22 @@ function countAppearances(
 }
 
 /**
- * The cup stage due after this league round, if any: every tie simulated,
- * injuries carried into the league (cards stay in the cup), prize money for
- * each winner.
+ * A cup stage with its results: level ties go to penalties, injuries carry
+ * into the league (cards stay in the cup), prize money for each winner.
  */
-function playCup(game: GameState): { game: GameState; payments: Payments } {
+function playCup(game: GameState, stage: number, results: readonly MatchResult[]): GameState {
   const { season, world } = game
-  const stage = cupStageAt(season.cup, season.round)
-  if (stage < 0 || !season.cup) return { game, payments: mergePayments() }
+  if (!season.cup) throw new Error('No cup this season')
+  const byClubs = new Map(results.map((r) => [`${r.homeId}>${r.awayId}`, r]))
   const rng = createRng(mixSeed(world.seed, season.year, 'copa', stage))
   const played = playCupStage(
     season.cup,
     stage,
-    (tie) => simulateMatch(matchInput(game, tie), matchRng(game, tie)),
+    (tie) => {
+      const result = byClubs.get(`${tie.homeId}>${tie.awayId}`)
+      if (!result) throw new Error(`No result for ${tie.id}`)
+      return result
+    },
     rng,
   )
   const injuries = { ...season.injuries }
@@ -275,7 +401,8 @@ function playCup(game: GameState): { game: GameState; payments: Payments } {
   for (const result of played.results) {
     countAppearances(game, result, appearances)
     for (const id of result.injured) {
-      injuries[id] = Math.max(injuries[id] ?? 0, 1 + Math.floor(rng.next() ** 2 * 5))
+      const back = addDays(game.today, injuryDays(rng))
+      if (!injuries[id] || injuries[id] < back) injuries[id] = back
     }
   }
   const prize = cupPrize(season.cup, stage)
@@ -283,16 +410,16 @@ function playCup(game: GameState): { game: GameState; payments: Payments } {
   for (const id of played.winners) payments.cash[id] = prize
   if (played.winners.includes(game.userClubId)) {
     payments.entries.push({
-      round: season.round,
+      date: game.today,
       category: 'premiacao',
       amount: prize,
       note: `${CUP_NAME}, ${season.cup.stages[stage].name.toLowerCase()}`,
     })
   }
-  return {
-    game: { ...game, season: { ...season, cup: played.cup, injuries, appearances } },
+  return applyPayments(
+    { ...game, season: { ...season, cup: played.cup, injuries, appearances } },
     payments,
-  }
+  )
 }
 
 /** The board reacts to the user's league result, and sacks the manager when it runs out of patience. */
@@ -368,12 +495,48 @@ export function seasonReview(game: GameState): SeasonReview {
   return { position, target: career.target, confidence, fired, offers }
 }
 
-/** Plays the whole current round at once. */
-export function playRound(game: GameState): GameState {
-  const results = roundFixtures(game.season).map((fixture) =>
-    simulateMatch(matchInput(game, fixture), matchRng(game, fixture)),
+/** Moves the calendar to the next match day and plays all of it at once. */
+export function playMatchDay(game: GameState): GameState {
+  const day = nextMatchDay(game.season)
+  if (!day) throw new Error('The season is over')
+  const ready = passDays(game, day.date).game
+  const results = dayFixtures(ready.season, day).map((fixture) =>
+    simulateMatch(matchInput(ready, fixture), matchRng(ready, fixture)),
   )
-  return applyRound(game, results)
+  return applyMatchDay(ready, results)
+}
+
+/** Plays every match day up to and including the next league round. */
+export function playRound(game: GameState): GameState {
+  let next = game
+  for (let day = nextMatchDay(next.season); day; day = nextMatchDay(next.season)) {
+    next = playMatchDay(next)
+    if (day.kind === 'liga') break
+  }
+  return next
+}
+
+/**
+ * Moves the calendar to the user's next game, playing the match days on the
+ * way that the club sits out. With `stopOnOffers` it stops early on a day a
+ * club bids for one of the user's players.
+ */
+export function advanceToNextGame(game: GameState, stopOnOffers = true): GameState {
+  let next = game
+  for (let day = nextMatchDay(next.season); day; day = nextMatchDay(next.season)) {
+    if (!canPlayRound(next)) break
+    const passed = passDays(next, day.date, stopOnOffers)
+    next = passed.game
+    if (passed.stopped || userGameOn(next, day)) break
+    next = playMatchDay(next)
+  }
+  return next
+}
+
+/** Moves on to the user's next game and plays its whole match day. */
+export function playNextGame(game: GameState): GameState {
+  const ready = advanceToNextGame(game, false)
+  return canPlayRound(ready) ? playMatchDay(ready) : ready
 }
 
 export function leagueStandings(game: GameState, leagueId: string) {
@@ -430,27 +593,20 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   if (moving && !review.offers.includes(nextClubId)) throw new Error('Esse clube não fez proposta.')
   const nextYear = game.season.year + 1
   const prizes = seasonSummary(game).prizes
-  // The months the calendar's paydays didn't reach, then prizes, then contracts running out.
-  const closing = mergePayments(
-    payday(
-      game,
-      ECONOMY.monthsPerYear - monthsInSeason(game.season.totalRounds),
-      'Meses fora da temporada',
-    ),
-    {
-      cash: {},
-      entries: [
-        {
-          round: game.season.round,
-          category: 'premiacao',
-          amount: prizes[game.userClubId] ?? 0,
-          note: `Premiação da temporada ${game.season.year}`,
-        },
-      ],
-    },
-  )
+  // December goes by with its wages paid, then prizes, then contracts running out.
+  const december = passDays(game, dateOf(game.season.year, 12, 31)).game
   const seed = (label: string) => createRng(mixSeed(game.world.seed, game.season.year, label))
-  const settled = applyPayments(game, closing)
+  const settled = applyPayments(december, {
+    cash: {},
+    entries: [
+      {
+        date: december.today,
+        category: 'premiacao',
+        amount: prizes[game.userClubId] ?? 0,
+        note: `Premiação da temporada ${game.season.year}`,
+      },
+    ],
+  })
   const aged = ageWorld(settled.world, game.season.appearances, seed('idade'))
   const listed = Object.fromEntries(
     Object.entries(settled.market.listed).filter(
@@ -509,6 +665,7 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   const career = newCareer(nextWorld, nextClubId, careerHistory)
   return {
     ...paid,
+    today: seasonStart(nextYear),
     world: nextWorld,
     season: startSeason(nextWorld),
     ledger: [],

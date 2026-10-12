@@ -1,9 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { createRng } from '../rng.ts'
+import { seasonDates } from './calendar.ts'
+import { CUP_ROUNDS } from './cup.ts'
 import { createSchedule } from './schedule.ts'
 
 const clubs = Array.from({ length: 20 }, (_, i) => `C${i + 1}`)
-const rounds = createSchedule('L1', clubs, createRng(1))
+const dates = seasonDates(2027, 38, CUP_ROUNDS).league
+const rounds = createSchedule('L1', clubs, createRng(1), dates)
 
 describe('createSchedule', () => {
   it('has 38 rounds of 10 matches with every club playing once per round', () => {
@@ -12,7 +15,10 @@ describe('createSchedule', () => {
       expect(round).toHaveLength(10)
       const playing = round.flatMap((f) => [f.homeId, f.awayId])
       expect(new Set(playing).size).toBe(20)
-      for (const fixture of round) expect(fixture.round).toBe(index + 1)
+      for (const fixture of round) {
+        expect(fixture.round).toBe(index + 1)
+        expect(fixture.date).toBe(dates[index])
+      }
     }
   })
 
@@ -45,7 +51,7 @@ describe('createSchedule', () => {
   })
 
   it('is reproducible from the seed and varies between seeds', () => {
-    expect(createSchedule('L1', clubs, createRng(1))).toEqual(rounds)
-    expect(createSchedule('L1', clubs, createRng(2))).not.toEqual(rounds)
+    expect(createSchedule('L1', clubs, createRng(1), dates)).toEqual(rounds)
+    expect(createSchedule('L1', clubs, createRng(2), dates)).not.toEqual(rounds)
   })
 })

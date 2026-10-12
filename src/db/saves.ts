@@ -10,6 +10,8 @@ export type SaveSlot = {
   clubName: string
   year: number
   round: number
+  /** The career's date; slots written before the calendar have none. */
+  today?: string
   seasonOver: boolean
   updatedAt: number
   game: GameState
@@ -37,6 +39,7 @@ function slotOf(id: string, game: GameState): SaveSlot {
     clubName: game.world.clubs[game.userClubId].name,
     year: game.season.year,
     round: game.season.round,
+    today: game.today,
     seasonOver: isSeasonOver(game.season),
     updatedAt: Date.now(),
     game,

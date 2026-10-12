@@ -1,12 +1,14 @@
 import type { GameState } from '../engine/model/types.ts'
-import type { SimulateRequest, SimulateResponse } from './season.worker.ts'
+import type { SimulateAction, SimulateRequest, SimulateResponse } from './season.worker.ts'
 
 let worker: Worker | undefined
 let nextId = 0
 const pending = new Map<number, (game: GameState) => void>()
 
-/** Plays up to `rounds` rounds off the main thread, so the screen never freezes. */
-export function simulateRounds(game: GameState, rounds: number): Promise<GameState> {
+export type { SimulateAction }
+
+/** Moves the calendar on off the main thread, so the screen never freezes. */
+export function simulate(game: GameState, action: SimulateAction): Promise<GameState> {
   if (!worker) {
     worker = new Worker(new URL('./season.worker.ts', import.meta.url), { type: 'module' })
     worker.onmessage = (event: MessageEvent<SimulateResponse>) => {
@@ -17,6 +19,6 @@ export function simulateRounds(game: GameState, rounds: number): Promise<GameSta
   const id = nextId++
   return new Promise((resolve) => {
     pending.set(id, resolve)
-    worker!.postMessage({ id, game, rounds } satisfies SimulateRequest)
+    worker!.postMessage({ id, game, action } satisfies SimulateRequest)
   })
 }

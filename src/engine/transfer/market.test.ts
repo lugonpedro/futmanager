@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { FREE_AGENT, type GameState, type Player } from '../model/types.ts'
 import { createRng } from '../rng.ts'
+import { addDays } from '../season/calendar.ts'
 import { newGame, playRound } from '../season/season.ts'
 import {
   acceptOffer,
@@ -8,6 +9,7 @@ import {
   canLeave,
   checkSigning,
   closeContracts,
+  dropLapsedOffers,
   listPlayer,
   MARKET,
   marketRound,
@@ -79,6 +81,23 @@ describe('signing a player', () => {
     expect(signed.ledger).toEqual(game.ledger)
   })
 
+  it('signs club players only in a transfer window, free agents any day', () => {
+    const { game, free } = withFreeAgent()
+    const may = { ...game, today: '2027-05-10' }
+    const verdict = checkSigning(may, target.id, fairBid(may, target))
+    expect(verdict).toMatchObject({ ok: false, reason: expect.stringContaining('Janela') })
+    expect(checkSigning(may, free.id, fairBid(may, free)).ok).toBe(true)
+    const july = { ...game, today: '2027-07-20' }
+    expect(checkSigning(july, target.id, fairBid(july, target)).ok).toBe(true)
+  })
+
+  it("draws no bids for the user's players with the window shut", () => {
+    const cheap = squadOf(start.world, user)[0]
+    let game = listPlayer({ ...start, today: '2027-05-10' }, cheap.id, 10_000)
+    for (let round = 0; round < 12; round++) game = marketRound(game, createRng(round))
+    expect(game.market.offers).toEqual([])
+  })
+
   it('wants more to step down to a smaller club', () => {
     const clubs = Object.values(start.world.clubs).sort((a, b) => a.reputation - b.reputation)
     const player = squadOf(start.world, clubs[20].id)[0]
@@ -112,7 +131,7 @@ describe('selling', () => {
   const player = squadOf(start.world, user).find((p) => p.position === 'M')!
   const listed = listPlayer(start, player.id, player.marketValue)
 
-  it('draws bids for listed players, which lapse after a round', () => {
+  it('draws bids for listed players, which lapse after a week', () => {
     let game = listed
     let bids = 0
     for (let round = 0; round < 12 && bids === 0; round++) {
@@ -122,15 +141,21 @@ describe('selling', () => {
     expect(bids).toBeGreaterThan(0)
     const offer = game.market.offers.find((o) => o.playerId === player.id)!
     expect(offer.fee).toBeGreaterThan(player.marketValue * 0.8)
-    const later = marketRound(
-      { ...game, season: { ...game.season, round: game.season.round + 1 } },
-      createRng(999),
-    )
-    expect(later.market.offers.some((o) => o.id === offer.id)).toBe(false)
+    expect(offer.expires).toBe(addDays(game.today, MARKET.offerDays))
+    expect(dropLapsedOffers(game.market, offer.expires).offers).toContain(offer)
+    const later = dropLapsedOffers(game.market, addDays(offer.expires, 1))
+    expect(later.offers.some((o) => o.id === offer.id)).toBe(false)
   })
 
   it('sells on accepting a bid and drops it on rejecting', () => {
-    const offer = { id: 'x', playerId: player.id, clubId: 'C2', fee: 5_000_000, round: 1 }
+    const offer = {
+      id: 'x',
+      playerId: player.id,
+      clubId: 'C2',
+      fee: 5_000_000,
+      date: start.today,
+      expires: addDays(start.today, MARKET.offerDays),
+    }
     const game = { ...listed, market: { ...listed.market, offers: [offer] } }
     const sold = acceptOffer(game, 'x')
     expect(sold.world.players[player.id].clubId).toBe('C2')
@@ -174,6 +199,7 @@ describe('contracts', () => {
   it('keeps the market going through a season of rounds', () => {
     let game = listPlayer(start, squadOf(start.world, user)[3].id, 1_000_000)
     for (let i = 0; i < 6; i++) game = playRound(game)
-    expect(game.market.offers.every((o) => o.round === game.season.round - 1)).toBe(true)
+    // In May the window is shut: no bids, and the ones from January are long gone.
+    expect(game.market.offers).toEqual([])
   })
 })

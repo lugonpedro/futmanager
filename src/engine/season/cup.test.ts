@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { generateWorld } from '../generate/world.ts'
 import type { GameState } from '../model/types.ts'
 import { createRng } from '../rng.ts'
+import { seasonDates, weekday, WEDNESDAY } from './calendar.ts'
 import {
   createCup,
   CUP_ROUNDS,
@@ -15,7 +16,8 @@ import { isSeasonOver, newGame, playRound } from './season.ts'
 
 describe('the cup draw', () => {
   const world = generateWorld(1)
-  const cup = createCup(Object.values(world.clubs), createRng(2))
+  const dates = seasonDates(2027, 38, CUP_ROUNDS).cup
+  const cup = createCup(Object.values(world.clubs), createRng(2), dates)
 
   it('has the 16 smallest of 40 clubs play a first round while the rest wait', () => {
     expect(cup.stages.map((s) => s.name)).toEqual([
@@ -27,6 +29,9 @@ describe('the cup draw', () => {
       'Final',
     ])
     expect(cup.stages.map((s) => s.round)).toEqual(CUP_ROUNDS)
+    expect(cup.stages.map((s) => s.date)).toEqual(dates)
+    for (const stage of cup.stages) expect(weekday(stage.date)).toBe(WEDNESDAY)
+    for (const tie of cup.stages[0].ties) expect(tie.date).toBe(dates[0])
     expect(cup.stages[0].ties).toHaveLength(8)
     expect(cup.byes).toHaveLength(24)
     const smallest = Math.min(...cup.byes.map((id) => world.clubs[id].reputation))

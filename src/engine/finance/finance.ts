@@ -7,7 +7,7 @@ import type {
   World,
 } from '../model/types.ts'
 import { standings } from '../season/standings.ts'
-import { ECONOMY, monthlySponsorship, attendance } from './economy.ts'
+import { monthlySponsorship, attendance } from './economy.ts'
 
 /** Money moved by one step of the calendar: per-club cash changes and the user's ledger lines. */
 export type Payments = { cash: Record<string, number>; entries: LedgerEntry[] }
@@ -43,7 +43,7 @@ export function matchdayPayments(game: GameState, fixtures: readonly Fixture[]):
     add(payments, home.id, revenue)
     if (home.id === userClubId) {
       payments.entries.push({
-        round: game.season.round,
+        date: game.today,
         category: 'bilheteria',
         amount: revenue,
         note: `Público de ${crowd.toLocaleString('pt-BR')} contra ${world.clubs[fixture.awayId].name}`,
@@ -53,30 +53,24 @@ export function matchdayPayments(game: GameState, fixtures: readonly Fixture[]):
   return payments
 }
 
-/** Wages out and sponsorship in, for every club, for the given number of months. */
-export function payday(game: GameState, months: number, note: string): Payments {
+/** Wages out and sponsorship in, for every club, for the month starting today. */
+export function payday(game: GameState, note: string): Payments {
   const { world, userClubId } = game
   const payments = emptyPayments()
   for (const club of Object.values(world.clubs)) {
-    const wages = wageBill(world, club) * months
-    const sponsor = monthlySponsorship(club) * months
+    const wages = wageBill(world, club)
+    const sponsor = monthlySponsorship(club)
     add(payments, club.id, sponsor - wages)
     if (club.id === userClubId) {
-      const round = game.season.round
+      const date = game.today
       payments.entries.push(
-        { round, category: 'salarios', amount: -wages, note },
-        { round, category: 'patrocinio', amount: sponsor, note },
+        { date, category: 'salarios', amount: -wages, note },
+        { date, category: 'patrocinio', amount: sponsor, note },
       )
     }
   }
   return payments
 }
-
-export const isPayday = (round: number) => round % ECONOMY.roundsPerMonth === 0
-
-/** Months a season's paydays cover, so the close can pay the rest of the year. */
-export const monthsInSeason = (totalRounds: number) =>
-  Math.floor(totalRounds / ECONOMY.roundsPerMonth)
 
 export function mergePayments(...all: Payments[]): Payments {
   const merged = emptyPayments()

@@ -13,6 +13,7 @@ import {
   type World,
 } from '../model/types.ts'
 import type { Rng } from '../rng.ts'
+import { addDays, transferWindowAt, type GameDate } from '../season/calendar.ts'
 
 export const MARKET = {
   minSquad: 18,
@@ -27,6 +28,8 @@ export const MARKET = {
   /** Raise a player wants to sign anywhere new, and to renew where he is. */
   moveRaise: 0.15,
   renewRaise: 0.05,
+  /** Days a bid for the user's player stands, unless the window closes first. */
+  offerDays: 7,
   /** Chance per round that a club short of players goes shopping. */
   aiBuyChance: 0.3,
   /** An AI club spends at most this share of its cash on a signing plus a year of wages. */
@@ -137,7 +140,7 @@ function withNews(
 ) {
   const news = {
     season: game.season.year,
-    round: game.season.round,
+    date: game.today,
     playerId,
     fromClubId,
     toClubId,
@@ -164,6 +167,12 @@ export function checkSigning(game: GameState, playerId: string, bid: Bid): Verdi
   }
   if (club.playerIds.length >= MARKET.maxSquad) {
     return { ok: false, reason: `Seu elenco já tem ${MARKET.maxSquad} jogadores.` }
+  }
+  if (player.clubId !== FREE_AGENT && !transferWindowAt(game.today)) {
+    return {
+      ok: false,
+      reason: 'Janela de transferências fechada: só dá para contratar jogador sem clube.',
+    }
   }
   if (!canLeave(world, player)) {
     return { ok: false, reason: `${world.clubs[player.clubId].name} não pode liberar o jogador.` }
@@ -197,7 +206,7 @@ export function signPlayer(game: GameState, playerId: string, bid: Bid): GameSta
       ? [
           ...game.ledger,
           {
-            round: game.season.round,
+            date: game.today,
             category: 'compras' as const,
             amount: -bid.fee,
             note: `${player.name} (${from === FREE_AGENT ? 'sem clube' : game.world.clubs[from].name})`,
@@ -245,7 +254,7 @@ export function acceptOffer(game: GameState, offerId: string): GameState {
     ledger: [
       ...game.ledger,
       {
-        round: game.season.round,
+        date: game.today,
         category: 'vendas',
         amount: offer.fee,
         note: `${player.name} para ${world.clubs[offer.clubId].name}`,
@@ -354,10 +363,13 @@ function aiSign(
   const { world } = game
   const club = world.clubs[clubId]
   const budget = club.cash * MARKET.aiSpendShare
+  // Out of the windows only free agents can sign; the close of a season opens the next one.
+  const windowOpen = fromYear > game.season.year || transferWindowAt(game.today) !== undefined
   const candidates = Object.values(world.players).filter((p) => {
     if (p.position !== position || p.clubId === clubId || p.clubId === game.userClubId) return false
     if (p.clubId === RETIRED) return false
     if (p.clubId === FREE_AGENT) return true
+    if (!windowOpen) return false
     const seller = squadOf(world, p.clubId)
     return countAt(seller, position) > SQUAD_SHAPE[position] && canLeave(world, p)
   })
@@ -434,10 +446,14 @@ const aiClubIds = (game: GameState) =>
     .filter((id) => id !== game.userClubId)
     .sort()
 
-/** AI clubs bid for the user's players: often for listed ones, now and then for a star. */
+/** AI clubs bid for the user's players while a window is open: often for listed ones, now and then for a star. */
 function aiBids(game: GameState, rng: Rng): TransferOffer[] {
-  const { world, userClubId, season } = game
+  const { world, userClubId, today } = game
   const offers: TransferOffer[] = []
+  const window = transferWindowAt(today)
+  if (!window) return offers
+  const lastDay = addDays(today, MARKET.offerDays)
+  const expires = lastDay < window.to ? lastDay : window.to
   const buyers = (fee: number) =>
     aiClubIds(game).filter(
       (id) =>
@@ -450,11 +466,12 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
     )
     if (clubs.length === 0) return
     offers.push({
-      id: `${season.year}-${season.round}-${player.id}-${offers.length}`,
+      id: `${today}-${player.id}-${offers.length}`,
       playerId: player.id,
       clubId: rng.pick(clubs),
       fee,
-      round: season.round,
+      date: today,
+      expires,
     })
   }
 
@@ -477,15 +494,15 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
   return offers
 }
 
-/** The market's turn after a round: old bids lapse, AI clubs fill gaps and bid for the user's players. */
+/** Bids still standing on a day. */
+export const dropLapsedOffers = (market: GameState['market'], date: GameDate) => ({
+  ...market,
+  offers: market.offers.filter((o) => o.expires >= date),
+})
+
+/** The market's turn: AI clubs fill gaps and, in a window, bid for the user's players. */
 export function marketRound(game: GameState, rng: Rng): GameState {
-  let next: GameState = {
-    ...game,
-    market: {
-      ...game.market,
-      offers: game.market.offers.filter((o) => o.round >= game.season.round),
-    },
-  }
+  let next = game
   for (const clubId of aiClubIds(next)) {
     const squad = squadOf(next.world, clubId)
     const position = neededPosition(squad)

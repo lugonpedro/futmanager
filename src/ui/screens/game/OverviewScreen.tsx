@@ -1,28 +1,38 @@
 import { useState } from 'react'
-import { FastForwardIcon, PlayIcon } from 'lucide-react'
+import { CalendarClockIcon, FastForwardIcon, PlayIcon } from 'lucide-react'
 import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { objectiveText, takeJob } from '../../../engine/career/board.ts'
 import type { Fixture, GameState } from '../../../engine/model/types.ts'
-import { CUP_NAME, cupProgress, nextCupTie, tieWinner } from '../../../engine/season/cup.ts'
+import { daysBetween } from '../../../engine/season/calendar.ts'
+import { CUP_ID, CUP_NAME, cupProgress, nextCupTie, tieWinner } from '../../../engine/season/cup.ts'
 import {
   clubLineup,
   isSeasonOver,
   leagueOf,
   leagueScorers,
   leagueStandings,
+  nextUserGame,
+  roundDate,
   seasonReview,
   seasonSummary,
   startNextSeason,
-  userFixture,
+  todaysMatchDay,
 } from '../../../engine/season/season.ts'
 import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
-import { simulateRounds } from '../../../worker/simulate.ts'
+import { simulate, type SimulateAction } from '../../../worker/simulate.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ConfidenceBar } from '../../components/Confidence.tsx'
-import { divisionName, formatMoney, POSTURE_NAMES } from '../../format.ts'
+import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
+import {
+  divisionName,
+  formatDayDate,
+  formatDayMonth,
+  formatMoney,
+  POSTURE_NAMES,
+} from '../../format.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 
@@ -83,11 +93,21 @@ function JobOffers(props: { game: GameState; offers: string[]; onPick: (clubId: 
   )
 }
 
+/** "Série A, 5ª rodada" or "Copa Nacional, oitavas de final". */
+function competitionOf(game: GameState, fixture: Fixture): string {
+  if (fixture.leagueId === CUP_ID) {
+    const stage = game.season.cup!.stages.find((s) => s.ties.some((t) => t.id === fixture.id))!
+    return `${CUP_NAME}, ${stage.name.toLowerCase()}`
+  }
+  return `${divisionName(game.world.clubs[game.userClubId].division)}, ${fixture.round}ª rodada`
+}
+
 function NextRound({ game }: { game: GameState }) {
   const setGame = useGameStore((s) => s.setGame)
   const [busy, setBusy] = useState(false)
   const { season, world, userClubId } = game
-  const fixture = userFixture(game)
+  const fixture = nextUserGame(game)
+  const matchDay = todaysMatchDay(game) !== undefined
   const leagueId = leagueOf(world, userClubId)
   const table = leagueStandings(game, leagueId)
   const position = table.findIndex((row) => row.clubId === userClubId) + 1
@@ -95,14 +115,20 @@ function NextRound({ game }: { game: GameState }) {
   const lineup = clubLineup(game, userClubId)
   const squad = new Set(world.clubs[userClubId].playerIds)
   const out = [
-    ...Object.entries(season.injuries).map(([id, rounds]) => ({ id, rounds, why: 'lesionado' })),
-    ...Object.entries(season.suspensions).map(([id, rounds]) => ({ id, rounds, why: 'suspenso' })),
+    ...Object.entries(season.injuries).map(([id, back]) => ({
+      id,
+      text: `lesionado, volta em ${formatDayMonth(back)}`,
+    })),
+    ...Object.entries(season.suspensions).map(([id, rounds]) => ({
+      id,
+      text: `suspenso por ${rounds} ${rounds === 1 ? 'rodada' : 'rodadas'}`,
+    })),
   ].filter(({ id }) => squad.has(id))
 
-  const simulate = async (rounds: number) => {
+  const run = async (action: SimulateAction) => {
     setBusy(true)
     try {
-      setGame(await simulateRounds(game, rounds))
+      setGame(await simulate(game, action))
     } finally {
       setBusy(false)
     }
@@ -112,14 +138,22 @@ function NextRound({ game }: { game: GameState }) {
     <div className="grid gap-4 md:grid-cols-2">
       <Card className="gap-3 px-4 md:col-span-2">
         <h2 className="text-sm text-muted-foreground">
-          Próximo jogo · rodada {season.round} de {season.totalRounds}
+          {matchDay ? 'Hoje tem jogo' : `Hoje é ${formatDayDate(game.today)}`}
         </h2>
         {fixture && (
-          <div className="text-lg">
-            <FixtureLine fixture={fixture} world={world} userClubId={userClubId} />
-          </div>
+          <>
+            <p className="text-sm">
+              {matchDay ? 'Jogo de hoje' : 'Próximo jogo'}:{' '}
+              <span className="font-semibold">{formatDayDate(fixture.date)}</span>,{' '}
+              {competitionOf(game, fixture)}
+              {!matchDay && ` (em ${daysBetween(game.today, fixture.date)} dias)`}
+            </p>
+            <div className="text-lg">
+              <FixtureLine fixture={fixture} world={world} userClubId={userClubId} />
+            </div>
+          </>
         )}
-        <CupLine game={game} />
+        <CupLine game={game} shown={fixture} />
         <p className="text-sm text-muted-foreground">
           Escalação: {lineup.formation}, postura {POSTURE_NAMES[lineup.posture].toLowerCase()}.{' '}
           <Link to="/jogo/time" className="text-primary underline">
@@ -127,17 +161,24 @@ function NextRound({ game }: { game: GameState }) {
           </Link>
         </p>
         <div className="flex flex-wrap gap-2">
-          <Button asChild className={busy ? 'pointer-events-none opacity-50' : undefined}>
-            <Link to="/jogo/partida">
-              <PlayIcon />
-              Jogar ao vivo
-            </Link>
-          </Button>
-          <Button variant="outline" disabled={busy} onClick={() => simulate(1)}>
+          {matchDay ? (
+            <Button asChild className={busy ? 'pointer-events-none opacity-50' : undefined}>
+              <Link to="/jogo/partida">
+                <PlayIcon />
+                Jogar ao vivo
+              </Link>
+            </Button>
+          ) : (
+            <Button disabled={busy} onClick={() => run('advance')}>
+              <CalendarClockIcon />
+              Avançar até o próximo jogo
+            </Button>
+          )}
+          <Button variant="outline" disabled={busy} onClick={() => run('play')}>
             <FastForwardIcon />
-            Simular rodada
+            Simular jogo
           </Button>
-          <Button variant="outline" disabled={busy} onClick={() => simulate(season.totalRounds)}>
+          <Button variant="outline" disabled={busy} onClick={() => run('season')}>
             Simular até o fim da temporada
           </Button>
           {busy && <span className="self-center text-sm text-muted-foreground">Simulando...</span>}
@@ -170,12 +211,11 @@ function NextRound({ game }: { game: GameState }) {
           <p className="text-sm text-muted-foreground">Elenco completo.</p>
         ) : (
           <ul className="text-sm">
-            {out.map(({ id, rounds, why }) => (
-              <li key={`${id}-${why}`}>
+            {out.map(({ id, text }) => (
+              <li key={`${id}-${text}`}>
                 {world.players[id].name}{' '}
                 <span className="text-muted-foreground">
-                  ({world.players[id].position}), {why}, volta em {rounds}{' '}
-                  {rounds === 1 ? 'rodada' : 'rodadas'}
+                  ({world.players[id].position}), {text}
                 </span>
               </li>
             ))}
@@ -185,10 +225,14 @@ function NextRound({ game }: { game: GameState }) {
 
       <Card className="gap-2 px-4">
         <h2 className="font-semibold">
-          {lastRound.length ? `Resultados da rodada ${season.round - 1}` : 'Primeira rodada'}
+          {lastRound.length
+            ? `Resultados da rodada ${season.round - 1}, ${formatDayMonth(roundDate(season, season.round - 1)!)}`
+            : 'Primeira rodada'}
         </h2>
         {lastRound.length === 0 ? (
-          <p className="text-sm text-muted-foreground">A temporada {season.year} vai começar.</p>
+          <p className="text-sm text-muted-foreground">
+            A temporada {season.year} começa em {formatDayDate(roundDate(season, 1)!)}.
+          </p>
         ) : (
           <ul className="flex flex-col gap-1">
             {lastRound.map((f) => (
@@ -246,6 +290,11 @@ function SeasonEnd({ game }: { game: GameState }) {
             Confiança da diretoria: {review.confidence}%.
           </p>
         )}
+        <p className="text-sm text-muted-foreground">
+          O último jogo foi em {formatDayDate(game.today)}. Ao seguir, dezembro passa, os contratos
+          vencem e a temporada {summary.year + 1} começa em 1º de janeiro, com a janela de
+          transferências aberta.
+        </p>
         {!review.fired && <ExpiringWarning game={game} />}
         {review.offers.length > 0 && (
           <>
@@ -318,27 +367,30 @@ function ClubList(props: { title: string; ids: string[]; game: GameState }) {
   )
 }
 
-/** The user's cup tie for midweek, if one follows this round. */
-function CupLine({ game }: { game: GameState }) {
+/** The user's cup tie already drawn, when the next game shown is another one. */
+function CupLine({ game, shown }: { game: GameState; shown?: Fixture }) {
   const { season, world, userClubId } = game
   const tie = nextCupTie(season.cup, userClubId)
-  if (!tie || tie.round !== season.round) return null
+  if (!tie || tie.id === shown?.id) return null
   const stage = season.cup!.stages.find((s) => s.ties.includes(tie))!
   const home = tie.homeId === userClubId
   return (
     <p className="flex flex-wrap items-center gap-1 text-sm">
-      No meio da semana, {CUP_NAME} ({stage.name.toLowerCase()}), {home ? 'em casa' : 'fora'} contra{' '}
+      Depois, {formatDayDate(tie.date)}, {CUP_NAME} ({stage.name.toLowerCase()}),{' '}
+      {home ? 'em casa' : 'fora'} contra{' '}
       <ClubName club={world.clubs[home ? tie.awayId : tie.homeId]} />
     </p>
   )
 }
 
-/** The user's cup tie played after the last round, if there was one. */
+/** The user's cup tie of the last week or so, if there was one. */
 function LastCupTie({ game }: { game: GameState }) {
   const { season, world, userClubId } = game
-  const stage = season.cup?.stages.find((s) => s.round === season.round - 1)
+  const stage = season.cup?.stages.findLast(
+    (s) => s.ties[0]?.result && daysBetween(s.date, game.today) <= 10,
+  )
   const tie: Fixture | undefined = stage?.ties.find(
-    (t) => t.result && (t.homeId === userClubId || t.awayId === userClubId),
+    (t) => t.homeId === userClubId || t.awayId === userClubId,
   )
   if (!stage || !tie) return null
   return (
@@ -428,21 +480,27 @@ function expiringPlayers(game: GameState) {
   return squadOf(game.world, game.userClubId).filter((p) => p.contractUntil <= game.season.year)
 }
 
-/** Things that need the manager: bids waiting, contracts running out, money running out. */
+/** Things that need the manager: the transfer window, bids, contracts and money running out. */
 function Notices({ game }: { game: GameState }) {
-  const offers = game.market.offers.length
+  const offers = game.market.offers
   const expiring = expiringPlayers(game).length
   const cash = game.world.clubs[game.userClubId].cash
   const shaky = game.career.confidence < 25
-  if (offers === 0 && expiring === 0 && cash >= 0 && !shaky) return null
+  const firstToLapse = offers.map((o) => o.expires).sort()[0]
+  const urgent = offers.length > 0 || expiring > 0 || cash < 0 || shaky
   return (
-    <Card className="gap-1 border-highlight px-4 md:col-span-2">
-      {offers > 0 && (
+    <Card className={`gap-1 px-4 md:col-span-2 ${urgent ? 'border-highlight' : ''}`}>
+      <TransferWindowNote today={game.today} className="text-sm" />
+      {offers.length > 0 && (
         <p className="text-sm">
           <Link to="/jogo/mercado/propostas" className="font-semibold text-primary underline">
-            {offers} {offers === 1 ? 'proposta' : 'propostas'}
+            {offers.length} {offers.length === 1 ? 'proposta' : 'propostas'}
           </Link>{' '}
-          por jogadores seus, válidas até a próxima rodada.
+          por jogadores seus;{' '}
+          {offers.length === 1
+            ? `vale até ${formatDayMonth(firstToLapse)}`
+            : `a primeira vence em ${formatDayMonth(firstToLapse)}`}
+          .
         </p>
       )}
       {expiring > 0 && (

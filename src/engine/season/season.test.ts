@@ -1,24 +1,31 @@
 import { describe, expect, it } from 'vitest'
 import { monthlySponsorship } from '../finance/economy.ts'
-import { monthsInSeason, wageBill } from '../finance/finance.ts'
+import { wageBill } from '../finance/finance.ts'
 import { autoLineup } from '../match/lineup.ts'
 import { matchResult, playMinute } from '../match/simulate.ts'
 import type { GameState, MatchResult } from '../model/types.ts'
+import { addDays, daysFrom, seasonStart } from './calendar.ts'
 import {
-  applyRound,
+  advanceToNextGame,
+  applyMatchDay,
   clubLineup,
-  createRoundMatches,
+  createMatchDayMatches,
+  INJURY_DAYS,
   isSeasonOver,
   leagueScorers,
   leagueStandings,
   matchInput,
   newGame,
+  nextUserGame,
   PROMOTION_SPOTS,
+  playNextGame,
   playRound,
   prizeMoney,
+  roundDate,
   roundFixtures,
   seasonSummary,
   startNextSeason,
+  todaysMatchDay,
   unavailablePlayers,
   userFixture,
   YELLOWS_FOR_SUSPENSION,
@@ -59,9 +66,9 @@ describe('a season', () => {
   })
 
   it('gives the same results whether a round is watched live or simulated', () => {
-    const live = createRoundMatches(start)
+    const live = createMatchDayMatches(start)
     for (const { state } of live) while (!state.finished) playMinute(state)
-    const watched = applyRound(
+    const watched = applyMatchDay(
       start,
       live.map(({ state }) => matchResult(state)),
     )
@@ -78,6 +85,55 @@ describe('a season', () => {
       ids.reduce((sum, id) => sum + finished.world.clubs[id].reputation, 0) / ids.length
     const ids = table.map((row) => row.clubId)
     expect(reputation(ids.slice(0, 5))).toBeGreaterThan(reputation(ids.slice(-5)))
+  })
+})
+
+describe('the calendar', () => {
+  const firstRound = roundDate(start.season)!
+
+  it('starts the career on the first day of the year', () => {
+    expect(start.today).toBe(seasonStart(2027))
+    expect(todaysMatchDay(start)).toBeUndefined()
+    expect(nextUserGame(start)?.date).toBe(firstRound)
+  })
+
+  it('advances to the first game, paying each month on the way', () => {
+    let game = start
+    while (!todaysMatchDay(game)) game = advanceToNextGame(game)
+    expect(game.today).toBe(firstRound)
+    expect(game.season.round).toBe(1)
+    const paydays = game.ledger.filter((e) => e.category === 'salarios').map((e) => e.date)
+    expect(paydays).toEqual(['2027-01-01', '2027-02-01', '2027-03-01', '2027-04-01'])
+  })
+
+  it('stops early when a club bids for a listed player', () => {
+    const player = start.world.clubs[start.userClubId].playerIds[5]
+    const listed = { ...start, market: { ...start.market, listed: { [player]: 10_000 } } }
+    const stopped = advanceToNextGame(listed)
+    expect(stopped.today < '2027-02-01').toBe(true)
+    expect(stopped.market.offers.length).toBeGreaterThan(0)
+    expect(todaysMatchDay(stopped)).toBeUndefined()
+  })
+
+  it('plays the cup days the club sits out on the way to its next game', () => {
+    let game = newGame(2027, 'C1')
+    for (let i = 0; i < 5; i++) game = playRound(game)
+    expect(game.season.cup!.stages[0].ties.every((t) => !t.result)).toBe(true)
+    const next = advanceToNextGame(game, false)
+    expect(next.season.cup!.stages[0].ties.every((t) => t.result)).toBe(true)
+    expect(next.today).toBe(roundDate(next.season, 6))
+    expect(todaysMatchDay(next)?.kind).toBe('liga')
+  })
+
+  it("plays the user's cup tie as a match day of its own", () => {
+    let game = newGame(2027, 'C40')
+    for (let i = 0; i < 5; i++) game = playRound(game)
+    const tie = nextUserGame(game)!
+    expect(tie.leagueId).toBe('COPA')
+    const played = playNextGame(game)
+    expect(played.today).toBe(tie.date)
+    expect(played.season.round).toBe(6)
+    expect(played.season.cup!.stages[0].ties.find((t) => t.id === tie.id)?.result).toBeDefined()
   })
 })
 
@@ -119,9 +175,9 @@ describe('bans and injuries', () => {
   const [first, second] = start.world.clubs[fixture.homeId].playerIds
 
   it('bans a sent-off player for the next round only', () => {
-    const afterRed = applyRound(start, result({ sentOff: [first] }))
+    const afterRed = applyMatchDay(start, result({ sentOff: [first] }))
     expect(unavailablePlayers(afterRed.season).has(first)).toBe(true)
-    const lineup = createRoundMatches(afterRed)
+    const lineup = createMatchDayMatches(afterRed)
       .flatMap(({ state }) => [...state.home.onPitch, ...state.away.onPitch])
       .map((p) => p.player.id)
     expect(lineup).not.toContain(first)
@@ -145,18 +201,23 @@ describe('bans and injuries', () => {
     }
     let game = start
     for (let i = 1; i < YELLOWS_FOR_SUSPENSION; i++) {
-      game = applyRound(game, yellow(game))
+      game = applyMatchDay(game, yellow(game))
       expect(game.season.suspensions[second]).toBeUndefined()
     }
-    game = applyRound(game, yellow(game))
+    game = applyMatchDay(game, yellow(game))
     expect(game.season.suspensions[second]).toBe(1)
     expect(game.season.yellowCards[second]).toBeUndefined()
   })
 
-  it('keeps injured players out for one to five rounds', () => {
-    const game = applyRound(start, result({ injured: [first] }))
-    expect(game.season.injuries[first]).toBeGreaterThanOrEqual(1)
-    expect(game.season.injuries[first]).toBeLessThanOrEqual(5)
+  it('keeps injured players out for a week to a month, then lets them back', () => {
+    let game = applyMatchDay(start, result({ injured: [first] }))
+    const back = game.season.injuries[first]
+    expect(back > addDays(game.today, INJURY_DAYS.min - 1)).toBe(true)
+    expect(back <= addDays(game.today, INJURY_DAYS.min + INJURY_DAYS.spread)).toBe(true)
+    // Out for at least the next weekend's round.
+    expect(back > addDays(game.today, 7)).toBe(true)
+    while (game.today < back) game = playRound(game)
+    expect(game.season.injuries[first]).toBeUndefined()
   })
 })
 
@@ -188,7 +249,9 @@ describe('end of season', () => {
     expect(prizeMoney(1, 20, 20)).toBeGreaterThan(prizeMoney(2, 1, 20) / 4)
     // The user's club makes no deals at the close, so its cash moves by prize and the last wages only.
     const user = finished.world.clubs[finished.userClubId]
-    const closingMonths = 12 - monthsInSeason(finished.season.totalRounds)
+    const closingMonths = daysFrom(finished.today, '2027-12-31').filter((d) =>
+      d.endsWith('-01'),
+    ).length
     expect(next.world.clubs[user.id].cash).toBe(
       user.cash +
         summary.prizes[user.id] +
@@ -207,6 +270,7 @@ describe('end of season', () => {
 
   it('starts a fresh season with a new calendar', () => {
     expect(next.season).toMatchObject({ year: 2028, round: 1, injuries: {}, suspensions: {} })
+    expect(next.today).toBe(seasonStart(2028))
     expect(next.world.season).toBe(2028)
     expect(next.history).toEqual([expect.objectContaining(summary)])
     expect(next.ledger).toEqual([])
@@ -236,7 +300,7 @@ describe('lineups', () => {
     const game = {
       ...start,
       userLineup: saved,
-      season: { ...start.season, injuries: { [hurt]: 2 } },
+      season: { ...start.season, injuries: { [hurt]: '2027-04-20' } },
     }
     const lineup = clubLineup(game, game.userClubId)
     expect(lineup.starters).toHaveLength(11)

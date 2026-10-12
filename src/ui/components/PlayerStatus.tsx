@@ -1,5 +1,6 @@
 import type { Season } from '../../engine/model/types.ts'
 import { YELLOWS_FOR_SUSPENSION } from '../../engine/season/season.ts'
+import { formatDayDate, formatDayMonth } from '../format.ts'
 
 /** Why a player can't play, or how close they are to a ban, as small tags. */
 export function PlayerStatus(props: { playerId: string; season: Season }) {
@@ -12,9 +13,9 @@ export function PlayerStatus(props: { playerId: string; season: Season }) {
       {injured && (
         <span
           className="rounded bg-orange-500/20 px-1 text-orange-700 dark:text-orange-200"
-          title={`Lesionado, volta em ${injured} ${injured === 1 ? 'rodada' : 'rodadas'}`}
+          title={`Lesionado, volta a jogar em ${formatDayDate(injured)}`}
         >
-          lesão {injured}
+          lesão até {formatDayMonth(injured)}
         </span>
       )}
       {suspended && (

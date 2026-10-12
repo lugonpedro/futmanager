@@ -23,7 +23,7 @@ import { useGameStore } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ThemeToggle } from '../../components/ThemeToggle.tsx'
 import { download } from '../../download.ts'
-import { divisionName, formatMoney } from '../../format.ts'
+import { divisionName, formatDayDate, formatMoney, formatShortDate } from '../../format.ts'
 
 const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/jogo', label: 'Resumo', icon: HouseIcon, end: true },
@@ -73,8 +73,7 @@ export function GameLayout() {
         </Sheet>
         <span className="min-w-0 flex-1 truncate font-semibold">{current?.label}</span>
         <span className="max-w-40 truncate text-sm text-muted-foreground">
-          {game.world.clubs[game.userClubId].shortName} ·{' '}
-          {isSeasonOver(game.season) ? 'fim' : `rodada ${game.season.round}`}
+          {game.world.clubs[game.userClubId].shortName} · {formatShortDate(game.today)}
         </span>
       </header>
 
@@ -124,6 +123,7 @@ function Sidebar(props: { game: GameState; onNavigate?: () => void }) {
             ? 'temporada encerrada'
             : `rodada ${season.round} de ${season.totalRounds}`}
         </span>
+        <span className="text-xs text-muted-foreground">Hoje: {formatDayDate(game.today)}</span>
         <span className="text-xs text-muted-foreground">Caixa {formatMoney(club.cash)}</span>
       </div>
       <Separator />

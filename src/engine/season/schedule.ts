@@ -1,16 +1,18 @@
 import type { Fixture } from '../model/types.ts'
 import type { Rng } from '../rng.ts'
+import type { GameDate } from './calendar.ts'
 
 /**
  * Double round robin by the circle method: every club meets every other once
  * in the first half (turno) and again with home and away swapped in the second
  * (returno), in the same order. Clubs alternate home and away as much as the
- * method allows. Needs an even number of clubs.
+ * method allows. Needs an even number of clubs, and a date for every round.
  */
 export function createSchedule(
   leagueId: string,
   clubIds: readonly string[],
   rng: Rng,
+  dates: readonly GameDate[],
 ): Fixture[][] {
   if (clubIds.length % 2 !== 0) throw new Error('A league needs an even number of clubs')
   const n = clubIds.length
@@ -37,6 +39,7 @@ export function createSchedule(
       id: `${leagueId}-R${index + 1}-${i + 1}`,
       leagueId,
       round: index + 1,
+      date: dates[index],
       homeId,
       awayId,
     })),
