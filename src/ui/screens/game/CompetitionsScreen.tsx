@@ -14,7 +14,7 @@ import type { Fixture } from '../../../engine/model/types.ts'
 import { CUP_NAME, cupScorers } from '../../../engine/season/cup.ts'
 import { leagueScorers } from '../../../engine/season/season.ts'
 import { useGame } from '../../../store/game.ts'
-import { divisionName } from '../../format.ts'
+import { divisionName, formatDayDate } from '../../format.ts'
 import { competitionsPath, CUP_SLUG, divisionSlug } from '../../routes.ts'
 import { CupBracket, NoCup } from './CupBracket.tsx'
 import { FixtureLine } from './FixtureLine.tsx'
@@ -137,7 +137,7 @@ function LeagueGames({ leagueId }: { leagueId: string }) {
       value={String(round)}
       onChange={(value) => setRound(Number(value))}
       fixtures={season.fixtures[leagueId][round - 1]}
-      caption={round === season.round ? 'Próxima rodada' : undefined}
+      caption={`${formatDayDate(season.fixtures[leagueId][round - 1][0].date)}${round === season.round ? ', próxima rodada' : ''}`}
     />
   )
 }
@@ -164,7 +164,7 @@ function CupGames() {
       value={current.name}
       onChange={setStage}
       fixtures={current.ties}
-      caption={`${CUP_NAME}, depois da rodada ${current.round}`}
+      caption={`${CUP_NAME}, ${formatDayDate(current.date)}`}
       empty="Sorteio ao fim da fase anterior."
     />
   )

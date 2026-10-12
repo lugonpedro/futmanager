@@ -1,11 +1,12 @@
 import type { Club, Cup, CupStage, Fixture, MatchResult } from '../model/types.ts'
 import type { Rng } from '../rng.ts'
+import type { GameDate } from './calendar.ts'
 import { toFixtureResult } from './results.ts'
 import { topScorers, type ScorerRow } from './standings.ts'
 
 export const CUP_ID = 'COPA'
 export const CUP_NAME = 'Copa Nacional'
-/** League rounds after which the cup stages are played, the final last. */
+/** League rounds whose following Wednesday has a cup stage, the final last. */
 export const CUP_ROUNDS = [5, 11, 17, 23, 29, 35]
 /** Prize for winning the final; each stage before pays a little under half the next. */
 export const CUP_FINAL_PRIZE = 12_000_000
@@ -20,8 +21,9 @@ const NAMED_STAGES: Record<number, string> = {
 /**
  * Every club enters a single-match knockout. When the number of clubs is not a
  * power of two, the lowest-ranked play a first round and the rest wait for them.
+ * `dates` has the day of the stage after each of CUP_ROUNDS.
  */
-export function createCup(clubs: readonly Club[], rng: Rng): Cup {
+export function createCup(clubs: readonly Club[], rng: Rng, dates: readonly GameDate[]): Cup {
   const ranked = [...clubs].sort((a, b) => b.reputation - a.reputation || a.id.localeCompare(b.id))
   const main = 2 ** Math.floor(Math.log2(ranked.length))
   const firstRound = ranked.length === main ? ranked.length : 2 * (ranked.length - main)
@@ -29,6 +31,7 @@ export function createCup(clubs: readonly Club[], rng: Rng): Cup {
   for (let size = ranked.length === main ? main / 2 : main; size >= 2; size /= 2) sizes.push(size)
   if (sizes.length > CUP_ROUNDS.length) throw new Error('Too many clubs for the cup calendar')
   const rounds = CUP_ROUNDS.slice(-sizes.length)
+  const days = dates.slice(-sizes.length)
 
   // A first round of a few clubs is no round of 16, whatever its size.
   const ordinal = ['Primeira', 'Segunda', 'Terceira', 'Quarta']
@@ -37,14 +40,20 @@ export function createCup(clubs: readonly Club[], rng: Rng): Cup {
       (i > 0 || ranked.length === main ? NAMED_STAGES[size] : undefined) ??
       `${ordinal[i] ?? 'Outra'} fase`,
     round: rounds[i],
+    date: days[i],
     ties: [],
   }))
   const entrants = ranked.slice(-firstRound).map((c) => c.id)
-  stages[0] = { ...stages[0], ties: drawTies(entrants, 0, rounds[0], rng) }
+  stages[0] = { ...stages[0], ties: drawTies(entrants, 0, stages[0], rng) }
   return { stages, byes: ranked.slice(0, -firstRound).map((c) => c.id) }
 }
 
-function drawTies(clubIds: readonly string[], stage: number, round: number, rng: Rng): Fixture[] {
+function drawTies(
+  clubIds: readonly string[],
+  stage: number,
+  { round, date }: Pick<CupStage, 'round' | 'date'>,
+  rng: Rng,
+): Fixture[] {
   const drawn = rng.shuffle(clubIds)
   const ties: Fixture[] = []
   for (let i = 0; i < drawn.length; i += 2) {
@@ -52,6 +61,7 @@ function drawTies(clubIds: readonly string[], stage: number, round: number, rng:
       id: `${CUP_ID}-${stage + 1}-${i / 2 + 1}`,
       leagueId: CUP_ID,
       round,
+      date,
       homeId: drawn[i],
       awayId: drawn[i + 1],
     })
@@ -83,9 +93,9 @@ export function tieWinner(tie: Fixture): string | undefined {
   return home > away ? tie.homeId : tie.awayId
 }
 
-/** The stage played after a league round, if any is still to be played. */
-export const cupStageAt = (cup: Cup | undefined, round: number) =>
-  cup?.stages.findIndex((s) => s.round === round && s.ties.length > 0 && !s.ties[0].result) ?? -1
+/** The next stage to be played, once drawn; -1 when there is none. */
+export const nextCupStage = (cup: Cup | undefined) =>
+  cup?.stages.findIndex((s) => s.ties.length > 0 && !s.ties[0].result) ?? -1
 
 /** What winning a tie at a stage pays. */
 export function cupPrize(cup: Cup, stage: number): number {
@@ -117,7 +127,7 @@ export function playCupStage(
   const next = stages[stage + 1]
   if (next) {
     const entrants = stage === 0 ? [...cup.byes, ...winners] : winners
-    stages[stage + 1] = { ...next, ties: drawTies(entrants, stage + 1, next.round, rng) }
+    stages[stage + 1] = { ...next, ties: drawTies(entrants, stage + 1, next, rng) }
   }
   return { cup: { ...cup, stages }, results, winners }
 }

@@ -31,7 +31,8 @@ import {
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
-import { formatMoney, POSITION_NAMES } from '../../format.ts'
+import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
+import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES } from '../../format.ts'
 import { SignDialog } from './MarketDialogs.tsx'
 
 const SHOWN = 50
@@ -125,6 +126,7 @@ function BuyTab({ game }: { game: GameState }) {
           className="h-8 sm:max-w-60"
         />
       </div>
+      <TransferWindowNote today={game.today} />
       <p className="text-sm text-muted-foreground">
         {rows.length > SHOWN ? `Mostrando ${SHOWN} de ${rows.length}` : `${rows.length}`} jogadores.
         Caixa: {formatMoney(cash)}. Toque em um jogador para negociar.
@@ -193,7 +195,8 @@ function OffersTab({ game }: { game: GameState }) {
         <Link to="/jogo/time" className="text-primary underline">
           Time
         </Link>{' '}
-        para atrair ofertas. As propostas valem até a próxima rodada.
+        para atrair ofertas. Elas só chegam com a janela de transferências aberta, em janeiro e
+        julho, e valem por uma semana.
       </p>
     )
   }
@@ -222,7 +225,8 @@ function OffersTab({ game }: { game: GameState }) {
               <span className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
                 <ClubName club={world.clubs[offer.clubId]} /> oferece{' '}
                 <strong className="text-foreground">{formatMoney(offer.fee)}</strong> (valor de
-                mercado {formatMoney(player.marketValue)})
+                mercado {formatMoney(player.marketValue)}), válida até{' '}
+                {formatDayMonth(offer.expires)}
               </span>
             </div>
             <div className="flex gap-2">
@@ -256,7 +260,7 @@ function NewsTab({ game }: { game: GameState }) {
           {market.news.map((n, i) => (
             <TableRow key={i}>
               <TableCell className="text-muted-foreground tabular-nums">
-                {n.season} · {n.round}ª
+                {formatDate(n.date)}
               </TableCell>
               <TableCell>
                 {world.players[n.playerId].name}{' '}

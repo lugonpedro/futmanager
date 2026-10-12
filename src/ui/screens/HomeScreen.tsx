@@ -17,6 +17,7 @@ import {
 import { useGameStore } from '../../store/game.ts'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { download } from '../download.ts'
+import { formatDate } from '../format.ts'
 
 const when = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
 
@@ -80,7 +81,11 @@ export function HomeScreen() {
                     >
                       <span className="truncate font-semibold">{save.clubName}</span>
                       <span className="text-xs text-muted-foreground">
-                        {save.year}, {save.seasonOver ? 'fim da temporada' : `rodada ${save.round}`}{' '}
+                        {save.seasonOver
+                          ? `${save.year}, fim da temporada`
+                          : save.today
+                            ? formatDate(save.today)
+                            : `${save.year}, rodada ${save.round}`}{' '}
                         · salvo em {when.format(new Date(save.updatedAt))}
                       </span>
                     </button>

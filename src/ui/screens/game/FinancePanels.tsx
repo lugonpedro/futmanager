@@ -14,7 +14,7 @@ import {
 } from '../../../engine/finance/finance.ts'
 import type { LedgerCategory } from '../../../engine/model/types.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
-import { formatMoney, formatReais, LEDGER_NAMES } from '../../format.ts'
+import { formatDayMonth, formatMoney, formatReais, LEDGER_NAMES } from '../../format.ts'
 
 const INCOME: LedgerCategory[] = ['bilheteria', 'patrocinio', 'premiacao', 'vendas']
 const COSTS: LedgerCategory[] = ['salarios', 'compras']
@@ -116,7 +116,7 @@ export function FinancePanel() {
                   .map((entry, i) => (
                     <TableRow key={i}>
                       <TableCell className="w-12 text-muted-foreground tabular-nums">
-                        {entry.round}ª
+                        {formatDayMonth(entry.date)}
                       </TableCell>
                       <TableCell className="whitespace-normal">
                         {LEDGER_NAMES[entry.category]}

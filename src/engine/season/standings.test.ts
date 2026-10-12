@@ -15,6 +15,7 @@ function game(
     id: `F${next}`,
     leagueId: 'L1',
     round: next,
+    date: '2027-04-10',
     homeId,
     awayId,
     result: {
@@ -55,7 +56,14 @@ describe('standings', () => {
   })
 
   it('ignores fixtures not yet played and lists clubs with no games', () => {
-    const unplayed: Fixture = { id: 'X', leagueId: 'L1', round: 1, homeId: 'A', awayId: 'B' }
+    const unplayed: Fixture = {
+      id: 'X',
+      leagueId: 'L1',
+      round: 1,
+      date: '2027-04-10',
+      homeId: 'A',
+      awayId: 'B',
+    }
     expect(standings(['A', 'B'], [unplayed]).map((row) => row.played)).toEqual([0, 0])
   })
 

@@ -7,8 +7,7 @@ import type { Club } from '../model/types.ts'
  * and transfers decide who ends the year in profit. economy.test.ts pins it.
  */
 export const ECONOMY = {
-  /** Rounds between paydays; the rest of the year's months are paid when the season closes. */
-  roundsPerMonth: 4,
+  /** Wages and sponsorship are paid on the 1st of each month. */
   monthsPerYear: 12,
   /** Ticket price fans find fair, as base * e^(growth * reputation). */
   ticketBase: 8,
@@ -22,8 +21,8 @@ export const ECONOMY = {
   formSwing: 0.3,
   /** Yearly sponsorship as a share of what a typical squad of the club's size earns. */
   sponsorShare: { 1: 0.3, 2: 0.25 } as Record<number, number>,
-  /** A fresh club holds this many months of its wage bill in the bank. */
-  startingMonthsOfWages: 4,
+  /** A fresh club holds this many months of its wage bill in the bank, enough to see out the pre-season. */
+  startingMonthsOfWages: 7,
 }
 
 /** Players in a typical squad, for sizing money to a club. */

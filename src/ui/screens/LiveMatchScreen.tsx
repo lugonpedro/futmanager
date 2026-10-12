@@ -5,11 +5,13 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { matchResult, playMinute, type MatchState } from '../../engine/match/simulate.ts'
 import type { GameState } from '../../engine/model/types.ts'
+import { CUP_ID, CUP_NAME } from '../../engine/season/cup.ts'
 import {
-  applyRound,
-  canPlayRound,
-  createRoundMatches,
+  applyMatchDay,
+  createMatchDayMatches,
+  todaysMatchDay,
   type LiveMatch,
+  type MatchDay,
 } from '../../engine/season/season.ts'
 import { useGameStore } from '../../store/game.ts'
 import { useMatchViewStore, type MatchView } from '../../store/matchView.ts'
@@ -18,7 +20,7 @@ import { ClubName } from '../components/ClubName.tsx'
 import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
 import { MatchPitch } from '../components/MatchPitch.tsx'
-import { divisionName } from '../format.ts'
+import { divisionName, formatDayDate } from '../format.ts'
 import { playDuration } from '../pitchScene.ts'
 import { useShownScore } from '../useShownScore.ts'
 
@@ -28,22 +30,23 @@ const PLAY_SPEEDS = { Lento: 1100, Normal: 650, Rápido: 300 } as const
 type Speed = keyof typeof SPEEDS
 const VIEWS: MatchView[] = ['Campo', 'Só texto']
 
-/** The user's match narrated minute by minute, with the rest of the round alongside. */
+/** The user's match narrated minute by minute, with the rest of the match day alongside. */
 export function LiveMatchScreen() {
   const game = useGameStore((s) => s.game)
   const loading = useGameStore((s) => s.loading)
   if (loading) return null
-  if (!game || !canPlayRound(game)) return <Navigate to="/jogo" replace />
-  return <LiveRound key={`${game.season.year}-${game.season.round}`} game={game} />
+  const day = game && todaysMatchDay(game)
+  if (!game || !day) return <Navigate to="/jogo" replace />
+  return <LiveRound key={`${game.today}-${day.kind}`} game={game} day={day} />
 }
 
 const involves = (match: LiveMatch, clubId: string) =>
   match.fixture.homeId === clubId || match.fixture.awayId === clubId
 
-function LiveRound({ game }: { game: GameState }) {
+function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
   const setGame = useGameStore((s) => s.setGame)
   const navigate = useNavigate()
-  const [matches] = useState(() => createRoundMatches(game))
+  const [matches] = useState(() => createMatchDayMatches(game))
   const [speed, setSpeed] = useState<Speed>('Normal')
   const [paused, setPaused] = useState(false)
   const [tick, setTick] = useState(0)
@@ -78,7 +81,7 @@ function LiveRound({ game }: { game: GameState }) {
 
   const finish = () => {
     setGame(
-      applyRound(
+      applyMatchDay(
         game,
         matches.map((m) => matchResult(m.state)),
       ),
@@ -86,11 +89,21 @@ function LiveRound({ game }: { game: GameState }) {
     navigate('/jogo')
   }
 
-  const leagues = [...game.world.leagues].sort(
-    (a, b) =>
-      Number(b.clubIds.includes(game.userClubId)) - Number(a.clubIds.includes(game.userClubId)) ||
-      a.division - b.division,
-  )
+  // The rest of the day: each division's round, or the other ties of the cup stage.
+  const groups =
+    day.kind === 'copa'
+      ? [{ id: CUP_ID, name: CUP_NAME }]
+      : [...game.world.leagues]
+          .sort(
+            (a, b) =>
+              Number(b.clubIds.includes(game.userClubId)) -
+                Number(a.clubIds.includes(game.userClubId)) || a.division - b.division,
+          )
+          .map((league) => ({ id: league.id, name: divisionName(league.division) }))
+  const title =
+    day.kind === 'copa'
+      ? `${CUP_NAME} · ${game.season.cup!.stages[day.stage].name}`
+      : `${divisionName(game.world.clubs[game.userClubId].division)} · rodada ${game.season.round}`
   const result = finished ? matchResult(state) : undefined
   const score = useShownScore(state, onPitch, PLAY_SPEEDS[speed])
 
@@ -99,8 +112,7 @@ function LiveRound({ game }: { game: GameState }) {
       <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <Card className="gap-3 px-4">
           <p className="text-center text-sm text-muted-foreground">
-            {divisionName(game.world.clubs[game.userClubId].division)} {game.season.year} · rodada{' '}
-            {game.season.round}
+            {title} · {formatDayDate(game.today)}
           </p>
           <div className="flex items-center justify-center gap-2 text-base font-bold sm:gap-4 sm:text-xl">
             <span className="flex min-w-0 flex-1 justify-end text-right">
@@ -116,7 +128,13 @@ function LiveRound({ game }: { game: GameState }) {
             </span>
           </div>
           <p className="text-center text-sm text-muted-foreground">
-            {finished ? 'Encerrado' : halftime ? 'Intervalo' : `${state.minute}'`}
+            {finished
+              ? day.kind === 'copa' && state.home.stats.goals === state.away.stats.goals
+                ? 'Encerrado: a vaga sai nos pênaltis'
+                : 'Encerrado'
+              : halftime
+                ? 'Intervalo'
+                : `${state.minute}'`}
           </p>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -183,12 +201,12 @@ function LiveRound({ game }: { game: GameState }) {
         </Card>
 
         <aside className="flex flex-col gap-4">
-          {leagues.map((league) => (
-            <Card key={league.id} className="gap-2 px-3 py-3">
-              <h2 className="text-sm font-semibold">{divisionName(league.division)}</h2>
+          {groups.map((group) => (
+            <Card key={group.id} className="gap-2 px-3 py-3">
+              <h2 className="text-sm font-semibold">{group.name}</h2>
               <ul className="flex flex-col gap-1">
                 {matches
-                  .filter((m) => m.fixture.leagueId === league.id && m !== own)
+                  .filter((m) => m.fixture.leagueId === group.id && m !== own)
                   .map((m) => (
                     <OtherMatch key={m.fixture.id} state={m.state} />
                   ))}

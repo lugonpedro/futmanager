@@ -1,3 +1,5 @@
+import type { GameDate } from '../season/calendar.ts'
+
 /** G = goleiro, Z = zagueiro, L = lateral, M = meio-campo, A = atacante. */
 export type Position = 'G' | 'Z' | 'L' | 'M' | 'A'
 
@@ -148,8 +150,9 @@ export type FixtureResult = {
 export type Fixture = {
   id: string
   leagueId: string
-  /** 1-based. */
+  /** 1-based; for a cup tie, the league round its stage follows. */
   round: number
+  date: GameDate
   homeId: string
   awayId: string
   result?: FixtureResult
@@ -162,8 +165,9 @@ export type Season = {
   totalRounds: number
   /** Fixtures per league id, indexed by round - 1. */
   fixtures: Record<string, Fixture[][]>
-  /** Rounds each player still has to miss. */
-  injuries: Record<string, number>
+  /** Day each injured player is fit again. */
+  injuries: Record<string, GameDate>
+  /** League rounds each player still has to miss. */
   suspensions: Record<string, number>
   /** Yellow cards building up towards a suspension. */
   yellowCards: Record<string, number>
@@ -178,6 +182,8 @@ export type CupStage = {
   name: string
   /** League round after which this stage is played. */
   round: number
+  /** The Wednesday it is played on. */
+  date: GameDate
   ties: Fixture[]
 }
 
@@ -238,25 +244,27 @@ export type LedgerCategory =
 
 /** One movement of the user's club money; incomes positive, costs negative. */
 export type LedgerEntry = {
-  round: number
+  date: GameDate
   category: LedgerCategory
   amount: number
   note: string
 }
 
-/** A club wanting to buy one of the user's players; it lapses after a round. */
+/** A club wanting to buy one of the user's players; it lapses after a week, or with the window. */
 export type TransferOffer = {
   id: string
   playerId: string
   clubId: string
   fee: number
-  round: number
+  date: GameDate
+  /** Last day it can be accepted. */
+  expires: GameDate
 }
 
 /** A completed transfer, for the market news. */
 export type TransferNews = {
   season: number
-  round: number
+  date: GameDate
   playerId: string
   fromClubId: string
   toClubId: string
@@ -275,6 +283,8 @@ export type Market = {
 export type GameState = {
   /** Save format, so older careers can be upgraded on load. */
   version: number
+  /** The day the career is on. */
+  today: GameDate
   world: World
   userClubId: string
   /** The user's lineup and tactics as last set; patched up before each match. */
