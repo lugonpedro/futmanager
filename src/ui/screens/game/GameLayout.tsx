@@ -166,6 +166,13 @@ function Sidebar(props: { game: GameState; onNavigate?: () => void }) {
             Menu principal
           </Link>
         </Button>
+        <Link
+          to="/aviso-legal"
+          onClick={props.onNavigate}
+          className="px-3 pt-1 text-xs text-muted-foreground underline-offset-2 hover:underline"
+        >
+          Aviso legal
+        </Link>
       </div>
     </>
   )

@@ -35,6 +35,14 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('marks the names of a version 5 save as generated', () => {
+    const { names: _, ...v5 } = fresh
+    const upgraded = upgradeOld({ ...v5, version: 5 })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.names).toEqual({})
+    expect(upgraded.world).toBe(fresh.world)
+  })
+
   it('gives a version 4 save attributes that keep each overall at the old strength', () => {
     const upgraded = upgradeOld({ ...current, version: 4 })
     expect(upgraded.version).toBe(SAVE_VERSION)

@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { DownloadIcon, PlayIcon, Trash2Icon, UploadIcon } from 'lucide-react'
+import { DownloadIcon, PencilIcon, PlayIcon, Trash2Icon, UploadIcon } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
@@ -140,9 +140,21 @@ export function HomeScreen() {
               {message}
             </p>
           )}
+          <Button asChild variant="outline">
+            <Link to="/editor">
+              <PencilIcon />
+              Editor de times
+            </Link>
+          </Button>
           <Button asChild variant="link">
             <Link to="/amistoso">Jogar um amistoso</Link>
           </Button>
+          <Link
+            to="/aviso-legal"
+            className="text-center text-xs text-muted-foreground underline-offset-2 hover:underline"
+          >
+            Aviso legal
+          </Link>
         </CardContent>
       </Card>
     </main>
