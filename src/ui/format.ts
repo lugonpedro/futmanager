@@ -9,6 +9,7 @@ import type {
   Posture,
 } from '../engine/model/types.ts'
 import type { AnyFace } from '../engine/player/attributes.ts'
+import { formatDate } from '../engine/season/calendar.ts'
 
 export { formatMoney, formatReais } from '../engine/money.ts'
 export {
@@ -178,3 +179,20 @@ export const ROLE_NAMES: Record<Role, string> = {
 /** Came up through this club's academy. */
 export const isHomegrown = (player: Player, clubId: string) =>
   player.id.startsWith('B') && player.id.split('-')[1] === clubId
+
+/** Where a saved career is, like "12 de maio de 2027" or "2027, fim da temporada". */
+export function slotProgress(slot: {
+  year: number
+  round: number
+  today?: string
+  seasonOver: boolean
+}): string {
+  if (slot.seasonOver) return `${slot.year}, fim da temporada`
+  if (slot.today) return formatDate(slot.today)
+  return `${slot.year}, rodada ${slot.round}`
+}
+
+const savedWhen = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+
+/** When a career was saved, like "12/10/2026, 16:40". */
+export const formatSavedAt = (time: number) => savedWhen.format(new Date(time))

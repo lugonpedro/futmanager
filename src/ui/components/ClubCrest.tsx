@@ -6,14 +6,33 @@ import type { Club } from '../../engine/model/types.ts'
  */
 export function ClubCrest(props: { club: Club; className?: string }) {
   const { club } = props
-  const { primary, secondary } = club.colors
-  const id = `crest-${club.id}`
+  return (
+    <Crest
+      id={`crest-${club.id}`}
+      colors={club.colors}
+      letters={club.shortName}
+      label={`Escudo do ${club.name}`}
+      className={props.className}
+    />
+  )
+}
+
+/** The shield behind every crest in the game: two colours and up to four letters. */
+export function Crest(props: {
+  id: string
+  colors: { primary: string; secondary: string }
+  letters: string
+  label: string
+  className?: string
+}) {
+  const { primary, secondary } = props.colors
+  const { id, letters } = props
   return (
     <svg
       viewBox="0 0 40 48"
       className={props.className ?? 'size-8'}
       role="img"
-      aria-label={`Escudo do ${club.name}`}
+      aria-label={props.label}
     >
       <defs>
         <clipPath id={id}>
@@ -41,7 +60,7 @@ export function ClubCrest(props: { club: Club; className?: string }) {
         x="20"
         y="24"
         textAnchor="middle"
-        fontSize={club.shortName.length > 3 ? 9 : 11}
+        fontSize={letters.length > 3 ? 9 : 11}
         fontWeight="800"
         fontFamily="system-ui, sans-serif"
         fill={readableOn(primary, secondary)}
@@ -49,7 +68,7 @@ export function ClubCrest(props: { club: Club; className?: string }) {
         strokeWidth="0.6"
         paintOrder="stroke"
       >
-        {club.shortName}
+        {letters}
       </text>
     </svg>
   )

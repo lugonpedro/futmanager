@@ -1,21 +1,12 @@
 import 'fake-indexeddb/auto'
 import { beforeEach, describe, expect, it } from 'vitest'
-import { newGame, playRound, SAVE_VERSION } from '../engine/season/season.ts'
-import {
-  db,
-  deleteSave,
-  exportSave,
-  listSaves,
-  parseSaveFile,
-  readSave,
-  saveFileName,
-  writeSave,
-} from './saves.ts'
+import { newGame, playRound } from '../engine/season/season.ts'
+import { db, deleteSave, listSaves, readSave, writeSave } from './saves.ts'
 
 const game = newGame(4, 'C7')
 
 describe('save slots', () => {
-  beforeEach(() => db.saves.clear())
+  beforeEach(() => Promise.all([db.saves.clear(), db.synced.clear()]))
 
   it('keeps each career in its own slot, newest first', async () => {
     const first = await writeSave(game)
@@ -39,18 +30,11 @@ describe('save slots', () => {
     expect(await listSaves()).toEqual([])
     expect(await readSave(id)).toBeUndefined()
   })
-})
 
-describe('save files', () => {
-  it('round-trips a career through a file', () => {
-    expect(parseSaveFile(exportSave(game))).toEqual(game)
-    expect(saveFileName(game)).toMatch(/^futmanager-[a-z0-9-]+-2027\.json$/)
-  })
-
-  it('refuses anything that is not a save, or one from a newer version', () => {
-    expect(() => parseSaveFile('não é json')).toThrow('não é um save')
-    expect(() => parseSaveFile('{"format":"outro"}')).toThrow('não é um save')
-    const future = JSON.stringify({ format: 'futmanager-save', version: SAVE_VERSION + 1, game })
-    expect(() => parseSaveFile(future)).toThrow('versão mais nova')
+  it('remembers that a synced career was deleted, so the cloud copy goes too', async () => {
+    const id = await writeSave(game)
+    await db.synced.put({ id, userId: 'user-1', updatedAt: 5 })
+    await deleteSave(id)
+    expect(await db.synced.get(id)).toEqual({ id, userId: 'user-1', updatedAt: 5, deleted: true })
   })
 })

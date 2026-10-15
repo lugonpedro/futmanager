@@ -2,9 +2,7 @@ import { Link } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
-
-/** Where clubs and players can ask for something to be taken down. */
-const CONTACT_URL = 'https://github.com/lugonpedro/futmanager/issues'
+import { CONTACT_URL } from '../contact.ts'
 
 /** The legal notice and terms of use, linked from the main menu and the in-game menu. */
 export function LegalScreen() {
@@ -29,8 +27,9 @@ export function LegalScreen() {
           </p>
           <p>
             Nomes inseridos pelos usuários no editor ou em pacotes importados são de
-            responsabilidade de quem os inseriu, ficam apenas no dispositivo do usuário e não são
-            publicados pelo futmanager.
+            responsabilidade de quem os inseriu e ficam no dispositivo do usuário. Quem usa o save
+            na nuvem guarda uma cópia privada na própria conta, que só ele acessa. O futmanager não
+            publica esses nomes.
           </p>
           <p>
             Se você representa um clube ou atleta e quer que algo seja removido,{' '}
@@ -54,8 +53,9 @@ export function LegalScreen() {
             </li>
             <li>
               O editor de times e os pacotes de dados permitem trocar esses nomes. Tudo o que você
-              digita ou importa fica guardado só no seu navegador. O futmanager não recebe, não
-              hospeda e não distribui esses nomes nem os pacotes.
+              digita ou importa fica guardado no seu navegador e, se você usar o save na nuvem, numa
+              cópia privada na sua conta. O futmanager não publica, não compartilha e não distribui
+              esses nomes nem os pacotes.
             </li>
             <li>
               Você é responsável pelos nomes que coloca no jogo e pelos pacotes que compartilha com
@@ -66,8 +66,8 @@ export function LegalScreen() {
               partir das cores e da sigla do clube.
             </li>
             <li>
-              O jogo é oferecido como está, sem garantia. Faça cópias das suas carreiras com
-              &quot;Exportar save&quot; se não quiser perdê-las.
+              O jogo é oferecido como está, sem garantia. Carreiras que não estão na nuvem ficam só
+              no navegador e se perdem se os dados dele forem apagados.
             </li>
           </ol>
         </CardContent>
