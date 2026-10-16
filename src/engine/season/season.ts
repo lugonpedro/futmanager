@@ -85,7 +85,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 10
+export const SAVE_VERSION = 11
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 

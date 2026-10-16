@@ -16,6 +16,7 @@ import {
   type GameState,
   type Player,
   type Position,
+  type TrainingPlan,
 } from '../../../engine/model/types.ts'
 import { positionFit } from '../../../engine/match/strength.ts'
 import {
@@ -26,7 +27,7 @@ import {
 } from '../../../engine/player/attributes.ts'
 import { cupScorers } from '../../../engine/season/cup.ts'
 import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
-import { recoveryRate } from '../../../engine/progression/training.ts'
+import { recoveryRate, TRAINING, trainingBlock } from '../../../engine/progression/training.ts'
 import { isOnLoan, LOAN } from '../../../engine/transfer/loans.ts'
 import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
 import { leagueOf, leagueScorers } from '../../../engine/season/season.ts'
@@ -38,6 +39,8 @@ import {
   fitClass,
   FOOT_NAMES,
   formatMoney,
+  INDIVIDUAL_FOCUS_NAMES,
+  INTENSITY_NAMES,
   isHomegrown,
   POSITION_NAMES,
   rangeText,
@@ -157,6 +160,11 @@ export function PlayerSheet(props: {
           <Item label="Forma">
             <FormMark form={form} />
           </Item>
+          {own && (
+            <Item label="Treino">
+              <TrainingNote player={player} plan={game.training.individual[player.id]} />
+            </Item>
+          )}
           <Item label="Nota média">{rating?.toFixed(1) ?? '-'}</Item>
           <Item label="Jogos">{season.ratings[player.id]?.games ?? 0}</Item>
           <Item label="Gols na liga">{leagueGoals}</Item>
@@ -340,5 +348,19 @@ function Item(props: { label: string; children: ReactNode; wide?: boolean }) {
       <dt className="text-xs text-muted-foreground">{props.label}</dt>
       <dd className="font-medium tabular-nums">{props.children}</dd>
     </div>
+  )
+}
+
+/** What the player trains on his own, or why he no longer can. */
+function TrainingNote({ player, plan }: { player: Player; plan: TrainingPlan | undefined }) {
+  const block = trainingBlock(player)
+  if (block === 'potencial') return <span className="text-muted-foreground">Já no potencial</span>
+  if (block === 'idade')
+    return <span className="text-muted-foreground">Acima de {TRAINING.individualUntil} anos</span>
+  if (!plan) return <span className="text-muted-foreground">Sem treino próprio</span>
+  return (
+    <>
+      {INDIVIDUAL_FOCUS_NAMES[plan.focus]}, {INTENSITY_NAMES[plan.intensity].name.toLowerCase()}
+    </>
   )
 }

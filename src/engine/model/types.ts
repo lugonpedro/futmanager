@@ -429,6 +429,7 @@ export type SquadFocus = 'equilibrado' | 'fisico' | 'tecnico' | 'tatico' | 'desc
 
 /** What one player works on, on top of the squad's focus. */
 export type IndividualFocus =
+  | 'geral'
   | 'finalizacao'
   | 'passe'
   | 'drible'
@@ -438,10 +439,16 @@ export type IndividualFocus =
   | 'velocidade'
   | 'goleiro'
 
+/** How hard one player trains: harder grows faster but tires him between matches. */
+export type TrainingIntensity = 'leve' | 'normal' | 'intenso'
+
+/** One player's own training, on top of the squad's focus. */
+export type TrainingPlan = { focus: IndividualFocus; intensity: TrainingIntensity }
+
 export type Training = {
   focus: SquadFocus
-  /** Up to five of the user's players with a focus of their own. */
-  individual: Record<string, IndividualFocus>
+  /** The user's players with a plan of their own, by id. */
+  individual: Record<string, TrainingPlan>
 }
 
 /** One of the user's players out on loan, back at the end of the season. */

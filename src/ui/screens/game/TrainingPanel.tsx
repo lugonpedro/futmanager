@@ -1,4 +1,3 @@
-import { XIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
@@ -8,41 +7,57 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import type { IndividualFocus, Position, SquadFocus } from '../../../engine/model/types.ts'
+import { cn } from '@/lib/utils'
 import {
-  setIndividualFocus,
+  POSITIONS,
+  type IndividualFocus,
+  type Player,
+  type SquadFocus,
+  type TrainingIntensity,
+  type TrainingPlan,
+} from '../../../engine/model/types.ts'
+import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
+import {
+  FIRST_PLAN,
   setSquadFocus,
+  setSquadPlans,
+  setTrainingPlan,
   TRAINING,
+  trainingBlock,
 } from '../../../engine/progression/training.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
-import { INDIVIDUAL_FOCUS_NAMES, SQUAD_FOCUS_NAMES } from '../../format.ts'
+import {
+  INDIVIDUAL_FOCUS_NAMES,
+  INTENSITY_NAMES,
+  SQUAD_FOCUS_NAMES,
+  signedChange,
+} from '../../format.ts'
 
 const SQUAD_FOCUSES = Object.keys(SQUAD_FOCUS_NAMES) as SquadFocus[]
 const INDIVIDUAL_FOCUSES = Object.keys(INDIVIDUAL_FOCUS_NAMES) as IndividualFocus[]
+const INTENSITIES = Object.keys(INTENSITY_NAMES) as TrainingIntensity[]
+/** The select's value for a player with no plan of his own. */
+const NONE = 'nenhum'
 
-/** A sensible first focus for each position, which the user can change. */
-const FIRST_FOCUS: Record<Position, IndividualFocus> = {
-  G: 'goleiro',
-  Z: 'defesa',
-  L: 'cruzamento',
-  M: 'passe',
-  A: 'finalizacao',
-}
+/** Goalkeepers first, then defenders and on up the pitch; the best first in each. */
+const byPosition = (a: Player, b: Player) =>
+  POSITIONS.indexOf(a.position) - POSITIONS.indexOf(b.position) ||
+  b.overall - a.overall ||
+  a.name.localeCompare(b.name, 'pt-BR')
 
-/** The squad's training focus, and up to five players with a focus of their own. */
+/** The squad's training focus, and a plan of his own for every player who can still grow. */
 export function TrainingPanel() {
   const game = useGame()
   const setGame = useGameStore((s) => s.setGame)
-  const { world, userClubId, training } = game
-  const squad = world.clubs[userClubId].playerIds
-    .map((id) => world.players[id])
-    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
-  const focused = squad.filter((p) => training.individual[p.id])
-  const free = squad.filter((p) => !training.individual[p.id])
-  const full = focused.length >= TRAINING.maxIndividual
-  const setFocus = (playerId: string, focus: IndividualFocus | undefined) =>
-    setGame(setIndividualFocus(game, playerId, focus))
+  const { world, userClubId, training, season } = game
+  const squad = world.clubs[userClubId].playerIds.map((id) => world.players[id]).sort(byPosition)
+  const trainable = squad.filter((p) => !trainingBlock(p))
+  const atCeiling = squad.filter((p) => trainingBlock(p) === 'potencial')
+  const tooOld = squad.filter((p) => trainingBlock(p) === 'idade')
+  const planned = trainable.filter((p) => training.individual[p.id]).length
+  const setPlan = (playerId: string, plan: TrainingPlan | undefined) =>
+    setGame(setTrainingPlan(game, playerId, plan))
 
   return (
     <Card className="gap-3">
@@ -65,57 +80,72 @@ export function TrainingPanel() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-semibold">
-            Foco individual ({focused.length} de {TRAINING.maxIndividual})
-          </h3>
-          {focused.length === 0 && (
-            <p className="text-sm text-muted-foreground">
-              Escolha até {TRAINING.maxIndividual} jogadores para treinar uma qualidade a mais. Só
-              rende para quem ainda não chegou ao potencial e tem até {TRAINING.individualUntil}{' '}
-              anos.
-            </p>
-          )}
-          <ul className="flex flex-col gap-2">
-            {focused.map((p) => (
-              <li key={p.id} className="flex flex-wrap items-center gap-2">
-                <span className="min-w-40 text-sm">
-                  <span className="text-muted-foreground">{p.position}</span> {p.name}
-                </span>
-                <FocusSelect
-                  value={training.individual[p.id]}
-                  onChange={(focus) => setFocus(p.id, focus)}
-                  label={`Foco de ${p.name}`}
-                />
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold">
+              Treino individual ({planned} de {trainable.length})
+            </h3>
+            <div className="flex gap-2">
+              {planned < trainable.length && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setGame(setSquadPlans(game, FIRST_PLAN))}
+                >
+                  Todos no geral
+                </Button>
+              )}
+              {planned > 0 && (
                 <Button
                   variant="ghost"
-                  size="icon"
-                  aria-label={`Tirar o foco de ${p.name}`}
-                  onClick={() => setFocus(p.id, undefined)}
+                  size="sm"
+                  onClick={() => setGame(setSquadPlans(game, undefined))}
                 >
-                  <XIcon />
+                  Tirar todos
                 </Button>
-              </li>
-            ))}
-          </ul>
-          {!full && free.length > 0 && (
-            <Select
-              value=""
-              onValueChange={(id) => setFocus(id, FIRST_FOCUS[world.players[id].position])}
-            >
-              <SelectTrigger size="sm" className="w-full sm:w-64" aria-label="Escolher jogador">
-                <SelectValue placeholder="Escolher jogador" />
-              </SelectTrigger>
-              <SelectContent>
-                {free.map((p) => (
-                  <SelectItem key={p.id} value={p.id}>
-                    {p.position} {p.name}
-                    <span className="text-xs text-muted-foreground">
-                      {p.age} anos, {p.overall}
-                    </span>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+              )}
+            </div>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Quem ainda não chegou ao potencial e tem até {TRAINING.individualUntil} anos pode ter um
+            plano próprio. O geral trabalha o que mais conta para a posição e é o que mais sobe o
+            geral; os outros puxam uma qualidade. No intenso ele cresce mais rápido, mas chega
+            cansado aos jogos.
+          </p>
+
+          {trainable.length === 0 ? (
+            <p className="text-sm">Ninguém no elenco pode mais evoluir com treino individual.</p>
+          ) : (
+            <ul className="flex flex-col divide-y">
+              {trainable.map((p) => (
+                <PlanRow
+                  key={p.id}
+                  player={p}
+                  potential={potentialRange(p, careerGames(p, season.appearances)).high}
+                  growth={game.growth?.overall[p.id]}
+                  plan={training.individual[p.id]}
+                  onChange={(plan) => setPlan(p.id, plan)}
+                />
+              ))}
+            </ul>
+          )}
+
+          {(atCeiling.length > 0 || tooOld.length > 0) && (
+            <div className="flex flex-col gap-1 text-sm text-muted-foreground">
+              {atCeiling.length > 0 && (
+                <p>
+                  <span className="font-medium text-foreground">Já no potencial:</span>{' '}
+                  {atCeiling.map((p) => `${p.name} (${p.overall})`).join(', ')}.
+                </p>
+              )}
+              {tooOld.length > 0 && (
+                <p>
+                  <span className="font-medium text-foreground">
+                    Acima de {TRAINING.individualUntil} anos:
+                  </span>{' '}
+                  {tooOld.map((p) => `${p.name} (${p.age})`).join(', ')}.
+                </p>
+              )}
+            </div>
           )}
         </div>
       </CardContent>
@@ -123,23 +153,82 @@ export function TrainingPanel() {
   )
 }
 
-function FocusSelect(props: {
-  value: IndividualFocus | undefined
-  onChange: (focus: IndividualFocus) => void
-  label: string
+/** One player's line: where he is against his potential, and his plan. */
+function PlanRow(props: {
+  player: Player
+  potential: number
+  growth: number | undefined
+  plan: TrainingPlan | undefined
+  onChange: (plan: TrainingPlan | undefined) => void
 }) {
+  const { player, potential, growth, plan, onChange } = props
+  const reached = Math.round((100 * player.overall) / Math.max(1, potential))
   return (
-    <Select value={props.value} onValueChange={(v) => props.onChange(v as IndividualFocus)}>
-      <SelectTrigger size="sm" className="min-w-36" aria-label={props.label}>
-        <SelectValue />
-      </SelectTrigger>
-      <SelectContent>
-        {INDIVIDUAL_FOCUSES.map((focus) => (
-          <SelectItem key={focus} value={focus}>
-            {INDIVIDUAL_FOCUS_NAMES[focus]}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+    <li className="flex flex-wrap items-center gap-x-3 gap-y-2 py-2">
+      <div className="flex min-w-48 flex-1 flex-col gap-1">
+        <span className="text-sm">
+          <span className="text-muted-foreground">{player.position}</span> {player.name}{' '}
+          <span className="text-xs text-muted-foreground">{player.age} anos</span>
+        </span>
+        <div className="flex items-center gap-2" title={`Geral ${player.overall} de ${potential}`}>
+          <div className="h-1.5 w-28 overflow-hidden rounded-full bg-muted">
+            <div
+              className={cn('h-full rounded-full', plan ? 'bg-primary' : 'bg-muted-foreground/50')}
+              style={{ width: `${Math.min(100, reached)}%` }}
+            />
+          </div>
+          <span className="text-xs whitespace-nowrap">
+            <span className="font-semibold">{player.overall}</span>
+            <span className="text-muted-foreground">/{potential}</span>
+            {growth !== undefined && growth !== 0 && (
+              <span
+                className={cn(
+                  'ml-1',
+                  growth > 0
+                    ? 'text-green-700 dark:text-green-400'
+                    : 'text-red-600 dark:text-red-400',
+                )}
+                title="No último mês"
+              >
+                {signedChange(growth)}
+              </span>
+            )}
+          </span>
+        </div>
+      </div>
+      <div className="flex items-center gap-2">
+        <Select
+          value={plan?.focus ?? NONE}
+          onValueChange={(v) =>
+            onChange(
+              v === NONE
+                ? undefined
+                : { focus: v as IndividualFocus, intensity: plan?.intensity ?? 'normal' },
+            )
+          }
+        >
+          <SelectTrigger size="sm" className="w-28 sm:w-36" aria-label={`Treino de ${player.name}`}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value={NONE}>Sem treino</SelectItem>
+            {INDIVIDUAL_FOCUSES.map((focus) => (
+              <SelectItem key={focus} value={focus}>
+                {INDIVIDUAL_FOCUS_NAMES[focus]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Choices
+          ariaLabel={`Intensidade de ${player.name}`}
+          options={INTENSITIES}
+          value={plan?.intensity}
+          disabled={!plan}
+          onChange={(intensity) => plan && onChange({ ...plan, intensity })}
+          label={(intensity) => INTENSITY_NAMES[intensity].name}
+          title={(intensity) => INTENSITY_NAMES[intensity].detail}
+        />
+      </div>
+    </li>
   )
 }
