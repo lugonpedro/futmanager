@@ -53,12 +53,15 @@ export function playerProfile(
   }
 }
 
+/** How far past his overall a player of this age can still grow: a lot when young, nothing past 29. */
+export function potentialRoom(rng: Rng, age: number): number {
+  return age <= 21 ? rng.int(5, 25) : age <= 25 ? rng.int(0, 12) : age <= 29 ? rng.int(0, 4) : 0
+}
+
 export function generatePlayer(rng: Rng, seed: PlayerSeed): Player {
   const age = clamp(rng.normal(26, 4.5), 17, 37)
   const target = clamp(rng.normal(seed.level, 7), 1, 99)
-  // Young players can still improve a lot; past 29 they have peaked.
-  const room =
-    age <= 21 ? rng.int(5, 25) : age <= 25 ? rng.int(0, 12) : age <= 29 ? rng.int(0, 4) : 0
+  const room = potentialRoom(rng, age)
   const name = playerName(rng)
   const profile = playerProfile(rng, seed.position, target)
   const potential = clamp(profile.overall + room, profile.overall, 99)

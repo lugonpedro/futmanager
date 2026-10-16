@@ -21,7 +21,7 @@ export const BUILT_IN_PACKS: BuiltInPack[] = [
     id: 'brasileirao-2026',
     name: 'Brasileirão 2026',
     description:
-      'Os clubes das Séries A e B de 2026 e os jogadores dos elencos, com nome, idade e posição. A força de cada um continua gerada pelo jogo.',
+      'Os clubes das Séries A e B de 2026 e os jogadores dos elencos, com nome, idade, posição e força baseada nas notas do início de 2026.',
     load: fromFile(() => import('./brasileirao-2026.json?raw'), 'brasileirao-2026.json'),
   },
 ]
