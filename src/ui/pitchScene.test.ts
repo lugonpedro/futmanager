@@ -3,7 +3,7 @@ import { generateWorld } from '../engine/generate/world.ts'
 import { autoLineup } from '../engine/match/lineup.ts'
 import { createMatch, type Play } from '../engine/match/simulate.ts'
 import { createRng } from '../engine/rng.ts'
-import { along, ballPath, CENTRE, formationSpots, shirtNumbers } from './pitchScene.ts'
+import { ballAt, ballLegs, CENTRE, facing, formationSpots, shirtNumbers } from './pitchScene.ts'
 
 const world = generateWorld(2027)
 const lineup = (id: string) =>
@@ -40,27 +40,53 @@ describe('formationSpots', () => {
   })
 })
 
-describe('ballPath', () => {
-  it('ends a goal in the net the side attacks', () => {
-    expect(ballPath(play('home', 'goal'), CENTRE).at(-1)!.x).toBeGreaterThan(1)
-    expect(ballPath(play('away', 'goal'), CENTRE).at(-1)!.x).toBeLessThan(0)
+const last = (play: Play, secondHalf = false) =>
+  ballLegs(play, CENTRE, facing(play.side, secondHalf)).at(-1)!.to
+
+describe('ballLegs', () => {
+  it('ends a goal in the net the side attacks, and the other one after half-time', () => {
+    expect(last(play('home', 'goal')).x).toBeGreaterThan(1)
+    expect(last(play('away', 'goal')).x).toBeLessThan(0)
+    expect(last(play('home', 'goal'), true).x).toBeLessThan(0)
+    expect(last(play('away', 'goal'), true).x).toBeGreaterThan(1)
+  })
+
+  it('lets only the ball go on from the edge of the box when there is a shot', () => {
+    const legs = ballLegs(play('home', 'goal'), CENTRE, 'home')
+    const shot = legs.findIndex((leg) => leg.kind === 'shot')
+    expect(legs[shot - 1].kind).toBe('carry')
+    expect(legs[shot - 1].to.x).toBeLessThan(0.85)
+    expect(legs.some((leg) => leg.kind === 'pass')).toBe(true)
   })
 
   it('sends a miss wide of the posts and a save into the keeper', () => {
-    const wide = ballPath(play('home', 'wide'), CENTRE).at(-1)!
+    const wide = last(play('home', 'wide'))
     expect(Math.abs(wide.y - 0.5)).toBeGreaterThan(3.66 / 68)
-    const saved = ballPath(play('home', 'saved'), CENTRE).at(-1)!
-    expect(saved.x).toBeLessThan(1)
-    expect(Math.abs(saved.y - 0.5)).toBeLessThan(3.66 / 68)
+    expect(wide.x).toBeGreaterThan(1)
+    const held = ballLegs({ ...play('home', 'saved'), minute: 10 }, CENTRE, 'home').at(-1)!
+    expect(held.kind).toBe('shot')
+    expect(held.to.x).toBeLessThan(1)
+    expect(Math.abs(held.to.y - 0.5)).toBeLessThan(3.66 / 68)
+    const corner = last({ ...play('home', 'saved'), minute: 12 })
+    expect(corner.x).toBeGreaterThan(1)
+    expect(Math.abs(corner.y - 0.5)).toBeGreaterThan(3.66 / 68)
   })
 
-  it('starts where the ball was and stops short when the move breaks down', () => {
+  it('hands the ball to the defending side when the move is lost', () => {
+    const legs = ballLegs({ ...play('away', 'lost'), depth: 'midfield' }, CENTRE, 'away')
+    expect(legs.at(-1)!.owner).toBe('defend')
+    expect(legs.slice(0, -1).every((leg) => leg.owner === 'attack')).toBe(true)
+  })
+})
+
+describe('ballAt', () => {
+  it('starts where the ball was, ends at the last leg and walks the legs in order', () => {
     const from = { x: 0.3, y: 0.7 }
-    const path = ballPath({ ...play('away', 'lost'), depth: 'midfield' }, from)
-    expect(path[0]).toEqual(from)
-    expect(path).toHaveLength(3)
-    expect(along(path, 0)).toEqual(from)
-    expect(along(path, 1)).toEqual(path.at(-1))
+    const legs = ballLegs(play('home', 'goal'), from, 'home')
+    expect(ballAt(legs, from, 0)).toMatchObject({ pos: from, index: 0 })
+    expect(ballAt(legs, from, 1)).toEqual({ pos: legs.at(-1)!.to, index: legs.length })
+    const indexes = [0.1, 0.3, 0.5, 0.7, 0.9].map((t) => ballAt(legs, from, t).index)
+    expect(indexes).toEqual([...indexes].sort((a, b) => a - b))
   })
 })
 

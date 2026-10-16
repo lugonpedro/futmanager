@@ -1,15 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import type { MatchSide, MatchState, Play } from '../../engine/match/simulate.ts'
-import type { Club } from '../../engine/model/types.ts'
+import { textOn, type Kit } from '../kits.ts'
 import {
-  along,
-  ballPath,
+  ballAt,
+  ballLegs,
   CENTRE,
+  facing,
   followBall,
   formationSpots,
+  legStart,
   movingShare,
   playDuration,
   shirtNumbers,
+  type BallLeg,
   type Vec,
 } from '../pitchScene.ts'
 
@@ -26,7 +29,11 @@ type Dot = { pos: Vec; side: MatchSide; leftAt?: number; from?: Vec }
 
 type Scene = {
   play?: Play
-  path: Vec[]
+  legs: BallLeg[]
+  /** Where the ball was when the play began. */
+  from: Vec
+  /** Who runs to the ball on each leg, chosen when the leg starts. */
+  runners: Map<number, string>
   start: number
   duration: number
   ball: Vec
@@ -35,35 +42,8 @@ type Scene = {
   kickedOff?: boolean
 }
 
-const hex = (color: string) => {
-  const value = Number.parseInt(color.replace('#', '').slice(0, 6), 16)
-  return [(value >> 16) & 255, (value >> 8) & 255, value & 255]
-}
-const distance = (a: string, b: string) => {
-  const [x, y] = [hex(a), hex(b)]
-  return Math.hypot(x[0] - y[0], x[1] - y[1], x[2] - y[2])
-}
-
-/** Fill and outline for each side; the visitors change kit when the colours clash. */
-function kits(home: Club, away: Club) {
-  const awayFill =
-    distance(home.colors.primary, away.colors.primary) < 90
-      ? away.colors.secondary
-      : away.colors.primary
-  return {
-    home: { fill: home.colors.primary, line: home.colors.secondary },
-    away: {
-      fill: awayFill,
-      line: awayFill === away.colors.primary ? away.colors.secondary : away.colors.primary,
-    },
-  }
-}
-
-/** Black or white, whichever reads better on the shirt. */
-const numberColour = (fill: string) => {
-  const [r, g, b] = hex(fill)
-  return 0.299 * r + 0.587 * g + 0.114 * b > 150 ? '#111' : '#fff'
-}
+const other = (side: MatchSide): MatchSide => (side === 'home' ? 'away' : 'home')
+const near = (a: Vec, b: Vec) => Math.hypot(a.x - b.x, a.y - b.y)
 
 /**
  * The match acted out on a 2D pitch: 22 dots and a ball replaying, minute by
@@ -71,8 +51,12 @@ const numberColour = (fill: string) => {
  * shortest play lasts at the chosen speed; the screen waits the same time
  * before playing the next minute, so the picture and the commentary stay in step.
  */
-export function MatchPitch(props: { state: MatchState; unitMs: number }) {
-  const { state, unitMs } = props
+export function MatchPitch(props: {
+  state: MatchState
+  unitMs: number
+  kits: Record<MatchSide, Kit>
+}) {
+  const { state, unitMs, kits } = props
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const boxRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(0)
@@ -80,7 +64,9 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
     () => new Map([...shirtNumbers(state.home), ...shirtNumbers(state.away)]),
   )
   const sceneRef = useRef<Scene>({
-    path: [CENTRE],
+    legs: [],
+    from: CENTRE,
+    runners: new Map(),
     start: 0,
     duration: 1,
     ball: CENTRE,
@@ -103,7 +89,9 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
     const play = state.plays.at(-1)
     if (!play || play === scene.play) return
     scene.play = play
-    scene.path = ballPath(play, scene.ball)
+    scene.from = scene.ball
+    scene.legs = ballLegs(play, scene.ball, facing(play.side, play.minute > 45))
+    scene.runners = new Map()
     scene.start = performance.now()
     scene.duration = playDuration(play) * unitMs
   }, [state, plays, unitMs])
@@ -136,7 +124,6 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
         : [padX + p.x * fieldW, pad + p.y * fieldH]
     const across = upright ? fieldW : fieldH
     const radius = Math.max(6, Math.min(12, across * 0.032))
-    const colours = kits(state.home.club, state.away.club)
 
     let frame = 0
     const draw = (now: number) => {
@@ -145,44 +132,89 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
       const scene = sceneRef.current
       const dt = Math.min(0.1, (now - (scene.last || now)) / 1000)
       scene.last = now
-      const t = scene.play ? (now - scene.start) / scene.duration / movingShare(scene.play) : 0
-      scene.ball = along(scene.path, t)
+      const play = scene.play
+      const t = play ? (now - scene.start) / scene.duration / movingShare(play) : 0
+      const { pos, index, leg } = ballAt(scene.legs, scene.from, t)
+      // After the 45th minute's play, half-time: the ball goes back to the
+      // centre and the sides walk over to the other end.
+      const halftime = match.minute === 45 && !match.finished && t >= 1
+      scene.ball = halftime
+        ? {
+            x: pos.x + (CENTRE.x - pos.x) * Math.min(1, dt * 2),
+            y: pos.y + (CENTRE.y - pos.y) * Math.min(1, dt * 2),
+          }
+        : pos
+      if (halftime) {
+        scene.legs = []
+        scene.from = scene.ball
+      }
+      const secondHalf = match.minute > 45 || halftime
 
       context.clearRect(0, 0, width, height)
       drawMarkings(context, toScreen, upright ? fieldH : fieldW)
       const onPitch = new Set<string>()
-      const carrierSide = scene.play?.side
+      const lastLeg = leg ?? scene.legs.at(-1)
+      const owner = play && lastLeg && (lastLeg.owner === 'attack' ? play.side : other(play.side))
+      const shotAt = scene.legs.findIndex((l) => l.kind === 'shot')
+      const shooting = shotAt >= 0 && index >= shotAt
+
+      // The player who runs on this leg: with the ball to carry it, or to
+      // where a pass is going to receive it. Nobody chases a shot.
+      let runner: string | undefined
+      if (leg && owner && (leg.kind === 'carry' || leg.kind === 'pass')) {
+        runner = scene.runners.get(index)
+        if (!runner) {
+          const goal = leg.kind === 'carry' ? legStart(scene.legs, scene.from, index) : leg.to
+          const passer = scene.runners.get(index - 1)
+          let best = Infinity
+          for (const p of match[owner].onPitch) {
+            const dot = scene.dots.get(p.player.id)
+            if (!dot || p.position === 'G' || (leg.kind === 'pass' && p.player.id === passer)) {
+              continue
+            }
+            const d = near(dot.pos, goal)
+            if (d < best) [best, runner] = [d, p.player.id]
+          }
+          if (runner) scene.runners.set(index, runner)
+        }
+      }
+      // The shooter stays where the shot was struck.
+      const shooter = shooting ? scene.runners.get(shotAt - 1) : undefined
+      // On a save the keeper goes to the ball.
+      const saving = shooting && play?.end === 'saved' ? scene.legs[shotAt].to : undefined
 
       for (const side of ['home', 'away'] as const) {
         const team = match[side]
-        const spots = formationSpots(team, side)
-        const inPossession = carrierSide === side && t < 1
-        // The teammate nearest the ball goes to it, so the ball passes between players.
-        let carrier: string | undefined
-        if (inPossession && scene.play?.end !== 'goal') {
-          let best = Infinity
-          for (const p of team.onPitch) {
-            const dot = scene.dots.get(p.player.id)
-            if (!dot || p.position === 'G') continue
-            const d = Math.hypot(dot.pos.x - scene.ball.x, dot.pos.y - scene.ball.y)
-            if (d < best) [best, carrier] = [d, p.player.id]
-          }
-        }
+        const end = facing(side, secondHalf)
+        const spots = formationSpots(team, end)
+        const inPossession = owner === side && t < 1
         for (const p of team.onPitch) {
           const id = p.player.id
+          const keeper = p.position === 'G'
           onPitch.add(id)
           const spot = spots.get(id) ?? CENTRE
-          const target =
-            id === carrier
-              ? scene.ball
-              : followBall(spot, scene.ball, side, inPossession, p.position === 'G')
           const dot = scene.dots.get(id)
           if (!dot) {
             // At kick-off everyone starts in place; a substitute runs on from the touchline.
-            scene.dots.set(id, { pos: scene.kickedOff ? { x: spot.x, y: -0.04 } : spot, side })
+            scene.dots.set(id, {
+              pos: scene.kickedOff ? { x: spot.x, y: -0.04 } : spot,
+              side,
+            })
             continue
           }
-          const k = Math.min(1, dt * FOLLOW * (id === carrier ? 2.5 : 1))
+          const target =
+            id === runner
+              ? leg!.kind === 'carry'
+                ? scene.ball
+                : leg!.to
+              : id === shooter
+                ? dot.pos
+                : keeper && saving && side !== play?.side
+                  ? saving
+                  : followBall(spot, scene.ball, end, inPossession, keeper)
+          const speed =
+            id === runner ? (leg!.kind === 'carry' ? 3 : 1.8) : keeper && saving ? 2.5 : 1
+          const k = Math.min(1, dt * FOLLOW * speed)
           dot.pos = {
             x: dot.pos.x + (target.x - dot.pos.x) * k,
             y: dot.pos.y + (target.y - dot.pos.y) * k,
@@ -208,9 +240,16 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
       }
 
       const marks = markers(match, scene.play)
+      const keepers = new Set(
+        [...match.home.onPitch, ...match.away.onPitch]
+          .filter((p) => p.position === 'G')
+          .map((p) => p.player.id),
+      )
       for (const [id, dot] of scene.dots) {
         const [x, y] = toScreen(dot.pos)
-        const kit = colours[dot.side]
+        const kit = keepers.has(id)
+          ? { fill: kits[dot.side].keeper, line: '#111111' }
+          : kits[dot.side]
         context.globalAlpha =
           dot.leftAt === undefined ? 1 : Math.max(0, 1 - (now - dot.leftAt) / 1000 / WALK_OFF)
         context.beginPath()
@@ -220,7 +259,7 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
         context.lineWidth = 2
         context.strokeStyle = kit.line
         context.stroke()
-        context.fillStyle = numberColour(kit.fill)
+        context.fillStyle = textOn(kit.fill)
         context.font = `bold ${Math.round(radius * 1.05)}px system-ui, sans-serif`
         context.textAlign = 'center'
         context.textBaseline = 'middle'
@@ -239,16 +278,16 @@ export function MatchPitch(props: { state: MatchState; unitMs: number }) {
       context.strokeStyle = '#111'
       context.stroke()
 
-      if (scene.play?.end === 'goal' && t >= 1) {
-        const scorer = match[scene.play.side].onPitch.find(
-          (p) => p.player.id === scene.play?.playerId,
-        )
+      if (play?.end === 'goal' && t >= 1) {
+        const scorer = match[play.side].onPitch.find((p) => p.player.id === play.playerId)
         drawBanner(context, width, height, scorer ? `GOL! ${scorer.player.name}` : 'GOL!', now)
+      } else if (halftime) {
+        drawBanner(context, width, height, 'Intervalo: troca de lado', now)
       }
     }
     frame = requestAnimationFrame(draw)
     return () => cancelAnimationFrame(frame)
-  }, [state, width, numbers])
+  }, [state, width, numbers, kits])
 
   return (
     <div

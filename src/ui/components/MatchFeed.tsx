@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import type { MatchEvent } from '../../engine/model/types.ts'
+import type { Kit } from '../kits.ts'
+import { KitSwatch } from './KitSwatch.tsx'
 
 const EVENT_STYLE: Partial<Record<MatchEvent['type'], string>> = {
   gol: 'font-bold text-highlight',
@@ -11,8 +13,15 @@ const EVENT_STYLE: Partial<Record<MatchEvent['type'], string>> = {
   fim: 'font-semibold',
 }
 
-/** Narrated events, newest at the bottom, kept scrolled to the latest. */
-export function MatchFeed(props: { events: readonly MatchEvent[]; className?: string }) {
+/**
+ * Narrated events, newest at the bottom, kept scrolled to the latest. With
+ * `kits`, each side's events carry a square of the shirt it wears.
+ */
+export function MatchFeed(props: {
+  events: readonly MatchEvent[]
+  kits?: Readonly<Record<string, Kit>>
+  className?: string
+}) {
   const feedRef = useRef<HTMLOListElement>(null)
   useEffect(() => {
     feedRef.current?.scrollTo({ top: feedRef.current.scrollHeight })
@@ -28,6 +37,9 @@ export function MatchFeed(props: { events: readonly MatchEvent[]; className?: st
           <span className="mr-2 inline-block w-8 text-right text-muted-foreground tabular-nums">
             {event.minute}'
           </span>
+          {event.clubId && props.kits?.[event.clubId] && (
+            <KitSwatch kit={props.kits[event.clubId]} className="mr-1.5 align-[-1px]" />
+          )}
           {event.text}
         </li>
       ))}
