@@ -11,7 +11,10 @@ import {
   formationLines,
   repairLineup,
   swapPlayers,
+  withRoles,
 } from './lineup.ts'
+import { FORMATION_LINES } from './roles.ts'
+import { roleOverall } from './strength.ts'
 
 const world = generateWorld(2027)
 const squad = world.clubs.C1.playerIds.map((id) => world.players[id])
@@ -90,14 +93,14 @@ describe('swapPlayers', () => {
 
   it('trades the places of two starters', () => {
     const swapped = swapPlayers(lineup, first.playerId, second.playerId)
-    expect(swapped.starters[0]).toEqual({ playerId: second.playerId, position: first.position })
-    expect(swapped.starters[1]).toEqual({ playerId: first.playerId, position: second.position })
+    expect(swapped.starters[0]).toEqual({ ...first, playerId: second.playerId })
+    expect(swapped.starters[1]).toEqual({ ...second, playerId: first.playerId })
   })
 
   it('sends a starter to the bench in place of a sub', () => {
     const sub = lineup.bench[2]
     const swapped = swapPlayers(lineup, first.playerId, sub)
-    expect(swapped.starters[0]).toEqual({ playerId: sub, position: first.position })
+    expect(swapped.starters[0]).toEqual({ ...first, playerId: sub })
     expect(swapped.bench[2]).toBe(first.playerId)
   })
 
@@ -155,37 +158,84 @@ describe('autoFormation', () => {
 })
 
 describe('formationLines', () => {
-  const slot = (position: Position, id: string) => ({ position, id })
   const xi = (formation: Formation) => {
-    const counts = FORMATIONS[formation]
-    return (Object.keys(counts) as Position[]).flatMap((position) =>
-      Array.from({ length: counts[position] }, (_, i) => slot(position, `${position}${i + 1}`)),
-    )
+    const seen: Record<string, number> = {}
+    return FORMATION_LINES[formation].flat().map(({ position, role }) => {
+      seen[role] = (seen[role] ?? 0) + 1
+      return { position, role, id: `${role}${seen[role]}` }
+    })
   }
   const ids = (lines: { id: string }[][]) => lines.map((line) => line.map((s) => s.id))
 
-  it('puts the laterais at the ends of the back line', () => {
-    expect(ids(formationLines(xi('4-4-2'), '4-4-2'))).toEqual([
-      ['G1'],
-      ['L1', 'Z1', 'Z2', 'L2'],
-      ['M1', 'M2', 'M3', 'M4'],
-      ['A1', 'A2'],
+  it('lays the XI out by the lines of the formation, from the keeper forwards', () => {
+    expect(ids(formationLines(xi('4-4-2').reverse(), '4-4-2'))).toEqual([
+      ['GOL1'],
+      ['LAT2', 'ZAG2', 'ZAG1', 'LAT1'],
+      ['ME1', 'MC2', 'MC1', 'MD1'],
+      ['CA2', 'CA1'],
+    ])
+    expect(ids(formationLines(xi('4-2-3-1'), '4-2-3-1')).slice(2)).toEqual([
+      ['VOL1', 'VOL2'],
+      ['ME1', 'MEI1', 'MD1'],
+      ['CA1'],
     ])
   })
 
-  it('splits the midfield of a 4-2-3-1 and a 4-1-4-1, the first slots holding back', () => {
-    expect(ids(formationLines(xi('4-2-3-1'), '4-2-3-1')).slice(2, 4)).toEqual([
-      ['M1', 'M2'],
-      ['M3', 'M4', 'M5'],
-    ])
-    expect(ids(formationLines(xi('4-1-4-1'), '4-1-4-1')).slice(2, 4)).toEqual([
-      ['M1'],
-      ['M2', 'M3', 'M4', 'M5'],
+  it('places players without a role by their position', () => {
+    const plain = xi('4-1-4-1').map(({ position, id }) => ({ position, id }))
+    expect(ids(formationLines(plain, '4-1-4-1')).slice(2, 4)).toEqual([
+      ['VOL1'],
+      ['ME1', 'MC1', 'MC2', 'MD1'],
     ])
   })
 
-  it('keeps everyone when a midfielder is missing', () => {
-    const short = xi('4-2-3-1').filter((s) => s.id !== 'M5')
+  it('keeps everyone when a midfielder is missing or a keeper is extra', () => {
+    const short = xi('4-2-3-1').filter((s) => s.id !== 'MD1')
     expect(formationLines(short, '4-2-3-1').flat()).toHaveLength(10)
+    const extra = [...xi('4-4-2'), { position: 'A' as const, role: 'CA' as const, id: 'X' }]
+    expect(
+      formationLines(extra, '4-4-2')
+        .at(-1)!
+        .map((s) => s.id),
+    ).toContain('X')
+  })
+})
+
+describe('roles', () => {
+  it('counts each formation from its lines', () => {
+    expect(FORMATIONS['4-2-3-1']).toEqual({ G: 1, Z: 2, L: 2, M: 5, A: 1 })
+    expect(FORMATIONS['3-5-2']).toEqual({ G: 1, Z: 3, L: 0, M: 5, A: 2 })
+  })
+
+  it('makes the best tackler of the midfielders the volante', () => {
+    const lineup = autoLineup(squad, '4-1-4-1')
+    const midfield = lineup.starters.filter((s) => s.position === 'M')
+    const volante = midfield.find((s) => s.role === 'VOL')!
+    const tackling = (id: string) => roleOverall(world.players[id], 'VOL')
+    for (const other of midfield) {
+      expect(tackling(volante.playerId)).toBeGreaterThanOrEqual(tackling(other.playerId))
+    }
+  })
+
+  it('gives a lineup saved before roles the roles of its formation, in order', () => {
+    const lineup = autoLineup(squad, '4-2-3-1')
+    const plain = {
+      ...lineup,
+      starters: lineup.starters.map(({ playerId, position }) => ({ playerId, position })),
+    }
+    const roles = withRoles(plain)
+      .starters.filter((s) => s.position === 'M')
+      .map((s) => s.role)
+    expect(roles).toEqual(['VOL', 'VOL', 'ME', 'MEI', 'MD'])
+    expect(withRoles(lineup)).toBe(lineup)
+  })
+
+  it('keeps the roles when a lineup is repaired', () => {
+    const lineup = autoLineup(squad, '4-2-3-1')
+    const volante = lineup.starters.find((s) => s.role === 'VOL')!
+    const remaining = squad.filter((p) => p.id !== volante.playerId)
+    const repaired = repairLineup(lineup, remaining)
+    expect(repaired.starters.filter((s) => s.role === 'VOL')).toHaveLength(2)
+    expect(repaired.starters.filter((s) => s.role === 'MEI')).toHaveLength(1)
   })
 })

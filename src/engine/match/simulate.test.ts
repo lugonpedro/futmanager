@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { generateWorld } from '../generate/world.ts'
-import type { Formation, MatchResult, Posture, World } from '../model/types.ts'
+import type { Formation, MatchResult, Posture, TacticalRole, World } from '../model/types.ts'
 import { createRng } from '../rng.ts'
 import { autoLineup } from './lineup.ts'
 import {
@@ -183,20 +183,24 @@ describe('match state', () => {
     expect(short.defense).toBeLessThan(full.defense)
   })
 
-  it('makes a 4-1-4-1 a little safer and a 4-2-3-1 a little bolder than a flat 4-5-1', () => {
+  it('weighs each player by his role: a volante defends more, a meia attacks more', () => {
     const squad = world.clubs.C1.playerIds.map((id) => world.players[id])
-    const onPitch = autoLineup(squad, '4-5-1').starters.map(({ playerId, position }) => ({
-      player: world.players[playerId],
-      position,
+    const onPitch = autoLineup(squad, '4-5-1').starters.map((slot) => ({
+      ...slot,
+      player: world.players[slot.playerId],
       energy: 100,
     }))
-    const flat = sectorStrength(onPitch, 'normal', '4-5-1')
-    const holding = sectorStrength(onPitch, 'normal', '4-1-4-1')
-    const attacking = sectorStrength(onPitch, 'normal', '4-2-3-1')
-    expect(holding.defense).toBeGreaterThan(flat.defense)
-    expect(holding.attack).toBeLessThan(flat.attack)
-    expect(attacking.attack).toBeGreaterThan(flat.attack)
-    expect(attacking.midfield).toBe(flat.midfield)
+    const flat = sectorStrength(onPitch, 'normal')
+    const centre = onPitch.find((s) => s.role === 'MC')!
+    const as = (role: TacticalRole) =>
+      sectorStrength(
+        onPitch.map((s) => (s === centre ? { ...s, role } : s)),
+        'normal',
+      )
+    expect(as('VOL').defense).toBeGreaterThan(flat.defense)
+    expect(as('VOL').attack).toBeLessThan(flat.attack)
+    expect(as('MEI').attack).toBeGreaterThan(flat.attack)
+    expect(as('MEI').defense).toBeLessThan(flat.defense)
   })
 
   it(`allows at most ${MAX_SUBSTITUTIONS} substitutions, from the bench only`, () => {
@@ -232,11 +236,11 @@ describe('match state', () => {
   it('makes a player out of position count for less', () => {
     const match = createMatch(input('C1', 'C2'), createRng(3))
     const team = match.home
-    const before = sectorStrength(team.onPitch, team.posture, team.formation)
+    const before = sectorStrength(team.onPitch, team.posture)
     const keeper = team.onPitch.find((p) => p.position === 'G')!
     const striker = team.onPitch.find((p) => p.position === 'A')!
     swapPositions(match, 'home', keeper.player.id, striker.player.id)
-    const after = sectorStrength(team.onPitch, team.posture, team.formation)
+    const after = sectorStrength(team.onPitch, team.posture)
     expect(after.attack).toBeLessThan(before.attack)
   })
 

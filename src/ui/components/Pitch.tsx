@@ -1,10 +1,18 @@
 import { Fragment, type ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 import { formationLines } from '../../engine/match/lineup.ts'
-import type { Formation, Player, Position } from '../../engine/model/types.ts'
-import { positionFit } from '../../engine/match/strength.ts'
-import { fitClass } from '../format.ts'
+import type { Formation, Player, Position, TacticalRole } from '../../engine/model/types.ts'
+import { roleOf } from '../../engine/match/roles.ts'
+import { slotFit } from '../../engine/match/strength.ts'
+import { fitClass, POSITION_NAMES, TACTICAL_ROLE_NAMES } from '../format.ts'
 
-export type PitchSlot = { player: Player; position: Position; energy?: number; booked?: boolean }
+export type PitchSlot = {
+  player: Player
+  position: Position
+  role?: TacticalRole
+  energy?: number
+  booked?: boolean
+}
 
 const SLOT_CLASS = 'flex max-w-20 min-w-0 flex-1'
 
@@ -57,14 +65,15 @@ function PitchPlayer(props: {
   selected: boolean
   onSelect?: (playerId: string) => void
 }) {
-  const { player, position, energy, booked } = props.slot
-  const fit = positionFit(player, position)
+  const { player, energy, booked } = props.slot
+  const role = roleOf(props.slot)
+  const fit = slotFit(player, props.slot)
   const lastName = player.name.split(' ').slice(-1)[0]
   return (
     <button
       type="button"
       onClick={() => props.onSelect?.(player.id)}
-      title={`${player.name} (${player.position}), geral ${player.overall}`}
+      title={`${player.name}, ${POSITION_NAMES[player.position].toLowerCase()} de geral ${player.overall}, jogando de ${TACTICAL_ROLE_NAMES[role].toLowerCase()}`}
       className={`flex w-full min-w-0 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
     >
       <span className="w-full truncate text-center font-semibold">
@@ -77,7 +86,7 @@ function PitchPlayer(props: {
         {lastName}
       </span>
       <span className="tabular-nums">
-        <span className={props.selected ? '' : fitClass(fit, true)}>{player.position}</span>{' '}
+        <span className={cn('font-semibold', !props.selected && fitClass(fit, true))}>{role}</span>{' '}
         {player.overall}
         {energy !== undefined && ` · ${Math.round(energy)}%`}
       </span>

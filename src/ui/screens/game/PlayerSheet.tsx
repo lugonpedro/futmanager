@@ -16,9 +16,11 @@ import {
   type GameState,
   type Player,
   type Position,
+  type TacticalRole,
   type TrainingPlan,
 } from '../../../engine/model/types.ts'
-import { positionFit } from '../../../engine/match/strength.ts'
+import { roleOf, ROLES_BY_POSITION } from '../../../engine/match/roles.ts'
+import { bestRole, slotFit } from '../../../engine/match/strength.ts'
 import {
   FACE_ATTRIBUTES,
   faceValue,
@@ -47,6 +49,7 @@ import {
   ROLE_NAMES,
   roundStarFeats,
   signedChange,
+  TACTICAL_ROLE_NAMES,
   type Role,
 } from '../../format.ts'
 
@@ -59,7 +62,7 @@ export function PlayerSheet(props: {
   game: GameState
   player: Player
   role?: Role
-  slot?: Position
+  slot?: { position: Position; role?: TacticalRole }
   onClose: () => void
   onSell?: () => void
   onRenew?: () => void
@@ -79,7 +82,8 @@ export function PlayerSheet(props: {
           ?.goals ?? 0)
   const cupGoals = cupScorers(season.cup).find((r) => r.playerId === player.id)?.goals ?? 0
   const expiring = (own || loaned) && player.contractUntil <= season.year
-  const fit = slot && positionFit(player, slot)
+  const fit = slot && slotFit(player, slot)
+  const best = bestRole(player)
   const rating = seasonRating(season, player.id)
   const form = formOf(season, player.id)
   const condition = conditionOn(season, player, game.today, recoveryRate(game, player.id))
@@ -144,11 +148,16 @@ export function PlayerSheet(props: {
           <Item label="Posições" wide>
             {[player.position, ...player.secondary].map((p) => POSITION_NAMES[p]).join(', ')}
           </Item>
+          {ROLES_BY_POSITION[player.position].length > 1 && (
+            <Item label="Melhor função">{TACTICAL_ROLE_NAMES[best]}</Item>
+          )}
           {slot && fit !== undefined && (
             <Item label="Jogando de">
               <span className={fitClass(fit)}>
-                {POSITION_NAMES[slot]}
-                {fit < 1 && `, rende ${Math.round(fit * 100)}%`}
+                {TACTICAL_ROLE_NAMES[roleOf(slot)]}
+                {slot.position !== player.position &&
+                  fit < 1 &&
+                  `, rende ${Math.round(fit * 100)}%`}
               </span>
             </Item>
           )}

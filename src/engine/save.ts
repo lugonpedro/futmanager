@@ -22,11 +22,15 @@ import { addDays, seasonDates, type GameDate } from './season/calendar.ts'
 import { NO_TRAINING } from './progression/training.ts'
 import { createCup, CUP_ROUNDS } from './season/cup.ts'
 import { mixSeed, SAVE_VERSION } from './season/season.ts'
+import { withRoles } from './match/lineup.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 12, when the lineup had no tactical roles. */
+type V11Game = Omit<GameState, 'version'> & { version: 11 }
+
 /** A career as stored before version 11, with only the shirt sponsor. */
-type V10Game = Omit<GameState, 'version' | 'sponsorship'> & {
+type V10Game = Omit<V11Game, 'version' | 'sponsorship'> & {
   version: 10
   sponsorship: Omit<Sponsorship, 'secondary' | 'secondaryOffers'>
 }
@@ -293,11 +297,21 @@ function fromV9(saved: V9Game): V10Game {
 }
 
 /** No smaller sponsors yet; offers come on the next 1st of a month. */
-function fromV10(saved: V10Game): GameState {
+function fromV10(saved: V10Game): V11Game {
+  return {
+    ...saved,
+    version: 11,
+    sponsorship: { ...saved.sponsorship, secondary: [], secondaryOffers: [] },
+  }
+}
+
+/** The saved lineup takes the roles of its formation, in the order its players stood. */
+function fromV11(saved: V11Game): GameState {
+  const { userLineup } = saved
   return {
     ...saved,
     version: SAVE_VERSION,
-    sponsorship: { ...saved.sponsorship, secondary: [], secondaryOffers: [] },
+    ...(userLineup && { userLineup: withRoles(userLineup) }),
   }
 }
 
@@ -305,6 +319,7 @@ function fromV10(saved: V10Game): GameState {
 export function upgradeGame(
   saved:
     | GameState
+    | V11Game
     | V10Game
     | V9Game
     | V8Game
@@ -327,5 +342,6 @@ export function upgradeGame(
   const v8 = version < 8 ? fromV7(v7) : (saved as V8Game)
   const v9 = version < 9 ? fromV8(v8) : (saved as V9Game)
   const v10 = version < 10 ? fromV9(v9) : (saved as V10Game)
-  return fromV10(v10)
+  const v11 = version < 11 ? fromV10(v10) : (saved as V11Game)
+  return fromV11(v11)
 }

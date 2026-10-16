@@ -291,12 +291,18 @@ describe('end of season', () => {
   it('pays prize money by final position', () => {
     expect(prizeMoney(1, 1, 20)).toBeGreaterThan(prizeMoney(1, 20, 20))
     expect(prizeMoney(1, 20, 20)).toBeGreaterThan(prizeMoney(2, 1, 20) / 4)
-    // The user's club makes no deals at the close, so its cash moves by prize and the last wages only.
+    // The user's club makes no deals at the close, so its cash moves by prize and the last
+    // wages only, once the shirt sponsor's bonus for a goal met is left out.
     const user = finished.world.clubs[finished.userClubId]
     const closingMonths = daysFrom(finished.today, '2027-12-31').filter((d) =>
       d.endsWith('-01'),
     ).length
-    expect(next.world.clubs[user.id].cash).toBe(
+    const { master } = finished.sponsorship
+    const noBonus = startNextSeason({
+      ...finished,
+      sponsorship: { ...finished.sponsorship, master: master && { ...master, bonus: 0 } },
+    })
+    expect(noBonus.world.clubs[user.id].cash).toBe(
       user.cash +
         summary.prizes[user.id] +
         closingMonths * (monthlySponsorship(user) - wageBill(finished.world, user)),

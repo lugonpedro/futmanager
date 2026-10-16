@@ -7,10 +7,12 @@ import type {
   Player,
   Position,
   Posture,
+  TacticalRole,
   TeamStats,
 } from '../model/types.ts'
 import { createRng, mixSeed, type Rng } from '../rng.ts'
-import { fillSlots, formationSlots } from './lineup.ts'
+import { fillSlots, formationSlots, withRoles } from './lineup.ts'
+import { ROLE_SHOOTING, roleOf } from './roles.ts'
 import { narrate, type GoalKind } from './narration.ts'
 import {
   finishingSkill,
@@ -18,9 +20,9 @@ import {
   keeperSkill,
   matchShape,
   paceSkill,
-  positionFit,
   POSTURE_EFFECT,
   sectorStrength,
+  slotFit,
   styleBonus,
 } from './strength.ts'
 import { styleLevel } from '../player/attributes.ts'
@@ -105,6 +107,7 @@ export type Play = {
 export type OnPitch = {
   player: Player
   position: Position
+  role: TacticalRole
   energy: number
   form: number
   booked: boolean
@@ -162,11 +165,12 @@ function teamState(input: MatchTeamInput, match: MatchInput, side: MatchSide): T
     club: input.club,
     formation: input.lineup.formation,
     posture: input.lineup.posture,
-    onPitch: input.lineup.starters.map(({ playerId, position }) => ({
-      player: match.players[playerId],
-      position,
-      energy: match.condition?.[playerId] ?? 100,
-      form: match.form?.[playerId] ?? 0,
+    onPitch: withRoles(input.lineup).starters.map((slot) => ({
+      player: match.players[slot.playerId],
+      position: slot.position,
+      role: roleOf(slot),
+      energy: match.condition?.[slot.playerId] ?? 100,
+      form: match.form?.[slot.playerId] ?? 0,
       booked: false,
     })),
     bench: input.lineup.bench.map((id) => match.players[id]),
@@ -190,6 +194,7 @@ function weightedPick<T>(rng: Rng, items: readonly T[], weight: (item: T) => num
 }
 
 const SCORING_WEIGHT: Record<Position, number> = { G: 0, Z: 0.6, L: 0.6, M: 2.2, A: 5 }
+const scoringWeight = (p: OnPitch) => SCORING_WEIGHT[p.position] * (ROLE_SHOOTING[p.role] ?? 1)
 /** Who gets on the end of a cross or a corner. */
 const AERIAL_WEIGHT: Record<Position, number> = { G: 0, Z: 2.2, L: 0.4, M: 0.8, A: 3 }
 const FOUL_WEIGHT: Record<Position, number> = { G: 0.2, Z: 1.6, L: 1.2, M: 1.2, A: 0.6 }
@@ -231,7 +236,7 @@ function addEvent(state: MatchState, event: Omit<MatchEvent, 'minute'>): MatchEv
 
 function sectors(state: MatchState, side: MatchSide) {
   const team = state[side]
-  const raw = sectorStrength(team.onPitch, team.posture, team.formation)
+  const raw = sectorStrength(team.onPitch, team.posture)
   if (side === 'away') return raw
   const boost = BALANCE.homeAdvantage
   return {
@@ -319,7 +324,7 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
         rng,
         outfield,
         (p) =>
-          SCORING_WEIGHT[p.position] *
+          scoringWeight(p) *
           (1 + 0.25 * styleLevel(p.player, 'finalizador')) *
           Math.max(1, finishingSkill(p.player)) *
           shape(p),
@@ -428,6 +433,7 @@ export function substitute(
   team.onPitch[team.onPitch.indexOf(leaving)] = {
     player: coming,
     position: leaving.position,
+    role: leaving.role,
     energy: state.condition[inId] ?? 100,
     form: state.form[inId] ?? 0,
     booked: false,
@@ -444,8 +450,8 @@ export function substitute(
 
 /**
  * Two players on the pitch swap places without using a substitution. Each
- * takes the other's position and spot in the line, so swapping two forwards
- * only changes the side each one plays on. Returns false if not allowed.
+ * takes the other's position, role and spot in the line, so swapping two
+ * forwards only changes the side each one plays on. Returns false if not allowed.
  */
 export function swapPositions(state: MatchState, side: MatchSide, aId: string, bId: string) {
   const team = state[side]
@@ -454,6 +460,7 @@ export function swapPositions(state: MatchState, side: MatchSide, aId: string, b
   if (i < 0 || j < 0 || i === j || state.finished) return false
   const [a, b] = [team.onPitch[i], team.onPitch[j]]
   ;[a.position, b.position] = [b.position, a.position]
+  ;[a.role, b.role] = [b.role, a.role]
   team.onPitch[i] = b
   team.onPitch[j] = a
   team.played[aId] = a.position
@@ -474,21 +481,28 @@ export function setFormation(state: MatchState, side: MatchSide, formation: Form
   team.formation = formation
   const keeper = team.onPitch.find((p) => p.position === 'G')
   const outfield = team.onPitch.filter((p) => p !== keeper)
-  const positions = formationSlots(formation)
-  if (keeper) positions.splice(positions.indexOf('G'), 1)
+  const open = formationSlots(formation)
+  if (keeper)
+    open.splice(
+      open.findIndex((slot) => slot.position === 'G'),
+      1,
+    )
   const slots = fillSlots(
     outfield.map((p) => p.player),
-    positions,
+    open,
   )
   for (const p of outfield) {
     const slot = slots.find((s) => s.playerId === p.player.id)
-    if (slot) p.position = slot.position
+    if (slot) {
+      p.position = slot.position
+      p.role = roleOf(slot)
+    }
   }
 }
 
-/** The bench player who best fills a position, if any. */
-function bestReplacement(team: TeamState, position: Position): Player | undefined {
-  const value = (p: Player) => p.overall * positionFit(p, position)
+/** The bench player who best fills a slot, if any. */
+function bestReplacement(team: TeamState, slot: OnPitch): Player | undefined {
+  const value = (p: Player) => p.overall * slotFit(p, slot)
   return [...team.bench].sort((a, b) => value(b) - value(a))[0]
 }
 
@@ -504,7 +518,7 @@ function injuries(state: MatchState, side: MatchSide) {
     playerId: hurt.player.id,
     text: narrate.injury(hurt.player.name),
   })
-  const replacement = bestReplacement(team, hurt.position)
+  const replacement = bestReplacement(team, hurt)
   if (!replacement || !substitute(state, side, hurt.player.id, replacement.id)) {
     removeFromPitch(team, hurt)
   }
@@ -522,9 +536,11 @@ function sendOff(state: MatchState, side: MatchSide, offender: OnPitch) {
   if (keeper && outfield.length > 0 && team.subsLeft > 0) {
     const weakest = outfield.reduce((a, b) => (a.player.overall <= b.player.overall ? a : b))
     weakest.position = 'G'
+    weakest.role = 'GOL'
     substitute(state, side, weakest.player.id, keeper.id)
   } else if (outfield.length > 0) {
     outfield[0].position = 'G'
+    outfield[0].role = 'GOL'
   }
 }
 

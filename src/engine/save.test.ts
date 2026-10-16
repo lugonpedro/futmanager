@@ -6,6 +6,7 @@ import { NO_TRAINING } from './progression/training.ts'
 import { newGame, playRound, roundDate, SAVE_VERSION } from './season/season.ts'
 import type { World } from './model/types.ts'
 import { upgradeGame } from './save.ts'
+import { autoLineup } from './match/lineup.ts'
 
 /** A save as an older version left it in the database: whatever JSON it was. */
 const upgradeOld = (saved: unknown) => upgradeGame(saved as Parameters<typeof upgradeGame>[0])
@@ -34,6 +35,22 @@ describe('upgradeGame', () => {
 
   it('leaves a current save alone', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
+  })
+
+  it('gives the lineup of a version 11 save the roles of its formation', () => {
+    const lineup = autoLineup(
+      fresh.world.clubs.C10.playerIds.map((id) => fresh.world.players[id]),
+      '4-1-4-1',
+    )
+    const plain = {
+      ...lineup,
+      starters: lineup.starters.map(({ playerId, position }) => ({ playerId, position })),
+    }
+    const upgraded = upgradeOld({ ...fresh, version: 11, userLineup: plain })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.userLineup!.starters.every((slot) => slot.role)).toBe(true)
+    expect(upgraded.userLineup!.starters.filter((s) => s.role === 'VOL')).toHaveLength(1)
+    expect(upgradeOld({ ...fresh, version: 11 }).userLineup).toBeUndefined()
   })
 
   it('gives a version 10 save no smaller sponsors', () => {

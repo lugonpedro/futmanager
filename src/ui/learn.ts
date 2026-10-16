@@ -7,14 +7,9 @@ import { SPONSOR } from '../engine/finance/sponsors.ts'
 import { CLUBS_PER_DIVISION, SQUAD_SHAPE } from '../engine/generate/world.ts'
 import { BENCH_SIZE, FORMATIONS } from '../engine/match/lineup.ts'
 import { BALANCE, MAX_SUBSTITUTIONS, RESULT_POINTS } from '../engine/match/simulate.ts'
-import {
-  FAMILIARITY,
-  FORM_EFFECT,
-  FORMATION_EFFECT,
-  POSTURE_EFFECT,
-  STYLE_POINTS,
-} from '../engine/match/strength.ts'
-import type { Formation, Position } from '../engine/model/types.ts'
+import { FAMILIARITY, FORM_EFFECT, POSTURE_EFFECT, STYLE_POINTS } from '../engine/match/strength.ts'
+import { ROLE_SECTORS } from '../engine/match/roles.ts'
+import type { Formation, Position, TacticalRole } from '../engine/model/types.ts'
 import { ATTRIBUTES, FACES, KEEPER_FACES, STYLE_PLUS_FROM } from '../engine/player/attributes.ts'
 import { PROGRESSION } from '../engine/progression/progression.ts'
 import { TRAINING } from '../engine/progression/training.ts'
@@ -48,6 +43,7 @@ import {
   SPONSOR_SLOT_NAMES,
   SQUAD_FOCUS_NAMES,
   STYLE_NAMES,
+  TACTICAL_ROLE_NAMES,
 } from './format.ts'
 
 /*
@@ -137,6 +133,9 @@ const squadSize = Object.values(SQUAD_SHAPE).reduce((a, b) => a + b, 0)
 const formations = Object.keys(FORMATIONS) as Formation[]
 const positions = Object.keys(POSITION_NAMES) as Position[]
 const positionList = listText(positions.map((p) => POSITION_NAMES[p].toLowerCase()))
+const roleList = (Object.keys(ROLE_SECTORS) as TacticalRole[]).map(
+  (role) => `${TACTICAL_ROLE_NAMES[role].toLowerCase()} (${role})`,
+)
 
 /** "Goleiro 10, zagueiro 9...": a value for each position, in position order. */
 const byPosition = (values: Record<Position, number>, skipZero = false) =>
@@ -203,7 +202,8 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   tatica: {
     title: 'Escalação e tática',
     items: [
-      `${formations.length} formações: ${listText(formations)}. O 4-1-4-1 defende ${percent(FORMATION_EFFECT['4-1-4-1']!.defense)} mais e ataca ${percent(FORMATION_EFFECT['4-1-4-1']!.attack)} menos; o 4-2-3-1 faz o contrário.`,
+      `${formations.length} formações: ${listText(formations)}. Cada vaga da formação tem uma função, que muda o quanto o jogador ajuda na defesa, no meio e no ataque: ${listText(roleList)}.`,
+      'O volante protege a defesa e chuta pouco; o meia ofensivo e os pontas reforçam o ataque. Na ficha do jogador aparece a função em que ele rende mais, e no campo a cor da função avisa se ele serve para ela.',
       `Posições: ${positionList}. Fora da posição o jogador rende menos: ${Math.round(FAMILIARITY.secondary * 100)}% numa posição secundária dele e ${Math.round(FAMILIARITY.other * 100)}% em qualquer outra. Jogador de linha no gol é desastre. A cor do nome avisa: verde, amarelo ou vermelho.`,
       `Postura defensiva: ${percent(POSTURE_EFFECT.defensiva.defense)} mais defesa, ${percent(POSTURE_EFFECT.defensiva.attack)} menos ataque, e o time cansa menos. Ofensiva: ${percent(POSTURE_EFFECT.ofensiva.attack)} mais ataque, ${percent(POSTURE_EFFECT.ofensiva.defense)} menos defesa, e cansa ${percent(POSTURE_EFFECT.ofensiva.tiring)} mais.`,
       `Até ${MAX_SUBSTITUTIONS} substituições, com ${BENCH_SIZE} no banco. Durante o jogo dá para mudar a formação, a postura e trocar jogadores de posição sem gastar substituição.`,

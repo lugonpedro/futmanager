@@ -16,6 +16,7 @@ import {
   ArrowUpIcon,
   DumbbellIcon,
   FilePenLineIcon,
+  ListIcon,
   MapIcon,
   TagIcon,
   WandSparklesIcon,
@@ -41,13 +42,15 @@ import {
   formationLines,
   swapPlayers,
 } from '../../../engine/match/lineup.ts'
-import { positionFit, sectorStrength } from '../../../engine/match/strength.ts'
+import { roleOf as slotRole } from '../../../engine/match/roles.ts'
+import { positionFit, sectorStrength, slotFit } from '../../../engine/match/strength.ts'
 import {
   POSITIONS,
   type Lineup,
   type Player,
   type Position,
   type Posture,
+  type TacticalRole,
   type TrainingPlan,
 } from '../../../engine/model/types.ts'
 import {
@@ -81,6 +84,7 @@ import {
   POSITION_ORDER,
   POSTURE_NAMES,
   rangeText,
+  TACTICAL_ROLE_NAMES,
   type Role,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
@@ -146,7 +150,7 @@ export function TeamScreen() {
   const [viewing, setViewing] = useState<string>()
   const [listing, setListing] = useState<string>()
   const [renewing, setRenewing] = useState<string>()
-  const [showPitch, setShowPitch] = useState(false)
+  const [showPitch, setShowPitch] = useState(prefersPitch)
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
   const [trainableOnly, setTrainableOnly] = useState(false)
@@ -163,6 +167,7 @@ export function TeamScreen() {
   const out = unavailablePlayers(season)
   const lineup = clubLineup(game, userClubId)
   const slots = new Map(lineup.starters.map((s) => [s.playerId, s.position]))
+  const slotOf = (id: string) => lineup.starters.find((s) => s.playerId === id)
   const bench = new Set(lineup.bench)
   const roleOf = (id: string): Role =>
     slots.has(id) ? 'titular' : bench.has(id) ? 'reserva' : 'fora'
@@ -206,6 +211,7 @@ export function TeamScreen() {
   const starters = lineup.starters.map((s) => ({
     player: world.players[s.playerId],
     position: s.position,
+    role: s.role,
   }))
   const conditionOf = (id: string) =>
     conditionOn(season, world.players[id], game.today, recoveryRate(game, id))
@@ -216,7 +222,6 @@ export function TeamScreen() {
       form: formOf(season, s.player.id),
     })),
     lineup.posture,
-    lineup.formation,
   )
 
   const query = search.trim().toLocaleLowerCase('pt-BR')
@@ -319,27 +324,7 @@ export function TeamScreen() {
             </p>
           </div>
 
-          <StarterLines
-            lines={formationLines(starters, lineup.formation)}
-            selected={selected}
-            onSelect={pick}
-          />
-
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-xs text-muted-foreground">
-              Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de
-              lugar. A cor da posição mostra o encaixe:{' '}
-              <span className={fitClass(1)}>na posição</span>,{' '}
-              <span className={fitClass(0.95)}>secundária</span> ou{' '}
-              <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
-              vender ou renovar.
-            </p>
-            <Button variant="outline" size="sm" onClick={() => setShowPitch((shown) => !shown)}>
-              <MapIcon />
-              {showPitch ? 'Esconder o campo' : 'Ver no campo'}
-            </Button>
-          </div>
-          {showPitch && (
+          {showPitch ? (
             <div className="w-full md:mx-auto md:max-w-lg">
               <Pitch
                 slots={starters}
@@ -353,7 +338,35 @@ export function TeamScreen() {
                 )}
               />
             </div>
+          ) : (
+            <StarterLines
+              lines={formationLines(starters, lineup.formation)}
+              selected={selected}
+              onSelect={pick}
+            />
           )}
+
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-xs text-muted-foreground">
+              Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de
+              lugar. Cada vaga tem uma função, como volante ou ponta, e a cor dela mostra o encaixe:{' '}
+              <span className={fitClass(1)}>bom</span>,{' '}
+              <span className={fitClass(0.95)}>serve</span> ou{' '}
+              <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
+              vender ou renovar.
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                setShowPitch(!showPitch)
+                savePitchPreference(!showPitch)
+              }}
+            >
+              {showPitch ? <ListIcon /> : <MapIcon />}
+              {showPitch ? 'Ver em lista' : 'Ver no campo'}
+            </Button>
+          </div>
         </Card>
 
         <section className="flex min-w-0 flex-col gap-3">
@@ -580,7 +593,7 @@ export function TeamScreen() {
           game={game}
           player={viewed}
           role={roleOf(viewed.id)}
-          slot={slots.get(viewed.id)}
+          slot={slotOf(viewed.id)}
           onClose={() => setViewing(undefined)}
           onSell={() => setListing(viewed.id)}
           onRenew={() => setRenewing(viewed.id)}
@@ -634,21 +647,39 @@ function DragSlot(props: {
   )
 }
 
+const PITCH_KEY = 'futmanager-elenco-campo'
+
+/** The XI shows on the pitch unless the user switched to the list before. */
+function prefersPitch(): boolean {
+  try {
+    return localStorage.getItem(PITCH_KEY) !== 'lista'
+  } catch {
+    return true
+  }
+}
+
+function savePitchPreference(pitch: boolean) {
+  try {
+    localStorage.setItem(PITCH_KEY, pitch ? 'campo' : 'lista')
+  } catch {
+    // Without storage the pitch just shows again next time.
+  }
+}
+
 /** What each line of the XI is called, from the keeper forwards. */
-function lineName(line: readonly { position: Position }[], index: number, lines: number): string {
+function lineName(line: readonly { position: Position; role?: TacticalRole }[]): string {
   const position = line[0].position
   if (position === 'G') return 'Goleiro'
   if (position === 'A') return 'Ataque'
   if (position !== 'M') return 'Defesa'
-  // With two midfield lines the first holds back.
-  const midfield = lines - 3
-  if (midfield < 2) return 'Meio'
-  return index === 2 ? 'Volantes' : 'Meias'
+  if (line.every((s) => s.role === 'VOL')) return line.length > 1 ? 'Volantes' : 'Volante'
+  if (line.some((s) => s.role === 'MEI')) return line.length > 1 ? 'Meias' : 'Meia'
+  return 'Meio'
 }
 
 /** The XI as chips by line, each one a drag handle and a drop target like on the pitch. */
 function StarterLines(props: {
-  lines: { player: Player; position: Position }[][]
+  lines: { player: Player; position: Position; role?: TacticalRole }[][]
   selected?: string
   onSelect: (playerId: string) => void
 }) {
@@ -657,26 +688,28 @@ function StarterLines(props: {
       {props.lines.map((line, i) => (
         <div key={i} className="flex flex-col gap-1 sm:flex-row sm:items-start sm:gap-2">
           <span className="shrink-0 text-xs text-muted-foreground sm:w-16 sm:pt-2">
-            {lineName(line, i, props.lines.length)}
+            {lineName(line)}
           </span>
           <div className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:flex sm:flex-wrap">
-            {line.map(({ player, position }) => {
-              const fit = positionFit(player, position)
+            {line.map((slot) => {
+              const { player } = slot
+              const role = slotRole(slot)
+              const fit = slotFit(player, slot)
               const selected = props.selected === player.id
               return (
                 <DragSlot key={player.id} id={player.id} place="chip" className="min-w-0 sm:w-48">
                   <button
                     type="button"
                     onClick={() => props.onSelect(player.id)}
-                    title={`${POSITION_NAMES[position]}${fit < 1 ? ` (é ${POSITION_NAMES[player.position].toLowerCase()})` : ''}`}
+                    title={`${TACTICAL_ROLE_NAMES[role]}${player.position !== slot.position ? ` (é ${POSITION_NAMES[player.position].toLowerCase()})` : ''}`}
                     className={cn(
                       'flex w-full cursor-pointer items-center gap-2 rounded-md border px-2 py-1.5 text-left text-sm hover:bg-accent',
                       selected &&
                         'border-yellow-400 bg-yellow-300 text-green-950 hover:bg-yellow-300',
                     )}
                   >
-                    <span className={cn('w-4 font-bold', !selected && fitClass(fit))}>
-                      {position}
+                    <span className={cn('w-8 text-xs font-bold', !selected && fitClass(fit))}>
+                      {role}
                     </span>
                     <span className="min-w-0 flex-1 truncate">{player.name}</span>
                     <span className="font-semibold tabular-nums">{player.overall}</span>

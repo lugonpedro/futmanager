@@ -76,6 +76,30 @@ Ordem sugerida de PRs:
 
 **Código**: `model/types.ts`, `match/lineup.ts`, `match/strength.ts`, `match/simulate.ts`, `player/attributes.ts`, `save.ts`, `components/Pitch.tsx`, `components/FormationSelect.tsx`, `TeamScreen.tsx`, `PlayerCard.tsx`. É o maior item do plano e vale um PR só para ele.
 
+**Como ficou (PR 4)**: as funções são GOL, ZAG, LAT, ALA, VOL, MC, MEI, ME, MD, PE, PD, CA e SA. A ala fica no meio do 3-5-2 e do 3-4-3; no 5-3-2 e no 5-4-1 os laterais continuam laterais, porque como alas a defesa desses esquemas caía demais. Não entraram formações novas: a Fantasia valida as formações no servidor, e com as atuais já dá para ter volante, meia ofensivo e pontas. As formações ficaram assim:
+
+| Formação | Funções, de trás para a frente             |
+| -------- | ------------------------------------------ |
+| 4-4-2    | LAT ZAG ZAG LAT · ME MC MC MD · CA CA      |
+| 4-3-3    | LAT ZAG ZAG LAT · VOL · MC MC · PE CA PD   |
+| 3-5-2    | ZAG ZAG ZAG · ALA VOL MC ALA · MEI · CA SA |
+| 4-5-1    | LAT ZAG ZAG LAT · ME MC MC MC MD · CA      |
+| 5-3-2    | LAT ZAG ZAG ZAG LAT · MC VOL MC · CA SA    |
+| 3-4-3    | ZAG ZAG ZAG · ALA MC MC ALA · PE CA PD     |
+| 4-2-4    | LAT ZAG ZAG LAT · MC MC · PE CA CA PD      |
+| 5-4-1    | LAT ZAG ZAG ZAG LAT · ME VOL MC MD · CA    |
+| 4-1-4-1  | LAT ZAG ZAG LAT · VOL · ME MC MC MD · CA   |
+| 4-2-3-1  | LAT ZAG ZAG LAT · VOL VOL · ME MEI MD · CA |
+
+- O peso de cada função em defesa, meio e ataque está em `ROLE_SECTORS` (`match/roles.ts`). As funções simples (ZAG, LAT, MC, CA) pesam como a posição pesava, e os totais de cada formação ficaram perto dos de antes; o 4-1-4-1 continua mais seguro que o 4-5-1 e o 4-2-3-1 mais ousado, agora pelas funções, sem o `FORMATION_EFFECT`.
+- Quem chuta também depende da função (`ROLE_SHOOTING`): o volante chuta metade, o meia ofensivo 50% a mais.
+- A escalação automática escolhe os mesmos jogadores de antes, pela posição, e dá as funções a quem rende mais nelas: o volante é o meia com mais desarme.
+- O encaixe da função é verde quando o geral do jogador nela chega a 92% do geral dele, amarelo abaixo disso. A função não tira força do jogador na partida; ela muda para onde vai a força dele.
+- No campo e na lista, cada jogador mostra a sigla da função. O campo aparece por padrão, com um botão "Ver em lista", e a escolha fica guardada no navegador. A ficha do jogador mostra a melhor função dele e a função em que está jogando.
+- O seletor de formação traz uma frase sobre cada uma (sem as frases na Fantasia).
+- **Equilíbrio** em 20 temporadas: 2,48 gols por jogo (antes 2,53), mandante vence 45,6% (antes 45,3%), empates 24,7% (antes 24,3%).
+- **Save**: versão 12; a escalação salva ganha as funções da formação, na ordem em que os titulares estavam.
+
 ## 4. Setas de sugestão no treino
 
 **Hoje**: o select do treino individual lista os nove focos (Geral, Finalização, Passe...) sem dizer qual ajuda mais aquele jogador.

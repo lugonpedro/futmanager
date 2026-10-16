@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Card } from '@/components/ui/card'
-import { positionFit } from '../../engine/match/strength.ts'
+import { slotFit } from '../../engine/match/strength.ts'
 import {
   setFormation,
   setPosture,
@@ -88,7 +88,7 @@ export function MatchControls(props: {
           {team.bench.length === 0 && <p className="text-sm text-muted-foreground">Ninguém.</p>}
           <ul className="flex flex-col gap-0.5 text-sm">
             {team.bench.map((player) => {
-              const fit = selected ? positionFit(player, selected.position) : 1
+              const fit = selected ? slotFit(player, selected) : 1
               return (
                 <li key={player.id}>
                   <button

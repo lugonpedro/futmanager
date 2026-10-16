@@ -1,51 +1,76 @@
-import type { Formation, Lineup, LineupSlot, Player, Position, Posture } from '../model/types.ts'
-import { positionFit } from './strength.ts'
+import type {
+  Formation,
+  Lineup,
+  LineupSlot,
+  Player,
+  Position,
+  Posture,
+  TacticalRole,
+} from '../model/types.ts'
+import { DEFAULT_ROLE, FORMATION_LINES, roleOf, type Slot } from './roles.ts'
+import { positionFit, roleOverall } from './strength.ts'
 
 /** How many players each formation puts in each position. Laterais count as defenders. */
-export const FORMATIONS: Record<Formation, Record<Position, number>> = {
-  '4-4-2': { G: 1, Z: 2, L: 2, M: 4, A: 2 },
-  '4-3-3': { G: 1, Z: 2, L: 2, M: 3, A: 3 },
-  '3-5-2': { G: 1, Z: 3, L: 0, M: 5, A: 2 },
-  '4-5-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
-  '5-3-2': { G: 1, Z: 3, L: 2, M: 3, A: 2 },
-  '3-4-3': { G: 1, Z: 3, L: 0, M: 4, A: 3 },
-  '4-2-4': { G: 1, Z: 2, L: 2, M: 2, A: 4 },
-  '5-4-1': { G: 1, Z: 3, L: 2, M: 4, A: 1 },
-  '4-1-4-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
-  '4-2-3-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
-}
+export const FORMATIONS = Object.fromEntries(
+  Object.entries(FORMATION_LINES).map(([formation, lines]) => {
+    const counts: Record<Position, number> = { G: 0, Z: 0, L: 0, M: 0, A: 0 }
+    for (const slot of lines.flat()) counts[slot.position]++
+    return [formation, counts]
+  }),
+) as Record<Formation, Record<Position, number>>
 
 /**
- * How the midfield splits into lines, from the back, in formations that have
- * them: a holding line behind the rest. The first midfield slots hold back.
+ * The XI by line, from the keeper forwards, each player in the slot of the
+ * formation that matches his position and role, or failing that his position.
+ * Anyone left over (a keeper sent off and replaced by an outfield player) joins
+ * the last line of his position, so nobody ever goes missing.
  */
-export const MIDFIELD_LINES: Partial<Record<Formation, number[]>> = {
-  '4-1-4-1': [1, 4],
-  '4-2-3-1': [2, 3],
-}
-
-/**
- * The XI by line, from the keeper forwards: the keeper, the back line with a
- * lateral at each end, the midfield line or lines, and the forwards.
- */
-export function formationLines<T extends { position: Position }>(
+export function formationLines<T extends { position: Position; role?: TacticalRole }>(
   starters: readonly T[],
   formation: Formation,
 ): T[][] {
-  const of = (position: Position) => starters.filter((s) => s.position === position)
-  const fullbacks = of('L')
-  const back = [...fullbacks.slice(0, 1), ...of('Z'), ...fullbacks.slice(1)]
-  const midfield = of('M')
-  const sizes = MIDFIELD_LINES[formation] ?? [midfield.length]
-  const lines: T[][] = []
-  let from = 0
-  sizes.forEach((size, i) => {
-    // The last line takes whoever is left, so a player short or extra never goes missing.
-    const to = i === sizes.length - 1 ? midfield.length : from + size
-    lines.push(midfield.slice(from, to))
-    from = to
-  })
-  return [of('G'), back, ...lines, of('A')].filter((line) => line.length > 0)
+  const lines = FORMATION_LINES[formation]
+  const left = [...starters]
+  const take = (match: (s: T) => boolean) => {
+    const index = left.findIndex(match)
+    return index < 0 ? undefined : left.splice(index, 1)[0]
+  }
+  const placed = lines.map((line) =>
+    line.map((slot) => take((s) => s.position === slot.position && s.role === slot.role)),
+  )
+  lines.forEach((line, i) =>
+    line.forEach((slot, j) => {
+      placed[i][j] ??= take((s) => s.position === slot.position)
+    }),
+  )
+  const result = placed.map((line) => line.filter((s): s is T => s !== undefined))
+  for (const extra of left) {
+    const at = lines.findLastIndex((line) => line.some((slot) => slot.position === extra.position))
+    result[at < 0 ? result.length - 1 : at].push(extra)
+  }
+  return result.filter((line) => line.length > 0)
+}
+
+/**
+ * Gives a lineup saved before roles the roles of its formation: within each
+ * position, in the order the starters were saved, from the back and the left.
+ */
+export function withRoles(lineup: Lineup): Lineup {
+  if (lineup.starters.every((slot) => slot.role)) return lineup
+  const roles = Object.fromEntries(
+    (Object.keys(DEFAULT_ROLE) as Position[]).map((position) => [
+      position,
+      FORMATION_LINES[lineup.formation]
+        .flat()
+        .filter((slot) => slot.position === position)
+        .map((slot) => slot.role),
+    ]),
+  ) as Record<Position, TacticalRole[]>
+  const starters = lineup.starters.map((slot) => ({
+    ...slot,
+    role: slot.role ?? roles[slot.position].shift() ?? DEFAULT_ROLE[slot.position],
+  }))
+  return { ...lineup, starters }
 }
 
 export const BENCH_SIZE = 7
@@ -77,6 +102,7 @@ export function autoLineup(
   const starters: LineupSlot[] = []
 
   for (const position of FILL_ORDER) {
+    const group: Player[] = []
     for (let i = 0; i < FORMATIONS[formation][position]; i++) {
       const player =
         COVER[position]
@@ -86,8 +112,15 @@ export function autoLineup(
         available.find((p) => !used.has(p.id) && p.position !== 'G')
       if (!player) continue
       used.add(player.id)
-      starters.push({ playerId: player.id, position })
+      group.push(player)
     }
+    // Who plays is settled by position; the roles go to whoever suits them best.
+    starters.push(
+      ...fillSlots(
+        group,
+        formationSlots(formation).filter((slot) => slot.position === position),
+      ),
+    )
   }
 
   const rest = available.filter((player) => !used.has(player.id))
@@ -105,21 +138,33 @@ export function autoLineup(
 /** Formations in the order the AI prefers them when two are just as good. */
 export const FORMATION_LIST = Object.keys(FORMATIONS) as Formation[]
 
-/** The formation's slots, one entry per player, scarce positions first. */
-export function formationSlots(formation: Formation): Position[] {
-  return FILL_ORDER.flatMap((position) =>
-    Array<Position>(FORMATIONS[formation][position]).fill(position),
-  )
+/**
+ * The formation's slots, one entry per player: scarce positions first and,
+ * within a position, the roles that ask something particular before the plain ones.
+ */
+export function formationSlots(formation: Formation): Slot[] {
+  const slots = FORMATION_LINES[formation].flat()
+  return FILL_ORDER.flatMap((position) => {
+    const here = slots.filter((slot) => slot.position === position)
+    return [
+      ...here.filter((slot) => slot.role !== DEFAULT_ROLE[position]),
+      ...here.filter((slot) => slot.role === DEFAULT_ROLE[position]),
+    ]
+  })
 }
 
-/** Natural position first, then strength: a centre-back beats a stronger midfielder at the back. */
-const slotScore = (player: Player, position: Position) =>
-  positionFit(player, position) * 1000 + player.overall
+/**
+ * Natural position first, then how good he is in the role: a centre-back beats
+ * a stronger midfielder at the back, and the best tackler of the midfielders
+ * is the volante.
+ */
+const slotScore = (player: Player, slot: Slot) =>
+  positionFit(player, slot.position) * 1000 + roleOverall(player, slot.role)
 
-function bestFor(candidates: readonly Player[], position: Position): Player | undefined {
+function bestFor(candidates: readonly Player[], slot: Slot): Player | undefined {
   let best: Player | undefined
   for (const player of candidates) {
-    if (!best || slotScore(player, position) > slotScore(best, position)) best = player
+    if (!best || slotScore(player, slot) > slotScore(best, slot)) best = player
   }
   return best
 }
@@ -133,14 +178,14 @@ export function arrangeStarters(players: readonly Player[], formation: Formation
 }
 
 /** Fills slots in order, each with the player left who fits it best. */
-export function fillSlots(players: readonly Player[], slots: readonly Position[]): LineupSlot[] {
+export function fillSlots(players: readonly Player[], slots: readonly Slot[]): LineupSlot[] {
   const left = [...players]
   const starters: LineupSlot[] = []
-  for (const position of slots) {
-    const player = bestFor(left, position)
+  for (const slot of slots) {
+    const player = bestFor(left, slot)
     if (!player) break
     left.splice(left.indexOf(player), 1)
-    starters.push({ playerId: player.id, position })
+    starters.push({ playerId: player.id, position: slot.position, role: slot.role })
   }
   return starters
 }
@@ -188,26 +233,32 @@ export function repairLineup(
     return true
   }
 
-  const kept = lineup.starters.filter((slot) => keep(slot.playerId))
+  const kept = withRoles(lineup).starters.filter((slot) => keep(slot.playerId))
   let bench = lineup.bench.filter(keep)
-  const open = [...formationSlots(lineup.formation)]
-  for (const slot of kept) {
-    const index = open.indexOf(slot.position)
+  const open = formationSlots(lineup.formation)
+  const close = (match: (slot: Slot) => boolean) => {
+    const index = open.findIndex(match)
     if (index >= 0) open.splice(index, 1)
+    return index >= 0
+  }
+  for (const slot of kept) {
+    if (!close((s) => s.position === slot.position && s.role === roleOf(slot))) {
+      close((s) => s.position === slot.position)
+    }
   }
 
   const starters = [...kept]
   const picked = new Set(kept.map((slot) => slot.playerId))
-  for (const position of open.slice(0, Math.max(0, 11 - kept.length))) {
+  for (const slot of open.slice(0, Math.max(0, 11 - kept.length))) {
     const player = bestFor(
       available.filter((p) => !picked.has(p.id)),
-      position,
+      slot,
     )
     if (!player) continue
     picked.add(player.id)
     used.add(player.id)
     bench = bench.filter((id) => id !== player.id)
-    starters.push({ playerId: player.id, position })
+    starters.push({ playerId: player.id, position: slot.position, role: slot.role })
   }
 
   const rest = available

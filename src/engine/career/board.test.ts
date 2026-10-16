@@ -61,8 +61,10 @@ describe('the board', () => {
   })
 
   it('reviews the season and lets the manager move clubs at the close', () => {
-    let game: GameState = start
+    // An easy target keeps the manager in the job through the season, whatever the results.
+    let game: GameState = { ...start, career: { ...start.career, target: 20 } }
     while (!isSeasonOver(game.season)) game = playRound(game)
+    expect(game.career.status).not.toBe('demitido')
     const sacked = { ...game, career: { ...game.career, target: 1, confidence: 0 } }
     const review = seasonReview(sacked)
     expect(review.fired).toBe(true)

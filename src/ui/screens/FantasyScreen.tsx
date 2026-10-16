@@ -207,6 +207,7 @@ function Season(props: {
               </CardDescription>
             </div>
             <FormationSelect
+              plain
               value={draft.formation}
               onChange={(formation) => setDraft(withFormation(draft, formation, pool))}
               disabled={!open}

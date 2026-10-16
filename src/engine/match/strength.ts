@@ -1,24 +1,28 @@
-import type { Formation, Player, PlayStyle, Position, Posture } from '../model/types.ts'
-import { faceValue, overallAt, styleLevel } from '../player/attributes.ts'
+import type { Player, PlayStyle, Position, Posture, TacticalRole } from '../model/types.ts'
+import { faceValue, overallAt, styleLevel, type AnyFace } from '../player/attributes.ts'
+import {
+  DEFAULT_ROLE,
+  FORMATION_LINES,
+  ROLE_SECTORS,
+  ROLE_WEIGHTS,
+  roleOf,
+  ROLES_BY_POSITION,
+} from './roles.ts'
 
 export type Sectors = { defense: number; midfield: number; attack: number }
 
-/** How much a player in each position adds to each sector. */
-const WEIGHTS: Record<keyof Sectors, Record<Position, number>> = {
-  defense: { G: 1.5, Z: 1, L: 0.7, M: 0.25, A: 0 },
-  midfield: { G: 0, Z: 0.2, L: 0.5, M: 1, A: 0.3 },
-  attack: { G: 0, Z: 0.1, L: 0.3, M: 0.5, A: 1 },
-}
+const SECTORS = ['defense', 'midfield', 'attack'] as const
 
-/** Total weight of a full 4-4-2, so a balanced XI rates close to its players' average. */
-const REFERENCE: Record<Position, number> = { G: 1, Z: 2, L: 2, M: 4, A: 2 }
+/**
+ * Total weight of a 4-4-2 of plain roles, so a balanced XI rates close to its
+ * players' average.
+ */
 const NORMALIZER = Object.fromEntries(
-  (Object.keys(WEIGHTS) as (keyof Sectors)[]).map((sector) => [
+  SECTORS.map((sector) => [
     sector,
-    (Object.keys(REFERENCE) as Position[]).reduce(
-      (sum, position) => sum + WEIGHTS[sector][position] * REFERENCE[position],
-      0,
-    ),
+    FORMATION_LINES['4-4-2']
+      .flat()
+      .reduce((sum, slot) => sum + ROLE_SECTORS[DEFAULT_ROLE[slot.position]][sector], 0),
   ]),
 ) as Sectors
 
@@ -43,6 +47,43 @@ export function positionFit(player: Player, position: Position): number {
   if (player.position === position) return 1
   const there = overallAt(player.attributes, position) / Math.max(1, player.overall)
   return Math.min(1, there) * familiarity(player, position)
+}
+
+/**
+ * A player's level in a role: his attributes weighed for what it asks. In the
+ * plain role of his own position, his overall.
+ */
+export function roleOverall(player: Player, role: TacticalRole): number {
+  if (role === DEFAULT_ROLE[player.position]) return player.overall
+  let total = 0
+  for (const [face, weight] of Object.entries(ROLE_WEIGHTS[role])) {
+    total += faceValue(player.attributes, face as AnyFace) * weight
+  }
+  return total
+}
+
+/** Share of his overall a player's level in a role may fall to and still suit it. */
+export const ROLE_TOLERANCE = 0.92
+
+/**
+ * Like positionFit, for a slot of a formation: how well a player suits its
+ * position and role. Players of the position suit any role close enough to
+ * their overall; below that, the fit drops with the level in the role.
+ */
+export function slotFit(player: Player, slot: { position: Position; role?: TacticalRole }) {
+  const role = roleOf(slot)
+  if (role === DEFAULT_ROLE[slot.position]) return positionFit(player, slot.position)
+  const there = roleOverall(player, role) / Math.max(1, player.overall) / ROLE_TOLERANCE
+  return Math.min(1, there) * familiarity(player, slot.position)
+}
+
+/** The role of his own position a player is best at; the plain one when nothing beats it. */
+export function bestRole(player: Player): TacticalRole {
+  let best = DEFAULT_ROLE[player.position]
+  for (const role of ROLES_BY_POSITION[player.position]) {
+    if (roleOverall(player, role) > roleOverall(player, best)) best = role
+  }
+  return best
 }
 
 /** Points a style adds where it counts, and twice as many for its "+". */
@@ -119,36 +160,33 @@ export const POSTURE_EFFECT: Record<Posture, { attack: number; defense: number; 
   }
 
 /**
- * A holding midfielder shields the back line; a line of three behind the
- * striker joins the attack. Other formations are just their numbers.
- */
-export const FORMATION_EFFECT: Partial<Record<Formation, { attack: number; defense: number }>> = {
-  '4-1-4-1': { attack: 0.97, defense: 1.03 },
-  '4-2-3-1': { attack: 1.03, defense: 0.98 },
-}
-
-/**
- * Sector ratings of the players on the pitch. Missing players (sent off, injured
- * with no subs left) simply add nothing, so the sectors drop.
+ * Sector ratings of the players on the pitch, each weighed by his role: a
+ * volante adds to the defence, a meia ofensivo and the pontas to the attack.
+ * Missing players (sent off, injured with no subs left) simply add nothing,
+ * so the sectors drop.
  */
 export function sectorStrength(
-  onPitch: readonly { player: Player; position: Position; energy: number; form?: number }[],
+  onPitch: readonly {
+    player: Player
+    position: Position
+    role?: TacticalRole
+    energy: number
+    form?: number
+  }[],
   posture: Posture,
-  formation?: Formation,
 ): Sectors {
   const totals: Sectors = { defense: 0, midfield: 0, attack: 0 }
-  for (const { player, position, energy, form } of onPitch) {
+  for (const slot of onPitch) {
+    const { player, position, energy, form } = slot
     const shape = matchShape(player, position, energy, form)
     const skills = sectorSkills(player, position)
-    for (const sector of Object.keys(totals) as (keyof Sectors)[]) {
-      totals[sector] += WEIGHTS[sector][position] * skills[sector] * shape
-    }
+    const weights = ROLE_SECTORS[roleOf(slot)]
+    for (const sector of SECTORS) totals[sector] += weights[sector] * skills[sector] * shape
   }
   const effect = POSTURE_EFFECT[posture]
-  const shape = (formation && FORMATION_EFFECT[formation]) ?? { attack: 1, defense: 1 }
   return {
-    defense: (totals.defense / NORMALIZER.defense) * effect.defense * shape.defense,
+    defense: (totals.defense / NORMALIZER.defense) * effect.defense,
     midfield: totals.midfield / NORMALIZER.midfield,
-    attack: (totals.attack / NORMALIZER.attack) * effect.attack * shape.attack,
+    attack: (totals.attack / NORMALIZER.attack) * effect.attack,
   }
 }
