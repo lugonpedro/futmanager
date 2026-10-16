@@ -12,6 +12,7 @@ import type {
   SponsorDeal,
   SponsorGoal,
   SquadFocus,
+  TrainingIntensity,
 } from '../engine/model/types.ts'
 import { CUP_NAME } from '../engine/season/cup.ts'
 import { PROMOTION_SPOTS } from '../engine/season/rules.ts'
@@ -248,6 +249,7 @@ export const SQUAD_FOCUS_NAMES: Record<SquadFocus, { name: string; detail: strin
 }
 
 export const INDIVIDUAL_FOCUS_NAMES: Record<IndividualFocus, string> = {
+  geral: 'Geral',
   finalizacao: 'Finalização',
   passe: 'Passe',
   drible: 'Drible',
@@ -256,6 +258,12 @@ export const INDIVIDUAL_FOCUS_NAMES: Record<IndividualFocus, string> = {
   cabeceio: 'Cabeceio',
   velocidade: 'Velocidade',
   goleiro: 'Goleiro',
+}
+
+export const INTENSITY_NAMES: Record<TrainingIntensity, { name: string; detail: string }> = {
+  leve: { name: 'Leve', detail: 'Cresce devagar e recupera a condição mais rápido.' },
+  normal: { name: 'Normal', detail: 'O ritmo de sempre.' },
+  intenso: { name: 'Intenso', detail: 'Cresce mais rápido, mas chega cansado aos jogos.' },
 }
 
 /** "55 a 65", or the one number once it is known. */

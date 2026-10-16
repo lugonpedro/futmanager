@@ -17,10 +17,11 @@ import {
   type Player,
   type Position,
   type Training,
+  type TrainingPlan,
   type World,
 } from '../model/types.ts'
 import { mixSeed, type Rng } from '../rng.ts'
-import { FOCUS_ATTRIBUTES, FOCUS_GROUP, TRAINING } from './training.ts'
+import { canTrain, FOCUS_ATTRIBUTES, FOCUS_GROUP, keepOwnFocus, TRAINING } from './training.ts'
 import { MARKET, squadOf, transferPlayer } from '../transfer/market.ts'
 
 export const PROGRESSION = {
@@ -184,7 +185,7 @@ export function developStep(
 ): Player {
   const age = player.age + 1
   const change = yearChange(player, age, Math.min(1, playing), share, rng) * (training.growth ?? 1)
-  const growing = player.overall < player.potential && age <= TRAINING.individualUntil
+  const growing = canTrain(player)
   const attributes = developAttributes(
     player.attributes,
     player.position,
@@ -230,12 +231,13 @@ function birthday(player: Player): Player {
 /**
  * The potential as scouts see it: a range around the true one, as wide as
  * the player is unknown. Young players who have hardly played get up to 7
- * either side; it narrows with every game and is exact from 28. Where the
+ * either side; it narrows with every game and is exact from 28, or once he
+ * has stopped growing. Where the
  * true value sits inside is fixed for each player, so the range never jumps.
  */
 export function potentialRange(player: Player, games: number): { low: number; high: number } {
   const half =
-    player.age >= 28
+    player.age >= 28 || player.overall >= player.potential
       ? 0
       : Math.max(1, Math.min(7, Math.round(7 - games / 12 - Math.max(0, player.age - 17) * 0.5)))
   const offset = (mixSeed(player.id, 'potencial') % (2 * half + 1)) - half
@@ -248,17 +250,29 @@ export function potentialRange(player: Player, games: number): { low: number; hi
 export const careerGames = (player: Player, appearances: Record<string, number>) =>
   (player.history ?? []).reduce((sum, s) => sum + s.games, 0) + (appearances[player.id] ?? 0)
 
+/** The attributes that count most towards the overall in a position, for a general plan. */
+export function keyAttributes(position: Position): Attribute[] {
+  const shares = overallShares(position)
+  return [...ATTRIBUTES]
+    .sort((a, b) => shares[b] - shares[a] || a.localeCompare(b))
+    .slice(0, TRAINING.generalAttributes)
+}
+
+/** The attributes a plan works on, for a player in `position`. */
+export const planAttributes = (plan: TrainingPlan, position: Position): readonly Attribute[] =>
+  plan.focus === 'geral' ? keyAttributes(position) : FOCUS_ATTRIBUTES[plan.focus]
+
 /** The training a step of the user's player gets. */
-function stepTraining(training: Training, playerId: string, share: number): StepTraining {
+function stepTraining(training: Training, player: Player, share: number): StepTraining {
   const group = FOCUS_GROUP[training.focus]
-  const own = training.individual[playerId]
+  const plan = training.individual[player.id]
   return {
     ...(group && { groups: { [group]: TRAINING.groupBoost } }),
     ...(training.focus === 'descanso' && { growth: TRAINING.restGrowth }),
-    ...(own && {
+    ...(plan && {
       focus: {
-        attributes: FOCUS_ATTRIBUTES[own],
-        points: TRAINING.individualPerSeason * share,
+        attributes: planAttributes(plan, player.position),
+        points: TRAINING.perSeason[plan.intensity] * share,
       },
     }),
   }
@@ -269,7 +283,7 @@ function stepTraining(training: Training, playerId: string, share: number): Step
  * this season against how much there has been to play decides how fast the
  * young grow. Players out on loan count as playing most of the time. The
  * user's players train as set; the step's changes to their overall are kept
- * for the player sheet.
+ * for the player sheet, and plans of those who can no longer grow end.
  */
 export function developWorld(game: GameState, rng: Rng): GameState {
   const { world, season } = game
@@ -291,16 +305,17 @@ export function developWorld(game: GameState, rng: Rng): GameState {
       playing,
       share,
       rng,
-      users ? stepTraining(game.training, old.id, share) : {},
+      users ? stepTraining(game.training, old, share) : {},
     )
     players[old.id] = player
     if (users || onLoan.has(old.id)) growth[old.id] = player.overall - old.overall
   }
-  return {
+  // Whoever reached his ceiling, or left, stops training on his own.
+  return keepOwnFocus({
     ...game,
     world: { ...world, players },
     growth: { date: game.today, overall: growth },
-  }
+  })
 }
 
 /** Chance a player hangs up his boots at the end of a season. */

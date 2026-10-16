@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { GameState } from '../model/types.ts'
 import { isSeasonOver, newGame, playRound, startNextSeason } from '../season/season.ts'
-import { setIndividualFocus } from '../progression/training.ts'
+import { FIRST_PLAN, setTrainingPlan } from '../progression/training.ts'
 import { checkLoan, isOnLoan, LOAN, loanClub, loanPlayer, returnLoans } from './loans.ts'
 import { checkSigning, listPlayer, renewContract } from './market.ts'
 
@@ -25,11 +25,12 @@ describe('loans', () => {
     const clubId = loanClub(game, youngster)!
     expect(game.world.clubs[clubId].division).toBe(game.world.clubs.C5.division + 1)
 
-    const listed = setIndividualFocus(
+    const listed = setTrainingPlan(
       listPlayer(game, youngster.id, 1_000_000),
       youngster.id,
-      'passe',
+      FIRST_PLAN,
     )
+    expect(listed.training.individual[youngster.id]).toEqual(FIRST_PLAN)
     const next = loanPlayer(listed, youngster.id)
     expect(isOnLoan(next, youngster.id)).toBe(true)
     expect(next.world.players[youngster.id]).toMatchObject({

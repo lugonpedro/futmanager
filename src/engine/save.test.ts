@@ -36,6 +36,20 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('turns the individual focus of a version 9 save into plans at the usual intensity', () => {
+    const id = fresh.world.clubs.C10.playerIds[0]
+    const upgraded = upgradeOld({
+      ...fresh,
+      version: 9,
+      training: { focus: 'tecnico', individual: { [id]: 'passe' } },
+    })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.training).toEqual({
+      focus: 'tecnico',
+      individual: { [id]: { focus: 'passe', intensity: 'normal' } },
+    })
+  })
+
   it('gives a version 8 save balanced training and no loans', () => {
     const { training: _, loans: __, ...v8 } = fresh
     const upgraded = upgradeOld({ ...v8, version: 8 })
