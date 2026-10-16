@@ -14,6 +14,7 @@ import { PackFileButton, PackLegalNote, PackMessage } from '../components/PackCo
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { divisionName, formatMoney } from '../format.ts'
 import { usePackMessage } from '../usePackMessage.ts'
+import { confirmReplace } from '../usePackMessage.ts'
 
 type Names = 'gerado' | 'pacote'
 const NAME_LABELS: Record<Names, string> = { gerado: 'Mundo gerado', pacote: 'Usar pacote' }
@@ -84,14 +85,17 @@ export function NewGameScreen() {
               <div className="flex flex-wrap gap-2">
                 <PackFileButton
                   size="sm"
-                  onLoad={({ pack: loaded, warnings }) => {
-                    if (hasPack && !window.confirm('Substituir o pacote atual pelo do arquivo?')) {
+                  onLoad={async ({ pack: loaded, warnings }) => {
+                    if (
+                      hasPack &&
+                      !(await confirmReplace('Substituir o pacote atual pelo do arquivo?'))
+                    ) {
                       return
                     }
                     setPack(loaded)
                     message.show(`Pacote "${loaded.name || 'sem nome'}" importado.`, warnings)
                   }}
-                  onError={(error) => message.show(error)}
+                  onError={message.fail}
                 />
                 <Button asChild variant="outline" size="sm">
                   <Link to="/editor">
@@ -100,7 +104,7 @@ export function NewGameScreen() {
                   </Link>
                 </Button>
               </div>
-              <PackMessage message={message.message} warnings={message.warnings} />
+              <PackMessage warnings={message.warnings} />
               <PackLegalNote />
             </>
           )}

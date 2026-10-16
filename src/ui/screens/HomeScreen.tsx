@@ -20,6 +20,7 @@ import { ConflictDialog } from '../components/ConflictDialog.tsx'
 import { ManagerCrest } from '../components/ManagerCrest.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { formatSavedAt, slotProgress } from '../format.ts'
+import { confirm } from '../confirm.ts'
 
 export function HomeScreen() {
   const saves = useLiveQuery(listSaves)
@@ -39,7 +40,13 @@ export function HomeScreen() {
   }
 
   const remove = async (save: SaveInfo) => {
-    if (!window.confirm(`Apagar a carreira com ${save.clubName}? Não dá para desfazer.`)) return
+    const ok = await confirm({
+      title: 'Apagar carreira',
+      description: `Apagar a carreira com ${save.clubName}? Não dá para desfazer.`,
+      action: 'Apagar',
+      destructive: true,
+    })
+    if (!ok) return
     if (save.id === slotId) closeGame()
     await deleteSave(save.id)
     void syncNow()
@@ -52,7 +59,9 @@ export function HomeScreen() {
     const question = replaced
       ? `A nuvem da sua conta guarda ${cloudSlots === 1 ? 'uma carreira' : `${cloudSlots} carreiras`}. Levar a carreira com ${save.clubName} para a nuvem no lugar da carreira com ${replaced.club_name}? Ela sai da nuvem e dos outros aparelhos, mas continua neste.`
       : `Levar a carreira com ${save.clubName} para a nuvem?`
-    if (window.confirm(question)) await moveCareerToCloud(save.id, replaced?.id)
+    if (await confirm({ title: 'Levar para a nuvem', description: question, action: 'Levar' })) {
+      await moveCareerToCloud(save.id, replaced?.id)
+    }
   }
 
   return (

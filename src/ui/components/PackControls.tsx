@@ -50,24 +50,19 @@ export function PackFileButton(props: {
 
 const SHOWN_WARNINGS = 5
 
-/** What came of an import: an error, or the notes about values that were left out. */
-export function PackMessage(props: { message?: string; warnings?: string[] }) {
+/** The notes an import left about values that were left out; the outcome itself goes in a toast. */
+export function PackMessage(props: { warnings?: string[] }) {
   const warnings = props.warnings ?? []
-  if (!props.message && warnings.length === 0) return null
+  if (warnings.length === 0) return null
   return (
-    <div role="status" className="flex flex-col gap-1 text-sm">
-      {props.message && <p>{props.message}</p>}
-      {warnings.length > 0 && (
-        <ul className="list-disc pl-5 text-xs text-muted-foreground">
-          {warnings.slice(0, SHOWN_WARNINGS).map((warning, i) => (
-            <li key={i}>{warning}</li>
-          ))}
-          {warnings.length > SHOWN_WARNINGS && (
-            <li>e mais {warnings.length - SHOWN_WARNINGS} aviso(s).</li>
-          )}
-        </ul>
+    <ul role="status" className="list-disc pl-5 text-xs text-muted-foreground">
+      {warnings.slice(0, SHOWN_WARNINGS).map((warning, i) => (
+        <li key={i}>{warning}</li>
+      ))}
+      {warnings.length > SHOWN_WARNINGS && (
+        <li>e mais {warnings.length - SHOWN_WARNINGS} aviso(s).</li>
       )}
-    </div>
+    </ul>
   )
 }
 

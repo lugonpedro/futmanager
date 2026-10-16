@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -61,6 +62,9 @@ export function SignDialog(props: { game: GameState; player: Player; onClose: ()
     const verdict = checkSigning(game, player.id, bid)
     if (!verdict.ok) return setError(verdict.reason)
     setGame(signPlayer(game, player.id, bid))
+    toast.success(
+      `${player.name} assinou até ${game.season.year + bid.years - 1}${bid.fee > 0 ? `, por ${formatMoney(bid.fee)}` : ''}.`,
+    )
     props.onClose()
   }
 
@@ -115,6 +119,11 @@ export function ListDialog(props: { game: GameState; player: Player; onClose: ()
   const [price, setPrice] = useState(listed ?? player.marketValue)
   const save = (value?: number) => {
     setGame(listPlayer(game, player.id, value))
+    toast.success(
+      value === undefined
+        ? `${player.name} saiu da lista de venda.`
+        : `${player.name} está à venda por ${formatMoney(value)}. As propostas chegam depois das rodadas.`,
+    )
     props.onClose()
   }
   return (
@@ -166,6 +175,7 @@ export function RenewDialog(props: { game: GameState; player: Player; onClose: (
     const verdict = checkRenewal(game, player.id, wage, Number(years))
     if (!verdict.ok) return setError(verdict.reason)
     setGame(renewContract(game, player.id, wage, Number(years)))
+    toast.success(`${player.name} renovou até ${until}, ganhando ${formatMoney(wage)} por mês.`)
     props.onClose()
   }
   return (

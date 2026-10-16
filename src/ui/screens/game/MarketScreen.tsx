@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { toast } from 'sonner'
 import { Link, Navigate, useNavigate, useParams } from 'react-router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -216,10 +217,11 @@ function OffersTab({ game }: { game: GameState }) {
       </p>
     )
   }
-  const act = (change: () => GameState) => {
+  const act = (change: () => GameState, done: string) => {
     try {
       setGame(change())
       setError(undefined)
+      toast.success(done)
     } catch (e) {
       setError((e as Error).message)
     }
@@ -246,8 +248,25 @@ function OffersTab({ game }: { game: GameState }) {
               </span>
             </div>
             <div className="flex gap-2">
-              <Button onClick={() => act(() => acceptOffer(game, offer.id))}>Aceitar</Button>
-              <Button variant="outline" onClick={() => act(() => rejectOffer(game, offer.id))}>
+              <Button
+                onClick={() =>
+                  act(
+                    () => acceptOffer(game, offer.id),
+                    `${player.name} vendido para o ${world.clubs[offer.clubId].name} por ${formatMoney(offer.fee)}.`,
+                  )
+                }
+              >
+                Aceitar
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  act(
+                    () => rejectOffer(game, offer.id),
+                    `Proposta do ${world.clubs[offer.clubId].name} por ${player.name} recusada.`,
+                  )
+                }
+              >
                 Recusar
               </Button>
             </div>

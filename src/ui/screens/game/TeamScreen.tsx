@@ -13,6 +13,7 @@ import {
 } from '@dnd-kit/core'
 import { ArrowDownIcon, ArrowUpIcon, EllipsisIcon, WandSparklesIcon } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
+import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -55,6 +56,7 @@ import { Pitch } from '../../components/Pitch.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import {
   fitClass,
+  fitLevel,
   formatMoney,
   isHomegrown,
   POSITION_NAMES,
@@ -159,13 +161,26 @@ export function TeamScreen() {
   const swap = (a: string, b: string) => {
     if (a === b || out.has(a) || out.has(b)) return false
     if (!inLineup(a) && !inLineup(b)) return false
-    save(swapPlayers(lineup, a, b))
+    const next = swapPlayers(lineup, a, b)
+    save(next)
+    warnOutOfPosition(next, [a, b])
     return true
   }
   const pick = (id: string) => {
     if (out.has(id)) return
     if (!selected || selected === id) return setSelected(selected === id ? undefined : id)
     if (!swap(selected, id)) setSelected(id)
+  }
+  /** A player just moved into a slot far from his position plays well below his level. */
+  const warnOutOfPosition = (next: Lineup, moved: string[]) => {
+    for (const slot of next.starters) {
+      if (!moved.includes(slot.playerId) || slots.get(slot.playerId) === slot.position) continue
+      const player = world.players[slot.playerId]
+      if (fitLevel(positionFit(player, slot.position)) !== 'poor') continue
+      toast.warning(
+        `${player.name} (${player.position}) vai jogar como ${POSITION_NAMES[slot.position].toLowerCase()} e rende bem menos fora de posição.`,
+      )
+    }
   }
   const onDragStart = (event: DragStartEvent) => setDragging(playerOf(event.active))
   const onDragEnd = (event: DragEndEvent) => {

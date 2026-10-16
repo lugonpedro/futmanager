@@ -1,5 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router'
+import { Toaster } from '@/components/ui/sonner'
 import { useApplyTheme } from './store/theme.ts'
+import { ConfirmHost } from './ui/components/ConfirmHost.tsx'
 import { CUP_SLUG } from './ui/routes.ts'
 import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { CloudScreen } from './ui/screens/CloudScreen.tsx'
@@ -29,29 +31,33 @@ const MOVED: Record<string, string> = {
 export default function App() {
   useApplyTheme()
   return (
-    <Routes>
-      <Route path="/" element={<HomeScreen />} />
-      <Route path="/novo" element={<NewGameScreen />} />
-      <Route path="/amistoso" element={<Navigate to="/" replace />} />
-      <Route path="/editor" element={<EditorScreen />} />
-      <Route path="/aviso-legal" element={<LegalScreen />} />
-      <Route path="/privacidade" element={<PrivacyScreen />} />
-      <Route path="/conta" element={<AccountScreen />} />
-      <Route path="/nuvem" element={<CloudScreen />} />
-      <Route path="/jogo" element={<GameLayout />}>
-        <Route index element={<OverviewScreen />} />
-        <Route path="time" element={<TeamScreen />} />
-        <Route path="mercado/:tab?" element={<MarketScreen />} />
-        <Route path="competicoes/:competition?/:tab?" element={<CompetitionsScreen />} />
-        <Route path="calendario" element={<CalendarScreen />} />
-        <Route path="clube/:tab?" element={<ClubScreen />} />
-        <Route path="tabela" element={<OwnDivision />} />
-        <Route path="artilharia" element={<OwnDivision tab="artilharia" />} />
-        {Object.entries(MOVED).map(([from, to]) => (
-          <Route key={from} path={from} element={<Navigate to={to} replace />} />
-        ))}
-      </Route>
-      <Route path="/jogo/partida" element={<LiveMatchScreen />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/novo" element={<NewGameScreen />} />
+        <Route path="/amistoso" element={<Navigate to="/" replace />} />
+        <Route path="/editor" element={<EditorScreen />} />
+        <Route path="/aviso-legal" element={<LegalScreen />} />
+        <Route path="/privacidade" element={<PrivacyScreen />} />
+        <Route path="/conta" element={<AccountScreen />} />
+        <Route path="/nuvem" element={<CloudScreen />} />
+        <Route path="/jogo" element={<GameLayout />}>
+          <Route index element={<OverviewScreen />} />
+          <Route path="time" element={<TeamScreen />} />
+          <Route path="mercado/:tab?" element={<MarketScreen />} />
+          <Route path="competicoes/:competition?/:tab?" element={<CompetitionsScreen />} />
+          <Route path="calendario" element={<CalendarScreen />} />
+          <Route path="clube/:tab?" element={<ClubScreen />} />
+          <Route path="tabela" element={<OwnDivision />} />
+          <Route path="artilharia" element={<OwnDivision tab="artilharia" />} />
+          {Object.entries(MOVED).map(([from, to]) => (
+            <Route key={from} path={from} element={<Navigate to={to} replace />} />
+          ))}
+        </Route>
+        <Route path="/jogo/partida" element={<LiveMatchScreen />} />
+      </Routes>
+      <Toaster position="top-center" closeButton expand />
+      <ConfirmHost />
+    </>
   )
 }
