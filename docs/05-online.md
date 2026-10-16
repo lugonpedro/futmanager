@@ -164,7 +164,7 @@ Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e po
 - **Confirmação**: o Stripe chama a função `stripe-webhook`, que confere a assinatura do aviso (HMAC com o segredo do webhook, recusando avisos com mais de 5 minutos) e grava o passe em `fantasy_passes`. Avisos repetidos não duplicam nada. Com Pix, o Checkout pode terminar antes do pagamento; o passe sai no aviso `checkout.session.async_payment_succeeded`.
 - **Volta do pagamento**: a tela do passe procura o passe por um minuto e mostra quando ele chega.
 - **Criar liga** agora exige o passe da temporada aberta (`create_fantasy_league` confere `fantasy_passes`).
-- **Cortesia**: para liberar o passe sem pagar (testes, amigos), grave uma linha à mão no SQL Editor: `insert into fantasy_passes (user_id, season_id, provider, payment_id, amount_cents) values ('<id do usuário>', <id da temporada>, 'cortesia', 'cortesia-1', 0);`.
+- **Cortesia**: dá para liberar o passe sem pagar (testes, amigos), por uma temporada ou para sempre; veja "Passe de cortesia e vitalício" abaixo.
 - **Reembolso**: por enquanto à mão: reembolsar no painel do Stripe e apagar a linha em `fantasy_passes`.
 - **Política de privacidade** atualizada com os times, as ligas (os membros veem apelido, escudo e pontos) e o pagamento pelo Stripe.
 - **Entrar com o Google** saiu da tela de conta por enquanto; o login fica só pelo link no e-mail.
@@ -182,6 +182,38 @@ Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e po
    ```
 6. Aplicar a migração e publicar as funções: `supabase db push` e `supabase functions deploy fantasy-pass stripe-webhook`.
 7. Testar com o cartão `4242 4242 4242 4242`, qualquer validade futura e qualquer CVC. Depois de conferir, repetir os passos 2, 4 e 5 no modo de produção, com as chaves `sk_live_...`.
+
+### Passe de cortesia e vitalício
+
+O passe vale por temporada (`fantasy_passes` tem uma linha por pessoa e temporada). Os comandos abaixo rodam no SQL Editor; troque `<e-mail>` pelo e-mail da conta.
+
+Passe da temporada que está rolando:
+
+```sql
+insert into fantasy_passes (user_id, season_id, provider, payment_id, amount_cents)
+select u.id, s.id, 'cortesia', 'vitalicio-' || s.id || '-' || u.id, 0
+from auth.users u, fantasy_seasons s
+where u.email = '<e-mail>' and s.status = 'em_andamento';
+```
+
+Passe vitalício: um gatilho que dá o passe de cortesia em cada temporada nova. Para mais de uma pessoa, use `u.email in ('<e-mail 1>', '<e-mail 2>')`.
+
+```sql
+create function public.passe_vitalicio() returns trigger
+language plpgsql security definer set search_path = '' as $$
+begin
+  insert into public.fantasy_passes (user_id, season_id, provider, payment_id, amount_cents)
+  select u.id, new.id, 'cortesia', 'vitalicio-' || new.id || '-' || u.id, 0
+  from auth.users u where u.email = '<e-mail>'
+  on conflict do nothing;
+  return new;
+end $$;
+
+create trigger passe_vitalicio after insert on public.fantasy_seasons
+  for each row execute function public.passe_vitalicio();
+```
+
+O gatilho fica só no banco, fora das migrações: um `supabase db reset` apaga e ele precisa ser criado de novo. Para trocar os e-mails, rode `create or replace function` com a lista nova. Para desligar: `drop trigger passe_vitalicio on fantasy_seasons; drop function passe_vitalicio();`.
 
 ## O7: avisos por notificação
 
