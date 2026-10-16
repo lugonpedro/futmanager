@@ -45,6 +45,11 @@ export function PrivacyScreen() {
             cartão ou do Pix ficam só com o Stripe, que processa o pagamento.
           </li>
           <li>
+            Se ligar os avisos: o endereço que o navegador cria para receber notificações e quais
+            avisos você quer. As notificações passam pelo serviço de push do navegador (Google,
+            Apple ou Mozilla), que só recebe o texto já criptografado.
+          </li>
+          <li>
             Registros técnicos de acesso (como endereço IP e horário de entrada), mantidos pelo
             provedor por segurança.
           </li>
@@ -54,9 +59,9 @@ export function PrivacyScreen() {
       <Section title="Para que usamos">
         <p>
           Só para fazer a conta funcionar: entrar, guardar e sincronizar suas carreiras, montar a
-          fantasia online e as ligas com amigos, e liberar o passe que você comprou. Não vendemos
-          dados, não mostramos anúncios e não usamos rastreadores. Suas carreiras na nuvem são
-          privadas: só você, entrando na sua conta, consegue vê-las.
+          fantasia online e as ligas com amigos, liberar o passe que você comprou e mandar os avisos
+          que você ligou. Não vendemos dados, não mostramos anúncios e não usamos rastreadores. Suas
+          carreiras na nuvem são privadas: só você, entrando na sua conta, consegue vê-las.
         </p>
       </Section>
 

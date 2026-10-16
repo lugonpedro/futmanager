@@ -38,7 +38,7 @@ Fechadas em 16/10/2026:
 | O4    | Rodada no app: jogos narrados e no campo 2D, pontuação do seu time e de cada jogador                      | Reaproveita a tela de partida; o cliente baixa os resultados da rodada  | Pequeno       |
 | O5    | Ligas privadas com link de convite e a classificação de cada liga                                         | Migração e tela de ligas                                                | Pequeno/médio |
 | O6    | Passe da temporada                                                                                        | Funções de checkout e webhook, `fantasy_passes`                         | Médio         |
-| O7    | Avisos: mercado fechando, rodada jogada (notificação do PWA e/ou e-mail)                                  | Service worker e função agendada                                        | Médio         |
+| O7    | Avisos: mercado fechando, rodada jogada (notificação do PWA, sem e-mail)                                  | Service worker e função agendada                                        | Médio         |
 
 O1 a O5 já formam um modo jogável; até O6 chegar, criar liga fica liberado para quem testa. Nenhum passo muda `SAVE_VERSION`, porque a carreira solo não muda.
 
@@ -182,6 +182,34 @@ Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e po
    ```
 6. Aplicar a migração e publicar as funções: `supabase db push` e `supabase functions deploy fantasy-pass stripe-webhook`.
 7. Testar com o cartão `4242 4242 4242 4242`, qualquer validade futura e qualquer CVC. Depois de conferir, repetir os passos 2, 4 e 5 no modo de produção, com as chaves `sk_live_...`.
+
+## O7: avisos por notificação
+
+Escolhido em 16/10/2026: só **notificação do PWA**, sem e-mail, porque o e-mail do projeto depende do envio de teste do Supabase (sem SMTP próprio).
+
+- **Card "Avisos"** na tela da fantasia, para quem está na conta: o botão "Ligar avisos" pede a permissão do navegador e inscreve o aparelho. Dá para escolher os dois avisos e desligar a qualquer momento. Cada aparelho se inscreve por conta própria, até dez por pessoa.
+- **Mercado fechando**: às 19h30 de Brasília, uma hora antes de o mercado fechar, vai para quem ainda não mandou o time da próxima rodada. Quem já mandou não é incomodado.
+- **Rodada jogada**: às 21h15, depois da rodada, com os pontos do time de cada um. Tocar no aviso abre a página da rodada.
+- **Envio**: a função `fantasy-notify`, chamada pelo pg_cron com o mesmo segredo da `fantasy-round`. Ela criptografa cada mensagem para o navegador (RFC 8291) e assina com a chave VAPID (RFC 8292), só com WebCrypto e sem biblioteca (`src/cloud/webpush.ts`, testado contra o exemplo do RFC). Cada aviso sai uma vez só (`fantasy_notices`), e as inscrições que o serviço de push diz que acabaram são apagadas.
+- **iPhone e iPad**: o Safari só entrega notificações quando o jogo foi adicionado à tela de início (iOS 16.4 ou mais novo). O card explica isso para quem abre no navegador.
+- **Política de privacidade** atualizada com a inscrição de notificação.
+
+### Para ligar (uma vez)
+
+1. Gerar o par de chaves VAPID: `npx web-push generate-vapid-keys`. A chave privada fica só no Supabase.
+2. Guardar os segredos no Supabase:
+   ```sh
+   supabase secrets set VAPID_PUBLIC_KEY=<chave pública> VAPID_PRIVATE_KEY=<chave privada> \
+     VAPID_SUBJECT=mailto:<seu e-mail>
+   ```
+3. Pôr a chave pública também no site: `VITE_VAPID_PUBLIC_KEY=<chave pública>` nas variáveis de ambiente da Vercel (e no `.env` local), e publicar de novo. Sem ela o card "Avisos" não aparece.
+4. Aplicar a migração e publicar a função: `supabase db push` e `supabase functions deploy fantasy-notify`. A migração já agenda os dois horários no pg_cron, usando os segredos `project_url` e `fantasy_cron_secret` do Vault que o O2 criou.
+5. Testar: ligar os avisos no app publicado e chamar a função à mão perto de um horário de aviso:
+   ```sh
+   curl -X POST https://<ref>.supabase.co/functions/v1/fantasy-notify \
+     -H "x-cron-secret: <segredo>" -H "Content-Type: application/json" -d '{"kind": "rodada"}'
+   ```
+   O aviso da rodada só sai nas três horas depois de a rodada ser jogada, e o do mercado nas duas horas antes de fechar. Para repetir um teste, apagar a linha correspondente em `fantasy_notices`.
 
 ## Pagamento
 
