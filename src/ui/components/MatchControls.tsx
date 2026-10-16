@@ -5,6 +5,7 @@ import {
   setFormation,
   setPosture,
   substitute,
+  swapPositions,
   type MatchSide,
   type MatchState,
 } from '../../engine/match/simulate.ts'
@@ -15,8 +16,9 @@ import { FormationSelect } from './FormationSelect.tsx'
 import { Pitch } from './Pitch.tsx'
 
 /**
- * The user's touchline: formation, posture and substitutions while the match
- * runs. Any touch pauses the match so changes happen between minutes.
+ * The user's touchline: formation, posture, substitutions and players
+ * swapping places while the match runs. Any touch pauses the match so
+ * changes happen between minutes.
  */
 export function MatchControls(props: {
   state: MatchState
@@ -42,6 +44,17 @@ export function MatchControls(props: {
     act(() => substitute(state, side, out, on))
     setOutId(undefined)
     setInId(undefined)
+  }
+  // A second starter tapped after the first: the two swap places.
+  const pick = (id: string) => {
+    if (locked) return
+    if (outId === id) return trySub(undefined, inId)
+    if (outId && !inId) {
+      act(() => swapPositions(state, side, outId, id))
+      setOutId(undefined)
+      return
+    }
+    trySub(id, inId)
   }
   const selected = outId && team.onPitch.find((p) => p.player.id === outId)
 
@@ -69,12 +82,7 @@ export function MatchControls(props: {
       />
 
       <div className="grid gap-3 sm:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
-        <Pitch
-          slots={team.onPitch}
-          formation={team.formation}
-          selected={outId}
-          onSelect={(id) => !locked && trySub(outId === id ? undefined : id, inId)}
-        />
+        <Pitch slots={team.onPitch} formation={team.formation} selected={outId} onSelect={pick} />
         <div className="flex flex-col gap-1">
           <h3 className="text-sm text-muted-foreground">Banco</h3>
           {team.bench.length === 0 && <p className="text-sm text-muted-foreground">Ninguém.</p>}
@@ -101,13 +109,15 @@ export function MatchControls(props: {
               )
             })}
           </ul>
-          {!locked && team.subsLeft > 0 && (
+          {!locked && (
             <p className="mt-1 text-xs text-muted-foreground">
               {outId
-                ? 'Agora escolha quem entra.'
+                ? team.subsLeft > 0
+                  ? 'Agora toque em quem entra, ou em outro titular para os dois trocarem de posição.'
+                  : 'Agora toque em outro titular para os dois trocarem de posição.'
                 : inId
                   ? 'Agora escolha quem sai, no campo.'
-                  : 'Para substituir, toque em quem sai e em quem entra. O jogo pausa enquanto você mexe.'}
+                  : 'Toque num titular e depois num reserva para substituir, ou em outro titular para trocar os dois de posição. O jogo pausa enquanto você mexe.'}
             </p>
           )}
         </div>

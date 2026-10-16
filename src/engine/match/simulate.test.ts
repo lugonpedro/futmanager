@@ -14,6 +14,7 @@ import {
   setFormation,
   simulateMatch,
   substitute,
+  swapPositions,
 } from './simulate.ts'
 import { sectorStrength } from './strength.ts'
 
@@ -208,6 +209,35 @@ describe('match state', () => {
     expect(made.filter(Boolean)).toHaveLength(MAX_SUBSTITUTIONS)
     expect(match.events.filter((e) => e.type === 'substituicao')).toHaveLength(MAX_SUBSTITUTIONS)
     expect(match.home.onPitch).toHaveLength(11)
+  })
+
+  it('swaps two players on the pitch without using a substitution', () => {
+    const match = createMatch(input('C1', 'C2'), createRng(3))
+    playMinute(match)
+    const team = match.home
+    const midfielder = team.onPitch.find((p) => p.position === 'M')!
+    const back = team.onPitch.find((p) => p.position === 'L')!
+    const [mi, bi] = [team.onPitch.indexOf(midfielder), team.onPitch.indexOf(back)]
+    expect(swapPositions(match, 'home', midfielder.player.id, back.player.id)).toBe(true)
+    expect(midfielder.position).toBe('L')
+    expect(back.position).toBe('M')
+    expect(team.onPitch[bi]).toBe(midfielder)
+    expect(team.onPitch[mi]).toBe(back)
+    expect(team.played[midfielder.player.id]).toBe('L')
+    expect(team.subsLeft).toBe(MAX_SUBSTITUTIONS)
+    expect(swapPositions(match, 'home', midfielder.player.id, midfielder.player.id)).toBe(false)
+    expect(swapPositions(match, 'home', midfielder.player.id, 'nobody')).toBe(false)
+  })
+
+  it('makes a player out of position count for less', () => {
+    const match = createMatch(input('C1', 'C2'), createRng(3))
+    const team = match.home
+    const before = sectorStrength(team.onPitch, team.posture, team.formation)
+    const keeper = team.onPitch.find((p) => p.position === 'G')!
+    const striker = team.onPitch.find((p) => p.position === 'A')!
+    swapPositions(match, 'home', keeper.player.id, striker.player.id)
+    const after = sectorStrength(team.onPitch, team.posture, team.formation)
+    expect(after.attack).toBeLessThan(before.attack)
   })
 
   it('reshapes a side mid-match without moving the keeper', () => {
