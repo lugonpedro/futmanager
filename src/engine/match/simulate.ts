@@ -606,7 +606,7 @@ export function playMinute(state: MatchState): MatchEvent[] {
 }
 
 /** Rating swing for the result, and for each goal let in by a keeper or a defender. */
-const RESULT_POINTS = { win: 0.6, draw: 0.1, loss: -0.4 }
+export const RESULT_POINTS = { win: 0.6, draw: 0.1, loss: -0.4 }
 const CONCEDED_POINTS: Record<Position, number> = { G: 0.3, Z: 0.2, L: 0.15, M: 0.05, A: 0 }
 const CLEAN_SHEET_POINTS: Record<Position, number> = { G: 0.6, Z: 0.4, L: 0.3, M: 0.1, A: 0 }
 

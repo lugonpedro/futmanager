@@ -29,6 +29,7 @@ import { ClubMark, Note } from '../components/FantasyParts.tsx'
 import { FormationSelect } from '../components/FormationSelect.tsx'
 import { Pager } from '../components/Pager.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
+import { LearnLink } from '../components/LearnLink.tsx'
 import {
   addPlayer,
   cannotAdd,
@@ -80,7 +81,10 @@ export function FantasyScreen() {
           </Button>
           <h1 className="text-2xl font-bold">Fantasia online</h1>
         </div>
-        <ThemeToggle />
+        <div className="flex items-center gap-3">
+          <LearnLink tab="fantasia" />
+          <ThemeToggle />
+        </div>
       </header>
 
       {!cloudEnabled ? (

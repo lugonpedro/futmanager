@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import {
+  BookOpenIcon,
   CloudCheckIcon,
   CloudUploadIcon,
   HardDriveIcon,
@@ -179,6 +180,12 @@ export function HomeScreen() {
               </Link>
             </Button>
           )}
+          <Button asChild variant="outline">
+            <Link to="/aprenda">
+              <BookOpenIcon />
+              Aprenda
+            </Link>
+          </Button>
           <nav className="flex justify-center gap-4 text-xs text-muted-foreground">
             <Link to="/aviso-legal" className="underline-offset-2 hover:underline">
               Aviso legal

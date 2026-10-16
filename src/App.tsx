@@ -19,6 +19,7 @@ import { MarketScreen } from './ui/screens/game/MarketScreen.tsx'
 import { OverviewScreen } from './ui/screens/game/OverviewScreen.tsx'
 import { TeamScreen } from './ui/screens/game/TeamScreen.tsx'
 import { HomeScreen } from './ui/screens/HomeScreen.tsx'
+import { LearnScreen } from './ui/screens/LearnScreen.tsx'
 import { LegalScreen } from './ui/screens/LegalScreen.tsx'
 import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/fantasia/liga/:id" element={<FantasyLeagueScreen />} />
         <Route path="/fantasia/convite/:code" element={<FantasyInviteScreen />} />
         <Route path="/fantasia/passe" element={<FantasyPassScreen />} />
+        <Route path="/aprenda/:tab?" element={<LearnScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />
           <Route path="time" element={<TeamScreen />} />

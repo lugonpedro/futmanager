@@ -1,5 +1,6 @@
 import {
   ArrowLeftRightIcon,
+  BookOpenIcon,
   CalendarDaysIcon,
   HouseIcon,
   LogOutIcon,
@@ -168,6 +169,12 @@ function Sidebar(props: { game: GameState; onNavigate?: () => void }) {
           <Link to="/" onClick={props.onNavigate}>
             <LogOutIcon />
             Menu principal
+          </Link>
+        </Button>
+        <Button asChild variant="ghost" className="justify-start">
+          <Link to="/aprenda/carreira" onClick={props.onNavigate}>
+            <BookOpenIcon />
+            Aprenda
           </Link>
         </Button>
         <Link
