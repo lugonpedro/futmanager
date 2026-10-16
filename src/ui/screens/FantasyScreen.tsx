@@ -27,6 +27,7 @@ import { FantasyLeagues } from '../components/FantasyLeagues.tsx'
 import { FantasyNotices } from '../components/FantasyNotices.tsx'
 import { ClubMark, Note } from '../components/FantasyParts.tsx'
 import { FormationSelect } from '../components/FormationSelect.tsx'
+import { Pager } from '../components/Pager.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import {
   addPlayer,
@@ -38,6 +39,7 @@ import {
   type Draft,
 } from '../fantasyDraft.ts'
 import { POSITION_NAMES, tenths } from '../format.ts'
+import { usePage } from '../usePage.ts'
 
 const closing = new Intl.DateTimeFormat('pt-BR', {
   weekday: 'long',
@@ -46,7 +48,7 @@ const closing = new Intl.DateTimeFormat('pt-BR', {
 })
 
 /** How many players the market list shows at once. */
-const LIST_SIZE = 60
+const LIST_SIZE = 30
 
 type Filter = 'todos' | Position
 
@@ -355,6 +357,7 @@ function Market(props: {
       )
       .sort((a, b) => b[1].price - a[1].price || a[1].name.localeCompare(b[1].name))
   }, [pool, filter, search, props.clubs])
+  const paged = usePage(listed, LIST_SIZE, `${filter}|${search.trim()}`)
 
   return (
     <Card>
@@ -383,7 +386,7 @@ function Market(props: {
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <ul className="flex flex-col gap-1">
-          {listed.slice(0, LIST_SIZE).map(([id, player]) => {
+          {paged.items.map(([id, player]) => {
             const picked = draft.playerIds.includes(id)
             const blocked = picked ? undefined : cannotAdd(draft, id, pool)
             return (
@@ -414,11 +417,7 @@ function Market(props: {
             )
           })}
         </ul>
-        {listed.length > LIST_SIZE && (
-          <p className="text-center text-xs text-muted-foreground">
-            Mostrando {LIST_SIZE} de {listed.length}. Busque pelo nome para achar outros.
-          </p>
-        )}
+        <Pager paged={paged} />
         {listed.length === 0 && (
           <p className="text-center text-sm text-muted-foreground">Ninguém encontrado.</p>
         )}
