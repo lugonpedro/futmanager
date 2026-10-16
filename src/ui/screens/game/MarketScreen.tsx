@@ -31,6 +31,7 @@ import {
 } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
+import { LearnLink } from '../../components/LearnLink.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
 import { Pager } from '../../components/Pager.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
@@ -56,14 +57,17 @@ export function MarketScreen() {
   if (tab && !TABS.includes(tab)) return <Navigate to="/jogo/mercado" replace />
   return (
     <Tabs value={tab ?? 'contratar'} onValueChange={(value) => navigate(`/jogo/mercado/${value}`)}>
-      <TabsList>
-        <TabsTrigger value="contratar">Contratar</TabsTrigger>
-        <TabsTrigger value="propostas">
-          Propostas
-          {offers > 0 && <Badge className="h-5 min-w-5 px-1">{offers}</Badge>}
-        </TabsTrigger>
-        <TabsTrigger value="noticias">Movimentações</TabsTrigger>
-      </TabsList>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <TabsList>
+          <TabsTrigger value="contratar">Contratar</TabsTrigger>
+          <TabsTrigger value="propostas">
+            Propostas
+            {offers > 0 && <Badge className="h-5 min-w-5 px-1">{offers}</Badge>}
+          </TabsTrigger>
+          <TabsTrigger value="noticias">Movimentações</TabsTrigger>
+        </TabsList>
+        <LearnLink tab="carreira" section="mercado" />
+      </div>
       <TabsContent value="contratar">
         <BuyTab game={game} />
       </TabsContent>

@@ -27,6 +27,7 @@ import {
 } from '../../../engine/progression/training.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
+import { LearnLink } from '../../components/LearnLink.tsx'
 import {
   INDIVIDUAL_FOCUS_NAMES,
   INTENSITY_NAMES,
@@ -61,8 +62,9 @@ export function TrainingPanel() {
 
   return (
     <Card className="gap-3">
-      <CardHeader>
+      <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2">
         <CardTitle>Treino</CardTitle>
+        <LearnLink tab="carreira" section="treino" />
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
