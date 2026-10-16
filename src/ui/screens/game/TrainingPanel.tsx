@@ -1,24 +1,19 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 import {
   POSITIONS,
-  type IndividualFocus,
   type Player,
   type SquadFocus,
   type TrainingIntensity,
   type TrainingPlan,
 } from '../../../engine/model/types.ts'
-import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
 import {
-  FIRST_PLAN,
+  careerGames,
+  potentialRange,
+  setRecommendedPlans,
+} from '../../../engine/progression/progression.ts'
+import {
   setSquadFocus,
   setSquadPlans,
   setTrainingPlan,
@@ -27,19 +22,12 @@ import {
 } from '../../../engine/progression/training.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
+import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { LearnLink } from '../../components/LearnLink.tsx'
-import {
-  INDIVIDUAL_FOCUS_NAMES,
-  INTENSITY_NAMES,
-  SQUAD_FOCUS_NAMES,
-  signedChange,
-} from '../../format.ts'
+import { INTENSITY_NAMES, SQUAD_FOCUS_NAMES, signedChange } from '../../format.ts'
 
 const SQUAD_FOCUSES = Object.keys(SQUAD_FOCUS_NAMES) as SquadFocus[]
-const INDIVIDUAL_FOCUSES = Object.keys(INDIVIDUAL_FOCUS_NAMES) as IndividualFocus[]
 const INTENSITIES = Object.keys(INTENSITY_NAMES) as TrainingIntensity[]
-/** The select's value for a player with no plan of his own. */
-const NONE = 'nenhum'
 
 /** Goalkeepers first, then defenders and on up the pitch; the best first in each. */
 const byPosition = (a: Player, b: Player) =>
@@ -87,15 +75,13 @@ export function TrainingPanel() {
               Treino individual ({planned} de {trainable.length})
             </h3>
             <div className="flex gap-2">
-              {planned < trainable.length && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setGame(setSquadPlans(game, FIRST_PLAN))}
-                >
-                  Todos no geral
-                </Button>
-              )}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setGame(setRecommendedPlans(game))}
+              >
+                Todos no recomendado
+              </Button>
               {planned > 0 && (
                 <Button
                   variant="ghost"
@@ -109,9 +95,9 @@ export function TrainingPanel() {
           </div>
           <p className="text-sm text-muted-foreground">
             Quem ainda não chegou ao potencial e tem até {TRAINING.individualUntil} anos pode ter um
-            plano próprio. O geral trabalha o que mais conta para a posição e é o que mais sobe o
-            geral; os outros puxam uma qualidade. No intenso ele cresce mais rápido, mas chega
-            cansado aos jogos.
+            plano próprio. O geral trabalha o que mais conta para a posição; os outros puxam uma
+            qualidade. As setas mostram o que mais sobe o geral de cada um, e o recomendado é o que
+            sobe mais. No intenso ele cresce mais rápido, mas chega cansado aos jogos.
           </p>
 
           {trainable.length === 0 ? (
@@ -199,28 +185,7 @@ function PlanRow(props: {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        <Select
-          value={plan?.focus ?? NONE}
-          onValueChange={(v) =>
-            onChange(
-              v === NONE
-                ? undefined
-                : { focus: v as IndividualFocus, intensity: plan?.intensity ?? 'normal' },
-            )
-          }
-        >
-          <SelectTrigger size="sm" className="w-28 sm:w-36" aria-label={`Treino de ${player.name}`}>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={NONE}>Sem treino</SelectItem>
-            {INDIVIDUAL_FOCUSES.map((focus) => (
-              <SelectItem key={focus} value={focus}>
-                {INDIVIDUAL_FOCUS_NAMES[focus]}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <FocusSelect player={player} plan={plan} onChange={onChange} />
         <Choices
           ariaLabel={`Intensidade de ${player.name}`}
           options={INTENSITIES}

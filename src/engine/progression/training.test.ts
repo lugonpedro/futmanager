@@ -3,7 +3,15 @@ import type { GameState } from '../model/types.ts'
 import { createRng } from '../rng.ts'
 import { conditionOn } from '../season/form.ts'
 import { isSeasonOver, newGame, playRound, startNextSeason } from '../season/season.ts'
-import { developStep, developWorld, keyAttributes, PROGRESSION } from './progression.ts'
+import {
+  developStep,
+  developWorld,
+  focusGains,
+  keyAttributes,
+  PROGRESSION,
+  recommendedFocus,
+  setRecommendedPlans,
+} from './progression.ts'
 import {
   canTrain,
   FIRST_PLAN,
@@ -175,5 +183,73 @@ describe('monthly development', () => {
       const p = after.world.players[id]
       if (p.clubId === 'C5') expect(p.age).toBe(game.world.players[id].age + 1)
     }
+  })
+})
+
+describe('recommended training', () => {
+  const players = squad.map((id) => game.world.players[id])
+  const of = (position: string) => players.find((p) => p.position === position)!
+  const best = (gains: Record<string, number>, n: number) =>
+    Object.entries(gains)
+      .filter(([focus]) => focus !== 'geral')
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, n)
+      .map(([focus]) => focus)
+
+  /** A player of the position with every attribute at 60, so only the position decides. */
+  const flat = (position: string) => {
+    const player = of(position)
+    const attributes = Object.fromEntries(
+      Object.keys(player.attributes).map((a) => [a, 60]),
+    ) as typeof player.attributes
+    return { ...player, attributes }
+  }
+
+  it('points each position at what counts for it', () => {
+    expect(best(focusGains(flat('Z')), 2)).toEqual(['defesa', 'cabeceio'])
+    expect(best(focusGains(flat('A')), 1)).toEqual(['finalizacao'])
+    expect(best(focusGains(flat('M')), 1)).toEqual(['passe'])
+    const keeper = focusGains(flat('G'))
+    expect(best(keeper, 1)).toEqual(['goleiro'])
+    expect(keeper.finalizacao).toBe(0)
+  })
+
+  it('recommends the general plan until its attributes run out of room', () => {
+    for (const position of ['G', 'Z', 'L', 'M', 'A']) {
+      expect(recommendedFocus(flat(position))).toBe('geral')
+    }
+    const passer = flat('M')
+    const capped = {
+      ...passer,
+      attributes: { ...passer.attributes, shortPassing: 99, vision: 99, longPassing: 99 },
+    }
+    expect(recommendedFocus(capped)).toBe('drible')
+  })
+
+  it('stops counting an attribute once it reaches 99', () => {
+    const defender = flat('Z')
+    const maxed = {
+      ...defender,
+      attributes: { ...defender.attributes, marking: 99, tackling: 99, interceptions: 99 },
+    }
+    expect(focusGains(maxed).defesa).toBe(0)
+    expect(focusGains(maxed).cabeceio).toBe(focusGains(defender).cabeceio)
+  })
+
+  it('puts the squad on its recommended plans, keeping intensities', () => {
+    const [first, second] = trainable
+    const set = setTrainingPlan(game, first, { focus: 'passe', intensity: 'intenso' })
+    const idle = setRecommendedPlans(set, true).training.individual
+    expect(idle[first]).toEqual({ focus: 'passe', intensity: 'intenso' })
+    expect(idle[second]).toEqual({
+      focus: recommendedFocus(game.world.players[second]),
+      intensity: 'normal',
+    })
+    expect(Object.keys(idle).sort()).toEqual([...trainable].sort())
+    const all = setRecommendedPlans(set).training.individual
+    expect(all[first]).toEqual({
+      focus: recommendedFocus(game.world.players[first]),
+      intensity: 'intenso',
+    })
   })
 })

@@ -256,6 +256,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
         Object.values(INDIVIDUAL_FOCUS_NAMES).map((n) => n.toLowerCase()),
         'ou',
       )}) e uma intensidade.`,
+      'As setas no seletor do treino mostram os focos que mais sobem o geral de cada jogador, pela posição e pelos atributos que ainda têm espaço para crescer; o recomendado é o que sobe mais. Na lista do elenco, a coluna Treino e o filtro "Podem treinar" mostram quem pode ter plano.',
       `${INTENSITY_NAMES.leve.name}, ${INTENSITY_NAMES.normal.name.toLowerCase()} e ${INTENSITY_NAMES.intenso.name.toLowerCase()} dão +${num(TRAINING.perSeason.leve)}, +${num(TRAINING.perSeason.normal)} e +${num(TRAINING.perSeason.intenso)} pontos por temporada nos atributos do plano. O intenso recupera ${percent(TRAINING.recovery.intenso)} mais devagar; o leve, ${percent(TRAINING.recovery.leve)} mais rápido.`,
     ],
   },
