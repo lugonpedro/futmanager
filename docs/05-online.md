@@ -129,6 +129,14 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
    curl -X POST https://<ref>.supabase.co/functions/v1/fantasy-round -H 'x-cron-secret: <o segredo>'
    ```
 
+## O3: escalar o time
+
+- **Tela "Fantasia online"** (`/fantasia`, com um botão na tela inicial): mostra a rodada, até quando o mercado fica aberto e quantos pontos o seu time fez na rodada anterior. Também mostra o seu time por posição, com capitão e o custo dentro das 100 moedas, e o mercado com filtro por posição e busca por jogador ou clube.
+- **Mercado**: fecha às 20h30 de Brasília (23h30 UTC), meia hora antes da rodada, e reabre quando ela é publicada.
+- **Salvar**: a função `fantasy-team` confere o time de novo com as mesmas regras do jogo (`checkTeam`) e com o mercado aberto, e grava em `fantasy_lineups`. O navegador nunca escreve na tabela; cada um lê só os próprios times.
+- **Quem não mexe** joga com o último time que mandou, como no Cartola. Quando a rodada roda, `fantasy-round` pontua o time de todo mundo (`scoreLineups`) e grava os pontos.
+- **Ligar no projeto**: aplicar a migração nova (`supabase db push`) e publicar a função (`supabase functions deploy fantasy-team`).
+
 ## Pagamento
 
 Princípio: **pagar nunca dá vantagem em pontos**.

@@ -56,3 +56,42 @@ export function teamPoints(team: FantasyTeam, points: Readonly<Record<string, nu
   const sum = team.playerIds.reduce((total, id) => total + (points[id] ?? 0), 0)
   return tenth(sum + (SCORING.captain - 1) * (points[team.captainId] ?? 0))
 }
+
+/** The market closes at 23h30 UTC (20h30 in Brasília), half an hour before the round. */
+export const MARKET_CLOSE_UTC = { hour: 23, minute: 30 }
+
+/**
+ * When the market for the next round closes: the first 23h30 UTC after the
+ * last round was played. It opens again as soon as that round is published.
+ */
+export function marketClosesAt(lastPlayedAt: Date): Date {
+  const close = new Date(lastPlayedAt)
+  close.setUTCHours(MARKET_CLOSE_UTC.hour, MARKET_CLOSE_UTC.minute, 0, 0)
+  if (close <= lastPlayedAt) close.setUTCDate(close.getUTCDate() + 1)
+  return close
+}
+
+/** A saved team: the round it was sent for and, once that round is played, its points. */
+export type Lineup = FantasyTeam & { userId: string; round: number; points?: number }
+
+/**
+ * Everyone's team for a round just played, scored. Whoever did not send a new
+ * one plays with the last team they sent, as it was.
+ */
+export function scoreLineups(
+  lineups: readonly Lineup[],
+  round: number,
+  points: Readonly<Record<string, number>>,
+): Lineup[] {
+  const latest = new Map<string, Lineup>()
+  for (const lineup of lineups) {
+    if (lineup.round > round) continue
+    const current = latest.get(lineup.userId)
+    if (!current || lineup.round > current.round) latest.set(lineup.userId, lineup)
+  }
+  return [...latest.values()].map((lineup) => ({
+    ...lineup,
+    round,
+    points: teamPoints(lineup, points),
+  }))
+}
