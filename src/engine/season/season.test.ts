@@ -24,6 +24,7 @@ import {
   roundDate,
   roundFixtures,
   seasonSummary,
+  simulateUntil,
   startNextSeason,
   todaysMatchDay,
   unavailablePlayers,
@@ -123,6 +124,27 @@ describe('the calendar', () => {
     expect(next.season.cup!.stages[0].ties.every((t) => t.result)).toBe(true)
     expect(next.today).toBe(roundDate(next.season, 6))
     expect(todaysMatchDay(next)?.kind).toBe('liga')
+  })
+
+  it('simulates up to a date, playing every game before it', () => {
+    const fourth = roundDate(start.season, 4)!
+    const game = simulateUntil(start, fourth)
+    expect(game.today).toBe(fourth)
+    expect(game.season.round).toBe(4)
+    expect(roundFixtures(game.season, 3).every((f) => f.result)).toBe(true)
+    // The game on the date itself is left for the manager to watch.
+    expect(todaysMatchDay(game)?.date).toBe(fourth)
+    expect(roundFixtures(game.season, 4).every((f) => !f.result)).toBe(true)
+  })
+
+  it('lands on a date with no games, and stops on a bid on the way', () => {
+    const between = addDays(roundDate(start.season, 2)!, 2)
+    expect(simulateUntil(start, between).today).toBe(between)
+    const player = start.world.clubs[start.userClubId].playerIds[5]
+    const listed = { ...start, market: { ...start.market, listed: { [player]: 10_000 } } }
+    const stopped = simulateUntil(listed, between)
+    expect(stopped.today < '2027-02-01').toBe(true)
+    expect(stopped.market.offers.length).toBeGreaterThan(0)
   })
 
   it("plays the user's cup tie as a match day of its own", () => {

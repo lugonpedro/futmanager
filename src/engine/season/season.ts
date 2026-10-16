@@ -646,6 +646,28 @@ export function advanceToNextGame(game: GameState, stopOnOffers = true): GameSta
   return next
 }
 
+/**
+ * Moves the calendar to `date`, playing every match day before it, the
+ * user's games included. It stops on the date itself, before any game there,
+ * so the manager can watch it; and earlier on a day a club bids for one of
+ * the user's players, or once he has no job.
+ */
+export function simulateUntil(game: GameState, date: GameDate): GameState {
+  let next = game
+  for (
+    let day = nextMatchDay(next.season);
+    day && day.date < date;
+    day = nextMatchDay(next.season)
+  ) {
+    if (!canPlayRound(next)) return next
+    const passed = passDays(next, day.date, true)
+    if (passed.stopped) return passed.game
+    next = playMatchDay(passed.game)
+  }
+  if (next.career.status !== 'empregado') return next
+  return passDays(next, date, true).game
+}
+
 /** Moves on to the user's next game and plays its whole match day. */
 export function playNextGame(game: GameState): GameState {
   const ready = advanceToNextGame(game, false)

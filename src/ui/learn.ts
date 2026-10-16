@@ -166,6 +166,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       `A ${CUP_NAME} é jogada na quarta-feira depois das rodadas ${listText(CUP_ROUNDS)}.`,
       'Salários e patrocínio caem no dia 1º de cada mês.',
       'Avançar até o próximo jogo para no dia em que chega uma proposta por um jogador seu, para você responder antes de ela vencer. "Simular jogo" joga a partida sem assistir; "Simular até o fim da temporada" vai direto ao fim, sem parar.',
+      'No Calendário, tocar num dia simula até ele: os seus jogos antes da data são simulados, o jogo do próprio dia fica para você jogar, e a simulação para antes se chegar uma proposta por um jogador seu.',
     ],
   },
   tabela: {
