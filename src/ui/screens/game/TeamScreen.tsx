@@ -14,6 +14,7 @@ import {
 import {
   ArrowDownIcon,
   ArrowUpIcon,
+  DumbbellIcon,
   FilePenLineIcon,
   MapIcon,
   TagIcon,
@@ -47,15 +48,27 @@ import {
   type Player,
   type Position,
   type Posture,
+  type TrainingPlan,
 } from '../../../engine/model/types.ts'
-import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
-import { recoveryRate } from '../../../engine/progression/training.ts'
+import {
+  careerGames,
+  potentialRange,
+  setRecommendedPlans,
+} from '../../../engine/progression/progression.ts'
+import {
+  canTrain,
+  recoveryRate,
+  setTrainingPlan,
+  TRAINING,
+  trainingBlock,
+} from '../../../engine/progression/training.ts'
 import { checkLoan, LOAN, loanClub, loanPlayer } from '../../../engine/transfer/loans.ts'
 import { confirm } from '../../confirm.ts'
 import { conditionOn, formOf } from '../../../engine/season/form.ts'
 import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
+import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { FormationSelect } from '../../components/FormationSelect.tsx'
 import { Pitch } from '../../components/Pitch.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
@@ -136,6 +149,7 @@ export function TeamScreen() {
   const [showPitch, setShowPitch] = useState(false)
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
+  const [trainableOnly, setTrainableOnly] = useState(false)
   const [sort, setSort] = useState<{ key: SortKey; ascending: boolean }>({
     key: 'position',
     ascending: true,
@@ -210,6 +224,7 @@ export function TeamScreen() {
   const rows: Row[] = squad
     .filter((p) => !position || p.position === position)
     .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
+    .filter((p) => !trainableOnly || canTrain(p))
     .map((p) => ({
       ...p,
       role: roleOf(p.id),
@@ -232,6 +247,11 @@ export function TeamScreen() {
         : { key, ascending: ASCENDING_FIRST.has(key) },
     )
   const expiring = squad.filter((p) => p.contractUntil <= season.year).length
+  const idle = squad.filter((p) => canTrain(p) && !game.training.individual[p.id]).length
+  // Phones have room for either the training plans or the sell and renew buttons:
+  // the "Podem treinar" filter swaps one for the other.
+  const trainingColumn = trainableOnly ? undefined : 'hidden sm:table-cell'
+  const actionsColumn = trainableOnly ? 'hidden sm:table-cell' : undefined
   const loaned = game.loans.map((l) => world.players[l.playerId])
 
   /** Sends a youngster out on loan, once the manager confirms. */
@@ -354,7 +374,33 @@ export function TeamScreen() {
               placeholder="Buscar jogador"
               className="h-8 sm:max-w-48"
             />
+            <Button
+              variant={trainableOnly ? 'default' : 'outline'}
+              size="sm"
+              aria-pressed={trainableOnly}
+              onClick={() => setTrainableOnly((only) => !only)}
+              title="Quem ainda pode ter treino individual"
+            >
+              <DumbbellIcon />
+              Podem treinar
+            </Button>
           </div>
+          {idle > 0 && (
+            <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
+              <p>
+                {idle}{' '}
+                {idle === 1 ? 'jogador pode treinar e está' : 'jogadores podem treinar e estão'} sem
+                treino individual.
+              </p>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setGame(setRecommendedPlans(game, true))}
+              >
+                Colocar no recomendado
+              </Button>
+            </div>
+          )}
           {expiring > 0 && (
             <p className="text-sm text-muted-foreground">
               {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim desta
@@ -384,7 +430,13 @@ export function TeamScreen() {
                       </button>
                     </TableHead>
                   ))}
-                  <TableHead>
+                  <TableHead
+                    title="Treino individual; as setas mostram o que mais sobe o geral"
+                    className={trainingColumn}
+                  >
+                    Treino
+                  </TableHead>
+                  <TableHead className={actionsColumn}>
                     <span className="sr-only">Ações</span>
                   </TableHead>
                 </TableRow>
@@ -395,7 +447,7 @@ export function TeamScreen() {
                   return [
                     <TableRow key={group.role} className="bg-muted/50 hover:bg-muted/50">
                       <TableCell
-                        colSpan={COLUMNS.length + 1}
+                        colSpan={COLUMNS.length + 2}
                         className="py-1.5 text-xs font-semibold text-muted-foreground"
                       >
                         {group.label} ({members.length})
@@ -411,6 +463,7 @@ export function TeamScreen() {
                         onPick={() => pick(p.id)}
                         onSell={() => setListing(p.id)}
                         onRenew={() => setRenewing(p.id)}
+                        actionsClassName={actionsColumn}
                       >
                         <TableCell>
                           <button
@@ -470,6 +523,12 @@ export function TeamScreen() {
                         >
                           {p.contractUntil}
                         </TableCell>
+                        <TrainingCell
+                          className={trainingColumn}
+                          player={p}
+                          plan={game.training.individual[p.id]}
+                          onChange={(plan) => setGame(setTrainingPlan(game, p.id, plan))}
+                        />
                       </SquadRow>
                     )),
                   ]
@@ -633,6 +692,47 @@ function StarterLines(props: {
 }
 
 /** A squad list row: tap to pick for a swap, drag onto another player, or sell and renew. */
+/**
+ * A player's training plan in the squad list. The cell keeps its clicks and
+ * presses to itself, so working the select never picks or drags the row.
+ */
+function TrainingCell(props: {
+  className?: string
+  player: Player
+  plan: TrainingPlan | undefined
+  onChange: (plan: TrainingPlan | undefined) => void
+}) {
+  const { player } = props
+  const block = trainingBlock(player)
+  const keep = (e: { stopPropagation: () => void }) => e.stopPropagation()
+  return (
+    <TableCell className={props.className} onClick={keep} onMouseDown={keep} onTouchStart={keep}>
+      {block ? (
+        <span
+          className="text-xs text-muted-foreground"
+          title={
+            block === 'idade'
+              ? `Acima de ${TRAINING.individualUntil} anos`
+              : 'Já chegou ao potencial'
+          }
+        >
+          {block === 'idade' ? 'Idade' : 'No teto'}
+        </span>
+      ) : (
+        <FocusSelect
+          player={player}
+          plan={props.plan}
+          onChange={props.onChange}
+          className={cn(
+            'h-7 w-24 px-2 text-xs sm:w-32 sm:px-3 sm:text-sm',
+            !props.plan && 'border-amber-500/60',
+          )}
+        />
+      )}
+    </TableCell>
+  )
+}
+
 function SquadRow(props: {
   row: Row
   selected: boolean
@@ -641,6 +741,7 @@ function SquadRow(props: {
   onPick: () => void
   onSell: () => void
   onRenew: () => void
+  actionsClassName?: string
   children: ReactNode
 }) {
   const { row, selected, disabled } = props
@@ -692,7 +793,7 @@ function SquadRow(props: {
         </button>
       </TableCell>
       {props.children}
-      <TableCell className="w-16 text-right whitespace-nowrap">
+      <TableCell className={cn('w-16 text-right whitespace-nowrap', props.actionsClassName)}>
         <RowAction
           label={
             props.listed

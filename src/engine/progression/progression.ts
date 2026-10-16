@@ -14,6 +14,7 @@ import {
   POSITIONS,
   RETIRED,
   type GameState,
+  type IndividualFocus,
   type Player,
   type Position,
   type Training,
@@ -261,6 +262,51 @@ export function keyAttributes(position: Position): Attribute[] {
 /** The attributes a plan works on, for a player in `position`. */
 export const planAttributes = (plan: TrainingPlan, position: Position): readonly Attribute[] =>
   plan.focus === 'geral' ? keyAttributes(position) : FOCUS_ATTRIBUTES[plan.focus]
+
+/**
+ * How much a season of each plan, at the usual intensity, would add to a
+ * player's overall from the plan alone: the points each worked attribute
+ * gains, up to 99, times how much it counts in his position.
+ */
+export function focusGains(player: Player): Record<IndividualFocus, number> {
+  const shares = overallShares(player.position)
+  const points = TRAINING.perSeason.normal
+  const gain = (focus: IndividualFocus) =>
+    planAttributes({ focus, intensity: 'normal' }, player.position).reduce(
+      (sum, a) => sum + shares[a] * Math.min(points, 99 - player.attributes[a]),
+      0,
+    )
+  const foci = ['geral', ...Object.keys(FOCUS_ATTRIBUTES)] as IndividualFocus[]
+  return Object.fromEntries(foci.map((focus) => [focus, gain(focus)])) as Record<
+    IndividualFocus,
+    number
+  >
+}
+
+/** The plan that most raises his overall; the general one when it's a tie. */
+export function recommendedFocus(player: Player): IndividualFocus {
+  const gains = focusGains(player)
+  return (Object.keys(gains) as IndividualFocus[]).reduce((best, focus) =>
+    gains[focus] > gains[best] ? focus : best,
+  )
+}
+
+/**
+ * Puts every one of the user's players who can still grow on his recommended
+ * plan, keeping the intensity he had; with `onlyIdle`, just those with no plan.
+ */
+export function setRecommendedPlans(game: GameState, onlyIdle = false): GameState {
+  const individual = { ...game.training.individual }
+  for (const id of game.world.clubs[game.userClubId].playerIds) {
+    const player = game.world.players[id]
+    if (!canTrain(player) || (onlyIdle && individual[id])) continue
+    individual[id] = {
+      focus: recommendedFocus(player),
+      intensity: individual[id]?.intensity ?? 'normal',
+    }
+  }
+  return { ...game, training: { ...game.training, individual } }
+}
 
 /** The training a step of the user's player gets. */
 function stepTraining(training: Training, player: Player, share: number): StepTraining {

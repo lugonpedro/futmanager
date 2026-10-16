@@ -102,6 +102,8 @@ Três ideias, da mais simples à mais completa:
 
 **Recomendação**: A + B juntas, e manter o cartão de treino atual só com o foco do elenco e os botões em lote. Isso põe o treino onde o jogador já está olhando, sem esconder nada atrás de uma aba. Se a lista do elenco ficar larga demais, cair para a C.
 
+**Como ficou (PR 2)**: a coluna Treino usa o mesmo seletor de foco, com as setas, e a intensidade continua no cartão de treino. No celular não cabem a coluna e os botões de vender e renovar ao mesmo tempo, então o filtro "Podem treinar" troca um pelo outro. Acima da lista, um aviso conta quem pode treinar e está sem plano, com o botão "Colocar no recomendado". No cartão de treino, "Todos no geral" virou "Todos no recomendado". As setas consideram também o espaço que cada atributo ainda tem até 99: um zagueiro com marcação e desarme já no topo vê a seta em outro foco.
+
 **Código**: `TeamScreen.tsx` (coluna e filtro), um componente `TrainingChip` reaproveitando o select do `TrainingPanel.tsx`, e `setSquadPlans` ganha a variante "recomendado".
 
 ## 6. Mercado com a janela fechada
