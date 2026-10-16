@@ -22,8 +22,14 @@ export function LegalScreen() {
         <CardContent className="flex flex-col gap-3 text-sm leading-relaxed">
           <p>
             O futmanager é um jogo independente e não tem nenhuma ligação com clubes, federações,
-            ligas ou atletas. Os times e jogadores que vêm com o jogo são fictícios; qualquer
-            semelhança é coincidência.
+            ligas ou atletas. O mundo gerado, que é o padrão, tem times e jogadores fictícios;
+            qualquer semelhança é coincidência.
+          </p>
+          <p>
+            O pacote de teste Brasileirão 2026, que vem com o jogo, usa os nomes de clubes e atletas
+            das Séries A e B de 2026, com cidade, cores, idade e posição, como informação factual.
+            Ele não traz escudos, uniformes, fotos nem marcas oficiais, e os atributos e a força de
+            cada jogador são inventados pelo jogo, sem relação com o desempenho real.
           </p>
           <p>
             Nomes inseridos pelos usuários no editor ou em pacotes importados são de
@@ -32,11 +38,12 @@ export function LegalScreen() {
             publica esses nomes.
           </p>
           <p>
-            Se você representa um clube ou atleta e quer que algo seja removido,{' '}
+            Se você representa um clube ou atleta e quer que um nome seja corrigido ou removido do
+            pacote Brasileirão 2026, ou de qualquer parte do jogo,{' '}
             <a href={CONTACT_URL} className="underline underline-offset-2">
               fale com a gente
             </a>
-            .
+            . O nome sai na versão seguinte do jogo.
           </p>
         </CardContent>
       </Card>
@@ -49,7 +56,8 @@ export function LegalScreen() {
           <ol className="flex list-decimal flex-col gap-2 pl-5 text-sm leading-relaxed">
             <li>
               O jogo vem com um mundo gerado: clubes, cidades e jogadores inventados. Nenhum nome,
-              escudo ou marca real faz parte dele.
+              escudo ou marca real faz parte dele. O pacote de teste Brasileirão 2026 é opcional e
+              só entra quando você o escolhe no Novo jogo.
             </li>
             <li>
               O editor de times e os pacotes de dados permitem trocar esses nomes. Tudo o que você

@@ -1,0 +1,5138 @@
+{
+  "formato": "futmanager-pacote",
+  "versao": 1,
+  "nome": "Brasileirão 2026",
+  "clubes": [
+    {
+      "nome": "Clube de Regatas do Flamengo",
+      "sigla": "FLA",
+      "cidade": "Rio de Janeiro",
+      "cores": ["#c4161c", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Rossi",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Andrew",
+          "posicao": "G",
+          "idade": 25
+        },
+        {
+          "nome": "Dyogo Alves",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Léo Ortiz",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Léo Pereira",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Danilo",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Vitão",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "João Victor",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "Varela",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Alex Sandro",
+          "posicao": "L",
+          "idade": 35
+        },
+        {
+          "nome": "Emerson Royal",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Ayrton Lucas",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Pulgar",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Jorginho",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Arrascaeta",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Lucas Paquetá",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Saúl",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "De la Cruz",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Carrascal",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Pedro",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Samuel Lino",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Bruno Henrique",
+          "posicao": "A",
+          "idade": 36
+        },
+        {
+          "nome": "Luiz Araújo",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Valencia",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "Lorran",
+          "posicao": "A",
+          "idade": 20
+        }
+      ]
+    },
+    {
+      "nome": "Sociedade Esportiva Palmeiras",
+      "sigla": "PAL",
+      "cidade": "São Paulo",
+      "cores": ["#006437", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Carlos Miguel",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Marcelo Lomba",
+          "posicao": "G",
+          "idade": 40
+        },
+        {
+          "nome": "Bruno Bertinato",
+          "posicao": "G"
+        },
+        {
+          "nome": "Gustavo Gómez",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Murilo",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Bruno Fuchs",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Barboza",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Benedetti",
+          "posicao": "Z",
+          "idade": 20
+        },
+        {
+          "nome": "Khellven",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Piquerez",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Giay",
+          "posicao": "L",
+          "idade": 22
+        },
+        {
+          "nome": "Jefté",
+          "posicao": "L",
+          "idade": 23
+        },
+        {
+          "nome": "Marlon Freitas",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Andreas Pereira",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Emiliano Martínez",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Jhon Arias",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Felipe Anderson",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Maurício",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Lucas Evangelista",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Vitor Roque",
+          "posicao": "A",
+          "idade": 21
+        },
+        {
+          "nome": "Flaco López",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Ramón Sosa",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Paulinho",
+          "posicao": "A",
+          "idade": 26
+        }
+      ]
+    },
+    {
+      "nome": "Cruzeiro Esporte Clube",
+      "sigla": "CRU",
+      "cidade": "Belo Horizonte",
+      "cores": ["#0033a0", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Cássio",
+          "posicao": "G",
+          "idade": 39
+        },
+        {
+          "nome": "Otávio",
+          "posicao": "G"
+        },
+        {
+          "nome": "Léo Aragão",
+          "posicao": "G"
+        },
+        {
+          "nome": "Fabrício Bruno",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Jonathan Jesus",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Villalba",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "João Marcelo",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Kauã Moraes",
+          "posicao": "L",
+          "idade": 20
+        },
+        {
+          "nome": "Fagner",
+          "posicao": "L",
+          "idade": 37
+        },
+        {
+          "nome": "Gabriel Rojas",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Viña",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Lucas Romero",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Lucas Silva",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Gerson",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Matheus Pereira",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Matheus Henrique",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Zé Lucas",
+          "posicao": "M",
+          "idade": 18
+        },
+        {
+          "nome": "Rhuan Gabriel",
+          "posicao": "M",
+          "idade": 20
+        },
+        {
+          "nome": "Kaio Jorge",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Sinisterra",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Keny Arroyo",
+          "posicao": "A",
+          "idade": 20
+        },
+        {
+          "nome": "Wanderson",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Gabriel Pec",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Marquinhos",
+          "posicao": "A",
+          "idade": 23
+        }
+      ]
+    },
+    {
+      "nome": "Botafogo de Futebol e Regatas",
+      "sigla": "BOT",
+      "cidade": "Rio de Janeiro",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Gabriel Batista",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Warleson",
+          "posicao": "G",
+          "idade": 30
+        },
+        {
+          "nome": "Ferraresi",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Arthur Chaves",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Kaio Pantaleão",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Lucas Monzón",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Vitinho",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Alex Telles",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Mateo Ponte",
+          "posicao": "L",
+          "idade": 23
+        },
+        {
+          "nome": "Marçal",
+          "posicao": "L",
+          "idade": 37
+        },
+        {
+          "nome": "Danilo",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Cristian Medina",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Huguinho",
+          "posicao": "M",
+          "idade": 19
+        },
+        {
+          "nome": "Allan",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Montoro",
+          "posicao": "M",
+          "idade": 19
+        },
+        {
+          "nome": "Domingos Andrade",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Arthur Cabral",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Ziyech",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Matheus Martins",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "Júnior Santos",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Jordan Barrera",
+          "posicao": "A",
+          "idade": 20
+        },
+        {
+          "nome": "Tiquinho Soares",
+          "posicao": "A",
+          "idade": 35
+        }
+      ]
+    },
+    {
+      "nome": "Fluminense Football Club",
+      "sigla": "FLU",
+      "cidade": "Rio de Janeiro",
+      "cores": ["#870a28", "#00613c"],
+      "jogadores": [
+        {
+          "nome": "Fábio",
+          "posicao": "G",
+          "idade": 45
+        },
+        {
+          "nome": "Vitor Eudes",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Pitaluga",
+          "posicao": "G",
+          "idade": 24
+        },
+        {
+          "nome": "Thiago Silva",
+          "posicao": "Z",
+          "idade": 42
+        },
+        {
+          "nome": "Ignácio",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Freytes",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Jemmes",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Igor Rabello",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Samuel Xavier",
+          "posicao": "L",
+          "idade": 36
+        },
+        {
+          "nome": "Guilherme Arana",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Guga",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Renê",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Martinelli",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Hércules",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Nonato",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Otávio",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Alisson",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Lucho Acosta",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Ganso",
+          "posicao": "M",
+          "idade": 37
+        },
+        {
+          "nome": "Hulk",
+          "posicao": "A",
+          "idade": 40
+        },
+        {
+          "nome": "Cano",
+          "posicao": "A",
+          "idade": 38
+        },
+        {
+          "nome": "John Kennedy",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Rodrigo Castillo",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Canobbio",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Kevin Serna",
+          "posicao": "A",
+          "idade": 29
+        }
+      ]
+    },
+    {
+      "nome": "Clube Atlético Mineiro",
+      "sigla": "CAM",
+      "cidade": "Belo Horizonte",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Everson",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Gabriel Delfim",
+          "posicao": "G",
+          "idade": 24
+        },
+        {
+          "nome": "Robert",
+          "posicao": "G",
+          "idade": 21
+        },
+        {
+          "nome": "Lyanco",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Ruan Tressoldi",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Léo Duarte",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Vitor Hugo",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Vitão",
+          "posicao": "Z",
+          "idade": 18
+        },
+        {
+          "nome": "Renan Lodi",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Natanael",
+          "posicao": "L",
+          "idade": 24
+        },
+        {
+          "nome": "Preciado",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Alan Franco",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Fred",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Gustavo Scarpa",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Maycon",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Kevin Castaño",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Bernard",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Alexsander",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Tomás Cuello",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Cassierra",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Alan Minda",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "Dudu",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Thiago Borbas",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Cauã Soares",
+          "posicao": "A",
+          "idade": 18
+        }
+      ]
+    },
+    {
+      "nome": "São Paulo Futebol Clube",
+      "sigla": "SPFC",
+      "cidade": "São Paulo",
+      "cores": ["#ffffff", "#e2001a"],
+      "jogadores": [
+        {
+          "nome": "Rafael",
+          "posicao": "G",
+          "idade": 37
+        },
+        {
+          "nome": "Carlos Coronel",
+          "posicao": "G",
+          "idade": 30
+        },
+        {
+          "nome": "Felipe Preis",
+          "posicao": "G"
+        },
+        {
+          "nome": "Arboleda",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Rafael Tolói",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "Sabino",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Domingos Duarte",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Luis Osorio",
+          "posicao": "Z",
+          "idade": 20
+        },
+        {
+          "nome": "Lucas Ramon",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Wendell",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Aurélio Buta",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Iago",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Marcos Antônio",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Bobadilla",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Pablo Maia",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Danielzinho",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Cauly",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Newton",
+          "posicao": "M"
+        },
+        {
+          "nome": "Lucas Moura",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Calleri",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Luciano",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Ferreira",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "André Silva",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Artur",
+          "posicao": "A",
+          "idade": 28
+        }
+      ]
+    },
+    {
+      "nome": "Sport Club Corinthians Paulista",
+      "sigla": "SCCP",
+      "cidade": "São Paulo",
+      "cores": ["#ffffff", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Hugo Souza",
+          "posicao": "G",
+          "idade": 27
+        },
+        {
+          "nome": "Felipe Longo",
+          "posicao": "G",
+          "idade": 21
+        },
+        {
+          "nome": "Gabriel Paulista",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "André Ramalho",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Gustavo Henrique",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "João Pedro",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "João Vitor",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Matheuzinho",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Matheus Bidu",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Angileri",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Pedro Milans",
+          "posicao": "L",
+          "idade": 24
+        },
+        {
+          "nome": "Raniele",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Breno Bidon",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Rodrigo Garro",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Allan",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Matheus Pereira",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "André Carrillo",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Jesse Lingard",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Memphis",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Yuri Alberto",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Pedro Raul",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Kaio César",
+          "posicao": "A",
+          "idade": 22
+        },
+        {
+          "nome": "Kayke",
+          "posicao": "A",
+          "idade": 22
+        },
+        {
+          "nome": "Gui Negão",
+          "posicao": "A",
+          "idade": 19
+        }
+      ]
+    },
+    {
+      "nome": "Sport Club Internacional",
+      "sigla": "INT",
+      "cidade": "Porto Alegre",
+      "cores": ["#e30613", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Rochet",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "Anthoni",
+          "posicao": "G",
+          "idade": 24
+        },
+        {
+          "nome": "Kauan Jesus",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Mercado",
+          "posicao": "Z",
+          "idade": 39
+        },
+        {
+          "nome": "Félix Torres",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Juninho",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Victor Gabriel",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Clayton Sampaio",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Bernabei",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Braian Aguirre",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Matheus Bahia",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Bruno Gomes",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Villagra",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Thiago Maia",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Alan Patrick",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Bruno Henrique",
+          "posicao": "M",
+          "idade": 37
+        },
+        {
+          "nome": "Alan Rodríguez",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Ronaldo",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Bruno Tabata",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Borré",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Alerrandro",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Carbonero",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Vitinho",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Kayky",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "João Victor",
+          "posicao": "A",
+          "idade": 19
+        }
+      ]
+    },
+    {
+      "nome": "Grêmio Foot-Ball Porto Alegrense",
+      "sigla": "GRE",
+      "cidade": "Porto Alegre",
+      "cores": ["#0d80bf", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Weverton",
+          "posicao": "G",
+          "idade": 39
+        },
+        {
+          "nome": "Gabriel Grando",
+          "posicao": "G",
+          "idade": 26
+        },
+        {
+          "nome": "Thiago Beltrame",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Kannemann",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Balbuena",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Wagner Leonardo",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Gustavo Martins",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Luis Eduardo",
+          "posicao": "Z",
+          "idade": 18
+        },
+        {
+          "nome": "Marcos Rocha",
+          "posicao": "L",
+          "idade": 38
+        },
+        {
+          "nome": "Marlon",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "João Pedro",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Caio Paulista",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Villasanti",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Nardoni",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Noriega",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Dodi",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Danilo Barbosa",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Krovinović",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Gabriel Mec",
+          "posicao": "M",
+          "idade": 18
+        },
+        {
+          "nome": "Carlos Vinícius",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Braithwaite",
+          "posicao": "A",
+          "idade": 35
+        },
+        {
+          "nome": "Pavón",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Amuzu",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Tetê",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Enamorado",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Esporte Clube Bahia",
+      "sigla": "BAH",
+      "cidade": "Salvador",
+      "cores": ["#0067b1", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Ronaldo",
+          "posicao": "G",
+          "idade": 30
+        },
+        {
+          "nome": "João Paulo",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Léo Vieira",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Kanu",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "David Duarte",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Ramos Mingo",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Gabriel Xavier",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Marcos Victor",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Gilberto",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Luciano Juba",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Román Gómez",
+          "posicao": "L",
+          "idade": 22
+        },
+        {
+          "nome": "Zé Guilherme",
+          "posicao": "L",
+          "idade": 21
+        },
+        {
+          "nome": "Jean Lucas",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Acevedo",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Caio Alexandre",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Everton Ribeiro",
+          "posicao": "M",
+          "idade": 37
+        },
+        {
+          "nome": "Rodrigo Nestor",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Erick",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Michel Araújo",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Willian José",
+          "posicao": "A",
+          "idade": 35
+        },
+        {
+          "nome": "Erick Pulga",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Ademir",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Kike Olivera",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Everaldo",
+          "posicao": "A",
+          "idade": 35
+        },
+        {
+          "nome": "Sanabria",
+          "posicao": "A",
+          "idade": 22
+        }
+      ]
+    },
+    {
+      "nome": "Club de Regatas Vasco da Gama",
+      "sigla": "VAS",
+      "cidade": "Rio de Janeiro",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Léo Jardim",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Daniel Fuzato",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Pablo",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Carlos Cuesta",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Robert Renan",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Alan Saldivia",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Lucas Freitas",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Walace Falcão",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Puma Rodríguez",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Lucas Piton",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Paulo Henrique",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Cuiabano",
+          "posicao": "L",
+          "idade": 23
+        },
+        {
+          "nome": "Santiago Sosa",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Thiago Mendes",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Tchê Tchê",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Cauan Barros",
+          "posicao": "M",
+          "idade": 22
+        },
+        {
+          "nome": "Johan Rojas",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Alan Lescano",
+          "posicao": "M"
+        },
+        {
+          "nome": "Matheus Carvalho",
+          "posicao": "M"
+        },
+        {
+          "nome": "Colidio",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Nuno Moreira",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Andrés Gómez",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Bruno Duarte",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Brenner",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Hinestroza",
+          "posicao": "A",
+          "idade": 24
+        }
+      ]
+    },
+    {
+      "nome": "Red Bull Bragantino",
+      "sigla": "RBB",
+      "cidade": "Bragança Paulista",
+      "cores": ["#ffffff", "#e30613"],
+      "jogadores": [
+        {
+          "nome": "Cleiton",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Tiago Volpi",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Gustavo Reis",
+          "posicao": "G",
+          "idade": 21
+        },
+        {
+          "nome": "Gustavo Marques",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Alix Vinicius",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Eduardo Santos",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Guzmán Rodríguez",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Andrés Hurtado",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Juninho Capixaba",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Sant'Anna",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Vanderlan",
+          "posicao": "L",
+          "idade": 24
+        },
+        {
+          "nome": "Gabriel",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Matheus Fernandes",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Fabinho",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Nacho Sosa",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Eric Ramires",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Gustavo Neves",
+          "posicao": "M"
+        },
+        {
+          "nome": "Rodriguinho",
+          "posicao": "M"
+        },
+        {
+          "nome": "Isidro Pitta",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Eduardo Sasha",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Lucas Barbosa",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Henry Mosquera",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "José Herrera",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "Fernando",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Santos Futebol Clube",
+      "sigla": "SAN",
+      "cidade": "Santos",
+      "cores": ["#ffffff", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Gabriel Brazão",
+          "posicao": "G",
+          "idade": 26
+        },
+        {
+          "nome": "Diógenes",
+          "posicao": "G",
+          "idade": 25
+        },
+        {
+          "nome": "João Paulo",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Lucas Veríssimo",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Luan Peres",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "João Ananias",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "João Alencar",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "Igor Vinícius",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Escobar",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Rodinei",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Vinicius Lira",
+          "posicao": "L",
+          "idade": 19
+        },
+        {
+          "nome": "João Schmidt",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Willian Arão",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Christian Oliva",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Gabriel Menino",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Arthur",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Neymar",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Philippe Coutinho",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Gabigol",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Rony",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Barreal",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Everton Cebolinha",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Caballero",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Moisés",
+          "posicao": "A",
+          "idade": 30
+        }
+      ]
+    },
+    {
+      "nome": "Mirassol Futebol Clube",
+      "sigla": "MIR",
+      "cidade": "Mirassol",
+      "cores": ["#ffd700", "#008c45"],
+      "jogadores": [
+        {
+          "nome": "Walter",
+          "posicao": "G",
+          "idade": 39
+        },
+        {
+          "nome": "Georgemy",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Alex Muralha",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Lucas Oliveira",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Willian Machado",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "João Victor",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Gabriel Knesowitsch",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Reinaldo",
+          "posicao": "L",
+          "idade": 37
+        },
+        {
+          "nome": "Daniel Borges",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Igor Formiga",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Victor Luis",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Neto Moura",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "José Aldo",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Denilson",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Gustavo Cazonatti",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Wallisson",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Japa",
+          "posicao": "M",
+          "idade": 22
+        },
+        {
+          "nome": "Chico Kim",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Negueba",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Edson Carioca",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Carlos Eduardo",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Fernandinho",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Alesson",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "André Luis",
+          "posicao": "A",
+          "idade": 32
+        }
+      ]
+    },
+    {
+      "nome": "Club Athletico Paranaense",
+      "sigla": "CAP",
+      "cidade": "Curitiba",
+      "cores": ["#c8102e", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Santos",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Mycael",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Matheus Soares",
+          "posicao": "G",
+          "idade": 21
+        },
+        {
+          "nome": "Léo",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Carlos Terán",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Juan Felipe Aguirre",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Arthur Dias",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "Dantas",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Benavídez",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Esquivel",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Gilberto",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Gilberto dos Santos",
+          "posicao": "L",
+          "idade": 21
+        },
+        {
+          "nome": "Luiz Gustavo",
+          "posicao": "M",
+          "idade": 39
+        },
+        {
+          "nome": "Jadson",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Juan Portilla",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Felipinho",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Zapelli",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Alejandro García",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "João Cruz",
+          "posicao": "M",
+          "idade": 20
+        },
+        {
+          "nome": "Kevin Viveros",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Mendoza",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Kerwin Vargas",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Leozinho",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Isaac",
+          "posicao": "A"
+        },
+        {
+          "nome": "Jorge Rivaldo",
+          "posicao": "A",
+          "idade": 23
+        }
+      ]
+    },
+    {
+      "nome": "Esporte Clube Vitória",
+      "sigla": "VIT",
+      "cidade": "Salvador",
+      "cores": ["#e30613", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Lucas Arcanjo",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Yuri Sena",
+          "posicao": "G",
+          "idade": 25
+        },
+        {
+          "nome": "Fintelman",
+          "posicao": "G",
+          "idade": 25
+        },
+        {
+          "nome": "Camutanga",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Cacá",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Brítez",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Edu",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Kauan",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "Mateusinho",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Nathan Mendes",
+          "posicao": "L",
+          "idade": 24
+        },
+        {
+          "nome": "Ramon",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Jamerson",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Gabriel Baralhas",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Walace",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Rúben Ismael",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Emmanuel Martínez",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Dudu",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Zé Vitor",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Caíque Gonçalves",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Renato Kayzer",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Erick",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Marinho",
+          "posicao": "A",
+          "idade": 36
+        },
+        {
+          "nome": "Osvaldo",
+          "posicao": "A",
+          "idade": 39
+        },
+        {
+          "nome": "Lucas Silva",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Tarzia",
+          "posicao": "A",
+          "idade": 23
+        }
+      ]
+    },
+    {
+      "nome": "Coritiba Foot Ball Club",
+      "sigla": "CFC",
+      "cidade": "Curitiba",
+      "cores": ["#00543c", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Pedro Morisco",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Keiller",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Pedro Rangel",
+          "posicao": "G",
+          "idade": 26
+        },
+        {
+          "nome": "Maicon",
+          "posicao": "Z",
+          "idade": 38
+        },
+        {
+          "nome": "Tiago Cóser",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Rodrigo Moledo",
+          "posicao": "Z",
+          "idade": 39
+        },
+        {
+          "nome": "Jacy",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Tinga",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Felipe Jonatan",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "JP Chermont",
+          "posicao": "L",
+          "idade": 20
+        },
+        {
+          "nome": "Bruno Melo",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Sebastián Gómez",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Nicolás Fonseca",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Thiago Santos",
+          "posicao": "M",
+          "idade": 37
+        },
+        {
+          "nome": "Richard",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Josué",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Vini Paulista",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Gustavo Silva",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Lavega",
+          "posicao": "A",
+          "idade": 21
+        },
+        {
+          "nome": "Brian Ocampo",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Lucas Ronier",
+          "posicao": "A",
+          "idade": 21
+        },
+        {
+          "nome": "Breno Lopes",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Pedro Rocha",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Keno",
+          "posicao": "A",
+          "idade": 37
+        }
+      ]
+    },
+    {
+      "nome": "Associação Chapecoense de Futebol",
+      "sigla": "CHA",
+      "cidade": "Chapecó",
+      "cores": ["#00843d", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Rafael Santos",
+          "posicao": "G",
+          "idade": 37
+        },
+        {
+          "nome": "Anderson",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Kainã",
+          "posicao": "G",
+          "idade": 21
+        },
+        {
+          "nome": "Rafael Thyere",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Eduardo Doma",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "João Paulo",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Victor Caetano",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Kauan Faria",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Bruno Pacheco",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Mancha",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Everton",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Bruno Tubarão",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Bruno Matias",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Camilo",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Vinicius Balieiro",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Rafael Carvalheira",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Giovanni Augusto",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Yago Felipe",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Robert Santos",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Marcinho",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Neto Pessoa",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Bolasie",
+          "posicao": "A",
+          "idade": 37
+        },
+        {
+          "nome": "Maurício Garcez",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Kevin Ramírez",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Ênio",
+          "posicao": "A",
+          "idade": 25
+        }
+      ]
+    },
+    {
+      "nome": "Clube do Remo",
+      "sigla": "REM",
+      "cidade": "Belém",
+      "cores": ["#002d72", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Marcelo Rangel",
+          "posicao": "G",
+          "idade": 38
+        },
+        {
+          "nome": "Ygor Vinhas",
+          "posicao": "G",
+          "idade": 32
+        },
+        {
+          "nome": "Ivan",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Marllon",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Léo Andrade",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Tchamba",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Zé Ivaldo",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Tassano",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Marcelinho",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Mayk",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Marlon",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "João Lucas",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Patrick",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Zé Welison",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Picco",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Edson Fernando",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Catarozzi",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Vitor Bueno",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Zé Ricardo",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Yago Pikachu",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Jajá",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Galeano",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Gabriel Taliari",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Gabriel Poveda",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Eduardo Melo",
+          "posicao": "A",
+          "idade": 25
+        }
+      ]
+    },
+    {
+      "nome": "Fortaleza Esporte Clube",
+      "sigla": "FOR",
+      "cidade": "Fortaleza",
+      "cores": ["#d71920", "#003da5"],
+      "jogadores": [
+        {
+          "nome": "João Ricardo",
+          "posicao": "G",
+          "idade": 38
+        },
+        {
+          "nome": "Vinícius Silvestre",
+          "posicao": "G",
+          "idade": 32
+        },
+        {
+          "nome": "Magrão",
+          "posicao": "G",
+          "idade": 26
+        },
+        {
+          "nome": "Tomás Cardona",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Lucas Gazal",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Bastos",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Luan Freitas",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Neris",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Maílton",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Gabriel Fuentes",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Paulinho",
+          "posicao": "L",
+          "idade": 21
+        },
+        {
+          "nome": "Kaio Henrique",
+          "posicao": "L",
+          "idade": 20
+        },
+        {
+          "nome": "Lucas Sasha",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Pierre",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Lucas Crispim",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Rodrigo Santos",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Jaílson",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Ronald",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Ryan",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Juan Miritello",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Paulo Baya",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Vitinho",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Luiz Fernando",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Chico da Costa",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Nathan Fogaça",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Ceará Sporting Club",
+      "sigla": "CEA",
+      "cidade": "Fortaleza",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Richard",
+          "posicao": "G",
+          "idade": 35
+        },
+        {
+          "nome": "Caíque França",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Jorge Meurer",
+          "posicao": "G",
+          "idade": 25
+        },
+        {
+          "nome": "Luiz Otávio",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Éder",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Júlio César",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Luiz Otávio",
+          "posicao": "Z",
+          "idade": 38
+        },
+        {
+          "nome": "Stanley Boateng",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Rafael Ramos",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Sánchez",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Bryan",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Sávio",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Richardson",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Vinícius Zanocelo",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Lucas Mugni",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Vina",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Giovanni Pavani",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Matheus Araújo",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Melquisedeque",
+          "posicao": "M",
+          "idade": 20
+        },
+        {
+          "nome": "Renzo López",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Saulo Mineiro",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Lucca",
+          "posicao": "A",
+          "idade": 23
+        },
+        {
+          "nome": "Rian Santana",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Kauã Ziegler",
+          "posicao": "A",
+          "idade": 20
+        }
+      ]
+    },
+    {
+      "nome": "Sport Club do Recife",
+      "sigla": "SPT",
+      "cidade": "Recife",
+      "cores": ["#d2001f", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Thiago Couto",
+          "posicao": "G",
+          "idade": 27
+        },
+        {
+          "nome": "Brenno",
+          "posicao": "G",
+          "idade": 27
+        },
+        {
+          "nome": "Dênis",
+          "posicao": "G",
+          "idade": 39
+        },
+        {
+          "nome": "Zé Marcos",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Marcelo Benevenuto",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Habraão",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Marcelo Ajul",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Kayky Almeida",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Claudinho",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Felipinho",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Edson Pereira",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Raí",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Willian Oliveira",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Fernando Sobral",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Zé Gabriel",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Patrick de Paula",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Carlos De Pena",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Biel",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Kervin Andrade",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Perotti",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Barletta",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Diego Hernández",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Clayson",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Neto Pessoa",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Dudu",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Esporte Clube Juventude",
+      "sigla": "JUV",
+      "cidade": "Caxias do Sul",
+      "cores": ["#00843d", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Jandrei",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "Pedro Rocha",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Ruan Carneiro",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Messias",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Rodrigo Sam",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Gabriel",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Titi",
+          "posicao": "Z",
+          "idade": 38
+        },
+        {
+          "nome": "Marcos Paulo",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Aderlan",
+          "posicao": "L",
+          "idade": 36
+        },
+        {
+          "nome": "Diogo Barbosa",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Alan Ruschel",
+          "posicao": "L",
+          "idade": 37
+        },
+        {
+          "nome": "Raí Ramos",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Lucas Mineiro",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Gabriel Pires",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Luan",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Pablo Roberto",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Mandaca",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Raí",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Iba Ly",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Alisson Safira",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Luis Amarilla",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Marcos Paulo",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Fábio Lima",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Alan Kardec",
+          "posicao": "A",
+          "idade": 37
+        },
+        {
+          "nome": "Manuel Castro",
+          "posicao": "A",
+          "idade": 31
+        }
+      ]
+    },
+    {
+      "nome": "Goiás Esporte Clube",
+      "sigla": "GOI",
+      "cidade": "Goiânia",
+      "cores": ["#006437", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Tadeu",
+          "posicao": "G",
+          "idade": 34
+        },
+        {
+          "nome": "Thiago Rodrigues",
+          "posicao": "G",
+          "idade": 38
+        },
+        {
+          "nome": "Ezequiel",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Lucas Ribeiro",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Ramon Menezes",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Luiz Felipe",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Luisão",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Danilo Cunha",
+          "posicao": "Z",
+          "idade": 19
+        },
+        {
+          "nome": "Rodrigo Soares",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Nicolas",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Djalma",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Marcos Vinícius",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Juninho",
+          "posicao": "M",
+          "idade": 39
+        },
+        {
+          "nome": "Filipe Machado",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Lucas Lima",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Lourenço",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Gegê",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Brayann",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Guilherme Baldória",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Anselmo Ramon",
+          "posicao": "A",
+          "idade": 38
+        },
+        {
+          "nome": "Wellington Rato",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Bruno Sávio",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Esli García",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Cadu",
+          "posicao": "A",
+          "idade": 22
+        },
+        {
+          "nome": "Kadu",
+          "posicao": "A",
+          "idade": 24
+        }
+      ]
+    },
+    {
+      "nome": "Criciúma Esporte Clube",
+      "sigla": "CRI",
+      "cidade": "Criciúma",
+      "cores": ["#ffd100", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Alisson",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Airton",
+          "posicao": "G",
+          "idade": 32
+        },
+        {
+          "nome": "Kauã Moroso",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Luciano Castán",
+          "posicao": "Z",
+          "idade": 37
+        },
+        {
+          "nome": "Rodrigo",
+          "posicao": "Z",
+          "idade": 39
+        },
+        {
+          "nome": "César Martins",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Bruno Alves",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Rômulo",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Marcinho",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Marcelo Hermes",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Lepo",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Léo Mana",
+          "posicao": "L",
+          "idade": 22
+        },
+        {
+          "nome": "Ronald",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Jean Irmer",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Eduardo Biasi",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Guilherme Lobo",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Sandry",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Eliel Costa",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Fellipe Mateus",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Diego Gonçalves",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Romarinho",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "Nicolas",
+          "posicao": "A",
+          "idade": 37
+        },
+        {
+          "nome": "Jhonata Robert",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Yuri",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Waguininho",
+          "posicao": "A",
+          "idade": 36
+        }
+      ]
+    },
+    {
+      "nome": "América Futebol Clube",
+      "sigla": "AME",
+      "cidade": "Belo Horizonte",
+      "cores": ["#00703c", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Gustavo",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "Bruno Brígido",
+          "posicao": "G",
+          "idade": 35
+        },
+        {
+          "nome": "Willian",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Ricardo Silva",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Emerson Santos",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Lucas Sosa",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Manoel",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "Wesley",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Alex Silva",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Tobías Ostchega",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Jhonny",
+          "posicao": "L",
+          "idade": 24
+        },
+        {
+          "nome": "Fábio Almeida",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Alê",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Barreto",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Jorge Roa Jiménez",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Fernando Elizari",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Eduardo Person",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Val Soares",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Felipe Amaral",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Gonzalo Mastriani",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Willian Bigode",
+          "posicao": "A",
+          "idade": 40
+        },
+        {
+          "nome": "Guilherme Parede",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Rodrigo Piñeiro",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Paulo Victor",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Marcelo",
+          "posicao": "A",
+          "idade": 24
+        }
+      ]
+    },
+    {
+      "nome": "Cuiabá Esporte Clube",
+      "sigla": "CUI",
+      "cidade": "Cuiabá",
+      "cores": ["#006b3f", "#ffd700"],
+      "jogadores": [
+        {
+          "nome": "João Carlos",
+          "posicao": "G",
+          "idade": 38
+        },
+        {
+          "nome": "Marcelo Carné",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Busatto",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Alan Empereur",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "João Basso",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Vitão",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Vitor Mendes",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Luisão",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Railan",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Igor",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Eric",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Raul Gonçalves",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Wesley Dias",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Luiz Otávio",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Calebe Oliveira",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Pepê",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Marcos Júnior",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Weverson",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Fábio Gomes",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Pedro Henrique",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Rodrigo Rodrigues",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Jean Dias",
+          "posicao": "A",
+          "idade": 36
+        },
+        {
+          "nome": "Ramon",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Eliel",
+          "posicao": "A",
+          "idade": 23
+        }
+      ]
+    },
+    {
+      "nome": "Atlético Clube Goianiense",
+      "sigla": "ACG",
+      "cidade": "Goiânia",
+      "cores": ["#e30613", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Vladimir",
+          "posicao": "G",
+          "idade": 37
+        },
+        {
+          "nome": "Paulo Vítor",
+          "posicao": "G",
+          "idade": 38
+        },
+        {
+          "nome": "Paulo Henrique",
+          "posicao": "G",
+          "idade": 32
+        },
+        {
+          "nome": "Adriano Martins",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Natã",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Yuri",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Tito",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Marcão",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Ewerthon",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Warley",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Junior Barreto",
+          "posicao": "L"
+        },
+        {
+          "nome": "Felipe Guimarães",
+          "posicao": "L"
+        },
+        {
+          "nome": "Leandro Vilela",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Guilherme Marques",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Geovany Soares",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Geovane",
+          "posicao": "M",
+          "idade": 37
+        },
+        {
+          "nome": "David Terans",
+          "posicao": "M"
+        },
+        {
+          "nome": "Matheusinho",
+          "posicao": "M"
+        },
+        {
+          "nome": "Netinho",
+          "posicao": "M"
+        },
+        {
+          "nome": "Gustavo Coutinho",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Marrony",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Léo Tocantins",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Bruno José",
+          "posicao": "A"
+        },
+        {
+          "nome": "Gustavo Maia",
+          "posicao": "A"
+        },
+        {
+          "nome": "Kahiser Lenis",
+          "posicao": "A"
+        }
+      ]
+    },
+    {
+      "nome": "Avaí Futebol Clube",
+      "sigla": "AVA",
+      "cidade": "Florianópolis",
+      "cores": ["#0066b3", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Bruno Ferreira",
+          "posicao": "G",
+          "idade": 32
+        },
+        {
+          "nome": "Igor Bohn",
+          "posicao": "G",
+          "idade": 30
+        },
+        {
+          "nome": "Otávio",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "Reynaldo",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Allyson",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "Pedrão",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Douglas Teixeira",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "João Vitor",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Mateus Quaresma",
+          "posicao": "L",
+          "idade": 30
+        },
+        {
+          "nome": "Wallison",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Jefferson Maciel",
+          "posicao": "L",
+          "idade": 23
+        },
+        {
+          "nome": "Zé Ricardo",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Jean Lucas",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Daniel Penha",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Luiz Henrique",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Romildo Del Piage",
+          "posicao": "M"
+        },
+        {
+          "nome": "Gaspar",
+          "posicao": "M"
+        },
+        {
+          "nome": "Wenderson",
+          "posicao": "M"
+        },
+        {
+          "nome": "Léo Gamalho",
+          "posicao": "A",
+          "idade": 40
+        },
+        {
+          "nome": "Felipe Vizeu",
+          "posicao": "A"
+        },
+        {
+          "nome": "Léo Chú",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Rildo",
+          "posicao": "A"
+        },
+        {
+          "nome": "Caio Suassuna",
+          "posicao": "A"
+        },
+        {
+          "nome": "Filipe Rios",
+          "posicao": "A"
+        }
+      ]
+    },
+    {
+      "nome": "Grêmio Novorizontino",
+      "sigla": "NOV",
+      "cidade": "Novo Horizonte",
+      "cores": ["#ffd700", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Jordi",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "César Augusto",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Lucas Ribeiro",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Patrick",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Eduardo Brock",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Gabriel Bahia",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Carlinhos",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Renato Palma",
+          "posicao": "Z",
+          "idade": 35
+        },
+        {
+          "nome": "Mádson",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Maykon Jesus",
+          "posicao": "L",
+          "idade": 21
+        },
+        {
+          "nome": "Sander",
+          "posicao": "L",
+          "idade": 36
+        },
+        {
+          "nome": "Alvariño",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Luís Oyama",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Léo Naldi",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Matheus Bianqui",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Rômulo",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Juninho",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Diego Galo",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Tavinho",
+          "posicao": "M",
+          "idade": 22
+        },
+        {
+          "nome": "Robson",
+          "posicao": "A",
+          "idade": 35
+        },
+        {
+          "nome": "Vinícius Paiva",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Carlão",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Tití Ortiz",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Ronald Barcellos",
+          "posicao": "A",
+          "idade": 24
+        },
+        {
+          "nome": "Nicolas Careca",
+          "posicao": "A",
+          "idade": 29
+        }
+      ]
+    },
+    {
+      "nome": "Vila Nova Futebol Clube",
+      "sigla": "VIL",
+      "cidade": "Goiânia",
+      "cores": ["#e30613", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Helton Leite",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Dalberson",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Gabriel Átila",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Tiago Pagnussat",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "Douglas Mendes",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "Jonathan Costa",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Anderson Jesus",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Samuel Lucas",
+          "posicao": "Z"
+        },
+        {
+          "nome": "Hayner",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Willian Formiga",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Igor Cariús",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Higor Luiz",
+          "posicao": "L",
+          "idade": 22
+        },
+        {
+          "nome": "João Vieira",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Willian Maranhão",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Marquinhos Gabriel",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "Dudu",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Higor Meritão",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Dodô",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Enzo",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "André Luis",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Everton Galdino",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Janderson",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Dellatorre",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Ryan",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Emerson Urso",
+          "posicao": "A",
+          "idade": 25
+        }
+      ]
+    },
+    {
+      "nome": "Clube de Regatas Brasil",
+      "sigla": "CRB",
+      "cidade": "Maceió",
+      "cores": ["#e2001a", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Vitor Caetano",
+          "posicao": "G",
+          "idade": 27
+        },
+        {
+          "nome": "Matheus Albino",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Fábio Henrique",
+          "posicao": "G",
+          "idade": 24
+        },
+        {
+          "nome": "Fábio Alemão",
+          "posicao": "Z",
+          "idade": 30
+        },
+        {
+          "nome": "Bressan",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Henri",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Lyncon",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Léo Campos",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Hereda",
+          "posicao": "L",
+          "idade": 28
+        },
+        {
+          "nome": "Reverson",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Kevin",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Lucas Lovat",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Pedro Castro",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Danielzinho",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Crystopher",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Luizão",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Geovane",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Patrick de Lucca",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Estevão",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Douglas Baggio",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Mikael",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Luiz Phellype",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Thiaguinho",
+          "posicao": "A",
+          "idade": 25
+        },
+        {
+          "nome": "Dadá Belmonte",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "João Neto",
+          "posicao": "A",
+          "idade": 23
+        }
+      ]
+    },
+    {
+      "nome": "Operário Ferroviário Esporte Clube",
+      "sigla": "OPE",
+      "cidade": "Ponta Grossa",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Elias Curzel",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Vagner",
+          "posicao": "G",
+          "idade": 40
+        },
+        {
+          "nome": "Talles",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Joseph",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "William Klaus",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Miranda",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "José Cuenú",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Moraes Júnior",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Mikael Doka",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Maguinho",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Gabriel Feliciano",
+          "posicao": "L",
+          "idade": 25
+        },
+        {
+          "nome": "Índio",
+          "posicao": "M"
+        },
+        {
+          "nome": "Juan Zuluaga",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Gabriel Boschilia",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Vinícius Diniz",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Neto Paraíba",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Matheus Trindade",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Charles Raphael",
+          "posicao": "M"
+        },
+        {
+          "nome": "Ángel Torres",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Aylon",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Vinícius Mingotti",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Berto",
+          "posicao": "A",
+          "idade": 30
+        },
+        {
+          "nome": "Maxwell",
+          "posicao": "A",
+          "idade": 31
+        },
+        {
+          "nome": "Pablo",
+          "posicao": "A",
+          "idade": 34
+        }
+      ]
+    },
+    {
+      "nome": "Associação Atlética Ponte Preta",
+      "sigla": "PON",
+      "cidade": "Campinas",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Guilherme Viana",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Vinicius Ferrari",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Lucas Cunha",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Diego Porfírio",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Gabriel Caran",
+          "posicao": "Z",
+          "idade": 28
+        },
+        {
+          "nome": "Jonathan",
+          "posicao": "Z",
+          "idade": 24
+        },
+        {
+          "nome": "Sergio Palacios",
+          "posicao": "Z",
+          "idade": 21
+        },
+        {
+          "nome": "Danilo Barcelos",
+          "posicao": "L",
+          "idade": 35
+        },
+        {
+          "nome": "Kevyson",
+          "posicao": "L",
+          "idade": 22
+        },
+        {
+          "nome": "Lucas Justen",
+          "posicao": "L"
+        },
+        {
+          "nome": "Rodrigo Souza",
+          "posicao": "M",
+          "idade": 39
+        },
+        {
+          "nome": "Élvis",
+          "posicao": "M",
+          "idade": 36
+        },
+        {
+          "nome": "André Lima",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Karl",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Murilo Cavalcante",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Miguel Morais",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Gustavo Telles",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Jonathan Cafú",
+          "posicao": "A",
+          "idade": 35
+        },
+        {
+          "nome": "David da Hora",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Vitor Ribeiro",
+          "posicao": "A",
+          "idade": 27
+        },
+        {
+          "nome": "Brandão",
+          "posicao": "A",
+          "idade": 22
+        }
+      ]
+    },
+    {
+      "nome": "Londrina Esporte Clube",
+      "sigla": "LEC",
+      "cidade": "Londrina",
+      "cores": ["#1e90d6", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Luan Ribeiro",
+          "posicao": "G",
+          "idade": 29
+        },
+        {
+          "nome": "Maurício Kozlinski",
+          "posicao": "G",
+          "idade": 35
+        },
+        {
+          "nome": "Zanella",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Wallace",
+          "posicao": "Z",
+          "idade": 39
+        },
+        {
+          "nome": "Gabriel Lacerda",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Artur",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Rafael Monteiro",
+          "posicao": "Z",
+          "idade": 22
+        },
+        {
+          "nome": "André Dhominique",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Kevyn",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Nino Paraíba",
+          "posicao": "L",
+          "idade": 40
+        },
+        {
+          "nome": "Heron",
+          "posicao": "L",
+          "idade": 26
+        },
+        {
+          "nome": "Weverton",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Tárik",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Lucas Marques",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Victor Feitosa",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Guilherme Dantas",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "João Vitor",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Thalis",
+          "posicao": "M",
+          "idade": 30
+        },
+        {
+          "nome": "Geovane Meurer",
+          "posicao": "M",
+          "idade": 24
+        },
+        {
+          "nome": "Pablo Dyego",
+          "posicao": "A",
+          "idade": 32
+        },
+        {
+          "nome": "William Pottker",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Gilberto",
+          "posicao": "A",
+          "idade": 37
+        },
+        {
+          "nome": "Igor Bahia",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Paulinho Moccelin",
+          "posicao": "A"
+        },
+        {
+          "nome": "Herbert",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Clube Náutico Capibaribe",
+      "sigla": "NAU",
+      "cidade": "Recife",
+      "cores": ["#d50000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Muriel",
+          "posicao": "G",
+          "idade": 39
+        },
+        {
+          "nome": "Gastón Guruceaga",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Betão",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Igor Fernandes",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Mateus Silva",
+          "posicao": "Z",
+          "idade": 31
+        },
+        {
+          "nome": "Luiz Paulo",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Wanderson",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Arnaldo",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Matheus Ribeiro",
+          "posicao": "L",
+          "idade": 33
+        },
+        {
+          "nome": "Auremir",
+          "posicao": "M",
+          "idade": 35
+        },
+        {
+          "nome": "Wenderson",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Jean Carlos",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Patricio Núñez",
+          "posicao": "M",
+          "idade": 27
+        },
+        {
+          "nome": "Felipe Redaelli",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Luiz Felipe",
+          "posicao": "M",
+          "idade": 28
+        },
+        {
+          "nome": "Léo Oliveira",
+          "posicao": "M"
+        },
+        {
+          "nome": "Paulo Sérgio",
+          "posicao": "A"
+        },
+        {
+          "nome": "Vinícius",
+          "posicao": "A"
+        },
+        {
+          "nome": "Victor Andrade",
+          "posicao": "A"
+        },
+        {
+          "nome": "Benjamín Borasi",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Júnior Todinho",
+          "posicao": "A",
+          "idade": 33
+        },
+        {
+          "nome": "Derek",
+          "posicao": "A",
+          "idade": 29
+        }
+      ]
+    },
+    {
+      "nome": "Botafogo Futebol Clube (SP)",
+      "sigla": "BSP",
+      "cidade": "Ribeirão Preto",
+      "cores": ["#e30613", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Victor Souza",
+          "posicao": "G"
+        },
+        {
+          "nome": "Jordan",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Brenno",
+          "posicao": "G",
+          "idade": 23
+        },
+        {
+          "nome": "Ericson",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Vilar",
+          "posicao": "Z",
+          "idade": 26
+        },
+        {
+          "nome": "Carlão",
+          "posicao": "Z",
+          "idade": 25
+        },
+        {
+          "nome": "Guilherme Mariano",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Felipe Vieira",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Jonathan Lemos",
+          "posicao": "L",
+          "idade": 34
+        },
+        {
+          "nome": "Patrick Brey",
+          "posicao": "L",
+          "idade": 29
+        },
+        {
+          "nome": "Gabriel Inocêncio",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Leandro Maciel",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Matheus Sales",
+          "posicao": "M",
+          "idade": 31
+        },
+        {
+          "nome": "Everton Morelli",
+          "posicao": "M",
+          "idade": 29
+        },
+        {
+          "nome": "Rafael Gava",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Wallace",
+          "posicao": "M",
+          "idade": 32
+        },
+        {
+          "nome": "Antônio",
+          "posicao": "M"
+        },
+        {
+          "nome": "Henrique",
+          "posicao": "M"
+        },
+        {
+          "nome": "Kelvin",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Hygor",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Nem",
+          "posicao": "A"
+        },
+        {
+          "nome": "Guilherme Queiróz",
+          "posicao": "A",
+          "idade": 36
+        },
+        {
+          "nome": "Arthur Caíke",
+          "posicao": "A",
+          "idade": 34
+        },
+        {
+          "nome": "Zé Hugo",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    },
+    {
+      "nome": "Athletic Club",
+      "sigla": "ATH",
+      "cidade": "São João del-Rei",
+      "cores": ["#000000", "#ffffff"],
+      "jogadores": [
+        {
+          "nome": "Luan Polli",
+          "posicao": "G",
+          "idade": 33
+        },
+        {
+          "nome": "Glauco",
+          "posicao": "G",
+          "idade": 31
+        },
+        {
+          "nome": "Eduardo Freire",
+          "posicao": "G",
+          "idade": 22
+        },
+        {
+          "nome": "Sidimar",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Philipe Sampaio",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Jhonatan",
+          "posicao": "Z",
+          "idade": 27
+        },
+        {
+          "nome": "Lucas Belezi",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Diogo Batista",
+          "posicao": "Z",
+          "idade": 23
+        },
+        {
+          "nome": "Douglas",
+          "posicao": "L",
+          "idade": 27
+        },
+        {
+          "nome": "Zeca",
+          "posicao": "L",
+          "idade": 32
+        },
+        {
+          "nome": "Fabrício Isidoro",
+          "posicao": "M",
+          "idade": 34
+        },
+        {
+          "nome": "Gustavinho",
+          "posicao": "M",
+          "idade": 25
+        },
+        {
+          "nome": "Gian Cabezas",
+          "posicao": "M",
+          "idade": 21
+        },
+        {
+          "nome": "Yago Santos",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Ian Luccas",
+          "posicao": "M",
+          "idade": 23
+        },
+        {
+          "nome": "Felipe Negrucci",
+          "posicao": "M",
+          "idade": 22
+        },
+        {
+          "nome": "Jota",
+          "posicao": "M",
+          "idade": 22
+        },
+        {
+          "nome": "Carlinhos",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Ronaldo Tavares",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Wilinton Aponzá",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Yarlen",
+          "posicao": "A",
+          "idade": 20
+        },
+        {
+          "nome": "Otusanya",
+          "posicao": "A",
+          "idade": 22
+        },
+        {
+          "nome": "Ruan Assis",
+          "posicao": "A",
+          "idade": 22
+        }
+      ]
+    },
+    {
+      "nome": "São Bernardo Futebol Clube",
+      "sigla": "SBE",
+      "cidade": "São Bernardo do Campo",
+      "cores": ["#ffd200", "#000000"],
+      "jogadores": [
+        {
+          "nome": "Alex Alves",
+          "posicao": "G",
+          "idade": 40
+        },
+        {
+          "nome": "Júnior Oliveira",
+          "posicao": "G",
+          "idade": 36
+        },
+        {
+          "nome": "Leo Lang",
+          "posicao": "G",
+          "idade": 28
+        },
+        {
+          "nome": "Matheus Salustiano",
+          "posicao": "Z",
+          "idade": 33
+        },
+        {
+          "nome": "Hélder",
+          "posicao": "Z",
+          "idade": 36
+        },
+        {
+          "nome": "Jemerson",
+          "posicao": "Z",
+          "idade": 34
+        },
+        {
+          "nome": "Augusto",
+          "posicao": "Z",
+          "idade": 29
+        },
+        {
+          "nome": "Mário Sérgio",
+          "posicao": "Z",
+          "idade": 32
+        },
+        {
+          "nome": "Pará",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Rodrigo Ferreira",
+          "posicao": "L",
+          "idade": 31
+        },
+        {
+          "nome": "Sanches",
+          "posicao": "L"
+        },
+        {
+          "nome": "Foguinho",
+          "posicao": "M"
+        },
+        {
+          "nome": "Lucas Lima",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Dudu Miraíma",
+          "posicao": "M",
+          "idade": 26
+        },
+        {
+          "nome": "Hyoran",
+          "posicao": "M",
+          "idade": 33
+        },
+        {
+          "nome": "Marcão",
+          "posicao": "M"
+        },
+        {
+          "nome": "Romisson",
+          "posicao": "M"
+        },
+        {
+          "nome": "Lucas Fernandes",
+          "posicao": "M"
+        },
+        {
+          "nome": "Felipe Garcia",
+          "posicao": "A",
+          "idade": 36
+        },
+        {
+          "nome": "Fabrício Daniel",
+          "posicao": "A",
+          "idade": 29
+        },
+        {
+          "nome": "Pedro Vitor",
+          "posicao": "A",
+          "idade": 28
+        },
+        {
+          "nome": "Lucas Rian",
+          "posicao": "A",
+          "idade": 26
+        },
+        {
+          "nome": "Echaporã",
+          "posicao": "A"
+        },
+        {
+          "nome": "Pedrinho",
+          "posicao": "A",
+          "idade": 27
+        }
+      ]
+    }
+  ]
+}
