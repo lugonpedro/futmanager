@@ -8,19 +8,19 @@ Continuação de [02-plano-pos-mvp.md](02-plano-pos-mvp.md). As fases 8 a 12 est
 | ----- | -------------------------------------------------------- | ------------ | -------------- |
 | M1    | Notificações (toasts) e confirmação antes de simular     | Pequeno      | Não            |
 | M2    | Tela inicial explicando o que fica só no aparelho        | Pequeno      | Não            |
-| M3    | Seleção da rodada em lista                               | Pequeno      | Não            |
+| M3    | Seleção da rodada em lista                               | Pequeno      | Sim (versão 7) |
 | M4    | Time: mais formações e elenco mais largo                 | Médio        | Não            |
 | M5    | Clube: Diretoria, Finanças e Estádio numa página só      | Pequeno      | Não            |
 | M6    | Partida (ver [04-partida.md](04-partida.md))             | Grande       | Não            |
-| M7    | Patrocínios com contratos                                | Médio        | Sim (versão 7) |
-| M8    | Evolução dos jogadores: treino e chance real para a base | Médio/grande | Sim (versão 7) |
+| M7    | Patrocínios com contratos                                | Médio        | Sim (versão 8) |
+| M8    | Evolução dos jogadores: treino e chance real para a base | Médio/grande | Sim (versão 8) |
 | M9    | Pacote de teste com o Brasileirão 2026                   | Médio        | Talvez         |
 
 Por que essa ordem:
 
 - **M1 primeiro** porque as outras etapas usam o mesmo componente de notificação e de confirmação.
 - **M2 a M5 são só interface**: dá para fazer um PR por etapa, ou juntar as pequenas.
-- **M7 e M8 mudam o `GameState`**. Se forem no mesmo PR, sobem o save uma vez só, para a versão 7. Se forem separados, a segunda sobe para a 8.
+- **M7 e M8 mudam o `GameState`**. Se forem no mesmo PR, sobem o save uma vez só, para a versão 8. Se forem separados, a segunda sobe para a 9.
 - **M9 por último**, depois de todas as outras, como decidido no plano pós-MVP.
 - Tudo isso vem antes da fase 13 porque a liga reaproveita as mesmas telas: o que melhorar aqui já nasce melhor no online.
 
@@ -88,9 +88,10 @@ Hoje o menu tem o botão "Jogar em vários aparelhos", mas quem não abre a pág
 
 Hoje a Visão geral mostra as cartas especiais dos onze melhores da rodada.
 
-- Passa a ser uma lista: posição, nome, clube e nota da rodada.
-- Clicar no nome abre a carta do jogador e a ficha (`PlayerSheet`), com o que o levou à seleção: nota, gols, assistências e defesas.
-- Um ponto para você decidir: a carta especial **não** muda atributos hoje, só a cor. Os atributos só mudam uma vez por ano, na virada da temporada. Então ainda não há "atributos que melhoraram" para mostrar. Se a M8 fizer a evolução acontecer ao longo da temporada (ver abaixo), a ficha passa a mostrar o que subiu no último mês, com setinhas verdes.
+- Passa a ser uma lista: posição, nome, clube, gols ou defesas e a nota da rodada.
+- Clicar no nome abre a ficha do jogador (`PlayerSheet`), com a carta e o que o levou à seleção: nota, gols e, para o goleiro, defesas. O motor não registra assistências, então elas ficam de fora.
+- A seleção passa a guardar a nota, os gols e as defesas de cada um, porque a nota do jogador pode mudar com um jogo da copa no meio da semana. `SAVE_VERSION` sobe para 7; os saves antigos perdem a seleção da última rodada, e a próxima rodada monta uma nova.
+- A carta especial **não** muda atributos, só a cor. Os atributos só mudam uma vez por ano, na virada da temporada, então ainda não há "atributos que melhoraram" para mostrar. Se a M8 fizer a evolução acontecer ao longo da temporada, a ficha passa a mostrar o que subiu no último mês, com setinhas verdes.
 
 ---
 
@@ -153,7 +154,7 @@ O patrocínio é um valor fixo por mês, calculado pela reputação e pela divis
 
 ### Save
 
-O `GameState` passa a guardar os contratos do usuário e as propostas abertas: `SAVE_VERSION` sobe para 7. Os saves antigos ganham um contrato master equivalente ao valor fixo de hoje, até o fim da temporada.
+O `GameState` passa a guardar os contratos do usuário e as propostas abertas: `SAVE_VERSION` sobe para 8. Os saves antigos ganham um contrato master equivalente ao valor fixo de hoje, até o fim da temporada.
 
 ---
 
@@ -179,7 +180,7 @@ Com treino, minutos e empréstimo, um 25/60 bem cuidado chega perto de 60 aos 21
 
 ### Save
 
-Foco de treino, empréstimos e o histórico mensal entram no `GameState`: `SAVE_VERSION` sobe (para 7, se for junto com a M7). Os saves antigos começam com foco equilibrado e sem empréstimos.
+Foco de treino, empréstimos e o histórico mensal entram no `GameState`: `SAVE_VERSION` sobe (para 8, se for junto com a M7). Os saves antigos começam com foco equilibrado e sem empréstimos.
 
 ### Balanceamento
 

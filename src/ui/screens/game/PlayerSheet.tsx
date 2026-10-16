@@ -38,6 +38,7 @@ import {
   isHomegrown,
   POSITION_NAMES,
   ROLE_NAMES,
+  roundStarFeats,
   type Role,
 } from '../../format.ts'
 
@@ -71,6 +72,7 @@ export function PlayerSheet(props: {
   const form = formOf(season, player.id)
   const condition = conditionOn(season, player, game.today)
   const club = world.clubs[player.clubId]
+  const star = season.roundStars.find((s) => s.playerId === player.id)
 
   return (
     <Sheet open onOpenChange={(open) => !open && props.onClose()}>
@@ -95,6 +97,11 @@ export function PlayerSheet(props: {
         <div className="flex justify-center px-4 pb-2">
           <PlayerCard player={player} game={game} />
         </div>
+        {star && (
+          <p className="px-4 pb-2 text-center text-sm">
+            Na seleção da rodada {season.round - 1}: {roundStarFeats(star)}.
+          </p>
+        )}
 
         <dl className="grid grid-cols-2 gap-x-4 gap-y-3 px-4 py-2 text-sm sm:grid-cols-3">
           <Item label="Geral">{player.overall}</Item>

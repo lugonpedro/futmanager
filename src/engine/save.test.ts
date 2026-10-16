@@ -35,6 +35,17 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('drops the old best XI of a version 6 save, which had no ratings', () => {
+    const upgraded = upgradeOld({
+      ...fresh,
+      version: 6,
+      season: { ...fresh.season, roundStars: ['a', 'b'] },
+    })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.season.roundStars).toEqual([])
+    expect(upgraded.world).toBe(fresh.world)
+  })
+
   it('marks the names of a version 5 save as generated', () => {
     const { names: _, ...v5 } = fresh
     const upgraded = upgradeOld({ ...v5, version: 5 })

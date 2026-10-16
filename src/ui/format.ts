@@ -7,6 +7,7 @@ import type {
   PlayStyle,
   Position,
   Posture,
+  RoundStar,
 } from '../engine/model/types.ts'
 import type { AnyFace } from '../engine/player/attributes.ts'
 import { formatDate } from '../engine/season/calendar.ts'
@@ -118,12 +119,20 @@ export const CARD_TIER_NAMES: Record<CardTier, string> = {
 export const CARD_CUTS = { prata: 50, ouro: 70 }
 
 /** Player of the season in any division last season. */
+/** What put a player in the round's best XI: "nota 8.7, 2 gols", or just "2 gols". */
+export function roundStarFeats(star: RoundStar, withRating = true): string {
+  const feats = withRating ? [`nota ${star.rating.toFixed(1)}`] : []
+  if (star.goals > 0) feats.push(`${star.goals} ${star.goals === 1 ? 'gol' : 'gols'}`)
+  if (star.saves > 0) feats.push(`${star.saves} ${star.saves === 1 ? 'defesa' : 'defesas'}`)
+  return feats.join(', ')
+}
+
 export const isSeasonStar = (game: GameState, playerId: string) =>
   game.history.at(-1)?.leagues.some((l) => l.bestPlayer?.playerId === playerId) ?? false
 
 export function cardTier(player: Player, game?: GameState): CardTier {
   if (game && isSeasonStar(game, player.id)) return 'craque'
-  if (game?.season.roundStars.includes(player.id)) return 'rodada'
+  if (game?.season.roundStars.some((star) => star.playerId === player.id)) return 'rodada'
   return player.overall >= CARD_CUTS.ouro
     ? 'ouro'
     : player.overall >= CARD_CUTS.prata

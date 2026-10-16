@@ -239,8 +239,11 @@ export type Season = {
   /** Match ratings this season: how many, their sum and the latest five, newest last. */
   ratings: Record<string, SeasonRatings>
   /** Best XI of the last league round, every division together. */
-  roundStars: string[]
+  roundStars: RoundStar[]
 }
+
+/** One of the round's best XI, with what put him there. */
+export type RoundStar = { playerId: string; rating: number; goals: number; saves: number }
 
 export type Fitness = { energy: number; date: GameDate }
 
