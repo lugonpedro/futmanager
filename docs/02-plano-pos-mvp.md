@@ -326,14 +326,19 @@ Partida em tempo real com todos assistindo juntos, chat ao vivo, ligas públicas
 - **Seleções** e convite para treinar a seleção.
 - **Steam (Tauri) e lojas de celular (Capacitor)**.
 
-## Pontos que precisam da sua decisão
+## Decisões
 
-Já segui um padrão em cada um, mas vale você confirmar:
+Confirmadas em outubro de 2026:
 
-1. **Times reais**: seguir com o editor e os pacotes feitos pelo usuário (recomendado) ou arriscar nomes reais embutidos.
-2. **Posições**: manter G/Z/L/M/A com posições secundárias (recomendado) ou já dividir em VOL, MC, MEI, PE, PD e CA.
-3. **Ligas**: assíncronas com prazo diário (recomendado) ou rodadas só quando todos marcarem "pronto".
-4. **Começo da temporada**: abril a dezembro, como o Brasileirão (recomendado), ou janeiro a dezembro.
+1. **Times reais**: nomes reais embutidos no jogo (a opção A da fase 11), como fazem outros jogos brasileiros do gênero (7a0, 38zero). O risco jurídico descrito na fase 11 continua valendo e fica maior com a versão paga. Por isso:
+   - os nomes ficam num pacote de dados separado do motor (um arquivo por temporada), para trocar, atualizar ou tirar um clube ou jogador sem mexer no resto;
+   - sem escudos, fotos nem uniformes oficiais: escudo continua o genérico, com cores e sigla;
+   - a página "Aviso legal" ganha um canal de remoção, e um pedido de clube ou atleta é atendido tirando o nome do pacote;
+   - o mundo gerado continua existindo como opção no "Novo jogo";
+   - continua valendo conversar com um advogado antes de cobrar por mais espaços na nuvem.
+2. **Posições**: manter G/Z/L/M/A com posições secundárias.
+3. **Ligas**: assíncronas, com prazo diário.
+4. **Começo da temporada**: abril a dezembro, como o Brasileirão.
 
 ## Riscos
 

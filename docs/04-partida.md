@@ -73,7 +73,9 @@ Hoje o menu "Seu time" permite trocar formação, postura e fazer substituiçõe
 - No motor, a troca conta quando muda a posição do jogador (meia jogando de lateral rende menos, como já acontece na escalação). Trocar dois atacantes entre si só muda o lado em que cada um aparece, porque as posições hoje não distinguem direita e esquerda.
 - O mesmo gesto também passa a funcionar na página Time, antes do jogo.
 
-## Pontos para você decidir
+## Decisões
 
-1. **Outros jogos**: sumir de vez (recomendado) ou ficar escondidos num botão "Outros placares"?
-2. **Notas ao vivo**: mostrar para os dois times (recomendado) ou só para o seu?
+Confirmadas em outubro de 2026:
+
+1. **Outros jogos**: somem de vez da tela de partida.
+2. **Notas ao vivo**: aparecem para os dois times.

@@ -106,7 +106,7 @@ As posições hoje são G, Z, L, M e A. Uma formação é só quantos jogadores 
 | 4-1-4-1  | 1   | 2   | 2   | 5   | 1   |
 | 4-2-3-1  | 1   | 2   | 2   | 5   | 1   |
 
-O 4-1-4-1 e o 4-2-3-1 têm a mesma contagem do 4-5-1. Para eles serem diferentes de verdade, a formação passa a ter também **linhas** (volantes, meias e pontas em alturas diferentes). Isso muda o desenho no campo 2D e pode dar um pequeno peso diferente a defesa e ataque no motor. Dividir as posições (VOL, MC, MEI, PE, PD, CA) seria o caminho completo, mas é a mudança grande que o plano pós-MVP deixou de fora. A recomendação é ficar com as linhas.
+O 4-1-4-1 e o 4-2-3-1 têm a mesma contagem do 4-5-1. Para eles serem diferentes de verdade, a formação passa a ter também **linhas** (volantes, meias e pontas em alturas diferentes). Isso muda o desenho no campo 2D e pode dar um pequeno peso diferente a defesa e ataque no motor. Dividir as posições (VOL, MC, MEI, PE, PD, CA) seria o caminho completo, mas é a mudança grande que o plano pós-MVP deixou de fora. Decidido: entram as linhas.
 
 ### Elenco mais largo
 
@@ -138,9 +138,9 @@ O patrocínio é um valor fixo por mês, calculado pela reputação e pela divis
 
 ### Proposta
 
-- **Contratos com empresas fictícias**, como os nomes dos clubes: "Banco Horizonte", "Laticínios Serra Azul". Nada de marcas reais.
-- Três espaços: **master** (camisa), **material esportivo** e **naming rights do estádio** (este só para clubes da Série A com estádio grande).
-- No começo de cada temporada chegam 2 ou 3 propostas por espaço. Cada uma tem:
+- **Contratos com empresas fictícias**: "Banco Horizonte", "Laticínios Serra Azul". Mesmo com os clubes reais do plano pós-MVP, nada de marcas reais de patrocinadores.
+- Primeiro só o **master** (camisa). Depois podem entrar **material esportivo** e **naming rights do estádio** (este só para clubes da Série A com estádio grande), com as mesmas regras.
+- No começo de cada temporada chegam 2 ou 3 propostas de master. Cada uma tem:
   - valor fixo por mês;
   - bônus por meta (título, acesso, ficar no G-4, chegar à final da copa);
   - duração de 1 a 3 temporadas.
@@ -185,9 +185,11 @@ A evolução mensal muda o ritmo do mundo inteiro, inclusive dos clubes da IA. `
 
 ---
 
-## Pontos para você decidir
+## Decisões
 
-1. **Formações**: só as novas contagens (3-4-3, 4-2-4, 5-4-1) ou também as com linhas (4-2-3-1, 4-1-4-1)? Recomendado: as duas.
-2. **Simular até o fim**: deixar as propostas expirarem no caminho (recomendado) ou parar a simulação na primeira proposta?
-3. **Patrocínio**: começar só com o master (mais simples) ou já com os três espaços?
-4. **Treino**: foco do elenco mais foco individual (recomendado) ou só o do elenco?
+Confirmadas em outubro de 2026:
+
+1. **Formações**: as novas contagens (3-4-3, 4-2-4, 5-4-1) e também as com linhas (4-2-3-1, 4-1-4-1).
+2. **Simular até o fim**: as propostas expiram no caminho, sem parar a simulação.
+3. **Patrocínio**: começar só com o master. Os outros espaços ficam para depois.
+4. **Treino**: foco do elenco mais foco individual.
