@@ -446,7 +446,7 @@ export function TeamScreen() {
                         >
                           <span className="font-bold">{p.overall}</span>
                           <span className="text-xs text-muted-foreground">
-                            /{potentialText(p.potentialRange)}
+                            /{p.potentialRange.high}
                           </span>
                         </TableCell>
                         <TableCell className="hidden whitespace-nowrap sm:table-cell">
@@ -711,10 +711,6 @@ function SquadRow(props: {
     </TableRow>
   )
 }
-
-/** The potential next to the overall: "78", or "74-80" while it is still uncertain. */
-const potentialText = (range: { low: number; high: number }) =>
-  range.low === range.high ? String(range.low) : `${range.low}-${range.high}`
 
 /** An icon button in a squad row, kept from picking or dragging the row. */
 function RowAction(props: {
