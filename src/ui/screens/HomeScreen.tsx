@@ -1,10 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import {
   CloudCheckIcon,
-  CloudIcon,
   CloudUploadIcon,
+  HardDriveIcon,
   PencilIcon,
   PlayIcon,
+  PlusIcon,
   Trash2Icon,
   UserIcon,
 } from 'lucide-react'
@@ -26,7 +27,7 @@ export function HomeScreen() {
   const saves = useLiveQuery(listSaves)
   const { openSave, closeGame, slotId } = useGameStore()
   const navigate = useNavigate()
-  const { user, cloud, cloudSlots, status } = useAccountStore()
+  const { ready, user, cloud, cloudSlots, status } = useAccountStore()
   const synced = useLiveQuery(() => db.synced.toArray())
   const inCloud = (save: SaveInfo) =>
     synced?.some((base) => base.id === save.id && base.userId === user?.id && !base.deleted)
@@ -34,6 +35,8 @@ export function HomeScreen() {
   useEffect(() => {
     void syncNow()
   }, [user?.id])
+
+  const latest = saves?.[0]
 
   const open = async (id: string) => {
     if (await openSave(id)) navigate('/jogo')
@@ -80,6 +83,28 @@ export function HomeScreen() {
             <h1 className="text-4xl font-bold">futmanager</h1>
             <p className="text-muted-foreground">Gerencie seu time rumo à primeira divisão.</p>
           </div>
+
+          {latest && (
+            <Button
+              size="lg"
+              className="h-auto flex-col gap-0 py-2"
+              onClick={() => open(latest.id)}
+            >
+              <span className="flex items-center gap-2">
+                <PlayIcon />
+                Continuar com {latest.clubName}
+              </span>
+              <span className="text-xs font-normal opacity-80">{slotProgress(latest)}</span>
+            </Button>
+          )}
+
+          <StorageNote
+            cloud={cloudEnabled}
+            ready={ready}
+            signedIn={Boolean(user)}
+            inCloud={cloud.length}
+            cloudSlots={cloudSlots}
+          />
 
           {saves && saves.length > 0 && (
             <section className="flex flex-col gap-2">
@@ -140,17 +165,12 @@ export function HomeScreen() {
             </section>
           )}
 
-          <Button asChild size="lg">
-            <Link to="/novo">Novo jogo</Link>
+          <Button asChild size={latest ? 'default' : 'lg'} variant={latest ? 'outline' : 'default'}>
+            <Link to="/novo">
+              <PlusIcon />
+              Novo jogo
+            </Link>
           </Button>
-          {cloudEnabled && (
-            <Button asChild variant="outline">
-              <Link to="/nuvem">
-                <CloudIcon />
-                Jogar em vários aparelhos
-              </Link>
-            </Button>
-          )}
           <Button asChild variant="outline">
             <Link to="/editor">
               <PencilIcon />
@@ -169,6 +189,57 @@ export function HomeScreen() {
       </Card>
       <ConflictDialog />
     </main>
+  )
+}
+
+/**
+ * Where the careers are kept: only in this browser until the player signs in,
+ * then the count in the cloud. Without a cloud set up, just the first part.
+ */
+function StorageNote(props: {
+  cloud: boolean
+  ready: boolean
+  signedIn: boolean
+  inCloud: number
+  cloudSlots: number
+}) {
+  if (props.cloud && !props.ready) return null
+  if (props.signedIn) {
+    return (
+      <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
+        <CloudCheckIcon className="size-3.5" />
+        {props.inCloud} de {props.cloudSlots} {props.cloudSlots === 1 ? 'carreira' : 'carreiras'} na
+        nuvem.
+        <Link to="/nuvem" className="underline underline-offset-2">
+          Como funciona
+        </Link>
+      </p>
+    )
+  }
+  return (
+    <div className="flex gap-3 rounded-md border bg-muted/50 p-3 text-sm">
+      <HardDriveIcon className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
+      <div className="flex flex-col gap-2">
+        <p>
+          Suas carreiras ficam salvas só neste navegador.
+          {props.cloud &&
+            ' Para continuar em outro aparelho, ou não perder nada se limpar o navegador, entre na sua conta.'}
+        </p>
+        {props.cloud && (
+          <div className="flex flex-wrap items-center gap-3">
+            <Button asChild size="sm">
+              <Link to="/conta">
+                <UserIcon />
+                Entrar
+              </Link>
+            </Button>
+            <Link to="/nuvem" className="text-xs underline underline-offset-2">
+              Como funciona
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 
