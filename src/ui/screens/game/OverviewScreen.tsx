@@ -108,6 +108,27 @@ function competitionOf(game: GameState, fixture: Fixture): string {
   return `${divisionName(game.world.clubs[game.userClubId].division)}, ${fixture.round}ª rodada`
 }
 
+/**
+ * Where each club of a fixture sits in its league table, "3º"; with "A" or
+ * "B" after it when the two play in different divisions. Empty before anyone
+ * has played, when every club is level.
+ */
+function tablePlaces(game: GameState, fixture: Fixture): Record<string, string> {
+  const { world } = game
+  const ids = [fixture.homeId, fixture.awayId]
+  const divisions = new Set(ids.map((id) => world.clubs[id].division))
+  const places: Record<string, string> = {}
+  for (const id of ids) {
+    const table = leagueStandings(game, leagueOf(world, id))
+    const index = table.findIndex((row) => row.clubId === id)
+    if (index < 0 || table[index].played === 0) continue
+    const division = world.clubs[id].division
+    places[id] =
+      `${index + 1}º${divisions.size > 1 ? ` ${String.fromCharCode(64 + division)}` : ''}`
+  }
+  return places
+}
+
 function NextRound({ game }: { game: GameState }) {
   const setGame = useGameStore((s) => s.setGame)
   const navigate = useNavigate()
@@ -176,7 +197,12 @@ function NextRound({ game }: { game: GameState }) {
               {!matchDay && ` (em ${daysBetween(game.today, fixture.date)} dias)`}
             </p>
             <div className="text-lg">
-              <FixtureLine fixture={fixture} world={world} userClubId={userClubId} />
+              <FixtureLine
+                fixture={fixture}
+                world={world}
+                userClubId={userClubId}
+                places={tablePlaces(game, fixture)}
+              />
             </div>
           </>
         )}

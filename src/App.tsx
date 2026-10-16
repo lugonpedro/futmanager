@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router'
 import { Toaster } from '@/components/ui/sonner'
 import { useApplyTheme } from './store/theme.ts'
 import { ConfirmHost } from './ui/components/ConfirmHost.tsx'
+import { MAX_TOASTS } from './ui/news.ts'
 import { CUP_SLUG } from './ui/routes.ts'
 import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { CloudScreen } from './ui/screens/CloudScreen.tsx'
@@ -68,7 +69,7 @@ export default function App() {
         </Route>
         <Route path="/jogo/partida" element={<LiveMatchScreen />} />
       </Routes>
-      <Toaster position="top-center" closeButton expand />
+      <Toaster position="top-center" closeButton visibleToasts={MAX_TOASTS} />
       <ConfirmHost />
     </>
   )

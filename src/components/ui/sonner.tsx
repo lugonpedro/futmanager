@@ -12,7 +12,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
   const theme = useThemeStore((s) => s.theme)
   return (
     <Sonner
-      theme={theme === 'claro' ? 'light' : theme === 'escuro' ? 'dark' : 'system'}
+      theme={theme === 'claro' ? 'light' : 'dark'}
       className="toaster group"
       icons={{
         success: <CircleCheckIcon className="size-4" />,
