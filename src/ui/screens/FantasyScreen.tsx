@@ -23,6 +23,7 @@ import { FORMATIONS } from '../../engine/match/lineup.ts'
 import { POSITIONS, type Position } from '../../engine/model/types.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Choices } from '../components/Choices.tsx'
+import { FantasyLeagues } from '../components/FantasyLeagues.tsx'
 import { ClubMark, Note } from '../components/FantasyParts.tsx'
 import { FormationSelect } from '../components/FormationSelect.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
@@ -173,12 +174,16 @@ function Season(props: {
       {!props.signedIn && (
         <Card>
           <CardContent className="flex flex-wrap items-center justify-between gap-3 text-sm">
-            <span>Entre na sua conta para escalar o seu time.</span>
+            <span>Entre na sua conta para escalar o seu time e jogar em ligas com os amigos.</span>
             <Button asChild size="sm">
               <Link to="/conta">Entrar</Link>
             </Button>
           </CardContent>
         </Card>
+      )}
+
+      {props.signedIn && (
+        <FantasyLeagues seasonId={season.id} running={season.status === 'em_andamento'} />
       )}
 
       {props.signedIn && (

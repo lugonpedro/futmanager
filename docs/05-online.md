@@ -145,6 +145,16 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
 - **A semente não vaza o futuro**: a semente de uma partida entrega a semente do mundo naquele momento. Por isso o servidor dá ao mundo uma semente nova antes de cada rodada e de cada temporada (`playOfficialRound` e `nextOfficialSeason` recebem a semente). O que a repetição revela já foi jogado. Como isso muda os resultados, `FANTASY_VERSION` passou para 2.
 - **Ligar no projeto**: aplicar a migração nova (`supabase db push`) e publicar de novo a função (`supabase functions deploy fantasy-round`).
 
+## O5: ligas privadas
+
+- **Na tela da fantasia**, quem entrou na conta vê o card "Ligas": as ligas em que está, um campo para criar uma nova e outro para entrar com o código ou o link de um convite.
+- **Tela da liga** (`/fantasia/liga/N`): a classificação da temporada com a posição de cada um (empates dividem a posição), os pontos da última rodada e o total. Embaixo vem o convite, com o link para copiar. Quem criou a liga pode apagá-la; os outros podem sair.
+- **Convite** (`/fantasia/convite/CODIGO`): mostra o nome da liga, quem criou e quantas pessoas estão nela, com o botão "Entrar na liga". O código tem 8 letras e números, sem os que se confundem (0/O, 1/I).
+- **Regras no banco**: as tabelas `fantasy_leagues` e `fantasy_league_members` só se leem por quem está na liga. Criar, entrar e ver a classificação passam por funções do Postgres (`create_fantasy_league`, `join_fantasy_league`, `fantasy_league_invite`, `fantasy_league_standings`), que conferem a conta, o nome (de 3 a 40 letras), o limite de 10 ligas criadas por pessoa em cada temporada e o de 100 pessoas por liga. A classificação soma os pontos guardados em `fantasy_lineups`, que continuam visíveis só para o dono do time.
+- **Uma liga por temporada**: a liga pertence à temporada em que foi criada, o que combina com o passe por temporada de O6. Renovar a liga na temporada seguinte com as mesmas pessoas fica para depois.
+- **Até O6**, criar liga é livre para quem tem conta.
+- **Ligar no projeto**: `supabase db push`. Não há função nova para publicar.
+
 ## Pagamento
 
 Princípio: **pagar nunca dá vantagem em pontos**.
