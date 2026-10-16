@@ -5,7 +5,8 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
 import { cn } from '@/lib/utils'
-import { attendance, fairTicketPrice, monthlySponsorship } from '../../../engine/finance/economy.ts'
+import { attendance, fairTicketPrice } from '../../../engine/finance/economy.ts'
+import { userSponsorPayment } from '../../../engine/finance/sponsors.ts'
 import {
   averageGate,
   ledgerTotals,
@@ -47,7 +48,7 @@ export function FinancePanel() {
         <Stat label="Caixa" value={club.cash} />
         <Stat label="Saldo da temporada" value={balance} />
         <Stat label="Salários por mês" value={-wageBill(world, club)} />
-        <Stat label="Patrocínio por mês" value={monthlySponsorship(club)} />
+        <Stat label="Patrocínio por mês" value={userSponsorPayment(game).amount} />
       </div>
 
       <Card className="gap-3">

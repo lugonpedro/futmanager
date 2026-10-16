@@ -12,6 +12,12 @@ import {
   payday,
   type Payments,
 } from '../finance/finance.ts'
+import {
+  closeSponsorSeason,
+  settleSponsorship,
+  sponsorOffers,
+  type LastSeason,
+} from '../finance/sponsors.ts'
 import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
@@ -26,6 +32,7 @@ import type {
   MatchResult,
   Season,
   SeasonSummary,
+  Sponsorship,
   World,
 } from '../model/types.ts'
 import { createRng, mixSeed, type Rng } from '../rng.ts'
@@ -74,7 +81,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 7
+export const SAVE_VERSION = 8
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -116,18 +123,38 @@ export function newGame(seed: number, userClubId: string, pack?: DataPack): Game
   const generated = generateWorld(seed)
   const world = pack ? applyPack(generated, pack).world : generated
   if (!world.clubs[userClubId]) throw new Error(`Unknown club ${userClubId}`)
+  const season = startSeason(world)
+  const career = newCareer(world, userClubId)
   return {
     version: SAVE_VERSION,
     today: seasonStart(world.season),
     world,
     userClubId,
-    season: startSeason(world),
+    season,
     ledger: [],
     market: { listed: {}, offers: [], news: [] },
-    career: newCareer(world, userClubId),
+    sponsorship: openSponsorship(world, userClubId, career.target, season),
+    career,
     history: [],
     names: pack ? { pack: pack.name } : {},
   }
+}
+
+/**
+ * Shirt offers for the user's club at the start of a season, open until the
+ * first league round; after that the board signs the safest one.
+ */
+export function openSponsorship(
+  world: World,
+  clubId: string,
+  target: number,
+  season: Season,
+  last?: LastSeason,
+): Sponsorship {
+  const rng = createRng(mixSeed(world.seed, season.year, clubId, 'patrocinio'))
+  const offers = sponsorOffers(world.clubs[clubId], target, season.year, rng, last)
+  const deadline = roundDate(season, 1)
+  return { offers, ...(deadline && { deadline }) }
 }
 
 /** The league a club plays in this season. */
@@ -284,7 +311,7 @@ export function passDays(
   let next = game
   for (const day of daysFrom(game.today, to)) {
     if (dateParts(day).day === 1) {
-      next = arrive(next, day)
+      next = settleSponsorship(arrive(next, day))
       next = applyPayments(next, payday(next, monthNote(day)))
     }
     const tomorrow = addDays(day, 1)
@@ -297,7 +324,7 @@ export function passDays(
       }
     }
   }
-  return { game: arrive(next, to), stopped: false }
+  return { game: settleSponsorship(arrive(next, to)), stopped: false }
 }
 
 /** Counts down every ban by one round, dropping the ones that are over. */
@@ -639,8 +666,26 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   // December goes by with its wages paid, then prizes, then contracts running out.
   const december = passDays(game, dateOf(game.season.year, 12, 31)).game
   const seed = (label: string) => createRng(mixSeed(game.world.seed, game.season.year, label))
+  // The shirt sponsor pays its bonus if the goal was met, and the deal goes on or ends.
+  const userOutcome = final.leagues.find((l) => l.table.includes(game.userClubId))!
+  const finalTie = game.season.cup?.stages.at(-1)?.ties[0]
+  const sponsor = closeSponsorSeason(
+    december.sponsorship,
+    {
+      division: userOutcome.division,
+      position: userOutcome.table.indexOf(game.userClubId) + 1,
+      promoted: userOutcome.promoted.includes(game.userClubId),
+      cupFinal: finalTie?.homeId === game.userClubId || finalTie?.awayId === game.userClubId,
+    },
+    december.today,
+    {
+      relegated: userOutcome.relegated.includes(game.userClubId),
+      moving,
+      nextYear,
+    },
+  )
   const settled = applyPayments(december, {
-    cash: {},
+    cash: sponsor.bonus ? { [game.userClubId]: sponsor.bonus.amount } : {},
     entries: [
       {
         date: december.today,
@@ -648,6 +693,7 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
         amount: prizes[game.userClubId] ?? 0,
         note: `Premiação da temporada ${game.season.year}`,
       },
+      ...(sponsor.bonus ? [sponsor.bonus] : []),
     ],
   })
   const aged = ageWorld(
@@ -710,11 +756,28 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
       ? game.career.history
       : [...game.career.history, careerSeason(game, review.position)]
   const career = newCareer(nextWorld, nextClubId, careerHistory)
+  const nextSeason = startSeason(nextWorld)
+  // A new club, or a deal that ran out, brings new shirt offers.
+  const last = final.leagues.find((l) => l.table.includes(nextClubId))
+  const sponsorship: Sponsorship = sponsor.master
+    ? { master: sponsor.master, offers: [] }
+    : openSponsorship(
+        nextWorld,
+        nextClubId,
+        career.target,
+        nextSeason,
+        last && {
+          champion: last.table[0] === nextClubId,
+          promoted: last.promoted.includes(nextClubId),
+          relegated: last.relegated.includes(nextClubId),
+        },
+      )
   return {
     ...paid,
     today: seasonStart(nextYear),
     world: nextWorld,
-    season: startSeason(nextWorld),
+    season: nextSeason,
+    sponsorship,
     ledger: [],
     history: [...game.history, summary],
     ...(moving && {

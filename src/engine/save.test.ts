@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { fairTicketPrice } from './finance/economy.ts'
+import { fairTicketPrice, monthlySponsorship } from './finance/economy.ts'
 import { wageFor } from './generate/player.ts'
 import { addDays } from './season/calendar.ts'
 import { newGame, playRound, roundDate, SAVE_VERSION } from './season/season.ts'
@@ -33,6 +33,18 @@ describe('upgradeGame', () => {
 
   it('leaves a current save alone', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
+  })
+
+  it('turns the fixed sponsorship of a version 7 save into a deal to the end of the season', () => {
+    const { sponsorship: _, ...v7 } = fresh
+    const upgraded = upgradeOld({ ...v7, version: 7 })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.sponsorship.offers).toEqual([])
+    expect(upgraded.sponsorship.master).toMatchObject({
+      monthly: monthlySponsorship(fresh.world.clubs.C10),
+      bonus: 0,
+      lastSeason: fresh.season.year,
+    })
   })
 
   it('drops the old best XI of a version 6 save, which had no ratings', () => {

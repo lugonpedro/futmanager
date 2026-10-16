@@ -371,6 +371,38 @@ export type NameOrigin = {
   edited?: boolean
 }
 
+/**
+ * What a sponsor asks for its bonus: finishing the league at `position` or
+ * better (1 is the title; in Série B and below, the promotion places are the
+ * acesso), or reaching the cup final.
+ */
+export type SponsorGoal = { kind: 'posicao'; position: number } | { kind: 'final-copa' }
+
+/** A shirt sponsorship of the user's club, offered or signed. Fictional companies only. */
+export type SponsorDeal = {
+  id: string
+  company: string
+  /** Paid on the 1st of each month. */
+  monthly: number
+  /** Paid at the end of each season the goal is met. */
+  bonus: number
+  goal?: SponsorGoal
+  /** 'segura' pays more each month, 'ousada' more for the goal. */
+  style: 'segura' | 'equilibrada' | 'ousada'
+  /** Seasons the deal covers, both included. */
+  firstSeason: number
+  lastSeason: number
+}
+
+export type Sponsorship = {
+  /** The shirt sponsor, once signed. */
+  master?: SponsorDeal
+  /** Open offers for the shirt, while there is no sponsor. */
+  offers: SponsorDeal[]
+  /** If no offer is taken by this day, the board signs the safest. */
+  deadline?: GameDate
+}
+
 /** Everything a career needs; plain JSON so it can be saved as is. */
 export type GameState = {
   /** Save format, so older careers can be upgraded on load. */
@@ -385,6 +417,7 @@ export type GameState = {
   /** The user's money movements this season. */
   ledger: LedgerEntry[]
   market: Market
+  sponsorship: Sponsorship
   career: Career
   history: SeasonSummary[]
   /** Generated names unless this says otherwise. */

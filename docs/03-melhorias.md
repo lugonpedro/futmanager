@@ -152,6 +152,12 @@ O patrocínio é um valor fixo por mês, calculado pela reputação e pela divis
 - Quebrar a meta não gera multa, só a perda do bônus. Rebaixamento pode encerrar o contrato.
 - Na página do Clube entra a seção **Patrocínios**, com os contratos atuais e as propostas abertas.
 
+### Como ficou
+
+- As três propostas são uma **segura** (paga o valor cheio por mês e pede a meta da diretoria), uma **equilibrada** (85% por mês e uma meta um degrau acima: o acesso, o G-4, uma posição melhor ou a final da copa) e uma **ousada** (70% por mês e o título).
+- As propostas ficam abertas até a primeira rodada da liga. Enquanto não há contrato, o clube recebe só patrocínios avulsos, metade do valor de referência. Se o usuário não escolher até a primeira rodada, a diretoria assina a segura e avisa.
+- Os clubes da IA seguem com o valor fixo de antes.
+
 ### Save
 
 O `GameState` passa a guardar os contratos do usuário e as propostas abertas: `SAVE_VERSION` sobe para 8. Os saves antigos ganham um contrato master equivalente ao valor fixo de hoje, até o fim da temporada.
