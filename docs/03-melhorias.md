@@ -214,6 +214,16 @@ A evolução mensal muda o ritmo do mundo inteiro, inclusive dos clubes da IA. `
 - Sem escudos, fotos nem uniformes oficiais. O Aviso legal ganha o canal de remoção.
 - Se o save precisar guardar de qual pacote veio a carreira, `SAVE_VERSION` sobe mais uma vez.
 
+### Como ficou
+
+- O pacote fica em `src/packs/brasileirao-2026.json`, no mesmo formato de arquivo que o editor importa e exporta. Ele só é carregado quando alguém o escolhe. Corrigir ou tirar um nome é editar esse arquivo.
+- Os clubes aparecem pelo nome popular (Flamengo, e não Clube de Regatas do Flamengo). Onde dois clubes têm o mesmo nome, o estado vai junto: Atlético-MG, Atlético-GO, Athletico-PR, América-MG, Operário-PR e Botafogo-SP.
+- O botão do menu passou a se chamar **Nova carreira**, e o botão do Editor de times saiu do menu. A tela tem duas abas: **Mundo gerado**, com o botão "Gerar outro mundo", e **Usar pacote**, que mostra o Brasileirão 2026 e, se houver, o pacote importado pelo jogador, além do botão de importar um arquivo.
+- Os clubes estão em ordem de força: na Série A, Flamengo, Palmeiras, Cruzeiro, Botafogo e Fluminense na frente, e Coritiba, Chapecoense e Remo no fim; na Série B, os quatro rebaixados de 2025 na frente. A força, o dinheiro e os atributos continuam gerados pelo jogo, a partir dessa ordem.
+- Cada clube leva até 25 jogadores, no formato do elenco do jogo (3 goleiros, 5 zagueiros, 4 laterais, 7 meias e 6 atacantes), os titulares primeiro. Onde o elenco real tem menos jogadores numa posição, a vaga fica com um jogador gerado. A idade é 2026 menos o ano de nascimento; quem ficou sem ano de nascimento nas fontes mantém a idade gerada.
+- Os elencos foram levantados em outubro de 2026 na Wikipédia em inglês, no ESPN, no Sofascore, no FotMob, no BeSoccer e no starting11. Algumas listas são do primeiro semestre e podem não ter as contratações do meio do ano. A divisão entre zagueiro e lateral às vezes foi decidida à mão, porque as fontes só dizem "defensor". As cores são aproximadas.
+- O Aviso legal explica o pacote e dá o canal para pedir a correção ou a remoção de um nome. O save já guarda o nome do pacote em `names.pack`, então não precisou subir de versão.
+
 ---
 
 ## Decisões

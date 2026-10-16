@@ -3,7 +3,6 @@ import {
   CloudCheckIcon,
   CloudUploadIcon,
   HardDriveIcon,
-  PencilIcon,
   PlayIcon,
   PlusIcon,
   Trash2Icon,
@@ -168,13 +167,7 @@ export function HomeScreen() {
           <Button asChild size={latest ? 'default' : 'lg'} variant={latest ? 'outline' : 'default'}>
             <Link to="/novo">
               <PlusIcon />
-              Novo jogo
-            </Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/editor">
-              <PencilIcon />
-              Editor de times
+              Nova carreira
             </Link>
           </Button>
           <nav className="flex justify-center gap-4 text-xs text-muted-foreground">

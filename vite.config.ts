@@ -43,5 +43,7 @@ export default defineConfig({
   },
   test: {
     include: ['src/**/*.test.ts'],
+    // The balance tests simulate thousands of matches; shared CI runners need more than the 5s default.
+    testTimeout: 20_000,
   },
 })

@@ -190,7 +190,7 @@ export function EditorScreen() {
             <Button asChild>
               <Link to="/novo">
                 <PlayIcon />
-                Novo jogo com o pacote
+                Nova carreira com o pacote
               </Link>
             </Button>
           </div>

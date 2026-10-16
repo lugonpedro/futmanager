@@ -160,3 +160,18 @@ export function PackLegalNote() {
     </p>
   )
 }
+
+/** For the packs that come with the game, which carry real names. */
+export function BuiltInPackNote() {
+  return (
+    <p className="text-xs text-muted-foreground">
+      Nomes reais de clubes e atletas, só como referência: sem escudos, uniformes, fotos ou marcas
+      oficiais, e sem nenhuma ligação com eles. Os atributos são inventados pelo jogo. Para pedir a
+      remoção de um nome, veja o{' '}
+      <Link to="/aviso-legal" className="underline underline-offset-2">
+        aviso legal
+      </Link>
+      .
+    </p>
+  )
+}
