@@ -57,7 +57,7 @@ export function LegalScreen() {
             <li>
               O jogo vem com um mundo gerado: clubes, cidades e jogadores inventados. Nenhum nome,
               escudo ou marca real faz parte dele. O pacote de teste Brasileirão 2026 é opcional e
-              só entra quando você o escolhe no Novo jogo.
+              só entra quando você o escolhe em Nova carreira.
             </li>
             <li>
               O editor de times e os pacotes de dados permitem trocar esses nomes. Tudo o que você

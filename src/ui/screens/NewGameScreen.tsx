@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
-import { PencilIcon, RefreshCwIcon } from 'lucide-react'
+import { RefreshCwIcon } from 'lucide-react'
 import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { generateWorld } from '../../engine/generate/world.ts'
 import { applyPack, packIsEmpty, packSlots, type DataPack } from '../../engine/pack/pack.ts'
@@ -24,12 +25,11 @@ import { confirmReplace } from '../usePackMessage.ts'
 
 const BRASILEIRAO = BUILT_IN_PACKS[0]
 
-type Names = 'gerado' | 'brasileirao' | 'pacote'
-const NAME_LABELS: Record<Names, string> = {
-  gerado: 'Mundo gerado',
-  brasileirao: BRASILEIRAO.name,
-  pacote: 'Seu pacote',
-}
+type Names = 'gerado' | 'pacote'
+const NAME_LABELS: Record<Names, string> = { gerado: 'Mundo gerado', pacote: 'Usar pacote' }
+
+/** Which pack: the one that comes with the game, or the player's own. */
+type PackChoice = 'brasileirao' | 'proprio'
 
 const randomSeed = () => Math.floor(Math.random() * 2 ** 31)
 
@@ -38,18 +38,26 @@ export function NewGameScreen() {
   const [seed, setSeed] = useState(randomSeed)
   const { pack, setPack } = usePackStore()
   const hasPack = !packIsEmpty(pack)
-  const [names, setNames] = useState<Names>(hasPack ? 'pacote' : 'gerado')
+  const [names, setNames] = useState<Names>('gerado')
+  const [packChoice, setPackChoice] = useState<PackChoice>('brasileirao')
   const [builtIn, setBuiltIn] = useState<DataPack>()
   const [loadError, setLoadError] = useState<string>()
+  const usingBuiltIn = names === 'pacote' && packChoice === 'brasileirao'
   const chosen =
-    names === 'pacote' && hasPack ? pack : names === 'brasileirao' ? builtIn : undefined
+    names !== 'pacote'
+      ? undefined
+      : packChoice === 'brasileirao'
+        ? builtIn
+        : hasPack
+          ? pack
+          : undefined
   const message = usePackMessage()
   useEffect(() => {
-    if (names !== 'brasileirao' || builtIn) return
+    if (!usingBuiltIn || builtIn) return
     BRASILEIRAO.load().then(setBuiltIn, () =>
       setLoadError('Não deu para carregar o pacote. Confira a conexão e tente de novo.'),
     )
-  }, [names, builtIn])
+  }, [usingBuiltIn, builtIn])
   const world = useMemo(() => {
     const generated = generateWorld(seed)
     return chosen ? applyPack(generated, chosen).world : generated
@@ -59,7 +67,7 @@ export function NewGameScreen() {
 
   // Each new career gets its own save slot, so starting one never loses another.
   const choose = (clubId: string) => {
-    if (names === 'brasileirao' && !builtIn) return
+    if (usingBuiltIn && !builtIn) return
     startGame(newGame(seed, clubId, chosen))
     navigate('/jogo')
   }
@@ -87,76 +95,57 @@ export function NewGameScreen() {
           <div className="flex flex-wrap items-center gap-2">
             <Choices
               ariaLabel="Nomes dos times"
-              options={['gerado', 'brasileirao', 'pacote'] as const}
+              options={['gerado', 'pacote'] as const}
               value={names}
               label={(value) => NAME_LABELS[value]}
               onChange={setNames}
             />
-            <Button variant="outline" size="sm" onClick={() => setSeed(randomSeed())}>
-              <RefreshCwIcon />
-              Gerar outro mundo
-            </Button>
+            {names === 'gerado' && (
+              <Button variant="outline" size="sm" onClick={() => setSeed(randomSeed())}>
+                <RefreshCwIcon />
+                Gerar outro mundo
+              </Button>
+            )}
           </div>
-          {names === 'brasileirao' && (
-            <>
-              <p className="text-sm">
-                {loadError ?? (builtIn ? BRASILEIRAO.description : 'Carregando o pacote...')}
-              </p>
-              {builtIn && (
-                <div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={async () => {
-                      if (
-                        hasPack &&
-                        !(await confirmReplace('Substituir o seu pacote por uma cópia deste?'))
-                      ) {
-                        return
-                      }
-                      setPack(builtIn)
-                      navigate('/editor')
-                    }}
-                  >
-                    <PencilIcon />
-                    Editar uma cópia
-                  </Button>
-                </div>
-              )}
-              <BuiltInPackNote />
-            </>
-          )}
           {names === 'pacote' && (
             <>
-              <p className="text-sm">
-                {hasPack
-                  ? `Pacote "${pack.name || 'sem nome'}": os nomes dele entram no lugar dos gerados, clube por clube; o que faltar continua gerado.`
-                  : 'Nenhum pacote ainda. Importe um arquivo .json ou uma planilha .csv, ou monte o seu no editor.'}
-              </p>
+              <ul className="flex flex-col gap-2" aria-label="Pacotes">
+                <PackOption
+                  selected={packChoice === 'brasileirao'}
+                  onSelect={() => setPackChoice('brasileirao')}
+                  title={BRASILEIRAO.name}
+                  detail={
+                    packChoice === 'brasileirao' && loadError ? loadError : BRASILEIRAO.description
+                  }
+                />
+                {hasPack && (
+                  <PackOption
+                    selected={packChoice === 'proprio'}
+                    onSelect={() => setPackChoice('proprio')}
+                    title={pack.name || 'Seu pacote'}
+                    detail="O pacote que você importou: os nomes dele entram no lugar dos gerados, clube por clube; o que faltar continua gerado."
+                  />
+                )}
+              </ul>
               <div className="flex flex-wrap gap-2">
                 <PackFileButton
                   size="sm"
                   onLoad={async ({ pack: loaded, warnings }) => {
                     if (
                       hasPack &&
-                      !(await confirmReplace('Substituir o pacote atual pelo do arquivo?'))
+                      !(await confirmReplace('Substituir o pacote importado pelo do arquivo?'))
                     ) {
                       return
                     }
                     setPack(loaded)
+                    setPackChoice('proprio')
                     message.show(`Pacote "${loaded.name || 'sem nome'}" importado.`, warnings)
                   }}
                   onError={message.fail}
                 />
-                <Button asChild variant="outline" size="sm">
-                  <Link to="/editor">
-                    <PencilIcon />
-                    {hasPack ? 'Editar o pacote' : 'Abrir o editor'}
-                  </Link>
-                </Button>
               </div>
               <PackMessage warnings={message.warnings} />
-              <PackLegalNote />
+              {packChoice === 'brasileirao' ? <BuiltInPackNote /> : <PackLegalNote />}
             </>
           )}
         </CardContent>
@@ -194,5 +183,31 @@ export function NewGameScreen() {
         ))}
       </div>
     </main>
+  )
+}
+
+/** One pack to start with, picked like a radio button. */
+function PackOption(props: {
+  selected: boolean
+  onSelect: () => void
+  title: string
+  detail: string
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        role="radio"
+        aria-checked={props.selected}
+        onClick={props.onSelect}
+        className={cn(
+          'flex w-full cursor-pointer flex-col gap-0.5 rounded-md border px-3 py-2 text-left hover:bg-accent',
+          props.selected && 'border-primary bg-accent',
+        )}
+      >
+        <span className="text-sm font-semibold">{props.title}</span>
+        <span className="text-xs text-muted-foreground">{props.detail}</span>
+      </button>
+    </li>
   )
 }
