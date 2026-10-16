@@ -6,6 +6,7 @@ import type {
   LedgerEntry,
   World,
 } from '../model/types.ts'
+import { dateParts } from '../season/calendar.ts'
 import { standings } from '../season/standings.ts'
 import { monthlySponsorship, attendance } from './economy.ts'
 
@@ -100,6 +101,41 @@ export function ledgerTotals(entries: readonly LedgerEntry[]) {
     totals[entry.category] = (totals[entry.category] ?? 0) + entry.amount
   }
   return totals
+}
+
+/** Money in and out of the user's club in one calendar month. */
+export type MonthTotals = { year: number; month: number; income: number; costs: number }
+
+/**
+ * The ledger month by month, oldest first, with the quiet months in between
+ * filled with zeros so a chart of the season keeps its spacing.
+ */
+export function monthlyTotals(entries: readonly LedgerEntry[]): MonthTotals[] {
+  const byMonth = new Map<number, MonthTotals>()
+  const key = (year: number, month: number) => year * 12 + month - 1
+  for (const entry of entries) {
+    const { year, month } = dateParts(entry.date)
+    const totals = byMonth.get(key(year, month)) ?? { year, month, income: 0, costs: 0 }
+    if (entry.amount >= 0) totals.income += entry.amount
+    else totals.costs -= entry.amount
+    byMonth.set(key(year, month), totals)
+  }
+  if (byMonth.size === 0) return []
+  const keys = [...byMonth.keys()]
+  const months: MonthTotals[] = []
+  for (let k = Math.min(...keys); k <= Math.max(...keys); k++) {
+    months.push(
+      byMonth.get(k) ?? { year: Math.floor(k / 12), month: (k % 12) + 1, income: 0, costs: 0 },
+    )
+  }
+  return months
+}
+
+/** The average gate of the user's home games so far this season, or undefined before the first. */
+export function averageGate(entries: readonly LedgerEntry[]): number | undefined {
+  const gates = entries.filter((e) => e.category === 'bilheteria')
+  if (gates.length === 0) return undefined
+  return Math.round(gates.reduce((sum, e) => sum + e.amount, 0) / gates.length)
 }
 
 export const MAX_TICKET_PRICE = 1000

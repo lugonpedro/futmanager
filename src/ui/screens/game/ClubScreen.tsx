@@ -1,41 +1,82 @@
+import { useEffect } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BoardPanel, HistoryPanel } from './BoardPanels.tsx'
 import { EditorPanel } from './EditorPanel.tsx'
 import { FinancePanel, StadiumPanel } from './FinancePanels.tsx'
 
-const TABS = {
+/** The parts of the club overview, in page order; their old tab addresses open the page there. */
+const SECTIONS = {
   diretoria: { label: 'Diretoria', panel: BoardPanel },
   financas: { label: 'Finanças', panel: FinancePanel },
   estadio: { label: 'Estádio', panel: StadiumPanel },
+}
+
+type Section = keyof typeof SECTIONS
+
+const OVERVIEW = 'visao'
+
+const TABS = {
+  [OVERVIEW]: { label: 'Visão do clube', panel: ClubOverview },
   historico: { label: 'Histórico', panel: HistoryPanel },
   editor: { label: 'Editor', panel: EditorPanel },
 }
 
 type Tab = keyof typeof TABS
 
-/** The club and its board: goals and trust, money, the ground, the career so far and the names. */
+const isSection = (tab: string): tab is Section => tab in SECTIONS
+
+/** The club and its board: goals and trust, money and the ground on one page, then the career so far and the names. */
 export function ClubScreen() {
   const navigate = useNavigate()
-  const { tab } = useParams()
-  if (!tab || !(tab in TABS)) return <Navigate to="/jogo/clube/diretoria" replace />
+  const { tab = OVERVIEW } = useParams()
+  const section = isSection(tab) ? tab : undefined
+  const value = section ? OVERVIEW : tab
+
+  useEffect(() => {
+    if (section) document.getElementById(section)?.scrollIntoView({ block: 'start' })
+  }, [section])
+
+  if (!(value in TABS)) return <Navigate to="/jogo/clube" replace />
   return (
-    <Tabs value={tab} onValueChange={(value) => navigate(`/jogo/clube/${value}`)}>
+    <Tabs
+      value={value}
+      onValueChange={(next) => navigate(next === OVERVIEW ? '/jogo/clube' : `/jogo/clube/${next}`)}
+    >
       <TabsList>
-        {Object.entries(TABS).map(([value, { label }]) => (
-          <TabsTrigger key={value} value={value}>
+        {Object.entries(TABS).map(([key, { label }]) => (
+          <TabsTrigger key={key} value={key}>
             {label}
           </TabsTrigger>
         ))}
       </TabsList>
-      {(Object.keys(TABS) as Tab[]).map((value) => {
-        const Panel = TABS[value].panel
+      {(Object.keys(TABS) as Tab[]).map((key) => {
+        const Panel = TABS[key].panel
         return (
-          <TabsContent key={value} value={value}>
+          <TabsContent key={key} value={key}>
             <Panel />
           </TabsContent>
         )
       })}
     </Tabs>
+  )
+}
+
+/** The board, the money and the ground, one after the other. */
+function ClubOverview() {
+  return (
+    <div className="flex flex-col gap-8">
+      {(Object.keys(SECTIONS) as Section[]).map((key) => {
+        const { label, panel: Panel } = SECTIONS[key]
+        return (
+          <section key={key} id={key} aria-labelledby={`${key}-title`} className="scroll-mt-16">
+            <h2 id={`${key}-title`} className="mb-3 text-lg font-semibold">
+              {label}
+            </h2>
+            <Panel />
+          </section>
+        )
+      })}
+    </div>
   )
 }
