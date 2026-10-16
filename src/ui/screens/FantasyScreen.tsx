@@ -1,4 +1,12 @@
-import { ArrowLeftIcon, MinusIcon, PlusIcon, SaveIcon, SearchIcon, StarIcon } from 'lucide-react'
+import {
+  ArrowLeftIcon,
+  MinusIcon,
+  PlayIcon,
+  PlusIcon,
+  SaveIcon,
+  SearchIcon,
+  StarIcon,
+} from 'lucide-react'
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { toast } from 'sonner'
@@ -15,7 +23,7 @@ import { FORMATIONS } from '../../engine/match/lineup.ts'
 import { POSITIONS, type Position } from '../../engine/model/types.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Choices } from '../components/Choices.tsx'
-import { Crest } from '../components/ClubCrest.tsx'
+import { ClubMark, Note } from '../components/FantasyParts.tsx'
 import { FormationSelect } from '../components/FormationSelect.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import {
@@ -27,9 +35,8 @@ import {
   withFormation,
   type Draft,
 } from '../fantasyDraft.ts'
-import { POSITION_NAMES } from '../format.ts'
+import { POSITION_NAMES, tenths } from '../format.ts'
 
-const coins = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
 const closing = new Intl.DateTimeFormat('pt-BR', {
   weekday: 'long',
   hour: '2-digit',
@@ -100,14 +107,6 @@ function useNow() {
   return now
 }
 
-function Note(props: { children: ReactNode }) {
-  return (
-    <Card>
-      <CardContent className="text-sm text-muted-foreground">{props.children}</CardContent>
-    </Card>
-  )
-}
-
 function Season(props: {
   view: FantasyView
   signedIn: boolean
@@ -155,10 +154,18 @@ function Season(props: {
           </CardDescription>
         </CardHeader>
         {season.played > 0 && (
-          <CardContent className="text-sm">
-            {view.lastScore !== undefined
-              ? `Seu time fez ${coins.format(view.lastScore)} pontos na rodada ${season.played}.`
-              : `A rodada ${season.played} já foi jogada.`}
+          <CardContent className="flex flex-wrap items-center justify-between gap-3 text-sm">
+            <span>
+              {view.lastScore !== undefined
+                ? `Seu time fez ${tenths.format(view.lastScore)} pontos na rodada ${season.played}.`
+                : `A rodada ${season.played} já foi jogada.`}
+            </span>
+            <Button asChild size="sm" variant="outline">
+              <Link to={`/fantasia/rodada/${season.played}`}>
+                <PlayIcon />
+                Ver os jogos da rodada
+              </Link>
+            </Button>
           </CardContent>
         )}
       </Card>
@@ -180,8 +187,8 @@ function Season(props: {
             <div>
               <CardTitle>Seu time</CardTitle>
               <CardDescription>
-                {coins.format(cost)} de {BUDGET} moedas
-                {cost <= BUDGET && ` · sobram ${coins.format(BUDGET - cost)}`}
+                {tenths.format(cost)} de {BUDGET} moedas
+                {cost <= BUDGET && ` · sobram ${tenths.format(BUDGET - cost)}`}
                 {view.team && !view.teamIsForNext && ' · igual ao da última rodada'}
               </CardDescription>
             </div>
@@ -225,20 +232,6 @@ function Season(props: {
   )
 }
 
-function ClubMark(props: { clubId: string; clubs: Record<string, OfficialClub> }) {
-  const club = props.clubs[props.clubId]
-  if (!club) return null
-  return (
-    <Crest
-      id={`crest-${props.clubId}`}
-      colors={club.colors}
-      letters={club.shortName}
-      label={`Escudo do ${club.name}`}
-      className="size-6 shrink-0"
-    />
-  )
-}
-
 function PlayerLine(props: {
   id: string
   player: PoolPlayer
@@ -255,10 +248,10 @@ function PlayerLine(props: {
         <span className="truncate font-medium">{player.name}</span>
         <span className="text-xs text-muted-foreground">
           {props.clubs[player.clubId]?.shortName} · {POSITION_NAMES[player.position]}
-          {last !== undefined && ` · ${coins.format(last)} pts na última rodada`}
+          {last !== undefined && ` · ${tenths.format(last)} pts na última rodada`}
         </span>
       </div>
-      <span className="text-sm tabular-nums">{coins.format(player.price)}</span>
+      <span className="text-sm tabular-nums">{tenths.format(player.price)}</span>
       {props.children}
     </li>
   )

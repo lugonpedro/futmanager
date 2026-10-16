@@ -25,7 +25,7 @@ const MIN_GAP_HOURS = 20
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } })
 
-function roundRow(seasonId: number, round: OfficialRound) {
+async function roundRow(seasonId: number, round: OfficialRound) {
   return {
     season_id: seasonId,
     round: round.round,
@@ -33,8 +33,12 @@ function roundRow(seasonId: number, round: OfficialRound) {
     results: round.results,
     points: round.points,
     pool: round.pool,
+    replays: await packJson(round.replays),
   }
 }
+
+/** New randomness for each step, so a published replay never tells what comes next. */
+const freshSeed = () => crypto.getRandomValues(new Uint32Array(1))[0]
 
 async function openSeason(db: SupabaseClient) {
   const { data: last, error } = await db
@@ -56,9 +60,9 @@ async function openSeason(db: SupabaseClient) {
       .single()
     if (loadError) throw loadError
     seed = stored.seed
-    opened = nextOfficialSeason(await unpackJson<OfficialState>(stored.data))
+    opened = nextOfficialSeason(await unpackJson<OfficialState>(stored.data), freshSeed())
   } else {
-    seed = crypto.getRandomValues(new Uint32Array(1))[0]
+    seed = freshSeed()
     const pack = parsePackFile(JSON.stringify(packFile), 'brasileirao-2026.json').pack
     opened = startOfficialSeason(seed, pack)
   }
@@ -81,7 +85,7 @@ async function openSeason(db: SupabaseClient) {
       seed,
       data: await packJson(opened.state),
     }),
-    db.from('fantasy_rounds').insert(roundRow(season.id, opened.round)),
+    db.from('fantasy_rounds').insert(await roundRow(season.id, opened.round)),
   ])
   for (const { error: writeError } of writes) if (writeError) throw writeError
   return { opened: season.id, year: opened.state.game.season.year }
@@ -146,12 +150,12 @@ async function playRound(db: SupabaseClient, seasonId: number) {
     .eq('season_id', seasonId)
     .single()
   if (error) throw error
-  const played = playOfficialRound(await unpackJson<OfficialState>(stored.data))
+  const played = playOfficialRound(await unpackJson<OfficialState>(stored.data), freshSeed())
 
   // The round goes in first: if two calls race, the second one stops here.
   const { error: roundError } = await db
     .from('fantasy_rounds')
-    .insert(roundRow(seasonId, played.round))
+    .insert(await roundRow(seasonId, played.round))
   if (roundError) throw roundError
   const teams = await scoreRound(db, seasonId, played.round)
   const { error: stateError } = await db

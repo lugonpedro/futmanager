@@ -10,6 +10,8 @@ import {
   type OfficialState,
 } from './official.ts'
 import { startingPrice } from './prices.ts'
+import { roundPoints } from './scoring.ts'
+import { matchResult, playMinute, replayMatch } from '../match/simulate.ts'
 
 const pack = await BUILT_IN_PACKS.find((p) => p.id === 'brasileirao-2026')!.load()
 const opening = startOfficialSeason(7, pack)
@@ -32,7 +34,7 @@ describe('official season', () => {
   })
 
   it('plays one league round, scores it and moves the prices of who played', () => {
-    const { state, round } = playOfficialRound(opening.state)
+    const { state, round } = playOfficialRound(opening.state, 11)
     expect(round.round).toBe(1)
     expect(round.results).toHaveLength(10)
     const clubs = officialClubs(state)
@@ -49,23 +51,41 @@ describe('official season', () => {
 
   it('gives the same round from a stored copy of the state', () => {
     const stored = JSON.parse(JSON.stringify(opening.state)) as OfficialState
-    expect(playOfficialRound(stored).round).toEqual(playOfficialRound(opening.state).round)
+    expect(playOfficialRound(stored, 11).round).toEqual(playOfficialRound(opening.state, 11).round)
+  })
+
+  it('replays every match of the round exactly as it went', () => {
+    const { round } = playOfficialRound(opening.state, 11)
+    expect(round.replays).toHaveLength(round.results.length)
+    const results = round.replays.map((replay) => {
+      const state = replayMatch(JSON.parse(JSON.stringify(replay)))
+      while (!state.finished) playMinute(state)
+      return matchResult(state)
+    })
+    expect(results).toEqual(round.results)
+    expect(roundPoints(results)).toEqual(round.points)
+  })
+
+  it('plays a different round from a different seed', () => {
+    const a = playOfficialRound(opening.state, 11).round.results
+    const b = playOfficialRound(opening.state, 12).round.results
+    expect(a.map((r) => r.events.length)).not.toEqual(b.map((r) => r.events.length))
   })
 
   it('runs to the end of the season and into the next one', { timeout: 120_000 }, () => {
     let state = opening.state
     let last = 0
     while (!officialSeasonOver(state)) {
-      const played = playOfficialRound(state)
+      const played = playOfficialRound(state, last)
       expect(played.round.round).toBe(last + 1)
       last = played.round.round
       state = played.state
     }
     expect(last).toBe(38)
-    expect(() => playOfficialRound(state)).toThrow()
-    const next = nextOfficialSeason(state)
+    expect(() => playOfficialRound(state, 1)).toThrow()
+    const next = nextOfficialSeason(state, 5)
     expect(next.round.round).toBe(0)
     expect(next.state.game.season.year).toBe(state.game.season.year + 1)
-    expect(playOfficialRound(next.state).round.round).toBe(1)
+    expect(playOfficialRound(next.state, 6).round.round).toBe(1)
   })
 })

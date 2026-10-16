@@ -22,7 +22,13 @@ import {
 } from '../finance/sponsors.ts'
 import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
-import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
+import {
+  createMatch,
+  simulateMatch,
+  type MatchInput,
+  type MatchReplay,
+  type MatchState,
+} from '../match/simulate.ts'
 import { applyPack, type DataPack } from '../pack/pack.ts'
 import { ageWorld, developWorld, youthIntake } from '../progression/progression.ts'
 import { injuryRisk, NO_TRAINING, recoveryRate } from '../progression/training.ts'
@@ -276,8 +282,11 @@ export function matchInput(game: GameState, fixture: Fixture): MatchInput {
 }
 
 /** Each fixture has its own seed, so watching a match live or skipping it gives the same result. */
+export const matchSeed = (game: GameState, fixture: Fixture): number =>
+  mixSeed(game.world.seed, game.season.year, fixture.id)
+
 export const matchRng = (game: GameState, fixture: Fixture): Rng =>
-  createRng(mixSeed(game.world.seed, game.season.year, fixture.id))
+  createRng(matchSeed(game, fixture))
 
 export type LiveMatch = { fixture: Fixture; state: MatchState }
 
@@ -591,14 +600,18 @@ export function playMatchDayWithResults(game: GameState): {
   game: GameState
   day: MatchDay
   results: MatchResult[]
+  /** What it takes to play each of `results` again. */
+  replays: MatchReplay[]
 } {
   const day = nextMatchDay(game.season)
   if (!day) throw new Error('The season is over')
   const ready = passDays(game, day.date).game
-  const results = dayFixtures(ready.season, day).map((fixture) =>
-    simulateMatch(matchInput(ready, fixture), matchRng(ready, fixture)),
-  )
-  return { game: applyMatchDay(ready, results), day, results }
+  const replays = dayFixtures(ready.season, day).map((fixture) => ({
+    input: matchInput(ready, fixture),
+    seed: matchSeed(ready, fixture),
+  }))
+  const results = replays.map((r) => simulateMatch(r.input, createRng(r.seed)))
+  return { game: applyMatchDay(ready, results), day, results, replays }
 }
 
 /** Moves the calendar to the next match day and plays all of it at once. */

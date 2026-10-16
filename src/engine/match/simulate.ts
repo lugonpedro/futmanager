@@ -701,6 +701,13 @@ export function matchResult(state: MatchState): MatchResult {
 }
 
 /** Plays a whole match at once. Same input and seed, same match. */
+/** What it takes to play a finished match again, minute by minute, exactly as it went. */
+export type MatchReplay = { input: MatchInput; seed: number }
+
+/** The match of a replay at kick-off, ready for playMinute(). */
+export const replayMatch = (replay: MatchReplay): MatchState =>
+  createMatch(replay.input, createRng(replay.seed))
+
 export function simulateMatch(input: MatchInput, rng: Rng): MatchResult {
   const state = createMatch(input, rng)
   while (!state.finished) playMinute(state)
