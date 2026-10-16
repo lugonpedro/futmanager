@@ -1,4 +1,4 @@
-import type { Player, PlayStyle, Position, Posture } from '../model/types.ts'
+import type { Formation, Player, PlayStyle, Position, Posture } from '../model/types.ts'
 import { faceValue, overallAt, styleLevel } from '../player/attributes.ts'
 
 export type Sectors = { defense: number; midfield: number; attack: number }
@@ -119,12 +119,22 @@ export const POSTURE_EFFECT: Record<Posture, { attack: number; defense: number; 
   }
 
 /**
+ * A holding midfielder shields the back line; a line of three behind the
+ * striker joins the attack. Other formations are just their numbers.
+ */
+export const FORMATION_EFFECT: Partial<Record<Formation, { attack: number; defense: number }>> = {
+  '4-1-4-1': { attack: 0.97, defense: 1.03 },
+  '4-2-3-1': { attack: 1.03, defense: 0.98 },
+}
+
+/**
  * Sector ratings of the players on the pitch. Missing players (sent off, injured
  * with no subs left) simply add nothing, so the sectors drop.
  */
 export function sectorStrength(
   onPitch: readonly { player: Player; position: Position; energy: number; form?: number }[],
   posture: Posture,
+  formation?: Formation,
 ): Sectors {
   const totals: Sectors = { defense: 0, midfield: 0, attack: 0 }
   for (const { player, position, energy, form } of onPitch) {
@@ -135,9 +145,10 @@ export function sectorStrength(
     }
   }
   const effect = POSTURE_EFFECT[posture]
+  const shape = (formation && FORMATION_EFFECT[formation]) ?? { attack: 1, defense: 1 }
   return {
-    defense: (totals.defense / NORMALIZER.defense) * effect.defense,
+    defense: (totals.defense / NORMALIZER.defense) * effect.defense * shape.defense,
     midfield: totals.midfield / NORMALIZER.midfield,
-    attack: (totals.attack / NORMALIZER.attack) * effect.attack,
+    attack: (totals.attack / NORMALIZER.attack) * effect.attack * shape.attack,
   }
 }

@@ -1,4 +1,5 @@
 import type { MatchSide, Play, PlayDepth, PlayLane, TeamState } from '../engine/match/simulate.ts'
+import { formationLines } from '../engine/match/lineup.ts'
 import type { Position } from '../engine/model/types.ts'
 
 /**
@@ -12,6 +13,9 @@ export const CENTRE: Vec = { x: 0.5, y: 0.5 }
 
 /** How far up the pitch each position stands, for the home side. */
 const DEPTH_OF: Record<Position, number> = { G: 0.05, Z: 0.2, L: 0.24, M: 0.44, A: 0.64 }
+
+/** A split midfield: the holding line drops back, the other pushes up. */
+const MIDFIELD_LINE_DEPTHS = [0.34, 0.5]
 
 /** Fraction of the move each play type takes, in units of the chosen speed. */
 const DURATION: Record<Play['end'], number> = { lost: 1, foul: 1.5, wide: 2, saved: 2, goal: 4 }
@@ -35,14 +39,14 @@ const spread = (count: number, i: number) => (i + 1) / (count + 1)
  */
 export function formationSpots(team: TeamState, side: MatchSide): Map<string, Vec> {
   const spots = new Map<string, Vec>()
-  const of = (position: Position) => team.onPitch.filter((p) => p.position === position)
-  const fullbacks = of('L')
-  const backLine = [fullbacks[0], ...of('Z'), ...fullbacks.slice(1)].filter(Boolean)
-  const lines = [of('G'), backLine, of('M'), of('A')]
+  const lines = formationLines(team.onPitch, team.formation)
+  const midfield = lines.filter((line) => line[0].position === 'M')
   for (const line of lines) {
+    const split = midfield.length > 1 ? midfield.indexOf(line) : -1
     line.forEach((p, i) => {
       const y = line.length === 1 ? 0.5 : 0.08 + 0.84 * spread(line.length, i)
-      spots.set(p.player.id, mirror(side, { x: DEPTH_OF[p.position], y }))
+      const x = split >= 0 ? MIDFIELD_LINE_DEPTHS[split] : DEPTH_OF[p.position]
+      spots.set(p.player.id, mirror(side, { x, y }))
     })
   }
   return spots

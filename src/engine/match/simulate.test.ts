@@ -179,6 +179,22 @@ describe('match state', () => {
     expect(short.defense).toBeLessThan(full.defense)
   })
 
+  it('makes a 4-1-4-1 a little safer and a 4-2-3-1 a little bolder than a flat 4-5-1', () => {
+    const squad = world.clubs.C1.playerIds.map((id) => world.players[id])
+    const onPitch = autoLineup(squad, '4-5-1').starters.map(({ playerId, position }) => ({
+      player: world.players[playerId],
+      position,
+      energy: 100,
+    }))
+    const flat = sectorStrength(onPitch, 'normal', '4-5-1')
+    const holding = sectorStrength(onPitch, 'normal', '4-1-4-1')
+    const attacking = sectorStrength(onPitch, 'normal', '4-2-3-1')
+    expect(holding.defense).toBeGreaterThan(flat.defense)
+    expect(holding.attack).toBeLessThan(flat.attack)
+    expect(attacking.attack).toBeGreaterThan(flat.attack)
+    expect(attacking.midfield).toBe(flat.midfield)
+  })
+
   it(`allows at most ${MAX_SUBSTITUTIONS} substitutions, from the bench only`, () => {
     const match = createMatch(input('C1', 'C2'), createRng(3))
     playMinute(match)
