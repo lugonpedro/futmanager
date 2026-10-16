@@ -199,6 +199,8 @@ export type MatchResult = {
   injured: string[]
   /** Match rating, 0 to 10, of everyone who played. */
   ratings: Record<string, number>
+  /** Everyone who played on each side, with the slot he last played in. */
+  played: { home: Record<string, Position>; away: Record<string, Position> }
   /** Energy left at the final whistle, out of 100, of everyone who played. */
   energy: Record<string, number>
 }

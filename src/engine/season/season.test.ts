@@ -168,6 +168,7 @@ describe('bans and injuries', () => {
         injured: [],
         ratings: {},
         energy: {},
+        played: { home: {}, away: {} },
       }
     })
     results[0] = { ...results[0], ...overrides }

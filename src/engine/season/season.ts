@@ -583,15 +583,27 @@ export function seasonReview(game: GameState): SeasonReview {
   return { position, target: career.target, confidence, fired, offers }
 }
 
-/** Moves the calendar to the next match day and plays all of it at once. */
-export function playMatchDay(game: GameState): GameState {
+/**
+ * Moves the calendar to the next match day and plays all of it at once,
+ * handing back the matches too, for anything that scores them.
+ */
+export function playMatchDayWithResults(game: GameState): {
+  game: GameState
+  day: MatchDay
+  results: MatchResult[]
+} {
   const day = nextMatchDay(game.season)
   if (!day) throw new Error('The season is over')
   const ready = passDays(game, day.date).game
   const results = dayFixtures(ready.season, day).map((fixture) =>
     simulateMatch(matchInput(ready, fixture), matchRng(ready, fixture)),
   )
-  return applyMatchDay(ready, results)
+  return { game: applyMatchDay(ready, results), day, results }
+}
+
+/** Moves the calendar to the next match day and plays all of it at once. */
+export function playMatchDay(game: GameState): GameState {
+  return playMatchDayWithResults(game).game
 }
 
 /** Plays every match day up to and including the next league round. */
