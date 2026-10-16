@@ -6,6 +6,7 @@ import {
   PlayIcon,
   PlusIcon,
   Trash2Icon,
+  TrophyIcon,
   UserIcon,
 } from 'lucide-react'
 import { useEffect } from 'react'
@@ -170,6 +171,14 @@ export function HomeScreen() {
               Nova carreira
             </Link>
           </Button>
+          {cloudEnabled && (
+            <Button asChild variant="outline">
+              <Link to="/fantasia">
+                <TrophyIcon />
+                Fantasia online
+              </Link>
+            </Button>
+          )}
           <nav className="flex justify-center gap-4 text-xs text-muted-foreground">
             <Link to="/aviso-legal" className="underline-offset-2 hover:underline">
               Aviso legal
