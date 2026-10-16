@@ -5,6 +5,9 @@ import { createRng } from '../rng.ts'
 import { autoLineup } from './lineup.ts'
 import {
   createMatch,
+  liveRatings,
+  liveStats,
+  matchResult,
   MATCH_MINUTES,
   MAX_SUBSTITUTIONS,
   playMinute,
@@ -222,6 +225,37 @@ describe('match state', () => {
   })
 })
 
+describe('live numbers', () => {
+  it('end where the final numbers do, ratings within the touch of luck', () => {
+    const match = createMatch(input('C1', 'C2'), createRng(11))
+    while (!match.finished) playMinute(match)
+    const result = matchResult(match)
+    const live = liveStats(match)
+    for (const side of ['home', 'away'] as const) {
+      const { fouls, ...stats } = live[side]
+      expect(stats).toEqual(result.stats[side])
+      expect(fouls).toBe(match.plays.filter((p) => p.end === 'foul' && p.side !== side).length)
+    }
+    const ratings = liveRatings(match)
+    expect(Object.keys(ratings).sort()).toEqual(Object.keys(result.ratings).sort())
+    for (const [id, rating] of Object.entries(ratings)) {
+      expect(Math.abs(rating - result.ratings[id])).toBeLessThanOrEqual(0.45)
+    }
+  })
+
+  it('start level and leave the match as it was', () => {
+    const watched = createMatch(input('C3', 'C4'), createRng(5))
+    expect(liveStats(watched).home.possession).toBe(50)
+    expect(new Set(Object.values(liveRatings(watched))).size).toBeGreaterThan(1)
+    while (!watched.finished) {
+      playMinute(watched)
+      liveStats(watched)
+      liveRatings(watched)
+    }
+    expect(matchResult(watched)).toEqual(simulateMatch(input('C3', 'C4'), createRng(5)))
+  })
+})
+
 describe('plays', () => {
   const played = (seed: number) => {
     const match = createMatch(input('C1', 'C2'), createRng(seed))
@@ -263,17 +297,20 @@ describe('plays', () => {
     }
   })
 
-  it('ends at a foul only when the defending side was booked that minute', () => {
+  it('ends at a foul by the side defending, the booked player when there was a card', () => {
     const match = played(11)
-    for (const play of match.plays.filter((p) => p.end === 'foul')) {
-      const defending = play.side === 'home' ? match.away.club.id : match.home.club.id
+    const fouls = match.plays.filter((p) => p.end === 'foul')
+    expect(fouls.length).toBeGreaterThan(5)
+    for (const play of fouls) {
+      const defending = play.side === 'home' ? match.away : match.home
       const card = match.events.find(
         (e) =>
           e.minute === play.minute &&
-          e.clubId === defending &&
+          e.clubId === defending.club.id &&
           (e.type === 'amarelo' || e.type === 'vermelho'),
       )
-      expect(card?.playerId).toBe(play.playerId)
+      if (card) expect(play.playerId).toBe(card.playerId)
+      else expect(defending.played[play.playerId!]).toBeDefined()
     }
   })
 

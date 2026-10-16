@@ -362,26 +362,42 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
 const LANES: readonly PlayLane[] = ['left', 'center', 'right']
 const BUILD_UP: readonly PlayDepth[] = ['defense', 'midfield', 'midfield', 'attack']
 
+/** Share of the moves that break down without a shot that end in a foul, booked or not. */
+const FOUL_SHARE = 0.3
+
 /**
  * Describes the minute as a move. A shot always reaches the attacking third; a
  * move that broke down stops at a foul when the defending side was booked this
- * minute, or is simply lost somewhere up the pitch.
+ * minute, or now and then at a foul nobody was booked for, or is simply lost
+ * somewhere up the pitch. All of it is drawn from `playRng`, so it never
+ * changes the match.
  */
 function recordPlay(state: MatchState, side: MatchSide, outcome: AttackOutcome, from: number) {
   const { playRng } = state
-  const defending = state[side === 'home' ? 'away' : 'home'].club.id
+  const defending = state[side === 'home' ? 'away' : 'home']
   const card = state.events
     .slice(from)
-    .find((e) => (e.type === 'amarelo' || e.type === 'vermelho') && e.clubId === defending)
+    .find((e) => (e.type === 'amarelo' || e.type === 'vermelho') && e.clubId === defending.club.id)
   const lane = playRng.pick(LANES)
-  const play: Play =
-    outcome.end !== 'none'
-      ? { minute: state.minute, side, lane, depth: 'attack', end: outcome.end }
-      : card
-        ? { minute: state.minute, side, lane, depth: playRng.pick(BUILD_UP), end: 'foul' }
-        : { minute: state.minute, side, lane, depth: playRng.pick(BUILD_UP), end: 'lost' }
-  const playerId = outcome.shooterId ?? card?.playerId
-  state.plays.push(playerId ? { ...play, playerId } : play)
+  if (outcome.end !== 'none') {
+    const play: Play = { minute: state.minute, side, lane, depth: 'attack', end: outcome.end }
+    state.plays.push(outcome.shooterId ? { ...play, playerId: outcome.shooterId } : play)
+    return
+  }
+  const depth = playRng.pick(BUILD_UP)
+  const fouler = card?.playerId ?? uncardedFouler(playRng, defending)
+  state.plays.push(
+    fouler
+      ? { minute: state.minute, side, lane, depth, end: 'foul', playerId: fouler }
+      : { minute: state.minute, side, lane, depth, end: 'lost' },
+  )
+}
+
+/** Now and then a move is stopped by a foul with no card: who gave it away. */
+function uncardedFouler(playRng: Rng, defending: TeamState): string | undefined {
+  const outfield = defending.onPitch.filter((p) => p.position !== 'G')
+  if (outfield.length === 0 || playRng.next() >= FOUL_SHARE) return undefined
+  return weightedPick(playRng, outfield, (p) => FOUL_WEIGHT[p.position]).player.id
 }
 
 function removeFromPitch(team: TeamState, leaving: OnPitch) {
@@ -572,9 +588,10 @@ const CLEAN_SHEET_POINTS: Record<Position, number> = { G: 0.6, Z: 0.4, L: 0.3, M
 
 /**
  * Everyone's rating out of 10: 6 to start, the result, goals and saves and
- * cards, goals let in at the back, and a little of what the numbers miss.
+ * cards, goals let in at the back, and with `luck` a little of what the
+ * numbers miss.
  */
-function ratings(state: MatchState): Record<string, number> {
+function ratings(state: MatchState, luck: boolean): Record<string, number> {
   const out: Record<string, number> = {}
   for (const side of ['home', 'away'] as const) {
     const team = state[side]
@@ -589,12 +606,41 @@ function ratings(state: MatchState): Record<string, number> {
     for (const [id, position] of Object.entries(team.played)) {
       const back =
         conceded === 0 ? CLEAN_SHEET_POINTS[position] : -CONCEDED_POINTS[position] * conceded
-      const noise = (mixSeed(team.club.id, id, state.events.length, 'nota') % 1000) / 1000 - 0.5
+      const noise = luck
+        ? (mixSeed(team.club.id, id, state.events.length, 'nota') % 1000) / 1000 - 0.5
+        : 0
       const rating = 6 + result + back + (state.marks[id] ?? 0) + 0.8 * noise
       out[id] = Math.round(10 * Math.min(10, Math.max(3, rating))) / 10
     }
   }
   return out
+}
+
+/**
+ * Ratings as the match stands, for everyone who has played so far: the same
+ * sum as the final rating, the score so far counting as the result, without
+ * the touch of luck added at the end.
+ */
+export function liveRatings(state: MatchState): Record<string, number> {
+  return ratings(state, false)
+}
+
+/** One side's numbers as the match stands; possession in percent. */
+export type LiveStats = TeamStats & { fouls: number }
+
+/**
+ * Both sides' numbers so far. Fouls are the moves that ended in a foul by the
+ * side defending them; counting them changes nothing in the match.
+ */
+export function liveStats(state: MatchState): Record<MatchSide, LiveStats> {
+  const total = state.home.possessionMinutes + state.away.possessionMinutes
+  const homePossession = total ? Math.round((100 * state.home.possessionMinutes) / total) : 50
+  const fouls = (side: MatchSide) =>
+    state.plays.filter((p) => p.end === 'foul' && p.side !== side).length
+  return {
+    home: { ...state.home.stats, possession: homePossession, fouls: fouls('home') },
+    away: { ...state.away.stats, possession: 100 - homePossession, fouls: fouls('away') },
+  }
 }
 
 /** Energy everyone who played was left with. */
@@ -624,7 +670,7 @@ export function matchResult(state: MatchState): MatchResult {
     },
     sentOff: state.sentOff,
     injured: state.injured,
-    ratings: ratings(state),
+    ratings: ratings(state, true),
     energy: energyLeft(state),
   }
 }

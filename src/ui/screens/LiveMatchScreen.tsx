@@ -3,9 +3,9 @@ import { PauseIcon, PlayIcon, SkipForwardIcon } from 'lucide-react'
 import { Navigate, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { matchResult, playMinute, type MatchState } from '../../engine/match/simulate.ts'
+import { liveRatings, liveStats, matchResult, playMinute } from '../../engine/match/simulate.ts'
 import type { GameState } from '../../engine/model/types.ts'
-import { CUP_ID, CUP_NAME } from '../../engine/season/cup.ts'
+import { CUP_NAME } from '../../engine/season/cup.ts'
 import {
   applyMatchDay,
   createMatchDayMatches,
@@ -20,18 +20,24 @@ import { ClubName } from '../components/ClubName.tsx'
 import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
 import { MatchPitch } from '../components/MatchPitch.tsx'
+import { MatchRatings } from '../components/MatchRatings.tsx'
+import { MatchStats } from '../components/MatchStats.tsx'
 import { divisionName, formatDayDate } from '../format.ts'
-import { playDuration } from '../pitchScene.ts'
+import { movingShare, playDuration } from '../pitchScene.ts'
+import { useRevealed } from '../useRevealed.ts'
 import { useShownScore } from '../useShownScore.ts'
 import { announceChanges } from '../announce.ts'
 
 /** Milliseconds per minute in text only, and per shortest play on the pitch. */
-const SPEEDS = { Lento: 500, Normal: 200, Rápido: 50 } as const
-const PLAY_SPEEDS = { Lento: 1100, Normal: 650, Rápido: 300 } as const
+const SPEEDS = { Normal: 200, Rápido: 50 } as const
+const PLAY_SPEEDS = { Normal: 650, Rápido: 300 } as const
 type Speed = keyof typeof SPEEDS
 const VIEWS: MatchView[] = ['Campo', 'Só texto']
 
-/** The user's match narrated minute by minute, with the rest of the match day alongside. */
+/**
+ * The user's match narrated minute by minute, with its numbers and ratings
+ * alongside. The rest of the match day is played behind it, unseen.
+ */
 export function LiveMatchScreen() {
   const game = useGameStore((s) => s.game)
   const loading = useGameStore((s) => s.loading)
@@ -90,23 +96,19 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
     announceChanges(game, next, navigate)
   }
 
-  // The rest of the day: each division's round, or the other ties of the cup stage.
-  const groups =
-    day.kind === 'copa'
-      ? [{ id: CUP_ID, name: CUP_NAME }]
-      : [...game.world.leagues]
-          .sort(
-            (a, b) =>
-              Number(b.clubIds.includes(game.userClubId)) -
-                Number(a.clubIds.includes(game.userClubId)) || a.division - b.division,
-          )
-          .map((league) => ({ id: league.id, name: divisionName(league.division) }))
   const title =
     day.kind === 'copa'
       ? `${CUP_NAME} · ${game.season.cup!.stages[day.stage].name}`
       : `${divisionName(game.world.clubs[game.userClubId].division)} · rodada ${game.season.round}`
   const result = finished ? matchResult(state) : undefined
   const score = useShownScore(state, onPitch, PLAY_SPEEDS[speed])
+  // Beside the pitch the numbers change once the play has been seen.
+  const lastPlay = state.plays.at(-1)
+  const reveal =
+    onPitch && !finished ? playDuration(lastPlay) * PLAY_SPEEDS[speed] * movingShare(lastPlay) : 0
+  const stats = useRevealed(liveStats(state), state.minute, reveal)
+  const ratings = useRevealed(result?.ratings ?? liveRatings(state), state.minute, reveal)
+  const best = result && bestPlayer(result.ratings)
 
   return (
     <main className="min-h-screen p-4">
@@ -137,6 +139,12 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
                 ? 'Intervalo'
                 : `${state.minute}'`}
           </p>
+          {best && (
+            <p className="text-center text-sm">
+              Melhor em campo: <strong>{game.world.players[best[0]].name}</strong> (
+              {best[1].toFixed(1)})
+            </p>
+          )}
 
           <div className="flex flex-wrap items-center gap-2">
             {finished ? (
@@ -177,66 +185,29 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
             onPause={() => setPaused(true)}
             onChange={() => setTick((t) => t + 1)}
           />
-
-          {result && (
-            <table className="mx-auto text-sm tabular-nums">
-              <tbody>
-                {(
-                  [
-                    ['Posse de bola (%)', 'possession'],
-                    ['Finalizações', 'shots'],
-                    ['No gol', 'shotsOnTarget'],
-                    ['Amarelos', 'yellowCards'],
-                    ['Vermelhos', 'redCards'],
-                  ] as const
-                ).map(([label, key]) => (
-                  <tr key={key}>
-                    <td className="px-3 text-right">{result.stats.home[key]}</td>
-                    <td className="px-3 text-center text-muted-foreground">{label}</td>
-                    <td className="px-3">{result.stats.away[key]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
         </Card>
 
         <aside className="flex flex-col gap-4">
-          {groups.map((group) => (
-            <Card key={group.id} className="gap-2 px-3 py-3">
-              <h2 className="text-sm font-semibold">{group.name}</h2>
-              <ul className="flex flex-col gap-1">
-                {matches
-                  .filter((m) => m.fixture.leagueId === group.id && m !== own)
-                  .map((m) => (
-                    <OtherMatch key={m.fixture.id} state={m.state} />
-                  ))}
-              </ul>
-            </Card>
-          ))}
+          <MatchStats
+            stats={stats}
+            names={{ home: state.home.club.shortName, away: state.away.club.shortName }}
+          />
+          <MatchRatings
+            state={state}
+            ratings={ratings}
+            players={game.world.players}
+            side={side}
+            best={best?.[0]}
+          />
         </aside>
       </div>
     </main>
   )
 }
 
-/** One line of the round's scoreboard; flashes for a couple of minutes after a goal. */
-function OtherMatch({ state }: { state: MatchState }) {
-  const lastGoal = state.events.findLast((e) => e.type === 'gol')
-  const recent = lastGoal && !state.finished && state.minute - lastGoal.minute < 3
-  const scorer = (clubId: string) =>
-    recent && lastGoal.clubId === clubId ? 'font-bold text-highlight' : ''
-  return (
-    <li
-      className={`grid grid-cols-[1fr_auto_1fr] gap-2 rounded px-1 text-sm tabular-nums ${recent ? 'bg-highlight-soft' : ''}`}
-    >
-      <span className={`text-right ${scorer(state.home.club.id)}`}>
-        {state.home.club.shortName}
-      </span>
-      <span>
-        {state.home.stats.goals} x {state.away.stats.goals}
-      </span>
-      <span className={scorer(state.away.club.id)}>{state.away.club.shortName}</span>
-    </li>
-  )
+/** The highest rating of the match and whose it is; the first listed wins a tie. */
+function bestPlayer(ratings: Record<string, number>): [string, number] | undefined {
+  let best: [string, number] | undefined
+  for (const entry of Object.entries(ratings)) if (!best || entry[1] > best[1]) best = entry
+  return best
 }
