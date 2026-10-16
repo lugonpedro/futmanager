@@ -7,6 +7,8 @@ import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { CloudScreen } from './ui/screens/CloudScreen.tsx'
 import { EditorScreen } from './ui/screens/EditorScreen.tsx'
 import { FantasyScreen } from './ui/screens/FantasyScreen.tsx'
+import { FantasyInviteScreen } from './ui/screens/FantasyInviteScreen.tsx'
+import { FantasyLeagueScreen } from './ui/screens/FantasyLeagueScreen.tsx'
 import { FantasyRoundScreen } from './ui/screens/FantasyRoundScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { ClubScreen } from './ui/screens/game/ClubScreen.tsx'
@@ -45,6 +47,8 @@ export default function App() {
         <Route path="/nuvem" element={<CloudScreen />} />
         <Route path="/fantasia" element={<FantasyScreen />} />
         <Route path="/fantasia/rodada/:round" element={<FantasyRoundScreen />} />
+        <Route path="/fantasia/liga/:id" element={<FantasyLeagueScreen />} />
+        <Route path="/fantasia/convite/:code" element={<FantasyInviteScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />
           <Route path="time" element={<TeamScreen />} />
