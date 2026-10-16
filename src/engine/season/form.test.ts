@@ -57,20 +57,35 @@ describe('a round of football', () => {
   })
 
   it('picks a best XI of the round in a 4-3-3', () => {
-    const stars = played.season.roundStars.map((id) => played.world.players[id])
+    const stars = played.season.roundStars.map((star) => played.world.players[star.playerId])
     expect(stars).toHaveLength(11)
     expect(stars.filter((p) => p.position === 'G')).toHaveLength(1)
     expect(stars.filter((p) => p.position === 'A')).toHaveLength(3)
     expect(new Set(stars.map((p) => p.id)).size).toBe(11)
   })
 
-  it('takes the best rating for each place', () => {
-    const results = [{ ratings: { a: 7, b: 9, c: 8 } }] as unknown as MatchResult[]
+  it('takes the best rating for each place, with the goals and saves behind it', () => {
+    const results = [
+      {
+        homeId: 'X',
+        awayId: 'Y',
+        ratings: { a: 7, b: 9, c: 8 },
+        events: [
+          { type: 'gol', clubId: 'Y', playerId: 'c' },
+          { type: 'gol', clubId: 'Y', playerId: 'c' },
+          { type: 'defesa', clubId: 'Y', playerId: 'c' },
+          { type: 'defesa', clubId: 'X', playerId: 'a' },
+        ],
+      },
+    ] as unknown as MatchResult[]
     const players = {
-      a: { position: 'G' },
-      b: { position: 'G' },
-      c: { position: 'A' },
+      a: { position: 'G', clubId: 'Y' },
+      b: { position: 'G', clubId: 'X' },
+      c: { position: 'A', clubId: 'Y' },
     } as unknown as Parameters<typeof roundStars>[1]
-    expect(roundStars(results, players)).toEqual(['b', 'c'])
+    expect(roundStars(results, players)).toEqual([
+      { playerId: 'b', rating: 9, goals: 0, saves: 1 },
+      { playerId: 'c', rating: 8, goals: 2, saves: 0 },
+    ])
   })
 })

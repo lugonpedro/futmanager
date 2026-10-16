@@ -34,9 +34,9 @@ import {
   formatDayMonth,
   formatMoney,
   POSTURE_NAMES,
+  roundStarFeats,
 } from '../../format.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
-import { PlayerCard } from '../../components/PlayerCard.tsx'
 import { FixtureLine } from './FixtureLine.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
 
@@ -276,33 +276,50 @@ function NextRound({ game }: { game: GameState }) {
   )
 }
 
-/** The best XI of the last league round, every division together, as cards. */
+/** The best XI of the last league round, every division together; a name opens the card. */
 function RoundStars({ game }: { game: GameState }) {
   const [viewing, setViewing] = useState<string>()
-  const { season, world } = game
+  const { season, world, userClubId } = game
   if (season.roundStars.length === 0) return null
-  const stars = season.roundStars.map((id) => world.players[id])
   return (
-    // min-w-0: the row of cards scrolls inside the card instead of widening the page on phones.
-    <Card className="min-w-0 gap-2 px-4 md:col-span-2">
+    <Card className="gap-2 px-4 md:col-span-2">
       <h2 className="font-semibold">Seleção da rodada {season.round - 1}</h2>
       <p className="text-sm text-muted-foreground">
-        Os melhores de cada posição na última rodada, de todas as divisões. Eles ficam com a carta
-        especial até a próxima rodada.
+        Os melhores de cada posição na última rodada, de todas as divisões. Toque no nome para ver a
+        carta.
       </p>
-      <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2">
-        {stars.map((player) => (
-          <button
-            key={player.id}
-            type="button"
-            className="cursor-pointer rounded-t-[2.5rem] rounded-b-2xl text-left transition-transform hover:-translate-y-1"
-            onClick={() => setViewing(player.id)}
-            aria-label={`Ver ${player.name}`}
-          >
-            <PlayerCard player={player} game={game} />
-          </button>
-        ))}
-      </div>
+      <ol className="grid gap-x-6 text-sm sm:grid-cols-2">
+        {season.roundStars.map((star) => {
+          const player = world.players[star.playerId]
+          const club = world.clubs[player.clubId]
+          return (
+            <li
+              key={star.playerId}
+              className="flex items-center gap-2 border-b py-1.5 last:border-0"
+            >
+              <span className="w-5 text-xs font-semibold text-muted-foreground">
+                {player.position}
+              </span>
+              <span className="flex min-w-0 flex-1 flex-col">
+                <button
+                  type="button"
+                  className="cursor-pointer truncate text-left font-medium underline-offset-2 hover:underline"
+                  onClick={() => setViewing(player.id)}
+                >
+                  {player.name}
+                </button>
+                <span
+                  className={`truncate text-xs ${club?.id === userClubId ? 'text-highlight' : 'text-muted-foreground'}`}
+                >
+                  {club ? club.shortName : 'sem clube'}
+                  {(star.goals > 0 || star.saves > 0) && ` · ${roundStarFeats(star, false)}`}
+                </span>
+              </span>
+              <span className="font-semibold tabular-nums">{star.rating.toFixed(1)}</span>
+            </li>
+          )
+        })}
+      </ol>
       {viewing && (
         <PlayerSheet
           game={game}

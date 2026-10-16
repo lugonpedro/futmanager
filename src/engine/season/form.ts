@@ -4,6 +4,7 @@ import type {
   Player,
   PlayerSeason,
   Position,
+  RoundStar,
   Season,
   World,
 } from '../model/types.ts'
@@ -75,14 +76,31 @@ const STARS_SHAPE: Record<Position, number> = { G: 1, Z: 2, L: 2, M: 3, A: 3 }
 export function roundStars(
   results: readonly MatchResult[],
   players: Readonly<Record<string, Player>>,
-): string[] {
+): RoundStar[] {
   const rated = results
     .flatMap((r) => Object.entries(r.ratings))
     .sort(([a, x], [b, y]) => y - x || a.localeCompare(b))
-  const stars: Record<Position, string[]> = { G: [], Z: [], L: [], M: [], A: [] }
-  for (const [id] of rated) {
-    const position = players[id]?.position
-    if (position && stars[position].length < STARS_SHAPE[position]) stars[position].push(id)
+  const goals = (id: string) =>
+    results.reduce(
+      (sum, r) => sum + r.events.filter((e) => e.type === 'gol' && e.playerId === id).length,
+      0,
+    )
+  // A save is told from the shooter's side, so the keeper's are the other side's saved shots.
+  const saves = (id: string) => {
+    const clubId = players[id].clubId
+    const match = results.find((r) => r.homeId === clubId || r.awayId === clubId)
+    return match?.events.filter((e) => e.type === 'defesa' && e.clubId !== clubId).length ?? 0
+  }
+  const stars: Record<Position, RoundStar[]> = { G: [], Z: [], L: [], M: [], A: [] }
+  for (const [playerId, rating] of rated) {
+    const position = players[playerId]?.position
+    if (!position || stars[position].length >= STARS_SHAPE[position]) continue
+    stars[position].push({
+      playerId,
+      rating,
+      goals: goals(playerId),
+      saves: position === 'G' ? saves(playerId) : 0,
+    })
   }
   return (Object.keys(STARS_SHAPE) as Position[]).flatMap((position) => stars[position])
 }

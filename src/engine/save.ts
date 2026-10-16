@@ -20,8 +20,14 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 7 (M3), when the round's best XI was a list of ids. */
+type V6Game = Omit<GameState, 'version' | 'season'> & {
+  version: 6
+  season: Omit<Season, 'roundStars'> & { roundStars: string[] }
+}
+
 /** A career as stored before version 6 (phase 11), before data packs and the editor. */
-type V5Game = Omit<GameState, 'version' | 'names'> & { version: 5 }
+type V5Game = Omit<V6Game, 'version' | 'names'> & { version: 5 }
 
 /** Brasfoot-style skills a player had before version 5 (phase 10), now play styles. */
 type Trait =
@@ -218,13 +224,21 @@ function fromV4(saved: V4Game): V5Game {
 }
 
 /** Every career before data packs had generated names. */
-function fromV5(saved: V5Game): GameState {
-  return { ...saved, version: SAVE_VERSION, names: {} }
+function fromV5(saved: V5Game): V6Game {
+  return { ...saved, version: 6, names: {} }
+}
+
+/**
+ * The old best XI kept no ratings or goals, so it is left out; the next league
+ * round picks a new one.
+ */
+function fromV6(saved: V6Game): GameState {
+  return { ...saved, version: SAVE_VERSION, season: { ...saved.season, roundStars: [] } }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
-  saved: GameState | V5Game | V4Game | V3Game | V2Game | V1Game,
+  saved: GameState | V6Game | V5Game | V4Game | V3Game | V2Game | V1Game,
 ): GameState {
   const version = saved.version ?? 1
   if (version >= SAVE_VERSION) return saved as GameState
@@ -232,5 +246,6 @@ export function upgradeGame(
   const v3 = version < 3 ? fromV2(v2) : (saved as V3Game)
   const v4 = version < 4 ? fromV3(v3) : (saved as V4Game)
   const v5 = version < 5 ? fromV4(v4) : (saved as V5Game)
-  return fromV5(v5)
+  const v6 = version < 6 ? fromV5(v5) : (saved as V6Game)
+  return fromV6(v6)
 }
