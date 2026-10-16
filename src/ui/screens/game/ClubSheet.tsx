@@ -79,6 +79,7 @@ export function ClubSheet(props: { game: GameState; club: Club; onClose: () => v
   const starters = lineup.starters.map((s) => ({
     player: world.players[s.playerId],
     position: s.position,
+    role: s.role,
   }))
   const sectors = sectorStrength(
     starters.map((s) => ({
@@ -87,7 +88,6 @@ export function ClubSheet(props: { game: GameState; club: Club; onClose: () => v
       form: formOf(season, s.player.id),
     })),
     lineup.posture,
-    lineup.formation,
   )
   const starting = new Set(lineup.starters.map((s) => s.playerId))
   const out = unavailablePlayers(season)

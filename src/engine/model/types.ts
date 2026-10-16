@@ -145,8 +145,21 @@ export type Formation =
 
 export type Posture = 'defensiva' | 'normal' | 'ofensiva'
 
-/** A starter and the position they play in this match (may differ from their own). */
-export type LineupSlot = { playerId: string; position: Position }
+/**
+ * What a slot of a formation asks of its player, on top of the position:
+ * GOL goleiro, ZAG zagueiro, LAT lateral, ALA ala, VOL volante, MC
+ * meio-campista, MEI meia ofensivo, ME/MD meia pela esquerda/direita, PE/PD
+ * ponta esquerda/direita, CA centroavante, SA segundo atacante.
+ */
+export type TacticalRole =
+  'GOL' | 'ZAG' | 'LAT' | 'ALA' | 'VOL' | 'MC' | 'MEI' | 'ME' | 'MD' | 'PE' | 'PD' | 'CA' | 'SA'
+
+/**
+ * A starter, the position they play in this match (may differ from their
+ * own) and the role of the slot. Saves from before roles have none; the
+ * position's plain role stands in.
+ */
+export type LineupSlot = { playerId: string; position: Position; role?: TacticalRole }
 
 export type Lineup = {
   formation: Formation

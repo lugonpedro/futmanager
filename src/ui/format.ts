@@ -13,6 +13,7 @@ import type {
   SponsorGoal,
   SponsorSlot,
   SquadFocus,
+  TacticalRole,
   TrainingIntensity,
 } from '../engine/model/types.ts'
 import { CUP_NAME } from '../engine/season/cup.ts'
@@ -38,6 +39,23 @@ export const POSITION_NAMES: Record<Position, string> = {
   L: 'Lateral',
   M: 'Meio-campo',
   A: 'Atacante',
+}
+
+/** What each tactical role is called; its key is the abbreviation the pitch shows. */
+export const TACTICAL_ROLE_NAMES: Record<TacticalRole, string> = {
+  GOL: 'Goleiro',
+  ZAG: 'Zagueiro',
+  LAT: 'Lateral',
+  ALA: 'Ala',
+  VOL: 'Volante',
+  MC: 'Meio-campista',
+  MEI: 'Meia ofensivo',
+  ME: 'Meia pela esquerda',
+  MD: 'Meia pela direita',
+  PE: 'Ponta esquerda',
+  PD: 'Ponta direita',
+  CA: 'Centroavante',
+  SA: 'Segundo atacante',
 }
 
 /** Display order on team sheets: from the goal outwards. */
