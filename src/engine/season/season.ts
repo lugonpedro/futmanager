@@ -14,6 +14,8 @@ import {
 } from '../finance/finance.ts'
 import {
   closeSponsorSeason,
+  dropLapsedSponsorOffers,
+  secondaryOffers,
   settleSponsorship,
   sponsorOffers,
   type LastSeason,
@@ -83,7 +85,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 10
+export const SAVE_VERSION = 11
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -158,7 +160,7 @@ export function openSponsorship(
   const rng = createRng(mixSeed(world.seed, season.year, clubId, 'patrocinio'))
   const offers = sponsorOffers(world.clubs[clubId], target, season.year, rng, last)
   const deadline = roundDate(season, 1)
-  return { offers, ...(deadline && { deadline }) }
+  return { offers, ...(deadline && { deadline }), secondary: [], secondaryOffers: [] }
 }
 
 /** The league a club plays in this season. */
@@ -300,6 +302,7 @@ function arrive(game: GameState, date: GameDate): GameState {
     today: date,
     season: { ...game.season, injuries },
     market: dropLapsedOffers(game.market, date),
+    sponsorship: dropLapsedSponsorOffers(game.sponsorship, date),
   }
 }
 
@@ -327,6 +330,7 @@ export function passDays(
     if (dateParts(day).day === 1) {
       next = settleSponsorship(arrive(next, day))
       next = applyPayments(next, payday(next, monthNote(day)))
+      next = secondaryOffers(next, createRng(mixSeed(next.world.seed, day, 'patrocinio-menor')))
       if (DEVELOPMENT_MONTHS.has(dateParts(day).month)) {
         next = developWorld(next, createRng(mixSeed(next.world.seed, day, 'evolucao')))
       }
@@ -774,8 +778,8 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
   const nextSeason = startSeason(nextWorld)
   // A new club, or a deal that ran out, brings new shirt offers.
   const last = final.leagues.find((l) => l.table.includes(nextClubId))
-  const sponsorship: Sponsorship = sponsor.master
-    ? { master: sponsor.master, offers: [] }
+  const shirt: Sponsorship = sponsor.master
+    ? { master: sponsor.master, offers: [], secondary: [], secondaryOffers: [] }
     : openSponsorship(
         nextWorld,
         nextClubId,
@@ -787,6 +791,8 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
           relegated: last.relegated.includes(nextClubId),
         },
       )
+  // The smaller deals still running stay on; open offers lapse with the year.
+  const sponsorship: Sponsorship = { ...shirt, secondary: sponsor.secondary }
   return {
     ...paid,
     today: seasonStart(nextYear),

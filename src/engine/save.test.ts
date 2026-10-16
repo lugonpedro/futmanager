@@ -36,6 +36,13 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('gives a version 10 save no smaller sponsors', () => {
+    const { secondary: _, secondaryOffers: __, ...shirt } = fresh.sponsorship
+    const upgraded = upgradeOld({ ...fresh, version: 10, sponsorship: shirt })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.sponsorship).toEqual(fresh.sponsorship)
+  })
+
   it('turns the individual focus of a version 9 save into plans at the usual intensity', () => {
     const id = fresh.world.clubs.C10.playerIds[0]
     const upgraded = upgradeOld({

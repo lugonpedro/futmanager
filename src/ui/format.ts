@@ -11,6 +11,7 @@ import type {
   RoundStar,
   SponsorDeal,
   SponsorGoal,
+  SponsorSlot,
   SquadFocus,
   TrainingIntensity,
 } from '../engine/model/types.ts'
@@ -219,6 +220,17 @@ export const SPONSOR_STYLE_NAMES: Record<SponsorDeal['style'], string> = {
   ousada: 'Ousada',
 }
 
+/** Where a smaller sponsor goes on the kit, to follow "na"/"no": "manga", "calção". */
+export const SPONSOR_SLOT_NAMES: Record<SponsorSlot, string> = {
+  manga: 'manga',
+  costas: 'costas',
+  calcao: 'calção',
+}
+
+/** "na manga", "nas costas", "no calção". */
+export const sponsorSlotPlace = (slot: SponsorSlot) =>
+  `${slot === 'manga' ? 'na' : slot === 'costas' ? 'nas' : 'no'} ${SPONSOR_SLOT_NAMES[slot]}`
+
 /** A sponsor's goal, to follow "se o time": "ficar no G-4", "for campeão da Série A". */
 export function sponsorGoalText(goal: SponsorGoal, division: number): string {
   if (goal.kind === 'final-copa') return `chegar à final da ${CUP_NAME}`
@@ -229,7 +241,7 @@ export function sponsorGoalText(goal: SponsorGoal, division: number): string {
 }
 
 /** "Só 2027" or "2027 a 2029". */
-export const sponsorSeasons = (deal: SponsorDeal) =>
+export const sponsorSeasons = (deal: Pick<SponsorDeal, 'firstSeason' | 'lastSeason'>) =>
   deal.firstSeason === deal.lastSeason
     ? `só ${deal.firstSeason}`
     : `${deal.firstSeason} a ${deal.lastSeason}`
