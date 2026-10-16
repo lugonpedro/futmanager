@@ -11,7 +11,6 @@ import { SponsorPanel } from './SponsorPanel.tsx'
 /** The parts of the club overview, in page order; their old tab addresses open the page there. */
 const SECTIONS = {
   diretoria: { label: 'Diretoria', panel: BoardPanel, learn: 'diretoria' },
-  financas: { label: 'Finanças', panel: FinancePanel, learn: 'financas' },
   patrocinio: { label: 'Patrocínio', panel: SponsorPanel, learn: 'financas' },
   estadio: { label: 'Estádio', panel: StadiumPanel, learn: 'financas' },
 } satisfies Record<string, { label: string; panel: unknown; learn: CareerSection }>
@@ -22,6 +21,7 @@ const OVERVIEW = 'visao'
 
 const TABS = {
   [OVERVIEW]: { label: 'Visão do clube', panel: ClubOverview },
+  financas: { label: 'Finanças', panel: FinanceTab },
   historico: { label: 'Histórico', panel: HistoryPanel },
   editor: { label: 'Editor', panel: EditorPanel },
 }
@@ -30,7 +30,7 @@ type Tab = keyof typeof TABS
 
 const isSection = (tab: string): tab is Section => tab in SECTIONS
 
-/** The club and its board: goals and trust, money and the ground on one page, then the career so far and the names. */
+/** The club and its board: goals, sponsors and the ground on one page, then the money, the career so far and the names. */
 export function ClubScreen() {
   const navigate = useNavigate()
   const { tab = OVERVIEW } = useParams()
@@ -66,7 +66,7 @@ export function ClubScreen() {
   )
 }
 
-/** The board, the money and the ground, one after the other. */
+/** The board, the sponsors and the ground, one after the other. */
 function ClubOverview() {
   return (
     <div className="flex flex-col gap-8">
@@ -84,6 +84,19 @@ function ClubOverview() {
           </section>
         )
       })}
+    </div>
+  )
+}
+
+/** The accounts, on a tab of their own: they run long with the ledger. */
+function FinanceTab() {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-lg font-semibold">Finanças</h2>
+        <LearnLink tab="carreira" section="financas" />
+      </div>
+      <FinancePanel />
     </div>
   )
 }

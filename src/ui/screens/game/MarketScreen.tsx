@@ -29,6 +29,7 @@ import {
   rejectOffer,
   wageDemand,
 } from '../../../engine/transfer/market.ts'
+import { inTransferWindow } from '../../../engine/season/calendar.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { LearnLink } from '../../components/LearnLink.tsx'
@@ -89,11 +90,16 @@ function BuyTab({ game }: { game: GameState }) {
   const [sort, setSort] = useState<Sort>('Geral')
   const [selected, setSelected] = useState<Player>()
   const [viewing, setViewing] = useState<Player>()
+  // With the window shut only free agents can sign, so they are all the list shows unless asked.
+  const [browsing, setBrowsing] = useState(false)
+  const open = inTransferWindow(game.today)
+  const signable = (p: Player) => open || p.clubId === FREE_AGENT
   const cash = world.clubs[userClubId].cash
   const query = search.trim().toLocaleLowerCase('pt-BR')
 
   const rows = Object.values(world.players)
     .filter((p) => p.clubId !== userClubId)
+    .filter((p) => browsing || signable(p))
     .filter((p) => position === 'Todos' || p.position === position)
     .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
     .filter((p) => canLeave(world, p))
@@ -106,7 +112,11 @@ function BuyTab({ game }: { game: GameState }) {
           ? a.player.age - b.player.age
           : b.player.overall - a.player.overall,
     )
-  const paged = usePage(rows, PAGE_SIZE, `${position}|${query}|${onlyAffordable}|${sort}`)
+  const paged = usePage(
+    rows,
+    PAGE_SIZE,
+    `${position}|${query}|${onlyAffordable}|${sort}|${browsing}`,
+  )
 
   return (
     <div className="flex flex-col gap-3">
@@ -138,12 +148,30 @@ function BuyTab({ game }: { game: GameState }) {
           className="h-8 sm:max-w-60"
         />
       </div>
-      <TransferWindowNote today={game.today} />
-      <p className="text-sm text-muted-foreground">
-        {rows.length} {rows.length === 1 ? 'jogador' : 'jogadores'}. Caixa: {formatMoney(cash)}.
-        Toque no nome para ver a carta, ou na linha para negociar.
-      </p>
-      <Card className="py-0">
+      {open ? (
+        <TransferWindowNote today={game.today} />
+      ) : (
+        <Card className="flex-row flex-wrap items-center justify-between gap-3 border-amber-500/40 bg-amber-500/10 px-4 py-3">
+          <TransferWindowNote today={game.today} className="text-sm" />
+          <Button variant="outline" size="sm" onClick={() => setBrowsing((b) => !b)}>
+            {browsing ? 'Só os sem clube' : 'Ver todos para observar'}
+          </Button>
+        </Card>
+      )}
+      {rows.length === 0 ? (
+        <p className="text-sm text-muted-foreground">
+          {open || browsing
+            ? 'Nenhum jogador com esses filtros.'
+            : 'Nenhum jogador sem clube agora. Em "Ver todos para observar" dá para montar a lista de quem contratar quando a janela abrir.'}
+        </p>
+      ) : (
+        <p className="text-sm text-muted-foreground">
+          {rows.length} {rows.length === 1 ? 'jogador' : 'jogadores'}
+          {!open && !browsing && ' sem clube'}. Caixa: {formatMoney(cash)}. Toque no nome para ver a
+          carta, ou na linha{open || !browsing ? '' : ' de quem está sem clube'} para negociar.
+        </p>
+      )}
+      <Card className={cn('py-0', rows.length === 0 && 'hidden')}>
         <Table className="tabular-nums">
           <TableHeader>
             <TableRow>
@@ -162,8 +190,9 @@ function BuyTab({ game }: { game: GameState }) {
               return (
                 <TableRow
                   key={player.id}
-                  className="cursor-pointer"
-                  onClick={() => setSelected(player)}
+                  className={signable(player) ? 'cursor-pointer' : 'opacity-50'}
+                  onClick={() => signable(player) && setSelected(player)}
+                  title={signable(player) ? undefined : 'Só com a janela aberta'}
                 >
                   <TableCell className="font-semibold">{player.position}</TableCell>
                   <TableCell>

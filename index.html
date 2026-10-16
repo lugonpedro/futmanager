@@ -10,13 +10,12 @@
     <title>futmanager</title>
     <script>
       // Applies the saved theme before the first paint, so dark mode doesn't flash white.
+      // Dark unless light was chosen.
+      let dark = true
       try {
-        const theme = JSON.parse(localStorage.getItem('futmanager-tema'))?.state?.theme
-        const dark =
-          theme === 'escuro' ||
-          (theme !== 'claro' && matchMedia('(prefers-color-scheme: dark)').matches)
-        if (dark) document.documentElement.classList.add('dark')
+        dark = JSON.parse(localStorage.getItem('futmanager-tema'))?.state?.theme !== 'claro'
       } catch {}
+      if (dark) document.documentElement.classList.add('dark')
     </script>
   </head>
   <body>
