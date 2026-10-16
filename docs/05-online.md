@@ -137,6 +137,14 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
 - **Quem não mexe** joga com o último time que mandou, como no Cartola. Quando a rodada roda, `fantasy-round` pontua o time de todo mundo (`scoreLineups`) e grava os pontos.
 - **Ligar no projeto**: aplicar a migração nova (`supabase db push`) e publicar a função (`supabase functions deploy fantasy-team`).
 
+## O4: rodada no app
+
+- **Tela da rodada** (`/fantasia/rodada/N`, com o botão "Ver os jogos da rodada" na tela da fantasia): os dez jogos da Série A com placar, quantos jogadores do seu time estavam em cada um, os pontos do seu time jogador por jogador (capitão contando 1,5 vez) e os dez que mais pontuaram. Setas levam às rodadas anteriores.
+- **Assistir um jogo**: o jogo roda de novo no navegador, minuto a minuto, no campo 2D ou só em texto, com estatísticas e notas, igual à partida da carreira. No apito final aparecem os pontos de cada jogador, com os do seu time em destaque.
+- **Como o jogo se repete igual**: cada rodada guarda, em `fantasy_rounds.replays` (JSON compactado, uns 55 KB por rodada), a escalação dos dois times, os jogadores envolvidos e a semente da partida. O navegador recria a partida com `replayMatch` e chega ao mesmo resultado do servidor; um teste confere isso jogo a jogo.
+- **A semente não vaza o futuro**: a semente de uma partida entrega a semente do mundo naquele momento. Por isso o servidor dá ao mundo uma semente nova antes de cada rodada e de cada temporada (`playOfficialRound` e `nextOfficialSeason` recebem a semente). O que a repetição revela já foi jogado. Como isso muda os resultados, `FANTASY_VERSION` passou para 2.
+- **Ligar no projeto**: aplicar a migração nova (`supabase db push`) e publicar de novo a função (`supabase functions deploy fantasy-round`).
+
 ## Pagamento
 
 Princípio: **pagar nunca dá vantagem em pontos**.

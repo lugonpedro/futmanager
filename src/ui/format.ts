@@ -284,3 +284,9 @@ export const rangeText = (range: { low: number; high: number }) =>
 
 /** "+2", "-1" or "0", for a change in overall. */
 export const signedChange = (change: number) => (change > 0 ? `+${change}` : String(change))
+
+/** One decimal place, as fantasy points and prices are shown: "12,5". */
+export const tenths = new Intl.NumberFormat('pt-BR', {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+})

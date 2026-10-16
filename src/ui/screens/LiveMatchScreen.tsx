@@ -24,15 +24,12 @@ import { MatchRatings } from '../components/MatchRatings.tsx'
 import { MatchStats } from '../components/MatchStats.tsx'
 import { divisionName, formatDayDate } from '../format.ts'
 import { matchKits } from '../kits.ts'
+import { PLAY_SPEEDS, SPEEDS, type Speed } from '../matchSpeeds.ts'
 import { movingShare, playDuration } from '../pitchScene.ts'
 import { useRevealed } from '../useRevealed.ts'
 import { useShownScore } from '../useShownScore.ts'
 import { announceChanges } from '../announce.ts'
 
-/** Milliseconds per minute in text only, and per shortest play on the pitch. */
-const SPEEDS = { Normal: 200, Rápido: 50 } as const
-const PLAY_SPEEDS = { Normal: 650, Rápido: 300 } as const
-type Speed = keyof typeof SPEEDS
 const VIEWS: MatchView[] = ['Campo', 'Só texto']
 
 /**

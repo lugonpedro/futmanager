@@ -1,7 +1,10 @@
 import type { OfficialClub, PoolPlayer } from '../engine/fantasy/official.ts'
 import { marketClosesAt, type FantasyTeam } from '../engine/fantasy/team.ts'
-import type { Formation } from '../engine/model/types.ts'
+import type { MatchReplay } from '../engine/match/simulate.ts'
+import type { Formation, MatchResult } from '../engine/model/types.ts'
+import type { GameDate } from '../engine/season/calendar.ts'
 import { supabase } from './client.ts'
+import { unpackJson } from './codec.ts'
 
 /** The official season as everyone sees it. */
 export type FantasySeason = {
@@ -44,10 +47,9 @@ function client() {
   return supabase
 }
 
-/** The latest official season with its market, or undefined before the first one opens. */
-export async function loadFantasy(userId?: string): Promise<FantasyView | undefined> {
-  const db = client()
-  const { data: row, error } = await db
+/** The latest official season, or undefined before the first one opens. */
+export async function loadFantasySeason(): Promise<FantasySeason | undefined> {
+  const { data: row, error } = await client()
     .from('fantasy_seasons')
     .select('id, year, status, rounds, played, clubs, last_played_at')
     .order('id', { ascending: false })
@@ -55,7 +57,7 @@ export async function loadFantasy(userId?: string): Promise<FantasyView | undefi
     .maybeSingle()
   if (error) throw error
   if (!row) return undefined
-  const season: FantasySeason = {
+  return {
     id: row.id,
     year: row.year,
     status: row.status,
@@ -64,6 +66,13 @@ export async function loadFantasy(userId?: string): Promise<FantasyView | undefi
     clubs: row.clubs,
     lastPlayedAt: new Date(row.last_played_at),
   }
+}
+
+/** The latest official season with its market, or undefined before the first one opens. */
+export async function loadFantasy(userId?: string): Promise<FantasyView | undefined> {
+  const db = client()
+  const season = await loadFantasySeason()
+  if (!season) return undefined
 
   const [round, lineups] = await Promise.all([
     db
@@ -101,6 +110,72 @@ export async function loadFantasy(userId?: string): Promise<FantasyView | undefi
     teamIsForNext: latest?.round === season.played + 1,
     lastScore: scored?.points ?? undefined,
     closesAt: open ? marketClosesAt(season.lastPlayedAt) : undefined,
+  }
+}
+
+/** A played round as the round screen shows it. */
+export type FantasyRoundView = {
+  round: number
+  date: GameDate
+  /** The top-division matches, and what it takes to watch each again. */
+  results: MatchResult[]
+  replays: MatchReplay[]
+  points: Record<string, number>
+  /** The market the round's teams were picked from. */
+  pool: Record<string, PoolPlayer>
+  /** The player's team in the round, with what it scored. */
+  team?: FantasyTeam & { points?: number }
+}
+
+/** One played round of the season, with the player's team in it when signed in. */
+export async function loadFantasyRound(
+  seasonId: number,
+  round: number,
+  userId?: string,
+): Promise<FantasyRoundView> {
+  const db = client()
+  const [played, market, lineup] = await Promise.all([
+    db
+      .from('fantasy_rounds')
+      .select('game_date, results, points, replays')
+      .eq('season_id', seasonId)
+      .eq('round', round)
+      .single(),
+    db
+      .from('fantasy_rounds')
+      .select('pool')
+      .eq('season_id', seasonId)
+      .eq('round', round - 1)
+      .single(),
+    userId
+      ? db
+          .from('fantasy_lineups')
+          .select('round, formation, player_ids, captain_id, points')
+          .eq('season_id', seasonId)
+          .eq('user_id', userId)
+          .eq('round', round)
+          .maybeSingle()
+      : Promise.resolve({ data: null, error: null }),
+  ])
+  if (played.error) throw played.error
+  if (market.error) throw market.error
+  if (lineup.error) throw lineup.error
+  const row = lineup.data as LineupRow | null
+  return {
+    round,
+    date: played.data.game_date,
+    results: played.data.results,
+    replays: played.data.replays ? await unpackJson<MatchReplay[]>(played.data.replays) : [],
+    points: played.data.points,
+    pool: market.data.pool,
+    team: row
+      ? {
+          formation: row.formation,
+          playerIds: row.player_ids,
+          captainId: row.captain_id,
+          points: row.points ?? undefined,
+        }
+      : undefined,
   }
 }
 

@@ -1,4 +1,5 @@
-import type { GameState, MatchResult, Position } from '../model/types.ts'
+import type { MatchReplay } from '../match/simulate.ts'
+import type { GameState, MatchResult, Player, Position } from '../model/types.ts'
 import type { DataPack } from '../pack/pack.ts'
 import type { GameDate } from '../season/calendar.ts'
 import {
@@ -14,7 +15,7 @@ import { roundPoints } from './scoring.ts'
  * Changes whenever the rules or the engine would score the same round
  * differently, so each official season records which rules it was played by.
  */
-export const FANTASY_VERSION = 1
+export const FANTASY_VERSION = 2
 
 /**
  * The official season the whole online game shares, as the server keeps it.
@@ -50,6 +51,8 @@ export type OfficialRound = {
   points: Record<string, number>
   /** Who can be picked for the next round, at the prices after this one. */
   pool: Record<string, PoolPlayer>
+  /** What it takes to watch each of `results` again, in the same order. */
+  replays: MatchReplay[]
 }
 
 const topDivision = (game: GameState) => game.world.leagues.find((l) => l.division === 1)!
@@ -85,6 +88,31 @@ function pool(game: GameState, prices: Record<string, number>): Record<string, P
 }
 
 /**
+ * A fresh seed for the world before each step. A replay gives away the seed
+ * its match was played with, and from it the world's; with a new one each
+ * time, what it gives away is already in the past.
+ */
+const reseeded = (game: GameState, seed: number): GameState => ({
+  ...game,
+  world: { ...game.world, seed },
+})
+
+/** Only the players a replay needs, without their past seasons. */
+function slim(replay: MatchReplay): MatchReplay {
+  const { home, away } = replay.input
+  const ids = [home, away].flatMap((t) => [
+    ...t.lineup.starters.map((s) => s.playerId),
+    ...t.lineup.bench,
+  ])
+  const players: Record<string, Player> = {}
+  for (const id of ids) {
+    const { history: _history, ...player } = replay.input.players[id]
+    players[id] = player
+  }
+  return { ...replay, input: { ...replay.input, players } }
+}
+
+/**
  * Nobody manages the game's own club: the board's verdict is ignored, so the
  * season always goes on. The club itself is the weakest of the second
  * division, where being left alone matters least.
@@ -99,7 +127,14 @@ function opening(game: GameState): { state: OfficialState; round: OfficialRound 
   const state = { game, prices, recent: {} }
   return {
     state,
-    round: { round: 0, date: game.today, results: [], points: {}, pool: pool(game, prices) },
+    round: {
+      round: 0,
+      date: game.today,
+      results: [],
+      points: {},
+      pool: pool(game, prices),
+      replays: [],
+    },
   }
 }
 
@@ -116,33 +151,47 @@ export function startOfficialSeason(
   return opening(newGame(seed, weakest, pack))
 }
 
-/** The same world's next season, with prices set afresh from the overall. */
-export function nextOfficialSeason(state: OfficialState): {
+/**
+ * The same world's next season, with prices set afresh from the overall.
+ * `seed` is new randomness from the server, as for playOfficialRound().
+ */
+export function nextOfficialSeason(
+  state: OfficialState,
+  seed: number,
+): {
   state: OfficialState
   round: OfficialRound
 } {
-  return opening(startNextSeason(managed(state.game)))
+  return opening(startNextSeason(managed(reseeded(state.game, seed))))
 }
 
 /**
  * Plays the match days up to and including the next league round and scores
- * the top-division matches. Prices move only for those who played.
+ * the top-division matches. Prices move only for those who played. `seed` is
+ * new randomness from the server, so the replays published with the round
+ * never tell what comes next.
  */
-export function playOfficialRound(state: OfficialState): {
+export function playOfficialRound(
+  state: OfficialState,
+  seed: number,
+): {
   state: OfficialState
   round: OfficialRound
 } {
   if (officialSeasonOver(state)) throw new Error('The season is over')
   const prices = { ...state.prices }
   const recent = { ...state.recent }
-  let game = state.game
+  let game = reseeded(state.game, seed)
   for (;;) {
     const played = playMatchDayWithResults(managed(game))
     game = played.game
     if (played.day.kind !== 'liga') continue
 
     const top = new Set(topDivision(played.game).clubIds)
-    const results = played.results.filter((r) => top.has(r.homeId))
+    const shown = played.results.flatMap((result, i) =>
+      top.has(result.homeId) ? [{ result, replay: played.replays[i] }] : [],
+    )
+    const results = shown.map((m) => m.result)
     const points = roundPoints(results)
     for (const [id, p] of Object.entries(points)) {
       recent[id] = [...(recent[id] ?? []), p].slice(-PRICES.recent)
@@ -159,6 +208,7 @@ export function playOfficialRound(state: OfficialState): {
         results,
         points,
         pool: pool(game, prices),
+        replays: shown.map((m) => slim(m.replay)),
       },
     }
   }
