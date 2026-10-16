@@ -37,6 +37,14 @@ export function PrivacyScreen() {
             times.
           </li>
           <li>
+            Na fantasia online: seus times de cada rodada e as ligas em que você está. Quem está
+            numa liga com você vê o seu apelido, o seu escudo e os seus pontos.
+          </li>
+          <li>
+            Se comprar o passe da temporada: a data, o valor e o código do pagamento. Os dados do
+            cartão ou do Pix ficam só com o Stripe, que processa o pagamento.
+          </li>
+          <li>
             Registros técnicos de acesso (como endereço IP e horário de entrada), mantidos pelo
             provedor por segurança.
           </li>
@@ -45,17 +53,18 @@ export function PrivacyScreen() {
 
       <Section title="Para que usamos">
         <p>
-          Só para fazer a conta funcionar: entrar, guardar e sincronizar suas carreiras e, quando
-          existirem, as ligas com amigos. Não vendemos dados, não mostramos anúncios e não usamos
-          rastreadores. Suas carreiras na nuvem são privadas: só você, entrando na sua conta,
-          consegue vê-las.
+          Só para fazer a conta funcionar: entrar, guardar e sincronizar suas carreiras, montar a
+          fantasia online e as ligas com amigos, e liberar o passe que você comprou. Não vendemos
+          dados, não mostramos anúncios e não usamos rastreadores. Suas carreiras na nuvem são
+          privadas: só você, entrando na sua conta, consegue vê-las.
         </p>
       </Section>
 
       <Section title="Onde ficam">
         <p>
           A conta e as carreiras ficam no Supabase, o serviço de login e banco de dados que o
-          futmanager usa. Os servidores podem ficar fora do Brasil.
+          futmanager usa. Os pagamentos passam pelo Stripe. Os servidores dos dois podem ficar fora
+          do Brasil.
         </p>
       </Section>
 

@@ -9,6 +9,7 @@ import { EditorScreen } from './ui/screens/EditorScreen.tsx'
 import { FantasyScreen } from './ui/screens/FantasyScreen.tsx'
 import { FantasyInviteScreen } from './ui/screens/FantasyInviteScreen.tsx'
 import { FantasyLeagueScreen } from './ui/screens/FantasyLeagueScreen.tsx'
+import { FantasyPassScreen } from './ui/screens/FantasyPassScreen.tsx'
 import { FantasyRoundScreen } from './ui/screens/FantasyRoundScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { ClubScreen } from './ui/screens/game/ClubScreen.tsx'
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/fantasia/rodada/:round" element={<FantasyRoundScreen />} />
         <Route path="/fantasia/liga/:id" element={<FantasyLeagueScreen />} />
         <Route path="/fantasia/convite/:code" element={<FantasyInviteScreen />} />
+        <Route path="/fantasia/passe" element={<FantasyPassScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />
           <Route path="time" element={<TeamScreen />} />

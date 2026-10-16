@@ -12,7 +12,6 @@ import {
   deleteAccount,
   saveProfile,
   sendMagicLink,
-  signInWithGoogle,
   signOut,
   syncNow,
   useAccountStore,
@@ -92,22 +91,13 @@ function SignInCard() {
     }
   }
 
-  const google = async () => {
-    setError(undefined)
-    try {
-      await signInWithGoogle()
-    } catch (e) {
-      setError(messageOf(e))
-    }
-  }
-
   return (
     <Card>
       <CardHeader>
         <CardTitle>Entrar</CardTitle>
         <CardDescription>
           A conta é opcional. Com ela suas carreiras ficam guardadas na nuvem e você continua em
-          outro aparelho. Sem senha: você entra por um link no e-mail ou com o Google.
+          outro aparelho. Sem senha: você entra por um link no e-mail.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
@@ -141,14 +131,6 @@ function SignInCard() {
             </Button>
           </form>
         )}
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="h-px flex-1 bg-border" />
-          ou
-          <span className="h-px flex-1 bg-border" />
-        </div>
-        <Button variant="outline" onClick={google}>
-          Entrar com Google
-        </Button>
         {error && (
           <p role="alert" className="text-sm text-destructive">
             {error}

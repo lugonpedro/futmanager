@@ -200,6 +200,7 @@ export async function sendMagicLink(email: string) {
   if (error) throw error
 }
 
+/** Not offered on the account page for now; kept for when Google sign-in is set up. */
 export async function signInWithGoogle() {
   const { error } = await client().auth.signInWithOAuth({
     provider: 'google',

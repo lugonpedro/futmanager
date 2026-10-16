@@ -37,7 +37,7 @@ Fechadas em 16/10/2026:
 | O3    | Time de fantasia: escalar, capitão, orçamento, mercado fecha no horário                                   | Migração (times e escalações por rodada), tela nova em `src/ui/screens` | Médio         |
 | O4    | Rodada no app: jogos narrados e no campo 2D, pontuação do seu time e de cada jogador                      | Reaproveita a tela de partida; o cliente baixa os resultados da rodada  | Pequeno       |
 | O5    | Ligas privadas com link de convite e a classificação de cada liga                                         | Migração e tela de ligas                                                | Pequeno/médio |
-| O6    | Passe da temporada                                                                                        | Funções de checkout e webhook, `entitlements`                           | Médio         |
+| O6    | Passe da temporada                                                                                        | Funções de checkout e webhook, `fantasy_passes`                         | Médio         |
 | O7    | Avisos: mercado fechando, rodada jogada (notificação do PWA e/ou e-mail)                                  | Service worker e função agendada                                        | Médio         |
 
 O1 a O5 já formam um modo jogável; até O6 chegar, criar liga fica liberado para quem testa. Nenhum passo muda `SAVE_VERSION`, porque a carreira solo não muda.
@@ -155,6 +155,34 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
 - **Até O6**, criar liga é livre para quem tem conta.
 - **Ligar no projeto**: `supabase db push`. Não há função nova para publicar.
 
+## O6: passe da temporada
+
+Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e por aceitar Pix no Brasil.
+
+- **Tela do passe** (`/fantasia/passe`): o que o passe dá, o preço (R$ 9,90) e o botão "Comprar passe". No card "Ligas", quem não tem o passe vê o aviso com o link para essa tela no lugar do campo de criar liga. Entrar nas ligas dos amigos continua grátis.
+- **Compra**: a função `fantasy-pass` confere a conta e a temporada aberta e abre uma página de pagamento do Stripe (Checkout) com o preço cadastrado lá. O pagamento acontece todo no Stripe; o jogo nunca vê dados de cartão.
+- **Confirmação**: o Stripe chama a função `stripe-webhook`, que confere a assinatura do aviso (HMAC com o segredo do webhook, recusando avisos com mais de 5 minutos) e grava o passe em `fantasy_passes`. Avisos repetidos não duplicam nada. Com Pix, o Checkout pode terminar antes do pagamento; o passe sai no aviso `checkout.session.async_payment_succeeded`.
+- **Volta do pagamento**: a tela do passe procura o passe por um minuto e mostra quando ele chega.
+- **Criar liga** agora exige o passe da temporada aberta (`create_fantasy_league` confere `fantasy_passes`).
+- **Cortesia**: para liberar o passe sem pagar (testes, amigos), grave uma linha à mão no SQL Editor: `insert into fantasy_passes (user_id, season_id, provider, payment_id, amount_cents) values ('<id do usuário>', <id da temporada>, 'cortesia', 'cortesia-1', 0);`.
+- **Reembolso**: por enquanto à mão: reembolsar no painel do Stripe e apagar a linha em `fantasy_passes`.
+- **Política de privacidade** atualizada com os times, as ligas (os membros veem apelido, escudo e pontos) e o pagamento pelo Stripe.
+- **Entrar com o Google** saiu da tela de conta por enquanto; o login fica só pelo link no e-mail.
+
+### Para ligar no Stripe (uma vez)
+
+1. Criar a conta no Stripe e começar no **modo de teste**.
+2. Em Produtos, criar "Passe da temporada" com um preço único de R$ 9,90 em BRL e copiar o id do preço (`price_...`). Se mudar o valor, mudar também `PASS_PRICE` em `src/cloud/pass.ts`.
+3. Em Configurações → Formas de pagamento, ligar o **Pix** (e o cartão, que já vem ligado).
+4. Em Desenvolvedores → Webhooks, criar um destino para `https://<ref>.supabase.co/functions/v1/stripe-webhook` com os eventos `checkout.session.completed` e `checkout.session.async_payment_succeeded`, e copiar o segredo de assinatura (`whsec_...`).
+5. Guardar os segredos no Supabase:
+   ```sh
+   supabase secrets set STRIPE_SECRET_KEY=sk_test_... STRIPE_PASS_PRICE_ID=price_... \
+     STRIPE_WEBHOOK_SECRET=whsec_... SITE_URL=https://<endereço do jogo>
+   ```
+6. Aplicar a migração e publicar as funções: `supabase db push` e `supabase functions deploy fantasy-pass stripe-webhook`.
+7. Testar com o cartão `4242 4242 4242 4242`, qualquer validade futura e qualquer CVC. Depois de conferir, repetir os passos 2, 4 e 5 no modo de produção, com as chaves `sk_live_...`.
+
 ## Pagamento
 
 Princípio: **pagar nunca dá vantagem em pontos**.
@@ -162,7 +190,7 @@ Princípio: **pagar nunca dá vantagem em pontos**.
 - **Passe da temporada**: entrar numa liga e jogar é grátis; criar liga privada exige o passe da temporada atual. Num grupo de amigos basta um pagar, o que ajuda a espalhar o jogo. Como cada temporada dura pouco mais de um mês, o preço precisa caber nesse ritmo (algo perto de R$ 10, a testar).
 - Os 5 saves na nuvem da carreira solo seguem como compra única à parte.
 - Checkout com **Mercado Pago** (Pix e cartão) ou **Stripe** (aceita Pix e facilita vender fora depois). Conferir as taxas atuais antes de escolher.
-- Uma função no Supabase cria o pagamento; o webhook do provedor confirma e grava em `entitlements` (que ganha uma coluna como `pass_season`, a temporada até a qual o passe vale). O navegador nunca escreve ali.
+- Uma função no Supabase cria o pagamento; o webhook do provedor confirma e grava o passe no banco. O navegador nunca escreve ali (feito em O6, com a tabela `fantasy_passes`).
 - Página de compra, recibo por e-mail e um jeito de pedir reembolso.
 - Nas lojas de celular (fase 14, Capacitor) a compra dentro do app passa pela loja, que fica com uma parte. Fica para quando chegar lá.
 
