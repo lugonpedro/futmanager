@@ -11,6 +11,7 @@ import type {
   PlayStyle,
   Season,
   SponsorDeal,
+  Sponsorship,
   TransferNews,
   TransferOffer,
   World,
@@ -22,8 +23,14 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 10, with only the shirt sponsor. */
+type V9Game = Omit<GameState, 'version' | 'sponsorship'> & {
+  version: 9
+  sponsorship: Omit<Sponsorship, 'secondary' | 'secondaryOffers'>
+}
+
 /** A career as stored before version 9 (M8), without training or loans. */
-type V8Game = Omit<GameState, 'version' | 'training' | 'loans' | 'growth'> & { version: 8 }
+type V8Game = Omit<V9Game, 'version' | 'training' | 'loans' | 'growth'> & { version: 8 }
 
 /** A career as stored before version 8 (M7), when sponsorship was a fixed monthly sum. */
 type V7Game = Omit<V8Game, 'version' | 'sponsorship'> & { version: 7 }
@@ -262,13 +269,22 @@ function fromV7(saved: V7Game): V8Game {
   }
   return { ...saved, version: 8, sponsorship: { master, offers: [] } }
 }
-function fromV8(saved: V8Game): GameState {
-  return { ...saved, version: SAVE_VERSION, training: NO_TRAINING, loans: [] }
+function fromV8(saved: V8Game): V9Game {
+  return { ...saved, version: 9, training: NO_TRAINING, loans: [] }
+}
+
+/** No smaller sponsors yet; offers come on the next 1st of a month. */
+function fromV9(saved: V9Game): GameState {
+  return {
+    ...saved,
+    version: SAVE_VERSION,
+    sponsorship: { ...saved.sponsorship, secondary: [], secondaryOffers: [] },
+  }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
-  saved: GameState | V8Game | V7Game | V6Game | V5Game | V4Game | V3Game | V2Game | V1Game,
+  saved: GameState | V9Game | V8Game | V7Game | V6Game | V5Game | V4Game | V3Game | V2Game | V1Game,
 ): GameState {
   const version = saved.version ?? 1
   if (version >= SAVE_VERSION) return saved as GameState
@@ -279,5 +295,6 @@ export function upgradeGame(
   const v6 = version < 6 ? fromV5(v5) : (saved as V6Game)
   const v7 = version < 7 ? fromV6(v6) : (saved as V7Game)
   const v8 = version < 8 ? fromV7(v7) : (saved as V8Game)
-  return fromV8(v8)
+  const v9 = version < 9 ? fromV8(v8) : (saved as V9Game)
+  return fromV9(v9)
 }

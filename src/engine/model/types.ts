@@ -394,6 +394,23 @@ export type SponsorDeal = {
   lastSeason: number
 }
 
+/** Where on the kit a smaller sponsor goes, besides the master's spot on the chest. */
+export type SponsorSlot = 'manga' | 'costas' | 'calcao'
+
+/** A smaller sponsorship of the user's club: a fixed monthly sum, no goal. Fictional companies only. */
+export type SecondaryDeal = {
+  id: string
+  company: string
+  slot: SponsorSlot
+  /** Paid on the 1st of each month. */
+  monthly: number
+  /** Seasons the deal covers, both included. */
+  firstSeason: number
+  lastSeason: number
+  /** While offered: the last day it can be taken. */
+  expires?: GameDate
+}
+
 export type Sponsorship = {
   /** The shirt sponsor, once signed. */
   master?: SponsorDeal
@@ -401,6 +418,10 @@ export type Sponsorship = {
   offers: SponsorDeal[]
   /** If no offer is taken by this day, the board signs the safest. */
   deadline?: GameDate
+  /** Smaller sponsors signed, at most one per slot. */
+  secondary: SecondaryDeal[]
+  /** Smaller offers waiting for an answer; they lapse after `expires`. */
+  secondaryOffers: SecondaryDeal[]
 }
 
 /** What the whole squad works on: one group of attributes, or rest. */

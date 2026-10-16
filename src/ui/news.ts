@@ -2,7 +2,7 @@ import type { GameState, TransferOffer } from '../engine/model/types.ts'
 import { CUP_NAME, cupWinner } from '../engine/season/cup.ts'
 import { transferWindowAt } from '../engine/season/calendar.ts'
 import { isSeasonOver, seasonReview, seasonSummary } from '../engine/season/season.ts'
-import { divisionName, formatDayMonth, formatMoney } from './format.ts'
+import { divisionName, formatDayMonth, formatMoney, sponsorSlotPlace } from './format.ts'
 
 export type NewsTone = 'info' | 'success' | 'warning' | 'error'
 
@@ -86,6 +86,23 @@ export function newsBetween(before: GameState, after: GameState): News[] {
     news.push({
       tone: 'info',
       text: `${after.sponsorship.offers.length} empresas querem ser o patrocinador master.`,
+      link: SPONSOR,
+    })
+  }
+
+  const knownSponsors = new Set(before.sponsorship.secondaryOffers.map((o) => o.id))
+  const arrived = after.sponsorship.secondaryOffers.filter((o) => !knownSponsors.has(o.id))
+  if (arrived.length === 1) {
+    const [offer] = arrived
+    news.push({
+      tone: 'info',
+      text: `${offer.company} quer patrocinar ${sponsorSlotPlace(offer.slot)}: ${formatMoney(offer.monthly)} por mês.`,
+      link: SPONSOR,
+    })
+  } else if (arrived.length > 1) {
+    news.push({
+      tone: 'info',
+      text: `${arrived.length} empresas querem patrocinar o uniforme, além do master.`,
       link: SPONSOR,
     })
   }

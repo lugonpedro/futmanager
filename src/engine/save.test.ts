@@ -36,6 +36,13 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('gives a version 9 save no smaller sponsors', () => {
+    const { secondary: _, secondaryOffers: __, ...shirt } = fresh.sponsorship
+    const upgraded = upgradeOld({ ...fresh, version: 9, sponsorship: shirt })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.sponsorship).toEqual(fresh.sponsorship)
+  })
+
   it('gives a version 8 save balanced training and no loans', () => {
     const { training: _, loans: __, ...v8 } = fresh
     const upgraded = upgradeOld({ ...v8, version: 8 })

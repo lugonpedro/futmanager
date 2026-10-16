@@ -1,19 +1,30 @@
 import { describe, expect, it } from 'vitest'
-import type { GameState } from '../model/types.ts'
+import type { GameState, SponsorDeal, Sponsorship } from '../model/types.ts'
 import { createRng } from '../rng.ts'
 import { passDays, newGame, playRound, isSeasonOver, startNextSeason } from '../season/season.ts'
-import { addDays } from '../season/calendar.ts'
+import { addDays, dateOf } from '../season/calendar.ts'
 import { monthlySponsorship } from './economy.ts'
 import {
   closeSponsorSeason,
+  declineSecondary,
   goalMet,
+  secondaryOffers,
+  signSecondary,
   signSponsor,
   SPONSOR,
   sponsorOffers,
   userSponsorPayment,
+  userSponsorTotal,
 } from './sponsors.ts'
 
 const start = newGame(5, 'C3')
+/** A sponsorship with just this shirt deal. */
+const only = (master: SponsorDeal): Sponsorship => ({
+  master,
+  offers: [],
+  secondary: [],
+  secondaryOffers: [],
+})
 const club = start.world.clubs.C3
 
 describe('sponsorOffers', () => {
@@ -69,7 +80,12 @@ describe('the shirt deal in a career', () => {
   it('pays the signed deal each month', () => {
     const bold = start.sponsorship.offers[2]
     const signed = signSponsor(start, bold.id)
-    expect(signed.sponsorship).toEqual({ master: bold, offers: [] })
+    expect(signed.sponsorship).toEqual({
+      master: bold,
+      offers: [],
+      secondary: [],
+      secondaryOffers: [],
+    })
     const paid = passDays(signed, addDays(signed.today, 40)).game
     const lines = paid.ledger.filter((e) => e.category === 'patrocinio')
     expect(lines.length).toBeGreaterThan(0)
@@ -94,14 +110,14 @@ describe('closing the season', () => {
     expect(goalMet(deal.goal, result)).toBe(true)
     expect(goalMet(deal.goal, { ...result, position: 5 })).toBe(false)
     expect(goalMet({ kind: 'final-copa' }, { ...result, cupFinal: true })).toBe(true)
-    const closed = closeSponsorSeason({ master: deal, offers: [] }, result, '2027-12-31', ends)
+    const closed = closeSponsorSeason(only(deal), result, '2027-12-31', ends)
     expect(closed.bonus?.amount).toBe(deal.bonus)
   })
 
   it('ends the deal after its last season, on relegation or when the manager moves', () => {
     const long = { ...deal, lastSeason: deal.firstSeason + 2 }
     const close = (e: Partial<typeof ends>, master = long) =>
-      closeSponsorSeason({ master, offers: [] }, result, '2027-12-31', { ...ends, ...e }).master
+      closeSponsorSeason(only(master), result, '2027-12-31', { ...ends, ...e }).master
     expect(close({})).toBe(long)
     expect(close({}, { ...deal, lastSeason: deal.firstSeason })).toBeUndefined()
     expect(close({ relegated: true })).toBeUndefined()
@@ -111,10 +127,86 @@ describe('closing the season', () => {
   it('brings new offers when the deal runs out', () => {
     let game: GameState = signSponsor(start, start.sponsorship.offers[0].id)
     const master = { ...game.sponsorship.master!, lastSeason: game.season.year }
-    game = { ...game, sponsorship: { master, offers: [] } }
+    game = { ...game, sponsorship: only(master) }
     while (!isSeasonOver(game.season)) game = playRound(game)
     const next = startNextSeason(game)
     expect(next.sponsorship.master).toBeUndefined()
     expect(next.sponsorship.offers.map((o) => o.firstSeason)).toEqual([2028, 2028, 2028])
+  })
+})
+
+describe('smaller sponsors', () => {
+  /** A month gone by with every slot asked for, so offers are sure to come. */
+  const asked = (game: GameState, seed = 1) => {
+    let next = game
+    for (let i = 0; i < 20 && next.sponsorship.secondaryOffers.length < 3; i++) {
+      next = secondaryOffers(next, createRng(seed + i))
+    }
+    return next
+  }
+  const signed = signSponsor(start, start.sponsorship.offers[0].id)
+  const offered = asked(signed)
+
+  it('offers one deal per slot, from companies not already on the kit', () => {
+    const offers = offered.sponsorship.secondaryOffers
+    expect(offers.map((o) => o.slot).sort()).toEqual(['calcao', 'costas', 'manga'])
+    const companies = new Set([signed.sponsorship.master!.company, ...offers.map((o) => o.company)])
+    expect(companies.size).toBe(4)
+    for (const o of offers) {
+      expect(o.monthly).toBeLessThan(signed.sponsorship.master!.monthly)
+      expect(o.expires! > offered.today).toBe(true)
+    }
+  })
+
+  it('pays each signed deal on its own line, next to the master', () => {
+    const offer = offered.sponsorship.secondaryOffers[0]
+    const taken = signSecondary(offered, offer.id)
+    expect(taken.sponsorship.secondary).toEqual([
+      expect.objectContaining({ company: offer.company, slot: offer.slot }),
+    ])
+    expect(taken.sponsorship.secondary[0].expires).toBeUndefined()
+    expect(userSponsorTotal(taken)).toBe(signed.sponsorship.master!.monthly + offer.monthly)
+    const paid = passDays(taken, addDays(taken.today, 40)).game
+    const notes = paid.ledger.filter((e) => e.category === 'patrocinio').map((e) => e.note)
+    expect(notes.some((n) => n.includes(offer.company))).toBe(true)
+    expect(notes.some((n) => n.includes(signed.sponsorship.master!.company))).toBe(true)
+  })
+
+  it('keeps a slot for one sponsor and lets offers be turned down or lapse', () => {
+    const offer = offered.sponsorship.secondaryOffers[0]
+    const declined = declineSecondary(offered, offer.id)
+    expect(declined.sponsorship.secondaryOffers).toHaveLength(2)
+    const again = asked(signSecondary(offered, offer.id), 50)
+    expect(again.sponsorship.secondaryOffers.some((o) => o.slot === offer.slot)).toBe(false)
+    const later = passDays(offered, addDays(offered.today, SPONSOR.offerDays + 1)).game
+    expect(later.sponsorship.secondaryOffers.map((o) => o.id)).not.toContain(offer.id)
+  })
+
+  it('come on their own over a season', () => {
+    let game = signed
+    const seen = new Set<string>()
+    for (let month = 2; month <= 8; month++) {
+      game = passDays(game, dateOf(game.season.year, month, 2)).game
+      for (const o of game.sponsorship.secondaryOffers) seen.add(o.id)
+    }
+    expect(seen.size).toBeGreaterThan(0)
+  })
+
+  it('end with the season they run to, on relegation or when the manager moves', () => {
+    const offer = offered.sponsorship.secondaryOffers[0]
+    const deal = { ...offer, lastSeason: offer.firstSeason + 1 }
+    const sponsorship = { ...only(signed.sponsorship.master!), secondary: [deal] }
+    const result = { division: 1, position: 10, promoted: false, cupFinal: false }
+    const close = (e: { relegated?: boolean; moving?: boolean; nextYear?: number }) =>
+      closeSponsorSeason(sponsorship, result, '2027-12-31', {
+        relegated: false,
+        moving: false,
+        nextYear: offer.firstSeason + 1,
+        ...e,
+      }).secondary
+    expect(close({})).toEqual([deal])
+    expect(close({ nextYear: offer.firstSeason + 2 })).toEqual([])
+    expect(close({ relegated: true })).toEqual([])
+    expect(close({ moving: true })).toEqual([])
   })
 })
