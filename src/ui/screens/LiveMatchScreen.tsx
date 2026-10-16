@@ -23,6 +23,7 @@ import { MatchPitch } from '../components/MatchPitch.tsx'
 import { divisionName, formatDayDate } from '../format.ts'
 import { playDuration } from '../pitchScene.ts'
 import { useShownScore } from '../useShownScore.ts'
+import { announceChanges } from '../announce.ts'
 
 /** Milliseconds per minute in text only, and per shortest play on the pitch. */
 const SPEEDS = { Lento: 500, Normal: 200, Rápido: 50 } as const
@@ -80,13 +81,13 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
   }
 
   const finish = () => {
-    setGame(
-      applyMatchDay(
-        game,
-        matches.map((m) => matchResult(m.state)),
-      ),
+    const next = applyMatchDay(
+      game,
+      matches.map((m) => matchResult(m.state)),
     )
+    setGame(next)
     navigate('/jogo')
+    announceChanges(game, next, navigate)
   }
 
   // The rest of the day: each division's round, or the other ties of the cup stage.

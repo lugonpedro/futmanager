@@ -45,7 +45,7 @@ O motor **já para** no dia em que um clube faz proposta por um jogador do usuá
 "Simular jogo" e "Simular até o fim da temporada" pedem confirmação num modal:
 
 - **Simular jogo**: "O jogo contra X vai ser simulado sem você assistir. Continuar?"
-- **Simular até o fim**: "Todas as rodadas que faltam (N) vão ser simuladas com a escalação automática. Propostas que chegarem no caminho vão expirar. Continuar?"
+- **Simular até o fim**: "Todas as rodadas que faltam (N) vão ser simuladas com a sua escalação, trocando quem se lesionar ou for suspenso. Propostas que chegarem no caminho vão expirar. Continuar?"
 - Uma caixa "Não perguntar de novo" guarda a escolha no navegador.
 
 ### Onde mais notificar

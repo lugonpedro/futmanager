@@ -57,6 +57,9 @@ import { download } from '../download.ts'
 import { divisionName, POSITION_NAMES } from '../format.ts'
 import { usePackMessage } from '../usePackMessage.ts'
 import { AI_PACK_PROMPT } from '../aiPackPrompt.ts'
+import { confirm } from '../confirm.ts'
+import { confirmReplace } from '../usePackMessage.ts'
+import { toast } from 'sonner'
 
 /** The world the editor shows behind the pack; a real career draws its own. */
 const PREVIEW_SEED = 1
@@ -108,16 +111,23 @@ export function EditorScreen() {
     setIndex(target)
   }
 
-  const clear = () => {
-    if (!window.confirm('Apagar todo o pacote? Não dá para desfazer.')) return
+  const clear = async () => {
+    const ok = await confirm({
+      title: 'Apagar pacote',
+      description: 'Apagar todo o pacote? Não dá para desfazer.',
+      action: 'Apagar',
+      destructive: true,
+    })
+    if (!ok) return
     setPack(emptyPack())
     message.show('Pacote apagado.')
   }
 
-  const exportAs = (extension: 'json' | 'csv') =>
-    extension === 'json'
-      ? download(packFileName(pack, 'json'), packToJson(pack))
-      : download(packFileName(pack, 'csv'), packToCsv(pack), CSV_TYPE)
+  const exportAs = (extension: 'json' | 'csv') => {
+    if (extension === 'json') download(packFileName(pack, 'json'), packToJson(pack))
+    else download(packFileName(pack, 'csv'), packToCsv(pack), CSV_TYPE)
+    toast.success(`Pacote exportado em ${extension.toUpperCase()}.`)
+  }
 
   const edited = pack.clubs.filter(hasClubChanges).length
 
@@ -152,10 +162,10 @@ export function EditorScreen() {
               />
             </div>
             <PackFileButton
-              onLoad={({ pack: loaded, warnings }) => {
+              onLoad={async ({ pack: loaded, warnings }) => {
                 if (
                   !packIsEmpty(pack) &&
-                  !window.confirm('Substituir o pacote que está no editor pelo do arquivo?')
+                  !(await confirmReplace('Substituir o pacote que está no editor pelo do arquivo?'))
                 ) {
                   return
                 }
@@ -163,7 +173,7 @@ export function EditorScreen() {
                 setIndex(0)
                 message.show(`Pacote "${loaded.name || 'sem nome'}" importado.`, warnings)
               }}
-              onError={(error) => message.show(error)}
+              onError={message.fail}
             />
             <Button variant="outline" onClick={() => exportAs('json')}>
               <DownloadIcon />
@@ -184,7 +194,7 @@ export function EditorScreen() {
               </Link>
             </Button>
           </div>
-          <PackMessage message={message.message} warnings={message.warnings} />
+          <PackMessage warnings={message.warnings} />
           <p className="text-xs text-muted-foreground">
             {edited === 0
               ? 'Nenhum clube editado ainda.'

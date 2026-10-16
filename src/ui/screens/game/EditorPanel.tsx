@@ -32,6 +32,9 @@ import {
 import { download } from '../../download.ts'
 import { divisionName } from '../../format.ts'
 import { usePackMessage } from '../../usePackMessage.ts'
+import { confirm } from '../../confirm.ts'
+import { confirmReplace } from '../../usePackMessage.ts'
+import { toast } from 'sonner'
 
 function originText(game: GameState): string {
   const { pack, edited } = game.names
@@ -61,10 +64,16 @@ export function EditorPanel() {
   const exportPack = () => {
     const pack = packFromWorld(world, game.names.pack ?? `Carreira ${game.season.year}`)
     download(packFileName(pack, 'json'), packToJson(pack))
+    toast.success('Pacote da carreira exportado.')
   }
 
-  const restore = () => {
-    if (!window.confirm('Voltar todos os clubes e jogadores aos nomes gerados pelo jogo?')) return
+  const restore = async () => {
+    const ok = await confirm({
+      title: 'Voltar aos nomes gerados',
+      description: 'Voltar todos os clubes e jogadores aos nomes gerados pelo jogo?',
+      action: 'Voltar',
+    })
+    if (!ok) return
     save(
       { ...game, world: restoreGeneratedNames(world), names: {} },
       'Nomes gerados de volta.',
@@ -85,9 +94,11 @@ export function EditorPanel() {
           <div className="flex flex-wrap gap-2">
             <PackFileButton
               size="sm"
-              onLoad={({ pack, warnings }) => {
+              onLoad={async ({ pack, warnings }) => {
                 const label = pack.name || 'sem nome'
-                if (!window.confirm(`Trocar os nomes da carreira pelos do pacote "${label}"?`)) {
+                if (
+                  !(await confirmReplace(`Trocar os nomes da carreira pelos do pacote "${label}"?`))
+                ) {
                   return
                 }
                 const { world: renamed, report } = applyPack(world, pack, 'names')
@@ -98,7 +109,7 @@ export function EditorPanel() {
                   warnings.concat(report.warnings),
                 )
               }}
-              onError={(error) => message.show(error)}
+              onError={message.fail}
             >
               Importar pacote (só nomes)
             </PackFileButton>
@@ -116,7 +127,7 @@ export function EditorPanel() {
               Voltar aos nomes gerados
             </Button>
           </div>
-          <PackMessage message={message.message} warnings={message.warnings} />
+          <PackMessage warnings={message.warnings} />
           <PackLegalNote />
         </CardContent>
       </Card>

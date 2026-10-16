@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { CalendarClockIcon, FastForwardIcon, PlayIcon } from 'lucide-react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { objectiveText, takeJob } from '../../../engine/career/board.ts'
@@ -23,6 +23,8 @@ import {
 import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { simulate, type SimulateAction } from '../../../worker/simulate.ts'
+import { announceChanges } from '../../announce.ts'
+import { confirm, type ConfirmRequest } from '../../confirm.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ConfidenceBar } from '../../components/Confidence.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
@@ -106,6 +108,7 @@ function competitionOf(game: GameState, fixture: Fixture): string {
 
 function NextRound({ game }: { game: GameState }) {
   const setGame = useGameStore((s) => s.setGame)
+  const navigate = useNavigate()
   const [busy, setBusy] = useState(false)
   const { season, world, userClubId } = game
   const fixture = nextUserGame(game)
@@ -127,10 +130,30 @@ function NextRound({ game }: { game: GameState }) {
     })),
   ].filter(({ id }) => squad.has(id))
 
+  const roundsLeft = season.totalRounds - season.round + 1
+  const questions: Partial<Record<SimulateAction, ConfirmRequest>> = {
+    play: fixture && {
+      title: 'Simular jogo',
+      description: `O jogo contra ${world.clubs[fixture.homeId === userClubId ? fixture.awayId : fixture.homeId].name} vai ser simulado sem você assistir. Continuar?`,
+      action: 'Simular',
+      rememberKey: 'simular-jogo',
+    },
+    season: {
+      title: 'Simular até o fim da temporada',
+      description: `${roundsLeft === 1 ? 'A rodada que falta vai ser simulada' : `Todas as ${roundsLeft} rodadas que faltam vão ser simuladas`} com a sua escalação, trocando quem se lesionar ou for suspenso. Propostas que chegarem no caminho vão expirar. Continuar?`,
+      action: 'Simular tudo',
+      rememberKey: 'simular-temporada',
+    },
+  }
+
   const run = async (action: SimulateAction) => {
+    const question = questions[action]
+    if (question && !(await confirm(question))) return
     setBusy(true)
     try {
-      setGame(await simulate(game, action))
+      const next = await simulate(game, action)
+      setGame(next)
+      announceChanges(game, next, navigate)
     } finally {
       setBusy(false)
     }
@@ -260,7 +283,8 @@ function RoundStars({ game }: { game: GameState }) {
   if (season.roundStars.length === 0) return null
   const stars = season.roundStars.map((id) => world.players[id])
   return (
-    <Card className="gap-2 px-4 md:col-span-2">
+    // min-w-0: the row of cards scrolls inside the card instead of widening the page on phones.
+    <Card className="min-w-0 gap-2 px-4 md:col-span-2">
       <h2 className="font-semibold">Seleção da rodada {season.round - 1}</h2>
       <p className="text-sm text-muted-foreground">
         Os melhores de cada posição na última rodada, de todas as divisões. Eles ficam com a carta

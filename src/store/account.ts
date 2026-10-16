@@ -1,4 +1,5 @@
 import type { User } from '@supabase/supabase-js'
+import { toast } from 'sonner'
 import { create } from 'zustand'
 import { supabase } from '../cloud/client.ts'
 import {
@@ -83,6 +84,8 @@ async function refreshOpenGame(slots: string[]) {
 }
 
 let syncing: Promise<void> | undefined
+/** Whether the last sync failed, so an outage is announced once. */
+let failing = false
 
 /** Syncs every career with the account; does nothing when signed out. */
 export function syncNow(): Promise<void> {
@@ -95,6 +98,14 @@ export function syncNow(): Promise<void> {
       await flushPushes()
       const report = await syncAll(client(), user.id)
       await refreshOpenGame(report.downloaded)
+      failing = false
+      if (report.downloaded.length > 0) {
+        toast.info(
+          report.downloaded.length === 1
+            ? 'Uma carreira veio atualizada da nuvem.'
+            : `${report.downloaded.length} carreiras vieram atualizadas da nuvem.`,
+        )
+      }
       set({
         status: 'idle',
         lastSyncAt: Date.now(),
@@ -104,6 +115,9 @@ export function syncNow(): Promise<void> {
         cloud: report.cloud,
       })
     } catch (error) {
+      // Once per outage: the next tries stay quiet until a sync goes through again.
+      if (!failing) toast.warning('Não deu para sincronizar com a nuvem agora.')
+      failing = true
       set({
         status: 'error',
         notes: [

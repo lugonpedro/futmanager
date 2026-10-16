@@ -22,6 +22,8 @@ import { ConflictDialog } from '../components/ConflictDialog.tsx'
 import { ManagerCrest } from '../components/ManagerCrest.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { MANAGER_CREST_COLORS } from '../manager.ts'
+import { confirm } from '../confirm.ts'
+import { toast } from 'sonner'
 
 const syncTime = new Intl.DateTimeFormat('pt-BR', { timeStyle: 'short' })
 
@@ -172,7 +174,8 @@ function ProfileCard() {
     try {
       await saveProfile({ ...profile, nickname })
       setDraft(undefined)
-      setMessage('Perfil salvo.')
+      setMessage(undefined)
+      toast.success('Perfil salvo.')
     } catch (e) {
       setMessage(messageOf(e))
     }
@@ -295,7 +298,10 @@ function CloudCard() {
           variant="outline"
           className="self-start"
           disabled={status === 'syncing'}
-          onClick={() => syncNow()}
+          onClick={async () => {
+            await syncNow()
+            if (useAccountStore.getState().status === 'idle') toast.success('Tudo sincronizado.')
+          }}
         >
           <RefreshCwIcon />
           Sincronizar agora
@@ -310,9 +316,13 @@ function AccountCard(props: { email?: string }) {
   const [error, setError] = useState<string>()
 
   const remove = async () => {
-    const ok = window.confirm(
-      'Apagar sua conta? O perfil e todas as carreiras salvas na nuvem serão apagados para sempre. As carreiras deste aparelho continuam aqui.',
-    )
+    const ok = await confirm({
+      title: 'Apagar conta',
+      description:
+        'O perfil e todas as carreiras salvas na nuvem serão apagados para sempre. As carreiras deste aparelho continuam aqui.',
+      action: 'Apagar conta',
+      destructive: true,
+    })
     if (!ok) return
     try {
       await deleteAccount()

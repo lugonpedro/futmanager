@@ -9,8 +9,8 @@ import {
   TrophyIcon,
   type LucideIcon,
 } from 'lucide-react'
-import { useState } from 'react'
-import { Link, Navigate, NavLink, Outlet, useLocation } from 'react-router'
+import { useEffect, useRef, useState } from 'react'
+import { Link, Navigate, NavLink, Outlet, useLocation, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
@@ -20,7 +20,22 @@ import { isSeasonOver } from '../../../engine/season/season.ts'
 import { useGameStore } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ThemeToggle } from '../../components/ThemeToggle.tsx'
+import { announce } from '../../announce.ts'
 import { divisionName, formatDayDate, formatMoney, formatShortDate } from '../../format.ts'
+import { lastDayNews } from '../../news.ts'
+
+/** On opening a career: the bids for the user's players that lapse today. */
+function useOpeningNotices() {
+  const slotId = useGameStore((s) => s.slotId)
+  const navigate = useNavigate()
+  const announced = useRef<string>(undefined)
+  useEffect(() => {
+    const game = useGameStore.getState().game
+    if (!slotId || !game || announced.current === slotId) return
+    announced.current = slotId
+    announce(lastDayNews(game), navigate)
+  }, [slotId, navigate])
+}
 
 const PAGES: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/jogo', label: 'Resumo', icon: HouseIcon, end: true },
@@ -41,6 +56,7 @@ export function GameLayout() {
   const loading = useGameStore((s) => s.loading)
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
+  useOpeningNotices()
   if (!game) {
     return loading ? (
       <p className="p-6 text-center text-muted-foreground">Carregando a carreira...</p>
