@@ -40,7 +40,7 @@ export function BoardPanel() {
   return (
     <div className="flex flex-col gap-4">
       <Card className="gap-2 px-4">
-        <h2 className="font-semibold">Diretoria</h2>
+        <h3 className="font-semibold">Meta e confiança</h3>
         {career.status === 'demitido' ? (
           <p className="text-sm text-destructive">
             Você foi demitido do {club.name}. Escolha um novo clube no Resumo.
@@ -63,7 +63,7 @@ export function BoardPanel() {
       </Card>
 
       <Card className="gap-2 px-4">
-        <h2 className="font-semibold">Propostas de emprego</h2>
+        <h3 className="font-semibold">Propostas de emprego</h3>
         {offers.length === 0 ? (
           <p className="text-sm text-muted-foreground">
             Nenhuma no momento. Os outros clubes fazem propostas no fim da temporada, olhando a sua
