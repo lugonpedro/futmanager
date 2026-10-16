@@ -1,6 +1,8 @@
 import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { LiveStats, MatchSide } from '../../engine/match/simulate.ts'
+import type { Kit } from '../kits.ts'
+import { KitSwatch } from './KitSwatch.tsx'
 
 const ROWS: { key: keyof LiveStats; label: string }[] = [
   { key: 'possession', label: 'Posse de bola (%)' },
@@ -15,14 +17,21 @@ const ROWS: { key: keyof LiveStats; label: string }[] = [
 export function MatchStats(props: {
   stats: Record<MatchSide, LiveStats>
   names: Record<MatchSide, string>
+  kits: Record<MatchSide, Kit>
 }) {
   const { home, away } = props.stats
   return (
     <Card className="gap-3 px-4 py-3">
       <h2 className="font-semibold">Estatísticas</h2>
       <div className="flex justify-between text-xs text-muted-foreground">
-        <span className="truncate">{props.names.home}</span>
-        <span className="truncate text-right">{props.names.away}</span>
+        <span className="flex min-w-0 items-center gap-1.5">
+          <KitSwatch kit={props.kits.home} />
+          <span className="truncate">{props.names.home}</span>
+        </span>
+        <span className="flex min-w-0 items-center gap-1.5">
+          <span className="truncate">{props.names.away}</span>
+          <KitSwatch kit={props.kits.away} />
+        </span>
       </div>
       <ul className="flex flex-col gap-2.5">
         {ROWS.map(({ key, label }) => {

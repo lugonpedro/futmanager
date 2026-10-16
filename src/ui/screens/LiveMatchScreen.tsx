@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { PauseIcon, PlayIcon, SkipForwardIcon } from 'lucide-react'
 import { Navigate, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
@@ -16,13 +16,14 @@ import {
 import { useGameStore } from '../../store/game.ts'
 import { useMatchViewStore, type MatchView } from '../../store/matchView.ts'
 import { Choices } from '../components/Choices.tsx'
-import { ClubName } from '../components/ClubName.tsx'
+import { KitSwatch } from '../components/KitSwatch.tsx'
 import { MatchControls } from '../components/MatchControls.tsx'
 import { MatchFeed } from '../components/MatchFeed.tsx'
 import { MatchPitch } from '../components/MatchPitch.tsx'
 import { MatchRatings } from '../components/MatchRatings.tsx'
 import { MatchStats } from '../components/MatchStats.tsx'
 import { divisionName, formatDayDate } from '../format.ts'
+import { matchKits } from '../kits.ts'
 import { movingShare, playDuration } from '../pitchScene.ts'
 import { useRevealed } from '../useRevealed.ts'
 import { useShownScore } from '../useShownScore.ts'
@@ -65,6 +66,8 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
   const { state } = own
   const side = own.fixture.homeId === game.userClubId ? 'home' : 'away'
   const finished = matches.every((m) => m.state.finished)
+  const kits = useMemo(() => matchKits(state.home.club, state.away.club), [state])
+  const kitsByClub = { [state.home.club.id]: kits.home, [state.away.club.id]: kits.away }
   const halftime = state.minute === 45 && paused
 
   // On the pitch the next minute waits for the last play to be acted out.
@@ -118,16 +121,18 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
             {title} · {formatDayDate(game.today)}
           </p>
           <div className="flex items-center justify-center gap-2 text-base font-bold sm:gap-4 sm:text-xl">
-            <span className="flex min-w-0 flex-1 justify-end text-right">
-              <ClubName club={state.home.club} />
+            <span className="flex min-w-0 flex-1 items-center justify-end gap-2 text-right">
+              <span className="truncate">{state.home.club.name}</span>
+              <KitSwatch kit={kits.home} className="size-4" />
             </span>
             <span
               className={`shrink-0 rounded-md bg-primary px-3 py-1 whitespace-nowrap text-primary-foreground tabular-nums ${score.flash ? 'animate-pulse' : ''}`}
             >
               {score.home} x {score.away}
             </span>
-            <span className="flex min-w-0 flex-1">
-              <ClubName club={state.away.club} />
+            <span className="flex min-w-0 flex-1 items-center gap-2">
+              <KitSwatch kit={kits.away} className="size-4" />
+              <span className="truncate">{state.away.club.name}</span>
             </span>
           </div>
           <p className="text-center text-sm text-muted-foreground">
@@ -172,10 +177,11 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
             </div>
           </div>
 
-          {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[speed]} />}
+          {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[speed]} kits={kits} />}
 
           <MatchFeed
             events={state.events}
+            kits={kitsByClub}
             className={onPitch ? 'max-h-48 min-h-32' : 'max-h-[50vh] min-h-48'}
           />
 
@@ -191,12 +197,14 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
           <MatchStats
             stats={stats}
             names={{ home: state.home.club.shortName, away: state.away.club.shortName }}
+            kits={kits}
           />
           <MatchRatings
             state={state}
             ratings={ratings}
             players={game.world.players}
             side={side}
+            kits={kits}
             best={best?.[0]}
           />
         </aside>

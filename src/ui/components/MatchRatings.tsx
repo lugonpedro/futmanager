@@ -4,7 +4,9 @@ import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { MatchSide, MatchState } from '../../engine/match/simulate.ts'
 import type { Player } from '../../engine/model/types.ts'
+import type { Kit } from '../kits.ts'
 import { Choices } from './Choices.tsx'
+import { KitSwatch } from './KitSwatch.tsx'
 
 /** Colour of a rating: good from 7, poor below 5.5. */
 function ratingClass(rating: number) {
@@ -22,6 +24,7 @@ export function MatchRatings(props: {
   ratings: Record<string, number>
   players: Readonly<Record<string, Player>>
   side: MatchSide
+  kits: Record<MatchSide, Kit>
   best?: string
 }) {
   const { state, ratings } = props
@@ -35,7 +38,10 @@ export function MatchRatings(props: {
   return (
     <Card className="gap-3 px-4 py-3">
       <div className="flex items-center justify-between gap-2">
-        <h2 className="font-semibold">Notas</h2>
+        <h2 className="flex items-center gap-2 font-semibold">
+          Notas
+          <KitSwatch kit={props.kits[side]} />
+        </h2>
         <Choices
           ariaLabel="Time"
           options={['home', 'away'] as const}
