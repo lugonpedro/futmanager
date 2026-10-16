@@ -93,6 +93,42 @@ Em `src/engine/fantasy/team.ts`: 11 jogadores diferentes, cada um na posição d
 
 Jogadores mais caros pontuam mais (de 1,7 de média na faixa até 2 moedas a 5,0 acima de 16), então o orçamento obriga a escolher. Os atacantes ainda rendem um pouco mais por moeda; dá para revisar quando o modo estiver no ar e houver times de verdade para comparar.
 
+## O2: temporada oficial no servidor
+
+### Como funciona
+
+- Todo dia às 21h de Brasília o Postgres (`pg_cron`) chama a função `fantasy-round` do Supabase.
+- Sem temporada em andamento, a função abre uma: a primeira sai do pacote do Brasileirão com uma semente sorteada; as seguintes continuam o mesmo mundo, com os preços recalculados pelo geral. Abrir a temporada publica a rodada 0, que é o mercado de abertura.
+- Com temporada em andamento, ela joga os dias de jogo até a próxima rodada da liga, inclusive os da copa e da Série B, pontua as partidas da Série A, move os preços e publica a rodada. Na rodada 38 a temporada fica encerrada, e a próxima abre no dia seguinte.
+- Uma segunda chamada em menos de 20 horas não faz nada, e a mesma rodada não é gravada duas vezes. Assim uma nova tentativa nunca joga duas rodadas.
+- Ninguém dirige clube nenhum. O jogo precisa de um "clube do técnico", e ele fica com o mais fraco da Série B, onde não ser cuidado no mercado pesa menos.
+- A regra é toda pura em `src/engine/fantasy/official.ts`, testada com o pacote real; a função só lê e grava no banco. Medido no Deno, abrir a temporada leva cerca de 0,3 s e jogar uma rodada cerca de 0,1 s.
+
+### Tabelas
+
+| Tabela                  | O que guarda                                                                         | Quem lê       |
+| ----------------------- | ------------------------------------------------------------------------------------ | ------------- |
+| `fantasy_seasons`       | Ano, situação, versão das regras, rodadas jogadas e os clubes da Série A             | Todos         |
+| `fantasy_rounds`        | Por rodada: as partidas da Série A, os pontos de cada jogador e o mercado da próxima | Todos         |
+| `fantasy_season_states` | O mundo inteiro comprimido e a semente                                               | Só o servidor |
+
+Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo comprimido, cerca de 145 KB.
+
+### Para ligar no projeto do Supabase (uma vez)
+
+1. Aplicar a migração: `supabase db push`.
+2. Guardar no Vault o endereço do projeto e um segredo compartilhado, no SQL Editor:
+   ```sql
+   select vault.create_secret('https://<ref>.supabase.co', 'project_url');
+   select vault.create_secret('<um segredo longo>', 'fantasy_cron_secret');
+   ```
+3. Dar o mesmo segredo à função: `supabase secrets set FANTASY_CRON_SECRET=<o mesmo segredo>`.
+4. Publicar a função: `supabase functions deploy fantasy-round`.
+5. Para abrir a primeira temporada sem esperar as 21h:
+   ```sh
+   curl -X POST https://<ref>.supabase.co/functions/v1/fantasy-round -H 'x-cron-secret: <o segredo>'
+   ```
+
 ## Pagamento
 
 Princípio: **pagar nunca dá vantagem em pontos**.

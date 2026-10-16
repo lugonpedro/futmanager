@@ -1,11 +1,8 @@
 import type { GameState } from '../engine/model/types.ts'
 
-/**
- * A career as gzip-compressed JSON in base64, the form it takes in the cloud:
- * about a seventh of the plain JSON.
- */
-export async function packGame(game: GameState): Promise<string> {
-  const stream = new Blob([JSON.stringify(game)])
+/** Any JSON value gzip-compressed in base64: about a seventh of the plain JSON. */
+export async function packJson(value: unknown): Promise<string> {
+  const stream = new Blob([JSON.stringify(value)])
     .stream()
     .pipeThrough(new CompressionStream('gzip'))
   const bytes = new Uint8Array(await new Response(stream).arrayBuffer())
@@ -16,9 +13,15 @@ export async function packGame(game: GameState): Promise<string> {
   return btoa(binary)
 }
 
-/** Reverses packGame(). The game may need upgradeGame() if an older version saved it. */
-export async function unpackGame(data: string): Promise<GameState> {
+/** Reverses packJson(). */
+export async function unpackJson<T>(data: string): Promise<T> {
   const bytes = Uint8Array.from(atob(data), (c) => c.charCodeAt(0))
   const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))
-  return JSON.parse(await new Response(stream).text()) as GameState
+  return JSON.parse(await new Response(stream).text()) as T
 }
+
+/** A career in the form it takes in the cloud. */
+export const packGame = (game: GameState): Promise<string> => packJson(game)
+
+/** Reverses packGame(). The game may need upgradeGame() if an older version saved it. */
+export const unpackGame = (data: string): Promise<GameState> => unpackJson<GameState>(data)
