@@ -22,7 +22,8 @@ import { generateWorld } from '../generate/world.ts'
 import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
 import { createMatch, simulateMatch, type MatchInput, type MatchState } from '../match/simulate.ts'
 import { applyPack, type DataPack } from '../pack/pack.ts'
-import { ageWorld, youthIntake } from '../progression/progression.ts'
+import { ageWorld, developWorld, youthIntake } from '../progression/progression.ts'
+import { injuryRisk, NO_TRAINING, recoveryRate } from '../progression/training.ts'
 import type {
   CareerSeason,
   Fixture,
@@ -36,6 +37,7 @@ import type {
   World,
 } from '../model/types.ts'
 import { createRng, mixSeed, type Rng } from '../rng.ts'
+import { returnLoans } from '../transfer/loans.ts'
 import { closeContracts, dropLapsedOffers, marketRound } from '../transfer/market.ts'
 import {
   addDays,
@@ -81,7 +83,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 8
+export const SAVE_VERSION = 9
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -134,6 +136,8 @@ export function newGame(seed: number, userClubId: string, pack?: DataPack): Game
     ledger: [],
     market: { listed: {}, offers: [], news: [] },
     sponsorship: openSponsorship(world, userClubId, career.target, season),
+    training: NO_TRAINING,
+    loans: [],
     career,
     history: [],
     names: pack ? { pack: pack.name } : {},
@@ -256,8 +260,15 @@ export function matchInput(game: GameState, fixture: Fixture): MatchInput {
     away: { club: world.clubs[fixture.awayId], lineup: away },
     players: world.players,
     condition: Object.fromEntries(
-      ids.map((id) => [id, conditionOn(season, world.players[id], fixture.date)]),
+      ids.map((id) => [
+        id,
+        conditionOn(season, world.players[id], fixture.date, recoveryRate(game, id)),
+      ]),
     ),
+    injuryRisk: {
+      ...(fixture.homeId === game.userClubId && { home: injuryRisk(game.training) }),
+      ...(fixture.awayId === game.userClubId && { away: injuryRisk(game.training) }),
+    },
     form: Object.fromEntries(ids.map((id) => [id, formOf(season, id)])),
   }
 }
@@ -292,6 +303,9 @@ function arrive(game: GameState, date: GameDate): GameState {
   }
 }
 
+/** On the 1st of these months the players develop, for the month gone by. */
+const DEVELOPMENT_MONTHS = new Set([5, 6, 7, 8, 9, 10, 11, 12])
+
 /** "Mês de abril", for the payday lines. */
 const monthNote = (date: GameDate) => `Mês de ${MONTH_NAMES[dateParts(date).month - 1]}`
 
@@ -313,6 +327,9 @@ export function passDays(
     if (dateParts(day).day === 1) {
       next = settleSponsorship(arrive(next, day))
       next = applyPayments(next, payday(next, monthNote(day)))
+      if (DEVELOPMENT_MONTHS.has(dateParts(day).month)) {
+        next = developWorld(next, createRng(mixSeed(next.world.seed, day, 'evolucao')))
+      }
     }
     const tomorrow = addDays(day, 1)
     if (weekday(tomorrow) === SATURDAY && inTransferWindow(tomorrow) && !leagueDays.has(tomorrow)) {
@@ -696,18 +713,16 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
       ...(sponsor.bonus ? [sponsor.bonus] : []),
     ],
   })
-  const aged = ageWorld(
-    recordSeasonHistory(settled.world, game.season),
-    game.season.appearances,
-    seed('idade'),
-  )
+  // The last step of the year's development, then everyone back from loan, a year older.
+  const developed = returnLoans(developWorld(settled, seed('evolucao')))
+  const aged = ageWorld(recordSeasonHistory(developed.world, game.season), seed('idade'))
   const listed = Object.fromEntries(
-    Object.entries(settled.market.listed).filter(
+    Object.entries(developed.market.listed).filter(
       ([id]) => aged.world.players[id]?.clubId === game.userClubId,
     ),
   )
   const youth = youthIntake(
-    { ...settled, world: aged.world, market: { ...settled.market, listed } },
+    { ...developed, world: aged.world, market: { ...developed.market, listed } },
     nextYear,
     seed('base'),
   )
@@ -784,6 +799,8 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
       userClubId: nextClubId,
       userLineup: undefined,
       market: { ...paid.market, listed: {}, offers: [] },
+      training: { ...paid.training, individual: {} },
+      growth: undefined,
     }),
     career: moving
       ? career

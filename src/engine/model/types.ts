@@ -403,6 +403,32 @@ export type Sponsorship = {
   deadline?: GameDate
 }
 
+/** What the whole squad works on: one group of attributes, or rest. */
+export type SquadFocus = 'equilibrado' | 'fisico' | 'tecnico' | 'tatico' | 'descanso'
+
+/** What one player works on, on top of the squad's focus. */
+export type IndividualFocus =
+  | 'finalizacao'
+  | 'passe'
+  | 'drible'
+  | 'cruzamento'
+  | 'defesa'
+  | 'cabeceio'
+  | 'velocidade'
+  | 'goleiro'
+
+export type Training = {
+  focus: SquadFocus
+  /** Up to five of the user's players with a focus of their own. */
+  individual: Record<string, IndividualFocus>
+}
+
+/** One of the user's players out on loan, back at the end of the season. */
+export type Loan = { playerId: string; clubId: string; season: number }
+
+/** How each of the user's players' overall moved in the latest monthly step. */
+export type Growth = { date: GameDate; overall: Record<string, number> }
+
 /** Everything a career needs; plain JSON so it can be saved as is. */
 export type GameState = {
   /** Save format, so older careers can be upgraded on load. */
@@ -418,6 +444,10 @@ export type GameState = {
   ledger: LedgerEntry[]
   market: Market
   sponsorship: Sponsorship
+  training: Training
+  loans: Loan[]
+  /** The latest monthly step of the user's players, for the player sheet. */
+  growth?: Growth
   career: Career
   history: SeasonSummary[]
   /** Generated names unless this says otherwise. */

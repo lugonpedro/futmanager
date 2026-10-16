@@ -3,7 +3,14 @@ import { playerProfile } from '../engine/generate/player.ts'
 import { positionFit } from '../engine/match/strength.ts'
 import type { Player, Position } from '../engine/model/types.ts'
 import { createRng } from '../engine/rng.ts'
-import { CARD_CUTS, cardTier, fitLevel, sponsorGoalText } from './format.ts'
+import {
+  CARD_CUTS,
+  cardTier,
+  fitLevel,
+  rangeText,
+  signedChange,
+  sponsorGoalText,
+} from './format.ts'
 
 const player = (position: Position, overall = 70) =>
   ({ position, ...playerProfile(createRng(1), position, overall, []) }) as Player
@@ -35,5 +42,18 @@ describe('sponsorGoalText', () => {
       'terminar entre os 8 primeiros',
     )
     expect(sponsorGoalText({ kind: 'final-copa' }, 1)).toMatch(/^chegar à final/)
+  })
+})
+
+describe('ranges and changes', () => {
+  it('writes a range, or one number once it is known', () => {
+    expect(rangeText({ low: 55, high: 65 })).toBe('55 a 65')
+    expect(rangeText({ low: 70, high: 70 })).toBe('70')
+  })
+
+  it('signs a change in overall', () => {
+    expect(signedChange(2)).toBe('+2')
+    expect(signedChange(-1)).toBe('-1')
+    expect(signedChange(0)).toBe('0')
   })
 })

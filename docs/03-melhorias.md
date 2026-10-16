@@ -184,9 +184,19 @@ Na prática, o garoto da base nunca joga porque é fraco demais para ser escalad
 
 Com treino, minutos e empréstimo, um 25/60 bem cuidado chega perto de 60 aos 21 ou 22 anos. Sem cuidado, fica nos 40 e poucos, como hoje.
 
+### Como ficou
+
+- **Evolução mensal**: no dia 1 de maio a dezembro, cada jogador do mundo dá um passo de 1/9 do ano, e o último passo vem no fechamento da temporada. Quanto jogou até ali, contra quanto havia para jogar, decide o ritmo. O aniversário e as aposentadorias continuam na virada do ano. A ficha mostra quanto o geral mudou no último mês ("+1 no mês").
+- **Treino**: um cartão na página Time com o foco do elenco (equilibrado, físico, técnico, tático ou descanso) e até 5 jogadores com foco individual (finalização, passe, drible, cruzamento, defesa, cabeceio, velocidade ou goleiro). O foco do elenco faz o grupo de atributos crescer 35% mais rápido. O descanso faz crescer 15% mais devagar, recuperar a condição 30% mais rápido e ter 20% menos lesões; o físico tem 20% mais lesões. O foco individual soma uns 3,5 pontos por temporada aos atributos escolhidos, para quem ainda não chegou ao potencial e tem até 31 anos.
+- **Minutos para a base**: cada jogo, da liga ou da copa, conta 50% a mais para quem tem menos de 21 anos. Ficou mais simples do que separar a copa e o fim de temporada sem objetivo, e faz o mesmo papel.
+- **Empréstimo**: jogadores de até 23 anos podem ir emprestados com a janela aberta, pela carta do jogador, no máximo 4 de cada vez. O destino é o clube da divisão de baixo com menos jogadores na posição. O outro clube paga o salário, e o jogador conta como titular em pelo menos 75% do tempo. Ele não pode ser comprado nem vendido enquanto estiver fora, mas o contrato pode ser renovado. Todos voltam no fechamento da temporada.
+- **Potencial com incerteza**: a ficha, o elenco e o mercado mostram uma faixa ("62 a 76") de até 7 pontos para cada lado, que estreita a cada jogo da carreira e vira o número exato aos 28 anos. Onde o valor de verdade fica dentro da faixa é fixo para cada jogador, então a faixa não pula de um mês para o outro.
+- **O garoto 25/60**: sem jogar, chega a uns 39 aos 21 anos e 41 aos 22. Emprestado, chega a 51 e 53. Emprestado e com foco técnico e individual, chega a 54 e 56. Titular com treino, a 56 e 58.
+- **Balanceamento**: `npm run balance` (50 temporadas) dá as mesmas médias de antes: geral da Série A perto de 66, o melhor time perto de 91, a Série B perto de 45, e 2,5 a 2,7 gols por jogo.
+
 ### Save
 
-Foco de treino, empréstimos e o histórico mensal entram no `GameState`: `SAVE_VERSION` sobe (para 8, se for junto com a M7). Os saves antigos começam com foco equilibrado e sem empréstimos.
+Foco de treino, empréstimos e o histórico mensal entram no `GameState`: `SAVE_VERSION` sobe (para 8, se for junto com a M7). Os saves antigos começam com foco equilibrado e sem empréstimos. Como a M7 foi num PR separado, a M8 subiu o save para a versão 9.
 
 ### Balanceamento
 

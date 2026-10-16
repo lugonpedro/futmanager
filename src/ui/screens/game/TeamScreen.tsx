@@ -48,6 +48,10 @@ import {
   type Position,
   type Posture,
 } from '../../../engine/model/types.ts'
+import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
+import { recoveryRate } from '../../../engine/progression/training.ts'
+import { checkLoan, LOAN, loanClub, loanPlayer } from '../../../engine/transfer/loans.ts'
+import { confirm } from '../../confirm.ts'
 import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
 import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
@@ -63,10 +67,12 @@ import {
   POSITION_NAMES,
   POSITION_ORDER,
   POSTURE_NAMES,
+  rangeText,
   type Role,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
 import { FormArrow, PlayerSheet } from './PlayerSheet.tsx'
+import { TrainingPanel } from './TrainingPanel.tsx'
 
 type Row = Player & {
   role: Role
@@ -74,6 +80,7 @@ type Row = Player & {
   condition: number
   form: number
   rating?: number
+  potentialRange: { low: number; high: number }
 }
 
 const GROUPS: { role: Role; label: string }[] = [
@@ -96,7 +103,7 @@ const COLUMNS = [
     key: 'potential',
     label: 'Pot',
     title: 'Potencial',
-    value: (r: Row) => r.potential,
+    value: (r: Row) => r.potentialRange.low + r.potentialRange.high,
     hide: 'hidden sm:table-cell',
   },
   {
@@ -207,7 +214,8 @@ export function TeamScreen() {
     player: world.players[s.playerId],
     position: s.position,
   }))
-  const conditionOf = (id: string) => conditionOn(season, world.players[id], game.today)
+  const conditionOf = (id: string) =>
+    conditionOn(season, world.players[id], game.today, recoveryRate(game, id))
   const sectors = sectorStrength(
     starters.map((s) => ({
       ...s,
@@ -230,6 +238,7 @@ export function TeamScreen() {
       condition: conditionOf(p.id),
       form: formOf(season, p.id),
       rating: seasonRating(season, p.id),
+      potentialRange: potentialRange(p, careerGames(p, season.appearances)),
     }))
   rows.sort((a, b) => {
     const x = column.value(a)
@@ -245,6 +254,24 @@ export function TeamScreen() {
         : { key, ascending: ASCENDING_FIRST.has(key) },
     )
   const expiring = squad.filter((p) => p.contractUntil <= season.year).length
+  const loaned = game.loans.map((l) => world.players[l.playerId])
+
+  /** Sends a youngster out on loan, once the manager confirms. */
+  const lend = async (id: string) => {
+    const player = world.players[id]
+    const verdict = checkLoan(game, id)
+    if (!verdict.ok) return toast.error(verdict.reason)
+    const club = world.clubs[loanClub(game, player)!]
+    const ok = await confirm({
+      title: `Emprestar ${player.name}`,
+      description: `${player.name} vai jogar no ${club.name} (${club.division}ª divisão) até o fim da temporada e volta em janeiro. O outro clube paga o salário enquanto ele estiver lá.`,
+      action: 'Emprestar',
+    })
+    if (!ok) return
+    setGame(loanPlayer(game, id))
+    setViewing(undefined)
+    toast.success(`${player.name} foi emprestado ao ${club.name}.`)
+  }
 
   const byId = (id: string | undefined) => (id ? world.players[id] : undefined)
   const viewed = byId(viewing)
@@ -437,8 +464,8 @@ export function TeamScreen() {
                         </TableCell>
                         <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
                         <TableCell className="font-bold">{p.overall}</TableCell>
-                        <TableCell className="hidden text-muted-foreground sm:table-cell">
-                          {p.potential}
+                        <TableCell className="hidden whitespace-nowrap text-muted-foreground sm:table-cell">
+                          {rangeText(p.potentialRange)}
                         </TableCell>
                         <TableCell className="hidden whitespace-nowrap sm:table-cell">
                           <span
@@ -474,7 +501,35 @@ export function TeamScreen() {
               </TableBody>
             </Table>
           </Card>
+          {loaned.length > 0 && (
+            <Card className="gap-2 px-4">
+              <h3 className="text-sm font-semibold">Emprestados ({loaned.length})</h3>
+              <ul className="flex flex-col gap-1 text-sm">
+                {loaned.map((p) => (
+                  <li key={p.id}>
+                    <button
+                      type="button"
+                      onClick={() => setViewing(p.id)}
+                      className="cursor-pointer text-left hover:underline"
+                    >
+                      <span className="text-muted-foreground">{p.position}</span> {p.name}
+                    </button>{' '}
+                    <span className="text-muted-foreground">
+                      (geral {p.overall}) no {world.clubs[p.clubId].name},{' '}
+                      {season.appearances[p.id] ?? 0} jogos
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-muted-foreground">
+                Voltam no fim da temporada. Jogadores de até {LOAN.maxAge} anos podem ser
+                emprestados com a janela aberta, pela carta do jogador.
+              </p>
+            </Card>
+          )}
         </section>
+
+        <TrainingPanel />
       </div>
 
       <DragOverlay dropAnimation={null}>
@@ -494,6 +549,7 @@ export function TeamScreen() {
           onClose={() => setViewing(undefined)}
           onSell={() => setListing(viewed.id)}
           onRenew={() => setRenewing(viewed.id)}
+          onLoan={() => lend(viewed.id)}
         />
       )}
       {listed && <ListDialog game={game} player={listed} onClose={() => setListing(undefined)} />}

@@ -77,6 +77,8 @@ export type MatchInput = {
   condition?: Readonly<Record<string, number>>
   /** Form from -2 to +2; missing means 0. */
   form?: Readonly<Record<string, number>>
+  /** Injury chance of each side against the usual; missing means 1. */
+  injuryRisk?: Partial<Record<MatchSide, number>>
 }
 
 /** Side of the pitch a move goes down, as the attacking side sees it. */
@@ -121,6 +123,8 @@ export type TeamState = {
   played: Record<string, Position>
   /** Energy of the players who left the pitch, as they left it. */
   energyLeft: Record<string, number>
+  /** Injury chance against the usual, from the club's training. */
+  injuryRisk: number
 }
 
 export type MatchState = {
@@ -153,7 +157,7 @@ const emptyStats = (): TeamStats => ({
   redCards: 0,
 })
 
-function teamState(input: MatchTeamInput, match: MatchInput): TeamState {
+function teamState(input: MatchTeamInput, match: MatchInput, side: MatchSide): TeamState {
   return {
     club: input.club,
     formation: input.lineup.formation,
@@ -171,6 +175,7 @@ function teamState(input: MatchTeamInput, match: MatchInput): TeamState {
     possessionMinutes: 0,
     played: Object.fromEntries(input.lineup.starters.map((s) => [s.playerId, s.position])),
     energyLeft: {},
+    injuryRisk: match.injuryRisk?.[side] ?? 1,
   }
 }
 
@@ -191,8 +196,8 @@ const FOUL_WEIGHT: Record<Position, number> = { G: 0.2, Z: 1.6, L: 1.2, M: 1.2, 
 
 /** Sets up a match ready to be played minute by minute with playMinute(). */
 export function createMatch(input: MatchInput, rng: Rng): MatchState {
-  const home = teamState(input.home, input)
-  const away = teamState(input.away, input)
+  const home = teamState(input.home, input, 'home')
+  const away = teamState(input.away, input, 'away')
   return {
     minute: 0,
     finished: false,
@@ -490,7 +495,7 @@ function bestReplacement(team: TeamState, position: Position): Player | undefine
 function injuries(state: MatchState, side: MatchSide) {
   const { rng } = state
   const team = state[side]
-  if (team.onPitch.length === 0 || rng.next() >= BALANCE.injuryPerMinute) return
+  if (team.onPitch.length === 0 || rng.next() >= BALANCE.injuryPerMinute * team.injuryRisk) return
   const hurt = rng.pick(team.onPitch)
   state.injured.push(hurt.player.id)
   addEvent(state, {

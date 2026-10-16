@@ -14,11 +14,14 @@ import { topScorers } from './standings.ts'
 /** Energy a player gets back each day after a match: this much, plus up to as much again with stamina. */
 export const RECOVERY_PER_DAY = 4
 
-/** How fresh a player is on a given day, out of 100: what his last match left, plus rest since. */
-export function conditionOn(season: Season, player: Player, date: GameDate): number {
+/**
+ * How fresh a player is on a given day, out of 100: what his last match left,
+ * plus rest since, `recovery` times as quick as usual.
+ */
+export function conditionOn(season: Season, player: Player, date: GameDate, recovery = 1): number {
   const last = season.fitness[player.id]
   if (!last) return 100
-  const perDay = RECOVERY_PER_DAY * (1 + player.attributes.stamina / 100)
+  const perDay = RECOVERY_PER_DAY * (1 + player.attributes.stamina / 100) * recovery
   return Math.min(100, Math.round(last.energy + perDay * Math.max(0, daysBetween(last.date, date))))
 }
 
