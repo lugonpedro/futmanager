@@ -86,6 +86,8 @@ describe('the potential as scouts see it', () => {
     }
     const veteran = player({ age: 29, overall: 70, potential: 70 })
     expect(potentialRange(veteran, 0)).toEqual({ low: 70, high: 70 })
+    const capped = { ...veteran, age: 19, overall: 64, potential: 64 }
+    expect(potentialRange(capped, 0)).toEqual({ low: 64, high: 64 })
   })
 })
 

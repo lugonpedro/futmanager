@@ -3,20 +3,25 @@ import type { GameState } from '../model/types.ts'
 import { createRng } from '../rng.ts'
 import { conditionOn } from '../season/form.ts'
 import { isSeasonOver, newGame, playRound, startNextSeason } from '../season/season.ts'
-import { developStep, developWorld, PROGRESSION } from './progression.ts'
+import { developStep, developWorld, keyAttributes, PROGRESSION } from './progression.ts'
 import {
+  canTrain,
+  FIRST_PLAN,
   FOCUS_ATTRIBUTES,
   injuryRisk,
   keepOwnFocus,
   NO_TRAINING,
   recoveryRate,
-  setIndividualFocus,
   setSquadFocus,
+  setSquadPlans,
+  setTrainingPlan,
   TRAINING,
+  trainingBlock,
 } from './training.ts'
 
 const game = newGame(3, 'C5')
 const squad = game.world.clubs.C5.playerIds
+const trainable = squad.filter((id) => canTrain(game.world.players[id]))
 const young = squad
   .map((id) => game.world.players[id])
   .filter((p) => p.age <= 21 && p.potential > p.overall + 5)
@@ -32,31 +37,72 @@ describe('training', () => {
     expect(game.training).toEqual(NO_TRAINING)
   })
 
-  it('gives up to five of the user’s players a focus of their own', () => {
+  it('gives any of the user’s players who can still grow a plan of his own', () => {
     let next = game
-    for (const id of squad.slice(0, 6)) next = setIndividualFocus(next, id, 'passe')
-    expect(Object.keys(next.training.individual)).toEqual(squad.slice(0, TRAINING.maxIndividual))
-    next = setIndividualFocus(next, squad[0], 'drible')
-    expect(next.training.individual[squad[0]]).toBe('drible')
-    next = setIndividualFocus(next, squad[0], undefined)
-    expect(next.training.individual[squad[0]]).toBeUndefined()
+    for (const id of trainable) next = setTrainingPlan(next, id, FIRST_PLAN)
+    expect(Object.keys(next.training.individual)).toEqual(trainable)
+    next = setTrainingPlan(next, trainable[0], { focus: 'drible', intensity: 'intenso' })
+    expect(next.training.individual[trainable[0]]).toEqual({
+      focus: 'drible',
+      intensity: 'intenso',
+    })
+    next = setTrainingPlan(next, trainable[0], undefined)
+    expect(next.training.individual[trainable[0]]).toBeUndefined()
     const other = game.world.clubs.C1.playerIds[0]
-    expect(setIndividualFocus(game, other, 'passe')).toBe(game)
+    expect(setTrainingPlan(game, other, FIRST_PLAN)).toBe(game)
+    expect(Object.keys(setSquadPlans(game, FIRST_PLAN).training.individual)).toEqual(trainable)
+    expect(setSquadPlans(next, undefined).training.individual).toEqual({})
   })
 
-  it('drops the focus of players who left', () => {
-    const withFocus = setIndividualFocus(game, squad[0], 'passe')
-    const sold = {
-      ...withFocus,
+  it('turns away players at their ceiling or past 30', () => {
+    const player = game.world.players[trainable[0]]
+    const capped = { ...player, potential: player.overall }
+    const old = { ...player, age: TRAINING.individualUntil + 1 }
+    expect(trainingBlock(player)).toBeUndefined()
+    expect(trainingBlock(capped)).toBe('potencial')
+    expect(trainingBlock(old)).toBe('idade')
+    expect(trainingBlock({ ...player, age: TRAINING.individualUntil })).toBeUndefined()
+    for (const changed of [capped, old]) {
+      const g = {
+        ...game,
+        world: { ...game.world, players: { ...game.world.players, [player.id]: changed } },
+      }
+      expect(setTrainingPlan(g, player.id, FIRST_PLAN)).toBe(g)
+      expect(Object.keys(setSquadPlans(g, FIRST_PLAN).training.individual)).not.toContain(player.id)
+    }
+  })
+
+  it('drops the plans of players who left or reached their ceiling', () => {
+    const [a, b] = trainable
+    const withPlans = setTrainingPlan(setTrainingPlan(game, a, FIRST_PLAN), b, FIRST_PLAN)
+    const players = withPlans.world.players
+    const changed = {
+      ...withPlans,
       world: {
-        ...withFocus.world,
+        ...withPlans.world,
         players: {
-          ...withFocus.world.players,
-          [squad[0]]: { ...withFocus.world.players[squad[0]], clubId: 'C1' },
+          ...players,
+          [a]: { ...players[a], clubId: 'C1' },
+          [b]: { ...players[b], potential: players[b].overall },
         },
       },
     }
-    expect(keepOwnFocus(sold).training.individual).toEqual({})
+    expect(keepOwnFocus(changed).training.individual).toEqual({})
+  })
+
+  it('tires players who train hard and spares those who take it easy', () => {
+    const id = trainable[0]
+    const plan = (intensity: 'leve' | 'intenso') =>
+      recoveryRate(setTrainingPlan(game, id, { focus: 'geral', intensity }), id)
+    expect(plan('intenso')).toBeLessThan(1)
+    expect(plan('leve')).toBeGreaterThan(1)
+    expect(recoveryRate(game, id)).toBe(1)
+  })
+
+  it('works a general plan on the attributes that count most for the position', () => {
+    expect(keyAttributes('G')).toContain('reflexes')
+    expect(keyAttributes('A')).toContain('finishing')
+    expect(keyAttributes('Z')).toHaveLength(TRAINING.generalAttributes)
   })
 
   it('rests the squad: quicker recovery, fewer injuries; physical work brings more', () => {
@@ -89,7 +135,7 @@ describe('training', () => {
             ...(focus && {
               focus: {
                 attributes: FOCUS_ATTRIBUTES.finalizacao,
-                points: TRAINING.individualPerSeason * share,
+                points: TRAINING.perSeason.normal * share,
               },
             }),
           })
