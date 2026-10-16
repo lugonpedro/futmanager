@@ -4,7 +4,7 @@
   "nome": "Brasileirão 2026",
   "clubes": [
     {
-      "nome": "Clube de Regatas do Flamengo",
+      "nome": "Flamengo",
       "sigla": "FLA",
       "cidade": "Rio de Janeiro",
       "cores": ["#c4161c", "#000000"],
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "nome": "Sociedade Esportiva Palmeiras",
+      "nome": "Palmeiras",
       "sigla": "PAL",
       "cidade": "São Paulo",
       "cores": ["#006437", "#ffffff"],
@@ -259,7 +259,7 @@
       ]
     },
     {
-      "nome": "Cruzeiro Esporte Clube",
+      "nome": "Cruzeiro",
       "sigla": "CRU",
       "cidade": "Belo Horizonte",
       "cores": ["#0033a0", "#ffffff"],
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "nome": "Botafogo de Futebol e Regatas",
+      "nome": "Botafogo",
       "sigla": "BOT",
       "cidade": "Rio de Janeiro",
       "cores": ["#000000", "#ffffff"],
@@ -503,7 +503,7 @@
       ]
     },
     {
-      "nome": "Fluminense Football Club",
+      "nome": "Fluminense",
       "sigla": "FLU",
       "cidade": "Rio de Janeiro",
       "cores": ["#870a28", "#00613c"],
@@ -636,7 +636,7 @@
       ]
     },
     {
-      "nome": "Clube Atlético Mineiro",
+      "nome": "Atlético-MG",
       "sigla": "CAM",
       "cidade": "Belo Horizonte",
       "cores": ["#000000", "#ffffff"],
@@ -764,7 +764,7 @@
       ]
     },
     {
-      "nome": "São Paulo Futebol Clube",
+      "nome": "São Paulo",
       "sigla": "SPFC",
       "cidade": "São Paulo",
       "cores": ["#ffffff", "#e2001a"],
@@ -890,7 +890,7 @@
       ]
     },
     {
-      "nome": "Sport Club Corinthians Paulista",
+      "nome": "Corinthians",
       "sigla": "SCCP",
       "cidade": "São Paulo",
       "cores": ["#ffffff", "#000000"],
@@ -1017,7 +1017,7 @@
       ]
     },
     {
-      "nome": "Sport Club Internacional",
+      "nome": "Internacional",
       "sigla": "INT",
       "cidade": "Porto Alegre",
       "cores": ["#e30613", "#ffffff"],
@@ -1150,7 +1150,7 @@
       ]
     },
     {
-      "nome": "Grêmio Foot-Ball Porto Alegrense",
+      "nome": "Grêmio",
       "sigla": "GRE",
       "cidade": "Porto Alegre",
       "cores": ["#0d80bf", "#000000"],
@@ -1283,7 +1283,7 @@
       ]
     },
     {
-      "nome": "Esporte Clube Bahia",
+      "nome": "Bahia",
       "sigla": "BAH",
       "cidade": "Salvador",
       "cores": ["#0067b1", "#ffffff"],
@@ -1416,7 +1416,7 @@
       ]
     },
     {
-      "nome": "Club de Regatas Vasco da Gama",
+      "nome": "Vasco",
       "sigla": "VAS",
       "cidade": "Rio de Janeiro",
       "cores": ["#000000", "#ffffff"],
@@ -1547,7 +1547,7 @@
       ]
     },
     {
-      "nome": "Red Bull Bragantino",
+      "nome": "Bragantino",
       "sigla": "RBB",
       "cidade": "Bragança Paulista",
       "cores": ["#ffffff", "#e30613"],
@@ -1672,7 +1672,7 @@
       ]
     },
     {
-      "nome": "Santos Futebol Clube",
+      "nome": "Santos",
       "sigla": "SAN",
       "cidade": "Santos",
       "cores": ["#ffffff", "#000000"],
@@ -1800,7 +1800,7 @@
       ]
     },
     {
-      "nome": "Mirassol Futebol Clube",
+      "nome": "Mirassol",
       "sigla": "MIR",
       "cidade": "Mirassol",
       "cores": ["#ffd700", "#008c45"],
@@ -1928,7 +1928,7 @@
       ]
     },
     {
-      "nome": "Club Athletico Paranaense",
+      "nome": "Athletico-PR",
       "sigla": "CAP",
       "cidade": "Curitiba",
       "cores": ["#c8102e", "#000000"],
@@ -2060,7 +2060,7 @@
       ]
     },
     {
-      "nome": "Esporte Clube Vitória",
+      "nome": "Vitória",
       "sigla": "VIT",
       "cidade": "Salvador",
       "cores": ["#e30613", "#000000"],
@@ -2193,7 +2193,7 @@
       ]
     },
     {
-      "nome": "Coritiba Foot Ball Club",
+      "nome": "Coritiba",
       "sigla": "CFC",
       "cidade": "Curitiba",
       "cores": ["#00543c", "#ffffff"],
@@ -2321,7 +2321,7 @@
       ]
     },
     {
-      "nome": "Associação Chapecoense de Futebol",
+      "nome": "Chapecoense",
       "sigla": "CHA",
       "cidade": "Chapecó",
       "cores": ["#00843d", "#ffffff"],
@@ -2454,7 +2454,7 @@
       ]
     },
     {
-      "nome": "Clube do Remo",
+      "nome": "Remo",
       "sigla": "REM",
       "cidade": "Belém",
       "cores": ["#002d72", "#ffffff"],
@@ -2587,7 +2587,7 @@
       ]
     },
     {
-      "nome": "Fortaleza Esporte Clube",
+      "nome": "Fortaleza",
       "sigla": "FOR",
       "cidade": "Fortaleza",
       "cores": ["#d71920", "#003da5"],
@@ -2720,7 +2720,7 @@
       ]
     },
     {
-      "nome": "Ceará Sporting Club",
+      "nome": "Ceará",
       "sigla": "CEA",
       "cidade": "Fortaleza",
       "cores": ["#000000", "#ffffff"],
@@ -2848,7 +2848,7 @@
       ]
     },
     {
-      "nome": "Sport Club do Recife",
+      "nome": "Sport",
       "sigla": "SPT",
       "cidade": "Recife",
       "cores": ["#d2001f", "#000000"],
@@ -2981,7 +2981,7 @@
       ]
     },
     {
-      "nome": "Esporte Clube Juventude",
+      "nome": "Juventude",
       "sigla": "JUV",
       "cidade": "Caxias do Sul",
       "cores": ["#00843d", "#ffffff"],
@@ -3114,7 +3114,7 @@
       ]
     },
     {
-      "nome": "Goiás Esporte Clube",
+      "nome": "Goiás",
       "sigla": "GOI",
       "cidade": "Goiânia",
       "cores": ["#006437", "#ffffff"],
@@ -3247,7 +3247,7 @@
       ]
     },
     {
-      "nome": "Criciúma Esporte Clube",
+      "nome": "Criciúma",
       "sigla": "CRI",
       "cidade": "Criciúma",
       "cores": ["#ffd100", "#000000"],
@@ -3380,7 +3380,7 @@
       ]
     },
     {
-      "nome": "América Futebol Clube",
+      "nome": "América-MG",
       "sigla": "AME",
       "cidade": "Belo Horizonte",
       "cores": ["#00703c", "#000000"],
@@ -3513,7 +3513,7 @@
       ]
     },
     {
-      "nome": "Cuiabá Esporte Clube",
+      "nome": "Cuiabá",
       "sigla": "CUI",
       "cidade": "Cuiabá",
       "cores": ["#006b3f", "#ffd700"],
@@ -3641,7 +3641,7 @@
       ]
     },
     {
-      "nome": "Atlético Clube Goianiense",
+      "nome": "Atlético-GO",
       "sigla": "ACG",
       "cidade": "Goiânia",
       "cores": ["#e30613", "#000000"],
@@ -3764,7 +3764,7 @@
       ]
     },
     {
-      "nome": "Avaí Futebol Clube",
+      "nome": "Avaí",
       "sigla": "AVA",
       "cidade": "Florianópolis",
       "cores": ["#0066b3", "#ffffff"],
@@ -3884,7 +3884,7 @@
       ]
     },
     {
-      "nome": "Grêmio Novorizontino",
+      "nome": "Novorizontino",
       "sigla": "NOV",
       "cidade": "Novo Horizonte",
       "cores": ["#ffd700", "#000000"],
@@ -4017,7 +4017,7 @@
       ]
     },
     {
-      "nome": "Vila Nova Futebol Clube",
+      "nome": "Vila Nova",
       "sigla": "VIL",
       "cidade": "Goiânia",
       "cores": ["#e30613", "#ffffff"],
@@ -4149,7 +4149,7 @@
       ]
     },
     {
-      "nome": "Clube de Regatas Brasil",
+      "nome": "CRB",
       "sigla": "CRB",
       "cidade": "Maceió",
       "cores": ["#e2001a", "#ffffff"],
@@ -4282,7 +4282,7 @@
       ]
     },
     {
-      "nome": "Operário Ferroviário Esporte Clube",
+      "nome": "Operário-PR",
       "sigla": "OPE",
       "cidade": "Ponta Grossa",
       "cores": ["#000000", "#ffffff"],
@@ -4408,7 +4408,7 @@
       ]
     },
     {
-      "nome": "Associação Atlética Ponte Preta",
+      "nome": "Ponte Preta",
       "sigla": "PON",
       "cidade": "Campinas",
       "cores": ["#000000", "#ffffff"],
@@ -4520,7 +4520,7 @@
       ]
     },
     {
-      "nome": "Londrina Esporte Clube",
+      "nome": "Londrina",
       "sigla": "LEC",
       "cidade": "Londrina",
       "cores": ["#1e90d6", "#ffffff"],
@@ -4652,7 +4652,7 @@
       ]
     },
     {
-      "nome": "Clube Náutico Capibaribe",
+      "nome": "Náutico",
       "sigla": "NAU",
       "cidade": "Recife",
       "cores": ["#d50000", "#ffffff"],
@@ -4766,7 +4766,7 @@
       ]
     },
     {
-      "nome": "Botafogo Futebol Clube (SP)",
+      "nome": "Botafogo-SP",
       "sigla": "BSP",
       "cidade": "Ribeirão Preto",
       "cores": ["#e30613", "#ffffff"],
@@ -4890,7 +4890,7 @@
       ]
     },
     {
-      "nome": "Athletic Club",
+      "nome": "Athletic",
       "sigla": "ATH",
       "cidade": "São João del-Rei",
       "cores": ["#000000", "#ffffff"],
@@ -5013,7 +5013,7 @@
       ]
     },
     {
-      "nome": "São Bernardo Futebol Clube",
+      "nome": "São Bernardo",
       "sigla": "SBE",
       "cidade": "São Bernardo do Campo",
       "cores": ["#ffd200", "#000000"],

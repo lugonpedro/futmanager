@@ -26,10 +26,11 @@ export function LegalScreen() {
             qualquer semelhança é coincidência.
           </p>
           <p>
-            O pacote de teste Brasileirão 2026, que vem com o jogo, usa os nomes de clubes e atletas
-            das Séries A e B de 2026, com cidade, cores, idade e posição, como informação factual.
-            Ele não traz escudos, uniformes, fotos nem marcas oficiais, e os atributos e a força de
-            cada jogador são inventados pelo jogo, sem relação com o desempenho real.
+            O pacote de teste Brasileirão 2026, que vem com o jogo, usa os nomes populares dos
+            clubes, como Flamengo ou Palmeiras, e os nomes dos atletas das Séries A e B de 2026, com
+            cidade, cores, idade e posição, como informação factual. Ele não traz escudos,
+            uniformes, fotos nem marcas oficiais, e os atributos e a força de cada jogador são
+            inventados pelo jogo, sem relação com o desempenho real.
           </p>
           <p>
             Nomes inseridos pelos usuários no editor ou em pacotes importados são de
