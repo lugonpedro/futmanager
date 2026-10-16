@@ -696,6 +696,7 @@ export function matchResult(state: MatchState): MatchResult {
     injured: state.injured,
     ratings: ratings(state, true),
     energy: energyLeft(state),
+    played: { home: { ...state.home.played }, away: { ...state.away.played } },
   }
 }
 
