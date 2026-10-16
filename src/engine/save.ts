@@ -1,5 +1,5 @@
 import { newCareer } from './career/board.ts'
-import { fairTicketPrice, startingCash } from './finance/economy.ts'
+import { fairTicketPrice, monthlySponsorship, startingCash } from './finance/economy.ts'
 import { marketValueFor, playerProfile, wageFor } from './generate/player.ts'
 import type {
   Club,
@@ -10,6 +10,7 @@ import type {
   Player,
   PlayStyle,
   Season,
+  SponsorDeal,
   TransferNews,
   TransferOffer,
   World,
@@ -20,8 +21,11 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 8 (M7), when sponsorship was a fixed monthly sum. */
+type V7Game = Omit<GameState, 'version' | 'sponsorship'> & { version: 7 }
+
 /** A career as stored before version 7 (M3), when the round's best XI was a list of ids. */
-type V6Game = Omit<GameState, 'version' | 'season'> & {
+type V6Game = Omit<V7Game, 'version' | 'season'> & {
   version: 6
   season: Omit<Season, 'roundStars'> & { roundStars: string[] }
 }
@@ -232,13 +236,32 @@ function fromV5(saved: V5Game): V6Game {
  * The old best XI kept no ratings or goals, so it is left out; the next league
  * round picks a new one.
  */
-function fromV6(saved: V6Game): GameState {
-  return { ...saved, version: SAVE_VERSION, season: { ...saved.season, roundStars: [] } }
+function fromV6(saved: V6Game): V7Game {
+  return { ...saved, version: 7, season: { ...saved.season, roundStars: [] } }
+}
+
+/**
+ * The fixed sponsorship becomes a shirt deal paying the same each month to
+ * the end of the season, with no goal; new offers come with the next season.
+ */
+function fromV7(saved: V7Game): GameState {
+  const club = saved.world.clubs[saved.userClubId]
+  const year = saved.season.year
+  const master: SponsorDeal = {
+    id: `${year}-atual`,
+    company: 'Patrocinador atual',
+    monthly: monthlySponsorship(club),
+    bonus: 0,
+    style: 'segura',
+    firstSeason: year,
+    lastSeason: year,
+  }
+  return { ...saved, version: SAVE_VERSION, sponsorship: { master, offers: [] } }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
-  saved: GameState | V6Game | V5Game | V4Game | V3Game | V2Game | V1Game,
+  saved: GameState | V7Game | V6Game | V5Game | V4Game | V3Game | V2Game | V1Game,
 ): GameState {
   const version = saved.version ?? 1
   if (version >= SAVE_VERSION) return saved as GameState
@@ -247,5 +270,6 @@ export function upgradeGame(
   const v4 = version < 4 ? fromV3(v3) : (saved as V4Game)
   const v5 = version < 5 ? fromV4(v4) : (saved as V5Game)
   const v6 = version < 6 ? fromV5(v5) : (saved as V6Game)
-  return fromV6(v6)
+  const v7 = version < 7 ? fromV6(v6) : (saved as V7Game)
+  return fromV7(v7)
 }

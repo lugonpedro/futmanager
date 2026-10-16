@@ -577,7 +577,8 @@ function Notices({ game }: { game: GameState }) {
   const cash = game.world.clubs[game.userClubId].cash
   const shaky = game.career.confidence < 25
   const firstToLapse = offers.map((o) => o.expires).sort()[0]
-  const urgent = offers.length > 0 || expiring > 0 || cash < 0 || shaky
+  const sponsors = game.sponsorship.offers
+  const urgent = offers.length > 0 || sponsors.length > 0 || expiring > 0 || cash < 0 || shaky
   return (
     <Card className={`gap-1 px-4 md:col-span-2 ${urgent ? 'border-highlight' : ''}`}>
       <TransferWindowNote today={game.today} className="text-sm" />
@@ -590,6 +591,18 @@ function Notices({ game }: { game: GameState }) {
           {offers.length === 1
             ? `vale até ${formatDayMonth(firstToLapse)}`
             : `a primeira vence em ${formatDayMonth(firstToLapse)}`}
+          .
+        </p>
+      )}
+      {sponsors.length > 0 && (
+        <p className="text-sm">
+          <Link to="/jogo/clube/patrocinio" className="font-semibold text-primary underline">
+            {sponsors.length} propostas de patrocínio master
+          </Link>{' '}
+          esperando
+          {game.sponsorship.deadline
+            ? `; escolha até ${formatDayMonth(game.sponsorship.deadline)} ou a diretoria assina a segura`
+            : ''}
           .
         </p>
       )}

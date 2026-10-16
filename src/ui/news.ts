@@ -19,6 +19,7 @@ export const SHAKY_CONFIDENCE = 25
 
 const OFFERS = { label: 'Ver proposta', to: '/jogo/mercado/propostas' }
 const TEAM = { label: 'Ver time', to: '/jogo/time' }
+const SPONSOR = { label: 'Ver patrocínio', to: '/jogo/clube/patrocinio' }
 
 /**
  * What changed for the user between two moments of the career, most important
@@ -71,6 +72,21 @@ export function newsBetween(before: GameState, after: GameState): News[] {
       tone: 'warning',
       text: `A confiança da diretoria caiu para ${after.career.confidence}%. Se chegar a zero, você é demitido.`,
       link: { label: 'Ver diretoria', to: '/jogo/clube/diretoria' },
+    })
+  }
+
+  const signed = after.sponsorship.master
+  if (signed && !before.sponsorship.master && before.sponsorship.offers.length > 0) {
+    news.push({
+      tone: 'info',
+      text: `Sem escolha até o prazo, a diretoria assinou com ${signed.company}: ${formatMoney(signed.monthly)} por mês.`,
+      link: SPONSOR,
+    })
+  } else if (after.sponsorship.offers.length > 0 && before.sponsorship.offers.length === 0) {
+    news.push({
+      tone: 'info',
+      text: `${after.sponsorship.offers.length} empresas querem ser o patrocinador master.`,
+      link: SPONSOR,
     })
   }
 

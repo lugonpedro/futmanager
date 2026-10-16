@@ -4,11 +4,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BoardPanel, HistoryPanel } from './BoardPanels.tsx'
 import { EditorPanel } from './EditorPanel.tsx'
 import { FinancePanel, StadiumPanel } from './FinancePanels.tsx'
+import { SponsorPanel } from './SponsorPanel.tsx'
 
 /** The parts of the club overview, in page order; their old tab addresses open the page there. */
 const SECTIONS = {
   diretoria: { label: 'Diretoria', panel: BoardPanel },
   financas: { label: 'Finanças', panel: FinancePanel },
+  patrocinio: { label: 'Patrocínio', panel: SponsorPanel },
   estadio: { label: 'Estádio', panel: StadiumPanel },
 }
 

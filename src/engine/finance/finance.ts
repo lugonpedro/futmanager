@@ -9,6 +9,7 @@ import type {
 import { dateParts } from '../season/calendar.ts'
 import { standings } from '../season/standings.ts'
 import { monthlySponsorship, attendance } from './economy.ts'
+import { userSponsorPayment } from './sponsors.ts'
 
 /** Money moved by one step of the calendar: per-club cash changes and the user's ledger lines. */
 export type Payments = { cash: Record<string, number>; entries: LedgerEntry[] }
@@ -54,19 +55,24 @@ export function matchdayPayments(game: GameState, fixtures: readonly Fixture[]):
   return payments
 }
 
-/** Wages out and sponsorship in, for every club, for the month starting today. */
+/**
+ * Wages out and sponsorship in, for every club, for the month starting today.
+ * The user's club is paid by its shirt deal (see sponsors.ts).
+ */
 export function payday(game: GameState, note: string): Payments {
   const { world, userClubId } = game
   const payments = emptyPayments()
   for (const club of Object.values(world.clubs)) {
     const wages = wageBill(world, club)
-    const sponsor = monthlySponsorship(club)
+    const user = club.id === userClubId
+    const shirt = user ? userSponsorPayment(game) : undefined
+    const sponsor = shirt ? shirt.amount : monthlySponsorship(club)
     add(payments, club.id, sponsor - wages)
-    if (club.id === userClubId) {
+    if (shirt) {
       const date = game.today
       payments.entries.push(
         { date, category: 'salarios', amount: -wages, note },
-        { date, category: 'patrocinio', amount: sponsor, note },
+        { date, category: 'patrocinio', amount: sponsor, note: `${note}: ${shirt.note}` },
       )
     }
   }

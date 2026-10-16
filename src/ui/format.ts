@@ -8,7 +8,11 @@ import type {
   Position,
   Posture,
   RoundStar,
+  SponsorDeal,
+  SponsorGoal,
 } from '../engine/model/types.ts'
+import { CUP_NAME } from '../engine/season/cup.ts'
+import { PROMOTION_SPOTS } from '../engine/season/rules.ts'
 import type { AnyFace } from '../engine/player/attributes.ts'
 import { formatDate } from '../engine/season/calendar.ts'
 
@@ -205,3 +209,24 @@ const savedWhen = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeSty
 
 /** When a career was saved, like "12/10/2026, 16:40". */
 export const formatSavedAt = (time: number) => savedWhen.format(new Date(time))
+
+export const SPONSOR_STYLE_NAMES: Record<SponsorDeal['style'], string> = {
+  segura: 'Segura',
+  equilibrada: 'Equilibrada',
+  ousada: 'Ousada',
+}
+
+/** A sponsor's goal, to follow "se o time": "ficar no G-4", "for campeão da Série A". */
+export function sponsorGoalText(goal: SponsorGoal, division: number): string {
+  if (goal.kind === 'final-copa') return `chegar à final da ${CUP_NAME}`
+  if (goal.position === 1) return `for campeão da ${divisionName(division)}`
+  if (division > 1 && goal.position <= PROMOTION_SPOTS) return 'conquistar o acesso'
+  if (goal.position === 4) return 'ficar no G-4'
+  return `terminar entre os ${goal.position} primeiros`
+}
+
+/** "Só 2027" or "2027 a 2029". */
+export const sponsorSeasons = (deal: SponsorDeal) =>
+  deal.firstSeason === deal.lastSeason
+    ? `só ${deal.firstSeason}`
+    : `${deal.firstSeason} a ${deal.lastSeason}`
