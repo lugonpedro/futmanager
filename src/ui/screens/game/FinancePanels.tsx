@@ -19,11 +19,13 @@ import type { LedgerCategory } from '../../../engine/model/types.ts'
 import type { MonthTotals } from '../../../engine/finance/finance.ts'
 import { dateParts, MONTH_NAMES } from '../../../engine/season/calendar.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
+import { Pager } from '../../components/Pager.tsx'
 import { formatDayMonth, formatMoney, formatReais, LEDGER_NAMES } from '../../format.ts'
+import { usePage } from '../../usePage.ts'
 
 const INCOME: LedgerCategory[] = ['bilheteria', 'patrocinio', 'premiacao', 'vendas']
 const COSTS: LedgerCategory[] = ['salarios', 'compras']
-const RECENT = 20
+const LEDGER_PAGE_SIZE = 20
 
 const signed = (value: number) => cn('tabular-nums', value < 0 ? 'text-destructive' : '')
 
@@ -33,6 +35,7 @@ export function FinancePanel() {
   const { world, userClubId, ledger, history } = game
   const club = world.clubs[userClubId]
   const totals = ledgerTotals(ledger)
+  const entries = usePage([...ledger].reverse(), LEDGER_PAGE_SIZE)
   const balance = Object.values(totals).reduce((a, b) => a + b, 0)
   const months = monthlyTotals(ledger)
   const today = dateParts(game.today)
@@ -142,26 +145,24 @@ export function FinancePanel() {
           ) : (
             <Table>
               <TableBody>
-                {[...ledger]
-                  .reverse()
-                  .slice(0, RECENT)
-                  .map((entry, i) => (
-                    <TableRow key={i}>
-                      <TableCell className="w-12 text-muted-foreground tabular-nums">
-                        {formatDayMonth(entry.date)}
-                      </TableCell>
-                      <TableCell className="whitespace-normal">
-                        {LEDGER_NAMES[entry.category]}
-                        <span className="block text-xs text-muted-foreground">{entry.note}</span>
-                      </TableCell>
-                      <TableCell className={cn('text-right', signed(entry.amount))}>
-                        {formatMoney(entry.amount)}
-                      </TableCell>
-                    </TableRow>
-                  ))}
+                {entries.items.map((entry, i) => (
+                  <TableRow key={entries.start + i}>
+                    <TableCell className="w-12 text-muted-foreground tabular-nums">
+                      {formatDayMonth(entry.date)}
+                    </TableCell>
+                    <TableCell className="whitespace-normal">
+                      {LEDGER_NAMES[entry.category]}
+                      <span className="block text-xs text-muted-foreground">{entry.note}</span>
+                    </TableCell>
+                    <TableCell className={cn('text-right', signed(entry.amount))}>
+                      {formatMoney(entry.amount)}
+                    </TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           )}
+          <Pager paged={entries} className="mt-3" />
         </CardContent>
       </Card>
     </div>

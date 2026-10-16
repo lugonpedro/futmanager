@@ -32,13 +32,16 @@ import {
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
+import { Pager } from '../../components/Pager.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
+import { usePage } from '../../usePage.ts'
 import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
 import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES, rangeText } from '../../format.ts'
 import { SignDialog } from './MarketDialogs.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
 
-const SHOWN = 50
+const PAGE_SIZE = 25
+const NEWS_PAGE_SIZE = 20
 const SORTS = { Geral: 'overall', Preço: 'price', Idade: 'age' } as const
 type Sort = keyof typeof SORTS
 
@@ -99,6 +102,7 @@ function BuyTab({ game }: { game: GameState }) {
           ? a.player.age - b.player.age
           : b.player.overall - a.player.overall,
     )
+  const paged = usePage(rows, PAGE_SIZE, `${position}|${query}|${onlyAffordable}|${sort}`)
 
   return (
     <div className="flex flex-col gap-3">
@@ -132,8 +136,8 @@ function BuyTab({ game }: { game: GameState }) {
       </div>
       <TransferWindowNote today={game.today} />
       <p className="text-sm text-muted-foreground">
-        {rows.length > SHOWN ? `Mostrando ${SHOWN} de ${rows.length}` : `${rows.length}`} jogadores.
-        Caixa: {formatMoney(cash)}. Toque no nome para ver a carta, ou na linha para negociar.
+        {rows.length} {rows.length === 1 ? 'jogador' : 'jogadores'}. Caixa: {formatMoney(cash)}.
+        Toque no nome para ver a carta, ou na linha para negociar.
       </p>
       <Card className="py-0">
         <Table className="tabular-nums">
@@ -142,56 +146,62 @@ function BuyTab({ game }: { game: GameState }) {
               <TableHead>Pos</TableHead>
               <TableHead>Nome</TableHead>
               <TableHead className="hidden sm:table-cell">Idade</TableHead>
-              <TableHead>Geral</TableHead>
-              <TableHead className="hidden sm:table-cell">Pot</TableHead>
+              <TableHead title="Geral e potencial">Geral</TableHead>
               <TableHead>Clube</TableHead>
               <TableHead className="text-right">Preço</TableHead>
               <TableHead className="hidden text-right sm:table-cell">Salário pedido</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {rows.slice(0, SHOWN).map(({ player, price }) => (
-              <TableRow
-                key={player.id}
-                className="cursor-pointer"
-                onClick={() => setSelected(player)}
-              >
-                <TableCell className="font-semibold">{player.position}</TableCell>
-                <TableCell>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      setViewing(player)
-                    }}
-                    className="cursor-pointer text-left font-medium hover:underline"
+            {paged.items.map(({ player, price }) => {
+              const potential = potentialRange(player, careerGames(player, game.season.appearances))
+              return (
+                <TableRow
+                  key={player.id}
+                  className="cursor-pointer"
+                  onClick={() => setSelected(player)}
+                >
+                  <TableCell className="font-semibold">{player.position}</TableCell>
+                  <TableCell>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setViewing(player)
+                      }}
+                      className="cursor-pointer text-left font-medium hover:underline"
+                    >
+                      {player.name}
+                    </button>
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell">{player.age}</TableCell>
+                  <TableCell
+                    className="whitespace-nowrap"
+                    title={`Geral ${player.overall}, potencial ${rangeText(potential)}`}
                   >
-                    {player.name}
-                  </button>
-                </TableCell>
-                <TableCell className="hidden sm:table-cell">{player.age}</TableCell>
-                <TableCell className="font-bold">{player.overall}</TableCell>
-                <TableCell className="hidden whitespace-nowrap text-muted-foreground sm:table-cell">
-                  {rangeText(potentialRange(player, careerGames(player, game.season.appearances)))}
-                </TableCell>
-                <TableCell className="max-w-40">
-                  {player.clubId === FREE_AGENT ? (
-                    <Badge variant="secondary">Sem clube</Badge>
-                  ) : (
-                    <ClubName club={world.clubs[player.clubId]} short />
-                  )}
-                </TableCell>
-                <TableCell className={cn('text-right', price > cash && 'text-destructive')}>
-                  {price === 0 ? 'Livre' : formatMoney(price)}
-                </TableCell>
-                <TableCell className="hidden text-right sm:table-cell">
-                  {formatMoney(wageDemand(world, player, userClubId))}
-                </TableCell>
-              </TableRow>
-            ))}
+                    <span className="font-bold">{player.overall}</span>
+                    <span className="text-xs text-muted-foreground">/{potential.high}</span>
+                  </TableCell>
+                  <TableCell className="max-w-40">
+                    {player.clubId === FREE_AGENT ? (
+                      <Badge variant="secondary">Sem clube</Badge>
+                    ) : (
+                      <ClubName club={world.clubs[player.clubId]} short />
+                    )}
+                  </TableCell>
+                  <TableCell className={cn('text-right', price > cash && 'text-destructive')}>
+                    {price === 0 ? 'Livre' : formatMoney(price)}
+                  </TableCell>
+                  <TableCell className="hidden text-right sm:table-cell">
+                    {formatMoney(wageDemand(world, player, userClubId))}
+                  </TableCell>
+                </TableRow>
+              )
+            })}
           </TableBody>
         </Table>
       </Card>
+      <Pager paged={paged} />
       {selected && (
         <SignDialog game={game} player={selected} onClose={() => setSelected(undefined)} />
       )}
@@ -280,6 +290,7 @@ function OffersTab({ game }: { game: GameState }) {
 
 function NewsTab({ game }: { game: GameState }) {
   const { world, market, userClubId } = game
+  const paged = usePage(market.news, NEWS_PAGE_SIZE)
   if (market.news.length === 0) {
     return <p className="text-sm text-muted-foreground">Nenhuma transferência ainda.</p>
   }
@@ -290,29 +301,32 @@ function NewsTab({ game }: { game: GameState }) {
       <ClubName club={world.clubs[id]} highlight={id === userClubId} />
     )
   return (
-    <Card className="py-0">
-      <Table>
-        <TableBody>
-          {market.news.map((n, i) => (
-            <TableRow key={i}>
-              <TableCell className="text-muted-foreground tabular-nums">
-                {formatDate(n.date)}
-              </TableCell>
-              <TableCell>
-                {world.players[n.playerId].name}{' '}
-                <span className="text-xs text-muted-foreground">
-                  {world.players[n.playerId].position}
-                </span>
-              </TableCell>
-              <TableCell className="max-w-36">{clubLabel(n.fromClubId)}</TableCell>
-              <TableCell className="max-w-36">{clubLabel(n.toClubId)}</TableCell>
-              <TableCell className="text-right tabular-nums">
-                {n.fee === 0 ? 'Livre' : formatMoney(n.fee)}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Card>
+    <div className="flex flex-col gap-3">
+      <Card className="py-0">
+        <Table>
+          <TableBody>
+            {paged.items.map((n, i) => (
+              <TableRow key={paged.start + i}>
+                <TableCell className="text-muted-foreground tabular-nums">
+                  {formatDate(n.date)}
+                </TableCell>
+                <TableCell>
+                  {world.players[n.playerId].name}{' '}
+                  <span className="text-xs text-muted-foreground">
+                    {world.players[n.playerId].position}
+                  </span>
+                </TableCell>
+                <TableCell className="max-w-36">{clubLabel(n.fromClubId)}</TableCell>
+                <TableCell className="max-w-36">{clubLabel(n.toClubId)}</TableCell>
+                <TableCell className="text-right tabular-nums">
+                  {n.fee === 0 ? 'Livre' : formatMoney(n.fee)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Card>
+      <Pager paged={paged} />
+    </div>
   )
 }
