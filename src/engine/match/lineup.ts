@@ -8,6 +8,44 @@ export const FORMATIONS: Record<Formation, Record<Position, number>> = {
   '3-5-2': { G: 1, Z: 3, L: 0, M: 5, A: 2 },
   '4-5-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
   '5-3-2': { G: 1, Z: 3, L: 2, M: 3, A: 2 },
+  '3-4-3': { G: 1, Z: 3, L: 0, M: 4, A: 3 },
+  '4-2-4': { G: 1, Z: 2, L: 2, M: 2, A: 4 },
+  '5-4-1': { G: 1, Z: 3, L: 2, M: 4, A: 1 },
+  '4-1-4-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
+  '4-2-3-1': { G: 1, Z: 2, L: 2, M: 5, A: 1 },
+}
+
+/**
+ * How the midfield splits into lines, from the back, in formations that have
+ * them: a holding line behind the rest. The first midfield slots hold back.
+ */
+export const MIDFIELD_LINES: Partial<Record<Formation, number[]>> = {
+  '4-1-4-1': [1, 4],
+  '4-2-3-1': [2, 3],
+}
+
+/**
+ * The XI by line, from the keeper forwards: the keeper, the back line with a
+ * lateral at each end, the midfield line or lines, and the forwards.
+ */
+export function formationLines<T extends { position: Position }>(
+  starters: readonly T[],
+  formation: Formation,
+): T[][] {
+  const of = (position: Position) => starters.filter((s) => s.position === position)
+  const fullbacks = of('L')
+  const back = [...fullbacks.slice(0, 1), ...of('Z'), ...fullbacks.slice(1)]
+  const midfield = of('M')
+  const sizes = MIDFIELD_LINES[formation] ?? [midfield.length]
+  const lines: T[][] = []
+  let from = 0
+  sizes.forEach((size, i) => {
+    // The last line takes whoever is left, so a player short or extra never goes missing.
+    const to = i === sizes.length - 1 ? midfield.length : from + size
+    lines.push(midfield.slice(from, to))
+    from = to
+  })
+  return [of('G'), back, ...lines, of('A')].filter((line) => line.length > 0)
 }
 
 export const BENCH_SIZE = 7

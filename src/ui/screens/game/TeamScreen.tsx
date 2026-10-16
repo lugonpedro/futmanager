@@ -11,7 +11,7 @@ import {
   type DragEndEvent,
   type DragStartEvent,
 } from '@dnd-kit/core'
-import { ArrowDownIcon, ArrowUpIcon, EllipsisIcon, WandSparklesIcon } from 'lucide-react'
+import { ArrowDownIcon, ArrowUpIcon, EllipsisIcon, MapIcon, WandSparklesIcon } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
@@ -37,7 +37,7 @@ import { cn } from '@/lib/utils'
 import {
   autoLineup,
   changeFormation,
-  FORMATION_LIST,
+  formationLines,
   swapPlayers,
 } from '../../../engine/match/lineup.ts'
 import { positionFit, sectorStrength } from '../../../engine/match/strength.ts'
@@ -48,10 +48,11 @@ import {
   type Position,
   type Posture,
 } from '../../../engine/model/types.ts'
-import { conditionOn, formOf } from '../../../engine/season/form.ts'
+import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
 import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
+import { FormationSelect } from '../../components/FormationSelect.tsx'
 import { Pitch } from '../../components/Pitch.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import {
@@ -67,7 +68,13 @@ import {
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
 import { FormArrow, PlayerSheet } from './PlayerSheet.tsx'
 
-type Row = Player & { role: Role; slot?: Position; condition: number; form: number }
+type Row = Player & {
+  role: Role
+  slot?: Position
+  condition: number
+  form: number
+  rating?: number
+}
 
 const GROUPS: { role: Role; label: string }[] = [
   { role: 'titular', label: 'Titulares' },
@@ -99,12 +106,19 @@ const COLUMNS = [
     value: (r: Row) => r.condition,
     hide: 'hidden sm:table-cell',
   },
+  {
+    key: 'rating',
+    label: 'Nota',
+    title: 'Nota média na temporada',
+    value: (r: Row) => r.rating ?? 0,
+    hide: 'hidden md:table-cell',
+  },
   { key: 'wage', label: 'Salário', value: (r: Row) => r.wage, hide: 'hidden md:table-cell' },
   {
     key: 'marketValue',
     label: 'Valor',
     value: (r: Row) => r.marketValue,
-    hide: 'hidden md:table-cell xl:hidden',
+    hide: 'hidden lg:table-cell',
   },
   {
     key: 'contractUntil',
@@ -133,6 +147,7 @@ export function TeamScreen() {
   const [viewing, setViewing] = useState<string>()
   const [listing, setListing] = useState<string>()
   const [renewing, setRenewing] = useState<string>()
+  const [showPitch, setShowPitch] = useState(false)
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState<{ key: SortKey; ascending: boolean }>({
@@ -200,6 +215,7 @@ export function TeamScreen() {
       form: formOf(season, s.player.id),
     })),
     lineup.posture,
+    lineup.formation,
   )
 
   const query = search.trim().toLocaleLowerCase('pt-BR')
@@ -213,6 +229,7 @@ export function TeamScreen() {
       slot: slots.get(p.id),
       condition: conditionOf(p.id),
       form: formOf(season, p.id),
+      rating: seasonRating(season, p.id),
     }))
   rows.sort((a, b) => {
     const x = column.value(a)
@@ -246,27 +263,28 @@ export function TeamScreen() {
     >
       <div className="flex flex-col gap-4">
         <Card className="gap-3 px-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="w-20 text-sm text-muted-foreground">Formação</span>
-            <Choices
-              ariaLabel="Formação"
-              options={FORMATION_LIST}
-              value={lineup.formation}
-              onChange={(f) => save(changeFormation(lineup, f, world.players))}
-            />
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="w-20 text-sm text-muted-foreground">Postura</span>
-            <Choices
-              ariaLabel="Postura"
-              options={Object.keys(POSTURE_NAMES) as Posture[]}
-              value={lineup.posture}
-              onChange={(p) => save({ ...lineup, posture: p })}
-              label={(p) => POSTURE_NAMES[p]}
-            />
-          </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button onClick={() => save(autoLineup(squad, lineup.formation, lineup.posture, out))}>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <label className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground">Formação</span>
+              <FormationSelect
+                value={lineup.formation}
+                onChange={(f) => save(changeFormation(lineup, f, world.players))}
+              />
+            </label>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground">Postura</span>
+              <Choices
+                ariaLabel="Postura"
+                options={Object.keys(POSTURE_NAMES) as Posture[]}
+                value={lineup.posture}
+                onChange={(p) => save({ ...lineup, posture: p })}
+                label={(p) => POSTURE_NAMES[p]}
+              />
+            </div>
+            <Button
+              size="sm"
+              onClick={() => save(autoLineup(squad, lineup.formation, lineup.posture, out))}
+            >
               <WandSparklesIcon />
               Escalar automaticamente
             </Button>
@@ -275,173 +293,188 @@ export function TeamScreen() {
               {Math.round(sectors.attack)}
             </p>
           </div>
-          <p className="text-xs text-muted-foreground">
-            Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de lugar.
-            A cor da posição mostra o encaixe: <span className={fitClass(1)}>na posição</span>,{' '}
-            <span className={fitClass(0.95)}>secundária</span> ou{' '}
-            <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
-            vender ou renovar.
-          </p>
-        </Card>
 
-        <div className="grid items-start gap-4 xl:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
-          <div className="w-full md:mx-auto md:max-w-lg xl:max-w-none">
-            <Pitch
-              slots={starters}
-              selected={selected}
-              onSelect={pick}
-              wrap={(id, className, player) => (
-                <DragSlot id={id} className={className}>
-                  {player}
-                </DragSlot>
-              )}
-            />
+          <StarterLines
+            lines={formationLines(starters, lineup.formation)}
+            selected={selected}
+            onSelect={pick}
+          />
+
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="text-xs text-muted-foreground">
+              Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de
+              lugar. A cor da posição mostra o encaixe:{' '}
+              <span className={fitClass(1)}>na posição</span>,{' '}
+              <span className={fitClass(0.95)}>secundária</span> ou{' '}
+              <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
+              vender ou renovar.
+            </p>
+            <Button variant="outline" size="sm" onClick={() => setShowPitch((shown) => !shown)}>
+              <MapIcon />
+              {showPitch ? 'Esconder o campo' : 'Ver no campo'}
+            </Button>
           </div>
-
-          <section className="flex min-w-0 flex-col gap-3">
-            <div className="flex flex-wrap items-center gap-2">
-              <Choices
-                ariaLabel="Filtrar por posição"
-                options={['Todos', ...POSITIONS]}
-                value={position ?? 'Todos'}
-                onChange={(value) =>
-                  setPosition(value === 'Todos' ? undefined : (value as Position))
-                }
-                title={(value) =>
-                  value === 'Todos' ? 'Todas as posições' : POSITION_NAMES[value as Position]
-                }
-              />
-              <Input
-                type="search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar jogador"
-                className="h-8 sm:max-w-48"
+          {showPitch && (
+            <div className="w-full md:mx-auto md:max-w-lg">
+              <Pitch
+                slots={starters}
+                formation={lineup.formation}
+                selected={selected}
+                onSelect={pick}
+                wrap={(id, className, player) => (
+                  <DragSlot id={id} className={className}>
+                    {player}
+                  </DragSlot>
+                )}
               />
             </div>
-            {expiring > 0 && (
-              <p className="text-sm text-muted-foreground">
-                {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim desta
-                temporada (em vermelho): renove ou o jogador sai de graça.
-              </p>
-            )}
+          )}
+        </Card>
 
-            <Card className="py-0">
-              <Table className="tabular-nums">
-                <TableHeader>
-                  <TableRow>
-                    {COLUMNS.map((c) => (
-                      <TableHead key={c.key} className={'hide' in c ? c.hide : undefined}>
-                        <button
-                          type="button"
-                          onClick={() => sortBy(c.key)}
-                          title={'title' in c ? c.title : undefined}
-                          className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"
-                        >
-                          {c.label}
-                          {sort.key === c.key &&
-                            (sort.ascending ? (
-                              <ArrowUpIcon className="size-3" />
-                            ) : (
-                              <ArrowDownIcon className="size-3" />
-                            ))}
-                        </button>
-                      </TableHead>
-                    ))}
-                    <TableHead>
-                      <span className="sr-only">Ações</span>
+        <section className="flex min-w-0 flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <Choices
+              ariaLabel="Filtrar por posição"
+              options={['Todos', ...POSITIONS]}
+              value={position ?? 'Todos'}
+              onChange={(value) => setPosition(value === 'Todos' ? undefined : (value as Position))}
+              title={(value) =>
+                value === 'Todos' ? 'Todas as posições' : POSITION_NAMES[value as Position]
+              }
+            />
+            <Input
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Buscar jogador"
+              className="h-8 sm:max-w-48"
+            />
+          </div>
+          {expiring > 0 && (
+            <p className="text-sm text-muted-foreground">
+              {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim desta
+              temporada (em vermelho): renove ou o jogador sai de graça.
+            </p>
+          )}
+
+          <Card className="py-0">
+            <Table className="tabular-nums">
+              <TableHeader>
+                <TableRow>
+                  {COLUMNS.map((c) => (
+                    <TableHead key={c.key} className={'hide' in c ? c.hide : undefined}>
+                      <button
+                        type="button"
+                        onClick={() => sortBy(c.key)}
+                        title={'title' in c ? c.title : undefined}
+                        className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"
+                      >
+                        {c.label}
+                        {sort.key === c.key &&
+                          (sort.ascending ? (
+                            <ArrowUpIcon className="size-3" />
+                          ) : (
+                            <ArrowDownIcon className="size-3" />
+                          ))}
+                      </button>
                     </TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {GROUPS.map((group) => {
-                    const members = rows.filter((r) => r.role === group.role)
-                    return [
-                      <TableRow key={group.role} className="bg-muted/50 hover:bg-muted/50">
-                        <TableCell
-                          colSpan={COLUMNS.length + 1}
-                          className="py-1.5 text-xs font-semibold text-muted-foreground"
-                        >
-                          {group.label} ({members.length})
+                  ))}
+                  <TableHead>
+                    <span className="sr-only">Ações</span>
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {GROUPS.map((group) => {
+                  const members = rows.filter((r) => r.role === group.role)
+                  return [
+                    <TableRow key={group.role} className="bg-muted/50 hover:bg-muted/50">
+                      <TableCell
+                        colSpan={COLUMNS.length + 1}
+                        className="py-1.5 text-xs font-semibold text-muted-foreground"
+                      >
+                        {group.label} ({members.length})
+                      </TableCell>
+                    </TableRow>,
+                    ...members.map((p) => (
+                      <SquadRow
+                        key={p.id}
+                        row={p}
+                        selected={selected === p.id}
+                        disabled={out.has(p.id)}
+                        listed={market.listed[p.id] !== undefined}
+                        onPick={() => pick(p.id)}
+                        onView={() => setViewing(p.id)}
+                        onSell={() => setListing(p.id)}
+                        onRenew={() => setRenewing(p.id)}
+                      >
+                        <TableCell>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setViewing(p.id)
+                            }}
+                            className="cursor-pointer text-left font-medium hover:underline"
+                          >
+                            {p.name}
+                          </button>{' '}
+                          <PlayerStatus playerId={p.id} season={season} />
+                          {isHomegrown(p, userClubId) && (
+                            <Badge
+                              variant="outline"
+                              className="ml-1"
+                              title="Revelado pela base do clube"
+                            >
+                              Base
+                            </Badge>
+                          )}
+                          {market.listed[p.id] !== undefined && (
+                            <Badge variant="secondary" className="ml-1">
+                              à venda
+                            </Badge>
+                          )}
                         </TableCell>
-                      </TableRow>,
-                      ...members.map((p) => (
-                        <SquadRow
-                          key={p.id}
-                          row={p}
-                          selected={selected === p.id}
-                          disabled={out.has(p.id)}
-                          listed={market.listed[p.id] !== undefined}
-                          onPick={() => pick(p.id)}
-                          onView={() => setViewing(p.id)}
-                          onSell={() => setListing(p.id)}
-                          onRenew={() => setRenewing(p.id)}
-                        >
-                          <TableCell>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                setViewing(p.id)
-                              }}
-                              className="cursor-pointer text-left font-medium hover:underline"
-                            >
-                              {p.name}
-                            </button>{' '}
-                            <PlayerStatus playerId={p.id} season={season} />
-                            {isHomegrown(p, userClubId) && (
-                              <Badge
-                                variant="outline"
-                                className="ml-1"
-                                title="Revelado pela base do clube"
-                              >
-                                Base
-                              </Badge>
-                            )}
-                            {market.listed[p.id] !== undefined && (
-                              <Badge variant="secondary" className="ml-1">
-                                à venda
-                              </Badge>
-                            )}
-                          </TableCell>
-                          <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
-                          <TableCell className="font-bold">{p.overall}</TableCell>
-                          <TableCell className="hidden text-muted-foreground sm:table-cell">
-                            {p.potential}
-                          </TableCell>
-                          <TableCell className="hidden whitespace-nowrap sm:table-cell">
-                            <span
-                              className={cn(
-                                p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
-                              )}
-                            >
-                              {p.condition}%
-                            </span>{' '}
-                            <FormArrow form={p.form} />
-                          </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            {formatMoney(p.wage)}
-                          </TableCell>
-                          <TableCell className="hidden md:table-cell xl:hidden">
-                            {formatMoney(p.marketValue)}
-                          </TableCell>
-                          <TableCell
+                        <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
+                        <TableCell className="font-bold">{p.overall}</TableCell>
+                        <TableCell className="hidden text-muted-foreground sm:table-cell">
+                          {p.potential}
+                        </TableCell>
+                        <TableCell className="hidden whitespace-nowrap sm:table-cell">
+                          <span
                             className={cn(
-                              'hidden sm:table-cell',
-                              p.contractUntil <= season.year && 'font-semibold text-destructive',
+                              p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
                             )}
                           >
-                            {p.contractUntil}
-                          </TableCell>
-                        </SquadRow>
-                      )),
-                    ]
-                  })}
-                </TableBody>
-              </Table>
-            </Card>
-          </section>
-        </div>
+                            {p.condition}%
+                          </span>{' '}
+                          <FormArrow form={p.form} />
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          {p.rating?.toFixed(1) ?? '-'}
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          {formatMoney(p.wage)}
+                        </TableCell>
+                        <TableCell className="hidden lg:table-cell">
+                          {formatMoney(p.marketValue)}
+                        </TableCell>
+                        <TableCell
+                          className={cn(
+                            'hidden sm:table-cell',
+                            p.contractUntil <= season.year && 'font-semibold text-destructive',
+                          )}
+                        >
+                          {p.contractUntil}
+                        </TableCell>
+                      </SquadRow>
+                    )),
+                  ]
+                })}
+              </TableBody>
+            </Table>
+          </Card>
+        </section>
       </div>
 
       <DragOverlay dropAnimation={null}>
@@ -478,9 +511,17 @@ export function TeamScreen() {
 const playerOf = (spot: { data: { current?: Record<string, unknown> } }) =>
   spot.data.current!.playerId as string
 
-/** A player on the pitch that can be dragged onto another player, and take a drop. */
-function DragSlot(props: { id: string; className: string; children: ReactNode }) {
-  const spot = { id: `pitch-${props.id}`, data: { playerId: props.id } }
+/**
+ * A starter, as a chip or on the pitch, that can be dragged onto another player
+ * and take a drop. Chips and pitch can show at once, so each has its own ids.
+ */
+function DragSlot(props: {
+  id: string
+  className: string
+  children: ReactNode
+  place?: 'chip' | 'pitch'
+}) {
+  const spot = { id: `${props.place ?? 'pitch'}-${props.id}`, data: { playerId: props.id } }
   const drag = useDraggable(spot)
   const drop = useDroppable(spot)
   return (
@@ -498,6 +539,63 @@ function DragSlot(props: { id: string; className: string; children: ReactNode })
       )}
     >
       {props.children}
+    </div>
+  )
+}
+
+/** What each line of the XI is called, from the keeper forwards. */
+function lineName(line: readonly { position: Position }[], index: number, lines: number): string {
+  const position = line[0].position
+  if (position === 'G') return 'Goleiro'
+  if (position === 'A') return 'Ataque'
+  if (position !== 'M') return 'Defesa'
+  // With two midfield lines the first holds back.
+  const midfield = lines - 3
+  if (midfield < 2) return 'Meio'
+  return index === 2 ? 'Volantes' : 'Meias'
+}
+
+/** The XI as chips by line, each one a drag handle and a drop target like on the pitch. */
+function StarterLines(props: {
+  lines: { player: Player; position: Position }[][]
+  selected?: string
+  onSelect: (playerId: string) => void
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      {props.lines.map((line, i) => (
+        <div key={i} className="flex flex-col gap-1 sm:flex-row sm:items-start sm:gap-2">
+          <span className="shrink-0 text-xs text-muted-foreground sm:w-16 sm:pt-2">
+            {lineName(line, i, props.lines.length)}
+          </span>
+          <div className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+            {line.map(({ player, position }) => {
+              const fit = positionFit(player, position)
+              const selected = props.selected === player.id
+              return (
+                <DragSlot key={player.id} id={player.id} place="chip" className="min-w-0 sm:w-48">
+                  <button
+                    type="button"
+                    onClick={() => props.onSelect(player.id)}
+                    title={`${POSITION_NAMES[position]}${fit < 1 ? ` (é ${POSITION_NAMES[player.position].toLowerCase()})` : ''}`}
+                    className={cn(
+                      'flex w-full cursor-pointer items-center gap-2 rounded-md border px-2 py-1.5 text-left text-sm hover:bg-accent',
+                      selected &&
+                        'border-yellow-400 bg-yellow-300 text-green-950 hover:bg-yellow-300',
+                    )}
+                  >
+                    <span className={cn('w-4 font-bold', !selected && fitClass(fit))}>
+                      {position}
+                    </span>
+                    <span className="min-w-0 flex-1 truncate">{player.name}</span>
+                    <span className="font-semibold tabular-nums">{player.overall}</span>
+                  </button>
+                </DragSlot>
+              )
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

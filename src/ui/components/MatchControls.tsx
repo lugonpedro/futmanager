@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Card } from '@/components/ui/card'
-import { FORMATION_LIST } from '../../engine/match/lineup.ts'
 import { positionFit } from '../../engine/match/strength.ts'
 import {
   setFormation,
@@ -12,6 +11,7 @@ import {
 import type { Posture } from '../../engine/model/types.ts'
 import { POSTURE_NAMES } from '../format.ts'
 import { Choices } from './Choices.tsx'
+import { FormationSelect } from './FormationSelect.tsx'
 import { Pitch } from './Pitch.tsx'
 
 /**
@@ -54,9 +54,7 @@ export function MatchControls(props: {
           {team.subsLeft === 1 ? 'substituição restante' : 'substituições restantes'}
         </span>
       </div>
-      <Choices
-        ariaLabel="Formação"
-        options={FORMATION_LIST}
+      <FormationSelect
         value={team.formation}
         disabled={locked}
         onChange={(f) => act(() => setFormation(state, side, f))}
@@ -73,6 +71,7 @@ export function MatchControls(props: {
       <div className="grid gap-3 sm:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
         <Pitch
           slots={team.onPitch}
+          formation={team.formation}
           selected={outId}
           onSelect={(id) => !locked && trySub(outId === id ? undefined : id, inId)}
         />

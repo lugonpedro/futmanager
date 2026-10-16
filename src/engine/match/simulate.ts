@@ -226,7 +226,7 @@ function addEvent(state: MatchState, event: Omit<MatchEvent, 'minute'>): MatchEv
 
 function sectors(state: MatchState, side: MatchSide) {
   const team = state[side]
-  const raw = sectorStrength(team.onPitch, team.posture)
+  const raw = sectorStrength(team.onPitch, team.posture, team.formation)
   if (side === 'away') return raw
   const boost = BALANCE.homeAdvantage
   return {

@@ -8,6 +8,7 @@ import {
   changeFormation,
   FORMATION_LIST,
   FORMATIONS,
+  formationLines,
   repairLineup,
   swapPlayers,
 } from './lineup.ts'
@@ -150,5 +151,41 @@ describe('autoFormation', () => {
     expect(FORMATIONS[autoFormation(noForwards)].A).toBe(1)
     const lotsOfForwards = squad.filter((p) => p.position !== 'M' || p.overall > 90)
     expect(FORMATIONS[autoFormation(lotsOfForwards)].M).toBeLessThanOrEqual(3)
+  })
+})
+
+describe('formationLines', () => {
+  const slot = (position: Position, id: string) => ({ position, id })
+  const xi = (formation: Formation) => {
+    const counts = FORMATIONS[formation]
+    return (Object.keys(counts) as Position[]).flatMap((position) =>
+      Array.from({ length: counts[position] }, (_, i) => slot(position, `${position}${i + 1}`)),
+    )
+  }
+  const ids = (lines: { id: string }[][]) => lines.map((line) => line.map((s) => s.id))
+
+  it('puts the laterais at the ends of the back line', () => {
+    expect(ids(formationLines(xi('4-4-2'), '4-4-2'))).toEqual([
+      ['G1'],
+      ['L1', 'Z1', 'Z2', 'L2'],
+      ['M1', 'M2', 'M3', 'M4'],
+      ['A1', 'A2'],
+    ])
+  })
+
+  it('splits the midfield of a 4-2-3-1 and a 4-1-4-1, the first slots holding back', () => {
+    expect(ids(formationLines(xi('4-2-3-1'), '4-2-3-1')).slice(2, 4)).toEqual([
+      ['M1', 'M2'],
+      ['M3', 'M4', 'M5'],
+    ])
+    expect(ids(formationLines(xi('4-1-4-1'), '4-1-4-1')).slice(2, 4)).toEqual([
+      ['M1'],
+      ['M2', 'M3', 'M4', 'M5'],
+    ])
+  })
+
+  it('keeps everyone when a midfielder is missing', () => {
+    const short = xi('4-2-3-1').filter((s) => s.id !== 'M5')
+    expect(formationLines(short, '4-2-3-1').flat()).toHaveLength(10)
   })
 })

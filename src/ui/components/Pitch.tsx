@@ -1,22 +1,12 @@
 import { Fragment, type ReactNode } from 'react'
-import type { Player, Position } from '../../engine/model/types.ts'
+import { formationLines } from '../../engine/match/lineup.ts'
+import type { Formation, Player, Position } from '../../engine/model/types.ts'
 import { positionFit } from '../../engine/match/strength.ts'
 import { fitClass } from '../format.ts'
 
 export type PitchSlot = { player: Player; position: Position; energy?: number; booked?: boolean }
 
-/** Rows from attack down to goal; laterais flank the centre-backs. */
-const ROWS: Position[][] = [['A'], ['M'], ['L', 'Z'], ['G']]
-
 const SLOT_CLASS = 'flex max-w-20 min-w-0 flex-1'
-
-function defenceRow(slots: PitchSlot[]): PitchSlot[] {
-  const fullbacks = slots.filter((s) => s.position === 'L')
-  const centre = slots.filter((s) => s.position === 'Z')
-  return fullbacks.length >= 2
-    ? [fullbacks[0], ...centre, ...fullbacks.slice(1)]
-    : [...fullbacks, ...centre]
-}
 
 /**
  * The XI drawn on a pitch; tapping a player selects them. `wrap` lets a
@@ -25,18 +15,20 @@ function defenceRow(slots: PitchSlot[]): PitchSlot[] {
  */
 export function Pitch(props: {
   slots: PitchSlot[]
+  formation: Formation
   selected?: string
   onSelect?: (playerId: string) => void
   wrap?: (playerId: string, className: string, player: ReactNode) => ReactNode
 }) {
   return (
     <div className="flex flex-col justify-between gap-3 rounded-lg border-2 border-white/40 bg-gradient-to-b from-pitch to-pitch-dark p-3 text-white">
-      {ROWS.map((positions) => {
-        const row = props.slots.filter((s) => positions.includes(s.position))
-        const ordered = positions.includes('Z') ? defenceRow(row) : row
-        return (
-          <div key={positions.join()} className="flex min-h-12 justify-around gap-1">
-            {ordered.map((slot) => {
+      {/* Attack at the top, down to the keeper. */}
+      {formationLines(props.slots, props.formation)
+        .reverse()
+        .map((row, i) => (
+          // Lines keep their place as players swap, so the index is the stable key.
+          <div key={i} className="flex min-h-12 justify-around gap-1">
+            {row.map((slot) => {
               const player = (
                 <PitchPlayer
                   slot={slot}
@@ -55,8 +47,7 @@ export function Pitch(props: {
               )
             })}
           </div>
-        )
-      })}
+        ))}
     </div>
   )
 }
