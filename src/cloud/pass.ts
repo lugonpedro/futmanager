@@ -1,7 +1,7 @@
 import { supabase } from './client.ts'
 
 /** What the season pass costs; the price itself is set in Stripe, keep both in step. */
-export const PASS_PRICE = 'R$\u00a09,90'
+export const PASS_PRICE = 'R$\u00a05,00'
 
 function client() {
   if (!supabase) throw new Error('O jogo online não está disponível nesta versão.')

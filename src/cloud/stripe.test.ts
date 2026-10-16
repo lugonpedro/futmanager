@@ -53,7 +53,7 @@ describe('passPayment', () => {
   const session = {
     id: 'cs_1',
     payment_status: 'paid',
-    amount_total: 990,
+    amount_total: 500,
     metadata: { user_id: 'u1', season_id: '3' },
   }
 
@@ -62,7 +62,7 @@ describe('passPayment', () => {
       userId: 'u1',
       seasonId: 3,
       paymentId: 'cs_1',
-      amountCents: 990,
+      amountCents: 500,
     })
     expect(
       passPayment({ type: 'checkout.session.async_payment_succeeded', data: { object: session } }),

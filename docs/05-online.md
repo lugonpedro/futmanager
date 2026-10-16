@@ -159,7 +159,7 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
 
 Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e por aceitar Pix no Brasil.
 
-- **Tela do passe** (`/fantasia/passe`): o que o passe dá, o preço (R$ 9,90) e o botão "Comprar passe". No card "Ligas", quem não tem o passe vê o aviso com o link para essa tela no lugar do campo de criar liga. Entrar nas ligas dos amigos continua grátis.
+- **Tela do passe** (`/fantasia/passe`): o que o passe dá, o preço (R$ 5,00) e o botão "Comprar passe". No card "Ligas", quem não tem o passe vê o aviso com o link para essa tela no lugar do campo de criar liga. Entrar nas ligas dos amigos continua grátis.
 - **Compra**: a função `fantasy-pass` confere a conta e a temporada aberta e abre uma página de pagamento do Stripe (Checkout) com o preço cadastrado lá. O pagamento acontece todo no Stripe; o jogo nunca vê dados de cartão.
 - **Confirmação**: o Stripe chama a função `stripe-webhook`, que confere a assinatura do aviso (HMAC com o segredo do webhook, recusando avisos com mais de 5 minutos) e grava o passe em `fantasy_passes`. Avisos repetidos não duplicam nada. Com Pix, o Checkout pode terminar antes do pagamento; o passe sai no aviso `checkout.session.async_payment_succeeded`.
 - **Volta do pagamento**: a tela do passe procura o passe por um minuto e mostra quando ele chega.
@@ -172,7 +172,7 @@ Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e po
 ### Para ligar no Stripe (uma vez)
 
 1. Criar a conta no Stripe e começar no **modo de teste**.
-2. Em Produtos, criar "Passe da temporada" com um preço único de R$ 9,90 em BRL e copiar o id do preço (`price_...`). Se mudar o valor, mudar também `PASS_PRICE` em `src/cloud/pass.ts`.
+2. Em Produtos, criar "Passe da temporada" com um preço único de R$ 5,00 em BRL e copiar o id do preço (`price_...`). Se mudar o valor, mudar também `PASS_PRICE` em `src/cloud/pass.ts`.
 3. Em Configurações → Formas de pagamento, ligar o **Pix** (e o cartão, que já vem ligado).
 4. Em Desenvolvedores → Webhooks, criar um destino para `https://<ref>.supabase.co/functions/v1/stripe-webhook` com os eventos `checkout.session.completed` e `checkout.session.async_payment_succeeded`, e copiar o segredo de assinatura (`whsec_...`).
 5. Guardar os segredos no Supabase:
