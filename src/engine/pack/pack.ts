@@ -1,4 +1,4 @@
-import { marketValueFor, playerProfile, wageFor } from '../generate/player.ts'
+import { marketValueFor, playerProfile, potentialRoom, wageFor } from '../generate/player.ts'
 import { generateWorld } from '../generate/world.ts'
 import type { Club, Player, Position, World } from '../model/types.ts'
 import { POSITIONS } from '../model/types.ts'
@@ -159,7 +159,12 @@ function applyPlayer(world: World, player: Player, entry: PackPlayer, mode: Appl
         )
       : {}
   const overall = reshaped.overall ?? player.overall
-  const potential = Math.min(99, Math.max(overall, overall + player.potential - player.overall))
+  // A new age brings the growth room of that age, so a veteran from the pack has peaked.
+  const room =
+    entry.age === undefined
+      ? player.potential - player.overall
+      : potentialRoom(createRng(mixSeed(world.seed, player.id, 'pacote', 'potencial')), age)
+  const potential = Math.min(99, Math.max(overall, overall + room))
   return {
     ...named,
     ...reshaped,

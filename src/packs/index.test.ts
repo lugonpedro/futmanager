@@ -35,3 +35,36 @@ describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
     expect(game.world.clubs[game.userClubId].name).toBe(pack.clubs[0].name)
   })
 })
+
+describe('the Brasileirão 2026 ratings', () => {
+  const average = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length
+
+  it('keep each division as strong as a generated one', async () => {
+    const pack = await BUILT_IN_PACKS.find((p) => p.id === 'brasileirao-2026')!.load()
+    const { world } = applyPack(generateWorld(3), pack)
+    const strength = (division: number) =>
+      average(
+        Object.values(world.clubs)
+          .filter((c) => c.division === division)
+          .flatMap((c) => c.playerIds.map((id) => world.players[id].overall)),
+      )
+    expect(strength(1)).toBeGreaterThan(62)
+    expect(strength(1)).toBeLessThan(72)
+    expect(strength(2)).toBeGreaterThan(39)
+    expect(strength(2)).toBeLessThan(50)
+  })
+
+  it('leave no room to grow for players past 29', async () => {
+    const pack = await BUILT_IN_PACKS.find((p) => p.id === 'brasileirao-2026')!.load()
+    const { world } = applyPack(generateWorld(3), pack)
+    const veterans = pack.clubs
+      .flatMap((c) => c.players!)
+      .filter((p) => p.age !== undefined && p.age > 29)
+      .map((p) => p.name)
+    const named = Object.values(world.players).filter((p) => veterans.includes(p.name))
+    expect(named.length).toBeGreaterThan(300)
+    for (const player of named) {
+      if (player.age > 29) expect(player.potential, player.name).toBe(player.overall)
+    }
+  })
+})

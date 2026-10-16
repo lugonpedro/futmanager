@@ -12,127 +12,152 @@
         {
           "nome": "Rossi",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 89
         },
         {
           "nome": "Andrew",
           "posicao": "G",
-          "idade": 25
+          "idade": 25,
+          "overall": 73
         },
         {
           "nome": "Dyogo Alves",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 61
         },
         {
           "nome": "Léo Ortiz",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 91
         },
         {
           "nome": "Léo Pereira",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 85
         },
         {
           "nome": "Danilo",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 87
         },
         {
           "nome": "Vitão",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 77
         },
         {
           "nome": "João Victor",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 65
         },
         {
           "nome": "Varela",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 83
         },
         {
           "nome": "Alex Sandro",
           "posicao": "L",
-          "idade": 35
+          "idade": 35,
+          "overall": 87
         },
         {
           "nome": "Emerson Royal",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 83
         },
         {
           "nome": "Ayrton Lucas",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 83
         },
         {
           "nome": "Pulgar",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 87
         },
         {
           "nome": "Jorginho",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 91
         },
         {
           "nome": "Arrascaeta",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 99
         },
         {
           "nome": "Lucas Paquetá",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 91
         },
         {
           "nome": "Saúl",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 87
         },
         {
           "nome": "De la Cruz",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 89
         },
         {
           "nome": "Carrascal",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 91
         },
         {
           "nome": "Pedro",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 91
         },
         {
           "nome": "Samuel Lino",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 89
         },
         {
           "nome": "Bruno Henrique",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 83
         },
         {
           "nome": "Luiz Araújo",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 85
         },
         {
           "nome": "Valencia",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 73
         },
         {
           "nome": "Lorran",
           "posicao": "A",
-          "idade": 20
+          "idade": 20,
+          "overall": 73
         }
       ]
     },
@@ -145,116 +170,139 @@
         {
           "nome": "Carlos Miguel",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 87
         },
         {
           "nome": "Marcelo Lomba",
           "posicao": "G",
-          "idade": 40
+          "idade": 40,
+          "overall": 69
         },
         {
           "nome": "Bruno Bertinato",
-          "posicao": "G"
+          "posicao": "G",
+          "overall": 59
         },
         {
           "nome": "Gustavo Gómez",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 91
         },
         {
           "nome": "Murilo",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 87
         },
         {
           "nome": "Bruno Fuchs",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 81
         },
         {
           "nome": "Barboza",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 83
         },
         {
           "nome": "Benedetti",
           "posicao": "Z",
-          "idade": 20
+          "idade": 20,
+          "overall": 69
         },
         {
           "nome": "Khellven",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 81
         },
         {
           "nome": "Piquerez",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 87
         },
         {
           "nome": "Giay",
           "posicao": "L",
-          "idade": 22
+          "idade": 22,
+          "overall": 81
         },
         {
           "nome": "Jefté",
           "posicao": "L",
-          "idade": 23
+          "idade": 23,
+          "overall": 77
         },
         {
           "nome": "Marlon Freitas",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 85
         },
         {
           "nome": "Andreas Pereira",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 89
         },
         {
           "nome": "Emiliano Martínez",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 85
         },
         {
           "nome": "Jhon Arias",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 91
         },
         {
           "nome": "Felipe Anderson",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 85
         },
         {
           "nome": "Maurício",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 85
         },
         {
           "nome": "Lucas Evangelista",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 83
         },
         {
           "nome": "Vitor Roque",
           "posicao": "A",
-          "idade": 21
+          "idade": 21,
+          "overall": 89
         },
         {
           "nome": "Flaco López",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 87
         },
         {
           "nome": "Ramón Sosa",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 87
         },
         {
           "nome": "Paulinho",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 85
         }
       ]
     },
@@ -267,120 +315,144 @@
         {
           "nome": "Cássio",
           "posicao": "G",
-          "idade": 39
+          "idade": 39,
+          "overall": 81
         },
         {
           "nome": "Otávio",
-          "posicao": "G"
+          "posicao": "G",
+          "overall": 61
         },
         {
           "nome": "Léo Aragão",
-          "posicao": "G"
+          "posicao": "G",
+          "overall": 53
         },
         {
           "nome": "Fabrício Bruno",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 83
         },
         {
           "nome": "Jonathan Jesus",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 73
         },
         {
           "nome": "Villalba",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 77
         },
         {
           "nome": "João Marcelo",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 73
         },
         {
           "nome": "Kauã Moraes",
           "posicao": "L",
-          "idade": 20
+          "idade": 20,
+          "overall": 65
         },
         {
           "nome": "Fagner",
           "posicao": "L",
-          "idade": 37
+          "idade": 37,
+          "overall": 73
         },
         {
           "nome": "Gabriel Rojas",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 75
         },
         {
           "nome": "Viña",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 77
         },
         {
           "nome": "Lucas Romero",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 81
         },
         {
           "nome": "Lucas Silva",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 79
         },
         {
           "nome": "Gerson",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 87
         },
         {
           "nome": "Matheus Pereira",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 87
         },
         {
           "nome": "Matheus Henrique",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 81
         },
         {
           "nome": "Zé Lucas",
           "posicao": "M",
-          "idade": 18
+          "idade": 18,
+          "overall": 61
         },
         {
           "nome": "Rhuan Gabriel",
           "posicao": "M",
-          "idade": 20
+          "idade": 20,
+          "overall": 61
         },
         {
           "nome": "Kaio Jorge",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 85
         },
         {
           "nome": "Sinisterra",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 79
         },
         {
           "nome": "Keny Arroyo",
           "posicao": "A",
-          "idade": 20
+          "idade": 20,
+          "overall": 73
         },
         {
           "nome": "Wanderson",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 73
         },
         {
           "nome": "Gabriel Pec",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 77
         },
         {
           "nome": "Marquinhos",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 73
         }
       ]
     },
@@ -393,112 +465,134 @@
         {
           "nome": "Gabriel Batista",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 73
         },
         {
           "nome": "Warleson",
           "posicao": "G",
-          "idade": 30
+          "idade": 30,
+          "overall": 69
         },
         {
           "nome": "Ferraresi",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 79
         },
         {
           "nome": "Arthur Chaves",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 73
         },
         {
           "nome": "Kaio Pantaleão",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 75
         },
         {
           "nome": "Lucas Monzón",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 71
         },
         {
           "nome": "Vitinho",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 81
         },
         {
           "nome": "Alex Telles",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 81
         },
         {
           "nome": "Mateo Ponte",
           "posicao": "L",
-          "idade": 23
+          "idade": 23,
+          "overall": 73
         },
         {
           "nome": "Marçal",
           "posicao": "L",
-          "idade": 37
+          "idade": 37,
+          "overall": 73
         },
         {
           "nome": "Danilo",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 81
         },
         {
           "nome": "Cristian Medina",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 79
         },
         {
           "nome": "Huguinho",
           "posicao": "M",
-          "idade": 19
+          "idade": 19,
+          "overall": 61
         },
         {
           "nome": "Allan",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 75
         },
         {
           "nome": "Montoro",
           "posicao": "M",
-          "idade": 19
+          "idade": 19,
+          "overall": 71
         },
         {
           "nome": "Domingos Andrade",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 69
         },
         {
           "nome": "Arthur Cabral",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 79
         },
         {
           "nome": "Ziyech",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 83
         },
         {
           "nome": "Matheus Martins",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 77
         },
         {
           "nome": "Júnior Santos",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 77
         },
         {
           "nome": "Jordan Barrera",
           "posicao": "A",
-          "idade": 20
+          "idade": 20,
+          "overall": 69
         },
         {
           "nome": "Tiquinho Soares",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 71
         }
       ]
     },
@@ -511,127 +605,152 @@
         {
           "nome": "Fábio",
           "posicao": "G",
-          "idade": 45
+          "idade": 45,
+          "overall": 78
         },
         {
           "nome": "Vitor Eudes",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 66
         },
         {
           "nome": "Pitaluga",
           "posicao": "G",
-          "idade": 24
+          "idade": 24,
+          "overall": 58
         },
         {
           "nome": "Thiago Silva",
           "posicao": "Z",
-          "idade": 42
+          "idade": 42,
+          "overall": 88
         },
         {
           "nome": "Ignácio",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 78
         },
         {
           "nome": "Freytes",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 78
         },
         {
           "nome": "Jemmes",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 74
         },
         {
           "nome": "Igor Rabello",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 74
         },
         {
           "nome": "Samuel Xavier",
           "posicao": "L",
-          "idade": 36
+          "idade": 36,
+          "overall": 74
         },
         {
           "nome": "Guilherme Arana",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 84
         },
         {
           "nome": "Guga",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 76
         },
         {
           "nome": "Renê",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 74
         },
         {
           "nome": "Martinelli",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 82
         },
         {
           "nome": "Hércules",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 82
         },
         {
           "nome": "Nonato",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 78
         },
         {
           "nome": "Otávio",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 76
         },
         {
           "nome": "Alisson",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 74
         },
         {
           "nome": "Lucho Acosta",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 84
         },
         {
           "nome": "Ganso",
           "posicao": "M",
-          "idade": 37
+          "idade": 37,
+          "overall": 78
         },
         {
           "nome": "Hulk",
           "posicao": "A",
-          "idade": 40
+          "idade": 40,
+          "overall": 82
         },
         {
           "nome": "Cano",
           "posicao": "A",
-          "idade": 38
+          "idade": 38,
+          "overall": 78
         },
         {
           "nome": "John Kennedy",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 76
         },
         {
           "nome": "Rodrigo Castillo",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 74
         },
         {
           "nome": "Canobbio",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 82
         },
         {
           "nome": "Kevin Serna",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 80
         }
       ]
     },
@@ -644,122 +763,146 @@
         {
           "nome": "Everson",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 78
         },
         {
           "nome": "Gabriel Delfim",
           "posicao": "G",
-          "idade": 24
+          "idade": 24,
+          "overall": 64
         },
         {
           "nome": "Robert",
           "posicao": "G",
-          "idade": 21
+          "idade": 21,
+          "overall": 52
         },
         {
           "nome": "Lyanco",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 78
         },
         {
           "nome": "Ruan Tressoldi",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 72
         },
         {
           "nome": "Léo Duarte",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 70
         },
         {
           "nome": "Vitor Hugo",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 74
         },
         {
           "nome": "Vitão",
           "posicao": "Z",
-          "idade": 18
+          "idade": 18,
+          "overall": 52
         },
         {
           "nome": "Renan Lodi",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 82
         },
         {
           "nome": "Natanael",
           "posicao": "L",
-          "idade": 24
+          "idade": 24,
+          "overall": 72
         },
         {
           "nome": "Preciado",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 74
         },
         {
           "nome": "Alan Franco",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 78
         },
         {
           "nome": "Fred",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 82
         },
         {
           "nome": "Gustavo Scarpa",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 82
         },
         {
           "nome": "Maycon",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 76
         },
         {
           "nome": "Kevin Castaño",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 76
         },
         {
           "nome": "Bernard",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 74
         },
         {
           "nome": "Alexsander",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 74
         },
         {
           "nome": "Tomás Cuello",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 78
         },
         {
           "nome": "Cassierra",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 72
         },
         {
           "nome": "Alan Minda",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 72
         },
         {
           "nome": "Dudu",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 74
         },
         {
           "nome": "Thiago Borbas",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 68
         },
         {
           "nome": "Cauã Soares",
           "posicao": "A",
-          "idade": 18
+          "idade": 18,
+          "overall": 52
         }
       ]
     },
@@ -772,120 +915,144 @@
         {
           "nome": "Rafael",
           "posicao": "G",
-          "idade": 37
+          "idade": 37,
+          "overall": 77
         },
         {
           "nome": "Carlos Coronel",
           "posicao": "G",
-          "idade": 30
+          "idade": 30,
+          "overall": 67
         },
         {
           "nome": "Felipe Preis",
-          "posicao": "G"
+          "posicao": "G",
+          "overall": 47
         },
         {
           "nome": "Arboleda",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 77
         },
         {
           "nome": "Rafael Tolói",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 73
         },
         {
           "nome": "Sabino",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 71
         },
         {
           "nome": "Domingos Duarte",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 71
         },
         {
           "nome": "Luis Osorio",
           "posicao": "Z",
-          "idade": 20
+          "idade": 20,
+          "overall": 63
         },
         {
           "nome": "Lucas Ramon",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 65
         },
         {
           "nome": "Wendell",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 73
         },
         {
           "nome": "Aurélio Buta",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 69
         },
         {
           "nome": "Iago",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 67
         },
         {
           "nome": "Marcos Antônio",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 77
         },
         {
           "nome": "Bobadilla",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 73
         },
         {
           "nome": "Pablo Maia",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 75
         },
         {
           "nome": "Danielzinho",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 67
         },
         {
           "nome": "Cauly",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 71
         },
         {
           "nome": "Newton",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 53
         },
         {
           "nome": "Lucas Moura",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 81
         },
         {
           "nome": "Calleri",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 77
         },
         {
           "nome": "Luciano",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 75
         },
         {
           "nome": "Ferreira",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 75
         },
         {
           "nome": "André Silva",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 73
         },
         {
           "nome": "Artur",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 71
         }
       ]
     },
@@ -898,121 +1065,145 @@
         {
           "nome": "Hugo Souza",
           "posicao": "G",
-          "idade": 27
+          "idade": 27,
+          "overall": 82
         },
         {
           "nome": "Felipe Longo",
           "posicao": "G",
-          "idade": 21
+          "idade": 21,
+          "overall": 60
         },
         {
           "nome": "Gabriel Paulista",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 72
         },
         {
           "nome": "André Ramalho",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 74
         },
         {
           "nome": "Gustavo Henrique",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 76
         },
         {
           "nome": "João Pedro",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 64
         },
         {
           "nome": "João Vitor",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 56
         },
         {
           "nome": "Matheuzinho",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 76
         },
         {
           "nome": "Matheus Bidu",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 72
         },
         {
           "nome": "Angileri",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 72
         },
         {
           "nome": "Pedro Milans",
           "posicao": "L",
-          "idade": 24
+          "idade": 24,
+          "overall": 68
         },
         {
           "nome": "Raniele",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 74
         },
         {
           "nome": "Breno Bidon",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 76
         },
         {
           "nome": "Rodrigo Garro",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 82
         },
         {
           "nome": "Allan",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 74
         },
         {
           "nome": "Matheus Pereira",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 72
         },
         {
           "nome": "André Carrillo",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 74
         },
         {
           "nome": "Jesse Lingard",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 80
         },
         {
           "nome": "Memphis",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 88
         },
         {
           "nome": "Yuri Alberto",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 80
         },
         {
           "nome": "Pedro Raul",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 70
         },
         {
           "nome": "Kaio César",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 70
         },
         {
           "nome": "Kayke",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 64
         },
         {
           "nome": "Gui Negão",
           "posicao": "A",
-          "idade": 19
+          "idade": 19,
+          "overall": 60
         }
       ]
     },
@@ -1025,127 +1216,152 @@
         {
           "nome": "Rochet",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 82
         },
         {
           "nome": "Anthoni",
           "posicao": "G",
-          "idade": 24
+          "idade": 24,
+          "overall": 68
         },
         {
           "nome": "Kauan Jesus",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 54
         },
         {
           "nome": "Mercado",
           "posicao": "Z",
-          "idade": 39
+          "idade": 39,
+          "overall": 72
         },
         {
           "nome": "Félix Torres",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 76
         },
         {
           "nome": "Juninho",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 72
         },
         {
           "nome": "Victor Gabriel",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 68
         },
         {
           "nome": "Clayton Sampaio",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 68
         },
         {
           "nome": "Bernabei",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 78
         },
         {
           "nome": "Braian Aguirre",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 76
         },
         {
           "nome": "Matheus Bahia",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 68
         },
         {
           "nome": "Bruno Gomes",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 72
         },
         {
           "nome": "Villagra",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 74
         },
         {
           "nome": "Thiago Maia",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 76
         },
         {
           "nome": "Alan Patrick",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 80
         },
         {
           "nome": "Bruno Henrique",
           "posicao": "M",
-          "idade": 37
+          "idade": 37,
+          "overall": 70
         },
         {
           "nome": "Alan Rodríguez",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 74
         },
         {
           "nome": "Ronaldo",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 72
         },
         {
           "nome": "Bruno Tabata",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 74
         },
         {
           "nome": "Borré",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 80
         },
         {
           "nome": "Alerrandro",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 74
         },
         {
           "nome": "Carbonero",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 78
         },
         {
           "nome": "Vitinho",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 72
         },
         {
           "nome": "Kayky",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 68
         },
         {
           "nome": "João Victor",
           "posicao": "A",
-          "idade": 19
+          "idade": 19,
+          "overall": 54
         }
       ]
     },
@@ -1158,127 +1374,152 @@
         {
           "nome": "Weverton",
           "posicao": "G",
-          "idade": 39
+          "idade": 39,
+          "overall": 79
         },
         {
           "nome": "Gabriel Grando",
           "posicao": "G",
-          "idade": 26
+          "idade": 26,
+          "overall": 65
         },
         {
           "nome": "Thiago Beltrame",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 51
         },
         {
           "nome": "Kannemann",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 75
         },
         {
           "nome": "Balbuena",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 75
         },
         {
           "nome": "Wagner Leonardo",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 71
         },
         {
           "nome": "Gustavo Martins",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 71
         },
         {
           "nome": "Luis Eduardo",
           "posicao": "Z",
-          "idade": 18
+          "idade": 18,
+          "overall": 51
         },
         {
           "nome": "Marcos Rocha",
           "posicao": "L",
-          "idade": 38
+          "idade": 38,
+          "overall": 67
         },
         {
           "nome": "Marlon",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 71
         },
         {
           "nome": "João Pedro",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 69
         },
         {
           "nome": "Caio Paulista",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 69
         },
         {
           "nome": "Villasanti",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 79
         },
         {
           "nome": "Nardoni",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 75
         },
         {
           "nome": "Noriega",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 73
         },
         {
           "nome": "Dodi",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 71
         },
         {
           "nome": "Danilo Barbosa",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 69
         },
         {
           "nome": "Krovinović",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 71
         },
         {
           "nome": "Gabriel Mec",
           "posicao": "M",
-          "idade": 18
+          "idade": 18,
+          "overall": 59
         },
         {
           "nome": "Carlos Vinícius",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 75
         },
         {
           "nome": "Braithwaite",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 77
         },
         {
           "nome": "Pavón",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 77
         },
         {
           "nome": "Amuzu",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 75
         },
         {
           "nome": "Tetê",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 75
         },
         {
           "nome": "Enamorado",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 71
         }
       ]
     },
@@ -1291,127 +1532,152 @@
         {
           "nome": "Ronaldo",
           "posicao": "G",
-          "idade": 30
+          "idade": 30,
+          "overall": 74
         },
         {
           "nome": "João Paulo",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 66
         },
         {
           "nome": "Léo Vieira",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 60
         },
         {
           "nome": "Kanu",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 72
         },
         {
           "nome": "David Duarte",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 74
         },
         {
           "nome": "Ramos Mingo",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 74
         },
         {
           "nome": "Gabriel Xavier",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 72
         },
         {
           "nome": "Marcos Victor",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 68
         },
         {
           "nome": "Gilberto",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 70
         },
         {
           "nome": "Luciano Juba",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 78
         },
         {
           "nome": "Román Gómez",
           "posicao": "L",
-          "idade": 22
+          "idade": 22,
+          "overall": 70
         },
         {
           "nome": "Zé Guilherme",
           "posicao": "L",
-          "idade": 21
+          "idade": 21,
+          "overall": 60
         },
         {
           "nome": "Jean Lucas",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 78
         },
         {
           "nome": "Acevedo",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 76
         },
         {
           "nome": "Caio Alexandre",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 78
         },
         {
           "nome": "Everton Ribeiro",
           "posicao": "M",
-          "idade": 37
+          "idade": 37,
+          "overall": 78
         },
         {
           "nome": "Rodrigo Nestor",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 74
         },
         {
           "nome": "Erick",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 76
         },
         {
           "nome": "Michel Araújo",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 74
         },
         {
           "nome": "Willian José",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 74
         },
         {
           "nome": "Erick Pulga",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 76
         },
         {
           "nome": "Ademir",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 74
         },
         {
           "nome": "Kike Olivera",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 72
         },
         {
           "nome": "Everaldo",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 68
         },
         {
           "nome": "Sanabria",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 64
         }
       ]
     },
@@ -1424,125 +1690,150 @@
         {
           "nome": "Léo Jardim",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 79
         },
         {
           "nome": "Daniel Fuzato",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 61
         },
         {
           "nome": "Pablo",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 49
         },
         {
           "nome": "Carlos Cuesta",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 69
         },
         {
           "nome": "Robert Renan",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 69
         },
         {
           "nome": "Alan Saldivia",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 65
         },
         {
           "nome": "Lucas Freitas",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 65
         },
         {
           "nome": "Walace Falcão",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 53
         },
         {
           "nome": "Puma Rodríguez",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 69
         },
         {
           "nome": "Lucas Piton",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 73
         },
         {
           "nome": "Paulo Henrique",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 67
         },
         {
           "nome": "Cuiabano",
           "posicao": "L",
-          "idade": 23
+          "idade": 23,
+          "overall": 65
         },
         {
           "nome": "Santiago Sosa",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 69
         },
         {
           "nome": "Thiago Mendes",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 69
         },
         {
           "nome": "Tchê Tchê",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 69
         },
         {
           "nome": "Cauan Barros",
           "posicao": "M",
-          "idade": 22
+          "idade": 22,
+          "overall": 63
         },
         {
           "nome": "Johan Rojas",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 69
         },
         {
           "nome": "Alan Lescano",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 57
         },
         {
           "nome": "Matheus Carvalho",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 55
         },
         {
           "nome": "Colidio",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 71
         },
         {
           "nome": "Nuno Moreira",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 73
         },
         {
           "nome": "Andrés Gómez",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 71
         },
         {
           "nome": "Bruno Duarte",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 67
         },
         {
           "nome": "Brenner",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 67
         },
         {
           "nome": "Hinestroza",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 67
         }
       ]
     },
@@ -1555,119 +1846,143 @@
         {
           "nome": "Cleiton",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 73
         },
         {
           "nome": "Tiago Volpi",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 67
         },
         {
           "nome": "Gustavo Reis",
           "posicao": "G",
-          "idade": 21
+          "idade": 21,
+          "overall": 49
         },
         {
           "nome": "Gustavo Marques",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 69
         },
         {
           "nome": "Alix Vinicius",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 69
         },
         {
           "nome": "Eduardo Santos",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 67
         },
         {
           "nome": "Guzmán Rodríguez",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 61
         },
         {
           "nome": "Andrés Hurtado",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 65
         },
         {
           "nome": "Juninho Capixaba",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 69
         },
         {
           "nome": "Sant'Anna",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 67
         },
         {
           "nome": "Vanderlan",
           "posicao": "L",
-          "idade": 24
+          "idade": 24,
+          "overall": 67
         },
         {
           "nome": "Gabriel",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 65
         },
         {
           "nome": "Matheus Fernandes",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 71
         },
         {
           "nome": "Fabinho",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 67
         },
         {
           "nome": "Nacho Sosa",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 67
         },
         {
           "nome": "Eric Ramires",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 71
         },
         {
           "nome": "Gustavo Neves",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 53
         },
         {
           "nome": "Rodriguinho",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 57
         },
         {
           "nome": "Isidro Pitta",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 67
         },
         {
           "nome": "Eduardo Sasha",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 69
         },
         {
           "nome": "Lucas Barbosa",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 67
         },
         {
           "nome": "Henry Mosquera",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 67
         },
         {
           "nome": "José Herrera",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 65
         },
         {
           "nome": "Fernando",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 65
         }
       ]
     },
@@ -1680,122 +1995,146 @@
         {
           "nome": "Gabriel Brazão",
           "posicao": "G",
-          "idade": 26
+          "idade": 26,
+          "overall": 75
         },
         {
           "nome": "Diógenes",
           "posicao": "G",
-          "idade": 25
+          "idade": 25,
+          "overall": 59
         },
         {
           "nome": "João Paulo",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 65
         },
         {
           "nome": "Lucas Veríssimo",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 73
         },
         {
           "nome": "Luan Peres",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 71
         },
         {
           "nome": "João Ananias",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 53
         },
         {
           "nome": "João Alencar",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 53
         },
         {
           "nome": "Igor Vinícius",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 69
         },
         {
           "nome": "Escobar",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 71
         },
         {
           "nome": "Rodinei",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 67
         },
         {
           "nome": "Vinicius Lira",
           "posicao": "L",
-          "idade": 19
+          "idade": 19,
+          "overall": 53
         },
         {
           "nome": "João Schmidt",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 71
         },
         {
           "nome": "Willian Arão",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 71
         },
         {
           "nome": "Christian Oliva",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 71
         },
         {
           "nome": "Gabriel Menino",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 73
         },
         {
           "nome": "Arthur",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 71
         },
         {
           "nome": "Neymar",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 91
         },
         {
           "nome": "Philippe Coutinho",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 79
         },
         {
           "nome": "Gabigol",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 77
         },
         {
           "nome": "Rony",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 73
         },
         {
           "nome": "Barreal",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 71
         },
         {
           "nome": "Everton Cebolinha",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 75
         },
         {
           "nome": "Caballero",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 67
         },
         {
           "nome": "Moisés",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 69
         }
       ]
     },
@@ -1808,122 +2147,146 @@
         {
           "nome": "Walter",
           "posicao": "G",
-          "idade": 39
+          "idade": 39,
+          "overall": 63
         },
         {
           "nome": "Georgemy",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 51
         },
         {
           "nome": "Alex Muralha",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 53
         },
         {
           "nome": "Lucas Oliveira",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 65
         },
         {
           "nome": "Willian Machado",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 63
         },
         {
           "nome": "João Victor",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 65
         },
         {
           "nome": "Gabriel Knesowitsch",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 55
         },
         {
           "nome": "Reinaldo",
           "posicao": "L",
-          "idade": 37
+          "idade": 37,
+          "overall": 67
         },
         {
           "nome": "Daniel Borges",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 61
         },
         {
           "nome": "Igor Formiga",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 59
         },
         {
           "nome": "Victor Luis",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 59
         },
         {
           "nome": "Neto Moura",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 67
         },
         {
           "nome": "José Aldo",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 65
         },
         {
           "nome": "Denilson",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 63
         },
         {
           "nome": "Gustavo Cazonatti",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 61
         },
         {
           "nome": "Wallisson",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 59
         },
         {
           "nome": "Japa",
           "posicao": "M",
-          "idade": 22
+          "idade": 22,
+          "overall": 57
         },
         {
           "nome": "Chico Kim",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 59
         },
         {
           "nome": "Negueba",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 67
         },
         {
           "nome": "Edson Carioca",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 63
         },
         {
           "nome": "Carlos Eduardo",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 63
         },
         {
           "nome": "Fernandinho",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 61
         },
         {
           "nome": "Alesson",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 63
         },
         {
           "nome": "André Luis",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 63
         }
       ]
     },
@@ -1936,126 +2299,151 @@
         {
           "nome": "Santos",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 66
         },
         {
           "nome": "Mycael",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 56
         },
         {
           "nome": "Matheus Soares",
           "posicao": "G",
-          "idade": 21
+          "idade": 21,
+          "overall": 46
         },
         {
           "nome": "Léo",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 62
         },
         {
           "nome": "Carlos Terán",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 64
         },
         {
           "nome": "Juan Felipe Aguirre",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 62
         },
         {
           "nome": "Arthur Dias",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 48
         },
         {
           "nome": "Dantas",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 54
         },
         {
           "nome": "Benavídez",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 62
         },
         {
           "nome": "Esquivel",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 62
         },
         {
           "nome": "Gilberto",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 60
         },
         {
           "nome": "Gilberto dos Santos",
           "posicao": "L",
-          "idade": 21
+          "idade": 21,
+          "overall": 50
         },
         {
           "nome": "Luiz Gustavo",
           "posicao": "M",
-          "idade": 39
+          "idade": 39,
+          "overall": 58
         },
         {
           "nome": "Jadson",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 58
         },
         {
           "nome": "Juan Portilla",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 64
         },
         {
           "nome": "Felipinho",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 62
         },
         {
           "nome": "Zapelli",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 66
         },
         {
           "nome": "Alejandro García",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 62
         },
         {
           "nome": "João Cruz",
           "posicao": "M",
-          "idade": 20
+          "idade": 20,
+          "overall": 54
         },
         {
           "nome": "Kevin Viveros",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 66
         },
         {
           "nome": "Mendoza",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 62
         },
         {
           "nome": "Kerwin Vargas",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 64
         },
         {
           "nome": "Leozinho",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 60
         },
         {
           "nome": "Isaac",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 50
         },
         {
           "nome": "Jorge Rivaldo",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 54
         }
       ]
     },
@@ -2068,127 +2456,152 @@
         {
           "nome": "Lucas Arcanjo",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 63
         },
         {
           "nome": "Yuri Sena",
           "posicao": "G",
-          "idade": 25
+          "idade": 25,
+          "overall": 47
         },
         {
           "nome": "Fintelman",
           "posicao": "G",
-          "idade": 25
+          "idade": 25,
+          "overall": 45
         },
         {
           "nome": "Camutanga",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 59
         },
         {
           "nome": "Cacá",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 59
         },
         {
           "nome": "Brítez",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 57
         },
         {
           "nome": "Edu",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 57
         },
         {
           "nome": "Kauan",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 45
         },
         {
           "nome": "Mateusinho",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 59
         },
         {
           "nome": "Nathan Mendes",
           "posicao": "L",
-          "idade": 24
+          "idade": 24,
+          "overall": 57
         },
         {
           "nome": "Ramon",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 55
         },
         {
           "nome": "Jamerson",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 57
         },
         {
           "nome": "Gabriel Baralhas",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 59
         },
         {
           "nome": "Walace",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 61
         },
         {
           "nome": "Rúben Ismael",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 59
         },
         {
           "nome": "Emmanuel Martínez",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 57
         },
         {
           "nome": "Dudu",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 57
         },
         {
           "nome": "Zé Vitor",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 57
         },
         {
           "nome": "Caíque Gonçalves",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 55
         },
         {
           "nome": "Renato Kayzer",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 63
         },
         {
           "nome": "Erick",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 59
         },
         {
           "nome": "Marinho",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 57
         },
         {
           "nome": "Osvaldo",
           "posicao": "A",
-          "idade": 39
+          "idade": 39,
+          "overall": 51
         },
         {
           "nome": "Lucas Silva",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 53
         },
         {
           "nome": "Tarzia",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 55
         }
       ]
     },
@@ -2201,122 +2614,146 @@
         {
           "nome": "Pedro Morisco",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 60
         },
         {
           "nome": "Keiller",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 52
         },
         {
           "nome": "Pedro Rangel",
           "posicao": "G",
-          "idade": 26
+          "idade": 26,
+          "overall": 46
         },
         {
           "nome": "Maicon",
           "posicao": "Z",
-          "idade": 38
+          "idade": 38,
+          "overall": 54
         },
         {
           "nome": "Tiago Cóser",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 56
         },
         {
           "nome": "Rodrigo Moledo",
           "posicao": "Z",
-          "idade": 39
+          "idade": 39,
+          "overall": 50
         },
         {
           "nome": "Jacy",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 54
         },
         {
           "nome": "Tinga",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 52
         },
         {
           "nome": "Felipe Jonatan",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 54
         },
         {
           "nome": "JP Chermont",
           "posicao": "L",
-          "idade": 20
+          "idade": 20,
+          "overall": 52
         },
         {
           "nome": "Bruno Melo",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 52
         },
         {
           "nome": "Sebastián Gómez",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 58
         },
         {
           "nome": "Nicolás Fonseca",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 56
         },
         {
           "nome": "Thiago Santos",
           "posicao": "M",
-          "idade": 37
+          "idade": 37,
+          "overall": 52
         },
         {
           "nome": "Richard",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 54
         },
         {
           "nome": "Josué",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 58
         },
         {
           "nome": "Vini Paulista",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 54
         },
         {
           "nome": "Gustavo Silva",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 54
         },
         {
           "nome": "Lavega",
           "posicao": "A",
-          "idade": 21
+          "idade": 21,
+          "overall": 52
         },
         {
           "nome": "Brian Ocampo",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 58
         },
         {
           "nome": "Lucas Ronier",
           "posicao": "A",
-          "idade": 21
+          "idade": 21,
+          "overall": 54
         },
         {
           "nome": "Breno Lopes",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 56
         },
         {
           "nome": "Pedro Rocha",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 56
         },
         {
           "nome": "Keno",
           "posicao": "A",
-          "idade": 37
+          "idade": 37,
+          "overall": 52
         }
       ]
     },
@@ -2329,127 +2766,152 @@
         {
           "nome": "Rafael Santos",
           "posicao": "G",
-          "idade": 37
+          "idade": 37,
+          "overall": 44
         },
         {
           "nome": "Anderson",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 44
         },
         {
           "nome": "Kainã",
           "posicao": "G",
-          "idade": 21
+          "idade": 21,
+          "overall": 36
         },
         {
           "nome": "Rafael Thyere",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 48
         },
         {
           "nome": "Eduardo Doma",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "João Paulo",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 46
         },
         {
           "nome": "Victor Caetano",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 46
         },
         {
           "nome": "Kauan Faria",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 40
         },
         {
           "nome": "Bruno Pacheco",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 46
         },
         {
           "nome": "Mancha",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 46
         },
         {
           "nome": "Everton",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 44
         },
         {
           "nome": "Bruno Tubarão",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 42
         },
         {
           "nome": "Bruno Matias",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 46
         },
         {
           "nome": "Camilo",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Vinicius Balieiro",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 46
         },
         {
           "nome": "Rafael Carvalheira",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 46
         },
         {
           "nome": "Giovanni Augusto",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 46
         },
         {
           "nome": "Yago Felipe",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 48
         },
         {
           "nome": "Robert Santos",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 42
         },
         {
           "nome": "Marcinho",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 48
         },
         {
           "nome": "Neto Pessoa",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 48
         },
         {
           "nome": "Bolasie",
           "posicao": "A",
-          "idade": 37
+          "idade": 37,
+          "overall": 48
         },
         {
           "nome": "Maurício Garcez",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 48
         },
         {
           "nome": "Kevin Ramírez",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 48
         },
         {
           "nome": "Ênio",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 44
         }
       ]
     },
@@ -2462,127 +2924,152 @@
         {
           "nome": "Marcelo Rangel",
           "posicao": "G",
-          "idade": 38
+          "idade": 38,
+          "overall": 48
         },
         {
           "nome": "Ygor Vinhas",
           "posicao": "G",
-          "idade": 32
+          "idade": 32,
+          "overall": 42
         },
         {
           "nome": "Ivan",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 44
         },
         {
           "nome": "Marllon",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 48
         },
         {
           "nome": "Léo Andrade",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 46
         },
         {
           "nome": "Tchamba",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 46
         },
         {
           "nome": "Zé Ivaldo",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 48
         },
         {
           "nome": "Tassano",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 44
         },
         {
           "nome": "Marcelinho",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 44
         },
         {
           "nome": "Mayk",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 46
         },
         {
           "nome": "Marlon",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 44
         },
         {
           "nome": "João Lucas",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 44
         },
         {
           "nome": "Patrick",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 48
         },
         {
           "nome": "Zé Welison",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 48
         },
         {
           "nome": "Picco",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 44
         },
         {
           "nome": "Edson Fernando",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 42
         },
         {
           "nome": "Catarozzi",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 44
         },
         {
           "nome": "Vitor Bueno",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 48
         },
         {
           "nome": "Zé Ricardo",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 44
         },
         {
           "nome": "Yago Pikachu",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 50
         },
         {
           "nome": "Jajá",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Galeano",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 46
         },
         {
           "nome": "Gabriel Taliari",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 46
         },
         {
           "nome": "Gabriel Poveda",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 44
         },
         {
           "nome": "Eduardo Melo",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 44
         }
       ]
     },
@@ -2595,127 +3082,152 @@
         {
           "nome": "João Ricardo",
           "posicao": "G",
-          "idade": 38
+          "idade": 38,
+          "overall": 71
         },
         {
           "nome": "Vinícius Silvestre",
           "posicao": "G",
-          "idade": 32
+          "idade": 32,
+          "overall": 65
         },
         {
           "nome": "Magrão",
           "posicao": "G",
-          "idade": 26
+          "idade": 26,
+          "overall": 55
         },
         {
           "nome": "Tomás Cardona",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 67
         },
         {
           "nome": "Lucas Gazal",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 65
         },
         {
           "nome": "Bastos",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 65
         },
         {
           "nome": "Luan Freitas",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 61
         },
         {
           "nome": "Neris",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 63
         },
         {
           "nome": "Maílton",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 65
         },
         {
           "nome": "Gabriel Fuentes",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 65
         },
         {
           "nome": "Paulinho",
           "posicao": "L",
-          "idade": 21
+          "idade": 21,
+          "overall": 55
         },
         {
           "nome": "Kaio Henrique",
           "posicao": "L",
-          "idade": 20
+          "idade": 20,
+          "overall": 53
         },
         {
           "nome": "Lucas Sasha",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 67
         },
         {
           "nome": "Pierre",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 65
         },
         {
           "nome": "Lucas Crispim",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 69
         },
         {
           "nome": "Rodrigo Santos",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 63
         },
         {
           "nome": "Jaílson",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Ronald",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 61
         },
         {
           "nome": "Ryan",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 59
         },
         {
           "nome": "Juan Miritello",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 63
         },
         {
           "nome": "Paulo Baya",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 65
         },
         {
           "nome": "Vitinho",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 63
         },
         {
           "nome": "Luiz Fernando",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 63
         },
         {
           "nome": "Chico da Costa",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Nathan Fogaça",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 61
         }
       ]
     },
@@ -2728,122 +3240,146 @@
         {
           "nome": "Richard",
           "posicao": "G",
-          "idade": 35
+          "idade": 35,
+          "overall": 63
         },
         {
           "nome": "Caíque França",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Jorge Meurer",
           "posicao": "G",
-          "idade": 25
+          "idade": 25,
+          "overall": 53
         },
         {
           "nome": "Luiz Otávio",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 63
         },
         {
           "nome": "Éder",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Júlio César",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 57
         },
         {
           "nome": "Luiz Otávio",
           "posicao": "Z",
-          "idade": 38
+          "idade": 38,
+          "overall": 57
         },
         {
           "nome": "Stanley Boateng",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 53
         },
         {
           "nome": "Rafael Ramos",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Sánchez",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 63
         },
         {
           "nome": "Bryan",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 61
         },
         {
           "nome": "Sávio",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 61
         },
         {
           "nome": "Richardson",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 63
         },
         {
           "nome": "Vinícius Zanocelo",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 61
         },
         {
           "nome": "Lucas Mugni",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 67
         },
         {
           "nome": "Vina",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 65
         },
         {
           "nome": "Giovanni Pavani",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 63
         },
         {
           "nome": "Matheus Araújo",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 61
         },
         {
           "nome": "Melquisedeque",
           "posicao": "M",
-          "idade": 20
+          "idade": 20,
+          "overall": 53
         },
         {
           "nome": "Renzo López",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 63
         },
         {
           "nome": "Saulo Mineiro",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 63
         },
         {
           "nome": "Lucca",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 59
         },
         {
           "nome": "Rian Santana",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 57
         },
         {
           "nome": "Kauã Ziegler",
           "posicao": "A",
-          "idade": 20
+          "idade": 20,
+          "overall": 53
         }
       ]
     },
@@ -2856,127 +3392,152 @@
         {
           "nome": "Thiago Couto",
           "posicao": "G",
-          "idade": 27
+          "idade": 27,
+          "overall": 58
         },
         {
           "nome": "Brenno",
           "posicao": "G",
-          "idade": 27
+          "idade": 27,
+          "overall": 56
         },
         {
           "nome": "Dênis",
           "posicao": "G",
-          "idade": 39
+          "idade": 39,
+          "overall": 54
         },
         {
           "nome": "Zé Marcos",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 58
         },
         {
           "nome": "Marcelo Benevenuto",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 58
         },
         {
           "nome": "Habraão",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 56
         },
         {
           "nome": "Marcelo Ajul",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 56
         },
         {
           "nome": "Kayky Almeida",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 50
         },
         {
           "nome": "Claudinho",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 56
         },
         {
           "nome": "Felipinho",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 56
         },
         {
           "nome": "Edson Pereira",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 54
         },
         {
           "nome": "Raí",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 56
         },
         {
           "nome": "Willian Oliveira",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 58
         },
         {
           "nome": "Fernando Sobral",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 60
         },
         {
           "nome": "Zé Gabriel",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 58
         },
         {
           "nome": "Patrick de Paula",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 58
         },
         {
           "nome": "Carlos De Pena",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 58
         },
         {
           "nome": "Biel",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 58
         },
         {
           "nome": "Kervin Andrade",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 56
         },
         {
           "nome": "Perotti",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 58
         },
         {
           "nome": "Barletta",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 58
         },
         {
           "nome": "Diego Hernández",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 58
         },
         {
           "nome": "Clayson",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 56
         },
         {
           "nome": "Neto Pessoa",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 58
         },
         {
           "nome": "Dudu",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 56
         }
       ]
     },
@@ -2989,127 +3550,152 @@
         {
           "nome": "Jandrei",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 58
         },
         {
           "nome": "Pedro Rocha",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 54
         },
         {
           "nome": "Ruan Carneiro",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 50
         },
         {
           "nome": "Messias",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 58
         },
         {
           "nome": "Rodrigo Sam",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 56
         },
         {
           "nome": "Gabriel",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 54
         },
         {
           "nome": "Titi",
           "posicao": "Z",
-          "idade": 38
+          "idade": 38,
+          "overall": 52
         },
         {
           "nome": "Marcos Paulo",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 52
         },
         {
           "nome": "Aderlan",
           "posicao": "L",
-          "idade": 36
+          "idade": 36,
+          "overall": 54
         },
         {
           "nome": "Diogo Barbosa",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 54
         },
         {
           "nome": "Alan Ruschel",
           "posicao": "L",
-          "idade": 37
+          "idade": 37,
+          "overall": 52
         },
         {
           "nome": "Raí Ramos",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 54
         },
         {
           "nome": "Lucas Mineiro",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 58
         },
         {
           "nome": "Gabriel Pires",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 56
         },
         {
           "nome": "Luan",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 56
         },
         {
           "nome": "Pablo Roberto",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 56
         },
         {
           "nome": "Mandaca",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 56
         },
         {
           "nome": "Raí",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 52
         },
         {
           "nome": "Iba Ly",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 52
         },
         {
           "nome": "Alisson Safira",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 56
         },
         {
           "nome": "Luis Amarilla",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 56
         },
         {
           "nome": "Marcos Paulo",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 54
         },
         {
           "nome": "Fábio Lima",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 54
         },
         {
           "nome": "Alan Kardec",
           "posicao": "A",
-          "idade": 37
+          "idade": 37,
+          "overall": 52
         },
         {
           "nome": "Manuel Castro",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 54
         }
       ]
     },
@@ -3122,127 +3708,152 @@
         {
           "nome": "Tadeu",
           "posicao": "G",
-          "idade": 34
+          "idade": 34,
+          "overall": 59
         },
         {
           "nome": "Thiago Rodrigues",
           "posicao": "G",
-          "idade": 38
+          "idade": 38,
+          "overall": 51
         },
         {
           "nome": "Ezequiel",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 47
         },
         {
           "nome": "Lucas Ribeiro",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 53
         },
         {
           "nome": "Ramon Menezes",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 53
         },
         {
           "nome": "Luiz Felipe",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 53
         },
         {
           "nome": "Luisão",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 51
         },
         {
           "nome": "Danilo Cunha",
           "posicao": "Z",
-          "idade": 19
+          "idade": 19,
+          "overall": 45
         },
         {
           "nome": "Rodrigo Soares",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 51
         },
         {
           "nome": "Nicolas",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 53
         },
         {
           "nome": "Djalma",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 49
         },
         {
           "nome": "Marcos Vinícius",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Juninho",
           "posicao": "M",
-          "idade": 39
+          "idade": 39,
+          "overall": 51
         },
         {
           "nome": "Filipe Machado",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 53
         },
         {
           "nome": "Lucas Lima",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 53
         },
         {
           "nome": "Lourenço",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 53
         },
         {
           "nome": "Gegê",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 53
         },
         {
           "nome": "Brayann",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Guilherme Baldória",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 47
         },
         {
           "nome": "Anselmo Ramon",
           "posicao": "A",
-          "idade": 38
+          "idade": 38,
+          "overall": 51
         },
         {
           "nome": "Wellington Rato",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 55
         },
         {
           "nome": "Bruno Sávio",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 53
         },
         {
           "nome": "Esli García",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 53
         },
         {
           "nome": "Cadu",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 49
         },
         {
           "nome": "Kadu",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 49
         }
       ]
     },
@@ -3255,127 +3866,152 @@
         {
           "nome": "Alisson",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 53
         },
         {
           "nome": "Airton",
           "posicao": "G",
-          "idade": 32
+          "idade": 32,
+          "overall": 51
         },
         {
           "nome": "Kauã Moroso",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 45
         },
         {
           "nome": "Luciano Castán",
           "posicao": "Z",
-          "idade": 37
+          "idade": 37,
+          "overall": 51
         },
         {
           "nome": "Rodrigo",
           "posicao": "Z",
-          "idade": 39
+          "idade": 39,
+          "overall": 47
         },
         {
           "nome": "César Martins",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 51
         },
         {
           "nome": "Bruno Alves",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 49
         },
         {
           "nome": "Rômulo",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 47
         },
         {
           "nome": "Marcinho",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 51
         },
         {
           "nome": "Marcelo Hermes",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 53
         },
         {
           "nome": "Lepo",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 49
         },
         {
           "nome": "Léo Mana",
           "posicao": "L",
-          "idade": 22
+          "idade": 22,
+          "overall": 47
         },
         {
           "nome": "Ronald",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Jean Irmer",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 51
         },
         {
           "nome": "Eduardo Biasi",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Guilherme Lobo",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 53
         },
         {
           "nome": "Sandry",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 51
         },
         {
           "nome": "Eliel Costa",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 49
         },
         {
           "nome": "Fellipe Mateus",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 53
         },
         {
           "nome": "Diego Gonçalves",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 53
         },
         {
           "nome": "Romarinho",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 51
         },
         {
           "nome": "Nicolas",
           "posicao": "A",
-          "idade": 37
+          "idade": 37,
+          "overall": 49
         },
         {
           "nome": "Jhonata Robert",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 51
         },
         {
           "nome": "Yuri",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 49
         },
         {
           "nome": "Waguininho",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 47
         }
       ]
     },
@@ -3388,127 +4024,152 @@
         {
           "nome": "Gustavo",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 51
         },
         {
           "nome": "Bruno Brígido",
           "posicao": "G",
-          "idade": 35
+          "idade": 35,
+          "overall": 49
         },
         {
           "nome": "Willian",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 47
         },
         {
           "nome": "Ricardo Silva",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 51
         },
         {
           "nome": "Emerson Santos",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 51
         },
         {
           "nome": "Lucas Sosa",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 51
         },
         {
           "nome": "Manoel",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 49
         },
         {
           "nome": "Wesley",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 49
         },
         {
           "nome": "Alex Silva",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 49
         },
         {
           "nome": "Tobías Ostchega",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 51
         },
         {
           "nome": "Jhonny",
           "posicao": "L",
-          "idade": 24
+          "idade": 24,
+          "overall": 47
         },
         {
           "nome": "Fábio Almeida",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 47
         },
         {
           "nome": "Alê",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 51
         },
         {
           "nome": "Barreto",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 51
         },
         {
           "nome": "Jorge Roa Jiménez",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 53
         },
         {
           "nome": "Fernando Elizari",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 51
         },
         {
           "nome": "Eduardo Person",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Val Soares",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 49
         },
         {
           "nome": "Felipe Amaral",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 51
         },
         {
           "nome": "Gonzalo Mastriani",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 53
         },
         {
           "nome": "Willian Bigode",
           "posicao": "A",
-          "idade": 40
+          "idade": 40,
+          "overall": 49
         },
         {
           "nome": "Guilherme Parede",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 51
         },
         {
           "nome": "Rodrigo Piñeiro",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 51
         },
         {
           "nome": "Paulo Victor",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 49
         },
         {
           "nome": "Marcelo",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 47
         }
       ]
     },
@@ -3521,122 +4182,146 @@
         {
           "nome": "João Carlos",
           "posicao": "G",
-          "idade": 38
+          "idade": 38,
+          "overall": 51
         },
         {
           "nome": "Marcelo Carné",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 47
         },
         {
           "nome": "Busatto",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 47
         },
         {
           "nome": "Alan Empereur",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 53
         },
         {
           "nome": "João Basso",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Vitão",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 49
         },
         {
           "nome": "Vitor Mendes",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 51
         },
         {
           "nome": "Luisão",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 45
         },
         {
           "nome": "Railan",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 51
         },
         {
           "nome": "Igor",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 49
         },
         {
           "nome": "Eric",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 49
         },
         {
           "nome": "Raul Gonçalves",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 51
         },
         {
           "nome": "Wesley Dias",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 49
         },
         {
           "nome": "Luiz Otávio",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Calebe Oliveira",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 51
         },
         {
           "nome": "Pepê",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 51
         },
         {
           "nome": "Marcos Júnior",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 49
         },
         {
           "nome": "Weverson",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 47
         },
         {
           "nome": "Fábio Gomes",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 51
         },
         {
           "nome": "Pedro Henrique",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 51
         },
         {
           "nome": "Rodrigo Rodrigues",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 49
         },
         {
           "nome": "Jean Dias",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 47
         },
         {
           "nome": "Ramon",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 49
         },
         {
           "nome": "Eliel",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 47
         }
       ]
     },
@@ -3649,117 +4334,142 @@
         {
           "nome": "Vladimir",
           "posicao": "G",
-          "idade": 37
+          "idade": 37,
+          "overall": 48
         },
         {
           "nome": "Paulo Vítor",
           "posicao": "G",
-          "idade": 38
+          "idade": 38,
+          "overall": 46
         },
         {
           "nome": "Paulo Henrique",
           "posicao": "G",
-          "idade": 32
+          "idade": 32,
+          "overall": 46
         },
         {
           "nome": "Adriano Martins",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 50
         },
         {
           "nome": "Natã",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 48
         },
         {
           "nome": "Yuri",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 48
         },
         {
           "nome": "Tito",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 44
         },
         {
           "nome": "Marcão",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 44
         },
         {
           "nome": "Ewerthon",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 48
         },
         {
           "nome": "Warley",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Junior Barreto",
-          "posicao": "L"
+          "posicao": "L",
+          "overall": 42
         },
         {
           "nome": "Felipe Guimarães",
-          "posicao": "L"
+          "posicao": "L",
+          "overall": 42
         },
         {
           "nome": "Leandro Vilela",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 50
         },
         {
           "nome": "Guilherme Marques",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 48
         },
         {
           "nome": "Geovany Soares",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 48
         },
         {
           "nome": "Geovane",
           "posicao": "M",
-          "idade": 37
+          "idade": 37,
+          "overall": 46
         },
         {
           "nome": "David Terans",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 50
         },
         {
           "nome": "Matheusinho",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 48
         },
         {
           "nome": "Netinho",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 44
         },
         {
           "nome": "Gustavo Coutinho",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 50
         },
         {
           "nome": "Marrony",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Léo Tocantins",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Bruno José",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 46
         },
         {
           "nome": "Gustavo Maia",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 44
         },
         {
           "nome": "Kahiser Lenis",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 46
         }
       ]
     },
@@ -3772,114 +4482,138 @@
         {
           "nome": "Bruno Ferreira",
           "posicao": "G",
-          "idade": 32
+          "idade": 32,
+          "overall": 48
         },
         {
           "nome": "Igor Bohn",
           "posicao": "G",
-          "idade": 30
+          "idade": 30,
+          "overall": 46
         },
         {
           "nome": "Otávio",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 44
         },
         {
           "nome": "Reynaldo",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 46
         },
         {
           "nome": "Allyson",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 44
         },
         {
           "nome": "Pedrão",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 42
         },
         {
           "nome": "Douglas Teixeira",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 46
         },
         {
           "nome": "João Vitor",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 44
         },
         {
           "nome": "Mateus Quaresma",
           "posicao": "L",
-          "idade": 30
+          "idade": 30,
+          "overall": 46
         },
         {
           "nome": "Wallison",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 46
         },
         {
           "nome": "Jefferson Maciel",
           "posicao": "L",
-          "idade": 23
+          "idade": 23,
+          "overall": 44
         },
         {
           "nome": "Zé Ricardo",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 46
         },
         {
           "nome": "Jean Lucas",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 46
         },
         {
           "nome": "Daniel Penha",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 48
         },
         {
           "nome": "Luiz Henrique",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 46
         },
         {
           "nome": "Romildo Del Piage",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 42
         },
         {
           "nome": "Gaspar",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 44
         },
         {
           "nome": "Wenderson",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 42
         },
         {
           "nome": "Léo Gamalho",
           "posicao": "A",
-          "idade": 40
+          "idade": 40,
+          "overall": 44
         },
         {
           "nome": "Felipe Vizeu",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 46
         },
         {
           "nome": "Léo Chú",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 48
         },
         {
           "nome": "Rildo",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 46
         },
         {
           "nome": "Caio Suassuna",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 42
         },
         {
           "nome": "Filipe Rios",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 42
         }
       ]
     },
@@ -3892,127 +4626,152 @@
         {
           "nome": "Jordi",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 50
         },
         {
           "nome": "César Augusto",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 46
         },
         {
           "nome": "Lucas Ribeiro",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 44
         },
         {
           "nome": "Patrick",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 48
         },
         {
           "nome": "Eduardo Brock",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 46
         },
         {
           "nome": "Gabriel Bahia",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 48
         },
         {
           "nome": "Carlinhos",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 46
         },
         {
           "nome": "Renato Palma",
           "posicao": "Z",
-          "idade": 35
+          "idade": 35,
+          "overall": 44
         },
         {
           "nome": "Mádson",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 46
         },
         {
           "nome": "Maykon Jesus",
           "posicao": "L",
-          "idade": 21
+          "idade": 21,
+          "overall": 44
         },
         {
           "nome": "Sander",
           "posicao": "L",
-          "idade": 36
+          "idade": 36,
+          "overall": 44
         },
         {
           "nome": "Alvariño",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 48
         },
         {
           "nome": "Luís Oyama",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 50
         },
         {
           "nome": "Léo Naldi",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 48
         },
         {
           "nome": "Matheus Bianqui",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 48
         },
         {
           "nome": "Rômulo",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 50
         },
         {
           "nome": "Juninho",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 48
         },
         {
           "nome": "Diego Galo",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 44
         },
         {
           "nome": "Tavinho",
           "posicao": "M",
-          "idade": 22
+          "idade": 22,
+          "overall": 44
         },
         {
           "nome": "Robson",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 48
         },
         {
           "nome": "Vinícius Paiva",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 48
         },
         {
           "nome": "Carlão",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 46
         },
         {
           "nome": "Tití Ortiz",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 46
         },
         {
           "nome": "Ronald Barcellos",
           "posicao": "A",
-          "idade": 24
+          "idade": 24,
+          "overall": 48
         },
         {
           "nome": "Nicolas Careca",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 46
         }
       ]
     },
@@ -4025,126 +4784,151 @@
         {
           "nome": "Helton Leite",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 45
         },
         {
           "nome": "Dalberson",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 43
         },
         {
           "nome": "Gabriel Átila",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 39
         },
         {
           "nome": "Tiago Pagnussat",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 41
         },
         {
           "nome": "Douglas Mendes",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 41
         },
         {
           "nome": "Jonathan Costa",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Anderson Jesus",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Samuel Lucas",
-          "posicao": "Z"
+          "posicao": "Z",
+          "overall": 37
         },
         {
           "nome": "Hayner",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Willian Formiga",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 41
         },
         {
           "nome": "Igor Cariús",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 41
         },
         {
           "nome": "Higor Luiz",
           "posicao": "L",
-          "idade": 22
+          "idade": 22,
+          "overall": 39
         },
         {
           "nome": "João Vieira",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 43
         },
         {
           "nome": "Willian Maranhão",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Marquinhos Gabriel",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 43
         },
         {
           "nome": "Dudu",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 43
         },
         {
           "nome": "Higor Meritão",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 41
         },
         {
           "nome": "Dodô",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 43
         },
         {
           "nome": "Enzo",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 39
         },
         {
           "nome": "André Luis",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 43
         },
         {
           "nome": "Everton Galdino",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 43
         },
         {
           "nome": "Janderson",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 45
         },
         {
           "nome": "Dellatorre",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 41
         },
         {
           "nome": "Ryan",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 41
         },
         {
           "nome": "Emerson Urso",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 41
         }
       ]
     },
@@ -4157,127 +4941,152 @@
         {
           "nome": "Vitor Caetano",
           "posicao": "G",
-          "idade": 27
+          "idade": 27,
+          "overall": 43
         },
         {
           "nome": "Matheus Albino",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 41
         },
         {
           "nome": "Fábio Henrique",
           "posicao": "G",
-          "idade": 24
+          "idade": 24,
+          "overall": 37
         },
         {
           "nome": "Fábio Alemão",
           "posicao": "Z",
-          "idade": 30
+          "idade": 30,
+          "overall": 43
         },
         {
           "nome": "Bressan",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 41
         },
         {
           "nome": "Henri",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 41
         },
         {
           "nome": "Lyncon",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 39
         },
         {
           "nome": "Léo Campos",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 39
         },
         {
           "nome": "Hereda",
           "posicao": "L",
-          "idade": 28
+          "idade": 28,
+          "overall": 41
         },
         {
           "nome": "Reverson",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 41
         },
         {
           "nome": "Kevin",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 41
         },
         {
           "nome": "Lucas Lovat",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 43
         },
         {
           "nome": "Pedro Castro",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 43
         },
         {
           "nome": "Danielzinho",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 43
         },
         {
           "nome": "Crystopher",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 41
         },
         {
           "nome": "Luizão",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 41
         },
         {
           "nome": "Geovane",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 41
         },
         {
           "nome": "Patrick de Lucca",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "Estevão",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 41
         },
         {
           "nome": "Douglas Baggio",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Mikael",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 43
         },
         {
           "nome": "Luiz Phellype",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 41
         },
         {
           "nome": "Thiaguinho",
           "posicao": "A",
-          "idade": 25
+          "idade": 25,
+          "overall": 41
         },
         {
           "nome": "Dadá Belmonte",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 41
         },
         {
           "nome": "João Neto",
           "posicao": "A",
-          "idade": 23
+          "idade": 23,
+          "overall": 39
         }
       ]
     },
@@ -4290,120 +5099,144 @@
         {
           "nome": "Elias Curzel",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 43
         },
         {
           "nome": "Vagner",
           "posicao": "G",
-          "idade": 40
+          "idade": 40,
+          "overall": 37
         },
         {
           "nome": "Talles",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 39
         },
         {
           "nome": "Joseph",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 41
         },
         {
           "nome": "William Klaus",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 41
         },
         {
           "nome": "Miranda",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "José Cuenú",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 41
         },
         {
           "nome": "Moraes Júnior",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 39
         },
         {
           "nome": "Mikael Doka",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "Maguinho",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 39
         },
         {
           "nome": "Gabriel Feliciano",
           "posicao": "L",
-          "idade": 25
+          "idade": 25,
+          "overall": 39
         },
         {
           "nome": "Índio",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 37
         },
         {
           "nome": "Juan Zuluaga",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 41
         },
         {
           "nome": "Gabriel Boschilia",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 43
         },
         {
           "nome": "Vinícius Diniz",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 41
         },
         {
           "nome": "Neto Paraíba",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 39
         },
         {
           "nome": "Matheus Trindade",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 41
         },
         {
           "nome": "Charles Raphael",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 37
         },
         {
           "nome": "Ángel Torres",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "Aylon",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 41
         },
         {
           "nome": "Vinícius Mingotti",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "Berto",
           "posicao": "A",
-          "idade": 30
+          "idade": 30,
+          "overall": 39
         },
         {
           "nome": "Maxwell",
           "posicao": "A",
-          "idade": 31
+          "idade": 31,
+          "overall": 41
         },
         {
           "nome": "Pablo",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 39
         }
       ]
     },
@@ -4416,106 +5249,127 @@
         {
           "nome": "Guilherme Viana",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 39
         },
         {
           "nome": "Vinicius Ferrari",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 37
         },
         {
           "nome": "Lucas Cunha",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 41
         },
         {
           "nome": "Diego Porfírio",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 39
         },
         {
           "nome": "Gabriel Caran",
           "posicao": "Z",
-          "idade": 28
+          "idade": 28,
+          "overall": 39
         },
         {
           "nome": "Jonathan",
           "posicao": "Z",
-          "idade": 24
+          "idade": 24,
+          "overall": 37
         },
         {
           "nome": "Sergio Palacios",
           "posicao": "Z",
-          "idade": 21
+          "idade": 21,
+          "overall": 37
         },
         {
           "nome": "Danilo Barcelos",
           "posicao": "L",
-          "idade": 35
+          "idade": 35,
+          "overall": 41
         },
         {
           "nome": "Kevyson",
           "posicao": "L",
-          "idade": 22
+          "idade": 22,
+          "overall": 37
         },
         {
           "nome": "Lucas Justen",
-          "posicao": "L"
+          "posicao": "L",
+          "overall": 35
         },
         {
           "nome": "Rodrigo Souza",
           "posicao": "M",
-          "idade": 39
+          "idade": 39,
+          "overall": 37
         },
         {
           "nome": "Élvis",
           "posicao": "M",
-          "idade": 36
+          "idade": 36,
+          "overall": 41
         },
         {
           "nome": "André Lima",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 39
         },
         {
           "nome": "Karl",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 39
         },
         {
           "nome": "Murilo Cavalcante",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 39
         },
         {
           "nome": "Miguel Morais",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 35
         },
         {
           "nome": "Gustavo Telles",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 35
         },
         {
           "nome": "Jonathan Cafú",
           "posicao": "A",
-          "idade": 35
+          "idade": 35,
+          "overall": 39
         },
         {
           "nome": "David da Hora",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 41
         },
         {
           "nome": "Vitor Ribeiro",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 39
         },
         {
           "nome": "Brandão",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 37
         }
       ]
     },
@@ -4528,126 +5382,151 @@
         {
           "nome": "Luan Ribeiro",
           "posicao": "G",
-          "idade": 29
+          "idade": 29,
+          "overall": 38
         },
         {
           "nome": "Maurício Kozlinski",
           "posicao": "G",
-          "idade": 35
+          "idade": 35,
+          "overall": 36
         },
         {
           "nome": "Zanella",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 32
         },
         {
           "nome": "Wallace",
           "posicao": "Z",
-          "idade": 39
+          "idade": 39,
+          "overall": 36
         },
         {
           "nome": "Gabriel Lacerda",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 38
         },
         {
           "nome": "Artur",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 38
         },
         {
           "nome": "Rafael Monteiro",
           "posicao": "Z",
-          "idade": 22
+          "idade": 22,
+          "overall": 34
         },
         {
           "nome": "André Dhominique",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 34
         },
         {
           "nome": "Kevyn",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         },
         {
           "nome": "Nino Paraíba",
           "posicao": "L",
-          "idade": 40
+          "idade": 40,
+          "overall": 34
         },
         {
           "nome": "Heron",
           "posicao": "L",
-          "idade": 26
+          "idade": 26,
+          "overall": 36
         },
         {
           "nome": "Weverton",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 36
         },
         {
           "nome": "Tárik",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 38
         },
         {
           "nome": "Lucas Marques",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 38
         },
         {
           "nome": "Victor Feitosa",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 38
         },
         {
           "nome": "Guilherme Dantas",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 36
         },
         {
           "nome": "João Vitor",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 36
         },
         {
           "nome": "Thalis",
           "posicao": "M",
-          "idade": 30
+          "idade": 30,
+          "overall": 36
         },
         {
           "nome": "Geovane Meurer",
           "posicao": "M",
-          "idade": 24
+          "idade": 24,
+          "overall": 34
         },
         {
           "nome": "Pablo Dyego",
           "posicao": "A",
-          "idade": 32
+          "idade": 32,
+          "overall": 38
         },
         {
           "nome": "William Pottker",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 40
         },
         {
           "nome": "Gilberto",
           "posicao": "A",
-          "idade": 37
+          "idade": 37,
+          "overall": 36
         },
         {
           "nome": "Igor Bahia",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Paulinho Moccelin",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 34
         },
         {
           "nome": "Herbert",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 36
         }
       ]
     },
@@ -4660,108 +5539,130 @@
         {
           "nome": "Muriel",
           "posicao": "G",
-          "idade": 39
+          "idade": 39,
+          "overall": 36
         },
         {
           "nome": "Gastón Guruceaga",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 38
         },
         {
           "nome": "Betão",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 36
         },
         {
           "nome": "Igor Fernandes",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 36
         },
         {
           "nome": "Mateus Silva",
           "posicao": "Z",
-          "idade": 31
+          "idade": 31,
+          "overall": 36
         },
         {
           "nome": "Luiz Paulo",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Wanderson",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 34
         },
         {
           "nome": "Arnaldo",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 36
         },
         {
           "nome": "Matheus Ribeiro",
           "posicao": "L",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Auremir",
           "posicao": "M",
-          "idade": 35
+          "idade": 35,
+          "overall": 36
         },
         {
           "nome": "Wenderson",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 36
         },
         {
           "nome": "Jean Carlos",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 38
         },
         {
           "nome": "Patricio Núñez",
           "posicao": "M",
-          "idade": 27
+          "idade": 27,
+          "overall": 38
         },
         {
           "nome": "Felipe Redaelli",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 34
         },
         {
           "nome": "Luiz Felipe",
           "posicao": "M",
-          "idade": 28
+          "idade": 28,
+          "overall": 36
         },
         {
           "nome": "Léo Oliveira",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 32
         },
         {
           "nome": "Paulo Sérgio",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 34
         },
         {
           "nome": "Vinícius",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 32
         },
         {
           "nome": "Victor Andrade",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 36
         },
         {
           "nome": "Benjamín Borasi",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 38
         },
         {
           "nome": "Júnior Todinho",
           "posicao": "A",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Derek",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         }
       ]
     },
@@ -4773,119 +5674,143 @@
       "jogadores": [
         {
           "nome": "Victor Souza",
-          "posicao": "G"
+          "posicao": "G",
+          "overall": 36
         },
         {
           "nome": "Jordan",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 36
         },
         {
           "nome": "Brenno",
           "posicao": "G",
-          "idade": 23
+          "idade": 23,
+          "overall": 32
         },
         {
           "nome": "Ericson",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 36
         },
         {
           "nome": "Vilar",
           "posicao": "Z",
-          "idade": 26
+          "idade": 26,
+          "overall": 36
         },
         {
           "nome": "Carlão",
           "posicao": "Z",
-          "idade": 25
+          "idade": 25,
+          "overall": 34
         },
         {
           "nome": "Guilherme Mariano",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 34
         },
         {
           "nome": "Felipe Vieira",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 34
         },
         {
           "nome": "Jonathan Lemos",
           "posicao": "L",
-          "idade": 34
+          "idade": 34,
+          "overall": 34
         },
         {
           "nome": "Patrick Brey",
           "posicao": "L",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         },
         {
           "nome": "Gabriel Inocêncio",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 34
         },
         {
           "nome": "Leandro Maciel",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 36
         },
         {
           "nome": "Matheus Sales",
           "posicao": "M",
-          "idade": 31
+          "idade": 31,
+          "overall": 36
         },
         {
           "nome": "Everton Morelli",
           "posicao": "M",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         },
         {
           "nome": "Rafael Gava",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Wallace",
           "posicao": "M",
-          "idade": 32
+          "idade": 32,
+          "overall": 34
         },
         {
           "nome": "Antônio",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 32
         },
         {
           "nome": "Henrique",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 32
         },
         {
           "nome": "Kelvin",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         },
         {
           "nome": "Hygor",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 34
         },
         {
           "nome": "Nem",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 32
         },
         {
           "nome": "Guilherme Queiróz",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 34
         },
         {
           "nome": "Arthur Caíke",
           "posicao": "A",
-          "idade": 34
+          "idade": 34,
+          "overall": 36
         },
         {
           "nome": "Zé Hugo",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 34
         }
       ]
     },
@@ -4898,117 +5823,140 @@
         {
           "nome": "Luan Polli",
           "posicao": "G",
-          "idade": 33
+          "idade": 33,
+          "overall": 36
         },
         {
           "nome": "Glauco",
           "posicao": "G",
-          "idade": 31
+          "idade": 31,
+          "overall": 34
         },
         {
           "nome": "Eduardo Freire",
           "posicao": "G",
-          "idade": 22
+          "idade": 22,
+          "overall": 30
         },
         {
           "nome": "Sidimar",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 34
         },
         {
           "nome": "Philipe Sampaio",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 34
         },
         {
           "nome": "Jhonatan",
           "posicao": "Z",
-          "idade": 27
+          "idade": 27,
+          "overall": 34
         },
         {
           "nome": "Lucas Belezi",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 32
         },
         {
           "nome": "Diogo Batista",
           "posicao": "Z",
-          "idade": 23
+          "idade": 23,
+          "overall": 32
         },
         {
           "nome": "Douglas",
           "posicao": "L",
-          "idade": 27
+          "idade": 27,
+          "overall": 34
         },
         {
           "nome": "Zeca",
           "posicao": "L",
-          "idade": 32
+          "idade": 32,
+          "overall": 34
         },
         {
           "nome": "Fabrício Isidoro",
           "posicao": "M",
-          "idade": 34
+          "idade": 34,
+          "overall": 34
         },
         {
           "nome": "Gustavinho",
           "posicao": "M",
-          "idade": 25
+          "idade": 25,
+          "overall": 34
         },
         {
           "nome": "Gian Cabezas",
           "posicao": "M",
-          "idade": 21
+          "idade": 21,
+          "overall": 32
         },
         {
           "nome": "Yago Santos",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 32
         },
         {
           "nome": "Ian Luccas",
           "posicao": "M",
-          "idade": 23
+          "idade": 23,
+          "overall": 32
         },
         {
           "nome": "Felipe Negrucci",
           "posicao": "M",
-          "idade": 22
+          "idade": 22,
+          "overall": 32
         },
         {
           "nome": "Jota",
           "posicao": "M",
-          "idade": 22
+          "idade": 22,
+          "overall": 32
         },
         {
           "nome": "Carlinhos",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 34
         },
         {
           "nome": "Ronaldo Tavares",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 36
         },
         {
           "nome": "Wilinton Aponzá",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 34
         },
         {
           "nome": "Yarlen",
           "posicao": "A",
-          "idade": 20
+          "idade": 20,
+          "overall": 32
         },
         {
           "nome": "Otusanya",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 32
         },
         {
           "nome": "Ruan Assis",
           "posicao": "A",
-          "idade": 22
+          "idade": 22,
+          "overall": 32
         }
       ]
     },
@@ -5021,116 +5969,140 @@
         {
           "nome": "Alex Alves",
           "posicao": "G",
-          "idade": 40
+          "idade": 40,
+          "overall": 31
         },
         {
           "nome": "Júnior Oliveira",
           "posicao": "G",
-          "idade": 36
+          "idade": 36,
+          "overall": 31
         },
         {
           "nome": "Leo Lang",
           "posicao": "G",
-          "idade": 28
+          "idade": 28,
+          "overall": 29
         },
         {
           "nome": "Matheus Salustiano",
           "posicao": "Z",
-          "idade": 33
+          "idade": 33,
+          "overall": 31
         },
         {
           "nome": "Hélder",
           "posicao": "Z",
-          "idade": 36
+          "idade": 36,
+          "overall": 31
         },
         {
           "nome": "Jemerson",
           "posicao": "Z",
-          "idade": 34
+          "idade": 34,
+          "overall": 33
         },
         {
           "nome": "Augusto",
           "posicao": "Z",
-          "idade": 29
+          "idade": 29,
+          "overall": 31
         },
         {
           "nome": "Mário Sérgio",
           "posicao": "Z",
-          "idade": 32
+          "idade": 32,
+          "overall": 31
         },
         {
           "nome": "Pará",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 31
         },
         {
           "nome": "Rodrigo Ferreira",
           "posicao": "L",
-          "idade": 31
+          "idade": 31,
+          "overall": 31
         },
         {
           "nome": "Sanches",
-          "posicao": "L"
+          "posicao": "L",
+          "overall": 29
         },
         {
           "nome": "Foguinho",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 31
         },
         {
           "nome": "Lucas Lima",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 31
         },
         {
           "nome": "Dudu Miraíma",
           "posicao": "M",
-          "idade": 26
+          "idade": 26,
+          "overall": 31
         },
         {
           "nome": "Hyoran",
           "posicao": "M",
-          "idade": 33
+          "idade": 33,
+          "overall": 35
         },
         {
           "nome": "Marcão",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 29
         },
         {
           "nome": "Romisson",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 29
         },
         {
           "nome": "Lucas Fernandes",
-          "posicao": "M"
+          "posicao": "M",
+          "overall": 31
         },
         {
           "nome": "Felipe Garcia",
           "posicao": "A",
-          "idade": 36
+          "idade": 36,
+          "overall": 31
         },
         {
           "nome": "Fabrício Daniel",
           "posicao": "A",
-          "idade": 29
+          "idade": 29,
+          "overall": 33
         },
         {
           "nome": "Pedro Vitor",
           "posicao": "A",
-          "idade": 28
+          "idade": 28,
+          "overall": 33
         },
         {
           "nome": "Lucas Rian",
           "posicao": "A",
-          "idade": 26
+          "idade": 26,
+          "overall": 31
         },
         {
           "nome": "Echaporã",
-          "posicao": "A"
+          "posicao": "A",
+          "overall": 29
         },
         {
           "nome": "Pedrinho",
           "posicao": "A",
-          "idade": 27
+          "idade": 27,
+          "overall": 31
         }
       ]
     }
