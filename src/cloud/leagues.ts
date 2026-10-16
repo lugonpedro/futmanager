@@ -34,6 +34,7 @@ const MESSAGES: Record<string, string> = {
   conta: 'Entre na sua conta primeiro.',
   nome: 'O nome da liga precisa ter de 3 a 40 letras.',
   temporada: 'A temporada oficial ainda não começou.',
+  passe: 'Criar liga exige o passe da temporada.',
   limite: 'Você já criou 10 ligas nesta temporada.',
   convite: 'Esse convite não existe. Confira o código.',
   cheia: 'Essa liga já está cheia (100 pessoas).',

@@ -417,3 +417,7 @@ enabled = true
 # Called by pg_cron, which sends the shared secret instead of a user's token.
 [functions.fantasy-round]
 verify_jwt = false
+
+# Called by Stripe, which signs each event instead of sending a user's token.
+[functions.stripe-webhook]
+verify_jwt = false
