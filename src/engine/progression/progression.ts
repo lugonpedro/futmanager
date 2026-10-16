@@ -16,14 +16,26 @@ import {
   type GameState,
   type Player,
   type Position,
+  type Training,
   type World,
 } from '../model/types.ts'
-import type { Rng } from '../rng.ts'
+import { mixSeed, type Rng } from '../rng.ts'
+import { FOCUS_ATTRIBUTES, FOCUS_GROUP, TRAINING } from './training.ts'
 import { MARKET, squadOf, transferPlayer } from '../transfer/market.ts'
 
 export const PROGRESSION = {
   /** Appearances that count as a full season of football. */
   fullSeason: 25,
+  /**
+   * The year's development comes in this many steps: on the 1st of May to
+   * December, for the month before, and at the close of the season.
+   */
+  steps: 9,
+  /** Share of a full season a player out on loan counts as playing, at least. */
+  loanPlaying: 0.75,
+  /** Each game counts this much more for the development of players under `youthUntil`. */
+  youthGames: 1.5,
+  youthUntil: 21,
   /** From this age a player may retire; at the last one he always does. */
   retireFrom: 35,
   retireBy: 38,
@@ -33,7 +45,7 @@ export const PROGRESSION = {
   aiSquadCap: 28,
 }
 
-type Group = 'physical' | 'technical' | 'mental'
+export type Group = 'physical' | 'technical' | 'mental'
 
 /** Body first to go, technique learnt young, reading of the game coming last. */
 const GROUP: Record<Attribute, Group> = {
@@ -95,9 +107,20 @@ function overallShares(position: Position): Record<Attribute, number> {
 /** Rounds up or down at random, in proportion, so small changes still add up over the years. */
 const roundRandom = (value: number, rng: Rng) => Math.floor(value + rng.next())
 
+/** How a step of training bends the development of one player. */
+export type StepTraining = {
+  /** Growth of each group against the usual. */
+  groups?: Partial<Record<Group, number>>
+  /** Growth as a whole against the usual. */
+  growth?: number
+  /** Attributes worked on individually, and the points each gains in this step. */
+  focus?: { attributes: readonly Attribute[]; points: number }
+}
+
 /**
  * Moves the attributes so the overall changes by about `change`, spread over
- * the groups as the age says, each attribute with a little of its own.
+ * the groups as the age says, each attribute with a little of its own
+ * (`noise` points, for a whole year).
  */
 export function developAttributes(
   attributes: Attributes,
@@ -105,53 +128,178 @@ export function developAttributes(
   age: number,
   change: number,
   rng: Rng,
+  noise = 0.8,
+  training: StepTraining = {},
 ): Attributes {
-  const weights = groupWeights(age, change > 0)
+  const weights = { ...groupWeights(age, change > 0) }
+  if (change > 0) {
+    for (const [group, boost] of Object.entries(training.groups ?? {})) {
+      weights[group as Group] *= boost
+    }
+  }
   const shares = overallShares(position)
   const spread = ATTRIBUTES.reduce((sum, a) => sum + shares[a] * weights[GROUP[a]], 0)
   const base = change / Math.max(0.3, spread)
+  const focused = new Set(training.focus?.attributes ?? [])
   const next = { ...attributes }
   for (const attribute of ATTRIBUTES) {
     // Skills that don't count for his position just drift along.
     const step = shares[attribute] > 0 ? base : change
-    const delta = step * weights[GROUP[attribute]] + rng.normal(0, 0.8)
+    const extra = focused.has(attribute) ? training.focus!.points : 0
+    const delta = step * weights[GROUP[attribute]] + extra + rng.normal(0, noise)
     next[attribute] = Math.min(99, Math.max(1, attributes[attribute] + roundRandom(delta, rng)))
   }
   return next
 }
 
 /**
- * A year older: young players grow towards their potential, faster the more
- * they play; players in their prime hold steady; past 30 they decline.
+ * How much a player's overall moves in a year at `age` (the age he reaches at
+ * the season's end): young players grow towards their potential, faster the
+ * more they play; players in their prime hold steady; past 30 they decline.
+ * `share` is the part of the year being played out, and the luck shrinks
+ * with it so a year in steps spreads like a year in one go.
  */
-export function developPlayer(player: Player, appearances: number, rng: Rng): Player {
-  const age = player.age + 1
-  const playing = Math.min(1, appearances / PROGRESSION.fullSeason)
+function yearChange(player: Player, age: number, playing: number, share: number, rng: Rng) {
   const room = player.potential - player.overall
+  const luck = rng.normal(0, 1.5 * Math.sqrt(share))
   let change: number
-  if (age <= 21) change = room * (0.12 + 0.28 * playing) + rng.normal(0, 1.5)
-  else if (age <= 25) change = room * (0.1 + 0.2 * playing) + rng.normal(0, 1.5)
-  else if (age <= 29) change = rng.normal(playing > 0.5 ? 0.3 : -0.5, 1.5)
-  else if (age <= 32) change = -rng.int(1, 3)
-  else change = -rng.int(2, 5)
+  if (age <= 21) change = room * (0.12 + 0.28 * playing) * share + luck
+  else if (age <= 25) change = room * (0.1 + 0.2 * playing) * share + luck
+  else if (age <= 29) change = (playing > 0.5 ? 0.3 : -0.5) * share + luck
+  else if (age <= 32) change = -(1 + 2 * rng.next()) * share
+  else change = -(2 + 3 * rng.next()) * share
+  return Math.min(change, room)
+}
 
+/**
+ * One step of a player's year: `share` of it, having played `playing` of a
+ * full season's football so far (0 to 1), with the user's training if any.
+ */
+export function developStep(
+  player: Player,
+  playing: number,
+  share: number,
+  rng: Rng,
+  training: StepTraining = {},
+): Player {
+  const age = player.age + 1
+  const change = yearChange(player, age, Math.min(1, playing), share, rng) * (training.growth ?? 1)
+  const growing = player.overall < player.potential && age <= TRAINING.individualUntil
   const attributes = developAttributes(
     player.attributes,
     player.position,
     age,
-    Math.min(change, room),
+    change,
     rng,
+    0.8 * Math.sqrt(share),
+    growing ? training : { ...training, focus: undefined },
   )
   const overall = overallAt(attributes, player.position)
   // Past the peak the ceiling comes down with the player.
-  const potential = age >= 30 ? overall : Math.max(player.potential, overall)
+  const potential =
+    age >= 30
+      ? Math.min(player.potential, Math.max(overall, player.overall))
+      : Math.max(player.potential, overall)
+  return {
+    ...player,
+    attributes,
+    overall,
+    potential: Math.max(potential, overall),
+    marketValue: marketValueFor(overall, potential, player.age),
+  }
+}
+
+/** A year older in one go: the whole year's development, then a birthday. */
+export function developPlayer(player: Player, appearances: number, rng: Rng): Player {
+  const grown = developStep(player, appearances / PROGRESSION.fullSeason, 1, rng)
+  return birthday(grown)
+}
+
+/** A year older; past 30 the ceiling is where he is now. */
+function birthday(player: Player): Player {
+  const age = player.age + 1
+  const potential = age >= 30 ? player.overall : player.potential
   return {
     ...player,
     age,
-    attributes,
-    overall,
     potential,
-    marketValue: marketValueFor(overall, potential, age),
+    marketValue: marketValueFor(player.overall, potential, age),
+  }
+}
+
+/**
+ * The potential as scouts see it: a range around the true one, as wide as
+ * the player is unknown. Young players who have hardly played get up to 7
+ * either side; it narrows with every game and is exact from 28. Where the
+ * true value sits inside is fixed for each player, so the range never jumps.
+ */
+export function potentialRange(player: Player, games: number): { low: number; high: number } {
+  const half =
+    player.age >= 28
+      ? 0
+      : Math.max(1, Math.min(7, Math.round(7 - games / 12 - Math.max(0, player.age - 17) * 0.5)))
+  const offset = (mixSeed(player.id, 'potencial') % (2 * half + 1)) - half
+  const low = Math.max(player.overall, player.potential - half + offset)
+  const high = Math.min(99, Math.max(low, player.potential + half + offset))
+  return { low, high: Math.max(high, player.potential) }
+}
+
+/** Games a player has played, every season of his career including this one. */
+export const careerGames = (player: Player, appearances: Record<string, number>) =>
+  (player.history ?? []).reduce((sum, s) => sum + s.games, 0) + (appearances[player.id] ?? 0)
+
+/** The training a step of the user's player gets. */
+function stepTraining(training: Training, playerId: string, share: number): StepTraining {
+  const group = FOCUS_GROUP[training.focus]
+  const own = training.individual[playerId]
+  return {
+    ...(group && { groups: { [group]: TRAINING.groupBoost } }),
+    ...(training.focus === 'descanso' && { growth: TRAINING.restGrowth }),
+    ...(own && {
+      focus: {
+        attributes: FOCUS_ATTRIBUTES[own],
+        points: TRAINING.individualPerSeason * share,
+      },
+    }),
+  }
+}
+
+/**
+ * A monthly step for everyone in the game: how much each has played so far
+ * this season against how much there has been to play decides how fast the
+ * young grow. Players out on loan count as playing most of the time. The
+ * user's players train as set; the step's changes to their overall are kept
+ * for the player sheet.
+ */
+export function developWorld(game: GameState, rng: Rng): GameState {
+  const { world, season } = game
+  const share = 1 / PROGRESSION.steps
+  const played = Math.max(0, Math.min(season.round, season.totalRounds + 1) - 1)
+  const expected = (PROGRESSION.fullSeason * played) / season.totalRounds
+  const onLoan = new Set(game.loans.map((l) => l.playerId))
+  const players = { ...world.players }
+  const growth: Record<string, number> = {}
+  for (const old of Object.values(world.players).sort(byId)) {
+    if (old.clubId === RETIRED) continue
+    const games = season.appearances[old.id] ?? 0
+    const apps = old.age < PROGRESSION.youthUntil ? games * PROGRESSION.youthGames : games
+    let playing = expected > 0 ? apps / expected : 0
+    if (onLoan.has(old.id)) playing = Math.max(playing, PROGRESSION.loanPlaying)
+    const users = old.clubId === game.userClubId
+    const player = developStep(
+      old,
+      playing,
+      share,
+      rng,
+      users ? stepTraining(game.training, old.id, share) : {},
+    )
+    players[old.id] = player
+    if (users || onLoan.has(old.id)) growth[old.id] = player.overall - old.overall
+  }
+  return {
+    ...game,
+    world: { ...world, players },
+    growth: { date: game.today, overall: growth },
   }
 }
 
@@ -167,19 +315,16 @@ const byId = (a: Player, b: Player) => a.id.localeCompare(b.id)
 
 /**
  * Ages every active player by a season and retires the oldest. Returns the
- * new world and who retired, so the user can be told about his own.
+ * new world and who retired, so the user can be told about his own. The
+ * year's development has already happened, step by step (developWorld).
  */
-export function ageWorld(
-  world: World,
-  appearances: Record<string, number>,
-  rng: Rng,
-): { world: World; retired: Player[] } {
+export function ageWorld(world: World, rng: Rng): { world: World; retired: Player[] } {
   const players = { ...world.players }
   const clubs = { ...world.clubs }
   const retired: Player[] = []
   for (const old of Object.values(world.players).sort(byId)) {
     if (old.clubId === RETIRED) continue
-    const player = developPlayer(old, appearances[old.id] ?? 0, rng)
+    const player = birthday(old)
     if (rng.next() < retirementChance(player)) {
       if (player.clubId !== FREE_AGENT) {
         const club = clubs[player.clubId]

@@ -20,6 +20,7 @@ import {
   startNextSeason,
   todaysMatchDay,
 } from '../../../engine/season/season.ts'
+import { potentialRange } from '../../../engine/progression/progression.ts'
 import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { simulate, type SimulateAction } from '../../../worker/simulate.ts'
@@ -34,6 +35,7 @@ import {
   formatDayMonth,
   formatMoney,
   POSTURE_NAMES,
+  rangeText,
   roundStarFeats,
 } from '../../format.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
@@ -550,7 +552,7 @@ function NewSeason({ game }: { game: GameState }) {
           {youth
             .map(
               (p) =>
-                `${p.name} (${p.position}, ${p.age} anos, geral ${p.overall}, potencial ${p.potential})`,
+                `${p.name} (${p.position}, ${p.age} anos, geral ${p.overall}, potencial ${rangeText(potentialRange(p, 0))})`,
             )
             .join('; ')}
           .

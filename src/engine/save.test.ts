@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { fairTicketPrice, monthlySponsorship } from './finance/economy.ts'
 import { wageFor } from './generate/player.ts'
 import { addDays } from './season/calendar.ts'
+import { NO_TRAINING } from './progression/training.ts'
 import { newGame, playRound, roundDate, SAVE_VERSION } from './season/season.ts'
 import type { World } from './model/types.ts'
 import { upgradeGame } from './save.ts'
@@ -35,8 +36,16 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('gives a version 8 save balanced training and no loans', () => {
+    const { training: _, loans: __, ...v8 } = fresh
+    const upgraded = upgradeOld({ ...v8, version: 8 })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.training).toEqual(NO_TRAINING)
+    expect(upgraded.loans).toEqual([])
+  })
+
   it('turns the fixed sponsorship of a version 7 save into a deal to the end of the season', () => {
-    const { sponsorship: _, ...v7 } = fresh
+    const { sponsorship: _, training: __, loans: ___, ...v7 } = fresh
     const upgraded = upgradeOld({ ...v7, version: 7 })
     expect(upgraded.version).toBe(SAVE_VERSION)
     expect(upgraded.sponsorship.offers).toEqual([])

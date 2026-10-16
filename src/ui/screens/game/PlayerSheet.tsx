@@ -1,4 +1,4 @@
-import { BadgeDollarSignIcon, FileSignatureIcon } from 'lucide-react'
+import { BadgeDollarSignIcon, FileSignatureIcon, PlaneIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -25,6 +25,9 @@ import {
   KEEPER_FACES,
 } from '../../../engine/player/attributes.ts'
 import { cupScorers } from '../../../engine/season/cup.ts'
+import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
+import { recoveryRate } from '../../../engine/progression/training.ts'
+import { isOnLoan, LOAN } from '../../../engine/transfer/loans.ts'
 import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
 import { leagueOf, leagueScorers } from '../../../engine/season/season.ts'
 import { PlayerCard } from '../../components/PlayerCard.tsx'
@@ -37,8 +40,10 @@ import {
   formatMoney,
   isHomegrown,
   POSITION_NAMES,
+  rangeText,
   ROLE_NAMES,
   roundStarFeats,
+  signedChange,
   type Role,
 } from '../../format.ts'
 
@@ -55,10 +60,14 @@ export function PlayerSheet(props: {
   onClose: () => void
   onSell?: () => void
   onRenew?: () => void
+  onLoan?: () => void
 }) {
   const { game, player, role, slot } = props
   const { world, season, market, userClubId } = game
   const own = player.clubId === userClubId
+  const loaned = isOnLoan(game, player.id)
+  const potential = potentialRange(player, careerGames(player, season.appearances))
+  const growth = game.growth?.overall[player.id]
   const listed = market.listed[player.id]
   const leagueGoals =
     player.clubId === FREE_AGENT
@@ -66,11 +75,11 @@ export function PlayerSheet(props: {
       : (leagueScorers(game, leagueOf(world, player.clubId)).find((r) => r.playerId === player.id)
           ?.goals ?? 0)
   const cupGoals = cupScorers(season.cup).find((r) => r.playerId === player.id)?.goals ?? 0
-  const expiring = own && player.contractUntil <= season.year
+  const expiring = (own || loaned) && player.contractUntil <= season.year
   const fit = slot && positionFit(player, slot)
   const rating = seasonRating(season, player.id)
   const form = formOf(season, player.id)
-  const condition = conditionOn(season, player, game.today)
+  const condition = conditionOn(season, player, game.today, recoveryRate(game, player.id))
   const club = world.clubs[player.clubId]
   const star = season.roundStars.find((s) => s.playerId === player.id)
 
@@ -103,9 +112,31 @@ export function PlayerSheet(props: {
           </p>
         )}
 
+        {loaned && club && (
+          <p className="px-4 pb-2 text-center text-sm">
+            Emprestado pelo seu clube ao {club.name}; volta no fim da temporada.
+          </p>
+        )}
         <dl className="grid grid-cols-2 gap-x-4 gap-y-3 px-4 py-2 text-sm sm:grid-cols-3">
-          <Item label="Geral">{player.overall}</Item>
-          <Item label="Potencial">{player.potential}</Item>
+          <Item label="Geral">
+            {player.overall}
+            {growth !== undefined && growth !== 0 && (
+              <span
+                className={cn(
+                  'ml-1 text-xs',
+                  growth > 0
+                    ? 'text-green-700 dark:text-green-400'
+                    : 'text-red-600 dark:text-red-400',
+                )}
+                title="No último mês"
+              >
+                {signedChange(growth)} no mês
+              </span>
+            )}
+          </Item>
+          <Item label="Potencial">
+            <span title="Fica mais preciso conforme ele joga">{rangeText(potential)}</span>
+          </Item>
           <Item label="Pé preferido">{FOOT_NAMES[player.foot]}</Item>
           <Item label="Posições" wide>
             {[player.position, ...player.secondary].map((p) => POSITION_NAMES[p]).join(', ')}
@@ -207,16 +238,24 @@ export function PlayerSheet(props: {
           )}
         </Section>
 
-        {own && props.onSell && props.onRenew && (
+        {(own || loaned) && props.onRenew && (
           <SheetFooter className="flex-row flex-wrap">
-            <Button variant="outline" onClick={props.onSell}>
-              <BadgeDollarSignIcon />
-              {listed === undefined ? 'Colocar à venda' : 'Preço de venda'}
-            </Button>
+            {own && props.onSell && (
+              <Button variant="outline" onClick={props.onSell}>
+                <BadgeDollarSignIcon />
+                {listed === undefined ? 'Colocar à venda' : 'Preço de venda'}
+              </Button>
+            )}
             <Button variant="outline" onClick={props.onRenew}>
               <FileSignatureIcon />
               Renovar contrato
             </Button>
+            {own && props.onLoan && player.age <= LOAN.maxAge && (
+              <Button variant="outline" onClick={props.onLoan}>
+                <PlaneIcon />
+                Emprestar
+              </Button>
+            )}
           </SheetFooter>
         )}
       </SheetContent>

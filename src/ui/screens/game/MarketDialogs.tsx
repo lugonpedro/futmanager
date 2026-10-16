@@ -26,7 +26,8 @@ import { useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { MoneyInput } from '../../components/MoneyInput.tsx'
 import { styleLevel } from '../../../engine/player/attributes.ts'
-import { formatMoney, POSITION_NAMES, styleName } from '../../format.ts'
+import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
+import { formatMoney, POSITION_NAMES, rangeText, styleName } from '../../format.ts'
 
 const YEARS = Array.from({ length: MARKET.maxContractYears }, (_, i) => String(i + 1))
 
@@ -34,7 +35,7 @@ function PlayerSummary({ game, player }: { game: GameState; player: Player }) {
   return (
     <p className="text-sm text-muted-foreground">
       {POSITION_NAMES[player.position]}, {player.age} anos, geral {player.overall} (potencial{' '}
-      {player.potential})
+      {rangeText(potentialRange(player, careerGames(player, game.season.appearances)))})
       {player.styles.length > 0 &&
         `, ${player.styles.map((s) => styleName(s, styleLevel(player, s))).join(', ')}`}
       .{' '}
@@ -166,7 +167,7 @@ export function ListDialog(props: { game: GameState; player: Player; onClose: ()
 export function RenewDialog(props: { game: GameState; player: Player; onClose: () => void }) {
   const { game, player } = props
   const setGame = useGameStore((s) => s.setGame)
-  const demand = renewalDemand(game.world, player)
+  const demand = renewalDemand(game.world, player, game.userClubId)
   const [wage, setWage] = useState(demand)
   const [years, setYears] = useState('2')
   const [error, setError] = useState<string>()

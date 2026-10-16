@@ -161,7 +161,9 @@ export function checkSigning(game: GameState, playerId: string, bid: Bid): Verdi
   const { world, userClubId } = game
   const player = world.players[playerId]
   const club = world.clubs[userClubId]
-  if (!player || player.clubId === userClubId) return { ok: false, reason: 'Jogador já é seu.' }
+  if (!player || player.clubId === userClubId || game.loans.some((l) => l.playerId === playerId)) {
+    return { ok: false, reason: 'Jogador já é seu.' }
+  }
   if (!Number.isInteger(bid.years) || bid.years < 1 || bid.years > MARKET.maxContractYears) {
     return { ok: false, reason: `O contrato vai de 1 a ${MARKET.maxContractYears} temporadas.` }
   }
@@ -275,8 +277,9 @@ export function rejectOffer(game: GameState, offerId: string): GameState {
 }
 
 /** Wage a player wants to extend his contract. */
-export const renewalDemand = (world: World, player: Player) =>
-  wageDemand(world, player, player.clubId)
+/** What a player asks to stay at `clubId`, his own club unless he is out on loan from it. */
+export const renewalDemand = (world: World, player: Player, clubId = player.clubId) =>
+  wageDemand(world, player, clubId)
 
 export function checkRenewal(
   game: GameState,
@@ -285,11 +288,14 @@ export function checkRenewal(
   years: number,
 ): Verdict {
   const player = game.world.players[playerId]
-  if (player?.clubId !== game.userClubId) return { ok: false, reason: 'Jogador não é seu.' }
+  const onLoan = game.loans.some((l) => l.playerId === playerId)
+  if (player?.clubId !== game.userClubId && !onLoan) {
+    return { ok: false, reason: 'Jogador não é seu.' }
+  }
   if (!Number.isInteger(years) || years < 1 || years > MARKET.maxContractYears) {
     return { ok: false, reason: `Renove por 1 a ${MARKET.maxContractYears} temporadas.` }
   }
-  const demand = renewalDemand(game.world, player)
+  const demand = renewalDemand(game.world, player, game.userClubId)
   if (wage < demand)
     return { ok: false, reason: `${player.name} recusou: pede ${formatMoney(demand)} por mês.` }
   return { ok: true }
@@ -365,8 +371,10 @@ function aiSign(
   const budget = club.cash * MARKET.aiSpendShare
   // Out of the windows only free agents can sign; the close of a season opens the next one.
   const windowOpen = fromYear > game.season.year || transferWindowAt(game.today) !== undefined
+  const onLoan = new Set(game.loans.map((l) => l.playerId))
   const candidates = Object.values(world.players).filter((p) => {
     if (p.position !== position || p.clubId === clubId || p.clubId === game.userClubId) return false
+    if (onLoan.has(p.id)) return false
     if (p.clubId === RETIRED) return false
     if (p.clubId === FREE_AGENT) return true
     if (!windowOpen) return false
@@ -410,10 +418,16 @@ function aiClearDebt(game: GameState, clubId: string): GameState {
   let next = game
   const struggling = (world: World) =>
     world.clubs[clubId].cash < 0 || monthlyWages(world, clubId) > wageCap(world, clubId)
+  const onLoan = new Set(game.loans.map((l) => l.playerId))
   for (let sold = 0; sold < MARKET.debtSales && struggling(next.world); sold++) {
     const { world } = next
     const player = squadOf(world, clubId)
-      .filter((p) => canLeave(world, p) && !isShort(squadOf(world, clubId).filter((q) => q !== p)))
+      .filter(
+        (p) =>
+          !onLoan.has(p.id) &&
+          canLeave(world, p) &&
+          !isShort(squadOf(world, clubId).filter((q) => q !== p)),
+      )
       .sort((a, b) => b.wage - a.wage || a.id.localeCompare(b.id))[0]
     if (!player) break
     const fee = round10k(player.marketValue)

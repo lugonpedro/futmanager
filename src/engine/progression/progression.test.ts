@@ -8,6 +8,7 @@ import { MARKET, squadOf } from '../transfer/market.ts'
 import {
   ageWorld,
   developPlayer,
+  potentialRange,
   PROGRESSION,
   retirementChance,
   youthIntake,
@@ -70,11 +71,29 @@ describe('developing players', () => {
   })
 })
 
+describe('the potential as scouts see it', () => {
+  it('is a range around the true one that narrows with games and age', () => {
+    for (let i = 0; i < 50; i++) {
+      const p = player({ id: `P${i}`, age: 17, overall: 40, potential: 70 })
+      const unknown = potentialRange(p, 0)
+      expect(unknown.low).toBeLessThanOrEqual(70)
+      expect(unknown.high).toBeGreaterThanOrEqual(70)
+      expect(unknown.high - unknown.low).toBe(14)
+      const known = potentialRange(p, 60)
+      expect(known.high - known.low).toBeLessThan(unknown.high - unknown.low)
+      expect(known.low).toBeLessThanOrEqual(70)
+      expect(known.high).toBeGreaterThanOrEqual(70)
+    }
+    const veteran = player({ age: 29, overall: 70, potential: 70 })
+    expect(potentialRange(veteran, 0)).toEqual({ low: 70, high: 70 })
+  })
+})
+
 describe('the close of a season', () => {
   const world = generateWorld(9)
 
   it('ages everyone a year and takes the retired out of their squads', () => {
-    const { world: aged, retired } = ageWorld(world, {}, createRng(4))
+    const { world: aged, retired } = ageWorld(world, createRng(4))
     expect(retired.length).toBeGreaterThan(0)
     for (const p of retired) {
       expect(aged.players[p.id].clubId).toBe(RETIRED)

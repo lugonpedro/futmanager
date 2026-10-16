@@ -33,7 +33,8 @@ import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
-import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES } from '../../format.ts'
+import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
+import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES, rangeText } from '../../format.ts'
 import { SignDialog } from './MarketDialogs.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
 
@@ -170,8 +171,8 @@ function BuyTab({ game }: { game: GameState }) {
                 </TableCell>
                 <TableCell className="hidden sm:table-cell">{player.age}</TableCell>
                 <TableCell className="font-bold">{player.overall}</TableCell>
-                <TableCell className="hidden text-muted-foreground sm:table-cell">
-                  {player.potential}
+                <TableCell className="hidden whitespace-nowrap text-muted-foreground sm:table-cell">
+                  {rangeText(potentialRange(player, careerGames(player, game.season.appearances)))}
                 </TableCell>
                 <TableCell className="max-w-40">
                   {player.clubId === FREE_AGENT ? (

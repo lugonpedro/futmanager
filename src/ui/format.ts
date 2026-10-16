@@ -2,6 +2,7 @@ import type {
   Attribute,
   Foot,
   GameState,
+  IndividualFocus,
   LedgerCategory,
   Player,
   PlayStyle,
@@ -10,6 +11,7 @@ import type {
   RoundStar,
   SponsorDeal,
   SponsorGoal,
+  SquadFocus,
 } from '../engine/model/types.ts'
 import { CUP_NAME } from '../engine/season/cup.ts'
 import { PROMOTION_SPOTS } from '../engine/season/rules.ts'
@@ -230,3 +232,35 @@ export const sponsorSeasons = (deal: SponsorDeal) =>
   deal.firstSeason === deal.lastSeason
     ? `só ${deal.firstSeason}`
     : `${deal.firstSeason} a ${deal.lastSeason}`
+
+export const SQUAD_FOCUS_NAMES: Record<SquadFocus, { name: string; detail: string }> = {
+  equilibrado: { name: 'Equilibrado', detail: 'Um pouco de tudo, sem pressa em nada.' },
+  fisico: {
+    name: 'Físico',
+    detail: 'Velocidade, força e fôlego crescem mais rápido, mas sobe a chance de lesão.',
+  },
+  tecnico: { name: 'Técnico', detail: 'Passe, drible e finalização crescem mais rápido.' },
+  tatico: { name: 'Tático', detail: 'Posicionamento, visão e marcação crescem mais rápido.' },
+  descanso: {
+    name: 'Descanso',
+    detail: 'O elenco recupera a condição mais rápido e se machuca menos, mas cresce mais devagar.',
+  },
+}
+
+export const INDIVIDUAL_FOCUS_NAMES: Record<IndividualFocus, string> = {
+  finalizacao: 'Finalização',
+  passe: 'Passe',
+  drible: 'Drible',
+  cruzamento: 'Cruzamento',
+  defesa: 'Defesa',
+  cabeceio: 'Cabeceio',
+  velocidade: 'Velocidade',
+  goleiro: 'Goleiro',
+}
+
+/** "55 a 65", or the one number once it is known. */
+export const rangeText = (range: { low: number; high: number }) =>
+  range.low === range.high ? String(range.low) : `${range.low} a ${range.high}`
+
+/** "+2", "-1" or "0", for a change in overall. */
+export const signedChange = (change: number) => (change > 0 ? `+${change}` : String(change))

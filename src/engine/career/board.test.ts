@@ -74,7 +74,8 @@ describe('the board', () => {
       expect.objectContaining({ year: 2027, clubId: 'C12', position: review.position }),
     ])
 
-    const stayed = startNextSeason(game)
+    const pleased = { ...game, career: { ...game.career, target: 20, confidence: 80 } }
+    const stayed = startNextSeason(pleased)
     expect(stayed.userClubId).toBe('C12')
     expect(stayed.career.confidence).toBeGreaterThanOrEqual(BOARD.newSeasonFloor)
     expect(stayed.career.confidence).toBeLessThanOrEqual(BOARD.newSeasonCeiling)
