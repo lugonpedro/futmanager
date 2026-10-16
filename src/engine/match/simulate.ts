@@ -437,6 +437,25 @@ export function substitute(
   return true
 }
 
+/**
+ * Two players on the pitch swap places without using a substitution. Each
+ * takes the other's position and spot in the line, so swapping two forwards
+ * only changes the side each one plays on. Returns false if not allowed.
+ */
+export function swapPositions(state: MatchState, side: MatchSide, aId: string, bId: string) {
+  const team = state[side]
+  const i = team.onPitch.findIndex((p) => p.player.id === aId)
+  const j = team.onPitch.findIndex((p) => p.player.id === bId)
+  if (i < 0 || j < 0 || i === j || state.finished) return false
+  const [a, b] = [team.onPitch[i], team.onPitch[j]]
+  ;[a.position, b.position] = [b.position, a.position]
+  team.onPitch[i] = b
+  team.onPitch[j] = a
+  team.played[aId] = a.position
+  team.played[bId] = b.position
+  return true
+}
+
 export function setPosture(state: MatchState, side: MatchSide, posture: Posture) {
   state[side].posture = posture
 }
