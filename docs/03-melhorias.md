@@ -14,12 +14,14 @@ Continuação de [02-plano-pos-mvp.md](02-plano-pos-mvp.md). As fases 8 a 12 est
 | M6    | Partida (ver [04-partida.md](04-partida.md))             | Grande       | Não            |
 | M7    | Patrocínios com contratos                                | Médio        | Sim (versão 7) |
 | M8    | Evolução dos jogadores: treino e chance real para a base | Médio/grande | Sim (versão 7) |
+| M9    | Pacote de teste com o Brasileirão 2026                   | Médio        | Talvez         |
 
 Por que essa ordem:
 
 - **M1 primeiro** porque as outras etapas usam o mesmo componente de notificação e de confirmação.
 - **M2 a M5 são só interface**: dá para fazer um PR por etapa, ou juntar as pequenas.
 - **M7 e M8 mudam o `GameState`**. Se forem no mesmo PR, sobem o save uma vez só, para a versão 7. Se forem separados, a segunda sobe para a 8.
+- **M9 por último**, depois de todas as outras, como decidido no plano pós-MVP.
 - Tudo isso vem antes da fase 13 porque a liga reaproveita as mesmas telas: o que melhorar aqui já nasce melhor no online.
 
 ---
@@ -182,6 +184,18 @@ Foco de treino, empréstimos e o histórico mensal entram no `GameState`: `SAVE_
 ### Balanceamento
 
 A evolução mensal muda o ritmo do mundo inteiro, inclusive dos clubes da IA. `npm run balance` precisa mostrar as mesmas médias de overall por divisão antes e depois.
+
+---
+
+## M9: Pacote com o Brasileirão 2026
+
+Último passo das melhorias, para testar os nomes reais decididos no [plano pós-MVP](02-plano-pos-mvp.md#decisões).
+
+- Um pacote de dados com os clubes das Séries A e B de 2026 (nome, sigla, cidade e cores) e os jogadores de cada elenco (nome, idade e posição). Atributos e overall continuam gerados pelo jogo, a partir de uma força por clube.
+- O pacote fica separado do motor, num arquivo próprio, para dar para atualizar, corrigir ou tirar um nome sem mexer no resto.
+- No "Novo jogo" o jogador escolhe entre o mundo gerado e o Brasileirão 2026.
+- Sem escudos, fotos nem uniformes oficiais. O Aviso legal ganha o canal de remoção.
+- Se o save precisar guardar de qual pacote veio a carreira, `SAVE_VERSION` sobe mais uma vez.
 
 ---
 
