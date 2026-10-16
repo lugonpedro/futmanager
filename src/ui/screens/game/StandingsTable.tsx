@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 import { leagueStandings, PROMOTION_SPOTS } from '../../../engine/season/season.ts'
 import type { Outcome } from '../../../engine/season/standings.ts'
 import { useGame } from '../../../store/game.ts'
-import { ClubName } from '../../components/ClubName.tsx'
+import { ClubLink } from './ClubSheet.tsx'
 
 const FORM_STYLE: Record<Outcome, string> = {
   V: 'bg-green-500',
@@ -77,10 +77,7 @@ export function StandingsTable({ leagueId }: { leagueId: string }) {
                   {i + 1}
                 </TableCell>
                 <TableCell className="max-w-40">
-                  <ClubName
-                    club={game.world.clubs[row.clubId]}
-                    highlight={row.clubId === game.userClubId}
-                  />
+                  <ClubLink clubId={row.clubId} highlight={row.clubId === game.userClubId} />
                 </TableCell>
                 <TableCell className="text-center font-bold">{row.points}</TableCell>
                 <TableCell className="text-center">{row.played}</TableCell>

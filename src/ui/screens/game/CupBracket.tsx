@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card'
 import { CUP_NAME, cupProgress, nextCupTie } from '../../../engine/season/cup.ts'
 import { useGame } from '../../../store/game.ts'
-import { ClubName } from '../../components/ClubName.tsx'
+import { ClubLink } from './ClubSheet.tsx'
 import { formatDayDate, formatShortDate } from '../../format.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 
@@ -40,7 +40,7 @@ export function CupBracket() {
           <p className="text-sm">
             Próximo jogo, {formatDayDate(next.date)}:{' '}
             {next.homeId === userClubId ? 'em casa contra' : 'fora contra'}{' '}
-            <ClubName club={opponent} />
+            <ClubLink clubId={opponent.id} />
           </p>
         )}
       </Card>

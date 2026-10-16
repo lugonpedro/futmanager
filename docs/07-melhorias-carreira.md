@@ -127,6 +127,8 @@ Três ideias, da mais simples à mais completa:
 
 O mesmo link vale para o adversário no cartão "Próximo jogo" do Resumo, o que ajuda a se preparar para a partida.
 
+**Como ficou (PR 3)**: a ficha abre pelos nomes na classificação, na artilharia, nos jogos, na copa e no confronto do Resumo. Ela mostra a força por setor (defesa, meio, ataque) da escalação, como a página Time faz com a sua.
+
 **Código**: `clubLineup(game, clubId)` em `season.ts` já devolve a escalação da IA. Um `ClubSheet.tsx` novo, e o `ClubName` ganha um `onClick` opcional.
 
 ## 8. Simular até uma data
@@ -134,6 +136,8 @@ O mesmo link vale para o adversário no cartão "Próximo jogo" do Resumo, o que
 **Hoje**: dá para avançar até o próximo jogo, simular o jogo ou simular a temporada inteira.
 
 **Proposta**: no Calendário, tocar num dia futuro mostra "Simular até 12 de julho". O jogo confirma ("Seus 4 jogos até lá vão ser simulados sem você assistir") e joga todos os dias até a data escolhida, parando antes do jogo daquele dia, se houver. Para no meio do caminho quando chega uma proposta por um jogador seu, como o "Avançar" já faz, e avisa onde parou.
+
+**Como ficou (PR 3)**: no computador, tocar em qualquer dia do mês; no celular, que mostra o calendário em lista, um botão ⏩ ao lado de cada data futura. Em vez de um diálogo, aparece um cartão no topo com "Simular até..." e a contagem de jogos, e um aviso diz onde parou se a simulação parar antes. Dá para escolher até o último dia com jogo da temporada.
 
 **Código**: uma ação nova `{ until: GameDate }` no worker (`season.worker.ts`), com uma função `simulateUntil(game, date)` em `season.ts` que repete `playMatchDay` enquanto o próximo dia de jogo for antes da data e termina com `passDays` até ela. Teste: simular até uma data cai exatamente nela, com todos os jogos anteriores jogados. Na tela, `MonthGrid` e `MonthList` ganham a seleção do dia.
 

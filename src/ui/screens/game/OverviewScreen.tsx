@@ -129,6 +129,9 @@ function tablePlaces(game: GameState, fixture: Fixture): Record<string, string> 
   return places
 }
 
+/** The simulations the overview's buttons start. */
+type ButtonAction = Extract<SimulateAction, string>
+
 function NextRound({ game }: { game: GameState }) {
   const setGame = useGameStore((s) => s.setGame)
   const navigate = useNavigate()
@@ -154,7 +157,7 @@ function NextRound({ game }: { game: GameState }) {
   ].filter(({ id }) => squad.has(id))
 
   const roundsLeft = season.totalRounds - season.round + 1
-  const questions: Partial<Record<SimulateAction, ConfirmRequest>> = {
+  const questions: Partial<Record<ButtonAction, ConfirmRequest>> = {
     play: fixture && {
       title: 'Simular jogo',
       description: `O jogo contra ${world.clubs[fixture.homeId === userClubId ? fixture.awayId : fixture.homeId].name} vai ser simulado sem você assistir. Continuar?`,
@@ -169,7 +172,7 @@ function NextRound({ game }: { game: GameState }) {
     },
   }
 
-  const run = async (action: SimulateAction) => {
+  const run = async (action: ButtonAction) => {
     const question = questions[action]
     if (question && !(await confirm(question))) return
     setBusy(true)

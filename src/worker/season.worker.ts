@@ -1,19 +1,25 @@
 import type { GameState } from '../engine/model/types.ts'
+import type { GameDate } from '../engine/season/calendar.ts'
 import {
   advanceToNextGame,
   canPlayRound,
   playMatchDay,
   playNextGame,
+  simulateUntil,
 } from '../engine/season/season.ts'
 
-/** advance: to the user's next game; play: and play it; season: every game left. */
-export type SimulateAction = 'advance' | 'play' | 'season'
+/**
+ * advance: to the user's next game; play: and play it; season: every game
+ * left; until: every game before a date, stopping on it.
+ */
+export type SimulateAction = 'advance' | 'play' | 'season' | { until: GameDate }
 export type SimulateRequest = { id: number; game: GameState; action: SimulateAction }
 export type SimulateResponse = { id: number; game: GameState }
 
 function run(game: GameState, action: SimulateAction): GameState {
   if (action === 'advance') return advanceToNextGame(game)
   if (action === 'play') return playNextGame(game)
+  if (typeof action === 'object') return simulateUntil(game, action.until)
   let next = game
   while (canPlayRound(next)) next = playMatchDay(next)
   return next

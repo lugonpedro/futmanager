@@ -1,5 +1,5 @@
 import type { Fixture, World } from '../../../engine/model/types.ts'
-import { ClubName } from '../../components/ClubName.tsx'
+import { ClubLink } from './ClubSheet.tsx'
 
 /**
  * "Home 2 x 1 Away", "Home 1 x 1 Away (4-3 pên.)" after a shootout, or "Home x Away" before it is played.
@@ -11,7 +11,7 @@ export function FixtureLine(props: {
   userClubId: string
   places?: Record<string, string>
 }) {
-  const { fixture, world, userClubId, places } = props
+  const { fixture, userClubId, places } = props
   const place = (clubId: string) =>
     places?.[clubId] && (
       <span className="shrink-0 text-xs text-muted-foreground tabular-nums">{places[clubId]}</span>
@@ -21,7 +21,7 @@ export function FixtureLine(props: {
     <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2 text-sm">
       <span className="flex min-w-0 items-center justify-end gap-1.5 text-right">
         {place(fixture.homeId)}
-        <ClubName club={world.clubs[fixture.homeId]} highlight={fixture.homeId === userClubId} />
+        <ClubLink clubId={fixture.homeId} highlight={fixture.homeId === userClubId} />
       </span>
       <span className="rounded bg-muted px-2 font-semibold text-center whitespace-nowrap tabular-nums">
         {result ? `${result.homeGoals} x ${result.awayGoals}` : 'x'}
@@ -32,7 +32,7 @@ export function FixtureLine(props: {
         )}
       </span>
       <span className="flex min-w-0 items-center gap-1.5">
-        <ClubName club={world.clubs[fixture.awayId]} highlight={fixture.awayId === userClubId} />
+        <ClubLink clubId={fixture.awayId} highlight={fixture.awayId === userClubId} />
         {place(fixture.awayId)}
       </span>
     </div>
