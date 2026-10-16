@@ -421,3 +421,7 @@ verify_jwt = false
 # Called by Stripe, which signs each event instead of sending a user's token.
 [functions.stripe-webhook]
 verify_jwt = false
+
+# Called by pg_cron with the shared secret, like fantasy-round.
+[functions.fantasy-notify]
+verify_jwt = false

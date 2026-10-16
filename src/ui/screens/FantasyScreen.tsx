@@ -24,6 +24,7 @@ import { POSITIONS, type Position } from '../../engine/model/types.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Choices } from '../components/Choices.tsx'
 import { FantasyLeagues } from '../components/FantasyLeagues.tsx'
+import { FantasyNotices } from '../components/FantasyNotices.tsx'
 import { ClubMark, Note } from '../components/FantasyParts.tsx'
 import { FormationSelect } from '../components/FormationSelect.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
@@ -185,6 +186,8 @@ function Season(props: {
       {props.signedIn && (
         <FantasyLeagues seasonId={season.id} running={season.status === 'em_andamento'} />
       )}
+
+      {props.signedIn && <FantasyNotices />}
 
       {props.signedIn && (
         <Card>
