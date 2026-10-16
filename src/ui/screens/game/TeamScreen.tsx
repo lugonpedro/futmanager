@@ -11,19 +11,19 @@ import {
   type DragEndEvent,
   type DragStartEvent,
 } from '@dnd-kit/core'
-import { ArrowDownIcon, ArrowUpIcon, EllipsisIcon, MapIcon, WandSparklesIcon } from 'lucide-react'
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  FilePenLineIcon,
+  MapIcon,
+  TagIcon,
+  WandSparklesIcon,
+} from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
 import {
   Table,
@@ -52,7 +52,7 @@ import { careerGames, potentialRange } from '../../../engine/progression/progres
 import { recoveryRate } from '../../../engine/progression/training.ts'
 import { checkLoan, LOAN, loanClub, loanPlayer } from '../../../engine/transfer/loans.ts'
 import { confirm } from '../../confirm.ts'
-import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
+import { conditionOn, formOf } from '../../../engine/season/form.ts'
 import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
@@ -79,7 +79,6 @@ type Row = Player & {
   slot?: Position
   condition: number
   form: number
-  rating?: number
   potentialRange: { low: number; high: number }
 }
 
@@ -98,14 +97,7 @@ const COLUMNS = [
   },
   { key: 'name', label: 'Nome', value: (r: Row) => r.name },
   { key: 'age', label: 'Idade', value: (r: Row) => r.age, hide: 'hidden sm:table-cell' },
-  { key: 'overall', label: 'Geral', value: (r: Row) => r.overall },
-  {
-    key: 'potential',
-    label: 'Pot',
-    title: 'Potencial',
-    value: (r: Row) => r.potentialRange.low + r.potentialRange.high,
-    hide: 'hidden sm:table-cell',
-  },
+  { key: 'overall', label: 'Geral', title: 'Geral e potencial', value: (r: Row) => r.overall },
   {
     key: 'condition',
     label: 'Cond',
@@ -113,20 +105,7 @@ const COLUMNS = [
     value: (r: Row) => r.condition,
     hide: 'hidden sm:table-cell',
   },
-  {
-    key: 'rating',
-    label: 'Nota',
-    title: 'Nota média na temporada',
-    value: (r: Row) => r.rating ?? 0,
-    hide: 'hidden md:table-cell',
-  },
   { key: 'wage', label: 'Salário', value: (r: Row) => r.wage, hide: 'hidden md:table-cell' },
-  {
-    key: 'marketValue',
-    label: 'Valor',
-    value: (r: Row) => r.marketValue,
-    hide: 'hidden lg:table-cell',
-  },
   {
     key: 'contractUntil',
     label: 'Contrato',
@@ -237,7 +216,6 @@ export function TeamScreen() {
       slot: slots.get(p.id),
       condition: conditionOf(p.id),
       form: formOf(season, p.id),
-      rating: seasonRating(season, p.id),
       potentialRange: potentialRange(p, careerGames(p, season.appearances)),
     }))
   rows.sort((a, b) => {
@@ -431,7 +409,6 @@ export function TeamScreen() {
                         disabled={out.has(p.id)}
                         listed={market.listed[p.id] !== undefined}
                         onPick={() => pick(p.id)}
-                        onView={() => setViewing(p.id)}
                         onSell={() => setListing(p.id)}
                         onRenew={() => setRenewing(p.id)}
                       >
@@ -463,9 +440,14 @@ export function TeamScreen() {
                           )}
                         </TableCell>
                         <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
-                        <TableCell className="font-bold">{p.overall}</TableCell>
-                        <TableCell className="hidden whitespace-nowrap text-muted-foreground sm:table-cell">
-                          {rangeText(p.potentialRange)}
+                        <TableCell
+                          className="whitespace-nowrap"
+                          title={`Geral ${p.overall}, potencial ${rangeText(p.potentialRange)}`}
+                        >
+                          <span className="font-bold">{p.overall}</span>
+                          <span className="text-xs text-muted-foreground">
+                            /{potentialText(p.potentialRange)}
+                          </span>
                         </TableCell>
                         <TableCell className="hidden whitespace-nowrap sm:table-cell">
                           <span
@@ -478,13 +460,7 @@ export function TeamScreen() {
                           <FormArrow form={p.form} />
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          {p.rating?.toFixed(1) ?? '-'}
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
                           {formatMoney(p.wage)}
-                        </TableCell>
-                        <TableCell className="hidden lg:table-cell">
-                          {formatMoney(p.marketValue)}
                         </TableCell>
                         <TableCell
                           className={cn(
@@ -656,14 +632,13 @@ function StarterLines(props: {
   )
 }
 
-/** A squad list row: tap to pick for a swap, drag onto another player, or open the menu. */
+/** A squad list row: tap to pick for a swap, drag onto another player, or sell and renew. */
 function SquadRow(props: {
   row: Row
   selected: boolean
   disabled: boolean
   listed: boolean
   onPick: () => void
-  onView: () => void
   onSell: () => void
   onRenew: () => void
   children: ReactNode
@@ -717,38 +692,52 @@ function SquadRow(props: {
         </button>
       </TableCell>
       {props.children}
-      <TableCell className="w-8 text-right">
-        <DropdownMenu modal={false}>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-7"
-              aria-label={`Ações para ${row.name}`}
-              onClick={(e) => e.stopPropagation()}
-              // Keep the row from starting a drag from the menu button.
-              onMouseDown={(e) => e.stopPropagation()}
-              onTouchStart={(e) => e.stopPropagation()}
-            >
-              <EllipsisIcon />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent
-            align="end"
-            // The menu is portalled, but React events still bubble to the row.
-            onClick={(e) => e.stopPropagation()}
-            onMouseDown={(e) => e.stopPropagation()}
-            onTouchStart={(e) => e.stopPropagation()}
-          >
-            <DropdownMenuItem onSelect={props.onView}>Ver carta</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onSelect={props.onSell}>
-              {props.listed ? 'Mudar preço ou tirar da venda' : 'Colocar à venda'}
-            </DropdownMenuItem>
-            <DropdownMenuItem onSelect={props.onRenew}>Renovar contrato</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+      <TableCell className="w-16 text-right whitespace-nowrap">
+        <RowAction
+          label={
+            props.listed
+              ? `Mudar preço ou tirar ${row.name} da venda`
+              : `Colocar ${row.name} à venda`
+          }
+          active={props.listed}
+          onClick={props.onSell}
+        >
+          <TagIcon />
+        </RowAction>
+        <RowAction label={`Renovar o contrato de ${row.name}`} onClick={props.onRenew}>
+          <FilePenLineIcon />
+        </RowAction>
       </TableCell>
     </TableRow>
+  )
+}
+
+/** The potential next to the overall: "78", or "74-80" while it is still uncertain. */
+const potentialText = (range: { low: number; high: number }) =>
+  range.low === range.high ? String(range.low) : `${range.low}-${range.high}`
+
+/** An icon button in a squad row, kept from picking or dragging the row. */
+function RowAction(props: {
+  label: string
+  active?: boolean
+  onClick: () => void
+  children: ReactNode
+}) {
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      className={cn('size-7', props.active && 'text-yellow-600 dark:text-yellow-300')}
+      aria-label={props.label}
+      title={props.label}
+      onClick={(e) => {
+        e.stopPropagation()
+        props.onClick()
+      }}
+      onMouseDown={(e) => e.stopPropagation()}
+      onTouchStart={(e) => e.stopPropagation()}
+    >
+      {props.children}
+    </Button>
   )
 }
