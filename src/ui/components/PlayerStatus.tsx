@@ -8,6 +8,8 @@ export function PlayerStatus(props: { playerId: string; season: Season }) {
   const injured = season.injuries[playerId]
   const suspended = season.suspensions[playerId]
   const yellows = season.yellowCards[playerId]
+  // An empty tag box would still take a line where the name wraps.
+  if (!injured && !suspended && !yellows) return null
   return (
     <span className="inline-flex flex-wrap gap-1 text-xs">
       {injured && (

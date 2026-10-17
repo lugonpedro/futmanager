@@ -74,6 +74,7 @@ import { Choices } from '../../components/Choices.tsx'
 import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { FormationSelect } from '../../components/FormationSelect.tsx'
 import { Pitch } from '../../components/Pitch.tsx'
+import { RowDetails } from '../../components/RowDetails.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import {
   fitClass,
@@ -473,12 +474,14 @@ export function TeamScreen() {
                         selected={selected === p.id}
                         disabled={out.has(p.id)}
                         listed={market.listed[p.id] !== undefined}
+                        expiring={p.contractUntil <= season.year}
                         onPick={() => pick(p.id)}
                         onSell={() => setListing(p.id)}
                         onRenew={() => setRenewing(p.id)}
                         actionsClassName={actionsColumn}
                       >
-                        <TableCell>
+                        {/* On phones the tags wrap under the name, so the row fits the screen. */}
+                        <TableCell className="whitespace-normal sm:whitespace-nowrap">
                           <button
                             type="button"
                             onClick={(e) => {
@@ -504,6 +507,30 @@ export function TeamScreen() {
                               à venda
                             </Badge>
                           )}
+                          <RowDetails>
+                            {[
+                              `${p.age} anos`,
+                              <span key="condition" className="whitespace-nowrap">
+                                <span
+                                  className={cn(
+                                    p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
+                                  )}
+                                >
+                                  {p.condition}%
+                                </span>{' '}
+                                <FormArrow form={p.form} />
+                              </span>,
+                              <span
+                                key="contract"
+                                className={cn(
+                                  p.contractUntil <= season.year &&
+                                    'font-semibold text-destructive',
+                                )}
+                              >
+                                até {p.contractUntil}
+                              </span>,
+                            ]}
+                          </RowDetails>
                         </TableCell>
                         <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
                         <TableCell
@@ -771,6 +798,7 @@ function SquadRow(props: {
   selected: boolean
   disabled: boolean
   listed: boolean
+  expiring: boolean
   onPick: () => void
   onSell: () => void
   onRenew: () => void
@@ -826,7 +854,7 @@ function SquadRow(props: {
         </button>
       </TableCell>
       {props.children}
-      <TableCell className={cn('w-16 text-right whitespace-nowrap', props.actionsClassName)}>
+      <TableCell className={cn('text-right whitespace-nowrap sm:w-16', props.actionsClassName)}>
         <RowAction
           label={
             props.listed
@@ -838,7 +866,15 @@ function SquadRow(props: {
         >
           <TagIcon />
         </RowAction>
-        <RowAction label={`Renovar o contrato de ${row.name}`} onClick={props.onRenew}>
+        <RowAction
+          label={
+            props.expiring
+              ? `O contrato de ${row.name} termina em ${row.contractUntil}: renovar`
+              : `Renovar o contrato de ${row.name}`
+          }
+          danger={props.expiring}
+          onClick={props.onRenew}
+        >
           <FilePenLineIcon />
         </RowAction>
       </TableCell>
@@ -846,10 +882,11 @@ function SquadRow(props: {
   )
 }
 
-/** An icon button in a squad row, kept from picking or dragging the row. */
+/** An icon button in a squad row, kept from picking or dragging the row; red when it needs doing. */
 function RowAction(props: {
   label: string
   active?: boolean
+  danger?: boolean
   onClick: () => void
   children: ReactNode
 }) {
@@ -857,7 +894,12 @@ function RowAction(props: {
     <Button
       variant="ghost"
       size="icon"
-      className={cn('size-7', props.active && 'text-yellow-600 dark:text-yellow-300')}
+      // A finger needs a bigger target than a cursor.
+      className={cn(
+        'size-9 sm:size-7',
+        props.active && 'text-yellow-600 dark:text-yellow-300',
+        props.danger && 'text-destructive',
+      )}
       aria-label={props.label}
       title={props.label}
       onClick={(e) => {
