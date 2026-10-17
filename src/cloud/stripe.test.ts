@@ -38,14 +38,14 @@ describe('passCheckoutForm', () => {
       userId: 'u1',
       seasonId: 3,
       email: 'a@b.com',
-      siteUrl: 'https://futmanager.app',
+      siteUrl: 'https://onzemestre.com',
     })
     expect(form.get('mode')).toBe('payment')
     expect(form.get('line_items[0][price]')).toBe('price_1')
     expect(form.get('metadata[user_id]')).toBe('u1')
     expect(form.get('metadata[season_id]')).toBe('3')
     expect(form.get('customer_email')).toBe('a@b.com')
-    expect(form.get('success_url')).toBe('https://futmanager.app/fantasia/passe?pagamento=ok')
+    expect(form.get('success_url')).toBe('https://onzemestre.com/fantasia/passe?pagamento=ok')
   })
 })
 

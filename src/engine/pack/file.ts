@@ -158,7 +158,7 @@ function readJson(text: string): ParsedPack {
     throw new Error('O arquivo não é um JSON válido.')
   }
   if (!isRecord(data) || data.formato !== PACK_FORMAT || !Array.isArray(data.clubes)) {
-    throw new Error('O arquivo não é um pacote de dados do futmanager.')
+    throw new Error('O arquivo não é um pacote de dados do onzemestre.')
   }
   if (typeof data.versao === 'number' && data.versao > PACK_FILE_VERSION) {
     throw new Error('Este pacote é de uma versão mais nova do jogo. Atualize a página.')
@@ -411,5 +411,5 @@ export function packFileName(pack: DataPack, extension: 'json' | 'csv'): string 
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
-  return `pacote-${slug || 'futmanager'}.${extension}`
+  return `pacote-${slug || 'onzemestre'}.${extension}`
 }

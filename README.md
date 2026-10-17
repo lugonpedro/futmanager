@@ -1,4 +1,4 @@
-# futmanager
+# onzemestre
 
 Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Nome provisório.
 

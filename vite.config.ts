@@ -13,8 +13,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'futmanager',
-        short_name: 'futmanager',
+        name: 'onzemestre',
+        short_name: 'onzemestre',
         description: 'Gerencie seu time rumo à primeira divisão.',
         lang: 'pt-BR',
         start_url: '/',
