@@ -1,7 +1,11 @@
 import { supabase } from './client.ts'
+import { PASS_PRICE_CENTS } from './mercadopago.ts'
 
-/** What the season pass costs; the price itself is set in Stripe, keep both in step. */
-export const PASS_PRICE = 'R$\u00a05,00'
+/** What the season pass costs, as the screen shows it. */
+export const PASS_PRICE = (PASS_PRICE_CENTS / 100).toLocaleString('pt-BR', {
+  style: 'currency',
+  currency: 'BRL',
+})
 
 function client() {
   if (!supabase) throw new Error('O jogo online não está disponível nesta versão.')
@@ -20,7 +24,7 @@ export async function hasPass(userId: string, seasonId: number): Promise<boolean
   return Boolean(data)
 }
 
-/** Opens Stripe's payment page for the pass of the running season. */
+/** Opens Mercado Pago's payment page for the pass of the running season. */
 export async function buyPass(): Promise<void> {
   const { data, error } = await client().functions.invoke('fantasy-pass')
   if (error) {

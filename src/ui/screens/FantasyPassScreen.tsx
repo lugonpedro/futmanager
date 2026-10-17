@@ -16,11 +16,12 @@ import { Page } from './FantasyLeagueScreen.tsx'
 const POLL_MS = 3000
 const POLLS = 20
 
-/** The season pass: what it gives, and the way to Stripe's payment page. */
+/** The season pass: what it gives, and the way to Mercado Pago's payment page. */
 export function FantasyPassScreen() {
   const { ready, user } = useAccountStore()
   const [params] = useSearchParams()
-  const paying = params.get('pagamento') === 'ok'
+  // Pix may come back still pending; both wait for the pass to show up.
+  const paying = ['ok', 'pendente'].includes(params.get('pagamento') ?? '')
   const [season, setSeason] = useState<FantasySeason | null>()
   const [owned, setOwned] = useState<boolean>()
   const [failed, setFailed] = useState(false)
@@ -37,7 +38,7 @@ export function FantasyPassScreen() {
     }
   }, [])
 
-  // Back from paying, the pass shows up once Stripe tells the server; look a few times.
+  // Back from paying, the pass shows up once Mercado Pago tells the server; look a few times.
   useEffect(() => {
     if (!season || !user) return
     let live = true
@@ -137,8 +138,8 @@ export function FantasyPassScreen() {
             )}
 
             <p className="text-xs text-muted-foreground">
-              O pagamento é feito na página do Stripe; o jogo nunca vê os dados do seu cartão. Para
-              pedir reembolso,{' '}
+              O pagamento é feito na página do Mercado Pago; o jogo nunca vê os dados do seu cartão.
+              Para pedir reembolso,{' '}
               <a href={CONTACT_URL} className="underline underline-offset-2">
                 fale com a gente
               </a>

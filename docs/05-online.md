@@ -157,31 +157,32 @@ Cada rodada ocupa cerca de 80 KB (45 KB de partidas e 34 KB de mercado); o mundo
 
 ## O6: passe da temporada
 
-Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e por aceitar Pix no Brasil.
+Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e por aceitar Pix no Brasil. Trocado em 17/10/2026 pelo **Mercado Pago** (Checkout Pro), porque o Stripe passou a pedir CNPJ e o Mercado Pago aceita conta no CPF; a comparação está em `11-gateway-pagamento.md`, na pasta de pesquisa do projeto. Os passes já pagos pelo Stripe continuam valendo (`provider = 'stripe'`).
 
 - **Tela do passe** (`/fantasia/passe`): o que o passe dá, o preço (R$ 5,00) e o botão "Comprar passe". No card "Ligas", quem não tem o passe vê o aviso com o link para essa tela no lugar do campo de criar liga. Entrar nas ligas dos amigos continua grátis.
-- **Compra**: a função `fantasy-pass` confere a conta e a temporada aberta e abre uma página de pagamento do Stripe (Checkout) com o preço cadastrado lá. O pagamento acontece todo no Stripe; o jogo nunca vê dados de cartão.
-- **Confirmação**: o Stripe chama a função `stripe-webhook`, que confere a assinatura do aviso (HMAC com o segredo do webhook, recusando avisos com mais de 5 minutos) e grava o passe em `fantasy_passes`. Avisos repetidos não duplicam nada. Com Pix, o Checkout pode terminar antes do pagamento; o passe sai no aviso `checkout.session.async_payment_succeeded`.
-- **Volta do pagamento**: a tela do passe procura o passe por um minuto e mostra quando ele chega.
+- **Compra**: a função `fantasy-pass` confere a conta e a temporada aberta e cria uma preferência no Mercado Pago com o preço de `PASS_PRICE_CENTS` (`src/cloud/mercadopago.ts`), sem Boleto e com cartão só à vista. O pagamento acontece todo no Mercado Pago; o jogo nunca vê dados de cartão.
+- **Confirmação**: o Mercado Pago chama a função `mercadopago-webhook` só com o id do pagamento. A função confere a assinatura `x-signature` quando ela vem, lê o pagamento na API com o token e grava o passe em `fantasy_passes` quando o status é `approved`. Avisos repetidos não duplicam nada.
+- **Volta do pagamento**: a tela do passe procura o passe por um minuto e mostra quando ele chega, tanto com `?pagamento=ok` quanto com `?pagamento=pendente` (Pix ainda sendo confirmado).
 - **Criar liga** agora exige o passe da temporada aberta (`create_fantasy_league` confere `fantasy_passes`).
 - **Cortesia**: dá para liberar o passe sem pagar (testes, amigos), por uma temporada ou para sempre; veja "Passe de cortesia e vitalício" abaixo.
-- **Reembolso**: por enquanto à mão: reembolsar no painel do Stripe e apagar a linha em `fantasy_passes`.
-- **Política de privacidade** atualizada com os times, as ligas (os membros veem apelido, escudo e pontos) e o pagamento pelo Stripe.
+- **Reembolso**: por enquanto à mão: devolver o pagamento no painel do Mercado Pago e apagar a linha em `fantasy_passes`.
+- **Política de privacidade** atualizada com os times, as ligas (os membros veem apelido, escudo e pontos) e o pagamento pelo Mercado Pago.
 - **Entrar com o Google** saiu da tela de conta por enquanto; o login fica só pelo link no e-mail. (Desde 17/10/2026 o e-mail manda um código em vez do link; veja `08-login-por-codigo.md`.)
 
-### Para ligar no Stripe (uma vez)
+### Para ligar no Mercado Pago (uma vez)
 
-1. Criar a conta no Stripe e começar no **modo de teste**.
-2. Em Produtos, criar "Passe da temporada" com um preço único de R$ 5,00 em BRL e copiar o id do preço (`price_...`). Se mudar o valor, mudar também `PASS_PRICE` em `src/cloud/pass.ts`.
-3. Em Configurações → Formas de pagamento, ligar o **Pix** (e o cartão, que já vem ligado).
-4. Em Desenvolvedores → Webhooks, criar um destino para `https://<ref>.supabase.co/functions/v1/stripe-webhook` com os eventos `checkout.session.completed` e `checkout.session.async_payment_succeeded`, e copiar o segredo de assinatura (`whsec_...`).
-5. Guardar os segredos no Supabase:
+1. Na conta do Mercado Pago (pode ser no CPF), cadastrar uma **chave Pix**; sem ela o Pix não aparece no checkout.
+2. Em [Suas integrações](https://www.mercadopago.com.br/developers/panel/app), criar uma aplicação do tipo **Checkout Pro** e copiar o **Access Token** das credenciais de teste (`TEST-...`).
+3. Na aplicação, em Webhooks, cadastrar `https://<ref>.supabase.co/functions/v1/mercadopago-webhook` com o evento **Pagamentos** e copiar a **assinatura secreta**.
+4. Guardar os segredos no Supabase:
    ```sh
-   supabase secrets set STRIPE_SECRET_KEY=sk_test_... STRIPE_PASS_PRICE_ID=price_... \
-     STRIPE_WEBHOOK_SECRET=whsec_... SITE_URL=https://<endereço do jogo>
+   supabase secrets set MP_ACCESS_TOKEN=TEST-... MP_WEBHOOK_SECRET=... SITE_URL=https://onzemestre.com
    ```
-6. Aplicar a migração e publicar as funções: `supabase db push` e `supabase functions deploy fantasy-pass stripe-webhook`.
-7. Testar com o cartão `4242 4242 4242 4242`, qualquer validade futura e qualquer CVC. Depois de conferir, repetir os passos 2, 4 e 5 no modo de produção, com as chaves `sk_live_...`.
+5. Aplicar a migração e publicar as funções: `supabase db push` e `supabase functions deploy fantasy-pass mercadopago-webhook`.
+6. Testar com um comprador de teste e os cartões de teste do Mercado Pago. Depois de conferir, trocar `MP_ACCESS_TOKEN` pelo token de produção (`APP_USR-...`) e cadastrar o webhook também no modo de produção.
+7. Desligar o Stripe: `supabase functions delete stripe-webhook` e `supabase secrets unset STRIPE_SECRET_KEY STRIPE_PASS_PRICE_ID STRIPE_WEBHOOK_SECRET`.
+
+Se mudar o preço, mudar só `PASS_PRICE_CENTS`; a tela e o checkout leem dali.
 
 ### Passe de cortesia e vitalício
 

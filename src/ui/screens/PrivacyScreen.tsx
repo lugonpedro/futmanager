@@ -42,7 +42,7 @@ export function PrivacyScreen() {
           </li>
           <li>
             Se comprar o passe da temporada: a data, o valor e o código do pagamento. Os dados do
-            cartão ou do Pix ficam só com o Stripe, que processa o pagamento.
+            cartão ou do Pix ficam só com o Mercado Pago, que processa o pagamento.
           </li>
           <li>
             Se ligar os avisos: o endereço que o navegador cria para receber notificações e quais
@@ -68,8 +68,8 @@ export function PrivacyScreen() {
       <Section title="Onde ficam">
         <p>
           A conta e as carreiras ficam no Supabase, o serviço de login e banco de dados que o
-          onzemestre usa. Os pagamentos passam pelo Stripe. Os servidores dos dois podem ficar fora
-          do Brasil.
+          onzemestre usa. Os pagamentos passam pelo Mercado Pago. Os servidores dos dois podem ficar
+          fora do Brasil.
         </p>
       </Section>
 
