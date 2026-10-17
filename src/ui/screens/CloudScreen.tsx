@@ -32,7 +32,7 @@ const PLANS: Plan[] = [
     title: 'Conta grátis',
     summary: 'Uma carreira que vai com você para qualquer aparelho.',
     points: [
-      'Entre com o mesmo e-mail no celular e no computador e continue de onde parou.',
+      'Entre com a mesma conta do Google no celular e no computador e continue de onde parou.',
       'O jogo salva na nuvem sozinho enquanto você joga.',
       'Outras carreiras continuam só neste aparelho.',
     ],
@@ -106,7 +106,7 @@ export function CloudScreen() {
         </CardHeader>
         <CardContent>
           <ol className="flex list-decimal flex-col gap-2 pl-5 text-sm leading-relaxed">
-            <li>Entre com um link no e-mail. Não tem senha.</li>
+            <li>Entre com a sua conta do Google. Não precisa criar senha.</li>
             <li>
               A carreira jogada por último vai para a nuvem. No menu, ela aparece com o ícone de
               nuvem; as outras aparecem como &quot;só neste aparelho&quot;.

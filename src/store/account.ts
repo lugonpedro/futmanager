@@ -191,16 +191,7 @@ function flushPushes() {
   return Promise.all(slots.map(push))
 }
 
-/** E-mails a sign-in link that brings the player back to the account page. */
-export async function sendMagicLink(email: string) {
-  const { error } = await client().auth.signInWithOtp({
-    email,
-    options: { emailRedirectTo: `${location.origin}/conta` },
-  })
-  if (error) throw error
-}
-
-/** Not offered on the account page for now; kept for when Google sign-in is set up. */
+/** Sends the player to Google, who brings them back to the account page signed in. */
 export async function signInWithGoogle() {
   const { error } = await client().auth.signInWithOAuth({
     provider: 'google',
@@ -235,7 +226,7 @@ export async function deleteAccount() {
   await client().auth.signOut({ scope: 'local' })
 }
 
-/** Start-up: picks up the saved session (or one coming back from a sign-in link) and syncs. */
+/** Start-up: picks up the saved session (or one coming back from Google) and syncs. */
 export function initAccount() {
   if (!supabase) {
     set({ ready: true })

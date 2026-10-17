@@ -28,8 +28,8 @@ export function PrivacyScreen() {
       <Section title="O que a conta guarda">
         <ul className="flex list-disc flex-col gap-1 pl-5">
           <li>
-            Seu e-mail, para você entrar. Se entrar com o Google, também o nome e a foto que o
-            Google envia.
+            O e-mail, o nome e a foto que o Google envia quando você entra com a sua conta do
+            Google.
           </li>
           <li>O apelido e o escudo que você escolher no perfil.</li>
           <li>
