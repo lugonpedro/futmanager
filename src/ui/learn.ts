@@ -267,7 +267,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
         Object.values(INDIVIDUAL_FOCUS_NAMES).map((n) => n.toLowerCase()),
         'ou',
       )}) e uma intensidade.`,
-      'As setas no seletor mostram os focos que mais sobem o geral de cada jogador; o recomendado é o que sobe mais. O filtro "Podem treinar", na lista do elenco, mostra quem pode ter plano.',
+      'As setas no seletor mostram os focos que mais sobem o geral de cada jogador; o recomendado é o que sobe mais. O cartão Treino põe todos no recomendado e muda a intensidade de todos de uma vez. Para escolher um por um, use o filtro "Escolher treino" na lista do elenco ou a carta do jogador.',
       `${INTENSITY_NAMES.leve.name}, ${INTENSITY_NAMES.normal.name.toLowerCase()} e ${INTENSITY_NAMES.intenso.name.toLowerCase()} dão +${num(TRAINING.perSeason.leve)}, +${num(TRAINING.perSeason.normal)} e +${num(TRAINING.perSeason.intenso)} pontos por temporada nos atributos do plano. O intenso recupera ${percent(TRAINING.recovery.intenso)} mais devagar; o leve, ${percent(TRAINING.recovery.leve)} mais rápido.`,
     ],
   },

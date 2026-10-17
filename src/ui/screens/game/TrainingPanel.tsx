@@ -1,30 +1,25 @@
+import { ListChecksIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
 import {
   POSITIONS,
   type Player,
   type SquadFocus,
   type TrainingIntensity,
-  type TrainingPlan,
 } from '../../../engine/model/types.ts'
-import {
-  careerGames,
-  potentialRange,
-  setRecommendedPlans,
-} from '../../../engine/progression/progression.ts'
+import { setRecommendedPlans } from '../../../engine/progression/progression.ts'
 import {
   setSquadFocus,
+  setSquadIntensity,
   setSquadPlans,
-  setTrainingPlan,
+  squadIntensity,
   TRAINING,
   trainingBlock,
 } from '../../../engine/progression/training.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
-import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { LearnLink } from '../../components/LearnLink.tsx'
-import { INTENSITY_NAMES, SQUAD_FOCUS_NAMES, signedChange } from '../../format.ts'
+import { INTENSITY_NAMES, SQUAD_FOCUS_NAMES } from '../../format.ts'
 
 const SQUAD_FOCUSES = Object.keys(SQUAD_FOCUS_NAMES) as SquadFocus[]
 const INTENSITIES = Object.keys(INTENSITY_NAMES) as TrainingIntensity[]
@@ -35,18 +30,20 @@ const byPosition = (a: Player, b: Player) =>
   b.overall - a.overall ||
   a.name.localeCompare(b.name, 'pt-BR')
 
-/** The squad's training focus, and a plan of his own for every player who can still grow. */
-export function TrainingPanel() {
+/**
+ * What the whole squad trains: the focus, and the individual plans all at
+ * once. Each player's own plan is picked in the squad list or on his card.
+ */
+export function TrainingPanel(props: { onPickOneByOne: () => void }) {
   const game = useGame()
   const setGame = useGameStore((s) => s.setGame)
-  const { world, userClubId, training, season } = game
+  const { world, userClubId, training } = game
   const squad = world.clubs[userClubId].playerIds.map((id) => world.players[id]).sort(byPosition)
   const trainable = squad.filter((p) => !trainingBlock(p))
   const atCeiling = squad.filter((p) => trainingBlock(p) === 'potencial')
   const tooOld = squad.filter((p) => trainingBlock(p) === 'idade')
   const planned = trainable.filter((p) => training.individual[p.id]).length
-  const setPlan = (playerId: string, plan: TrainingPlan | undefined) =>
-    setGame(setTrainingPlan(game, playerId, plan))
+  const intensity = squadIntensity(training)
 
   return (
     <Card className="gap-3">
@@ -69,52 +66,58 @@ export function TrainingPanel() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 className="text-sm font-semibold">
-              Treino individual ({planned} de {trainable.length})
-            </h3>
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setGame(setRecommendedPlans(game))}
-              >
-                Todos no recomendado
-              </Button>
-              {planned > 0 && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setGame(setSquadPlans(game, undefined))}
-                >
-                  Tirar todos
-                </Button>
-              )}
-            </div>
-          </div>
+        <div className="flex flex-col gap-3">
+          <h3 className="text-sm font-semibold">
+            Treino individual ({planned} de {trainable.length})
+          </h3>
           <p className="text-sm text-muted-foreground">
             Quem ainda não chegou ao potencial e tem até {TRAINING.individualUntil} anos pode ter um
-            plano próprio. O geral trabalha o que mais conta para a posição; os outros puxam uma
-            qualidade. As setas mostram o que mais sobe o geral de cada um, e o recomendado é o que
-            sobe mais. No intenso ele cresce mais rápido, mas chega cansado aos jogos.
+            plano próprio. O recomendado é o que mais sobe o geral de cada um. No intenso ele cresce
+            mais rápido, mas chega cansado aos jogos.
           </p>
 
           {trainable.length === 0 ? (
             <p className="text-sm">Ninguém no elenco pode mais evoluir com treino individual.</p>
           ) : (
-            <ul className="flex flex-col divide-y">
-              {trainable.map((p) => (
-                <PlanRow
-                  key={p.id}
-                  player={p}
-                  potential={potentialRange(p, careerGames(p, season.appearances)).high}
-                  growth={game.growth?.overall[p.id]}
-                  plan={training.individual[p.id]}
-                  onChange={(plan) => setPlan(p.id, plan)}
+            <>
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setGame(setRecommendedPlans(game))}
+                >
+                  Todos no recomendado
+                </Button>
+                {planned > 0 && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setGame(setSquadPlans(game, undefined))}
+                  >
+                    Tirar todos
+                  </Button>
+                )}
+                <Button variant="outline" size="sm" onClick={props.onPickOneByOne}>
+                  <ListChecksIcon />
+                  Escolher um por um
+                </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-sm text-muted-foreground">Intensidade de todos</span>
+                <Choices
+                  ariaLabel="Intensidade de todos"
+                  options={INTENSITIES}
+                  value={intensity}
+                  disabled={planned === 0}
+                  onChange={(next) => setGame(setSquadIntensity(game, next))}
+                  label={(i) => INTENSITY_NAMES[i].name}
+                  title={(i) => INTENSITY_NAMES[i].detail}
                 />
-              ))}
-            </ul>
+                {planned > 0 && !intensity && (
+                  <span className="text-xs text-muted-foreground">intensidades variadas</span>
+                )}
+              </div>
+            </>
           )}
 
           {(atCeiling.length > 0 || tooOld.length > 0) && (
@@ -138,64 +141,5 @@ export function TrainingPanel() {
         </div>
       </CardContent>
     </Card>
-  )
-}
-
-/** One player's line: where he is against his potential, and his plan. */
-function PlanRow(props: {
-  player: Player
-  potential: number
-  growth: number | undefined
-  plan: TrainingPlan | undefined
-  onChange: (plan: TrainingPlan | undefined) => void
-}) {
-  const { player, potential, growth, plan, onChange } = props
-  const reached = Math.round((100 * player.overall) / Math.max(1, potential))
-  return (
-    <li className="flex flex-wrap items-center gap-x-3 gap-y-2 py-2">
-      <div className="flex min-w-48 flex-1 flex-col gap-1">
-        <span className="text-sm">
-          <span className="text-muted-foreground">{player.position}</span> {player.name}{' '}
-          <span className="text-xs text-muted-foreground">{player.age} anos</span>
-        </span>
-        <div className="flex items-center gap-2" title={`Geral ${player.overall} de ${potential}`}>
-          <div className="h-1.5 w-28 overflow-hidden rounded-full bg-muted">
-            <div
-              className={cn('h-full rounded-full', plan ? 'bg-primary' : 'bg-muted-foreground/50')}
-              style={{ width: `${Math.min(100, reached)}%` }}
-            />
-          </div>
-          <span className="text-xs whitespace-nowrap">
-            <span className="font-semibold">{player.overall}</span>
-            <span className="text-muted-foreground">/{potential}</span>
-            {growth !== undefined && growth !== 0 && (
-              <span
-                className={cn(
-                  'ml-1',
-                  growth > 0
-                    ? 'text-green-700 dark:text-green-400'
-                    : 'text-red-600 dark:text-red-400',
-                )}
-                title="No último mês"
-              >
-                {signedChange(growth)}
-              </span>
-            )}
-          </span>
-        </div>
-      </div>
-      <div className="flex items-center gap-2">
-        <FocusSelect player={player} plan={plan} onChange={onChange} />
-        <Choices
-          ariaLabel={`Intensidade de ${player.name}`}
-          options={INTENSITIES}
-          value={plan?.intensity}
-          disabled={!plan}
-          onChange={(intensity) => plan && onChange({ ...plan, intensity })}
-          label={(intensity) => INTENSITY_NAMES[intensity].name}
-          title={(intensity) => INTENSITY_NAMES[intensity].detail}
-        />
-      </div>
-    </li>
   )
 }
