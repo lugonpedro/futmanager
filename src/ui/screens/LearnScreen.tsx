@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import {
   Table,
   TableBody,
@@ -23,6 +24,7 @@ import {
   type LearnAnchor,
   type LearnContent,
 } from '../learn.ts'
+import { shotPath, type LearnShot } from '../learnShots.ts'
 
 const TABS = {
   carreira: { label: 'Carreira', guide: CAREER_GUIDE, sections: CAREER_SECTIONS },
@@ -126,7 +128,7 @@ function Guide(props: { tab: Tab }) {
 }
 
 function Section(props: { id: string; content: LearnContent }) {
-  const { title, items, table } = props.content
+  const { title, items, table, shot } = props.content
   return (
     <Card id={props.id} className="scroll-mt-4 gap-3">
       <CardHeader>
@@ -135,6 +137,7 @@ function Section(props: { id: string; content: LearnContent }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
+        {shot && <Shot shot={shot} title={title} />}
         <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed">
           {items.map((item) => (
             <li key={item}>{item}</li>
@@ -164,5 +167,50 @@ function Section(props: { id: string; content: LearnContent }) {
         )}
       </CardContent>
     </Card>
+  )
+}
+
+/** Phones get the phone shot; anything wider, the computer one. */
+const WIDE = '(min-width: 640px)'
+
+function ShotPicture(props: { shot: LearnShot; alt: string; className?: string; lazy?: boolean }) {
+  return (
+    <picture>
+      <source media={WIDE} srcSet={shotPath(props.shot, 'computador')} />
+      <img
+        src={shotPath(props.shot, 'celular')}
+        alt={props.alt}
+        loading={props.lazy ? 'lazy' : undefined}
+        decoding="async"
+        className={props.className}
+      />
+    </picture>
+  )
+}
+
+/** A screenshot of the screen the section is about; tapping it opens it full size. */
+function Shot(props: { shot: LearnShot; title: string }) {
+  const alt = `Tela do jogo: ${props.title}`
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          aria-label={`Ampliar o print: ${props.title}`}
+          className="cursor-zoom-in overflow-hidden rounded-md border"
+        >
+          <ShotPicture
+            shot={props.shot}
+            alt={alt}
+            lazy
+            className="max-h-80 w-full object-cover object-top"
+          />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="max-h-[94vh] max-w-[96vw] overflow-y-auto p-2 pt-10 sm:max-w-5xl">
+        <DialogTitle className="sr-only">{props.title}</DialogTitle>
+        <ShotPicture shot={props.shot} alt={alt} className="w-full rounded-md" />
+      </DialogContent>
+    </Dialog>
   )
 }

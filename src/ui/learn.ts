@@ -9,6 +9,7 @@ import { BENCH_SIZE, FORMATIONS } from '../engine/match/lineup.ts'
 import { BALANCE, MAX_SUBSTITUTIONS, RESULT_POINTS } from '../engine/match/simulate.ts'
 import { FAMILIARITY, FORM_EFFECT, POSTURE_EFFECT, STYLE_POINTS } from '../engine/match/strength.ts'
 import { ROLE_SECTORS } from '../engine/match/roles.ts'
+import type { LearnShot } from './learnShots.ts'
 import type { Formation, Position, TacticalRole } from '../engine/model/types.ts'
 import { ATTRIBUTES, FACES, KEEPER_FACES, STYLE_PLUS_FROM } from '../engine/player/attributes.ts'
 import { PROGRESSION } from '../engine/progression/progression.ts'
@@ -87,7 +88,8 @@ export type LearnAnchor =
 
 export type LearnTable = { head: string[]; rows: string[][] }
 
-export type LearnContent = { title: string; items: string[]; table?: LearnTable }
+/** A section: its title, the points it makes, maybe a table and a screenshot of its screen. */
+export type LearnContent = { title: string; items: string[]; table?: LearnTable; shot?: LearnShot }
 
 export const learnPath = ({ tab, section }: LearnAnchor) =>
   `/aprenda/${tab}${section ? `#${section}` : ''}`
@@ -148,6 +150,7 @@ const byPosition = (values: Record<Position, number>, skipZero = false) =>
 export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   comecando: {
     title: 'Começando',
+    shot: 'resumo',
     items: [
       'Você escolhe um clube num mundo gerado, com times e jogadores fictícios, ou no pacote Brasileirão 2026. No editor dá para mudar os nomes ou importar outro pacote.',
       `O mundo tem a ${divisionName(1)} e a ${divisionName(2)}, com ${CLUBS_PER_DIVISION} clubes cada. Os elencos começam com ${squadSize} jogadores.`,
@@ -156,6 +159,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   calendario: {
     title: 'Calendário da temporada',
+    shot: 'calendario',
     items: [
       'A temporada vai de janeiro a dezembro. Janeiro é a pré-temporada.',
       `O campeonato tem ${leagueRounds} rodadas, em turno e returno, aos sábados de ${monthName(dates.league[0])} a ${monthName(dates.league.at(-1)!)}. Os primeiros sábados de ${listText(
@@ -164,12 +168,12 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       )} ficam livres para as datas FIFA, e entram rodadas no meio da semana onde for preciso.`,
       `A ${CUP_NAME} é jogada na quarta-feira depois das rodadas ${listText(CUP_ROUNDS)}.`,
       'Salários e patrocínio caem no dia 1º de cada mês.',
-      'Avançar até o próximo jogo para no dia em que chega uma proposta por um jogador seu, para você responder antes de ela vencer. "Simular jogo" joga a partida sem assistir; "Simular até o fim da temporada" vai direto ao fim, sem parar.',
-      'No Calendário, tocar num dia simula até ele: os seus jogos antes da data são simulados, o jogo do próprio dia fica para você jogar, e a simulação para antes se chegar uma proposta por um jogador seu.',
+      'No Calendário, tocar num dia simula até ele; o jogo do próprio dia fica para você jogar. "Avançar até o próximo jogo" e a simulação até uma data param quando chega uma proposta por um jogador seu. "Simular até o fim da temporada" não para.',
     ],
   },
   tabela: {
     title: 'Tabela, acesso e premiação',
+    shot: 'tabela',
     items: [
       `Vitória vale ${POINTS.win} pontos, empate ${POINTS.draw}.`,
       'Desempate como no Brasileirão: pontos, vitórias, saldo de gols, gols marcados, confronto direto, menos cartões vermelhos e menos amarelos.',
@@ -180,6 +184,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   copa: {
     title: CUP_NAME,
+    shot: 'copa',
     items: [
       'Todos os clubes das duas séries entram, em mata-mata de jogo único.',
       'Os clubes de menor reputação jogam uma primeira fase; os maiores esperam por eles.',
@@ -190,6 +195,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   diretoria: {
     title: 'Diretoria e emprego',
+    shot: 'diretoria',
     items: [
       'Objetivo: a diretoria espera que você termine duas posições abaixo de onde a reputação do clube o coloca, e nunca pior do que escapar do rebaixamento.',
       `A confiança vai de 0 a 100 e começa em ${BOARD.startConfidence}. Cada vitória no campeonato dá +${BOARD.win}, cada derrota ${BOARD.loss}.`,
@@ -201,10 +207,11 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   tatica: {
     title: 'Escalação e tática',
+    shot: 'tatica',
     items: [
       `${formations.length} formações: ${listText(formations)}. Cada vaga da formação tem uma função, que muda o quanto o jogador ajuda na defesa, no meio e no ataque: ${listText(roleList)}.`,
-      'O volante protege a defesa e chuta pouco; o meia ofensivo e os pontas reforçam o ataque. Na ficha do jogador aparece a função em que ele rende mais, e no campo a cor da função avisa se ele serve para ela.',
-      `Posições: ${positionList}. Fora da posição o jogador rende menos: ${Math.round(FAMILIARITY.secondary * 100)}% numa posição secundária dele e ${Math.round(FAMILIARITY.other * 100)}% em qualquer outra. Jogador de linha no gol é desastre. A cor do nome avisa: verde, amarelo ou vermelho.`,
+      'O volante protege a defesa e chuta pouco; o meia ofensivo e os pontas reforçam o ataque. A ficha do jogador mostra a função em que ele rende mais.',
+      `Posições: ${positionList}. Fora da posição o jogador rende menos: ${Math.round(FAMILIARITY.secondary * 100)}% numa posição secundária dele e ${Math.round(FAMILIARITY.other * 100)}% em qualquer outra. Jogador de linha no gol é desastre. No campo, a cor da sigla avisa: verde, amarelo ou vermelho.`,
       `Postura defensiva: ${percent(POSTURE_EFFECT.defensiva.defense)} mais defesa, ${percent(POSTURE_EFFECT.defensiva.attack)} menos ataque, e o time cansa menos. Ofensiva: ${percent(POSTURE_EFFECT.ofensiva.attack)} mais ataque, ${percent(POSTURE_EFFECT.ofensiva.defense)} menos defesa, e cansa ${percent(POSTURE_EFFECT.ofensiva.tiring)} mais.`,
       `Até ${MAX_SUBSTITUTIONS} substituições, com ${BENCH_SIZE} no banco. Durante o jogo dá para mudar a formação, a postura e trocar jogadores de posição sem gastar substituição.`,
       `O mandante joga com vantagem. Atacantes rápidos contra zagueiros lentos rendem mais, principalmente no contra-ataque. Cerca de ${Math.round(BALANCE.aerialShare * 100)}% das chances vêm pelo alto, em cruzamentos, escanteios e faltas, e aí o cabeceio conta.`,
@@ -213,6 +220,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   energia: {
     title: 'Energia, forma e notas',
+    shot: 'energia',
     items: [
       `A energia vai de 0 a 100 e cai durante o jogo, mais rápido em quem tem pouca resistência. Um jogador sem energia rende até 20% menos. Depois da partida ela volta ${RECOVERY_PER_DAY} pontos por dia, e até o dobro em quem tem muita resistência.`,
       `A nota de cada jogo vai de 3 a 10. Começa em 6; vitória dá +${num(RESULT_POINTS.win)}, empate +${num(RESULT_POINTS.draw)} e derrota ${num(RESULT_POINTS.loss)}. Gols, defesas e cartões mexem nela, e goleiro e defensores ganham por não sofrer gol e perdem a cada gol sofrido.`,
@@ -230,6 +238,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   jogadores: {
     title: 'Jogadores e cartas',
+    shot: 'jogadores',
     items: [
       `A carta mostra seis números. Jogador de linha: ${listText(FACES.map((f) => FACE_NAMES[f].name))}. Goleiro: ${listText(KEEPER_FACES.map((f) => FACE_NAMES[f].name))}. Cada um é a média de alguns dos ${ATTRIBUTES.length} atributos, que aparecem nos detalhes do jogador.`,
       'O geral depende da posição: num zagueiro conta quase só defesa e físico; num atacante, finalização, ritmo e drible.',
@@ -251,18 +260,20 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   treino: {
     title: 'Treino',
+    shot: 'treino',
     items: [
       `Foco do elenco: ${SQUAD_FOCUS_NAMES.fisico.name.toLowerCase()}, ${SQUAD_FOCUS_NAMES.tecnico.name.toLowerCase()} ou ${SQUAD_FOCUS_NAMES.tatico.name.toLowerCase()} fazem o grupo escolhido crescer ${percent(TRAINING.groupBoost)} mais rápido. ${SQUAD_FOCUS_NAMES.descanso.name} cresce ${percent(TRAINING.restGrowth)} menos, recupera ${percent(TRAINING.restRecovery)} mais rápido e se machuca menos. ${SQUAD_FOCUS_NAMES.equilibrado.name} não acelera nada.`,
       `Plano individual, para jogadores de até ${TRAINING.individualUntil} anos que ainda crescem: um foco (${listText(
         Object.values(INDIVIDUAL_FOCUS_NAMES).map((n) => n.toLowerCase()),
         'ou',
       )}) e uma intensidade.`,
-      'As setas no seletor do treino mostram os focos que mais sobem o geral de cada jogador, pela posição e pelos atributos que ainda têm espaço para crescer; o recomendado é o que sobe mais. Na lista do elenco, a coluna Treino e o filtro "Podem treinar" mostram quem pode ter plano.',
+      'As setas no seletor mostram os focos que mais sobem o geral de cada jogador; o recomendado é o que sobe mais. O filtro "Podem treinar", na lista do elenco, mostra quem pode ter plano.',
       `${INTENSITY_NAMES.leve.name}, ${INTENSITY_NAMES.normal.name.toLowerCase()} e ${INTENSITY_NAMES.intenso.name.toLowerCase()} dão +${num(TRAINING.perSeason.leve)}, +${num(TRAINING.perSeason.normal)} e +${num(TRAINING.perSeason.intenso)} pontos por temporada nos atributos do plano. O intenso recupera ${percent(TRAINING.recovery.intenso)} mais devagar; o leve, ${percent(TRAINING.recovery.leve)} mais rápido.`,
     ],
   },
   mercado: {
     title: 'Mercado, contratos e empréstimos',
+    shot: 'mercado',
     items: [
       `Janelas de transferência: ${listText(windows.map((w) => `o mês de ${monthName(w.from)}`))}. Jogador sem clube pode ser contratado a qualquer momento.`,
       `O elenco precisa ter de ${MARKET.minSquad} a ${MARKET.maxSquad} jogadores, com pelo menos ${MARKET.minKeepers} goleiros.`,
@@ -275,6 +286,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   },
   financas: {
     title: 'Finanças e patrocínio',
+    shot: 'financas',
     items: [
       'Entram bilheteria nos jogos em casa, patrocínio todo dia 1º, premiações e vendas. Saem salários todo dia 1º e contratações.',
       'O público depende da reputação, da posição na tabela e do preço do ingresso. O jogo mostra um preço justo para o tamanho do clube: acima dele o público cai rápido, abaixo cresce até lotar.',
