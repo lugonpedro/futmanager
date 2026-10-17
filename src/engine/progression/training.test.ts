@@ -21,8 +21,10 @@ import {
   NO_TRAINING,
   recoveryRate,
   setSquadFocus,
+  setSquadIntensity,
   setSquadPlans,
   setTrainingPlan,
+  squadIntensity,
   TRAINING,
   trainingBlock,
 } from './training.ts'
@@ -60,6 +62,23 @@ describe('training', () => {
     expect(setTrainingPlan(game, other, FIRST_PLAN)).toBe(game)
     expect(Object.keys(setSquadPlans(game, FIRST_PLAN).training.individual)).toEqual(trainable)
     expect(setSquadPlans(next, undefined).training.individual).toEqual({})
+  })
+
+  it('sets one intensity for every plan, and tells when they share one', () => {
+    expect(squadIntensity(game.training)).toBeUndefined()
+    const [a, b] = trainable
+    const planned = setTrainingPlan(setTrainingPlan(game, a, FIRST_PLAN), b, {
+      focus: 'passe',
+      intensity: 'leve',
+    })
+    expect(squadIntensity(planned.training)).toBeUndefined()
+    const hard = setSquadIntensity(planned, 'intenso')
+    expect(hard.training.individual).toEqual({
+      [a]: { focus: 'geral', intensity: 'intenso' },
+      [b]: { focus: 'passe', intensity: 'intenso' },
+    })
+    expect(squadIntensity(hard.training)).toBe('intenso')
+    expect(setSquadIntensity(game, 'leve').training.individual).toEqual({})
   })
 
   it('turns away players at their ceiling or past 30', () => {

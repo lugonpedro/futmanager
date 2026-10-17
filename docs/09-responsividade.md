@@ -91,7 +91,9 @@ As 18 linhas com barra e botões saem. O que se perde:
 
 Na carta (`PlayerSheet.tsx`), o item "Treino", que hoje só mostra texto, ganha o seletor de foco (`FocusSelect`) e os três botões de intensidade, para quem quer, por exemplo, deixar só um jogador no intenso.
 
-No celular, o botão "Podem treinar" passa a se chamar "Escolher treino" quando ligado, para ficar claro que a lista mudou de modo.
+O botão "Podem treinar" passa a se chamar "Escolher treino", para ficar claro que no celular ele troca os botões de vender e renovar pelo seletor de treino.
+
+**Como ficou (PR 2)**: como proposto. O "+1 no último mês" aparece na coluna Geral em qualquer tela, e a página Aprenda explica onde escolher o treino de cada um.
 
 **Código**:
 

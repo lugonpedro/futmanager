@@ -119,6 +119,20 @@ export function setSquadPlans(game: GameState, plan: TrainingPlan | undefined): 
   return { ...game, training: { ...game.training, individual } }
 }
 
+/** Every plan of the user's players at one intensity; who has no plan still has none. */
+export function setSquadIntensity(game: GameState, intensity: TrainingIntensity): GameState {
+  const individual = Object.fromEntries(
+    Object.entries(game.training.individual).map(([id, plan]) => [id, { ...plan, intensity }]),
+  )
+  return { ...game, training: { ...game.training, individual } }
+}
+
+/** The intensity all plans share, or undefined when there are none or they differ. */
+export function squadIntensity(training: Training): TrainingIntensity | undefined {
+  const intensities = new Set(Object.values(training.individual).map((p) => p.intensity))
+  return intensities.size === 1 ? [...intensities][0] : undefined
+}
+
 /** Plans of players who are no longer the user's, or who can no longer grow, dropped. */
 export function keepOwnFocus(game: GameState): GameState {
   const individual = Object.fromEntries(

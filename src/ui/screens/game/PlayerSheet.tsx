@@ -17,6 +17,7 @@ import {
   type Player,
   type Position,
   type TacticalRole,
+  type TrainingIntensity,
   type TrainingPlan,
 } from '../../../engine/model/types.ts'
 import { roleOf, ROLES_BY_POSITION } from '../../../engine/match/roles.ts'
@@ -33,6 +34,8 @@ import { recoveryRate, TRAINING, trainingBlock } from '../../../engine/progressi
 import { isOnLoan, LOAN } from '../../../engine/transfer/loans.ts'
 import { conditionOn, formOf, seasonRating } from '../../../engine/season/form.ts'
 import { leagueOf, leagueScorers } from '../../../engine/season/season.ts'
+import { Choices } from '../../components/Choices.tsx'
+import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { PlayerCard } from '../../components/PlayerCard.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import {
@@ -56,7 +59,8 @@ import {
 /**
  * A player's card in a side drawer: the card itself, how he is doing this
  * season, every attribute with a bar, past seasons and the contract. The
- * sell and renew actions show for the user's own players.
+ * sell and renew actions show for the user's own players, and so does his
+ * training plan when the caller can change it.
  */
 export function PlayerSheet(props: {
   game: GameState
@@ -67,6 +71,7 @@ export function PlayerSheet(props: {
   onSell?: () => void
   onRenew?: () => void
   onLoan?: () => void
+  onTrain?: (plan: TrainingPlan | undefined) => void
 }) {
   const { game, player, role, slot } = props
   const { world, season, market, userClubId } = game
@@ -169,11 +174,20 @@ export function PlayerSheet(props: {
           <Item label="Forma">
             <FormMark form={form} />
           </Item>
-          {own && (
-            <Item label="Treino">
-              <TrainingNote player={player} plan={game.training.individual[player.id]} />
-            </Item>
-          )}
+          {own &&
+            (props.onTrain && !trainingBlock(player) ? (
+              <Item label="Treino" wide>
+                <TrainingPicker
+                  player={player}
+                  plan={game.training.individual[player.id]}
+                  onChange={props.onTrain}
+                />
+              </Item>
+            ) : (
+              <Item label="Treino">
+                <TrainingNote player={player} plan={game.training.individual[player.id]} />
+              </Item>
+            ))}
           <Item label="Nota média">{rating?.toFixed(1) ?? '-'}</Item>
           <Item label="Jogos">{season.ratings[player.id]?.games ?? 0}</Item>
           <Item label="Gols na liga">{leagueGoals}</Item>
@@ -356,6 +370,31 @@ function Item(props: { label: string; children: ReactNode; wide?: boolean }) {
     <div className={cn('flex flex-col', props.wide && 'col-span-2')}>
       <dt className="text-xs text-muted-foreground">{props.label}</dt>
       <dd className="font-medium tabular-nums">{props.children}</dd>
+    </div>
+  )
+}
+
+const INTENSITIES = Object.keys(INTENSITY_NAMES) as TrainingIntensity[]
+
+/** His own plan, to change right on the card: what to work on and how hard. */
+function TrainingPicker(props: {
+  player: Player
+  plan: TrainingPlan | undefined
+  onChange: (plan: TrainingPlan | undefined) => void
+}) {
+  const { player, plan, onChange } = props
+  return (
+    <div className="mt-1 flex flex-wrap items-center gap-2 font-normal">
+      <FocusSelect player={player} plan={plan} onChange={onChange} />
+      <Choices
+        ariaLabel={`Intensidade de ${player.name}`}
+        options={INTENSITIES}
+        value={plan?.intensity}
+        disabled={!plan}
+        onChange={(intensity) => plan && onChange({ ...plan, intensity })}
+        label={(intensity) => INTENSITY_NAMES[intensity].name}
+        title={(intensity) => INTENSITY_NAMES[intensity].detail}
+      />
     </div>
   )
 }

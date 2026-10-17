@@ -21,7 +21,7 @@ import {
   TagIcon,
   WandSparklesIcon,
 } from 'lucide-react'
-import { useState, type ReactNode } from 'react'
+import { useRef, useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -85,6 +85,7 @@ import {
   POSITION_ORDER,
   POSTURE_NAMES,
   rangeText,
+  signedChange,
   TACTICAL_ROLE_NAMES,
   type Role,
 } from '../../format.ts'
@@ -155,6 +156,7 @@ export function TeamScreen() {
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
   const [trainableOnly, setTrainableOnly] = useState(false)
+  const list = useRef<HTMLElement>(null)
   const [sort, setSort] = useState<{ key: SortKey; ascending: boolean }>({
     key: 'position',
     ascending: true,
@@ -255,7 +257,7 @@ export function TeamScreen() {
   const expiring = squad.filter((p) => p.contractUntil <= season.year).length
   const idle = squad.filter((p) => canTrain(p) && !game.training.individual[p.id]).length
   // Phones have room for either the training plans or the sell and renew buttons:
-  // the "Podem treinar" filter swaps one for the other.
+  // the "Escolher treino" filter swaps one for the other.
   const trainingColumn = trainableOnly ? undefined : 'hidden sm:table-cell'
   const actionsColumn = trainableOnly ? 'hidden sm:table-cell' : undefined
   const loaned = game.loans.map((l) => world.players[l.playerId])
@@ -370,7 +372,7 @@ export function TeamScreen() {
           </div>
         </Card>
 
-        <section className="flex min-w-0 flex-col gap-3">
+        <section ref={list} className="flex min-w-0 scroll-mt-16 flex-col gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <Choices
               ariaLabel="Filtrar por posição"
@@ -396,7 +398,7 @@ export function TeamScreen() {
               title="Quem ainda pode ter treino individual"
             >
               <DumbbellIcon />
-              Podem treinar
+              Escolher treino
             </Button>
           </div>
           {idle > 0 && (
@@ -541,6 +543,7 @@ export function TeamScreen() {
                           <span className="text-xs text-muted-foreground">
                             /{p.potentialRange.high}
                           </span>
+                          <GrowthMark growth={game.growth?.overall[p.id]} />
                         </TableCell>
                         <TableCell className="hidden whitespace-nowrap sm:table-cell">
                           <span
@@ -604,7 +607,12 @@ export function TeamScreen() {
           )}
         </section>
 
-        <TrainingPanel />
+        <TrainingPanel
+          onPickOneByOne={() => {
+            setTrainableOnly(true)
+            list.current?.scrollIntoView({ behavior: 'smooth' })
+          }}
+        />
       </div>
 
       <DragOverlay dropAnimation={null}>
@@ -624,6 +632,7 @@ export function TeamScreen() {
           onClose={() => setViewing(undefined)}
           onSell={() => setListing(viewed.id)}
           onRenew={() => setRenewing(viewed.id)}
+          onTrain={(plan) => setGame(setTrainingPlan(game, viewed.id, plan))}
           onLoan={() => lend(viewed.id)}
         />
       )}
@@ -911,5 +920,21 @@ function RowAction(props: {
     >
       {props.children}
     </Button>
+  )
+}
+
+/** How much a player's overall moved in the last month, when it did. */
+function GrowthMark({ growth }: { growth: number | undefined }) {
+  if (!growth) return null
+  return (
+    <span
+      className={cn(
+        'ml-1 text-xs',
+        growth > 0 ? 'text-green-700 dark:text-green-400' : 'text-red-600 dark:text-red-400',
+      )}
+      title="No último mês"
+    >
+      {signedChange(growth)}
+    </span>
   )
 }
