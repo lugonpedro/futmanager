@@ -1,8 +1,8 @@
-// Opens a Stripe Checkout page for the pass of the running season and answers
-// with its address; the browser goes there to pay. The pass itself is only
-// granted by stripe-webhook, once Stripe says the payment went through.
+// Opens a Mercado Pago Checkout Pro page for the pass of the running season and
+// answers with its address; the browser goes there to pay. The pass itself is
+// only granted by mercadopago-webhook, once the payment is approved.
 import { createClient } from 'npm:@supabase/supabase-js@2'
-import { passCheckoutForm } from '../../../src/cloud/stripe.ts'
+import { passPreference } from '../../../src/cloud/mercadopago.ts'
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -45,23 +45,25 @@ Deno.serve(async (req) => {
     if (passError) throw passError
     if (owned) return json({ error: 'Você já tem o passe desta temporada.' }, 409)
 
-    const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+    const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${Deno.env.get('STRIPE_SECRET_KEY')}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
+        Authorization: `Bearer ${Deno.env.get('MP_ACCESS_TOKEN')}`,
+        'Content-Type': 'application/json',
       },
-      body: passCheckoutForm({
-        priceId: Deno.env.get('STRIPE_PASS_PRICE_ID')!,
-        userId: auth.user.id,
-        seasonId: season.id,
-        email: auth.user.email,
-        siteUrl: Deno.env.get('SITE_URL')!,
-      }),
+      body: JSON.stringify(
+        passPreference({
+          userId: auth.user.id,
+          seasonId: season.id,
+          email: auth.user.email,
+          siteUrl: Deno.env.get('SITE_URL')!,
+          notificationUrl: `${url}/functions/v1/mercadopago-webhook`,
+        }),
+      ),
     })
-    const session = await response.json()
-    if (!response.ok) throw new Error(session?.error?.message ?? `Stripe ${response.status}`)
-    return json({ url: session.url })
+    const preference = await response.json()
+    if (!response.ok) throw new Error(preference?.message ?? `Mercado Pago ${response.status}`)
+    return json({ url: preference.init_point })
   } catch (error) {
     console.error(error)
     return json({ error: 'Não deu para abrir o pagamento agora. Tente de novo.' }, 500)
