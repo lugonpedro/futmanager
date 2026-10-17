@@ -11,8 +11,8 @@ describe('places', () => {
 
 describe('invite codes', () => {
   it('takes the code from a link or as typed', () => {
-    const link = inviteLink('https://futmanager.app', 'GZLHZ9SU')
-    expect(link).toBe('https://futmanager.app/fantasia/convite/GZLHZ9SU')
+    const link = inviteLink('https://onzemestre.com', 'GZLHZ9SU')
+    expect(link).toBe('https://onzemestre.com/fantasia/convite/GZLHZ9SU')
     expect(readInviteCode(` ${link} `)).toBe('GZLHZ9SU')
     expect(readInviteCode('gzlhz9su')).toBe('GZLHZ9SU')
   })

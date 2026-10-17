@@ -81,7 +81,7 @@ export function HomeScreen() {
       <Card className="w-full max-w-md">
         <CardContent className="flex flex-col items-stretch gap-4">
           <div className="text-center">
-            <h1 className="text-4xl font-bold">futmanager</h1>
+            <h1 className="text-4xl font-bold">onzemestre</h1>
             <p className="text-muted-foreground">Gerencie seu time rumo à primeira divisão.</p>
           </div>
 

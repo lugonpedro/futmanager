@@ -1,4 +1,4 @@
-# futmanager
+# onzemestre
 
 Jogo de gerenciamento de futebol no navegador, inspirado no Brasfoot. Vite + React + TypeScript, Tailwind v4 e shadcn/ui.
 

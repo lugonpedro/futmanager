@@ -21,7 +21,7 @@ export function LegalScreen() {
       <Card className="gap-3">
         <CardContent className="flex flex-col gap-3 text-sm leading-relaxed">
           <p>
-            O futmanager é um jogo independente e não tem nenhuma ligação com clubes, federações,
+            O onzemestre é um jogo independente e não tem nenhuma ligação com clubes, federações,
             ligas ou atletas. O mundo gerado, que é o padrão, tem times e jogadores fictícios;
             qualquer semelhança é coincidência.
           </p>
@@ -35,7 +35,7 @@ export function LegalScreen() {
           <p>
             Nomes inseridos pelos usuários no editor ou em pacotes importados são de
             responsabilidade de quem os inseriu e ficam no dispositivo do usuário. Quem usa o save
-            na nuvem guarda uma cópia privada na própria conta, que só ele acessa. O futmanager não
+            na nuvem guarda uma cópia privada na própria conta, que só ele acessa. O onzemestre não
             publica esses nomes.
           </p>
           <p>
@@ -63,7 +63,7 @@ export function LegalScreen() {
             <li>
               O editor de times e os pacotes de dados permitem trocar esses nomes. Tudo o que você
               digita ou importa fica guardado no seu navegador e, se você usar o save na nuvem, numa
-              cópia privada na sua conta. O futmanager não publica, não compartilha e não distribui
+              cópia privada na sua conta. O onzemestre não publica, não compartilha e não distribui
               esses nomes nem os pacotes.
             </li>
             <li>

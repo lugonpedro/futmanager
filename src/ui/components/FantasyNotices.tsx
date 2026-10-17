@@ -83,7 +83,7 @@ export function FantasyNotices() {
       <CardContent className="flex flex-col gap-3 text-sm">
         {support === 'instalar' ? (
           <p className="text-muted-foreground">
-            No iPhone e no iPad, os avisos chegam depois de pôr o futmanager na tela de início:
+            No iPhone e no iPad, os avisos chegam depois de pôr o onzemestre na tela de início:
             toque em Compartilhar e depois em “Adicionar à Tela de Início”, e abra o jogo por lá.
           </p>
         ) : blocked ? (

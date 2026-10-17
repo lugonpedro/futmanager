@@ -25,6 +25,7 @@ class SavesDb extends Dexie {
   /** What each slot looked like at its last sync with an account. */
   synced!: EntityTable<SyncBase, 'id'>
   constructor() {
+    // Keeps the old name: renaming the database would hide every existing save.
     super('futmanager')
     this.version(1).stores({ saves: 'id, updatedAt' })
     this.version(2).stores({ saves: 'id, updatedAt', synced: 'id' })

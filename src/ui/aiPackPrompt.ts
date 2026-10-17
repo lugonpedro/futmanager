@@ -10,7 +10,7 @@ const shape = Object.entries(SQUAD_SHAPE)
  * together a pack of real squads. It asks for sources and blanks instead of
  * guesses, so made-up players stay out.
  */
-export const AI_PACK_PROMPT = `Monte um pacote de dados para o jogo futmanager com os clubes e elencos do Campeonato Brasileiro, Série A e Série B, na temporada [ANO], com os elencos como estão em [DATA, por exemplo "início de abril"].
+export const AI_PACK_PROMPT = `Monte um pacote de dados para o jogo onzemestre com os clubes e elencos do Campeonato Brasileiro, Série A e Série B, na temporada [ANO], com os elencos como estão em [DATA, por exemplo "início de abril"].
 
 Regras para não inventar nada:
 1. Use busca na internet e consulte fontes atuais: o site oficial da CBF para saber quais clubes estão em cada série nessa temporada e o site oficial de cada clube (ou outra fonte confiável e recente) para os elencos. Se você não consegue pesquisar na internet, diga isso e pare, sem responder de memória.

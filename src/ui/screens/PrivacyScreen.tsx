@@ -68,7 +68,7 @@ export function PrivacyScreen() {
       <Section title="Onde ficam">
         <p>
           A conta e as carreiras ficam no Supabase, o serviço de login e banco de dados que o
-          futmanager usa. Os pagamentos passam pelo Stripe. Os servidores dos dois podem ficar fora
+          onzemestre usa. Os pagamentos passam pelo Stripe. Os servidores dos dois podem ficar fora
           do Brasil.
         </p>
       </Section>
