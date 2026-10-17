@@ -46,7 +46,7 @@ export default function App() {
         <Route path="/editor" element={<EditorScreen />} />
         <Route path="/aviso-legal" element={<LegalScreen />} />
         <Route path="/privacidade" element={<PrivacyScreen />} />
-        <Route path="/conta" element={<AccountScreen />} />
+        <Route path="/conta/:tab?" element={<AccountScreen />} />
         <Route path="/nuvem" element={<CloudScreen />} />
         <Route path="/fantasia" element={<FantasyScreen />} />
         <Route path="/fantasia/rodada/:round" element={<FantasyRoundScreen />} />

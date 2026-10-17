@@ -1,6 +1,6 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { ChevronRightIcon, PlusIcon, TicketIcon, UsersIcon } from 'lucide-react'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -20,6 +20,9 @@ export function FantasyLeagues(props: { seasonId: number; running: boolean }) {
   const [busy, setBusy] = useState(false)
   const userId = useAccountStore((s) => s.user?.id)
   const [pass, setPass] = useState<boolean>()
+  const card = useRef<HTMLDivElement>(null)
+  const nameInput = useRef<HTMLInputElement>(null)
+  const { hash } = useLocation()
 
   useEffect(() => {
     let live = true
@@ -34,6 +37,13 @@ export function FantasyLeagues(props: { seasonId: number; running: boolean }) {
       live = false
     }
   }, [props.seasonId, userId])
+
+  // Sent here to create a league (from the pass page or the profile): show the card, ready to type.
+  useEffect(() => {
+    if (hash !== '#ligas' || pass === undefined) return
+    card.current?.scrollIntoView({ block: 'start' })
+    nameInput.current?.focus({ preventScroll: true })
+  }, [hash, pass])
 
   const create = async (event: FormEvent) => {
     event.preventDefault()
@@ -54,9 +64,20 @@ export function FantasyLeagues(props: { seasonId: number; running: boolean }) {
   }
 
   return (
-    <Card>
+    <Card id="ligas" ref={card} className="scroll-mt-4">
       <CardHeader>
-        <CardTitle>Ligas</CardTitle>
+        <CardTitle className="flex flex-wrap items-center justify-between gap-2">
+          Ligas
+          {props.running && pass && (
+            <Link
+              to="/conta/passe"
+              className="flex items-center gap-1 rounded-full bg-highlight-soft px-2 py-0.5 text-xs font-medium hover:underline"
+            >
+              <TicketIcon className="size-3.5" />
+              Passe ativo
+            </Link>
+          )}
+        </CardTitle>
         <CardDescription>
           Jogue contra os amigos: crie uma liga e mande o convite, ou entre com o código de alguém.
         </CardDescription>
@@ -105,6 +126,7 @@ export function FantasyLeagues(props: { seasonId: number; running: boolean }) {
         {props.running && pass && (
           <form onSubmit={create} className="flex flex-wrap gap-2">
             <Input
+              ref={nameInput}
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Nome da nova liga"
