@@ -64,9 +64,9 @@ Para montar o servidor:
 
 1. Crie um projeto no Supabase e rode `supabase/migrations/*.sql` no SQL Editor (ou `npx supabase link` e `npx supabase db push`).
 2. Em Authentication > URL Configuration, use o endereço do jogo como Site URL e acrescente `https://<seu-dominio>/conta` (e as prévias da Vercel, se quiser) em Redirect URLs.
-3. Para o "Entrar com Google", ative o provedor Google em Authentication > Providers com um Client ID do Google Cloud.
+3. O login é por um código de 6 dígitos no e-mail: os modelos "Magic Link" e "Confirm signup" em Authentication > Emails precisam mostrar `{{ .Token }}`. O passo a passo está em [`docs/08-login-por-codigo.md`](docs/08-login-por-codigo.md).
 
-Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails de login aparecem no Mailpit em `http://127.0.0.1:54324`.
+Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails com o código aparecem no Mailpit em `http://127.0.0.1:54324`.
 
 Cada carreira vai para a nuvem compactada (cerca de 150 KB). A conta grátis guarda uma carreira na nuvem; as outras ficam só no aparelho. Quem pagar vai guardar até 5: o número de cada conta fica na tabela `entitlements`, que só o servidor altera (o pagamento da fase 14 vai preenchê-la). Quando a mesma carreira foi jogada em dois aparelhos desde a última sincronização, o jogo pergunta qual fica e sugere a mais recente.
 

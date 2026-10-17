@@ -106,7 +106,7 @@ export function CloudScreen() {
         </CardHeader>
         <CardContent>
           <ol className="flex list-decimal flex-col gap-2 pl-5 text-sm leading-relaxed">
-            <li>Entre com um link no e-mail. Não tem senha.</li>
+            <li>Entre com um código que chega no seu e-mail. Não tem senha.</li>
             <li>
               A carreira jogada por último vai para a nuvem. No menu, ela aparece com o ícone de
               nuvem; as outras aparecem como &quot;só neste aparelho&quot;.

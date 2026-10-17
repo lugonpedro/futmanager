@@ -1,4 +1,11 @@
-import { CloudIcon, LogOutIcon, MailIcon, RefreshCwIcon, Trash2Icon } from 'lucide-react'
+import {
+  CloudIcon,
+  KeyRoundIcon,
+  LogOutIcon,
+  MailIcon,
+  RefreshCwIcon,
+  Trash2Icon,
+} from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
@@ -11,10 +18,11 @@ import { FREE_CLOUD_SLOTS } from '../../cloud/sync.ts'
 import {
   deleteAccount,
   saveProfile,
-  sendMagicLink,
+  sendSignInCode,
   signOut,
   syncNow,
   useAccountStore,
+  verifySignInCode,
   type Profile,
 } from '../../store/account.ts'
 import { ConflictDialog } from '../components/ConflictDialog.tsx'
@@ -73,22 +81,36 @@ export function AccountScreen() {
 
 function SignInCard() {
   const [email, setEmail] = useState('')
+  const [code, setCode] = useState('')
   const [sentTo, setSentTo] = useState<string>()
   const [error, setError] = useState<string>()
   const [busy, setBusy] = useState(false)
 
-  const submit = async (event: FormEvent) => {
-    event.preventDefault()
+  const run = async (action: () => Promise<void>) => {
     setBusy(true)
     setError(undefined)
     try {
-      await sendMagicLink(email.trim())
-      setSentTo(email.trim())
+      await action()
     } catch (e) {
       setError(messageOf(e))
     } finally {
       setBusy(false)
     }
+  }
+
+  const send = (event: FormEvent) => {
+    event.preventDefault()
+    const address = email.trim()
+    void run(async () => {
+      await sendSignInCode(address)
+      setCode('')
+      setSentTo(address)
+    })
+  }
+
+  const verify = (event: FormEvent) => {
+    event.preventDefault()
+    if (sentTo) void run(() => verifySignInCode(sentTo, code))
   }
 
   return (
@@ -97,24 +119,60 @@ function SignInCard() {
         <CardTitle>Entrar</CardTitle>
         <CardDescription>
           A conta é opcional. Com ela suas carreiras ficam guardadas na nuvem e você continua em
-          outro aparelho. Sem senha: você entra por um link no e-mail.
+          outro aparelho. Sem senha: você entra com um código que chega no e-mail.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         {sentTo ? (
-          <p role="status" className="rounded-md border p-3 text-sm leading-relaxed">
-            Enviamos um link para <strong>{sentTo}</strong>. Abra o e-mail neste mesmo navegador
-            para entrar.{' '}
-            <button
-              type="button"
-              className="cursor-pointer underline underline-offset-2"
-              onClick={() => setSentTo(undefined)}
-            >
-              Usar outro e-mail
-            </button>
-          </p>
+          <form onSubmit={verify} className="flex flex-col gap-2">
+            <p role="status" className="text-sm leading-relaxed">
+              Enviamos um código para <strong>{sentTo}</strong>. Digite aqui o código do e-mail. Se
+              não chegar em alguns minutos, olhe também a caixa de spam ou a lixeira.
+            </p>
+            <Label htmlFor="code">Código</Label>
+            <Input
+              id="code"
+              required
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              pattern="[0-9]{6,10}"
+              maxLength={10}
+              placeholder="123456"
+              value={code}
+              onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
+            />
+            <Button type="submit" disabled={busy}>
+              <KeyRoundIcon />
+              Entrar
+            </Button>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <button
+                type="button"
+                disabled={busy}
+                className="cursor-pointer underline underline-offset-2"
+                onClick={() =>
+                  void run(async () => {
+                    await sendSignInCode(sentTo)
+                    toast.success('Enviamos um código novo.')
+                  })
+                }
+              >
+                Enviar outro código
+              </button>
+              <button
+                type="button"
+                className="cursor-pointer underline underline-offset-2"
+                onClick={() => {
+                  setSentTo(undefined)
+                  setError(undefined)
+                }}
+              >
+                Usar outro e-mail
+              </button>
+            </div>
+          </form>
         ) : (
-          <form onSubmit={submit} className="flex flex-col gap-2">
+          <form onSubmit={send} className="flex flex-col gap-2">
             <Label htmlFor="email">E-mail</Label>
             <Input
               id="email"
@@ -127,7 +185,7 @@ function SignInCard() {
             />
             <Button type="submit" disabled={busy}>
               <MailIcon />
-              Enviar link de acesso
+              Enviar código de acesso
             </Button>
           </form>
         )}
