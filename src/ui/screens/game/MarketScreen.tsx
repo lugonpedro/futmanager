@@ -35,6 +35,7 @@ import { Choices } from '../../components/Choices.tsx'
 import { LearnLink } from '../../components/LearnLink.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
 import { Pager } from '../../components/Pager.tsx'
+import { RowDetails } from '../../components/RowDetails.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
 import { usePage } from '../../usePage.ts'
 import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
@@ -179,7 +180,7 @@ function BuyTab({ game }: { game: GameState }) {
               <TableHead>Nome</TableHead>
               <TableHead className="hidden sm:table-cell">Idade</TableHead>
               <TableHead title="Geral e potencial">Geral</TableHead>
-              <TableHead>Clube</TableHead>
+              <TableHead className="hidden sm:table-cell">Clube</TableHead>
               <TableHead className="text-right">Preço</TableHead>
               <TableHead className="hidden text-right sm:table-cell">Salário pedido</TableHead>
             </TableRow>
@@ -195,7 +196,8 @@ function BuyTab({ game }: { game: GameState }) {
                   title={signable(player) ? undefined : 'Só com a janela aberta'}
                 >
                   <TableCell className="font-semibold">{player.position}</TableCell>
-                  <TableCell>
+                  {/* On phones long names wrap, so the price stays on screen. */}
+                  <TableCell className="whitespace-normal sm:whitespace-nowrap">
                     <button
                       type="button"
                       onClick={(e) => {
@@ -206,6 +208,15 @@ function BuyTab({ game }: { game: GameState }) {
                     >
                       {player.name}
                     </button>
+                    <RowDetails>
+                      {[
+                        player.clubId === FREE_AGENT
+                          ? 'sem clube'
+                          : world.clubs[player.clubId].shortName,
+                        `${player.age} anos`,
+                        `pede ${formatMoney(wageDemand(world, player, userClubId))}`,
+                      ]}
+                    </RowDetails>
                   </TableCell>
                   <TableCell className="hidden sm:table-cell">{player.age}</TableCell>
                   <TableCell
@@ -215,7 +226,7 @@ function BuyTab({ game }: { game: GameState }) {
                     <span className="font-bold">{player.overall}</span>
                     <span className="text-xs text-muted-foreground">/{potential.high}</span>
                   </TableCell>
-                  <TableCell className="max-w-40">
+                  <TableCell className="hidden max-w-40 sm:table-cell">
                     {player.clubId === FREE_AGENT ? (
                       <Badge variant="secondary">Sem clube</Badge>
                     ) : (
