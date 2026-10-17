@@ -22,7 +22,7 @@ import { useGameStore } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { ThemeToggle } from '../../components/ThemeToggle.tsx'
 import { announce } from '../../announce.ts'
-import { divisionName, formatDayDate, formatMoney, formatShortDate } from '../../format.ts'
+import { divisionName, formatDayDate, formatDayMonth, formatMoney } from '../../format.ts'
 import { lastDayNews } from '../../news.ts'
 
 /** On opening a career: the bids for the user's players that lapse today. */
@@ -86,9 +86,7 @@ export function GameLayout() {
           </SheetContent>
         </Sheet>
         <span className="min-w-0 flex-1 truncate font-semibold">{current?.label}</span>
-        <span className="max-w-40 truncate text-sm text-muted-foreground">
-          {game.world.clubs[game.userClubId].shortName} · {formatShortDate(game.today)}
-        </span>
+        <HeaderInfo game={game} />
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-4 p-4 pb-24 md:p-6">
@@ -118,6 +116,19 @@ export function GameLayout() {
         ))}
       </nav>
     </div>
+  )
+}
+
+/** The phone's top bar: club, date and cash, which the sidebar shows on wide screens. */
+function HeaderInfo({ game }: { game: GameState }) {
+  const club = game.world.clubs[game.userClubId]
+  return (
+    <span className="shrink-0 text-sm whitespace-nowrap text-muted-foreground tabular-nums">
+      {club.shortName} · {formatDayMonth(game.today)} ·{' '}
+      <span className={cn(club.cash < 0 && 'font-semibold text-destructive')} title="Caixa">
+        {formatMoney(club.cash)}
+      </span>
+    </span>
   )
 }
 
