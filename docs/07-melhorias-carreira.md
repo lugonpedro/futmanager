@@ -198,6 +198,10 @@ Alternativa: levar Patrocínio e Estádio junto, já que os três tratam de dinh
 
 **Por que por último**: os itens 3, 5, 6, 8 e 9 mudam telas que vão aparecer nos prints. Fazendo o 11 no fim, os prints já saem certos. O texto da Aprenda também ganha as novidades (funções, setas do treino, simular até uma data).
 
+**Como ficou (PR 5)**: 11 das 13 seções da Carreira ganharam um print, em versão para celular e para computador (22 arquivos WebP, uns 0,9 MB no total, carregados só ao rolar até eles). Tocar no print abre ele ampliado. "Cartões e lesões" e "Evolução" ficaram sem print, porque não têm uma tela própria, e a Fantasia também, porque as telas dela pedem conta. Os textos encurtaram onde o print já mostra o que o texto explicava (calendário, tática e treino).
+
+`npm run learn:shots` faz o build, abre o jogo com o Playwright, começa uma carreira no pacote Brasileirão com o Corinthians, numa semente fixa, simula até o fim de junho e salva os prints em `public/aprenda/`. Na primeira vez, rode `npx playwright install chromium`. A lista dos prints fica em `src/ui/learnShots.ts`, e um teste confere que toda seção com print tem os dois arquivos.
+
 ---
 
 ## Decisões

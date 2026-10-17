@@ -11,11 +11,25 @@ import {
   learnPath,
   listText,
 } from './learn.ts'
+import { LEARN_SHOTS, shotPath } from './learnShots.ts'
 
 const text = (content: { items: string[]; table?: { rows: string[][] } }) =>
   [...content.items, ...(content.table?.rows.flat() ?? [])].join('\n')
 
 describe('Aprenda', () => {
+  it('has both versions of every screenshot a section shows, and shows every one', () => {
+    const shown = Object.values(CAREER_GUIDE).flatMap((section) => section.shot ?? [])
+    expect([...shown].sort()).toEqual([...LEARN_SHOTS].sort())
+    const files = Object.keys(import.meta.glob('../../public/aprenda/*.webp')).map((file) =>
+      file.replace('../../public', ''),
+    )
+    for (const shot of LEARN_SHOTS) {
+      for (const device of ['celular', 'computador'] as const) {
+        expect(files).toContain(shotPath(shot, device))
+      }
+    }
+  })
+
   it('has a title and some text in every section', () => {
     for (const id of CAREER_SECTIONS) {
       expect(CAREER_GUIDE[id].title).not.toBe('')
