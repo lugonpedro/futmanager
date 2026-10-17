@@ -9,7 +9,7 @@ O login usa o fluxo PKCE do Supabase: quem pede o login guarda um segredo no nav
 ## Como fica a tela de conta
 
 1. O jogador digita o e-mail e toca em **Enviar código de acesso**.
-2. Chega um e-mail com o código. No celular, o teclado costuma sugerir o código sozinho.
+2. Chega um e-mail com o código. No celular, o teclado costuma sugerir o código sozinho. A tela lembra de olhar o spam e a lixeira se o e-mail não aparecer.
 3. O jogador digita o código e toca em **Entrar**.
 4. Dá para pedir outro código ou trocar de e-mail na mesma tela.
 
@@ -26,15 +26,42 @@ Os modelos padrão do Supabase mandam só o link. Em **Authentication → Emails
 
 Nos dois, o que importa é a variável `{{ .Token }}`, que vira o código. Tire o `{{ .ConfirmationURL }}`: o link continuaria falhando no PWA e confundiria o jogador.
 
-Assunto sugerido: `Seu código do futmanager: {{ .Token }}`
+**Magic Link**
 
-Corpo sugerido:
+Assunto: `Seu código de acesso ao futmanager: {{ .Token }}`
 
 ```html
-<h2>Seu código de acesso</h2>
-<p>Digite este código no futmanager para entrar:</p>
-<p style="font-size: 32px; font-weight: bold; letter-spacing: 6px">{{ .Token }}</p>
-<p>O código vale por 1 hora. Se não foi você que pediu, pode ignorar este e-mail.</p>
+<div
+  style="font-family: Arial, sans-serif; max-width: 420px; margin: 0 auto; padding: 24px; color: #111"
+>
+  <h2 style="margin: 0 0 12px">futmanager</h2>
+  <p>Use este código para entrar no jogo:</p>
+  <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; margin: 16px 0">
+    {{ .Token }}
+  </p>
+  <p style="color: #555; font-size: 14px">
+    O código vale por 1 hora. Se não foi você que pediu, ignore este e-mail.
+  </p>
+</div>
+```
+
+**Confirm signup**
+
+Assunto: `Bem-vindo ao futmanager! Seu código: {{ .Token }}`
+
+```html
+<div
+  style="font-family: Arial, sans-serif; max-width: 420px; margin: 0 auto; padding: 24px; color: #111"
+>
+  <h2 style="margin: 0 0 12px">Bem-vindo ao futmanager</h2>
+  <p>Use este código para criar sua conta e entrar no jogo:</p>
+  <p style="font-size: 32px; font-weight: bold; letter-spacing: 6px; margin: 16px 0">
+    {{ .Token }}
+  </p>
+  <p style="color: #555; font-size: 14px">
+    O código vale por 1 hora. Se não foi você que pediu, ignore este e-mail.
+  </p>
+</div>
 ```
 
 Salve os dois modelos.

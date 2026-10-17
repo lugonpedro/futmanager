@@ -126,7 +126,8 @@ function SignInCard() {
         {sentTo ? (
           <form onSubmit={verify} className="flex flex-col gap-2">
             <p role="status" className="text-sm leading-relaxed">
-              Enviamos um código para <strong>{sentTo}</strong>. Digite aqui o código do e-mail.
+              Enviamos um código para <strong>{sentTo}</strong>. Digite aqui o código do e-mail. Se
+              não chegar em alguns minutos, olhe também a caixa de spam ou a lixeira.
             </p>
             <Label htmlFor="code">Código</Label>
             <Input
