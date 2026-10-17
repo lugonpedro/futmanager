@@ -1,4 +1,11 @@
-import { CloudIcon, LogOutIcon, RefreshCwIcon, Trash2Icon } from 'lucide-react'
+import {
+  CloudIcon,
+  KeyRoundIcon,
+  LogOutIcon,
+  MailIcon,
+  RefreshCwIcon,
+  Trash2Icon,
+} from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
@@ -11,10 +18,11 @@ import { FREE_CLOUD_SLOTS } from '../../cloud/sync.ts'
 import {
   deleteAccount,
   saveProfile,
-  signInWithGoogle,
+  sendSignInCode,
   signOut,
   syncNow,
   useAccountStore,
+  verifySignInCode,
   type Profile,
 } from '../../store/account.ts'
 import { ConflictDialog } from '../components/ConflictDialog.tsx'
@@ -72,19 +80,37 @@ export function AccountScreen() {
 }
 
 function SignInCard() {
+  const [email, setEmail] = useState('')
+  const [code, setCode] = useState('')
+  const [sentTo, setSentTo] = useState<string>()
   const [error, setError] = useState<string>()
   const [busy, setBusy] = useState(false)
 
-  const google = async () => {
+  const run = async (action: () => Promise<void>) => {
     setBusy(true)
     setError(undefined)
     try {
-      // On success the browser leaves for Google and comes back to /conta.
-      await signInWithGoogle()
+      await action()
     } catch (e) {
       setError(messageOf(e))
+    } finally {
       setBusy(false)
     }
+  }
+
+  const send = (event: FormEvent) => {
+    event.preventDefault()
+    const address = email.trim()
+    void run(async () => {
+      await sendSignInCode(address)
+      setCode('')
+      setSentTo(address)
+    })
+  }
+
+  const verify = (event: FormEvent) => {
+    event.preventDefault()
+    if (sentTo) void run(() => verifySignInCode(sentTo, code))
   }
 
   return (
@@ -93,14 +119,75 @@ function SignInCard() {
         <CardTitle>Entrar</CardTitle>
         <CardDescription>
           A conta é opcional. Com ela suas carreiras ficam guardadas na nuvem e você continua em
-          outro aparelho. Você entra com a sua conta do Google, sem senha nova.
+          outro aparelho. Sem senha: você entra com um código que chega no e-mail.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
-        <Button onClick={google} disabled={busy}>
-          <GoogleIcon />
-          Entrar com o Google
-        </Button>
+        {sentTo ? (
+          <form onSubmit={verify} className="flex flex-col gap-2">
+            <p role="status" className="text-sm leading-relaxed">
+              Enviamos um código para <strong>{sentTo}</strong>. Digite aqui o código do e-mail.
+            </p>
+            <Label htmlFor="code">Código</Label>
+            <Input
+              id="code"
+              required
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              pattern="[0-9]{6,10}"
+              maxLength={10}
+              placeholder="123456"
+              value={code}
+              onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
+            />
+            <Button type="submit" disabled={busy}>
+              <KeyRoundIcon />
+              Entrar
+            </Button>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <button
+                type="button"
+                disabled={busy}
+                className="cursor-pointer underline underline-offset-2"
+                onClick={() =>
+                  void run(async () => {
+                    await sendSignInCode(sentTo)
+                    toast.success('Enviamos um código novo.')
+                  })
+                }
+              >
+                Enviar outro código
+              </button>
+              <button
+                type="button"
+                className="cursor-pointer underline underline-offset-2"
+                onClick={() => {
+                  setSentTo(undefined)
+                  setError(undefined)
+                }}
+              >
+                Usar outro e-mail
+              </button>
+            </div>
+          </form>
+        ) : (
+          <form onSubmit={send} className="flex flex-col gap-2">
+            <Label htmlFor="email">E-mail</Label>
+            <Input
+              id="email"
+              type="email"
+              required
+              autoComplete="email"
+              placeholder="voce@exemplo.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Button type="submit" disabled={busy}>
+              <MailIcon />
+              Enviar código de acesso
+            </Button>
+          </form>
+        )}
         {error && (
           <p role="alert" className="text-sm text-destructive">
             {error}
@@ -108,30 +195,6 @@ function SignInCard() {
         )}
       </CardContent>
     </Card>
-  )
-}
-
-/** Google's "G", in its own colors. */
-function GoogleIcon() {
-  return (
-    <svg viewBox="0 0 48 48" aria-hidden="true" className="rounded-full bg-white p-0.5">
-      <path
-        fill="#EA4335"
-        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
-      />
-      <path
-        fill="#4285F4"
-        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
-      />
-      <path
-        fill="#FBBC05"
-        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
-      />
-      <path
-        fill="#34A853"
-        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
-      />
-    </svg>
   )
 }
 

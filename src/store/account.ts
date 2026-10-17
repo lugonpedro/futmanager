@@ -191,7 +191,22 @@ function flushPushes() {
   return Promise.all(slots.map(push))
 }
 
-/** Sends the player to Google, who brings them back to the account page signed in. */
+/**
+ * E-mails a one-time code. The player types it here, so signing in works in the installed app too,
+ * where a link in the e-mail would open in another browser.
+ */
+export async function sendSignInCode(email: string) {
+  const { error } = await client().auth.signInWithOtp({ email })
+  if (error) throw error
+}
+
+/** Signs in with the code from the e-mail; the session then arrives through onAuthStateChange. */
+export async function verifySignInCode(email: string, token: string) {
+  const { error } = await client().auth.verifyOtp({ email, token, type: 'email' })
+  if (error) throw error
+}
+
+/** Not offered on the account page for now; kept for when Google sign-in is set up. */
 export async function signInWithGoogle() {
   const { error } = await client().auth.signInWithOAuth({
     provider: 'google',
@@ -226,7 +241,7 @@ export async function deleteAccount() {
   await client().auth.signOut({ scope: 'local' })
 }
 
-/** Start-up: picks up the saved session (or one coming back from Google) and syncs. */
+/** Start-up: picks up the saved session (or a new one from a sign-in code) and syncs. */
 export function initAccount() {
   if (!supabase) {
     set({ ready: true })

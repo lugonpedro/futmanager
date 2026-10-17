@@ -167,7 +167,7 @@ Escolhido em 16/10/2026: **Stripe**, pelo modo de teste com cartões falsos e po
 - **Cortesia**: dá para liberar o passe sem pagar (testes, amigos), por uma temporada ou para sempre; veja "Passe de cortesia e vitalício" abaixo.
 - **Reembolso**: por enquanto à mão: reembolsar no painel do Stripe e apagar a linha em `fantasy_passes`.
 - **Política de privacidade** atualizada com os times, as ligas (os membros veem apelido, escudo e pontos) e o pagamento pelo Stripe.
-- **Entrar com o Google** saiu da tela de conta por enquanto; o login fica só pelo link no e-mail. (Desde 17/10/2026 é o contrário: o login é só com o Google; veja `08-login-google.md`.)
+- **Entrar com o Google** saiu da tela de conta por enquanto; o login fica só pelo link no e-mail. (Desde 17/10/2026 o e-mail manda um código em vez do link; veja `08-login-por-codigo.md`.)
 
 ### Para ligar no Stripe (uma vez)
 
