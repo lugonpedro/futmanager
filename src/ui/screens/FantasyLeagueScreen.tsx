@@ -182,7 +182,14 @@ function League(props: { league: FantasyLeague; standings: Standing[]; userId: s
         </CardContent>
       </Card>
 
-      <div className="flex justify-end">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        {owner ? (
+          <span />
+        ) : (
+          <Link to="/fantasia#ligas" className="text-sm underline underline-offset-2">
+            Criar a sua própria liga
+          </Link>
+        )}
         <Button variant="ghost" onClick={leave}>
           {owner ? <Trash2Icon /> : <LogOutIcon />}
           {owner ? 'Apagar liga' : 'Sair da liga'}

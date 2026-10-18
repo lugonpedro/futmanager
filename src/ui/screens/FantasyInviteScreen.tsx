@@ -9,6 +9,7 @@ import { joinLeague, loadInvite, type LeagueInvite } from '../../cloud/leagues.t
 import { useAccountStore } from '../../store/account.ts'
 import { Note } from '../components/FantasyParts.tsx'
 import { readInviteCode } from '../fantasyLeague.ts'
+import { signInLink } from '../signIn.ts'
 import { Page } from './FantasyLeagueScreen.tsx'
 
 /** Where an invite link lands: which league it is, and a button to join it. */
@@ -51,11 +52,10 @@ export function FantasyInviteScreen() {
         <Card>
           <CardContent className="flex flex-wrap items-center justify-between gap-3 text-sm">
             <span>
-              Entre na sua conta para aceitar o convite. Depois, abra o link de novo ou digite o
-              código {code} na tela da fantasia.
+              Entre na sua conta para aceitar o convite. Depois de entrar, você volta para cá.
             </span>
             <Button asChild size="sm">
-              <Link to="/conta">Entrar</Link>
+              <Link to={signInLink(`/fantasia/convite/${code}`)}>Entrar</Link>
             </Button>
           </CardContent>
         </Card>

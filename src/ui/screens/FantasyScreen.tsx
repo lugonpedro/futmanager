@@ -40,6 +40,7 @@ import {
   type Draft,
 } from '../fantasyDraft.ts'
 import { POSITION_NAMES, tenths } from '../format.ts'
+import { signInLink } from '../signIn.ts'
 import { usePage } from '../usePage.ts'
 
 const closing = new Intl.DateTimeFormat('pt-BR', {
@@ -180,11 +181,22 @@ function Season(props: {
 
       {!props.signedIn && (
         <Card>
-          <CardContent className="flex flex-wrap items-center justify-between gap-3 text-sm">
-            <span>Entre na sua conta para escalar o seu time e jogar em ligas com os amigos.</span>
-            <Button asChild size="sm">
-              <Link to="/conta">Entrar</Link>
-            </Button>
+          <CardContent className="flex flex-col gap-3 text-sm">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span>
+                Entre na sua conta para escalar o seu time e jogar em ligas com os amigos.
+              </span>
+              <Button asChild size="sm">
+                <Link to={signInLink('/fantasia')}>Entrar</Link>
+              </Button>
+            </div>
+            <p className="text-muted-foreground">
+              Jogar é grátis. Para criar ligas privadas, existe o{' '}
+              <Link to="/fantasia/passe" className="underline underline-offset-2">
+                passe da temporada
+              </Link>
+              .
+            </p>
           </CardContent>
         </Card>
       )}

@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
-import { CheckIcon, TicketIcon } from 'lucide-react'
+import { TicketIcon } from 'lucide-react'
 import { Link, useSearchParams } from 'react-router'
-import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { cloudEnabled } from '../../cloud/client.ts'
 import { loadFantasySeason, type FantasySeason } from '../../cloud/fantasy.ts'
-import { buyPass, hasPass, PASS_PRICE } from '../../cloud/pass.ts'
+import { hasPass, PASS_PRICE } from '../../cloud/pass.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { CONTACT_URL } from '../contact.ts'
 import { Note } from '../components/FantasyParts.tsx'
+import { BuyPassButton, PassPerks } from '../components/SeasonPass.tsx'
+import { signInLink } from '../signIn.ts'
 import { Page } from './FantasyLeagueScreen.tsx'
 
 /** How often, and how many times, to look for the pass after paying. */
@@ -25,7 +26,6 @@ export function FantasyPassScreen() {
   const [season, setSeason] = useState<FantasySeason | null>()
   const [owned, setOwned] = useState<boolean>()
   const [failed, setFailed] = useState(false)
-  const [opening, setOpening] = useState(false)
 
   useEffect(() => {
     if (!cloudEnabled) return
@@ -59,16 +59,6 @@ export function FantasyPassScreen() {
     }
   }, [season, user, paying])
 
-  const buy = async () => {
-    setOpening(true)
-    try {
-      await buyPass()
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : String(error))
-      setOpening(false)
-    }
-  }
-
   return (
     <Page title="Passe da temporada">
       {!cloudEnabled ? (
@@ -91,34 +81,31 @@ export function FantasyPassScreen() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4 text-sm">
-            <ul className="flex flex-col gap-2">
-              {[
-                'Crie até 10 ligas privadas nesta temporada e chame quem quiser pelo link.',
-                'Seus amigos entram de graça. Num grupo, basta um ter o passe.',
-                'Não dá pontos nem moedas a mais: o orçamento é igual para todo mundo.',
-                `Vale até o fim da temporada ${season.year}.`,
-              ].map((line) => (
-                <li key={line} className="flex gap-2">
-                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
-                  {line}
-                </li>
-              ))}
-            </ul>
+            <PassPerks year={season.year} />
 
             {!user ? (
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <span>Entre na sua conta para comprar o passe.</span>
                 <Button asChild size="sm">
-                  <Link to="/conta">Entrar</Link>
+                  <Link to={signInLink('/fantasia/passe')}>Entrar</Link>
                 </Button>
               </div>
             ) : owned ? (
               <div className="flex flex-wrap items-center justify-between gap-3 rounded-md bg-highlight-soft p-3">
-                <span className="font-medium">Você tem o passe da temporada {season.year}.</span>
+                <span className="flex flex-col gap-0.5">
+                  <span className="font-medium">Você tem o passe da temporada {season.year}.</span>
+                  <Link to="/conta/passe" className="text-xs underline underline-offset-2">
+                    Ver no seu perfil
+                  </Link>
+                </span>
                 <Button asChild size="sm">
-                  <Link to="/fantasia">Criar uma liga</Link>
+                  <Link to="/fantasia#ligas">Criar uma liga</Link>
                 </Button>
               </div>
+            ) : season.status !== 'em_andamento' ? (
+              <p className="rounded-md border p-3">
+                A temporada {season.year} acabou. O passe da próxima aparece aqui quando ela abrir.
+              </p>
             ) : paying ? (
               <p role="status" className="rounded-md border p-3">
                 Pagamento enviado. O passe aparece aqui assim que o pagamento for confirmado; no Pix
@@ -130,10 +117,7 @@ export function FantasyPassScreen() {
                   <strong className="text-base">{PASS_PRICE}</strong> por temporada, no Pix ou no
                   cartão.
                 </span>
-                <Button onClick={buy} disabled={opening || owned === undefined}>
-                  <TicketIcon />
-                  Comprar passe
-                </Button>
+                <BuyPassButton disabled={owned === undefined} />
               </div>
             )}
 

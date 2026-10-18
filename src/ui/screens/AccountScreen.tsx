@@ -7,11 +7,12 @@ import {
   Trash2Icon,
 } from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
-import { Link, useNavigate } from 'react-router'
+import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import { cloudEnabled } from '../../cloud/client.ts'
 import { FREE_CLOUD_SLOTS } from '../../cloud/sync.ts'
@@ -27,18 +28,37 @@ import {
 } from '../../store/account.ts'
 import { ConflictDialog } from '../components/ConflictDialog.tsx'
 import { ManagerCrest } from '../components/ManagerCrest.tsx'
+import { PassPanel } from '../components/SeasonPass.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { MANAGER_CREST_COLORS } from '../manager.ts'
 import { confirm } from '../confirm.ts'
+import { RETURN_PARAM, readReturnTo } from '../signIn.ts'
 import { toast } from 'sonner'
 
 const syncTime = new Intl.DateTimeFormat('pt-BR', { timeStyle: 'short' })
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
-/** Signing in, the manager's profile, cloud saves and deleting the account. */
+/** The account page's tabs, by their address under /conta. */
+const TABS = {
+  perfil: 'Perfil',
+  passe: 'Passe',
+}
+
+type Tab = keyof typeof TABS
+
+/** Signing in, then the manager's profile, cloud saves and account, and the season pass. */
 export function AccountScreen() {
   const { ready, user } = useAccountStore()
+  const { tab = 'perfil' } = useParams()
+  const navigate = useNavigate()
+  const [params] = useSearchParams()
+  const back = readReturnTo(params.get(RETURN_PARAM))
+
+  // Signed in from a page that sent the player here: take them back to it.
+  if (ready && user && back) return <Navigate to={back} replace />
+  if (!(tab in TABS)) return <Navigate to="/conta" replace />
+
   return (
     <main className="mx-auto flex max-w-xl flex-col gap-4 p-4">
       <header className="flex items-center justify-between gap-2">
@@ -60,12 +80,27 @@ export function AccountScreen() {
       ) : !ready ? (
         <p className="text-sm text-muted-foreground">Carregando…</p>
       ) : user ? (
-        <>
-          <ProfileCard />
-          <CloudCard />
-          <AccountCard email={user.email} />
+        <Tabs
+          value={tab}
+          onValueChange={(next) => navigate(next === 'perfil' ? '/conta' : `/conta/${next}`)}
+        >
+          <TabsList>
+            {(Object.keys(TABS) as Tab[]).map((key) => (
+              <TabsTrigger key={key} value={key}>
+                {TABS[key]}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <TabsContent value="perfil" className="flex flex-col gap-4">
+            <ProfileCard />
+            <CloudCard />
+            <AccountCard email={user.email} />
+          </TabsContent>
+          <TabsContent value="passe">
+            <PassPanel userId={user.id} />
+          </TabsContent>
           <ConflictDialog />
-        </>
+        </Tabs>
       ) : (
         <SignInCard />
       )}
