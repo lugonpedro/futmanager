@@ -2,11 +2,22 @@ import { useEffect, useRef, useState } from 'react'
 import type { MatchSide, MatchState, Play } from '../../engine/match/simulate.ts'
 import { textOn, type Kit } from '../kits.ts'
 import {
+  BASE_UNIT_MS,
+  CONTROL,
+  metres,
+  offBallTarget,
+  PACE,
+  planRunners,
+  pressTarget,
+  steer,
+  traitsOf,
+  type Traits,
+} from '../pitchMotion.ts'
+import {
   ballAt,
   ballLegs,
   CENTRE,
   facing,
-  followBall,
   formationSpots,
   legStart,
   movingShare,
@@ -20,22 +31,35 @@ import {
 const UPRIGHT_BELOW = 520
 /** Real pitch proportions, 105 m by 68 m. */
 const ASPECT = 68 / 105
-/** How quickly the dots close in on where they are heading, per second. */
-const FOLLOW = 5
 /** How long a player who left the pitch takes to walk off, in seconds. */
 const WALK_OFF = 1.6
 
-type Dot = { pos: Vec; side: MatchSide; leftAt?: number; from?: Vec }
+type Dot = {
+  pos: Vec
+  /** Metres per second. */
+  vel: Vec
+  /** Where the player believes the ball is: he reads it a little late. */
+  seen: Vec
+  traits: Traits
+  side: MatchSide
+  leftAt?: number
+  from?: Vec
+}
 
 type Scene = {
   play?: Play
   legs: BallLeg[]
   /** Where the ball was when the play began. */
   from: Vec
-  /** Who runs to the ball on each leg, chosen when the leg starts. */
+  /**
+   * Who has the ball on each leg, chosen as the play starts so a receiver,
+   * or the defender who will win the ball, makes his run early.
+   */
   runners: Map<number, string>
   start: number
   duration: number
+  /** How much faster than normal play speed the players move. */
+  tempo: number
   ball: Vec
   dots: Map<string, Dot>
   last: number
@@ -69,6 +93,7 @@ export function MatchPitch(props: {
     runners: new Map(),
     start: 0,
     duration: 1,
+    tempo: 1,
     ball: CENTRE,
     dots: new Map(),
     last: 0,
@@ -91,9 +116,36 @@ export function MatchPitch(props: {
     scene.play = play
     scene.from = scene.ball
     scene.legs = ballLegs(play, scene.ball, facing(play.side, play.minute > 45))
-    scene.runners = new Map()
+    scene.runners = planRunners(
+      play,
+      scene.legs,
+      scene.from,
+      state[play.side].onPitch,
+      (id) => scene.dots.get(id)?.pos,
+    )
+    // A move that breaks down: the defender nearest where it will be lost
+    // goes to win the ball.
+    const tackle = scene.legs.findIndex((leg) => leg.owner === 'defend')
+    if (tackle >= 0) {
+      const spot = legStart(scene.legs, scene.from, tackle)
+      let best = Infinity
+      for (const p of state[other(play.side)].onPitch) {
+        const dot = scene.dots.get(p.player.id)
+        if (!dot || p.position === 'G' || near(dot.pos, spot) >= best) continue
+        best = near(dot.pos, spot)
+        scene.runners.set(tackle, p.player.id)
+      }
+    }
+    // Nobody near enough to carry the ball off: it is played on to the
+    // first runner instead, who goes to meet it.
+    const first = scene.runners.get(0)
+    const firstAt = first ? scene.dots.get(first)?.pos : undefined
+    if (scene.legs[0]?.kind === 'carry' && firstAt && metres(firstAt, scene.from) > 2 * CONTROL) {
+      scene.legs[0] = { ...scene.legs[0], kind: 'pass' }
+    }
     scene.start = performance.now()
     scene.duration = playDuration(play) * unitMs
+    scene.tempo = BASE_UNIT_MS / unitMs
   }, [state, plays, unitMs])
 
   useEffect(() => {
@@ -138,6 +190,7 @@ export function MatchPitch(props: {
       // After the 45th minute's play, half-time: the ball goes back to the
       // centre and the sides walk over to the other end.
       const halftime = match.minute === 45 && !match.finished && t >= 1
+      const lastBall = scene.ball
       scene.ball = halftime
         ? {
             x: pos.x + (CENTRE.x - pos.x) * Math.min(1, dt * 2),
@@ -158,8 +211,8 @@ export function MatchPitch(props: {
       const shotAt = scene.legs.findIndex((l) => l.kind === 'shot')
       const shooting = shotAt >= 0 && index >= shotAt
 
-      // The player who runs on this leg: with the ball to carry it, or to
-      // where a pass is going to receive it. Nobody chases a shot.
+      // The player on the ball on this leg, or the one a pass is going to.
+      // Nobody chases a shot.
       let runner: string | undefined
       if (leg && owner && (leg.kind === 'carry' || leg.kind === 'pass')) {
         runner = scene.runners.get(index)
@@ -178,16 +231,44 @@ export function MatchPitch(props: {
           if (runner) scene.runners.set(index, runner)
         }
       }
+      // Whoever a pass still to come is meant for is already making his run,
+      // and so is the defender who is going to win the ball.
+      const runs = new Map<string, Vec>()
+      if (play && t < 1) {
+        for (let i = scene.legs.length - 1; i >= index; i--) {
+          const receiver = scene.runners.get(i)
+          if (!receiver) continue
+          if (scene.legs[i].kind === 'pass') runs.set(receiver, scene.legs[i].to)
+          else if (scene.legs[i].owner === 'defend' && i > index) {
+            runs.set(receiver, legStart(scene.legs, scene.from, i))
+          }
+        }
+      }
       // The shooter stays where the shot was struck.
       const shooter = shooting ? scene.runners.get(shotAt - 1) : undefined
       // On a save the keeper goes to the ball.
       const saving = shooting && play?.end === 'saved' ? scene.legs[shotAt].to : undefined
+      const tempo = scene.tempo
+      const time = now / 1000
 
       for (const side of ['home', 'away'] as const) {
         const team = match[side]
         const end = facing(side, secondHalf)
         const spots = formationSpots(team, end)
         const inPossession = owner === side && t < 1
+        // Without the ball, the nearest two go at it: one presses, one covers.
+        const pressing =
+          owner && owner !== side && t < 1 && !shooting
+            ? team.onPitch
+                .filter((p) => p.position !== 'G' && scene.dots.has(p.player.id))
+                .map((p) => p.player.id)
+                .sort(
+                  (a, b) =>
+                    near(scene.dots.get(a)!.pos, scene.ball) -
+                    near(scene.dots.get(b)!.pos, scene.ball),
+                )
+                .slice(0, 2)
+            : []
         for (const p of team.onPitch) {
           const id = p.player.id
           const keeper = p.position === 'G'
@@ -198,27 +279,64 @@ export function MatchPitch(props: {
             // At kick-off everyone starts in place; a substitute runs on from the touchline.
             scene.dots.set(id, {
               pos: scene.kickedOff ? { x: spot.x, y: -0.04 } : spot,
+              vel: { x: 0, y: 0 },
+              seen: scene.ball,
+              traits: traitsOf(p),
               side,
             })
             continue
           }
-          const target =
-            id === runner
-              ? leg!.kind === 'carry'
-                ? scene.ball
-                : leg!.to
-              : id === shooter
-                ? dot.pos
-                : keeper && saving && side !== play?.side
-                  ? saving
-                  : followBall(spot, scene.ball, end, inPossession, keeper)
-          const speed =
-            id === runner ? (leg!.kind === 'carry' ? 3 : 1.8) : keeper && saving ? 2.5 : 1
-          const k = Math.min(1, dt * FOLLOW * speed)
-          dot.pos = {
-            x: dot.pos.x + (target.x - dot.pos.x) * k,
-            y: dot.pos.y + (target.y - dot.pos.y) * k,
+          const { traits } = dot
+          dot.seen = {
+            x: dot.seen.x + (scene.ball.x - dot.seen.x) * Math.min(1, dt * traits.reaction),
+            y: dot.seen.y + (scene.ball.y - dot.seen.y) * Math.min(1, dt * traits.reaction),
           }
+          const sprint = {
+            top: PACE.sprint.top * traits.speed * tempo,
+            accel: PACE.sprint.accel * traits.burst * tempo * tempo,
+          }
+          const jog = {
+            top: PACE.jog.top * traits.speed * tempo,
+            accel: PACE.jog.accel * traits.burst * tempo * tempo,
+          }
+          if (id === runner && leg!.kind === 'carry' && metres(dot.pos, scene.ball) < CONTROL) {
+            // Ball at his feet: he goes where it goes.
+            const step = { x: scene.ball.x - lastBall.x, y: scene.ball.y - lastBall.y }
+            dot.pos = {
+              x: dot.pos.x + step.x + (scene.ball.x - dot.pos.x - step.x) * Math.min(1, dt * 8),
+              y: dot.pos.y + step.y + (scene.ball.y - dot.pos.y - step.y) * Math.min(1, dt * 8),
+            }
+            dot.vel = dt > 0 ? { x: (step.x * 105) / dt, y: (step.y * 68) / dt } : dot.vel
+            continue
+          }
+          let target: Vec
+          let pace = jog
+          if (id === runner && leg!.kind === 'carry') {
+            ;[target, pace] = [scene.ball, sprint]
+          } else if (runs.has(id)) {
+            ;[target, pace] = [runs.get(id)!, sprint]
+          } else if (id === shooter) {
+            target = dot.pos
+          } else if (keeper && saving && side !== play?.side) {
+            ;[target, pace] = [saving, sprint]
+          } else if (pressing.includes(id)) {
+            const cover = pressing.indexOf(id) === 1
+            target = pressTarget(scene.ball, end, cover)
+            if (!cover) pace = sprint
+          } else {
+            target = offBallTarget({
+              player: p,
+              spot,
+              seen: dot.seen,
+              end,
+              inPossession,
+              traits,
+              time,
+            })
+          }
+          const moved = steer(dot, target, dt, pace.top, pace.accel)
+          dot.pos = moved.pos
+          dot.vel = moved.vel
         }
       }
 
