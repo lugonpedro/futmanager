@@ -18,10 +18,11 @@ export function MatchStats(props: {
   stats: Record<MatchSide, LiveStats>
   names: Record<MatchSide, string>
   kits: Record<MatchSide, Kit>
+  className?: string
 }) {
   const { home, away } = props.stats
   return (
-    <Card className="gap-3 px-4 py-3">
+    <Card className={cn('gap-3 px-4 py-3', props.className)}>
       <h2 className="font-semibold">Estatísticas</h2>
       <div className="flex justify-between text-xs text-muted-foreground">
         <span className="flex min-w-0 items-center gap-1.5">

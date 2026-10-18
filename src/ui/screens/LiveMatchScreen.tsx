@@ -31,6 +31,11 @@ import { useShownScore } from '../useShownScore.ts'
 import { announceChanges } from '../announce.ts'
 
 const VIEWS: MatchView[] = ['Campo', 'Só texto']
+/** On phones the feed, stats and ratings take turns under the pitch. */
+const PANELS = ['Lances', 'Estatísticas', 'Notas'] as const
+type Panel = (typeof PANELS)[number]
+/** A side card drawn inside the match card, without a second frame. */
+const INLINE = 'border-0 bg-transparent p-0 shadow-none'
 
 /**
  * The user's match narrated minute by minute, with its numbers and ratings
@@ -53,6 +58,7 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
   const navigate = useNavigate()
   const [matches] = useState(() => createMatchDayMatches(game))
   const [speed, setSpeed] = useState<Speed>('Normal')
+  const [panel, setPanel] = useState<Panel>('Lances')
   const [paused, setPaused] = useState(false)
   const [tick, setTick] = useState(0)
   const view = useMatchViewStore((s) => s.view)
@@ -109,6 +115,29 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
   const stats = useRevealed(liveStats(state), state.minute, reveal)
   const ratings = useRevealed(result?.ratings ?? liveRatings(state), state.minute, reveal)
   const best = result && bestPlayer(result.ratings)
+
+  const statsCard = (className?: string) => (
+    <MatchStats
+      className={className}
+      stats={stats}
+      names={{ home: state.home.club.shortName, away: state.away.club.shortName }}
+      kits={kits}
+    />
+  )
+  const ratingsCard = (className?: string) => (
+    <MatchRatings
+      className={className}
+      state={state}
+      ratings={ratings}
+      players={game.world.players}
+      side={side}
+      kits={kits}
+      best={best?.[0]}
+    />
+  )
+  const feed = (className: string) => (
+    <MatchFeed events={state.events} kits={kitsByClub} className={className} />
+  )
 
   return (
     <main className="min-h-screen p-4">
@@ -176,11 +205,21 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
 
           {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[speed]} kits={kits} />}
 
-          <MatchFeed
-            events={state.events}
-            kits={kitsByClub}
-            className={onPitch ? 'max-h-48 min-h-32' : 'max-h-[50vh] min-h-48'}
-          />
+          <div className="hidden lg:block">
+            {feed(onPitch ? 'max-h-48 min-h-32' : 'max-h-[50vh] min-h-48')}
+          </div>
+          {/* Phones: the feed, stats and ratings take turns right under the pitch. */}
+          <section className="flex flex-col gap-3 lg:hidden">
+            <Choices
+              ariaLabel="Painel da partida"
+              options={PANELS}
+              value={panel}
+              onChange={setPanel}
+            />
+            {panel === 'Lances' && feed(onPitch ? 'max-h-48 min-h-32' : 'max-h-[50vh] min-h-48')}
+            {panel === 'Estatísticas' && statsCard(INLINE)}
+            {panel === 'Notas' && ratingsCard(INLINE)}
+          </section>
 
           <MatchControls
             state={state}
@@ -190,20 +229,9 @@ function LiveRound({ game, day }: { game: GameState; day: MatchDay }) {
           />
         </Card>
 
-        <aside className="flex flex-col gap-4">
-          <MatchStats
-            stats={stats}
-            names={{ home: state.home.club.shortName, away: state.away.club.shortName }}
-            kits={kits}
-          />
-          <MatchRatings
-            state={state}
-            ratings={ratings}
-            players={game.world.players}
-            side={side}
-            kits={kits}
-            best={best?.[0]}
-          />
+        <aside className="hidden flex-col gap-4 lg:flex">
+          {statsCard()}
+          {ratingsCard()}
         </aside>
       </div>
     </main>

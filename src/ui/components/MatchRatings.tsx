@@ -26,6 +26,7 @@ export function MatchRatings(props: {
   side: MatchSide
   kits: Record<MatchSide, Kit>
   best?: string
+  className?: string
 }) {
   const { state, ratings } = props
   const [side, setSide] = useState(props.side)
@@ -36,7 +37,7 @@ export function MatchRatings(props: {
   const booked = new Set(team.onPitch.filter((p) => p.booked).map((p) => p.player.id))
 
   return (
-    <Card className="gap-3 px-4 py-3">
+    <Card className={cn('gap-3 px-4 py-3', props.className)}>
       <div className="flex items-center justify-between gap-2">
         <h2 className="flex items-center gap-2 font-semibold">
           Notas

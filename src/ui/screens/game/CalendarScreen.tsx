@@ -422,10 +422,17 @@ function GameEntry(props: { game: GameState; fixture: Fixture; compact?: boolean
         <span className="text-muted-foreground" title={home ? 'Em casa' : 'Fora'}>
           {home ? 'C' : 'F'}
         </span>
-        <ClubName club={opponent} short={compact} />
+        {/* With a score in the line, the full name would be cut on phones. */}
+        <ClubName club={opponent} short={compact || outcome !== undefined} />
       </span>
       {outcome && (
-        <span className={cn('tabular-nums', !compact && 'ml-auto', OUTCOME_STYLE[outcome])}>
+        <span
+          className={cn(
+            'whitespace-nowrap tabular-nums',
+            !compact && 'ml-auto',
+            OUTCOME_STYLE[outcome],
+          )}
+        >
           {outcome} {scored}-{conceded}
           {result?.penalties && ' pên.'}
         </span>

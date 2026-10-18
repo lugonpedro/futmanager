@@ -118,6 +118,8 @@ O botão "Podem treinar" passa a se chamar "Escolher treino", para ficar claro q
 
 **Código**: o `<header>` do `GameLayout.tsx`, com `formatMoney(club.cash)` em versão curta. Testar em tela de 360 px, a menor comum, para o título da página não sumir.
 
+**Como ficou (PR 3)**: como proposto. Em 360 px cabe "Competições", o título mais longo, ao lado de "SCCP · 26/06 · R$ 11,3 mi".
+
 ## 6. Partida ao vivo em abas
 
 **Hoje** (visto no código, sem print desta vez): no computador as estatísticas e as notas ficam numa coluna à direita (`LiveMatchScreen.tsx`, `lg:grid-cols-[minmax(0,1fr)_20rem]`). No celular elas descem para baixo do campo, dos lances e dos controles, e é preciso rolar a tela no meio do jogo para ver quem está mal.
@@ -126,6 +128,8 @@ O botão "Podem treinar" passa a se chamar "Escolher treino", para ficar claro q
 
 **Código**: `Tabs` do shadcn em volta de `MatchFeed`, `MatchStats` e `MatchRatings`, só abaixo de `lg`. No computador continua como está.
 
+**Como ficou (PR 3)**: as abas ficaram logo abaixo do campo, e os controles foram para baixo delas. Nos prints, o cartão de substituições ocupa quase uma tela inteira, e com ele em cima os lances iam parar longe do campo.
+
 ## 7. Nomes cortados no calendário
 
 **Hoje**: na lista de jogos do celular, quando a linha tem o resultado e os pênaltis, o nome do adversário corta ("Flamen...", print `calendario-celular.png`).
@@ -133,6 +137,8 @@ O botão "Podem treinar" passa a se chamar "Escolher treino", para ficar claro q
 **Proposta**: no celular, usar a sigla do adversário quando a linha tem placar, e o nome inteiro nos jogos que ainda vão acontecer.
 
 **Código**: a linha do dia na versão de celular do `CalendarScreen.tsx`.
+
+**Como ficou (PR 3)**: como proposto, e o placar com pênaltis ("V 1-1 pên.") não quebra mais linha.
 
 ## 8. Botões pequenos demais para o dedo
 
