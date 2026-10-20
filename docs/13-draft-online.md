@@ -23,18 +23,19 @@ A fantasia atual é solitária: cada um monta um time de 100 moedas, e os amigos
 
 Quem cria escolhe (com os padrões entre parênteses):
 
-| Opção                  | Valores                                                                                                            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Pacote                 | Os pacotes do jogo (Brasileirão 2026); a Champions entra quando o pacote existir                                   |
-| Times                  | 2 a 12 pessoas; robôs completam até o número de times escolhido (8), sempre um número par                          |
-| Elenco                 | 16, 18 ou 20 jogadores (18), com no mínimo 2 goleiros                                                              |
-| Tempo por escolha      | 30, 45, 60 ou 90 segundos (45)                                                                                     |
-| Reservas no automático | Liga ou desliga (desligado): as escolhas depois da 11ª saem da fila de cada um, para o draft acabar mais rápido    |
-| Data e hora do draft   | Marcada pelo dono; dá para começar antes se todos estiverem na sala                                                |
-| Turnos                 | Só ida, ida e volta (padrão) ou dois returnos                                                                      |
-| Prazo de segurança     | Depois de quanto tempo esperando o "Pronto" o dono pode jogar a rodada mesmo assim: 6, 12, 24 (padrão) ou 48 horas |
-| Lesões                 | Normais (padrão), curtas (no máximo 2 rodadas) ou desligadas                                                       |
-| Trocas                 | Ligadas até dois terços da liga (padrão), ligadas a temporada toda ou desligadas                                   |
+| Opção                  | Valores                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Pacote                 | Os pacotes do jogo (Brasileirão 2026); a Champions entra quando o pacote existir                                                                                         |
+| Times                  | 2 a 12 pessoas; robôs completam até o número de times escolhido (8), sempre um número par                                                                                |
+| Elenco                 | 16, 18 ou 20 jogadores (18), com no mínimo 2 goleiros                                                                                                                    |
+| Ordem do draft         | Serpentina (padrão) ou serpentina invertida na terceira volta, que tira quase toda a vantagem de escolher primeiro (decidido em 20/10/2026, depois das simulações do D1) |
+| Tempo por escolha      | 30, 45, 60 ou 90 segundos (45)                                                                                                                                           |
+| Reservas no automático | Liga ou desliga (desligado): as escolhas depois da 11ª saem da fila de cada um, para o draft acabar mais rápido                                                          |
+| Data e hora do draft   | Marcada pelo dono; dá para começar antes se todos estiverem na sala                                                                                                      |
+| Turnos                 | Só ida, ida e volta (padrão) ou dois returnos                                                                                                                            |
+| Prazo de segurança     | Depois de quanto tempo esperando o "Pronto" o dono pode jogar a rodada mesmo assim: 6, 12, 24 (padrão) ou 48 horas                                                       |
+| Lesões                 | Normais (padrão), curtas (no máximo 2 rodadas) ou desligadas                                                                                                             |
+| Trocas                 | Ligadas até dois terços da liga (padrão), ligadas a temporada toda ou desligadas                                                                                         |
 
 O convite é o mesmo das ligas da fantasia: link com código de 8 letras e números. Cada amigo, ao entrar, dá nome, sigla, cores e escudo ao time (os componentes de escudo e camisa da carreira servem: `ClubCrest`, `KitSwatch`, `ManagerCrest`).
 
