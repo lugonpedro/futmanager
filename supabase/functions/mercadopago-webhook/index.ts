@@ -1,10 +1,14 @@
-// Receives Mercado Pago's notifications and grants the season pass once a
+// Receives Mercado Pago's notifications and grants the 30-day pass once a
 // payment is approved. A notification only carries the payment's id, so the
 // payment is read back from the API with the access token: that answer, not
 // the notification, decides. Granting twice changes nothing, since Mercado
 // Pago may notify the same payment more than once.
 import { createClient } from 'npm:@supabase/supabase-js@2'
-import { passPayment, verifyMercadoPagoSignature } from '../../../src/cloud/mercadopago.ts'
+import {
+  PASS_DAYS,
+  passPayment,
+  verifyMercadoPagoSignature,
+} from '../../../src/cloud/mercadopago.ts'
 
 Deno.serve(async (req) => {
   const url = new URL(req.url)
@@ -46,16 +50,14 @@ Deno.serve(async (req) => {
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
     { auth: { persistSession: false } },
   )
-  const { error } = await db.from('fantasy_passes').upsert(
-    {
-      user_id: paid.userId,
-      season_id: paid.seasonId,
-      provider: 'mercadopago',
-      payment_id: paid.paymentId,
-      amount_cents: paid.amountCents,
-    },
-    { onConflict: 'user_id,season_id', ignoreDuplicates: true },
-  )
+  // grant_pass adds the days after the end of a pass still running.
+  const { error } = await db.rpc('grant_pass', {
+    target: paid.userId,
+    pass_provider: 'mercadopago',
+    pass_payment_id: paid.paymentId,
+    pass_amount_cents: paid.amountCents,
+    days: PASS_DAYS,
+  })
   if (error) {
     console.error(error)
     return new Response('error', { status: 500 })

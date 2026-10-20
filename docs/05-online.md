@@ -1,6 +1,6 @@
 # Jogo online e pagamento
 
-> Desligado em 20/10/2026: a fantasia saiu do jogo para dar lugar ao draft online entre amigos (plano 13). A migração `20261023000000_desliga_fantasia.sql` para os agendamentos e a `20261024000000_apaga_fantasia.sql` apaga as tabelas, menos `fantasy_passes` e `push_subscriptions`; o código continua no histórico do git.
+> Desligado em 20/10/2026: a fantasia saiu do jogo para dar lugar ao draft online entre amigos (plano 13). A migração `20261023000000_desliga_fantasia.sql` para os agendamentos e a `20261024000000_apaga_fantasia.sql` apaga as tabelas, menos `fantasy_passes` e `push_subscriptions`; o código continua no histórico do git. A `20261025000000_passes.sql` renomeia `fantasy_passes` para `passes`, agora um passe de 30 dias em vez de um por temporada (veja "Passe de cortesia e vitalício" abaixo).
 
 Continuação das fases 13 e 14 de [02-plano-pos-mvp.md](02-plano-pos-mvp.md). O primeiro modo online é um jogo de fantasia no estilo do Cartola, mas com as partidas simuladas pelo nosso motor. A liga de carreira entre amigos (a fase 13 original) vem depois, aproveitando o que este modo deixa pronto.
 
@@ -188,35 +188,25 @@ Se mudar o preço, mudar só `PASS_PRICE_CENTS`; a tela e o checkout leem dali.
 
 ### Passe de cortesia e vitalício
 
-O passe vale por temporada (`fantasy_passes` tem uma linha por pessoa e temporada). Os comandos abaixo rodam no SQL Editor; troque `<e-mail>` pelo e-mail da conta.
+Desde 20/10/2026 o passe vale por tempo: `passes` tem uma linha por pagamento, com `starts_at` e `ends_at`, e a função `grant_pass` soma os dias depois do fim do passe que ainda está valendo. O passe está ativo quando alguma linha cobre o momento atual (`has_pass()`). Os comandos abaixo rodam no SQL Editor; troque `<e-mail>` pelo e-mail da conta.
 
-Passe da temporada que está rolando:
-
-```sql
-insert into fantasy_passes (user_id, season_id, provider, payment_id, amount_cents)
-select u.id, s.id, 'cortesia', 'vitalicio-' || s.id || '-' || u.id, 0
-from auth.users u, fantasy_seasons s
-where u.email = '<e-mail>' and s.status = 'em_andamento';
-```
-
-Passe vitalício: um gatilho que dá o passe de cortesia em cada temporada nova. Para mais de uma pessoa, use `u.email in ('<e-mail 1>', '<e-mail 2>')`.
+Passe de cortesia de 30 dias (somado ao fim do passe atual, se houver):
 
 ```sql
-create function public.passe_vitalicio() returns trigger
-language plpgsql security definer set search_path = '' as $$
-begin
-  insert into public.fantasy_passes (user_id, season_id, provider, payment_id, amount_cents)
-  select u.id, new.id, 'cortesia', 'vitalicio-' || new.id || '-' || u.id, 0
-  from auth.users u where u.email = '<e-mail>'
-  on conflict do nothing;
-  return new;
-end $$;
-
-create trigger passe_vitalicio after insert on public.fantasy_seasons
-  for each row execute function public.passe_vitalicio();
+select public.grant_pass(u.id, 'cortesia', 'cortesia-' || u.id || '-' || now()::date, 0, 30)
+from auth.users u where u.email = '<e-mail>';
 ```
 
-O gatilho fica só no banco, fora das migrações: um `supabase db reset` apaga e ele precisa ser criado de novo. Para trocar os e-mails, rode `create or replace function` com a lista nova. Para desligar: `drop trigger passe_vitalicio on fantasy_seasons; drop function passe_vitalicio();`.
+Passe vitalício: uma linha que vence em `infinity`, sem gatilho. Para mais de uma pessoa, use `u.email in ('<e-mail 1>', '<e-mail 2>')`.
+
+```sql
+insert into public.passes (user_id, provider, payment_id, amount_cents, starts_at, ends_at)
+select u.id, 'cortesia', 'vitalicio-' || u.id, 0, now(), 'infinity'
+from auth.users u where u.email = '<e-mail>'
+on conflict do nothing;
+```
+
+Para tirar o vitalício: `delete from passes where payment_id = 'vitalicio-' || '<id da conta>';`. O reembolso continua à mão: devolver no painel do Mercado Pago e apagar a linha do pagamento em `passes`.
 
 ## O7: avisos por notificação
 

@@ -1,9 +1,12 @@
-// Pure helpers for selling the season pass through Mercado Pago's Checkout Pro.
+// Pure helpers for selling the pass through Mercado Pago's Checkout Pro.
 // They run in the Supabase functions (Deno) and in the tests (Node): only Web
 // Crypto.
 
-/** What the season pass costs, in cents. The screen and the checkout both read it. */
+/** What the pass costs, in cents. The screen and the checkout both read it. */
 export const PASS_PRICE_CENTS = 500
+
+/** How many days one payment adds to the pass. */
+export const PASS_DAYS = 30
 
 const hex = (bytes: ArrayBuffer) =>
   [...new Uint8Array(bytes)].map((b) => b.toString(16).padStart(2, '0')).join('')
@@ -67,24 +70,23 @@ export async function verifyMercadoPagoSignature(params: {
 /** The body Mercado Pago's API takes to open a Checkout Pro page for the pass. */
 export function passPreference(params: {
   userId: string
-  seasonId: number
   email?: string
   siteUrl: string
   notificationUrl: string
 }) {
-  const page = `${params.siteUrl}/fantasia/passe`
+  const page = `${params.siteUrl}/passe`
   return {
     items: [
       {
-        id: `passe-${params.seasonId}`,
-        title: 'Passe da temporada',
+        id: `passe-${PASS_DAYS}-dias`,
+        title: `Passe de ${PASS_DAYS} dias`,
         quantity: 1,
         currency_id: 'BRL',
         unit_price: PASS_PRICE_CENTS / 100,
       },
     ],
-    external_reference: `${params.userId}:${params.seasonId}`,
-    metadata: { user_id: params.userId, season_id: params.seasonId },
+    external_reference: params.userId,
+    metadata: { user_id: params.userId },
     ...(params.email ? { payer: { email: params.email } } : {}),
     back_urls: {
       success: `${page}?pagamento=ok`,
@@ -102,7 +104,6 @@ export function passPreference(params: {
 /** A paid pass, as the payment read back from Mercado Pago tells it. */
 export type PassPayment = {
   userId: string
-  seasonId: number
   paymentId: string
   amountCents: number
 }
@@ -117,12 +118,11 @@ type Payment = {
 /** The pass a payment pays for, if it was approved. Pix may stay pending for a while first. */
 export function passPayment(payment: Payment): PassPayment | undefined {
   if (payment.status !== 'approved' || payment.id === undefined) return undefined
-  const [userId, season] = (payment.external_reference ?? '').split(':')
-  const seasonId = Number(season)
-  if (!userId || !Number.isInteger(seasonId)) return undefined
+  // The season passes carried `<user>:<season>`; only the user counts now.
+  const [userId] = (payment.external_reference ?? '').split(':')
+  if (!userId) return undefined
   return {
     userId,
-    seasonId,
     paymentId: String(payment.id),
     amountCents: Math.round((payment.transaction_amount ?? 0) * 100),
   }
