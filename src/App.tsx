@@ -21,6 +21,9 @@ import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
 import { NotFoundScreen } from './ui/screens/NotFoundScreen.tsx'
 import { PrivacyScreen } from './ui/screens/PrivacyScreen.tsx'
+import { RoomInviteScreen } from './ui/screens/RoomInviteScreen.tsx'
+import { RoomScreen } from './ui/screens/RoomScreen.tsx'
+import { RoomsScreen } from './ui/screens/RoomsScreen.tsx'
 
 /** Pages that were merged into others, kept so old bookmarks and the installed app still land. */
 const MOVED: Record<string, string> = {
@@ -45,6 +48,9 @@ export default function App() {
         <Route path="/conta/:tab?" element={<AccountScreen />} />
         <Route path="/nuvem" element={<CloudScreen />} />
         <Route path="/fantasia/*" element={<Navigate to="/" replace />} />
+        <Route path="/salas" element={<RoomsScreen />} />
+        <Route path="/sala/convite/:code" element={<RoomInviteScreen />} />
+        <Route path="/sala/:id" element={<RoomScreen />} />
         <Route path="/aprenda/:tab?" element={<LearnScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />
