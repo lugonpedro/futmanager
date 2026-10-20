@@ -1,11 +1,13 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import '@fontsource-variable/pixelify-sans';
+@import '@fontsource/press-start-2p';
 
 @custom-variant dark (&:is(.dark *));
 
 /* Colour tokens: a pitch-green theme in light and dark. */
 :root {
-  --radius: 0.625rem;
+  --radius: 0;
   --background: oklch(0.975 0.008 150);
   --foreground: oklch(0.2 0.03 155);
   --card: oklch(1 0 0);
@@ -30,6 +32,8 @@
   --pitch: oklch(0.52 0.12 150);
   --pitch-dark: oklch(0.44 0.11 150);
   --sidebar: oklch(0.96 0.015 150);
+  /* Hard drop shadow of the 8-bit look. */
+  --pixel-shadow: oklch(0.2 0.03 155 / 0.35);
 }
 
 .dark {
@@ -56,13 +60,27 @@
   --pitch: oklch(0.45 0.11 150);
   --pitch-dark: oklch(0.37 0.09 150);
   --sidebar: oklch(0.2 0.028 160);
+  --pixel-shadow: oklch(0 0 0 / 0.6);
 }
 
+/* 8-bit look: square corners, hard offset shadows and pixel fonts. */
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: 'Pixelify Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: 'Press Start 2P', 'Pixelify Sans Variable', monospace;
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --shadow-2xs: 1px 1px 0 0 var(--pixel-shadow);
+  --shadow-xs: 2px 2px 0 0 var(--pixel-shadow);
+  --shadow-sm: 3px 3px 0 0 var(--pixel-shadow);
+  --shadow: 3px 3px 0 0 var(--pixel-shadow);
+  --shadow-md: 4px 4px 0 0 var(--pixel-shadow);
+  --shadow-lg: 5px 5px 0 0 var(--pixel-shadow);
+  --shadow-xl: 6px 6px 0 0 var(--pixel-shadow);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -94,5 +112,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: none;
+  }
+  /* Titles in the blocky arcade font, shrunk to the x-height of the body text so sizes still fit. */
+  h1,
+  h2,
+  h3,
+  [data-slot='card-title'],
+  [data-slot='dialog-title'],
+  [data-slot='alert-dialog-title'],
+  [data-slot='sheet-title'] {
+    font-family: var(--font-pixel);
+    font-weight: 400;
+    font-size-adjust: 0.5;
+    line-height: 1.6;
   }
 }

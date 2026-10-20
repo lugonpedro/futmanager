@@ -19,6 +19,7 @@ import { LearnScreen } from './ui/screens/LearnScreen.tsx'
 import { LegalScreen } from './ui/screens/LegalScreen.tsx'
 import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
+import { NotFoundScreen } from './ui/screens/NotFoundScreen.tsx'
 import { PrivacyScreen } from './ui/screens/PrivacyScreen.tsx'
 
 /** Pages that were merged into others, kept so old bookmarks and the installed app still land. */
@@ -59,6 +60,7 @@ export default function App() {
           ))}
         </Route>
         <Route path="/jogo/partida" element={<LiveMatchScreen />} />
+        <Route path="*" element={<NotFoundScreen />} />
       </Routes>
       <Toaster position="top-center" closeButton visibleToasts={MAX_TOASTS} />
       <ConfirmHost />
