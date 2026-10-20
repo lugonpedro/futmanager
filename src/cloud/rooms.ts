@@ -1,5 +1,5 @@
 import type { TeamIdentity } from '../engine/room/team.ts'
-import type { RoomOptions } from '../engine/room/types.ts'
+import type { RoomOptions, SquadShape } from '../engine/room/types.ts'
 import { supabase } from './client.ts'
 
 /** Where a room is: waiting for the draft, drafting, playing its league, or over. */
@@ -17,6 +17,16 @@ export type Room = {
   draftAt: Date
   createdAt: Date
   members: number
+  /** Set once the draft starts. */
+  draft?: {
+    /** Places in the order of the first round. */
+    order: number[]
+    shape: SquadShape
+    /** Picks made, which is also the number of the next one. */
+    pickNo: number
+    /** When the clock of the pick under way runs out; none once the draft is over. */
+    deadline?: Date
+  }
 }
 
 /** A person in a room, with their team. */
@@ -55,6 +65,12 @@ const MESSAGES: Record<string, string> = {
   dono: 'Só quem criou a sala pode fazer isso.',
   'dono-sai': 'Quem criou a sala não sai dela: apague a sala.',
   poucos: 'A sala já tem mais pessoas do que esse número de times.',
+  'sem-draft': 'O draft não está acontecendo agora.',
+  vez: 'Ainda não é a sua vez.',
+  jogador: 'Esse jogador não está na lista do draft.',
+  escolhido: 'Esse jogador já foi escolhido.',
+  goleiros: 'Faltam goleiros: o elenco precisa de 2.',
+  fila: 'A fila tem no máximo 200 jogadores.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */
@@ -87,11 +103,15 @@ export type RoomRow = {
   trades: string
   draft_at: string
   created_at: string
+  pick_order: number[] | null
+  squad_shape: SquadShape | null
+  pick_no: number
+  pick_deadline: string | null
   room_members: { count: number }[]
 }
 
 const ROOM_COLUMNS =
-  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, room_members(count)'
+  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, room_members(count)'
 
 /** A room as the database keeps it, turned into the app's shape. */
 export function toRoom(row: RoomRow): Room {
@@ -116,6 +136,15 @@ export function toRoom(row: RoomRow): Room {
     draftAt: new Date(row.draft_at),
     createdAt: new Date(row.created_at),
     members: row.room_members[0]?.count ?? 0,
+    draft:
+      row.pick_order && row.squad_shape
+        ? {
+            order: row.pick_order,
+            shape: row.squad_shape,
+            pickNo: row.pick_no,
+            deadline: row.pick_deadline ? new Date(row.pick_deadline) : undefined,
+          }
+        : undefined,
   }
 }
 

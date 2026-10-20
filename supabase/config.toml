@@ -417,3 +417,7 @@ enabled = true
 # Called by Mercado Pago, which signs each notification instead of sending a user's token.
 [functions.mercadopago-webhook]
 verify_jwt = false
+
+# Called by pg_cron with a shared secret, and by the room's owner, whose token the function checks.
+[functions.room-draft]
+verify_jwt = false

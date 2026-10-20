@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
-import { BotIcon, CopyIcon, CrownIcon, RefreshCwIcon, XIcon } from 'lucide-react'
+import { BotIcon, CopyIcon, CrownIcon, PlayIcon, RefreshCwIcon, XIcon } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { cloudEnabled } from '../../cloud/client.ts'
+import { startDraftNow, watchRoom } from '../../cloud/draft.ts'
 import {
   deleteRoom,
   leaveRoom,
@@ -23,7 +24,9 @@ import {
   TeamCrest,
   TeamFields,
 } from '../components/RoomParts.tsx'
+import { DraftView, QueueBeforeDraft } from '../components/Draft.tsx'
 import { confirm } from '../confirm.ts'
+import { usePackPool } from '../usePackPool.ts'
 import {
   checkRoomDraft,
   describeOptions,
@@ -79,19 +82,60 @@ export function RoomScreen() {
       ) : !loaded || !user ? (
         <Note>Carregando…</Note>
       ) : (
-        <WaitingRoom {...loaded} userId={user.id} reload={reload} />
+        <RoomBody {...loaded} userId={user.id} reload={reload} />
       )}
     </RoomPage>
   )
 }
 
-function WaitingRoom(props: Loaded & { userId: string; reload: () => Promise<void> }) {
+type BodyProps = Loaded & { userId: string; reload: () => Promise<void> }
+
+function RoomBody(props: BodyProps) {
+  const { room } = props
+  if (room.status !== 'draft') return <WaitingRoom {...props} />
+  if (!room.draft)
+    return <Note>Preparando o draft: montando a lista de jogadores e sorteando a ordem…</Note>
+  return <DraftView room={room} userId={props.userId} reload={props.reload} />
+}
+
+function WaitingRoom(props: BodyProps) {
   const { room, members, userId } = props
   const navigate = useNavigate()
   const owner = room.ownerId === userId
   const waiting = room.status === 'espera'
   const me = members.find((m) => m.userId === userId)
   const robots = Math.max(0, room.options.teams - members.length)
+  const pool = usePackPool(waiting ? room.pack : undefined)
+  const [starting, setStarting] = useState(false)
+
+  // The owner starting the draft, or the time coming, turns this page into the draft.
+  const { reload } = props
+  useEffect(
+    () =>
+      waiting ? watchRoom(room.id, { pick: () => {}, room: reload, team: () => {} }) : undefined,
+    [room.id, waiting, reload],
+  )
+
+  const start = async () => {
+    const ok = await confirm({
+      title: 'Começar o draft agora?',
+      description:
+        robots > 0
+          ? `Ainda faltam ${robots} ${robots === 1 ? 'pessoa' : 'pessoas'}: ${robots === 1 ? 'a vaga vira robô' : 'as vagas viram robôs'}, e ninguém mais entra na sala.`
+          : 'Ninguém mais entra na sala depois disso.',
+      action: 'Começar o draft',
+    })
+    if (!ok) return
+    setStarting(true)
+    try {
+      await startDraftNow(room.id)
+      await props.reload()
+    } catch (error) {
+      toast.error(messageOf(error))
+    } finally {
+      setStarting(false)
+    }
+  }
 
   const remove = async (member: RoomMember) => {
     const ok = await confirm({
@@ -146,8 +190,14 @@ function WaitingRoom(props: Loaded & { userId: string; reload: () => Promise<voi
           </CardDescription>
         </CardHeader>
         {waiting && (
-          <CardContent>
+          <CardContent className="flex flex-col gap-4">
             <Invite code={room.inviteCode} />
+            {owner && (
+              <Button className="self-start" onClick={start} disabled={starting}>
+                <PlayIcon />
+                Começar o draft agora
+              </Button>
+            )}
           </CardContent>
         )}
       </Card>
@@ -203,6 +253,8 @@ function WaitingRoom(props: Loaded & { userId: string; reload: () => Promise<voi
           </ul>
         </CardContent>
       </Card>
+
+      {waiting && pool && <QueueBeforeDraft room={room} userId={userId} pool={pool} />}
 
       {me && waiting && (
         <MyTeam roomId={room.id} team={me} onSaved={props.reload} key={JSON.stringify(me)} />
