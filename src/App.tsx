@@ -7,11 +7,6 @@ import { CUP_SLUG } from './ui/routes.ts'
 import { AccountScreen } from './ui/screens/AccountScreen.tsx'
 import { CloudScreen } from './ui/screens/CloudScreen.tsx'
 import { EditorScreen } from './ui/screens/EditorScreen.tsx'
-import { FantasyScreen } from './ui/screens/FantasyScreen.tsx'
-import { FantasyInviteScreen } from './ui/screens/FantasyInviteScreen.tsx'
-import { FantasyLeagueScreen } from './ui/screens/FantasyLeagueScreen.tsx'
-import { FantasyPassScreen } from './ui/screens/FantasyPassScreen.tsx'
-import { FantasyRoundScreen } from './ui/screens/FantasyRoundScreen.tsx'
 import { CalendarScreen } from './ui/screens/game/CalendarScreen.tsx'
 import { ClubScreen } from './ui/screens/game/ClubScreen.tsx'
 import { CompetitionsScreen, OwnDivision } from './ui/screens/game/CompetitionsScreen.tsx'
@@ -48,11 +43,7 @@ export default function App() {
         <Route path="/privacidade" element={<PrivacyScreen />} />
         <Route path="/conta/:tab?" element={<AccountScreen />} />
         <Route path="/nuvem" element={<CloudScreen />} />
-        <Route path="/fantasia" element={<FantasyScreen />} />
-        <Route path="/fantasia/rodada/:round" element={<FantasyRoundScreen />} />
-        <Route path="/fantasia/liga/:id" element={<FantasyLeagueScreen />} />
-        <Route path="/fantasia/convite/:code" element={<FantasyInviteScreen />} />
-        <Route path="/fantasia/passe" element={<FantasyPassScreen />} />
+        <Route path="/fantasia/*" element={<Navigate to="/" replace />} />
         <Route path="/aprenda/:tab?" element={<LearnScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />

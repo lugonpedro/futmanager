@@ -414,14 +414,6 @@ enabled = true
 # and column/key alignment. Set to "null" to emit raw, unformatted SQL.
 # format_options = "{\"keywordCase\":\"upper\",\"indent\":2,\"maxWidth\":180,\"commaStyle\":\"trailing\"}"
 
-# Called by pg_cron, which sends the shared secret instead of a user's token.
-[functions.fantasy-round]
-verify_jwt = false
-
 # Called by Mercado Pago, which signs each notification instead of sending a user's token.
 [functions.mercadopago-webhook]
-verify_jwt = false
-
-# Called by pg_cron with the shared secret, like fantasy-round.
-[functions.fantasy-notify]
 verify_jwt = false

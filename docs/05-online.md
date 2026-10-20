@@ -1,5 +1,7 @@
 # Jogo online e pagamento
 
+> Desligado em 20/10/2026: a fantasia saiu do jogo para dar lugar ao draft online entre amigos (plano 13). A migração `20261023000000_desliga_fantasia.sql` para os agendamentos; o código continua no histórico do git.
+
 Continuação das fases 13 e 14 de [02-plano-pos-mvp.md](02-plano-pos-mvp.md). O primeiro modo online é um jogo de fantasia no estilo do Cartola, mas com as partidas simuladas pelo nosso motor. A liga de carreira entre amigos (a fase 13 original) vem depois, aproveitando o que este modo deixa pronto.
 
 ## Decisões

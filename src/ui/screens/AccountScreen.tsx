@@ -28,7 +28,6 @@ import {
 } from '../../store/account.ts'
 import { ConflictDialog } from '../components/ConflictDialog.tsx'
 import { ManagerCrest } from '../components/ManagerCrest.tsx'
-import { PassPanel } from '../components/SeasonPass.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { MANAGER_CREST_COLORS } from '../manager.ts'
 import { confirm } from '../confirm.ts'
@@ -42,12 +41,11 @@ const messageOf = (error: unknown) => (error instanceof Error ? error.message : 
 /** The account page's tabs, by their address under /conta. */
 const TABS = {
   perfil: 'Perfil',
-  passe: 'Passe',
 }
 
 type Tab = keyof typeof TABS
 
-/** Signing in, then the manager's profile, cloud saves and account, and the season pass. */
+/** Signing in, then the manager's profile, cloud saves and account. */
 export function AccountScreen() {
   const { ready, user } = useAccountStore()
   const { tab = 'perfil' } = useParams()
@@ -95,9 +93,6 @@ export function AccountScreen() {
             <ProfileCard />
             <CloudCard />
             <AccountCard email={user.email} />
-          </TabsContent>
-          <TabsContent value="passe">
-            <PassPanel userId={user.id} />
           </TabsContent>
           <ConflictDialog />
         </Tabs>

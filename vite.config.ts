@@ -35,7 +35,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}'],
         navigateFallback: 'index.html',
-        // The fantasy game's push notifications.
+        // Push notifications, kept for the online rooms.
         importScripts: ['push-sw.js'],
       },
     }),

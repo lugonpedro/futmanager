@@ -1,7 +1,4 @@
 import { BOARD } from '../engine/career/board.ts'
-import { BUDGET, MARKET_CLOSE_UTC } from '../engine/fantasy/team.ts'
-import { expectedPoints, PRICES, startingPrice } from '../engine/fantasy/prices.ts'
-import { SCORING } from '../engine/fantasy/scoring.ts'
 import { ECONOMY } from '../engine/finance/economy.ts'
 import { SPONSOR } from '../engine/finance/sponsors.ts'
 import { CLUBS_PER_DIVISION, SQUAD_SHAPE } from '../engine/generate/world.ts'
@@ -48,7 +45,7 @@ import {
 } from './format.ts'
 
 /*
- * The Aprenda page: how the career and the online fantasy game work. The text
+ * The Aprenda page: how the career works. The text
  * is written here by hand, but every number comes from the engine's own
  * constants, so tuning the game never leaves the page out of date.
  */
@@ -69,22 +66,10 @@ export const CAREER_SECTIONS = [
   'financas',
 ] as const
 
-export const FANTASY_SECTIONS = [
-  'o-que-e',
-  'rodada',
-  'time',
-  'pontuacao',
-  'precos',
-  'mundo',
-  'ligas',
-] as const
-
 export type CareerSection = (typeof CAREER_SECTIONS)[number]
-export type FantasySection = (typeof FANTASY_SECTIONS)[number]
 
 /** A place on the page another screen can link to. */
-export type LearnAnchor =
-  { tab: 'carreira'; section?: CareerSection } | { tab: 'fantasia'; section?: FantasySection }
+export type LearnAnchor = { tab: 'carreira'; section?: CareerSection }
 
 export type LearnTable = { head: string[]; rows: string[][] }
 
@@ -109,24 +94,6 @@ export function listText(items: readonly (string | number)[], and = 'e'): string
 
 const monthName = (date: string) => MONTH_NAMES[dateParts(date).month - 1]
 
-/** Brasília is three hours behind UTC all year. */
-const BRASILIA_OFFSET = 3
-
-/** "20h30", "21h". */
-function clock(hour: number, minute = 0): string {
-  const h = (((hour - BRASILIA_OFFSET) % 24) + 24) % 24
-  return minute ? `${h}h${String(minute).padStart(2, '0')}` : `${h}h`
-}
-
-/**
- * The fantasy reminders go out at 22h30 UTC and the round is played at 0h UTC,
- * as scheduled in supabase/migrations (temporada_oficial and avisos).
- */
-const FANTASY_SCHEDULE_UTC = { round: 0, reminder: { hour: 22, minute: 30 } }
-
-/** Most members a fantasy league takes, and leagues one season pass creates (supabase/migrations). */
-const LEAGUE_LIMITS = { members: 100, perPass: 10 }
-
 const seasonYear = 2027
 const leagueRounds = 2 * (CLUBS_PER_DIVISION - 1)
 const dates = seasonDates(seasonYear, leagueRounds, CUP_ROUNDS)
@@ -138,14 +105,6 @@ const positionList = listText(positions.map((p) => POSITION_NAMES[p].toLowerCase
 const roleList = (Object.keys(ROLE_SECTORS) as TacticalRole[]).map(
   (role) => `${TACTICAL_ROLE_NAMES[role].toLowerCase()} (${role})`,
 )
-
-/** "Goleiro 10, zagueiro 9...": a value for each position, in position order. */
-const byPosition = (values: Record<Position, number>, skipZero = false) =>
-  listText(
-    positions
-      .filter((p) => !skipZero || values[p] !== 0)
-      .map((p) => `${POSITION_NAMES[p].toLowerCase()} ${num(values[p])}`),
-  )
 
 export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
   comecando: {
@@ -297,85 +256,6 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       `Patrocínios menores (${listText(Object.values(SPONSOR_SLOT_NAMES))}): todo dia 1º, de janeiro a ${MONTH_NAMES[SPONSOR.lastOfferMonth - 1]}, cada espaço vazio pode receber uma oferta, que espera ${SPONSOR.offerDays} dias pela resposta.`,
       `Um clube novo começa com uns ${ECONOMY.startingMonthsOfWages} meses de salário no caixa. Caixa negativo não demite, mas aperta: venda jogadores ou mexa no ingresso.`,
       'No fim da temporada: premiação, bônus do patrocínio, todo mundo um ano mais velho, aposentadorias, jovens da base, contratos vencidos, acesso, rebaixamento e uma tabela nova. Se foi demitido, você escolhe uma das propostas.',
-    ],
-  },
-}
-
-const goalPoints = byPosition(SCORING.goal)
-const cleanSheet = byPosition(SCORING.cleanSheet, true)
-
-export const FANTASY_GUIDE: Record<FantasySection, LearnContent> = {
-  'o-que-e': {
-    title: 'O que é',
-    items: [
-      'Um Brasileirão oficial roda no servidor, igual para todo mundo: o mundo do pacote Brasileirão, com todos os clubes nas mãos da IA.',
-      'Os pontos vêm só do jogo simulado pelo motor, nunca do jogo de verdade. Quem vai bem é quem foi bem na simulação.',
-    ],
-  },
-  rodada: {
-    title: 'Ritmo da rodada',
-    items: [
-      `Uma rodada por dia. O mercado fecha às ${clock(MARKET_CLOSE_UTC.hour, MARKET_CLOSE_UTC.minute)} e a rodada é jogada às ${clock(FANTASY_SCHEDULE_UTC.round)}, no horário de Brasília.`,
-      `Quem ativou os avisos recebe um lembrete às ${clock(FANTASY_SCHEDULE_UTC.reminder.hour, FANTASY_SCHEDULE_UTC.reminder.minute)} e outro quando a rodada termina.`,
-      'O mercado abre de novo assim que a rodada sai. Dá para ver os jogos narrados e no campo 2D, com os pontos de cada jogador.',
-    ],
-  },
-  time: {
-    title: 'Montando o time',
-    items: [
-      `11 jogadores numa das ${formations.length} formações do jogo, cada um na sua posição, e um capitão.`,
-      `Orçamento de ${BUDGET} moedas, igual para todos. O passe não aumenta o orçamento.`,
-      `Só jogadores da ${divisionName(1)}.`,
-      'Quem não mandar time novo joga com o último que mandou.',
-    ],
-  },
-  pontuacao: {
-    title: 'Pontuação',
-    items: ['Cada jogador que entrou em campo pontua pela partida. Quem não jogou marca zero.'],
-    table: {
-      head: ['O que', 'Pontos'],
-      rows: [
-        [
-          'Nota do motor',
-          `${num(SCORING.rating)} por ponto acima ou abaixo de ${num(SCORING.par)}, proporcional aos minutos`,
-        ],
-        ['Gol', goalPoints.charAt(0).toUpperCase() + goalPoints.slice(1)],
-        ['Finalização defendida', num(SCORING.shotSaved)],
-        ['Finalização para fora', num(SCORING.shotWide)],
-        ['Defesa do goleiro', num(SCORING.save)],
-        [
-          `Sem sofrer gol (${SCORING.cleanSheetMinutes} minutos ou mais)`,
-          cleanSheet.charAt(0).toUpperCase() + cleanSheet.slice(1),
-        ],
-        ['Gol sofrido pelo goleiro', num(SCORING.conceded)],
-        ['Amarelo', num(SCORING.yellow)],
-        ['Vermelho', num(SCORING.red)],
-        ['Capitão', `Pontos × ${num(SCORING.captain)}`],
-      ],
-    },
-  },
-  precos: {
-    title: 'Preços',
-    items: [
-      `O preço inicial sai do geral: ${num(PRICES.min)} moeda até geral ${PRICES.floorOverall}, subindo até ${num(startingPrice(PRICES.topOverall))} moedas para geral ${PRICES.topOverall} ou mais.`,
-      `Cada preço tem uma pontuação esperada: ${num(PRICES.expectedBase)} pontos mais ${num(PRICES.expectedPerCoin)} por moeda. Um jogador de 10 moedas deveria fazer uns ${num(expectedPoints(10))} pontos.`,
-      `Depois de cada rodada que ele jogou, o preço sobe se a média dos últimos ${PRICES.recent} jogos ficou acima do esperado e cai se ficou abaixo. Muda no máximo ${Math.round(PRICES.maxChange * 100)}% por rodada, então um jogo só nunca decide o preço.`,
-      'Quem não jogou fica com o mesmo preço. Na virada da temporada os preços recomeçam pelo geral.',
-    ],
-  },
-  mundo: {
-    title: 'Um mundo que muda',
-    items: [
-      'Lesão, suspensão, cansaço e forma valem como na carreira. Escalar quem jogou na quarta pela copa pode sair caro no sábado.',
-      `A ${CUP_NAME} e a ${divisionName(2)} continuam acontecendo, mas só os jogos da ${divisionName(1)} pontuam.`,
-      'Os jogadores evoluem, envelhecem e trocam de clube como na carreira.',
-    ],
-  },
-  ligas: {
-    title: 'Ligas e passe',
-    items: [
-      `Ligas privadas com link de convite, de até ${LEAGUE_LIMITS.members} participantes, cada uma com a sua classificação.`,
-      `Entrar numa liga é grátis. Para criar, é preciso o passe da temporada, que libera até ${LEAGUE_LIMITS.perPass} ligas na temporada.`,
     ],
   },
 }

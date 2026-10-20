@@ -13,7 +13,7 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification(notice.title, {
       body: notice.body,
       tag: notice.tag,
-      data: { url: notice.url || '/fantasia' },
+      data: { url: notice.url || '/' },
       icon: '/icon-192.png',
       badge: '/icon-192.png',
       lang: 'pt-BR',
@@ -23,7 +23,7 @@ self.addEventListener('push', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
-  const url = new URL(event.notification.data?.url || '/fantasia', self.location.origin).href
+  const url = new URL(event.notification.data?.url || '/', self.location.origin).href
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
       const open = windows.find((w) => new URL(w.url).origin === self.location.origin)
