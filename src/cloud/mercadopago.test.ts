@@ -38,21 +38,25 @@ describe('verifyMercadoPagoSignature', () => {
 })
 
 describe('passPreference', () => {
-  it('sells one pass and carries who buys it for which season', () => {
+  it('sells one pass and carries who buys it', () => {
     const body = passPreference({
       userId: 'u1',
-      seasonId: 3,
       email: 'a@b.com',
       siteUrl: 'https://onzemestre.com',
       notificationUrl: 'https://x.supabase.co/functions/v1/mercadopago-webhook',
     })
     expect(body.items).toEqual([
-      expect.objectContaining({ quantity: 1, currency_id: 'BRL', unit_price: 5 }),
+      expect.objectContaining({
+        title: 'Passe de 30 dias',
+        quantity: 1,
+        currency_id: 'BRL',
+        unit_price: 5,
+      }),
     ])
-    expect(body.external_reference).toBe('u1:3')
+    expect(body.external_reference).toBe('u1')
     expect(body.payer).toEqual({ email: 'a@b.com' })
-    expect(body.back_urls.success).toBe('https://onzemestre.com/fantasia/passe?pagamento=ok')
-    expect(body.back_urls.pending).toBe('https://onzemestre.com/fantasia/passe?pagamento=pendente')
+    expect(body.back_urls.success).toBe('https://onzemestre.com/passe?pagamento=ok')
+    expect(body.back_urls.pending).toBe('https://onzemestre.com/passe?pagamento=pendente')
     expect(body.notification_url).toBe('https://x.supabase.co/functions/v1/mercadopago-webhook')
   })
 })
@@ -61,23 +65,26 @@ describe('passPayment', () => {
   const payment = {
     id: 9001,
     status: 'approved',
-    external_reference: 'u1:3',
+    external_reference: 'u1',
     transaction_amount: 5,
   }
 
   it('reads an approved payment', () => {
     expect(passPayment(payment)).toEqual({
       userId: 'u1',
-      seasonId: 3,
       paymentId: '9001',
       amountCents: 500,
     })
   })
 
+  it('still reads a season pass reference', () => {
+    expect(passPayment({ ...payment, external_reference: 'u1:3' })?.userId).toBe('u1')
+  })
+
   it('ignores a payment still pending, refused or without a pass', () => {
     expect(passPayment({ ...payment, status: 'pending' })).toBeUndefined()
     expect(passPayment({ ...payment, status: 'rejected' })).toBeUndefined()
-    expect(passPayment({ ...payment, external_reference: 'u1' })).toBeUndefined()
+    expect(passPayment({ ...payment, external_reference: '' })).toBeUndefined()
     expect(passPayment({ ...payment, external_reference: undefined })).toBeUndefined()
   })
 })
