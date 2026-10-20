@@ -1,5 +1,6 @@
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import type { PoolPlayer } from '../engine/room/start.ts'
+import type { RoomSummary } from '../engine/room/summary.ts'
 import type { TeamIdentity } from '../engine/room/team.ts'
 import { supabase } from './client.ts'
 import { roomError } from './rooms.ts'
@@ -149,14 +150,35 @@ export async function setDraftAuto(room: number, on: boolean): Promise<void> {
   if (error) throw roomError(error)
 }
 
-/** Starts the draft of a waiting room now; only its owner can. */
-export async function startDraftNow(room: number): Promise<void> {
-  const { data, error } = await client().functions.invoke('room-draft', { body: { room } })
+/** Calls one of the room's server functions, with the message it answers on failure. */
+async function invoke(name: string, room: number, fallback: string): Promise<void> {
+  const { data, error } = await client().functions.invoke(name, { body: { room } })
   if (error) {
     const body = await (error as { context?: Response }).context?.json?.().catch(() => undefined)
-    throw new Error(body?.error ?? 'Não deu para começar o draft agora. Tente de novo.')
+    throw new Error(body?.error ?? fallback)
   }
   if (data?.error) throw new Error(data.error)
+}
+
+/** Starts the draft of a waiting room now; only its owner can. */
+export const startDraftNow = (room: number) =>
+  invoke('room-draft', room, 'Não deu para começar o draft agora. Tente de novo.')
+
+/** Starts the league once the draft is over, or plays its next round; only the owner can. */
+export const playRoomRound = (room: number) =>
+  invoke('room-round', room, 'Não deu para jogar a rodada agora. Tente de novo.')
+
+/** What the room's page shows of the league, as of the last round played. */
+export async function loadRoomSummary(room: number): Promise<RoomSummary | undefined> {
+  const { data, error } = await client()
+    .from('room_rounds')
+    .select('summary')
+    .eq('room_id', room)
+    .order('round', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+  if (error) throw roomError(error)
+  return (data?.summary as RoomSummary | undefined) ?? undefined
 }
 
 /**
@@ -165,7 +187,12 @@ export async function startDraftNow(room: number): Promise<void> {
  */
 export function watchRoom(
   room: number,
-  on: { pick: (pick: DraftPick) => void; room: () => void; team: (team: DraftTeam) => void },
+  on: {
+    pick: (pick: DraftPick) => void
+    room: () => void
+    team: (team: DraftTeam) => void
+    round?: () => void
+  },
 ): () => void {
   const db = client()
   const channel: RealtimeChannel = db
@@ -184,6 +211,11 @@ export function watchRoom(
       'postgres_changes',
       { event: '*', schema: 'public', table: 'room_teams', filter: `room_id=eq.${room}` },
       (change) => change.new && on.team(toDraftTeam(change.new as TeamRow)),
+    )
+    .on(
+      'postgres_changes',
+      { event: 'INSERT', schema: 'public', table: 'room_rounds', filter: `room_id=eq.${room}` },
+      () => on.round?.(),
     )
     .subscribe()
   return () => {

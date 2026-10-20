@@ -25,6 +25,7 @@ import {
   TeamFields,
 } from '../components/RoomParts.tsx'
 import { DraftView, QueueBeforeDraft } from '../components/Draft.tsx'
+import { LeagueView } from '../components/League.tsx'
 import { confirm } from '../confirm.ts'
 import { usePackPool } from '../usePackPool.ts'
 import {
@@ -92,6 +93,8 @@ type BodyProps = Loaded & { userId: string; reload: () => Promise<void> }
 
 function RoomBody(props: BodyProps) {
   const { room } = props
+  if (room.status === 'liga' || room.status === 'encerrada')
+    return <LeagueView room={room} userId={props.userId} reload={props.reload} />
   if (room.status !== 'draft') return <WaitingRoom {...props} />
   if (!room.draft)
     return <Note>Preparando o draft: montando a lista de jogadores e sorteando a ordem…</Note>

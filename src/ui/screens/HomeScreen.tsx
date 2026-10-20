@@ -8,6 +8,7 @@ import {
   PlusIcon,
   Trash2Icon,
   UserIcon,
+  UsersIcon,
 } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router'
@@ -171,6 +172,14 @@ export function HomeScreen() {
               Nova carreira
             </Link>
           </Button>
+          {cloudEnabled && (
+            <Button asChild variant="outline">
+              <Link to="/salas">
+                <UsersIcon />
+                Draft com amigos
+              </Link>
+            </Button>
+          )}
           <Button asChild variant="outline">
             <Link to="/aprenda">
               <BookOpenIcon />

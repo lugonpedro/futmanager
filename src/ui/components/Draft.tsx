@@ -34,6 +34,7 @@ import {
 } from '../draft.ts'
 import { POSITION_NAMES } from '../format.ts'
 import { Choices } from './Choices.tsx'
+import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
@@ -130,6 +131,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
         room={room}
         teams={teams}
         mine={mine}
+        owner={room.ownerId === userId}
         onTicked={() => Promise.all([refresh(), reload()]).then(() => undefined)}
       />
       <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_20rem]">
@@ -148,7 +150,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
           {mine && <SquadCard room={room} byId={byId} picks={picks} team={mine} />}
         </div>
       </div>
-      <BoardCard room={room} teams={teams} byId={byId} picks={picks} />
+      <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
     </>
   )
 }
@@ -157,6 +159,7 @@ function Clock(props: {
   room: Room
   teams: DraftTeam[]
   mine?: DraftTeam
+  owner: boolean
   onTicked: () => Promise<void>
 }) {
   const { room, mine } = props
@@ -219,9 +222,17 @@ function Clock(props: {
         <CardHeader>
           <CardTitle>Draft encerrado</CardTitle>
           <CardDescription>
-            Todos os {total} jogadores foram escolhidos. A liga da sala começa em seguida.
+            Todos os {total} jogadores foram escolhidos.{' '}
+            {props.owner
+              ? 'Quando quiser, comece a liga: cada rodada é jogada quando você tocar no botão.'
+              : 'Quem criou a sala começa a liga.'}
           </CardDescription>
         </CardHeader>
+        {props.owner && (
+          <CardContent>
+            <PlayRoundButton room={room.id} label="Começar a liga" onPlayed={onTicked} />
+          </CardContent>
+        )}
       </Card>
     )
   }
@@ -527,7 +538,7 @@ function SquadCard(props: {
   )
 }
 
-function BoardCard(props: {
+export function DraftBoard(props: {
   room: Room
   teams: DraftTeam[]
   byId: ReadonlyMap<string, PoolPlayer>
