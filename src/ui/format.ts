@@ -308,3 +308,7 @@ export const tenths = new Intl.NumberFormat('pt-BR', {
   minimumFractionDigits: 1,
   maximumFractionDigits: 1,
 })
+
+/** "Fulano (suspenso)" or "Fulano (lesionado)", for a player out of the next match. */
+export const absentName = (game: GameState, playerId: string) =>
+  `${game.world.players[playerId].name} (${game.season.suspensions[playerId] ? 'suspenso' : 'lesionado'})`

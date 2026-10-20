@@ -24,6 +24,8 @@ const SLOT_CLASS = 'flex max-w-20 min-w-0 flex-1'
 export function Pitch(props: {
   slots: PitchSlot[]
   formation: Formation
+  /** Players who can't play, crossed out. */
+  unavailable?: ReadonlySet<string>
   selected?: string
   onSelect?: (playerId: string) => void
   wrap?: (playerId: string, className: string, player: ReactNode) => ReactNode
@@ -40,6 +42,7 @@ export function Pitch(props: {
               const player = (
                 <PitchPlayer
                   slot={slot}
+                  out={props.unavailable?.has(slot.player.id) ?? false}
                   selected={props.selected === slot.player.id}
                   onSelect={props.onSelect}
                 />
@@ -62,6 +65,7 @@ export function Pitch(props: {
 
 function PitchPlayer(props: {
   slot: PitchSlot
+  out: boolean
   selected: boolean
   onSelect?: (playerId: string) => void
 }) {
@@ -73,10 +77,19 @@ function PitchPlayer(props: {
     <button
       type="button"
       onClick={() => props.onSelect?.(player.id)}
-      title={`${player.name}, ${POSITION_NAMES[player.position].toLowerCase()} de geral ${player.overall}, jogando de ${TACTICAL_ROLE_NAMES[role].toLowerCase()}`}
-      className={`flex w-full min-w-0 flex-col items-center rounded px-1 py-1 text-xs ${props.selected ? 'bg-yellow-300 text-green-950' : 'bg-black/30 hover:bg-black/50'}`}
+      title={`${player.name}, ${POSITION_NAMES[player.position].toLowerCase()} de geral ${player.overall}, jogando de ${TACTICAL_ROLE_NAMES[role].toLowerCase()}${props.out ? '; não pode jogar' : ''}`}
+      className={cn(
+        'flex w-full min-w-0 flex-col items-center rounded px-1 py-1 text-xs',
+        props.selected
+          ? 'bg-yellow-300 text-green-950'
+          : props.out
+            ? 'bg-red-700/70 ring-2 ring-red-400 hover:bg-red-700/90'
+            : 'bg-black/30 hover:bg-black/50',
+      )}
     >
-      <span className="w-full truncate text-center font-semibold">
+      <span
+        className={cn('w-full truncate text-center font-semibold', props.out && 'line-through')}
+      >
         {booked && (
           <span
             aria-label="amarelo"

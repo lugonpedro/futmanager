@@ -47,10 +47,11 @@ export function newsBetween(before: GameState, after: GameState): News[] {
   for (const offer of after.market.offers) {
     if (known.has(offer.id)) continue
     const player = world.players[offer.playerId]
-    const listed = before.market.listed[offer.playerId] !== undefined
+    const listed = offer.askingPrice !== undefined
+    const favorite = after.favorites.includes(player.id)
     news.push({
-      tone: 'info',
-      text: `${world.clubs[offer.clubId].name} ofereceu ${formatMoney(offer.fee)} por ${player.name}, ${listed ? 'que estava à venda' : 'mesmo sem ele estar à venda'}.`,
+      tone: favorite ? 'warning' : 'info',
+      text: `${world.clubs[offer.clubId].name} ofereceu ${formatMoney(offer.fee)} por ${player.name}${favorite ? ', um dos seus favoritos' : ''}, ${listed ? 'que estava à venda' : 'mesmo sem ele estar à venda'}.`,
       link: OFFERS,
     })
   }

@@ -22,6 +22,7 @@ const withOffer = (game: GameState, id: string, expires = dateOf(2027, 1, 20)): 
         fee: 2_400_000,
         date: game.today,
         expires,
+        askingPrice: game.market.listed[userPlayer(game)],
       },
     ],
   },
@@ -41,6 +42,13 @@ describe('newsBetween', () => {
 
     const listed = { ...start, market: { ...start.market, listed: { [player.id]: 1 } } }
     expect(newsBetween(listed, withOffer(listed, 'o1'))[0].text).toContain('que estava à venda')
+  })
+
+  it('warns louder about a bid for a favorite', () => {
+    const starred = { ...start, favorites: [userPlayer(start)] }
+    const [news] = newsBetween(starred, withOffer(starred, 'o1'))
+    expect(news.tone).toBe('warning')
+    expect(news.text).toContain('um dos seus favoritos')
   })
 
   it('does not announce a bid twice', () => {

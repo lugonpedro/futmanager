@@ -19,7 +19,9 @@ import {
   seasonSummary,
   startNextSeason,
   todaysMatchDay,
+  unavailableStarters,
 } from '../../../engine/season/season.ts'
+import { useLineupPrefs } from '../../../store/lineupPrefs.ts'
 import { potentialRange } from '../../../engine/progression/progression.ts'
 import { squadOf } from '../../../engine/transfer/market.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
@@ -30,6 +32,7 @@ import { ClubName } from '../../components/ClubName.tsx'
 import { ConfidenceBar } from '../../components/Confidence.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
 import {
+  absentName,
   divisionName,
   formatDayDate,
   formatDayMonth,
@@ -38,6 +41,7 @@ import {
   rangeText,
   roundStarFeats,
 } from '../../format.ts'
+import { listText } from '../../learn.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
@@ -172,14 +176,45 @@ function NextRound({ game }: { game: GameState }) {
     },
   }
 
+  const autoReplace = useLineupPrefs((s) => s.autoReplace)
+  /**
+   * Before the user's own match, with injured or banned starters still in the
+   * lineup: swaps them for the best fit on his say-so, or takes him to the
+   * Team to do it himself. Resolves with the career to play, or undefined.
+   */
+  const readyLineup = async (): Promise<GameState | undefined> => {
+    const missing = autoReplace ? [] : unavailableStarters(game)
+    if (missing.length === 0) return game
+    const many = missing.length > 1
+    const ok = await confirm({
+      title: 'Desfalques na escalação',
+      description: `${listText(missing.map((id) => absentName(game, id)))} ${many ? 'não podem' : 'não pode'} jogar. Trocar automaticamente por quem encaixa melhor, ou escolher você mesmo no Time?`,
+      action: 'Trocar automaticamente',
+      cancel: 'Escolher no Time',
+    })
+    if (!ok) {
+      navigate('/jogo/time')
+      return undefined
+    }
+    const ready = { ...game, userLineup: clubLineup(game, userClubId) }
+    setGame(ready)
+    return ready
+  }
+
+  const goLive = async () => {
+    if (await readyLineup()) navigate('/jogo/partida')
+  }
+
   const run = async (action: ButtonAction) => {
     const question = questions[action]
     if (question && !(await confirm(question))) return
+    const start = action === 'play' ? await readyLineup() : game
+    if (!start) return
     setBusy(true)
     try {
-      const next = await simulate(game, action)
+      const next = await simulate(start, action)
       setGame(next)
-      announceChanges(game, next, navigate)
+      announceChanges(start, next, navigate)
     } finally {
       setBusy(false)
     }
@@ -218,11 +253,9 @@ function NextRound({ game }: { game: GameState }) {
         </p>
         <div className="flex flex-wrap gap-2">
           {matchDay ? (
-            <Button asChild className={busy ? 'pointer-events-none opacity-50' : undefined}>
-              <Link to="/jogo/partida">
-                <PlayIcon />
-                Jogar ao vivo
-              </Link>
+            <Button disabled={busy} onClick={goLive}>
+              <PlayIcon />
+              Jogar ao vivo
             </Button>
           ) : (
             <Button disabled={busy} onClick={() => run('advance')}>

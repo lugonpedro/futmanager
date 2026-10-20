@@ -235,6 +235,15 @@ export function listPlayer(game: GameState, playerId: string, price?: number): G
   return { ...game, market: { ...game.market, listed } }
 }
 
+/** Stars a player, or takes the star off one who has it. */
+export function toggleFavorite(game: GameState, playerId: string): GameState {
+  if (!game.world.players[playerId]) throw new Error('Unknown player')
+  const favorites = game.favorites.includes(playerId)
+    ? game.favorites.filter((id) => id !== playerId)
+    : [...game.favorites, playerId]
+  return { ...game, favorites }
+}
+
 export function acceptOffer(game: GameState, offerId: string): GameState {
   const offer = game.market.offers.find((o) => o.id === offerId)
   if (!offer) throw new Error('Unknown offer')
@@ -474,7 +483,7 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
         world.clubs[id].cash * MARKET.aiSpendShare >= fee &&
         world.clubs[id].playerIds.length < MARKET.maxSquad,
     )
-  const bid = (player: Player, fee: number) => {
+  const bid = (player: Player, fee: number, askingPrice?: number) => {
     const clubs = buyers(fee).filter(
       (id) => !game.market.offers.some((o) => o.playerId === player.id && o.clubId === id),
     )
@@ -486,6 +495,7 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
       fee,
       date: today,
       expires,
+      ...(askingPrice !== undefined && { askingPrice }),
     })
   }
 
@@ -493,7 +503,7 @@ function aiBids(game: GameState, rng: Rng): TransferOffer[] {
     const player = world.players[playerId]
     if (player?.clubId !== userClubId || !canLeave(world, player)) continue
     if (rng.next() < MARKET.listedBidChance)
-      bid(player, round10k(price * (0.85 + 0.2 * rng.next())))
+      bid(player, round10k(price * (0.85 + 0.2 * rng.next())), price)
   }
   if (rng.next() < MARKET.unlistedBidChance) {
     const squad = squadOf(world, userClubId)

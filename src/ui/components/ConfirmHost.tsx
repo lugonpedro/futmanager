@@ -40,7 +40,9 @@ export function ConfirmHost() {
             </label>
           )}
           <AlertDialogFooter>
-            <AlertDialogCancel onClick={() => close(false)}>Cancelar</AlertDialogCancel>
+            <AlertDialogCancel onClick={() => close(false)}>
+              {pending.cancel ?? 'Cancelar'}
+            </AlertDialogCancel>
             <AlertDialogAction
               className={pending.destructive ? buttonVariants({ variant: 'destructive' }) : ''}
               onClick={() => close(true)}

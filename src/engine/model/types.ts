@@ -358,6 +358,8 @@ export type TransferOffer = {
   date: GameDate
   /** Last day it can be accepted. */
   expires: GameDate
+  /** The user's asking price when the bid came in; absent if he wasn't up for sale. */
+  askingPrice?: number
 }
 
 /** A completed transfer, for the market news. */
@@ -495,4 +497,6 @@ export type GameState = {
   history: SeasonSummary[]
   /** Generated names unless this says otherwise. */
   names: NameOrigin
+  /** Players the user starred: his own to keep an eye on, others to sign. */
+  favorites: string[]
 }

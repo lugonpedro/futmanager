@@ -18,6 +18,7 @@ import {
   FilePenLineIcon,
   ListIcon,
   MapIcon,
+  StarIcon,
   TagIcon,
   WandSparklesIcon,
 } from 'lucide-react'
@@ -68,11 +69,20 @@ import {
 import { checkLoan, LOAN, loanClub, loanPlayer } from '../../../engine/transfer/loans.ts'
 import { confirm } from '../../confirm.ts'
 import { conditionOn, formOf } from '../../../engine/season/form.ts'
-import { clubLineup, unavailablePlayers } from '../../../engine/season/season.ts'
+import {
+  clubLineup,
+  nextUserGame,
+  savedUserLineup,
+  unavailableOn,
+  unavailablePlayers,
+} from '../../../engine/season/season.ts'
+import { useLineupPrefs } from '../../../store/lineupPrefs.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { FormationSelect } from '../../components/FormationSelect.tsx'
+import { listText } from '../../learn.ts'
+import { FavoriteStar } from '../../components/FavoriteStar.tsx'
 import { Pitch } from '../../components/Pitch.tsx'
 import { RowDetails } from '../../components/RowDetails.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
@@ -80,6 +90,7 @@ import {
   fitClass,
   fitLevel,
   formatMoney,
+  absentName,
   isHomegrown,
   POSITION_NAMES,
   POSITION_ORDER,
@@ -156,6 +167,7 @@ export function TeamScreen() {
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
   const [trainableOnly, setTrainableOnly] = useState(false)
+  const [favoritesOnly, setFavoritesOnly] = useState(false)
   const list = useRef<HTMLElement>(null)
   const [sort, setSort] = useState<{ key: SortKey; ascending: boolean }>({
     key: 'position',
@@ -168,7 +180,12 @@ export function TeamScreen() {
 
   const squad = world.clubs[userClubId].playerIds.map((id) => world.players[id])
   const out = unavailablePlayers(season)
-  const lineup = clubLineup(game, userClubId)
+  const { autoReplace, setAutoReplace } = useLineupPrefs()
+  // Injured and banned starters stay put until the manager swaps them, unless he lets the game do it.
+  const lineup = autoReplace ? clubLineup(game, userClubId) : savedUserLineup(game)
+  // Who misses the next match: an injury that heals by then doesn't count.
+  const outForMatch = unavailableOn(season, nextUserGame(game)?.date ?? game.today)
+  const missing = lineup.starters.filter((s) => outForMatch.has(s.playerId)).map((s) => s.playerId)
   const slots = new Map(lineup.starters.map((s) => [s.playerId, s.position]))
   const slotOf = (id: string) => lineup.starters.find((s) => s.playerId === id)
   const bench = new Set(lineup.bench)
@@ -180,9 +197,11 @@ export function TeamScreen() {
     setGame({ ...game, userLineup: next })
     setSelected(undefined)
   }
-  /** Swaps two players, as long as one of them is in the lineup and both can play. */
+  /** Who can be picked: anyone fit, and an injured or banned player still in the lineup, to take him out. */
+  const movable = (id: string) => !out.has(id) || inLineup(id)
+  /** Swaps two players, as long as one of them is in the lineup. */
   const swap = (a: string, b: string) => {
-    if (a === b || out.has(a) || out.has(b)) return false
+    if (a === b || !movable(a) || !movable(b)) return false
     if (!inLineup(a) && !inLineup(b)) return false
     const next = swapPlayers(lineup, a, b)
     save(next)
@@ -190,7 +209,7 @@ export function TeamScreen() {
     return true
   }
   const pick = (id: string) => {
-    if (out.has(id)) return
+    if (!movable(id)) return
     if (!selected || selected === id) return setSelected(selected === id ? undefined : id)
     if (!swap(selected, id)) setSelected(id)
   }
@@ -233,6 +252,7 @@ export function TeamScreen() {
     .filter((p) => !position || p.position === position)
     .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
     .filter((p) => !trainableOnly || canTrain(p))
+    .filter((p) => !favoritesOnly || game.favorites.includes(p.id))
     .map((p) => ({
       ...p,
       role: roleOf(p.id),
@@ -277,6 +297,20 @@ export function TeamScreen() {
     setGame(loanPlayer(game, id))
     setViewing(undefined)
     toast.success(`${player.name} foi emprestado ao ${club.name}.`)
+  }
+
+  /** Opens the sale dialog; for a favorite not up for sale yet, only once the manager confirms. */
+  const sell = async (id: string) => {
+    const player = world.players[id]
+    if (game.favorites.includes(id) && market.listed[id] === undefined) {
+      const ok = await confirm({
+        title: `Vender ${player.name}?`,
+        description: `${player.name} está nos seus favoritos. Colocar à venda mesmo assim?`,
+        action: 'Colocar à venda',
+      })
+      if (!ok) return
+    }
+    setListing(id)
   }
 
   const byId = (id: string | undefined) => (id ? world.players[id] : undefined)
@@ -327,11 +361,31 @@ export function TeamScreen() {
             </p>
           </div>
 
+          {missing.length > 0 && (
+            <MissingStarters
+              names={missing.map((id) => absentName(game, id))}
+              onReplace={() => save(clubLineup(game, userClubId))}
+              autoReplace={autoReplace}
+              onAutoReplace={setAutoReplace}
+            />
+          )}
+          {missing.length === 0 && autoReplace && (
+            <label className="flex items-center gap-2 text-xs text-muted-foreground">
+              <input
+                type="checkbox"
+                className="size-4 accent-primary"
+                checked
+                onChange={() => setAutoReplace(false)}
+              />
+              Trocar desfalques automaticamente
+            </label>
+          )}
           {showPitch ? (
             <div className="w-full md:mx-auto md:max-w-lg">
               <Pitch
                 slots={starters}
                 formation={lineup.formation}
+                unavailable={outForMatch}
                 selected={selected}
                 onSelect={pick}
                 wrap={(id, className, player) => (
@@ -344,6 +398,7 @@ export function TeamScreen() {
           ) : (
             <StarterLines
               lines={formationLines(starters, lineup.formation)}
+              unavailable={outForMatch}
               selected={selected}
               onSelect={pick}
             />
@@ -399,6 +454,16 @@ export function TeamScreen() {
             >
               <DumbbellIcon />
               Escolher treino
+            </Button>
+            <Button
+              variant={favoritesOnly ? 'default' : 'outline'}
+              size="sm"
+              aria-pressed={favoritesOnly}
+              onClick={() => setFavoritesOnly((only) => !only)}
+              title="Só os jogadores marcados com a estrela"
+            >
+              <StarIcon />
+              Favoritos
             </Button>
           </div>
           {idle > 0 && (
@@ -474,11 +539,11 @@ export function TeamScreen() {
                         key={p.id}
                         row={p}
                         selected={selected === p.id}
-                        disabled={out.has(p.id)}
+                        disabled={!movable(p.id)}
                         listed={market.listed[p.id] !== undefined}
                         expiring={p.contractUntil <= season.year}
                         onPick={() => pick(p.id)}
-                        onSell={() => setListing(p.id)}
+                        onSell={() => sell(p.id)}
                         onRenew={() => setRenewing(p.id)}
                         actionsClassName={actionsColumn}
                       >
@@ -493,7 +558,8 @@ export function TeamScreen() {
                             className="cursor-pointer text-left font-medium hover:underline"
                           >
                             {p.name}
-                          </button>{' '}
+                          </button>
+                          <FavoriteStar player={p} className="align-middle" />{' '}
                           <PlayerStatus playerId={p.id} season={season} />
                           {isHomegrown(p, userClubId) && (
                             <Badge
@@ -630,7 +696,7 @@ export function TeamScreen() {
           role={roleOf(viewed.id)}
           slot={slotOf(viewed.id)}
           onClose={() => setViewing(undefined)}
-          onSell={() => setListing(viewed.id)}
+          onSell={() => sell(viewed.id)}
           onRenew={() => setRenewing(viewed.id)}
           onTrain={(plan) => setGame(setTrainingPlan(game, viewed.id, plan))}
           onLoan={() => lend(viewed.id)}
@@ -713,9 +779,47 @@ function lineName(line: readonly { position: Position; role?: TacticalRole }[]):
   return 'Meio'
 }
 
+/**
+ * Starters who can't play the next match, with the choice of swapping them
+ * by hand or letting the game pick, now or from now on.
+ */
+function MissingStarters(props: {
+  names: string[]
+  onReplace: () => void
+  autoReplace: boolean
+  onAutoReplace: (auto: boolean) => void
+}) {
+  const many = props.names.length > 1
+  return (
+    <div className="flex flex-col gap-2 rounded-md border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">
+      <p>
+        <span className="font-semibold">{listText(props.names)}</span>{' '}
+        {many ? 'não podem' : 'não pode'} jogar o próximo jogo. Toque {many ? 'em cada um' : 'nele'}{' '}
+        e depois em quem entra, ou deixe o jogo escolher.
+      </p>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <Button size="sm" onClick={props.onReplace}>
+          <WandSparklesIcon />
+          Trocar automaticamente
+        </Button>
+        <label className="flex items-center gap-2 text-xs">
+          <input
+            type="checkbox"
+            className="size-4 accent-primary"
+            checked={props.autoReplace}
+            onChange={(e) => props.onAutoReplace(e.target.checked)}
+          />
+          Sempre trocar desfalques automaticamente
+        </label>
+      </div>
+    </div>
+  )
+}
+
 /** The XI as chips by line, each one a drag handle and a drop target like on the pitch. */
 function StarterLines(props: {
   lines: { player: Player; position: Position; role?: TacticalRole }[][]
+  unavailable: ReadonlySet<string>
   selected?: string
   onSelect: (playerId: string) => void
 }) {
@@ -732,6 +836,7 @@ function StarterLines(props: {
               const role = slotRole(slot)
               const fit = slotFit(player, slot)
               const selected = props.selected === player.id
+              const out = props.unavailable.has(player.id)
               return (
                 <DragSlot key={player.id} id={player.id} place="chip" className="min-w-0 sm:w-48">
                   <button
@@ -740,6 +845,7 @@ function StarterLines(props: {
                     title={`${TACTICAL_ROLE_NAMES[role]}${player.position !== slot.position ? ` (é ${POSITION_NAMES[player.position].toLowerCase()})` : ''}`}
                     className={cn(
                       'flex w-full cursor-pointer items-center gap-2 rounded-md border px-2 py-1.5 text-left text-sm hover:bg-accent',
+                      out && !selected && 'border-destructive/60 bg-destructive/10',
                       selected &&
                         'border-yellow-400 bg-yellow-300 text-green-950 hover:bg-yellow-300',
                     )}
@@ -747,7 +853,9 @@ function StarterLines(props: {
                     <span className={cn('w-8 text-xs font-bold', !selected && fitClass(fit))}>
                       {role}
                     </span>
-                    <span className="min-w-0 flex-1 truncate">{player.name}</span>
+                    <span className={cn('min-w-0 flex-1 truncate', out && 'line-through')}>
+                      {player.name}
+                    </span>
                     <span className="font-semibold tabular-nums">{player.overall}</span>
                   </button>
                 </DragSlot>

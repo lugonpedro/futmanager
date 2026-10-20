@@ -91,7 +91,7 @@ export const YELLOWS_FOR_SUSPENSION = 3
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 12
+export const SAVE_VERSION = 13
 /** An injury keeps a player out from this many days to this many more, short ones far more often. */
 export const INJURY_DAYS = { min: 8, spread: 30 }
 
@@ -149,6 +149,7 @@ export function newGame(seed: number, userClubId: string, pack?: DataPack): Game
     career,
     history: [],
     names: pack ? { pack: pack.name } : {},
+    favorites: [],
   }
 }
 
@@ -256,6 +257,32 @@ export function clubLineup(game: GameState, clubId: string): Lineup {
     return repairLineup(game.userLineup, squad, out)
   }
   return autoLineup(squad, autoFormation(squad, out), 'normal', out)
+}
+
+/**
+ * The user's lineup as he left it: players who left the club are replaced,
+ * but injured and banned starters keep their place until he swaps them.
+ * Without one saved, the best XI, fit or not.
+ */
+export function savedUserLineup(game: GameState): Lineup {
+  const { world, userClubId, userLineup } = game
+  const squad = world.clubs[userClubId].playerIds.map((id) => world.players[id])
+  if (!userLineup) return autoLineup(squad, autoFormation(squad))
+  return repairLineup(userLineup, squad)
+}
+
+/** Players banned or still injured on a day; an injury ending by then doesn't count. */
+export function unavailableOn(season: Season, date: GameDate): Set<string> {
+  const injured = Object.entries(season.injuries).filter(([, back]) => back > date)
+  return new Set([...injured.map(([id]) => id), ...Object.keys(season.suspensions)])
+}
+
+/** Starters in the user's saved lineup who can't play his next match. */
+export function unavailableStarters(game: GameState): string[] {
+  const out = unavailableOn(game.season, nextUserGame(game)?.date ?? game.today)
+  return savedUserLineup(game)
+    .starters.map((s) => s.playerId)
+    .filter((id) => out.has(id))
 }
 
 export function matchInput(game: GameState, fixture: Fixture): MatchInput {

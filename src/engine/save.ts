@@ -26,8 +26,11 @@ import { withRoles } from './match/lineup.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 
+/** A career as stored before version 13, without favorites or asking prices on bids. */
+type V12Game = Omit<GameState, 'version' | 'favorites'> & { version: 12 }
+
 /** A career as stored before version 12, when the lineup had no tactical roles. */
-type V11Game = Omit<GameState, 'version'> & { version: 11 }
+type V11Game = Omit<V12Game, 'version'> & { version: 11 }
 
 /** A career as stored before version 11, with only the shirt sponsor. */
 type V10Game = Omit<V11Game, 'version' | 'sponsorship'> & {
@@ -306,19 +309,31 @@ function fromV10(saved: V10Game): V11Game {
 }
 
 /** The saved lineup takes the roles of its formation, in the order its players stood. */
-function fromV11(saved: V11Game): GameState {
+function fromV11(saved: V11Game): V12Game {
   const { userLineup } = saved
   return {
     ...saved,
-    version: SAVE_VERSION,
+    version: 12,
     ...(userLineup && { userLineup: withRoles(userLineup) }),
   }
+}
+
+/** No favorites yet; open bids take the asking price of players still up for sale. */
+function fromV12(saved: V12Game): GameState {
+  const { listed } = saved.market
+  const offers = saved.market.offers.map((offer) =>
+    listed[offer.playerId] === undefined
+      ? offer
+      : { ...offer, askingPrice: listed[offer.playerId] },
+  )
+  return { ...saved, version: SAVE_VERSION, market: { ...saved.market, offers }, favorites: [] }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
   saved:
     | GameState
+    | V12Game
     | V11Game
     | V10Game
     | V9Game
@@ -343,5 +358,6 @@ export function upgradeGame(
   const v9 = version < 9 ? fromV8(v8) : (saved as V9Game)
   const v10 = version < 10 ? fromV9(v9) : (saved as V10Game)
   const v11 = version < 11 ? fromV10(v10) : (saved as V11Game)
-  return fromV11(v11)
+  const v12 = version < 12 ? fromV11(v11) : (saved as V12Game)
+  return fromV12(v12)
 }
