@@ -11,12 +11,15 @@ export const ROOM_RULES_VERSION = 1
 
 export type InjuryRule = 'normais' | 'curtas' | 'desligadas'
 export type TradeRule = 'ate-dois-tercos' | 'temporada' | 'desligadas'
+/** Snake order, or snake with the third round in the second's order, which evens out picking first. */
+export type DraftOrder = 'serpentina' | 'terceira-invertida'
 
 /** What the owner picks when creating a room (pesquisa/13-draft-online.md). */
 export type RoomOptions = {
   /** Teams in the league, people and robots together; always even. */
   teams: number
   squadSize: 16 | 18 | 20
+  draftOrder: DraftOrder
   /** Seconds each person has for a pick. */
   pickSeconds: 30 | 45 | 60 | 90
   /** Picks after the 11th come from each person's queue, for a quicker draft. */
@@ -32,6 +35,7 @@ export type RoomOptions = {
 export const DEFAULT_ROOM_OPTIONS: RoomOptions = {
   teams: 8,
   squadSize: 18,
+  draftOrder: 'serpentina',
   pickSeconds: 45,
   autoReserves: false,
   legs: 2,

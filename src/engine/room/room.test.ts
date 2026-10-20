@@ -55,6 +55,12 @@ describe('draft', () => {
     ])
   })
 
+  it("can play the third round in the second round's order", () => {
+    const order = ['A', 'B', 'C']
+    const picks = Array.from({ length: 12 }, (_, n) => teamForPick(order, n, 'terceira-invertida'))
+    expect(picks.join('')).toBe('ABCCBACBAABC')
+  })
+
   it('draws the same order from the same seed', () => {
     expect(room().order).toEqual(room().order)
     expect([...room().order].sort()).toEqual(teams(8).map((t) => t.id))

@@ -6,6 +6,7 @@ import {
   DEFAULT_ROOM_OPTIONS,
   ROOM_LIMITS,
   ROOM_RULES_VERSION,
+  type DraftOrder,
   type RoomOptions,
   type RoomPhase,
   type RoomState,
@@ -68,17 +69,27 @@ export function roomPhase(state: RoomState): RoomPhase {
 
 /**
  * Whose pick a pick number is, counted from 0: snake order, so the team that
- * picks last in a round picks first in the next.
+ * picks last in a round picks first in the next. With the third round
+ * reversed, it goes in the second round's order and the snake goes on from
+ * there, which takes away most of the edge of picking first.
  */
-export function teamForPick(order: readonly string[], pick: number): string {
+export function teamForPick(
+  order: readonly string[],
+  pick: number,
+  style: DraftOrder = 'serpentina',
+): string {
   const round = Math.floor(pick / order.length)
   const index = pick % order.length
-  return order[round % 2 === 0 ? index : order.length - 1 - index]
+  const flipped = style === 'terceira-invertida' && round >= 2
+  const forward = (round % 2 === 0) !== flipped
+  return order[forward ? index : order.length - 1 - index]
 }
 
 /** The team on the clock, or undefined once the draft is over. */
 export const teamOnTheClock = (state: RoomState) =>
-  state.picks.length < totalPicks(state) ? teamForPick(state.order, state.picks.length) : undefined
+  state.picks.length < totalPicks(state)
+    ? teamForPick(state.order, state.picks.length, state.options.draftOrder)
+    : undefined
 
 /** Players nobody has, strongest first: the order the automatic picks go by. */
 export function freePlayers(state: RoomState): Player[] {

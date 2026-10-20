@@ -2,7 +2,8 @@
  * Drafts and plays whole rooms of the Brasileirão pack with everyone on
  * automatic and prints what the plan asked to check (pesquisa/13-draft-online.md):
  * whether picking first decides the league, whether drafted teams make silly
- * scores, and how long starters stay injured. Run with `npm run room -- 200`.
+ * scores, and how long starters stay injured. Run with `npm run room -- 200`, or
+ * `npm run room -- 200 1 terceira-invertida` for the other draft order.
  */
 import { readFileSync } from 'node:fs'
 import { generateWorld } from '../src/engine/generate/world.ts'
@@ -21,7 +22,8 @@ const rooms = Number(process.argv[2] ?? 200)
 const seed = Number(process.argv[3] ?? 1)
 const file = 'src/packs/brasileirao-2026.json'
 const pack = parsePackFile(readFileSync(file, 'utf8'), file).pack
-const options = DEFAULT_ROOM_OPTIONS
+const order = process.argv[4] === 'terceira-invertida' ? 'terceira-invertida' : 'serpentina'
+const options = { ...DEFAULT_ROOM_OPTIONS, draftOrder: order } as const
 const teams: RoomTeam[] = Array.from({ length: options.teams }, (_, i) => ({
   id: `T${i + 1}`,
   name: `Time ${i + 1}`,
@@ -76,7 +78,7 @@ for (let r = 0; r < rooms; r++) {
 }
 
 console.log(
-  `${rooms} salas de ${options.teams} times, elenco de ${options.squadSize}, todos no automático`,
+  `${rooms} salas de ${options.teams} times, elenco de ${options.squadSize}, ordem ${options.draftOrder}, todos no automático`,
 )
 console.log('escolha  títulos  colocação média')
 for (let pick = 0; pick < options.teams; pick++) {
