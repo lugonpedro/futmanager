@@ -1,11 +1,9 @@
-import { useState, type ReactNode } from 'react'
-import { SlidersHorizontalIcon, XIcon } from 'lucide-react'
+import { useState } from 'react'
 import { toast } from 'sonner'
 import { Link, Navigate, useNavigate, useParams } from 'react-router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
 import {
   Table,
   TableBody,
@@ -18,7 +16,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import {
   FREE_AGENT,
-  POSITIONS,
   type GameState,
   type Player,
   type TransferOffer,
@@ -30,24 +27,16 @@ import { Choices } from '../../components/Choices.tsx'
 import { LearnLink } from '../../components/LearnLink.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
 import { Pager } from '../../components/Pager.tsx'
+import { FilterField, PlayerFilterBar } from '../../components/PlayerFilterBar.tsx'
 import { RowDetails } from '../../components/RowDetails.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
 import { usePage } from '../../usePage.ts'
-import {
-  divisionName,
-  formatDate,
-  formatDayMonth,
-  formatMoney,
-  POSITION_NAMES,
-  rangeText,
-} from '../../format.ts'
+import { divisionName, formatDate, formatDayMonth, formatMoney, rangeText } from '../../format.ts'
 import {
   activeFilters,
-  AGES,
   MARKET_SORTS,
   marketRows,
   SITUATIONS,
-  type AgeBand,
   type Situation,
 } from '../../marketFilter.ts'
 import { useMarketFilters } from '../../../store/marketFilters.ts'
@@ -105,7 +94,6 @@ export function MarketScreen() {
 function BuyTab({ game }: { game: GameState }) {
   const { world, userClubId } = game
   const { filters, setFilters, clearFilters } = useMarketFilters()
-  const [showFilters, setShowFilters] = useState(false)
   const [selected, setSelected] = useState<Player>()
   const [viewing, setViewing] = useState<Player>()
   // With the window shut only free agents can sign, so they are all the list shows unless asked.
@@ -121,50 +109,28 @@ function BuyTab({ game }: { game: GameState }) {
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2">
-        <Choices
-          ariaLabel="Posição"
-          options={['Todos', ...POSITIONS] as const}
-          value={filters.position}
-          onChange={(position) => setFilters({ position })}
-          title={(p) => (p === 'Todos' ? 'Todas as posições' : POSITION_NAMES[p])}
-        />
-        <Choices
-          ariaLabel="Situação"
-          options={SITUATIONS}
-          value={filters.situation}
-          onChange={(situation) => setFilters({ situation })}
-          title={(s) => SITUATION_NOTES[s]}
-          label={(s) => (s === 'Todos' ? 'Qualquer situação' : s)}
-        />
-        <Input
-          type="search"
-          value={filters.search}
-          onChange={(e) => setFilters({ search: e.target.value })}
-          placeholder="Buscar jogador"
-          className="h-8 sm:max-w-60"
-        />
-        <Button
-          variant={showFilters ? 'default' : 'outline'}
-          size="sm"
-          aria-expanded={showFilters}
-          onClick={() => setShowFilters((shown) => !shown)}
-        >
-          <SlidersHorizontalIcon />
-          Filtros{active > 0 && ` (${active})`}
-        </Button>
-      </div>
-      {showFilters && (
-        <Card className="gap-3 px-4 py-3">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <FilterField label="Idade">
-              <Choices
-                ariaLabel="Idade"
-                options={Object.keys(AGES) as AgeBand[]}
-                value={filters.age}
-                onChange={(age) => setFilters({ age })}
-              />
-            </FilterField>
+      <PlayerFilterBar
+        filters={filters}
+        onChange={setFilters}
+        sort={{
+          options: MARKET_SORTS,
+          value: filters.sort,
+          onChange: (sort) => setFilters({ sort }),
+        }}
+        active={active}
+        onClear={clearFilters}
+        quick={
+          <Choices
+            ariaLabel="Situação"
+            options={SITUATIONS}
+            value={filters.situation}
+            onChange={(situation) => setFilters({ situation })}
+            title={(s) => SITUATION_NOTES[s]}
+            label={(s) => (s === 'Todos' ? 'Qualquer situação' : s)}
+          />
+        }
+        more={
+          <>
             <FilterField label="Divisão">
               <Choices
                 ariaLabel="Divisão"
@@ -172,20 +138,6 @@ function BuyTab({ game }: { game: GameState }) {
                 value={filters.division === undefined ? 'Todas' : String(filters.division)}
                 onChange={(d) => setFilters({ division: d === 'Todas' ? undefined : Number(d) })}
                 label={(d) => (d === 'Todas' ? d : divisionName(Number(d)))}
-              />
-            </FilterField>
-            <FilterField label="Geral mínimo">
-              <MinimumInput
-                label="Geral mínimo"
-                value={filters.minOverall}
-                onChange={(minOverall) => setFilters({ minOverall })}
-              />
-            </FilterField>
-            <FilterField label="Potencial mínimo">
-              <MinimumInput
-                label="Potencial mínimo"
-                value={filters.minPotential}
-                onChange={(minPotential) => setFilters({ minPotential })}
               />
             </FilterField>
             <FilterField label="Preço">
@@ -196,23 +148,9 @@ function BuyTab({ game }: { game: GameState }) {
                 onChange={(v) => setFilters({ affordable: v === 'Cabem no caixa' })}
               />
             </FilterField>
-            <FilterField label="Ordenar">
-              <Choices
-                ariaLabel="Ordenar por"
-                options={MARKET_SORTS}
-                value={filters.sort}
-                onChange={(sort) => setFilters({ sort })}
-              />
-            </FilterField>
-          </div>
-          {active > 0 && (
-            <Button variant="ghost" size="sm" className="self-start" onClick={clearFilters}>
-              <XIcon />
-              Limpar filtros
-            </Button>
-          )}
-        </Card>
-      )}
+          </>
+        }
+      />
       {open ? (
         <TransferWindowNote today={game.today} />
       ) : (
@@ -429,33 +367,6 @@ function SaleBadge({ offer }: { offer: TransferOffer }) {
         </span>
       )}
     </Badge>
-  )
-}
-
-/** A filter with its name above it. */
-function FilterField(props: { label: string; children: ReactNode }) {
-  return (
-    <div className="flex flex-col gap-1">
-      <span className="text-xs text-muted-foreground">{props.label}</span>
-      {props.children}
-    </div>
-  )
-}
-
-/** A number from 0 to 99 that an attribute must reach; empty means no minimum. */
-function MinimumInput(props: { label: string; value: number; onChange: (value: number) => void }) {
-  return (
-    <Input
-      type="number"
-      inputMode="numeric"
-      min={0}
-      max={99}
-      aria-label={props.label}
-      placeholder="—"
-      value={props.value || ''}
-      onChange={(e) => props.onChange(Math.min(99, Math.max(0, Number(e.target.value) || 0)))}
-      className="h-8 w-20"
-    />
   )
 }
 
