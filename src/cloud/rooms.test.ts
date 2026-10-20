@@ -20,6 +20,10 @@ const row: RoomRow = {
   trades: 'ate-dois-tercos',
   draft_at: '2026-10-22T00:00:00+00:00',
   created_at: '2026-10-20T12:00:00+00:00',
+  pick_order: null,
+  squad_shape: null,
+  pick_no: 0,
+  pick_deadline: null,
   room_members: [{ count: 3 }],
 }
 
@@ -36,6 +40,27 @@ describe('toRoom', () => {
     expect(Object.keys(toRoom(row).options).sort()).toEqual(
       Object.keys(DEFAULT_ROOM_OPTIONS).sort(),
     )
+  })
+})
+
+describe('toRoom in the draft', () => {
+  it('reads the clock once the draft is set up', () => {
+    const shape = { G: 2, Z: 3, L: 2, M: 6, A: 5 }
+    const room = toRoom({
+      ...row,
+      status: 'draft',
+      pick_order: [2, 0, 1],
+      squad_shape: shape,
+      pick_no: 4,
+      pick_deadline: '2026-10-22T00:00:45+00:00',
+    })
+    expect(room.draft).toEqual({
+      order: [2, 0, 1],
+      shape,
+      pickNo: 4,
+      deadline: new Date('2026-10-22T00:00:45Z'),
+    })
+    expect(toRoom(row).draft).toBeUndefined()
   })
 })
 

@@ -2,7 +2,7 @@
 
 Pedido de 20/10/2026. Trocar a fantasia online de [05-online.md](05-online.md) por um modo em que um grupo de amigos cria uma sala, escolhe os elencos num draft (cada futebolista só pode ir para um time) e disputa uma liga entre esses times, com as partidas simuladas pelo nosso motor. Conferido no código da `main` no commit `6cadfa0` (PR #53).
 
-Andamento: o passo P (passe por tempo) entrou no PR #58 o D0 no PR #60 e o D1 (regras da sala em `src/engine/room/` e `npm run room`) no PR #63 e o D2 (sala de espera, ainda sem link na tela inicial) no PR seguinte, todos de 20/10/2026. O resto ainda é plano.
+Andamento: o passo P (passe por tempo) entrou no PR #58 o D0 no PR #60 e o D1 (regras da sala em `src/engine/room/` e `npm run room`) no PR #63 e o D2 (sala de espera, ainda sem link na tela inicial) no PR #64 e o D3 (draft ao vivo) no PR seguinte, todos de 20/10/2026. No D3, o mundo de onde a sala escolhe passou a ter semente fixa por pacote: um jogador é o mesmo em toda sala, e a fila de favoritos pode ser montada antes do draft. O resto ainda é plano.
 
 ## Resumo
 
