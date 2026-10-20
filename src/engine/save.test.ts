@@ -37,6 +37,31 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('gives a version 12 save no favorites and the asking price on bids for listed players', () => {
+    const [listed, unlisted] = fresh.world.clubs.C10.playerIds
+    const offer = (playerId: string) => ({
+      id: playerId,
+      playerId,
+      clubId: 'C2',
+      fee: 1_000_000,
+      date: fresh.today,
+      expires: fresh.today,
+    })
+    const { favorites: _, ...v12 } = fresh
+    const upgraded = upgradeOld({
+      ...v12,
+      version: 12,
+      market: {
+        ...fresh.market,
+        listed: { [listed]: 900_000 },
+        offers: [offer(listed), offer(unlisted)],
+      },
+    })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.favorites).toEqual([])
+    expect(upgraded.market.offers.map((o) => o.askingPrice)).toEqual([900_000, undefined])
+  })
+
   it('gives the lineup of a version 11 save the roles of its formation', () => {
     const lineup = autoLineup(
       fresh.world.clubs.C10.playerIds.map((id) => fresh.world.players[id]),

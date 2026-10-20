@@ -7,6 +7,8 @@ Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Nome provis�
 - [Plano do MVP](docs/01-plano-mvp.md): escopo, stack, estrutura e fases
 - [Plano pós-MVP](docs/02-plano-pos-mvp.md): fases 8 em diante (menus, campo 2D, calendário, cartas, editor, contas, ligas)
 - [Melhorias antes das ligas](docs/03-melhorias.md) e [tela de partida](docs/04-partida.md)
+- [Jogo online](docs/05-online.md), [página Aprenda](docs/06-aprenda.md), [melhorias da carreira](docs/07-melhorias-carreira.md), [login por código](docs/08-login-por-codigo.md) e [responsividade](docs/09-responsividade.md)
+- [Novo plano de melhorias](docs/12-melhorias.md): o que já foi feito dos planos antigos e o que vem agora
 - [Pesquisa](docs/00-pesquisa.md): features do Brasfoot, escolha de stack e monetização
 
 ## Rodando

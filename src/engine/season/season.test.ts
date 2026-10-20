@@ -23,11 +23,13 @@ import {
   prizeMoney,
   roundDate,
   roundFixtures,
+  savedUserLineup,
   seasonSummary,
   simulateUntil,
   startNextSeason,
   todaysMatchDay,
   unavailablePlayers,
+  unavailableStarters,
   userFixture,
   YELLOWS_FOR_SUSPENSION,
 } from './season.ts'
@@ -356,6 +358,31 @@ describe('lineups', () => {
     expect(lineup.starters).toHaveLength(11)
     expect(lineup.starters.map((s) => s.playerId)).not.toContain(hurt)
     expect(lineup.bench).not.toContain(hurt)
+  })
+
+  it('keeps injured starters in the saved lineup, for the user to swap', () => {
+    const saved = autoLineup(squadOf(start), '4-4-2')
+    const hurt = saved.starters[3].playerId
+    const game = {
+      ...start,
+      userLineup: saved,
+      season: { ...start.season, injuries: { [hurt]: '2027-04-20' } },
+    }
+    expect(savedUserLineup(game)).toEqual(saved)
+    expect(unavailableStarters(game)).toEqual([hurt])
+    expect(unavailableStarters({ ...game, userLineup: clubLineup(game, game.userClubId) })).toEqual(
+      [],
+    )
+    // Without a saved lineup, the best XI is the one he would have picked.
+    const unsaved = { ...game, userLineup: undefined }
+    expect(unavailableStarters(unsaved)).toEqual(
+      savedUserLineup(unsaved)
+        .starters.map((s) => s.playerId)
+        .filter((id) => id === hurt),
+    )
+    // Back by the day of the match, he can play it.
+    const healed = { ...game.season, injuries: { [hurt]: nextUserGame(game)!.date } }
+    expect(unavailableStarters({ ...game, season: healed })).toEqual([])
   })
 
   it('lets AI clubs pick a full lineup of their own', () => {

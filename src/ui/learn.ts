@@ -234,6 +234,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       `Vermelho suspende pelo próximo jogo do campeonato. ${YELLOWS_FOR_SUSPENSION} amarelos também.`,
       `Lesões tiram o jogador de ${INJURY_DAYS.min} a ${INJURY_DAYS.min + INJURY_DAYS.spread} dias; as curtas são bem mais comuns.`,
       `O treino físico aumenta o risco de lesão em ${percent(TRAINING.injury.fisico!)}; o descanso diminui em ${percent(TRAINING.injury.descanso!)}.`,
+      'Quem não pode jogar o próximo jogo continua na escalação, riscado em vermelho, até você trocar. Antes do jogo, o jogo pergunta se troca por você. Para não ser perguntado, marque "Sempre trocar desfalques automaticamente" na página Time. Simular até uma data ou até o fim da temporada sempre troca sozinho.',
     ],
   },
   jogadores: {
@@ -281,6 +282,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       `O jogador pede ${percent(1 + MARKET.moveRaise)} a mais de salário para mudar de clube, e mais ${percent(1 + MARKET.stepDownPremium)} por ponto de reputação que o clube novo tem a menos. Para renovar, ${percent(1 + MARKET.renewRaise)} a mais. Contratos de 1 a ${MARKET.maxContractYears} temporadas.`,
       `Para vender, coloque o jogador à venda. Com a janela aberta, ele recebe proposta em ${percent(1 + MARKET.listedBidChance)} das rodadas; sem estar à venda, só às vezes. Cada proposta vale ${MARKET.offerDays} dias.`,
       'Jogadores com contrato no fim saem quando a temporada fecha; renove antes.',
+      'Na lista Contratar dá para ver só os sem clube, os com contrato no fim ou os seus favoritos, e o botão Filtros separa por idade, divisão, geral e potencial. A estrela ao lado do nome marca um jogador como favorito, seu ou de outro clube.',
       `Empréstimo: só até ${LOAN.maxAge} anos, no máximo ${LOAN.maxLoans} ao mesmo tempo e com a janela aberta. O jogador vai para um clube de uma divisão abaixo que precisa da posição dele, e esse clube paga o salário até o fim da temporada.`,
     ],
   },

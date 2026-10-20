@@ -11,6 +11,7 @@ import {
   SheetTitle,
 } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+import { FavoriteStar } from '../../components/FavoriteStar.tsx'
 import {
   FREE_AGENT,
   type GameState,
@@ -99,7 +100,10 @@ export function PlayerSheet(props: {
     <Sheet open onOpenChange={(open) => !open && props.onClose()}>
       <SheetContent side="right" className="w-full gap-0 overflow-y-auto sm:max-w-md">
         <SheetHeader className="pr-10">
-          <SheetTitle className="text-lg leading-tight">{player.name}</SheetTitle>
+          <SheetTitle className="flex items-center gap-1 text-lg leading-tight">
+            {player.name}
+            <FavoriteStar player={player} />
+          </SheetTitle>
           <SheetDescription>
             {POSITION_NAMES[player.position]}, {player.age} anos
             {club ? `, ${club.name}` : ', sem clube'}

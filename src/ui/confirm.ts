@@ -5,6 +5,8 @@ export type ConfirmRequest = {
   description: string
   /** Label of the button that goes ahead. */
   action: string
+  /** Label of the button that doesn't; "Cancelar" by default. */
+  cancel?: string
   /** Red button, for what can't be undone. */
   destructive?: boolean
   /** Offers "Não perguntar de novo", remembered in this browser under this key. */

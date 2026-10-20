@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
+import { SlidersHorizontalIcon, XIcon } from 'lucide-react'
 import { toast } from 'sonner'
 import { Link, Navigate, useNavigate, useParams } from 'react-router'
 import { Badge } from '@/components/ui/badge'
@@ -20,15 +21,9 @@ import {
   POSITIONS,
   type GameState,
   type Player,
-  type Position,
+  type TransferOffer,
 } from '../../../engine/model/types.ts'
-import {
-  acceptOffer,
-  askingPrice,
-  canLeave,
-  rejectOffer,
-  wageDemand,
-} from '../../../engine/transfer/market.ts'
+import { acceptOffer, rejectOffer } from '../../../engine/transfer/market.ts'
 import { inTransferWindow } from '../../../engine/season/calendar.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
@@ -38,15 +33,39 @@ import { Pager } from '../../components/Pager.tsx'
 import { RowDetails } from '../../components/RowDetails.tsx'
 import { TransferWindowNote } from '../../components/TransferWindowNote.tsx'
 import { usePage } from '../../usePage.ts'
-import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
-import { formatDate, formatDayMonth, formatMoney, POSITION_NAMES, rangeText } from '../../format.ts'
+import {
+  divisionName,
+  formatDate,
+  formatDayMonth,
+  formatMoney,
+  POSITION_NAMES,
+  rangeText,
+} from '../../format.ts'
+import {
+  activeFilters,
+  AGES,
+  MARKET_SORTS,
+  marketRows,
+  SITUATIONS,
+  type AgeBand,
+  type Situation,
+} from '../../marketFilter.ts'
+import { useMarketFilters } from '../../../store/marketFilters.ts'
+import { confirm } from '../../confirm.ts'
+import { FavoriteStar } from '../../components/FavoriteStar.tsx'
 import { SignDialog } from './MarketDialogs.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
 
 const PAGE_SIZE = 25
 const NEWS_PAGE_SIZE = 20
-const SORTS = { Geral: 'overall', Preço: 'price', Idade: 'age' } as const
-type Sort = keyof typeof SORTS
+
+/** What each situation filter keeps, for its tooltip. */
+const SITUATION_NOTES: Record<Situation, string> = {
+  Todos: 'Todos os jogadores',
+  'Sem clube': 'Sem clube: contrata pagando só o salário',
+  'Contrato no fim': 'Contrato termina nesta temporada',
+  Favoritos: 'Os que você marcou com a estrela',
+}
 
 const TABS = ['contratar', 'propostas', 'noticias']
 
@@ -85,10 +104,8 @@ export function MarketScreen() {
 
 function BuyTab({ game }: { game: GameState }) {
   const { world, userClubId } = game
-  const [position, setPosition] = useState<Position | 'Todos'>('Todos')
-  const [search, setSearch] = useState('')
-  const [onlyAffordable, setOnlyAffordable] = useState<'Todos' | 'Cabem no caixa'>('Todos')
-  const [sort, setSort] = useState<Sort>('Geral')
+  const { filters, setFilters, clearFilters } = useMarketFilters()
+  const [showFilters, setShowFilters] = useState(false)
   const [selected, setSelected] = useState<Player>()
   const [viewing, setViewing] = useState<Player>()
   // With the window shut only free agents can sign, so they are all the list shows unless asked.
@@ -96,28 +113,11 @@ function BuyTab({ game }: { game: GameState }) {
   const open = inTransferWindow(game.today)
   const signable = (p: Player) => open || p.clubId === FREE_AGENT
   const cash = world.clubs[userClubId].cash
-  const query = search.trim().toLocaleLowerCase('pt-BR')
+  const divisions = [...new Set(Object.values(world.clubs).map((c) => c.division))].sort()
+  const active = activeFilters(filters)
 
-  const rows = Object.values(world.players)
-    .filter((p) => p.clubId !== userClubId)
-    .filter((p) => browsing || signable(p))
-    .filter((p) => position === 'Todos' || p.position === position)
-    .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
-    .filter((p) => canLeave(world, p))
-    .map((p) => ({ player: p, price: askingPrice(game, p) }))
-    .filter((r) => onlyAffordable === 'Todos' || r.price <= cash)
-    .sort((a, b) =>
-      sort === 'Preço'
-        ? a.price - b.price
-        : sort === 'Idade'
-          ? a.player.age - b.player.age
-          : b.player.overall - a.player.overall,
-    )
-  const paged = usePage(
-    rows,
-    PAGE_SIZE,
-    `${position}|${query}|${onlyAffordable}|${sort}|${browsing}`,
-  )
+  const rows = marketRows(game, filters, (p) => browsing || signable(p))
+  const paged = usePage(rows, PAGE_SIZE, `${JSON.stringify(filters)}|${browsing}`)
 
   return (
     <div className="flex flex-col gap-3">
@@ -125,30 +125,94 @@ function BuyTab({ game }: { game: GameState }) {
         <Choices
           ariaLabel="Posição"
           options={['Todos', ...POSITIONS] as const}
-          value={position}
-          onChange={setPosition}
+          value={filters.position}
+          onChange={(position) => setFilters({ position })}
           title={(p) => (p === 'Todos' ? 'Todas as posições' : POSITION_NAMES[p])}
         />
         <Choices
-          ariaLabel="Preço"
-          options={['Todos', 'Cabem no caixa'] as const}
-          value={onlyAffordable}
-          onChange={setOnlyAffordable}
-        />
-        <Choices
-          ariaLabel="Ordenar por"
-          options={Object.keys(SORTS) as Sort[]}
-          value={sort}
-          onChange={setSort}
+          ariaLabel="Situação"
+          options={SITUATIONS}
+          value={filters.situation}
+          onChange={(situation) => setFilters({ situation })}
+          title={(s) => SITUATION_NOTES[s]}
+          label={(s) => (s === 'Todos' ? 'Qualquer situação' : s)}
         />
         <Input
           type="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={filters.search}
+          onChange={(e) => setFilters({ search: e.target.value })}
           placeholder="Buscar jogador"
           className="h-8 sm:max-w-60"
         />
+        <Button
+          variant={showFilters ? 'default' : 'outline'}
+          size="sm"
+          aria-expanded={showFilters}
+          onClick={() => setShowFilters((shown) => !shown)}
+        >
+          <SlidersHorizontalIcon />
+          Filtros{active > 0 && ` (${active})`}
+        </Button>
       </div>
+      {showFilters && (
+        <Card className="gap-3 px-4 py-3">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <FilterField label="Idade">
+              <Choices
+                ariaLabel="Idade"
+                options={Object.keys(AGES) as AgeBand[]}
+                value={filters.age}
+                onChange={(age) => setFilters({ age })}
+              />
+            </FilterField>
+            <FilterField label="Divisão">
+              <Choices
+                ariaLabel="Divisão"
+                options={['Todas', ...divisions.map(String)]}
+                value={filters.division === undefined ? 'Todas' : String(filters.division)}
+                onChange={(d) => setFilters({ division: d === 'Todas' ? undefined : Number(d) })}
+                label={(d) => (d === 'Todas' ? d : divisionName(Number(d)))}
+              />
+            </FilterField>
+            <FilterField label="Geral mínimo">
+              <MinimumInput
+                label="Geral mínimo"
+                value={filters.minOverall}
+                onChange={(minOverall) => setFilters({ minOverall })}
+              />
+            </FilterField>
+            <FilterField label="Potencial mínimo">
+              <MinimumInput
+                label="Potencial mínimo"
+                value={filters.minPotential}
+                onChange={(minPotential) => setFilters({ minPotential })}
+              />
+            </FilterField>
+            <FilterField label="Preço">
+              <Choices
+                ariaLabel="Preço"
+                options={['Todos', 'Cabem no caixa'] as const}
+                value={filters.affordable ? 'Cabem no caixa' : 'Todos'}
+                onChange={(v) => setFilters({ affordable: v === 'Cabem no caixa' })}
+              />
+            </FilterField>
+            <FilterField label="Ordenar">
+              <Choices
+                ariaLabel="Ordenar por"
+                options={MARKET_SORTS}
+                value={filters.sort}
+                onChange={(sort) => setFilters({ sort })}
+              />
+            </FilterField>
+          </div>
+          {active > 0 && (
+            <Button variant="ghost" size="sm" className="self-start" onClick={clearFilters}>
+              <XIcon />
+              Limpar filtros
+            </Button>
+          )}
+        </Card>
+      )}
       {open ? (
         <TransferWindowNote today={game.today} />
       ) : (
@@ -163,13 +227,14 @@ function BuyTab({ game }: { game: GameState }) {
         <p className="text-sm text-muted-foreground">
           {open || browsing
             ? 'Nenhum jogador com esses filtros.'
-            : 'Nenhum jogador sem clube agora. Em "Ver todos para observar" dá para montar a lista de quem contratar quando a janela abrir.'}
+            : 'Nenhum jogador sem clube com esses filtros. Em "Ver todos para observar" dá para montar a lista de quem contratar quando a janela abrir.'}
         </p>
       ) : (
         <p className="text-sm text-muted-foreground">
           {rows.length} {rows.length === 1 ? 'jogador' : 'jogadores'}
           {!open && !browsing && ' sem clube'}. Caixa: {formatMoney(cash)}. Toque no nome para ver a
-          carta, ou na linha{open || !browsing ? '' : ' de quem está sem clube'} para negociar.
+          carta, na estrela para favoritar, ou na linha
+          {open || !browsing ? '' : ' de quem está sem clube'} para negociar.
         </p>
       )}
       <Card className={cn('py-0', rows.length === 0 && 'hidden')}>
@@ -186,8 +251,7 @@ function BuyTab({ game }: { game: GameState }) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {paged.items.map(({ player, price }) => {
-              const potential = potentialRange(player, careerGames(player, game.season.appearances))
+            {paged.items.map(({ player, price, wage, potential }) => {
               return (
                 <TableRow
                   key={player.id}
@@ -208,13 +272,14 @@ function BuyTab({ game }: { game: GameState }) {
                     >
                       {player.name}
                     </button>
+                    <FavoriteStar player={player} className="ml-0.5 align-middle" />
                     <RowDetails>
                       {[
                         player.clubId === FREE_AGENT
                           ? 'sem clube'
                           : world.clubs[player.clubId].shortName,
                         `${player.age} anos`,
-                        `pede ${formatMoney(wageDemand(world, player, userClubId))}`,
+                        `pede ${formatMoney(wage)}`,
                       ]}
                     </RowDetails>
                   </TableCell>
@@ -237,7 +302,7 @@ function BuyTab({ game }: { game: GameState }) {
                     {price === 0 ? 'Livre' : formatMoney(price)}
                   </TableCell>
                   <TableCell className="hidden text-right sm:table-cell">
-                    {formatMoney(wageDemand(world, player, userClubId))}
+                    {formatMoney(wage)}
                   </TableCell>
                 </TableRow>
               )
@@ -272,6 +337,22 @@ function OffersTab({ game }: { game: GameState }) {
       </p>
     )
   }
+  const accept = async (offer: TransferOffer) => {
+    const player = world.players[offer.playerId]
+    if (game.favorites.includes(player.id)) {
+      const ok = await confirm({
+        title: `Vender ${player.name}?`,
+        description: `${player.name} está nos seus favoritos. Vender para o ${world.clubs[offer.clubId].name} por ${formatMoney(offer.fee)} mesmo assim?`,
+        action: 'Vender',
+        destructive: true,
+      })
+      if (!ok) return
+    }
+    act(
+      () => acceptOffer(game, offer.id),
+      `${player.name} vendido para o ${world.clubs[offer.clubId].name} por ${formatMoney(offer.fee)}.`,
+    )
+  }
   const act = (change: () => GameState, done: string) => {
     try {
       setGame(change())
@@ -289,11 +370,14 @@ function OffersTab({ game }: { game: GameState }) {
         return (
           <Card key={offer.id} className="flex-row flex-wrap items-center gap-3 px-4">
             <div className="flex min-w-0 flex-1 flex-col gap-1">
-              <span className="font-semibold">
-                {player.name}{' '}
-                <span className="text-sm font-normal text-muted-foreground">
-                  ({player.position}, {player.overall})
+              <span className="flex flex-wrap items-center gap-x-2 gap-y-1 font-semibold">
+                <span>
+                  {player.name}{' '}
+                  <span className="text-sm font-normal text-muted-foreground">
+                    ({player.position}, {player.overall})
+                  </span>
                 </span>
+                <SaleBadge offer={offer} />
               </span>
               <span className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
                 <ClubName club={world.clubs[offer.clubId]} /> oferece{' '}
@@ -303,16 +387,7 @@ function OffersTab({ game }: { game: GameState }) {
               </span>
             </div>
             <div className="flex gap-2">
-              <Button
-                onClick={() =>
-                  act(
-                    () => acceptOffer(game, offer.id),
-                    `${player.name} vendido para o ${world.clubs[offer.clubId].name} por ${formatMoney(offer.fee)}.`,
-                  )
-                }
-              >
-                Aceitar
-              </Button>
+              <Button onClick={() => accept(offer)}>Aceitar</Button>
               <Button
                 variant="outline"
                 onClick={() =>
@@ -329,6 +404,58 @@ function OffersTab({ game }: { game: GameState }) {
         )
       })}
     </div>
+  )
+}
+
+/**
+ * Whether the player was up for sale when the bid came in, and how the bid
+ * compares to the asking price, as the toast said when it arrived.
+ */
+function SaleBadge({ offer }: { offer: TransferOffer }) {
+  if (offer.askingPrice === undefined) {
+    return (
+      <Badge variant="outline" title="O clube fez a proposta sem o jogador estar à venda">
+        Não estava à venda
+      </Badge>
+    )
+  }
+  const gap = offer.askingPrice > 0 ? Math.round((offer.fee / offer.askingPrice - 1) * 100) : 0
+  return (
+    <Badge variant="secondary" title={`Você pedia ${formatMoney(offer.askingPrice)}`}>
+      À venda por {formatMoney(offer.askingPrice)}
+      {gap !== 0 && (
+        <span className={gap < 0 ? 'text-destructive' : 'text-green-700 dark:text-green-400'}>
+          {gap < 0 ? `${-gap}% abaixo` : `${gap}% acima`}
+        </span>
+      )}
+    </Badge>
+  )
+}
+
+/** A filter with its name above it. */
+function FilterField(props: { label: string; children: ReactNode }) {
+  return (
+    <div className="flex flex-col gap-1">
+      <span className="text-xs text-muted-foreground">{props.label}</span>
+      {props.children}
+    </div>
+  )
+}
+
+/** A number from 0 to 99 that an attribute must reach; empty means no minimum. */
+function MinimumInput(props: { label: string; value: number; onChange: (value: number) => void }) {
+  return (
+    <Input
+      type="number"
+      inputMode="numeric"
+      min={0}
+      max={99}
+      aria-label={props.label}
+      placeholder="—"
+      value={props.value || ''}
+      onChange={(e) => props.onChange(Math.min(99, Math.max(0, Number(e.target.value) || 0)))}
+      className="h-8 w-20"
+    />
   )
 }
 

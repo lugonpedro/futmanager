@@ -19,6 +19,7 @@ import {
   renewContract,
   signPlayer,
   squadOf,
+  toggleFavorite,
   transferPlayer,
   wageDemand,
 } from './market.ts'
@@ -141,6 +142,7 @@ describe('selling', () => {
     expect(bids).toBeGreaterThan(0)
     const offer = game.market.offers.find((o) => o.playerId === player.id)!
     expect(offer.fee).toBeGreaterThan(player.marketValue * 0.8)
+    expect(offer.askingPrice).toBe(game.market.listed[player.id])
     expect(offer.expires).toBe(addDays(game.today, MARKET.offerDays))
     expect(dropLapsedOffers(game.market, offer.expires).offers).toContain(offer)
     const later = dropLapsedOffers(game.market, addDays(offer.expires, 1))
@@ -201,5 +203,15 @@ describe('contracts', () => {
     for (let i = 0; i < 6; i++) game = playRound(game)
     // In May the window is shut: no bids, and the ones from January are long gone.
     expect(game.market.offers).toEqual([])
+  })
+})
+
+describe('favorites', () => {
+  it('stars a player and takes the star off again', () => {
+    const id = target.id
+    const starred = toggleFavorite(start, id)
+    expect(starred.favorites).toEqual([id])
+    expect(toggleFavorite(starred, id).favorites).toEqual([])
+    expect(() => toggleFavorite(start, 'nobody')).toThrow()
   })
 })
