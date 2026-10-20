@@ -78,6 +78,7 @@ import {
   recordSeasonHistory,
   roundStars,
 } from './form.ts'
+import { applyDiscipline, injuryDays } from './discipline.ts'
 import { toFixtureResult } from './results.ts'
 import { PROMOTION_SPOTS } from './rules.ts'
 import { createSchedule } from './schedule.ts'
@@ -86,14 +87,11 @@ import { standings, topScorers } from './standings.ts'
 export { PROMOTION_SPOTS } from './rules.ts'
 export { toFixtureResult } from './results.ts'
 
-/** Yellow cards that add up to a one-match ban. */
-export const YELLOWS_FOR_SUSPENSION = 3
+export { INJURY_DAYS, YELLOWS_FOR_SUSPENSION } from './discipline.ts'
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
 export const SAVE_VERSION = 13
-/** An injury keeps a player out from this many days to this many more, short ones far more often. */
-export const INJURY_DAYS = { min: 8, spread: 30 }
 
 export { mixSeed } from '../rng.ts'
 
@@ -384,17 +382,6 @@ export function passDays(
   return { game: settleSponsorship(arrive(next, to)), stopped: false }
 }
 
-/** Counts down every ban by one round, dropping the ones that are over. */
-function countDown(record: Record<string, number>): Record<string, number> {
-  return Object.fromEntries(
-    Object.entries(record)
-      .map(([id, rounds]) => [id, rounds - 1] as const)
-      .filter(([, rounds]) => rounds > 0),
-  )
-}
-
-const injuryDays = (rng: Rng) => INJURY_DAYS.min + Math.floor(rng.next() ** 2 * INJURY_DAYS.spread)
-
 /**
  * Records the results of the next match day, a league round or a cup stage,
  * after moving the calendar to it.
@@ -428,29 +415,13 @@ function applyRound(game: GameState, results: readonly MatchResult[]): GameState
     }),
   )
 
-  const injuries = { ...season.injuries }
+  const discipline = applyDiscipline(
+    season,
+    results,
+    game.today,
+    createRng(mixSeed(game.world.seed, season.year, season.round, 'lesoes')),
+  )
   const appearances = { ...season.appearances }
-  const suspensions = countDown(season.suspensions)
-  const yellowCards = { ...season.yellowCards }
-  const rng = createRng(mixSeed(game.world.seed, season.year, season.round, 'lesoes'))
-
-  for (const result of results) {
-    for (const id of result.injured) injuries[id] = addDays(game.today, injuryDays(rng))
-    const sentOff = new Set(result.sentOff)
-    for (const id of sentOff) suspensions[id] = (suspensions[id] ?? 0) + 1
-    for (const event of result.events) {
-      // A yellow that leads to a sending off is already punished by the ban.
-      if (event.type !== 'amarelo' || !event.playerId || sentOff.has(event.playerId)) continue
-      const count = (yellowCards[event.playerId] ?? 0) + 1
-      if (count >= YELLOWS_FOR_SUSPENSION) {
-        suspensions[event.playerId] = (suspensions[event.playerId] ?? 0) + 1
-        delete yellowCards[event.playerId]
-      } else {
-        yellowCards[event.playerId] = count
-      }
-    }
-  }
-
   for (const result of results) countAppearances(game, result, appearances)
 
   const recorded: GameState = {
@@ -458,9 +429,7 @@ function applyRound(game: GameState, results: readonly MatchResult[]): GameState
     season: {
       ...season,
       fixtures,
-      injuries,
-      suspensions,
-      yellowCards,
+      ...discipline,
       appearances,
       ...recordMatchDay(season, results, game.today),
       roundStars: roundStars(results, game.world.players),
