@@ -421,3 +421,7 @@ verify_jwt = false
 # Called by pg_cron with a shared secret, and by the room's owner, whose token the function checks.
 [functions.room-draft]
 verify_jwt = false
+
+# Called by the room's owner, whose token the function checks.
+[functions.room-round]
+verify_jwt = false
