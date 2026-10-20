@@ -253,11 +253,14 @@ export function initAccount() {
   })
   window.addEventListener('online', () => void syncNow())
 
-  supabase.auth.onAuthStateChange((event, session) => {
+  // The account whose profile was asked for. A session that comes back with an expired token reports
+  // TOKEN_REFRESHED before INITIAL_SESSION, so the event alone does not say whether it was loaded.
+  let loadedFor: string | undefined
+  supabase.auth.onAuthStateChange((_event, session) => {
     const user = session?.user
-    const previous = get().user?.id
     set({ ready: true, user: user && { id: user.id, email: user.email } })
     if (!user) {
+      loadedFor = undefined
       set({
         profile: undefined,
         profileIsDefault: true,
@@ -269,7 +272,8 @@ export function initAccount() {
       return
     }
     // Supabase asks for no awaited calls inside this callback, so the work runs right after it.
-    if (user.id !== previous && event !== 'TOKEN_REFRESHED') {
+    if (user.id !== loadedFor) {
+      loadedFor = user.id
       setTimeout(() => {
         void loadProfile(user)
         void syncNow()

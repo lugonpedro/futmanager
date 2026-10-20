@@ -243,17 +243,24 @@ function StorageNote(props: {
   )
 }
 
-/** "Entrar" while signed out; the manager's crest and nickname once signed in. */
+/** "Entrar" while signed out; once signed in, the nickname, or the e-mail until one is saved. */
 function AccountButton() {
-  const { ready, user, profile } = useAccountStore()
+  const { ready, user, profile, profileIsDefault } = useAccountStore()
   if (!ready) return null
+  const named = profile && !profileIsDefault ? profile : undefined
   return (
     <Button asChild variant="ghost" size="sm">
       <Link to="/conta">
-        {user && profile ? (
+        {user ? (
           <>
-            <ManagerCrest crest={profile.crest} nickname={profile.nickname} className="size-5" />
-            <span className="max-w-32 truncate">{profile.nickname}</span>
+            {named ? (
+              <ManagerCrest crest={named.crest} nickname={named.nickname} className="size-5" />
+            ) : (
+              <UserIcon />
+            )}
+            <span className="max-w-40 truncate">
+              {named?.nickname ?? user.email ?? profile?.nickname ?? 'Minha conta'}
+            </span>
           </>
         ) : (
           <>
