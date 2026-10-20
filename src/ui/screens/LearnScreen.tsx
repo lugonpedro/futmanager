@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, TrophyIcon } from 'lucide-react'
+import { ArrowLeftIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router'
 import { Button } from '@/components/ui/button'
@@ -13,13 +13,10 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { cloudEnabled } from '../../cloud/client.ts'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import {
   CAREER_GUIDE,
   CAREER_SECTIONS,
-  FANTASY_GUIDE,
-  FANTASY_SECTIONS,
   learnPath,
   type LearnAnchor,
   type LearnContent,
@@ -28,14 +25,13 @@ import { shotPath, type LearnShot } from '../learnShots.ts'
 
 const TABS = {
   carreira: { label: 'Carreira', guide: CAREER_GUIDE, sections: CAREER_SECTIONS },
-  fantasia: { label: 'Fantasia online', guide: FANTASY_GUIDE, sections: FANTASY_SECTIONS },
 } as const
 
 type Tab = keyof typeof TABS
 
 const isTab = (tab: string): tab is Tab => tab in TABS
 
-/** How the career and the online fantasy game work, one tab each, with an index of sections. */
+/** How the career works, one tab per mode, with an index of sections. */
 export function LearnScreen() {
   const navigate = useNavigate()
   const location = useLocation()
@@ -75,28 +71,8 @@ export function LearnScreen() {
         <TabsContent value="carreira" className="flex flex-col gap-4">
           <Guide tab="carreira" />
         </TabsContent>
-        <TabsContent value="fantasia" className="flex flex-col gap-4">
-          <FantasyNote />
-          <Guide tab="fantasia" />
-        </TabsContent>
       </Tabs>
     </main>
-  )
-}
-
-function FantasyNote() {
-  return (
-    <div className="flex flex-wrap items-center justify-between gap-3 rounded-md border bg-muted/50 p-3 text-sm">
-      <p>A Fantasia online precisa de conta. Jogar e entrar nas ligas dos amigos é grátis.</p>
-      {cloudEnabled && (
-        <Button asChild size="sm" variant="outline">
-          <Link to="/fantasia">
-            <TrophyIcon />
-            Jogar
-          </Link>
-        </Button>
-      )}
-    </div>
   )
 }
 

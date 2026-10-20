@@ -37,11 +37,7 @@ export function PrivacyScreen() {
             times.
           </li>
           <li>
-            Na fantasia online: seus times de cada rodada e as ligas em que você está. Quem está
-            numa liga com você vê o seu apelido, o seu escudo e os seus pontos.
-          </li>
-          <li>
-            Se comprar o passe da temporada: a data, o valor e o código do pagamento. Os dados do
+            Se comprou o passe da temporada: a data, o valor e o código do pagamento. Os dados do
             cartão ou do Pix ficam só com o Mercado Pago, que processa o pagamento.
           </li>
           <li>
@@ -58,10 +54,10 @@ export function PrivacyScreen() {
 
       <Section title="Para que usamos">
         <p>
-          Só para fazer a conta funcionar: entrar, guardar e sincronizar suas carreiras, montar a
-          fantasia online e as ligas com amigos, liberar o passe que você comprou e mandar os avisos
-          que você ligou. Não vendemos dados, não mostramos anúncios e não usamos rastreadores. Suas
-          carreiras na nuvem são privadas: só você, entrando na sua conta, consegue vê-las.
+          Só para fazer a conta funcionar: entrar, guardar e sincronizar suas carreiras, guardar o
+          registro do passe que você comprou e mandar os avisos que você ligou. Não vendemos dados,
+          não mostramos anúncios e não usamos rastreadores. Suas carreiras na nuvem são privadas: só
+          você, entrando na sua conta, consegue vê-las.
         </p>
       </Section>
 
