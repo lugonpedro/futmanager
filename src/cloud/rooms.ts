@@ -1,0 +1,256 @@
+import type { TeamIdentity } from '../engine/room/team.ts'
+import type { RoomOptions } from '../engine/room/types.ts'
+import { supabase } from './client.ts'
+
+/** Where a room is: waiting for the draft, drafting, playing its league, or over. */
+export type RoomStatus = 'espera' | 'draft' | 'liga' | 'encerrada'
+
+/** A room the player is in, as its members see it. */
+export type Room = {
+  id: number
+  name: string
+  ownerId: string
+  pack: string
+  status: RoomStatus
+  inviteCode: string
+  options: RoomOptions
+  draftAt: Date
+  createdAt: Date
+  members: number
+}
+
+/** A person in a room, with their team. */
+export type RoomMember = TeamIdentity & {
+  userId: string
+  nickname?: string
+}
+
+/** What the invite page shows before joining. */
+export type RoomInvite = {
+  roomId: number
+  name: string
+  ownerNickname?: string
+  members: number
+  teams: number
+  status: RoomStatus
+  draftAt: Date
+  joined: boolean
+}
+
+/** Messages for the rules the database enforces, by the hint it raises them with. */
+const MESSAGES: Record<string, string> = {
+  conta: 'Entre na sua conta primeiro.',
+  nome: 'O nome da sala precisa ter de 3 a 40 letras.',
+  time: 'O nome do time precisa ter de 3 a 24 letras.',
+  sigla: 'A sigla precisa ter de 2 a 4 letras ou números.',
+  cores: 'Escolha as duas cores do time.',
+  data: 'O draft precisa ser marcado para daqui a no máximo 7 dias.',
+  opcoes: 'Alguma opção da sala não vale. Confira e tente de novo.',
+  limite: 'Você já está em 10 salas em andamento.',
+  convite: 'Esse convite não existe. Confira o código.',
+  cheia: 'Essa sala já está cheia.',
+  comecou: 'O draft dessa sala já começou.',
+  repetido: 'Já tem um time com esse nome ou essa sigla na sala.',
+  membro: 'Você não está nessa sala.',
+  dono: 'Só quem criou a sala pode fazer isso.',
+  'dono-sai': 'Quem criou a sala não sai dela: apague a sala.',
+  poucos: 'A sala já tem mais pessoas do que esse número de times.',
+}
+
+/** The player's message for a failed call; anything unexpected gets a generic one. */
+export function roomError(error: { hint?: string | null }): Error {
+  return new Error(
+    MESSAGES[error.hint ?? ''] ?? 'Não deu para falar com o servidor agora. Tente de novo.',
+  )
+}
+
+function client() {
+  if (!supabase) throw new Error('O jogo online não está disponível nesta versão.')
+  return supabase
+}
+
+export type RoomRow = {
+  id: number
+  name: string
+  owner_id: string
+  pack: string
+  status: RoomStatus
+  invite_code: string
+  teams: number
+  squad_size: number
+  draft_order: string
+  pick_seconds: number
+  auto_reserves: boolean
+  legs: number
+  grace_hours: number
+  injuries: string
+  trades: string
+  draft_at: string
+  created_at: string
+  room_members: { count: number }[]
+}
+
+const ROOM_COLUMNS =
+  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, room_members(count)'
+
+/** A room as the database keeps it, turned into the app's shape. */
+export function toRoom(row: RoomRow): Room {
+  return {
+    id: row.id,
+    name: row.name,
+    ownerId: row.owner_id,
+    pack: row.pack,
+    status: row.status,
+    inviteCode: row.invite_code,
+    options: {
+      teams: row.teams,
+      squadSize: row.squad_size as RoomOptions['squadSize'],
+      draftOrder: row.draft_order as RoomOptions['draftOrder'],
+      pickSeconds: row.pick_seconds as RoomOptions['pickSeconds'],
+      autoReserves: row.auto_reserves,
+      legs: row.legs as RoomOptions['legs'],
+      graceHours: row.grace_hours as RoomOptions['graceHours'],
+      injuries: row.injuries as RoomOptions['injuries'],
+      trades: row.trades as RoomOptions['trades'],
+    },
+    draftAt: new Date(row.draft_at),
+    createdAt: new Date(row.created_at),
+    members: row.room_members[0]?.count ?? 0,
+  }
+}
+
+/** The arguments the database functions take for a team. */
+const teamArgs = (team: TeamIdentity) => ({
+  team_name: team.name.trim(),
+  short_name: team.shortName,
+  color_primary: team.colors.primary,
+  color_secondary: team.colors.secondary,
+})
+
+/** The rooms the player is in, the ones still going first, then by draft time. */
+export async function loadMyRooms(): Promise<Room[]> {
+  const { data, error } = await client().from('rooms').select(ROOM_COLUMNS).order('draft_at')
+  if (error) throw roomError(error)
+  const rooms = (data as RoomRow[]).map(toRoom)
+  const over = (room: Room) => (room.status === 'encerrada' ? 1 : 0)
+  return rooms.sort((a, b) => over(a) - over(b))
+}
+
+/** A room the player is in, with its people; undefined if it is gone or theirs no more. */
+export async function loadRoom(
+  id: number,
+): Promise<{ room: Room; members: RoomMember[] } | undefined> {
+  const db = client()
+  const { data, error } = await db.from('rooms').select(ROOM_COLUMNS).eq('id', id).maybeSingle()
+  if (error) throw roomError(error)
+  if (!data) return undefined
+  const rows = await db.rpc('room_lobby', { room: id })
+  if (rows.error) throw roomError(rows.error)
+  return {
+    room: toRoom(data as RoomRow),
+    members: (
+      rows.data as {
+        user_id: string
+        nickname: string | null
+        team_name: string
+        short_name: string
+        color_primary: string
+        color_secondary: string
+      }[]
+    ).map((r) => ({
+      userId: r.user_id,
+      nickname: r.nickname ?? undefined,
+      name: r.team_name,
+      shortName: r.short_name,
+      colors: { primary: r.color_primary, secondary: r.color_secondary },
+    })),
+  }
+}
+
+/** Creates a room with the player's team in it; returns its id. */
+export async function createRoom(
+  name: string,
+  options: RoomOptions,
+  draftAt: Date,
+  team: TeamIdentity,
+): Promise<number> {
+  const { data, error } = await client().rpc('create_room', {
+    room_name: name,
+    options,
+    draft_at: draftAt.toISOString(),
+    ...teamArgs(team),
+  })
+  if (error) throw roomError(error)
+  return (data as { room_id: number }[])[0].room_id
+}
+
+/** Changes a waiting room's name, options and draft time; only its owner can. */
+export async function updateRoom(
+  id: number,
+  name: string,
+  options: RoomOptions,
+  draftAt: Date,
+): Promise<void> {
+  const { error } = await client().rpc('update_room', {
+    room: id,
+    room_name: name,
+    options,
+    draft_at: draftAt.toISOString(),
+  })
+  if (error) throw roomError(error)
+}
+
+/** The room behind an invite code, or undefined if there is none. */
+export async function loadInvite(code: string): Promise<RoomInvite | undefined> {
+  const { data, error } = await client().rpc('room_invite', { code })
+  if (error) throw roomError(error)
+  const row = (
+    data as {
+      room_id: number
+      name: string
+      owner_nickname: string | null
+      members: number
+      teams: number
+      status: RoomStatus
+      draft_at: string
+      joined: boolean
+    }[]
+  )[0]
+  return (
+    row && {
+      roomId: row.room_id,
+      name: row.name,
+      ownerNickname: row.owner_nickname ?? undefined,
+      members: Number(row.members),
+      teams: row.teams,
+      status: row.status,
+      draftAt: new Date(row.draft_at),
+      joined: row.joined,
+    }
+  )
+}
+
+/** Joins the room with that invite code, with the player's team; returns its id. */
+export async function joinRoom(code: string, team: TeamIdentity): Promise<number> {
+  const { data, error } = await client().rpc('join_room', { code, ...teamArgs(team) })
+  if (error) throw roomError(error)
+  return data as number
+}
+
+/** Changes the player's team in a waiting room. */
+export async function saveRoomTeam(id: number, team: TeamIdentity): Promise<void> {
+  const { error } = await client().rpc('save_room_team', { room: id, ...teamArgs(team) })
+  if (error) throw roomError(error)
+}
+
+/** Takes someone out of a waiting room: the player, or anyone if the owner asks. */
+export async function leaveRoom(id: number, userId: string): Promise<void> {
+  const { error } = await client().rpc('leave_room', { room: id, member: userId })
+  if (error) throw roomError(error)
+}
+
+/** Deletes a room the player created, for everyone; only before the draft or after the end. */
+export async function deleteRoom(id: number): Promise<void> {
+  const { error } = await client().from('rooms').delete().eq('id', id)
+  if (error) throw roomError(error)
+}
