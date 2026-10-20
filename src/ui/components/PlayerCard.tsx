@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import type { GameState, Player } from '../../engine/model/types.ts'
+import type { Club, GameState, Player } from '../../engine/model/types.ts'
 import { faces, styleLevel } from '../../engine/player/attributes.ts'
 import { FREE_AGENT } from '../../engine/model/types.ts'
 import { CARD_TIER_NAMES, cardTier, FACE_NAMES, styleName, type CardTier } from '../format.ts'
@@ -37,12 +37,19 @@ export function Stars(props: { value: number; className?: string }) {
  * A player's card, upright: overall and position in the corner, the club
  * crest, the name, six face numbers in two columns, feet and styles. The
  * colour follows the overall band, or marks the round's best XI and the
- * player of the season.
+ * player of the season. Without a game, `club` gives the crest.
  */
-export function PlayerCard(props: { player: Player; game?: GameState; className?: string }) {
+export function PlayerCard(props: {
+  player: Player
+  game?: GameState
+  club?: Club
+  className?: string
+}) {
   const { player, game } = props
   const tier = cardTier(player, game)
-  const club = game && player.clubId !== FREE_AGENT ? game.world.clubs[player.clubId] : undefined
+  const club =
+    props.club ??
+    (game && player.clubId !== FREE_AGENT ? game.world.clubs[player.clubId] : undefined)
   const numbers = faces(player)
   const special = tier === 'rodada' || tier === 'craque'
   return (

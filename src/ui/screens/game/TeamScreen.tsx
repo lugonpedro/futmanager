@@ -74,7 +74,8 @@ import {
   type Role,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
-import { FormArrow, PlayerSheet } from './PlayerSheet.tsx'
+import { FormArrow } from '../../components/PlayerSheetView.tsx'
+import { PlayerSheet } from './PlayerSheet.tsx'
 import { TrainingPanel } from './TrainingPanel.tsx'
 
 type Row = Player & {
