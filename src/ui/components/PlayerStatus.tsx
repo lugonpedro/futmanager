@@ -1,13 +1,31 @@
 import type { Season } from '../../engine/model/types.ts'
+import type { GameDate } from '../../engine/season/calendar.ts'
 import { YELLOWS_FOR_SUSPENSION } from '../../engine/season/season.ts'
 import { formatDayDate, formatDayMonth } from '../format.ts'
 
+/** Whether a player is out or close to a ban, wherever it is counted. */
+export type PlayerAvailability = {
+  /** The day he can play again, when injured. */
+  injured?: GameDate
+  /** Matches still to sit out. */
+  suspended?: number
+  /** Yellow cards towards the next ban. */
+  yellows?: number
+}
+
 /** Why a player can't play, or how close they are to a ban, as small tags. */
-export function PlayerStatus(props: { playerId: string; season: Season }) {
-  const { playerId, season } = props
-  const injured = season.injuries[playerId]
-  const suspended = season.suspensions[playerId]
-  const yellows = season.yellowCards[playerId]
+export function PlayerStatus({ playerId, season }: { playerId: string; season: Season }) {
+  return (
+    <AvailabilityTags
+      injured={season.injuries[playerId]}
+      suspended={season.suspensions[playerId]}
+      yellows={season.yellowCards[playerId]}
+    />
+  )
+}
+
+/** The tags of {@link PlayerStatus}, from the availability alone. */
+export function AvailabilityTags({ injured, suspended, yellows }: PlayerAvailability) {
   // An empty tag box would still take a line where the name wraps.
   if (!injured && !suspended && !yellows) return null
   return (

@@ -1,57 +1,44 @@
-import { FREE_AGENT, type GameState, type Player, type Position } from '../engine/model/types.ts'
+import { FREE_AGENT, type GameState, type Player } from '../engine/model/types.ts'
 import { careerGames, potentialRange } from '../engine/progression/progression.ts'
 import { askingPrice, canLeave, wageDemand } from '../engine/transfer/market.ts'
+import {
+  activePlayerFilters,
+  matchesPlayer,
+  NO_PLAYER_FILTERS,
+  reachesPotential,
+  type PlayerFilters,
+} from './playerFilter.ts'
 
 export const SITUATIONS = ['Todos', 'Sem clube', 'Contrato no fim', 'Favoritos'] as const
 export type Situation = (typeof SITUATIONS)[number]
 
-/** Age bands, youngest and oldest included. */
-export const AGES = {
-  Todas: [0, 99],
-  'Até 21': [0, 21],
-  '22 a 29': [22, 29],
-  '30 ou mais': [30, 99],
-} as const
-export type AgeBand = keyof typeof AGES
-
 export const MARKET_SORTS = ['Geral', 'Potencial', 'Preço', 'Salário', 'Idade'] as const
 export type MarketSort = (typeof MARKET_SORTS)[number]
 
-export type MarketFilters = {
-  position: Position | 'Todos'
+export type MarketFilters = PlayerFilters & {
   situation: Situation
-  age: AgeBand
   /** Division of the player's club; undefined for any. */
   division?: number
-  minOverall: number
-  minPotential: number
   /** Only fees the club's cash covers. */
   affordable: boolean
   sort: MarketSort
-  search: string
 }
 
 export const NO_FILTERS: MarketFilters = {
-  position: 'Todos',
+  ...NO_PLAYER_FILTERS,
   situation: 'Todos',
-  age: 'Todas',
-  minOverall: 0,
-  minPotential: 0,
   affordable: false,
   sort: 'Geral',
-  search: '',
 }
 
 /** How many of the filters beyond position, sort and search are on, for the "Filtros" button. */
 export function activeFilters(filters: MarketFilters): number {
-  return [
-    filters.situation !== 'Todos',
-    filters.age !== 'Todas',
-    filters.division !== undefined,
-    filters.minOverall > 0,
-    filters.minPotential > 0,
-    filters.affordable,
-  ].filter(Boolean).length
+  return (
+    activePlayerFilters(filters) +
+    [filters.situation !== 'Todos', filters.division !== undefined, filters.affordable].filter(
+      Boolean,
+    ).length
+  )
 }
 
 export type MarketRow = {
@@ -73,8 +60,6 @@ export function marketRows(
 ): MarketRow[] {
   const { world, userClubId, season } = game
   const cash = world.clubs[userClubId].cash
-  const query = filters.search.trim().toLocaleLowerCase('pt-BR')
-  const [youngest, oldest] = AGES[filters.age]
   const favorites = new Set(game.favorites)
   const inSituation = (p: Player) => {
     if (filters.situation === 'Sem clube') return p.clubId === FREE_AGENT
@@ -87,14 +72,11 @@ export function marketRows(
   const rows = Object.values(world.players)
     .filter((p) => p.clubId !== userClubId)
     .filter(signableOnly)
-    .filter((p) => filters.position === 'Todos' || p.position === filters.position)
-    .filter((p) => !query || p.name.toLocaleLowerCase('pt-BR').includes(query))
+    .filter((p) => matchesPlayer(p, filters))
     .filter(inSituation)
-    .filter((p) => p.age >= youngest && p.age <= oldest)
     .filter(
       (p) => filters.division === undefined || world.clubs[p.clubId]?.division === filters.division,
     )
-    .filter((p) => p.overall >= filters.minOverall)
     .filter((p) => canLeave(world, p))
     .map((player) => ({
       player,
@@ -102,7 +84,7 @@ export function marketRows(
       wage: wageDemand(world, player, userClubId),
       potential: potentialRange(player, careerGames(player, season.appearances)),
     }))
-    .filter((r) => r.potential.high >= filters.minPotential)
+    .filter((r) => reachesPotential(r.potential, filters))
     .filter((r) => !filters.affordable || r.price <= cash)
 
   const order: Record<MarketSort, (a: MarketRow, b: MarketRow) => number> = {

@@ -1,23 +1,8 @@
 import {
-  DndContext,
-  DragOverlay,
-  MouseSensor,
-  pointerWithin,
-  TouchSensor,
-  useDraggable,
-  useDroppable,
-  useSensor,
-  useSensors,
-  type DragEndEvent,
-  type DragStartEvent,
-} from '@dnd-kit/core'
-import {
   ArrowDownIcon,
   ArrowUpIcon,
   DumbbellIcon,
   FilePenLineIcon,
-  ListIcon,
-  MapIcon,
   StarIcon,
   TagIcon,
   WandSparklesIcon,
@@ -37,21 +22,12 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { cn } from '@/lib/utils'
-import {
-  autoLineup,
-  changeFormation,
-  formationLines,
-  swapPlayers,
-} from '../../../engine/match/lineup.ts'
-import { roleOf as slotRole } from '../../../engine/match/roles.ts'
-import { positionFit, sectorStrength, slotFit } from '../../../engine/match/strength.ts'
+import { positionFit } from '../../../engine/match/strength.ts'
 import {
   POSITIONS,
   type Lineup,
   type Player,
   type Position,
-  type Posture,
-  type TacticalRole,
   type TrainingPlan,
 } from '../../../engine/model/types.ts'
 import {
@@ -80,28 +56,26 @@ import { useLineupPrefs } from '../../../store/lineupPrefs.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { FocusSelect } from '../../components/FocusSelect.tsx'
-import { FormationSelect } from '../../components/FormationSelect.tsx'
 import { listText } from '../../learn.ts'
 import { FavoriteStar } from '../../components/FavoriteStar.tsx'
-import { Pitch } from '../../components/Pitch.tsx'
+import { LineupEditor } from '../../components/LineupEditor.tsx'
+import { useSwapSpot } from '../../components/swapSpot.ts'
 import { RowDetails } from '../../components/RowDetails.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
 import {
   fitClass,
-  fitLevel,
   formatMoney,
   absentName,
   isHomegrown,
   POSITION_NAMES,
   POSITION_ORDER,
-  POSTURE_NAMES,
   rangeText,
   signedChange,
-  TACTICAL_ROLE_NAMES,
   type Role,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
-import { FormArrow, PlayerSheet } from './PlayerSheet.tsx'
+import { FormArrow } from '../../components/PlayerSheetView.tsx'
+import { PlayerSheet } from './PlayerSheet.tsx'
 import { TrainingPanel } from './TrainingPanel.tsx'
 
 type Row = Player & {
@@ -158,12 +132,9 @@ export function TeamScreen() {
   const game = useGame()
   const setGame = useGameStore((s) => s.setGame)
   const { world, season, userClubId, market } = game
-  const [selected, setSelected] = useState<string>()
-  const [dragging, setDragging] = useState<string>()
   const [viewing, setViewing] = useState<string>()
   const [listing, setListing] = useState<string>()
   const [renewing, setRenewing] = useState<string>()
-  const [showPitch, setShowPitch] = useState(prefersPitch)
   const [position, setPosition] = useState<Position | undefined>()
   const [search, setSearch] = useState('')
   const [trainableOnly, setTrainableOnly] = useState(false)
@@ -173,10 +144,6 @@ export function TeamScreen() {
     key: 'position',
     ascending: true,
   })
-  const sensors = useSensors(
-    useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
-    useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } }),
-  )
 
   const squad = world.clubs[userClubId].playerIds.map((id) => world.players[id])
   const out = unavailablePlayers(season)
@@ -191,60 +158,10 @@ export function TeamScreen() {
   const bench = new Set(lineup.bench)
   const roleOf = (id: string): Role =>
     slots.has(id) ? 'titular' : bench.has(id) ? 'reserva' : 'fora'
-  const inLineup = (id: string) => roleOf(id) !== 'fora'
 
-  const save = (next: Lineup) => {
-    setGame({ ...game, userLineup: next })
-    setSelected(undefined)
-  }
-  /** Who can be picked: anyone fit, and an injured or banned player still in the lineup, to take him out. */
-  const movable = (id: string) => !out.has(id) || inLineup(id)
-  /** Swaps two players, as long as one of them is in the lineup. */
-  const swap = (a: string, b: string) => {
-    if (a === b || !movable(a) || !movable(b)) return false
-    if (!inLineup(a) && !inLineup(b)) return false
-    const next = swapPlayers(lineup, a, b)
-    save(next)
-    warnOutOfPosition(next, [a, b])
-    return true
-  }
-  const pick = (id: string) => {
-    if (!movable(id)) return
-    if (!selected || selected === id) return setSelected(selected === id ? undefined : id)
-    if (!swap(selected, id)) setSelected(id)
-  }
-  /** A player just moved into a slot far from his position plays well below his level. */
-  const warnOutOfPosition = (next: Lineup, moved: string[]) => {
-    for (const slot of next.starters) {
-      if (!moved.includes(slot.playerId) || slots.get(slot.playerId) === slot.position) continue
-      const player = world.players[slot.playerId]
-      if (fitLevel(positionFit(player, slot.position)) !== 'poor') continue
-      toast.warning(
-        `${player.name} (${player.position}) vai jogar como ${POSITION_NAMES[slot.position].toLowerCase()} e rende bem menos fora de posição.`,
-      )
-    }
-  }
-  const onDragStart = (event: DragStartEvent) => setDragging(playerOf(event.active))
-  const onDragEnd = (event: DragEndEvent) => {
-    setDragging(undefined)
-    if (event.over) swap(playerOf(event.active), playerOf(event.over))
-  }
-
-  const starters = lineup.starters.map((s) => ({
-    player: world.players[s.playerId],
-    position: s.position,
-    role: s.role,
-  }))
+  const save = (next: Lineup) => setGame({ ...game, userLineup: next })
   const conditionOf = (id: string) =>
     conditionOn(season, world.players[id], game.today, recoveryRate(game, id))
-  const sectors = sectorStrength(
-    starters.map((s) => ({
-      ...s,
-      energy: conditionOf(s.player.id),
-      form: formOf(season, s.player.id),
-    })),
-    lineup.posture,
-  )
 
   const query = search.trim().toLocaleLowerCase('pt-BR')
   const column = COLUMNS.find((c) => c.key === sort.key)!
@@ -317,361 +234,294 @@ export function TeamScreen() {
   const viewed = byId(viewing)
   const listed = byId(listing)
   const renewed = byId(renewing)
-  const dragged = byId(dragging)
 
   return (
-    <DndContext
-      sensors={sensors}
-      // The drop goes where the finger or cursor is, not where the dragged chip overlaps most.
-      collisionDetection={pointerWithin}
-      onDragStart={onDragStart}
-      onDragEnd={onDragEnd}
-      onDragCancel={() => setDragging(undefined)}
-    >
+    <>
       <div className="flex flex-col gap-4">
-        <Card className="gap-3 px-4">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <label className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Formação</span>
-              <FormationSelect
-                value={lineup.formation}
-                onChange={(f) => save(changeFormation(lineup, f, world.players))}
-              />
-            </label>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Postura</span>
-              <Choices
-                ariaLabel="Postura"
-                options={Object.keys(POSTURE_NAMES) as Posture[]}
-                value={lineup.posture}
-                onChange={(p) => save({ ...lineup, posture: p })}
-                label={(p) => POSTURE_NAMES[p]}
-              />
-            </div>
-            <Button
-              size="sm"
-              onClick={() => save(autoLineup(squad, lineup.formation, lineup.posture, out))}
-            >
-              <WandSparklesIcon />
-              Escalar automaticamente
-            </Button>
-            <p className="text-sm text-muted-foreground tabular-nums">
-              Defesa {Math.round(sectors.defense)} · Meio {Math.round(sectors.midfield)} · Ataque{' '}
-              {Math.round(sectors.attack)}
-            </p>
-          </div>
-
-          {missing.length > 0 && (
-            <MissingStarters
-              names={missing.map((id) => absentName(game, id))}
-              onReplace={() => save(clubLineup(game, userClubId))}
-              autoReplace={autoReplace}
-              onAutoReplace={setAutoReplace}
-            />
+        <LineupEditor
+          players={world.players}
+          squad={squad}
+          lineup={lineup}
+          onChange={save}
+          unavailable={out}
+          outForMatch={outForMatch}
+          condition={conditionOf}
+          form={(id) => formOf(season, id)}
+          notice={(editing) => (
+            <>
+              {missing.length > 0 && (
+                <MissingStarters
+                  names={missing.map((id) => absentName(game, id))}
+                  onReplace={() => editing.change(clubLineup(game, userClubId))}
+                  autoReplace={autoReplace}
+                  onAutoReplace={setAutoReplace}
+                />
+              )}
+              {missing.length === 0 && autoReplace && (
+                <label className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <input
+                    type="checkbox"
+                    className="size-4 accent-primary"
+                    checked
+                    onChange={() => setAutoReplace(false)}
+                  />
+                  Trocar desfalques automaticamente
+                </label>
+              )}
+            </>
           )}
-          {missing.length === 0 && autoReplace && (
-            <label className="flex items-center gap-2 text-xs text-muted-foreground">
-              <input
-                type="checkbox"
-                className="size-4 accent-primary"
-                checked
-                onChange={() => setAutoReplace(false)}
-              />
-              Trocar desfalques automaticamente
-            </label>
-          )}
-          {showPitch ? (
-            <div className="w-full md:mx-auto md:max-w-lg">
-              <Pitch
-                slots={starters}
-                formation={lineup.formation}
-                unavailable={outForMatch}
-                selected={selected}
-                onSelect={pick}
-                wrap={(id, className, player) => (
-                  <DragSlot id={id} className={className}>
-                    {player}
-                  </DragSlot>
-                )}
-              />
-            </div>
-          ) : (
-            <StarterLines
-              lines={formationLines(starters, lineup.formation)}
-              unavailable={outForMatch}
-              selected={selected}
-              onSelect={pick}
-            />
-          )}
-
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-xs text-muted-foreground">
-              Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de
-              lugar. Cada vaga tem uma função, como volante ou ponta, e a cor dela mostra o encaixe:{' '}
-              <span className={fitClass(1)}>bom</span>,{' '}
-              <span className={fitClass(0.95)}>serve</span> ou{' '}
-              <span className={fitClass(0.72)}>improvisado</span>. Toque no nome para ver a carta,
-              vender ou renovar.
-            </p>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                setShowPitch(!showPitch)
-                savePitchPreference(!showPitch)
-              }}
-            >
-              {showPitch ? <ListIcon /> : <MapIcon />}
-              {showPitch ? 'Ver em lista' : 'Ver no campo'}
-            </Button>
-          </div>
-        </Card>
-
-        <section ref={list} className="flex min-w-0 scroll-mt-16 flex-col gap-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <Choices
-              ariaLabel="Filtrar por posição"
-              options={['Todos', ...POSITIONS]}
-              value={position ?? 'Todos'}
-              onChange={(value) => setPosition(value === 'Todos' ? undefined : (value as Position))}
-              title={(value) =>
-                value === 'Todos' ? 'Todas as posições' : POSITION_NAMES[value as Position]
-              }
-            />
-            <Input
-              type="search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Buscar jogador"
-              className="h-8 sm:max-w-48"
-            />
-            <Button
-              variant={trainableOnly ? 'default' : 'outline'}
-              size="sm"
-              aria-pressed={trainableOnly}
-              onClick={() => setTrainableOnly((only) => !only)}
-              title="Quem ainda pode ter treino individual"
-            >
-              <DumbbellIcon />
-              Escolher treino
-            </Button>
-            <Button
-              variant={favoritesOnly ? 'default' : 'outline'}
-              size="sm"
-              aria-pressed={favoritesOnly}
-              onClick={() => setFavoritesOnly((only) => !only)}
-              title="Só os jogadores marcados com a estrela"
-            >
-              <StarIcon />
-              Favoritos
-            </Button>
-          </div>
-          {idle > 0 && (
-            <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
-              <p>
-                {idle}{' '}
-                {idle === 1 ? 'jogador pode treinar e está' : 'jogadores podem treinar e estão'} sem
-                treino individual.
-              </p>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setGame(setRecommendedPlans(game, true))}
-              >
-                Colocar no recomendado
-              </Button>
-            </div>
-          )}
-          {expiring > 0 && (
-            <p className="text-sm text-muted-foreground">
-              {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim desta
-              temporada (em vermelho): renove ou o jogador sai de graça.
-            </p>
-          )}
-
-          <Card className="py-0">
-            <Table className="tabular-nums">
-              <TableHeader>
-                <TableRow>
-                  {COLUMNS.map((c) => (
-                    <TableHead key={c.key} className={'hide' in c ? c.hide : undefined}>
-                      <button
-                        type="button"
-                        onClick={() => sortBy(c.key)}
-                        title={'title' in c ? c.title : undefined}
-                        className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"
-                      >
-                        {c.label}
-                        {sort.key === c.key &&
-                          (sort.ascending ? (
-                            <ArrowUpIcon className="size-3" />
-                          ) : (
-                            <ArrowDownIcon className="size-3" />
-                          ))}
-                      </button>
-                    </TableHead>
-                  ))}
-                  <TableHead
-                    title="Treino individual; as setas mostram o que mais sobe o geral"
-                    className={trainingColumn}
+          hint="Toque no nome para ver a carta, vender ou renovar."
+        >
+          {({ selected, pick, movable }) => (
+            <section ref={list} className="flex min-w-0 scroll-mt-16 flex-col gap-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <Choices
+                  ariaLabel="Filtrar por posição"
+                  options={['Todos', ...POSITIONS]}
+                  value={position ?? 'Todos'}
+                  onChange={(value) =>
+                    setPosition(value === 'Todos' ? undefined : (value as Position))
+                  }
+                  title={(value) =>
+                    value === 'Todos' ? 'Todas as posições' : POSITION_NAMES[value as Position]
+                  }
+                />
+                <Input
+                  type="search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Buscar jogador"
+                  className="h-8 sm:max-w-48"
+                />
+                <Button
+                  variant={trainableOnly ? 'default' : 'outline'}
+                  size="sm"
+                  aria-pressed={trainableOnly}
+                  onClick={() => setTrainableOnly((only) => !only)}
+                  title="Quem ainda pode ter treino individual"
+                >
+                  <DumbbellIcon />
+                  Escolher treino
+                </Button>
+                <Button
+                  variant={favoritesOnly ? 'default' : 'outline'}
+                  size="sm"
+                  aria-pressed={favoritesOnly}
+                  onClick={() => setFavoritesOnly((only) => !only)}
+                  title="Só os jogadores marcados com a estrela"
+                >
+                  <StarIcon />
+                  Favoritos
+                </Button>
+              </div>
+              {idle > 0 && (
+                <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
+                  <p>
+                    {idle}{' '}
+                    {idle === 1 ? 'jogador pode treinar e está' : 'jogadores podem treinar e estão'}{' '}
+                    sem treino individual.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setGame(setRecommendedPlans(game, true))}
                   >
-                    Treino
-                  </TableHead>
-                  <TableHead className={actionsColumn}>
-                    <span className="sr-only">Ações</span>
-                  </TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {GROUPS.map((group) => {
-                  const members = rows.filter((r) => r.role === group.role)
-                  return [
-                    <TableRow key={group.role} className="bg-muted/50 hover:bg-muted/50">
-                      <TableCell
-                        colSpan={COLUMNS.length + 2}
-                        className="py-1.5 text-xs font-semibold text-muted-foreground"
-                      >
-                        {group.label} ({members.length})
-                      </TableCell>
-                    </TableRow>,
-                    ...members.map((p) => (
-                      <SquadRow
-                        key={p.id}
-                        row={p}
-                        selected={selected === p.id}
-                        disabled={!movable(p.id)}
-                        listed={market.listed[p.id] !== undefined}
-                        expiring={p.contractUntil <= season.year}
-                        onPick={() => pick(p.id)}
-                        onSell={() => sell(p.id)}
-                        onRenew={() => setRenewing(p.id)}
-                        actionsClassName={actionsColumn}
-                      >
-                        {/* On phones the tags wrap under the name, so the row fits the screen. */}
-                        <TableCell className="whitespace-normal sm:whitespace-nowrap">
+                    Colocar no recomendado
+                  </Button>
+                </div>
+              )}
+              {expiring > 0 && (
+                <p className="text-sm text-muted-foreground">
+                  {expiring} {expiring === 1 ? 'contrato termina' : 'contratos terminam'} no fim
+                  desta temporada (em vermelho): renove ou o jogador sai de graça.
+                </p>
+              )}
+
+              <Card className="py-0">
+                <Table className="tabular-nums">
+                  <TableHeader>
+                    <TableRow>
+                      {COLUMNS.map((c) => (
+                        <TableHead key={c.key} className={'hide' in c ? c.hide : undefined}>
                           <button
                             type="button"
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              setViewing(p.id)
-                            }}
-                            className="cursor-pointer text-left font-medium hover:underline"
+                            onClick={() => sortBy(c.key)}
+                            title={'title' in c ? c.title : undefined}
+                            className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"
                           >
-                            {p.name}
+                            {c.label}
+                            {sort.key === c.key &&
+                              (sort.ascending ? (
+                                <ArrowUpIcon className="size-3" />
+                              ) : (
+                                <ArrowDownIcon className="size-3" />
+                              ))}
                           </button>
-                          <FavoriteStar player={p} className="align-middle" />{' '}
-                          <PlayerStatus playerId={p.id} season={season} />
-                          {isHomegrown(p, userClubId) && (
-                            <Badge
-                              variant="outline"
-                              className="ml-1"
-                              title="Revelado pela base do clube"
-                            >
-                              Base
-                            </Badge>
-                          )}
-                          {market.listed[p.id] !== undefined && (
-                            <Badge variant="secondary" className="ml-1">
-                              à venda
-                            </Badge>
-                          )}
-                          <RowDetails>
-                            {[
-                              `${p.age} anos`,
-                              <span key="condition" className="whitespace-nowrap">
-                                <span
-                                  className={cn(
-                                    p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
-                                  )}
+                        </TableHead>
+                      ))}
+                      <TableHead
+                        title="Treino individual; as setas mostram o que mais sobe o geral"
+                        className={trainingColumn}
+                      >
+                        Treino
+                      </TableHead>
+                      <TableHead className={actionsColumn}>
+                        <span className="sr-only">Ações</span>
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {GROUPS.map((group) => {
+                      const members = rows.filter((r) => r.role === group.role)
+                      return [
+                        <TableRow key={group.role} className="bg-muted/50 hover:bg-muted/50">
+                          <TableCell
+                            colSpan={COLUMNS.length + 2}
+                            className="py-1.5 text-xs font-semibold text-muted-foreground"
+                          >
+                            {group.label} ({members.length})
+                          </TableCell>
+                        </TableRow>,
+                        ...members.map((p) => (
+                          <SquadRow
+                            key={p.id}
+                            row={p}
+                            selected={selected === p.id}
+                            disabled={!movable(p.id)}
+                            listed={market.listed[p.id] !== undefined}
+                            expiring={p.contractUntil <= season.year}
+                            onPick={() => pick(p.id)}
+                            onSell={() => sell(p.id)}
+                            onRenew={() => setRenewing(p.id)}
+                            actionsClassName={actionsColumn}
+                          >
+                            {/* On phones the tags wrap under the name, so the row fits the screen. */}
+                            <TableCell className="whitespace-normal sm:whitespace-nowrap">
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  setViewing(p.id)
+                                }}
+                                className="cursor-pointer text-left font-medium hover:underline"
+                              >
+                                {p.name}
+                              </button>
+                              <FavoriteStar player={p} className="align-middle" />{' '}
+                              <PlayerStatus playerId={p.id} season={season} />
+                              {isHomegrown(p, userClubId) && (
+                                <Badge
+                                  variant="outline"
+                                  className="ml-1"
+                                  title="Revelado pela base do clube"
                                 >
-                                  {p.condition}%
-                                </span>{' '}
-                                <FormArrow form={p.form} />
-                              </span>,
+                                  Base
+                                </Badge>
+                              )}
+                              {market.listed[p.id] !== undefined && (
+                                <Badge variant="secondary" className="ml-1">
+                                  à venda
+                                </Badge>
+                              )}
+                              <RowDetails>
+                                {[
+                                  `${p.age} anos`,
+                                  <span key="condition" className="whitespace-nowrap">
+                                    <span
+                                      className={cn(
+                                        p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
+                                      )}
+                                    >
+                                      {p.condition}%
+                                    </span>{' '}
+                                    <FormArrow form={p.form} />
+                                  </span>,
+                                  <span
+                                    key="contract"
+                                    className={cn(
+                                      p.contractUntil <= season.year &&
+                                        'font-semibold text-destructive',
+                                    )}
+                                  >
+                                    até {p.contractUntil}
+                                  </span>,
+                                ]}
+                              </RowDetails>
+                            </TableCell>
+                            <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
+                            <TableCell
+                              className="whitespace-nowrap"
+                              title={`Geral ${p.overall}, potencial ${rangeText(p.potentialRange)}`}
+                            >
+                              <span className="font-bold">{p.overall}</span>
+                              <span className="text-xs text-muted-foreground">
+                                /{p.potentialRange.high}
+                              </span>
+                              <GrowthMark growth={game.growth?.overall[p.id]} />
+                            </TableCell>
+                            <TableCell className="hidden whitespace-nowrap sm:table-cell">
                               <span
-                                key="contract"
                                 className={cn(
-                                  p.contractUntil <= season.year &&
-                                    'font-semibold text-destructive',
+                                  p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
                                 )}
                               >
-                                até {p.contractUntil}
-                              </span>,
-                            ]}
-                          </RowDetails>
-                        </TableCell>
-                        <TableCell className="hidden sm:table-cell">{p.age}</TableCell>
-                        <TableCell
-                          className="whitespace-nowrap"
-                          title={`Geral ${p.overall}, potencial ${rangeText(p.potentialRange)}`}
+                                {p.condition}%
+                              </span>{' '}
+                              <FormArrow form={p.form} />
+                            </TableCell>
+                            <TableCell className="hidden md:table-cell">
+                              {formatMoney(p.wage)}
+                            </TableCell>
+                            <TableCell
+                              className={cn(
+                                'hidden sm:table-cell',
+                                p.contractUntil <= season.year && 'font-semibold text-destructive',
+                              )}
+                            >
+                              {p.contractUntil}
+                            </TableCell>
+                            <TrainingCell
+                              className={trainingColumn}
+                              player={p}
+                              plan={game.training.individual[p.id]}
+                              onChange={(plan) => setGame(setTrainingPlan(game, p.id, plan))}
+                            />
+                          </SquadRow>
+                        )),
+                      ]
+                    })}
+                  </TableBody>
+                </Table>
+              </Card>
+              {loaned.length > 0 && (
+                <Card className="gap-2 px-4">
+                  <h3 className="text-sm font-semibold">Emprestados ({loaned.length})</h3>
+                  <ul className="flex flex-col gap-1 text-sm">
+                    {loaned.map((p) => (
+                      <li key={p.id}>
+                        <button
+                          type="button"
+                          onClick={() => setViewing(p.id)}
+                          className="cursor-pointer text-left hover:underline"
                         >
-                          <span className="font-bold">{p.overall}</span>
-                          <span className="text-xs text-muted-foreground">
-                            /{p.potentialRange.high}
-                          </span>
-                          <GrowthMark growth={game.growth?.overall[p.id]} />
-                        </TableCell>
-                        <TableCell className="hidden whitespace-nowrap sm:table-cell">
-                          <span
-                            className={cn(
-                              p.condition < 85 && 'text-amber-600 dark:text-yellow-300',
-                            )}
-                          >
-                            {p.condition}%
-                          </span>{' '}
-                          <FormArrow form={p.form} />
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          {formatMoney(p.wage)}
-                        </TableCell>
-                        <TableCell
-                          className={cn(
-                            'hidden sm:table-cell',
-                            p.contractUntil <= season.year && 'font-semibold text-destructive',
-                          )}
-                        >
-                          {p.contractUntil}
-                        </TableCell>
-                        <TrainingCell
-                          className={trainingColumn}
-                          player={p}
-                          plan={game.training.individual[p.id]}
-                          onChange={(plan) => setGame(setTrainingPlan(game, p.id, plan))}
-                        />
-                      </SquadRow>
-                    )),
-                  ]
-                })}
-              </TableBody>
-            </Table>
-          </Card>
-          {loaned.length > 0 && (
-            <Card className="gap-2 px-4">
-              <h3 className="text-sm font-semibold">Emprestados ({loaned.length})</h3>
-              <ul className="flex flex-col gap-1 text-sm">
-                {loaned.map((p) => (
-                  <li key={p.id}>
-                    <button
-                      type="button"
-                      onClick={() => setViewing(p.id)}
-                      className="cursor-pointer text-left hover:underline"
-                    >
-                      <span className="text-muted-foreground">{p.position}</span> {p.name}
-                    </button>{' '}
-                    <span className="text-muted-foreground">
-                      (geral {p.overall}) no {world.clubs[p.clubId].name},{' '}
-                      {season.appearances[p.id] ?? 0} jogos
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs text-muted-foreground">
-                Voltam no fim da temporada. Jogadores de até {LOAN.maxAge} anos podem ser
-                emprestados com a janela aberta, pela carta do jogador.
-              </p>
-            </Card>
+                          <span className="text-muted-foreground">{p.position}</span> {p.name}
+                        </button>{' '}
+                        <span className="text-muted-foreground">
+                          (geral {p.overall}) no {world.clubs[p.clubId].name},{' '}
+                          {season.appearances[p.id] ?? 0} jogos
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-muted-foreground">
+                    Voltam no fim da temporada. Jogadores de até {LOAN.maxAge} anos podem ser
+                    emprestados com a janela aberta, pela carta do jogador.
+                  </p>
+                </Card>
+              )}
+            </section>
           )}
-        </section>
+        </LineupEditor>
 
         <TrainingPanel
           onPickOneByOne={() => {
@@ -680,14 +530,6 @@ export function TeamScreen() {
           }}
         />
       </div>
-
-      <DragOverlay dropAnimation={null}>
-        {dragged && (
-          <span className="inline-flex items-center gap-2 rounded-md bg-yellow-300 px-2 py-1 text-sm font-semibold text-green-950 shadow-lg">
-            {dragged.position} {dragged.name} {dragged.overall}
-          </span>
-        )}
-      </DragOverlay>
 
       {viewed && (
         <PlayerSheet
@@ -706,77 +548,8 @@ export function TeamScreen() {
       {renewed && (
         <RenewDialog game={game} player={renewed} onClose={() => setRenewing(undefined)} />
       )}
-    </DndContext>
+    </>
   )
-}
-
-/**
- * A starter is both on the pitch and in the list, so each spot gets its own
- * drag id and carries the player's id as data.
- */
-const playerOf = (spot: { data: { current?: Record<string, unknown> } }) =>
-  spot.data.current!.playerId as string
-
-/**
- * A starter, as a chip or on the pitch, that can be dragged onto another player
- * and take a drop. Chips and pitch can show at once, so each has its own ids.
- */
-function DragSlot(props: {
-  id: string
-  className: string
-  children: ReactNode
-  place?: 'chip' | 'pitch'
-}) {
-  const spot = { id: `${props.place ?? 'pitch'}-${props.id}`, data: { playerId: props.id } }
-  const drag = useDraggable(spot)
-  const drop = useDroppable(spot)
-  return (
-    <div
-      ref={(node) => {
-        drag.setNodeRef(node)
-        drop.setNodeRef(node)
-      }}
-      {...drag.listeners}
-      className={cn(
-        props.className,
-        'touch-manipulation',
-        drag.isDragging && 'opacity-40',
-        drop.isOver && !drag.isDragging && 'rounded ring-2 ring-yellow-300',
-      )}
-    >
-      {props.children}
-    </div>
-  )
-}
-
-const PITCH_KEY = 'futmanager-elenco-campo'
-
-/** The XI shows on the pitch unless the user switched to the list before. */
-function prefersPitch(): boolean {
-  try {
-    return localStorage.getItem(PITCH_KEY) !== 'lista'
-  } catch {
-    return true
-  }
-}
-
-function savePitchPreference(pitch: boolean) {
-  try {
-    localStorage.setItem(PITCH_KEY, pitch ? 'campo' : 'lista')
-  } catch {
-    // Without storage the pitch just shows again next time.
-  }
-}
-
-/** What each line of the XI is called, from the keeper forwards. */
-function lineName(line: readonly { position: Position; role?: TacticalRole }[]): string {
-  const position = line[0].position
-  if (position === 'G') return 'Goleiro'
-  if (position === 'A') return 'Ataque'
-  if (position !== 'M') return 'Defesa'
-  if (line.every((s) => s.role === 'VOL')) return line.length > 1 ? 'Volantes' : 'Volante'
-  if (line.some((s) => s.role === 'MEI')) return line.length > 1 ? 'Meias' : 'Meia'
-  return 'Meio'
 }
 
 /**
@@ -816,59 +589,6 @@ function MissingStarters(props: {
   )
 }
 
-/** The XI as chips by line, each one a drag handle and a drop target like on the pitch. */
-function StarterLines(props: {
-  lines: { player: Player; position: Position; role?: TacticalRole }[][]
-  unavailable: ReadonlySet<string>
-  selected?: string
-  onSelect: (playerId: string) => void
-}) {
-  return (
-    <div className="flex flex-col gap-2">
-      {props.lines.map((line, i) => (
-        <div key={i} className="flex flex-col gap-1 sm:flex-row sm:items-start sm:gap-2">
-          <span className="shrink-0 text-xs text-muted-foreground sm:w-16 sm:pt-2">
-            {lineName(line)}
-          </span>
-          <div className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:flex sm:flex-wrap">
-            {line.map((slot) => {
-              const { player } = slot
-              const role = slotRole(slot)
-              const fit = slotFit(player, slot)
-              const selected = props.selected === player.id
-              const out = props.unavailable.has(player.id)
-              return (
-                <DragSlot key={player.id} id={player.id} place="chip" className="min-w-0 sm:w-48">
-                  <button
-                    type="button"
-                    onClick={() => props.onSelect(player.id)}
-                    title={`${TACTICAL_ROLE_NAMES[role]}${player.position !== slot.position ? ` (é ${POSITION_NAMES[player.position].toLowerCase()})` : ''}`}
-                    className={cn(
-                      'flex w-full cursor-pointer items-center gap-2 rounded-md border px-2 py-1.5 text-left text-sm hover:bg-accent',
-                      out && !selected && 'border-destructive/60 bg-destructive/10',
-                      selected &&
-                        'border-yellow-400 bg-yellow-300 text-green-950 hover:bg-yellow-300',
-                    )}
-                  >
-                    <span className={cn('w-8 text-xs font-bold', !selected && fitClass(fit))}>
-                      {role}
-                    </span>
-                    <span className={cn('min-w-0 flex-1 truncate', out && 'line-through')}>
-                      {player.name}
-                    </span>
-                    <span className="font-semibold tabular-nums">{player.overall}</span>
-                  </button>
-                </DragSlot>
-              )
-            })}
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-/** A squad list row: tap to pick for a swap, drag onto another player, or sell and renew. */
 /**
  * A player's training plan in the squad list. The cell keeps its clicks and
  * presses to itself, so working the select never picks or drags the row.
@@ -910,6 +630,7 @@ function TrainingCell(props: {
   )
 }
 
+/** A squad list row: tap to pick for a swap, drag onto another player, or sell and renew. */
 function SquadRow(props: {
   row: Row
   selected: boolean
@@ -923,17 +644,12 @@ function SquadRow(props: {
   children: ReactNode
 }) {
   const { row, selected, disabled } = props
-  const spot = { id: `list-${row.id}`, data: { playerId: row.id }, disabled }
-  const drag = useDraggable(spot)
-  const drop = useDroppable(spot)
+  const { setNode, listeners, isDragging, isOver } = useSwapSpot(row.id, 'list', disabled)
   const fit = row.slot && positionFit(row, row.slot)
   return (
     <TableRow
-      ref={(node: HTMLTableRowElement | null) => {
-        drag.setNodeRef(node)
-        drop.setNodeRef(node)
-      }}
-      {...drag.listeners}
+      ref={setNode}
+      {...listeners}
       onClick={disabled ? undefined : props.onPick}
       data-state={selected ? 'selected' : undefined}
       className={cn(
@@ -941,8 +657,8 @@ function SquadRow(props: {
         disabled ? 'opacity-60' : 'cursor-pointer',
         selected &&
           'bg-yellow-300 text-green-950 hover:bg-yellow-300 data-[state=selected]:bg-yellow-300',
-        drag.isDragging && 'opacity-40',
-        drop.isOver && !drag.isDragging && 'outline-2 -outline-offset-2 outline-yellow-400',
+        isDragging && 'opacity-40',
+        isOver && !isDragging && 'outline-2 -outline-offset-2 outline-yellow-400',
       )}
     >
       <TableCell className="font-semibold">
