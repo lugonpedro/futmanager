@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import '@fontsource-variable/pixelify-sans';
-@import '@fontsource/press-start-2p';
+@import '@fontsource/chakra-petch/400.css';
+@import '@fontsource/chakra-petch/500.css';
+@import '@fontsource/chakra-petch/600.css';
+@import '@fontsource/chakra-petch/700.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -65,8 +68,8 @@
 
 /* 8-bit look: square corners, hard offset shadows and pixel fonts. */
 @theme inline {
-  --font-sans: 'Pixelify Sans Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-pixel: 'Press Start 2P', 'Pixelify Sans Variable', monospace;
+  --font-sans: 'Chakra Petch', ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: 'Pixelify Sans Variable', 'Chakra Petch', sans-serif;
   --radius-xs: 0;
   --radius-sm: 0;
   --radius-md: 0;
@@ -112,9 +115,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    -webkit-font-smoothing: none;
   }
-  /* Titles in the blocky arcade font, shrunk to the x-height of the body text so sizes still fit. */
+  /* Titles in the pixel font; body text stays in a squared but readable face. */
   h1,
   h2,
   h3,
@@ -123,8 +125,7 @@
   [data-slot='alert-dialog-title'],
   [data-slot='sheet-title'] {
     font-family: var(--font-pixel);
-    font-weight: 400;
-    font-size-adjust: 0.5;
-    line-height: 1.6;
+    font-weight: 600;
+    line-height: 1.3;
   }
 }
