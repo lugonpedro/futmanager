@@ -18,7 +18,12 @@ export const RECOVERY_PER_DAY = 4
  * How fresh a player is on a given day, out of 100: what his last match left,
  * plus rest since, `recovery` times as quick as usual.
  */
-export function conditionOn(season: Season, player: Player, date: GameDate, recovery = 1): number {
+export function conditionOn(
+  season: Pick<Season, 'fitness'>,
+  player: Player,
+  date: GameDate,
+  recovery = 1,
+): number {
   const last = season.fitness[player.id]
   if (!last) return 100
   const perDay = RECOVERY_PER_DAY * (1 + player.attributes.stamina / 100) * recovery
@@ -32,7 +37,7 @@ const FORM_CENTER = 6.2
 const FORM_STEP = 0.45
 
 /** Form from -2 to +2, from the last five ratings; nothing to go on yet is 0. */
-export function formOf(season: Season, playerId: string): number {
+export function formOf(season: Pick<Season, 'ratings'>, playerId: string): number {
   const last = season.ratings[playerId]?.last ?? []
   if (last.length < 2) return 0
   const average = last.reduce((a, b) => a + b, 0) / last.length
@@ -40,7 +45,10 @@ export function formOf(season: Season, playerId: string): number {
 }
 
 /** Average rating this season, if he has played. */
-export function seasonRating(season: Season, playerId: string): number | undefined {
+export function seasonRating(
+  season: Pick<Season, 'ratings'>,
+  playerId: string,
+): number | undefined {
   const ratings = season.ratings[playerId]
   return ratings && ratings.games > 0
     ? Math.round((10 * ratings.total) / ratings.games) / 10
@@ -49,7 +57,7 @@ export function seasonRating(season: Season, playerId: string): number | undefin
 
 /** Ratings and tiredness from a match day go into the season's records. */
 export function recordMatchDay(
-  season: Season,
+  season: Pick<Season, 'fitness' | 'ratings'>,
   results: readonly MatchResult[],
   date: GameDate,
 ): Pick<Season, 'fitness' | 'ratings'> {

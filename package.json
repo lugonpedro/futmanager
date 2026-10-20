@@ -13,6 +13,7 @@
     "test:watch": "vitest",
     "preview": "vite preview",
     "balance": "node --experimental-strip-types --no-warnings scripts/balance.ts",
+    "room": "node --experimental-strip-types --no-warnings scripts/room.ts",
     "learn:shots": "npm run build && node --experimental-strip-types --no-warnings scripts/learn-shots.ts",
     "pack:ratings": "node --experimental-strip-types --no-warnings scripts/pack-ratings.ts && prettier --write src/packs/brasileirao-2026.json"
   },
