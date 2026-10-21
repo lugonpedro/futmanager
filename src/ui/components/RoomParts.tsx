@@ -126,7 +126,7 @@ export function TeamFields(props: {
 }
 
 /** Team counts offered; a room made before keeps its own count on the list. */
-const TEAM_COUNTS = ['4', '8', '12']
+const TEAM_COUNTS = ['2', '4', '6', '8', '10', '12', '14', '16', '18']
 
 /** The choices offered, with the room's current value kept if it is one no longer offered. */
 const offered = <T extends string>(choices: readonly T[], current: T): T[] =>

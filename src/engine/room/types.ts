@@ -43,7 +43,7 @@ export const DEFAULT_ROOM_OPTIONS: RoomOptions = {
 
 export const ROOM_LIMITS = {
   minTeams: 2,
-  maxTeams: 12,
+  maxTeams: 18,
   /** Keepers every squad needs; the draft refuses a pick that would make it impossible. */
   minKeepers: 2,
   /** Longest injury, in days, with short injuries on. */

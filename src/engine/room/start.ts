@@ -80,6 +80,46 @@ const ROBOT_TEAMS: TeamIdentity[] = [
     shortName: 'YTU',
     colors: { primary: '#b3202a', secondary: '#111111' },
   },
+  {
+    name: 'Botafogo do Teclado',
+    shortName: 'BTE',
+    colors: { primary: '#222222', secondary: '#f5f5f5' },
+  },
+  {
+    name: 'Associação Cache',
+    shortName: 'ACA',
+    colors: { primary: '#3a86ff', secondary: '#ffbe0b' },
+  },
+  {
+    name: 'Juventude Joystick',
+    shortName: 'JJO',
+    colors: { primary: '#2a9d8f', secondary: '#e9c46a' },
+  },
+  {
+    name: 'Operário Pendrive',
+    shortName: 'OPE',
+    colors: { primary: '#e76f51', secondary: '#264653' },
+  },
+  {
+    name: 'Comercial Modem',
+    shortName: 'CMO',
+    colors: { primary: '#7b2cbf', secondary: '#ffd60a' },
+  },
+  {
+    name: 'Independente Antena',
+    shortName: 'IAN',
+    colors: { primary: '#ef476f', secondary: '#073b4c' },
+  },
+  {
+    name: 'Tupi Bluetooth',
+    shortName: 'TBL',
+    colors: { primary: '#118ab2', secondary: '#f5f5f5' },
+  },
+  {
+    name: 'Vila Nova Laser',
+    shortName: 'VNL',
+    colors: { primary: '#06d6a0', secondary: '#1b1b1b' },
+  },
 ]
 
 /**
