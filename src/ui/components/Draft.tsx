@@ -12,7 +12,6 @@ import {
   loadDraftPool,
   loadDraftTeams,
   openDraftSlot,
-  setDraftAuto,
   setDraftFormation,
   watchRoom,
   type DraftDeal,
@@ -354,16 +353,6 @@ function Clock(props: {
     }
   }, [room.id, slot, deadline, pickNo, onTicked])
 
-  const toggleAuto = async () => {
-    if (!mine) return
-    try {
-      await setDraftAuto(room.id, !mine.auto)
-      await onTicked()
-    } catch (error) {
-      toast.error(messageOf(error))
-    }
-  }
-
   if (slot === undefined || !team) {
     return (
       <Card>
@@ -421,17 +410,6 @@ function Clock(props: {
           <TimerIcon className="size-5" />
           {left}
         </span>
-        {mine && (
-          <Button
-            variant={mine.auto ? 'default' : 'outline'}
-            size="sm"
-            className="max-sm:w-full"
-            onClick={toggleAuto}
-          >
-            <BotIcon />
-            {mine.auto ? 'Automático ligado' : 'Ligar automático'}
-          </Button>
-        )}
       </CardContent>
       <div className="h-1.5 w-full bg-muted" aria-hidden>
         <div

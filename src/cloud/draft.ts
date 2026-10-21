@@ -192,11 +192,6 @@ export async function draftTick(room: number): Promise<boolean> {
   return data === true
 }
 
-export async function setDraftAuto(room: number, on: boolean): Promise<void> {
-  const { error } = await client().rpc('draft_set_auto', { room, on_auto: on })
-  if (error) throw roomError(error)
-}
-
 /** Calls one of the room's server functions, with the message it answers on failure. */
 export async function invoke(
   name: string,
