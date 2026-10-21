@@ -25,6 +25,7 @@ import {
   picksUntil,
   positionCounts,
   roundOfPick,
+  roundOrder,
   secondsLeft,
   slotOnTheClock,
   squadsOf,
@@ -132,28 +133,121 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
   const after = () => Promise.all([refresh(), reload()]).then(() => undefined)
 
   return (
-    <>
-      <Clock
-        room={room}
-        teams={teams}
-        mine={mine}
-        owner={room.ownerId === userId}
-        onTicked={after}
-      />
-      <LastPick room={room} teams={teams} byId={byId} picks={picks} />
-      {slotOnTheClock(room) !== undefined && (
-        <CardTable
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-4 md:grid-cols-[17rem_minmax(0,1fr)]">
+      {/* On a phone the clock and the order stay on top; on a wider screen, in the side column. */}
+      <aside className="z-10 flex min-w-0 flex-col gap-3 max-md:sticky max-md:top-0 max-md:-mx-4 max-md:bg-background max-md:px-4 max-md:pt-2 max-md:pb-1 md:sticky md:top-4 md:self-start">
+        <Clock
           room={room}
-          pool={pool}
-          byId={byId}
-          picks={picks}
+          teams={teams}
           mine={mine}
-          world={world}
-          onPicked={after}
+          owner={room.ownerId === userId}
+          onTicked={after}
         />
-      )}
-      <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
-    </>
+        <PickOrder room={room} teams={teams} picks={picks} mine={mine} />
+      </aside>
+      <div className="flex min-w-0 flex-col gap-4">
+        <LastPick room={room} teams={teams} byId={byId} picks={picks} />
+        {slotOnTheClock(room) !== undefined && (
+          <CardTable
+            room={room}
+            pool={pool}
+            byId={byId}
+            picks={picks}
+            mine={mine}
+            world={world}
+            onPicked={after}
+          />
+        )}
+        <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
+      </div>
+    </div>
+  )
+}
+
+/**
+ * Every team in the order it picks this round, the one on the clock with a
+ * highlighted border and the ones that already picked faded: a row on a
+ * phone, a list in the side column.
+ */
+function PickOrder(props: {
+  room: Room
+  teams: DraftTeam[]
+  picks: DraftPick[]
+  mine?: DraftTeam
+}) {
+  const { room, teams, picks, mine } = props
+  const list = useRef<HTMLOListElement>(null)
+  const order = roundOrder(room)
+  const onClock = slotOnTheClock(room)
+  // On a phone the row scrolls: keep the team on the clock in the middle of it.
+  useEffect(() => {
+    const row = list.current
+    const current = row?.querySelector<HTMLElement>('[aria-current]')
+    if (!row || !current || row.scrollWidth <= row.clientWidth) return
+    row.scrollTo({
+      left: current.offsetLeft - row.offsetLeft - (row.clientWidth - current.clientWidth) / 2,
+      behavior: 'smooth',
+    })
+  }, [onClock])
+  if (order.length === 0) return null
+  const pickNo = room.draft?.pickNo ?? 0
+  const done = pickNo % room.options.teams
+  const over = onClock === undefined
+  const { round } = roundOfPick(Math.min(pickNo, draftTotal(room) - 1), room.options.teams)
+  const counts = new Map<number, number>()
+  for (const pick of picks) counts.set(pick.slot, (counts.get(pick.slot) ?? 0) + 1)
+  return (
+    <section aria-label="Ordem da rodada" className="flex flex-col gap-1.5">
+      <h2 className="text-xs font-semibold tracking-wide text-muted-foreground uppercase max-md:sr-only">
+        Ordem da rodada {round}
+      </h2>
+      <ol
+        ref={list}
+        className="relative flex gap-2 overflow-x-auto pb-1 md:flex-col md:gap-1 md:overflow-visible"
+      >
+        {order.map((slot, i) => {
+          const team = teams.find((t) => t.slot === slot)
+          if (!team) return null
+          const current = slot === onClock
+          const picked = over || i < done
+          return (
+            <li
+              key={slot}
+              aria-current={current ? 'true' : undefined}
+              className={cn(
+                'flex shrink-0 items-center gap-2 rounded-lg border-2 border-transparent transition-all max-md:w-16 max-md:flex-col max-md:p-1 md:px-2 md:py-1',
+                current && 'border-highlight bg-highlight-soft shadow-sm',
+                picked && !current && 'opacity-45',
+              )}
+            >
+              <span className="relative">
+                <TeamCrest
+                  team={team}
+                  id={`ordem-${slot}`}
+                  className={cn('size-9 md:size-7', current && 'animate-pulse')}
+                />
+                {team.robot && (
+                  <BotIcon
+                    className="absolute -right-1 -bottom-1 size-3.5 rounded-full bg-background p-px text-muted-foreground"
+                    aria-label="Robô"
+                  />
+                )}
+              </span>
+              <span className="min-w-0 max-md:w-full max-md:text-center md:flex-1">
+                <span className="block truncate text-[0.7rem] font-semibold md:text-sm">
+                  <span className="md:hidden">{team.shortName}</span>
+                  <span className="max-md:hidden">{team.name}</span>
+                </span>
+                <span className="block text-[0.65rem] text-muted-foreground max-md:hidden">
+                  {mine && slot === mine.slot ? 'você · ' : ''}
+                  {counts.get(slot) ?? 0}/{room.options.squadSize} jogadores
+                </span>
+              </span>
+            </li>
+          )
+        })}
+      </ol>
+    </section>
   )
 }
 
@@ -264,10 +358,7 @@ function Clock(props: {
   const share = Math.min(1, left / room.options.pickSeconds)
   return (
     <Card
-      className={cn(
-        'sticky top-2 z-10 gap-3 overflow-hidden',
-        myTurn && 'border-highlight ring-2 ring-highlight/40',
-      )}
+      className={cn('gap-3 overflow-hidden', myTurn && 'border-highlight ring-2 ring-highlight/40')}
     >
       <CardContent className="flex flex-wrap items-center gap-3">
         <TeamCrest team={team} id={`relogio-${team.slot}`} className="size-10 shrink-0" />

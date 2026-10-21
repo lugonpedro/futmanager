@@ -26,7 +26,7 @@ export type RoomOptions = {
   autoReserves: boolean
   /** 1 only the first half, 2 home and away, 3 a third leg on top (no longer offered). */
   legs: 1 | 2 | 3
-  /** Hours the owner waits for everyone's "Pronto" before playing the round anyway; 48 is no longer offered. */
+  /** Kept from when the owner had to wait this long to play a round without everyone ready; no longer used. */
   graceHours: 6 | 12 | 24 | 48
   injuries: InjuryRule
   trades: TradeRule

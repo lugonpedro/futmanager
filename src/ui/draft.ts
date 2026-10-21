@@ -149,3 +149,16 @@ export function withLiveClock(room: Room, live: LiveClock | undefined): Room {
   if (!room.draft || !live || live.pickNo <= room.draft.pickNo) return room
   return { ...room, draft: { ...room.draft, pickNo: live.pickNo, deadline: live.deadline } }
 }
+
+/** The places in the order they pick in the round under way (the last round once the draft is over). */
+export function roundOrder(room: Room): number[] {
+  const draft = room.draft
+  if (!draft) return []
+  const teams = room.options.teams
+  const pick = Math.min(draft.pickNo, draftTotal(room) - 1)
+  const first = Math.floor(pick / teams) * teams
+  const order = draft.order.map(String)
+  return Array.from({ length: teams }, (_, i) =>
+    Number(teamForPick(order, first + i, room.options.draftOrder)),
+  )
+}

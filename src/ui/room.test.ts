@@ -56,7 +56,6 @@ describe('describeOptions', () => {
       '45 s por escolha',
       'todas as escolhas na mão',
       'ida e volta',
-      'prazo de 6 h para o "Pronto"',
       'lesões normais',
       'trocas a liga toda',
     ])

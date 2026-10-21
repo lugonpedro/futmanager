@@ -61,7 +61,7 @@ export function RoomScreen() {
   }, [id, ready, user, reload])
 
   return (
-    <RoomPage title={loaded?.room.name ?? 'Sala'}>
+    <RoomPage title={loaded?.room.name ?? 'Sala'} wide={loaded?.room.status === 'draft'}>
       {!cloudEnabled ? (
         <Note>O jogo online não está disponível nesta versão.</Note>
       ) : ready && !user ? (

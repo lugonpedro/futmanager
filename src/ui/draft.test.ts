@@ -7,6 +7,7 @@ import {
   moveInQueue,
   pickProblem,
   picksUntil,
+  roundOrder,
   startersAndReserves,
   strongestFree,
   withLiveClock,
@@ -150,6 +151,12 @@ describe('the draft screen', () => {
       ),
     )
     expect(reserves.map((p) => p.id)).toEqual(['g2', 'a4'])
+  })
+
+  it('lists the order of the round under way', () => {
+    expect(roundOrder(room(1, serpent))).toEqual([2, 0, 1, 3])
+    expect(roundOrder(room(5, serpent))).toEqual([3, 1, 0, 2])
+    expect(roundOrder(room(16, serpent))).toEqual([3, 1, 0, 2])
   })
 
   it('takes the newer clock', () => {

@@ -34,7 +34,7 @@ import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
-import { forceAt, readiness, timeUntil } from '../roomLeague.ts'
+import { canPlayRound, readiness } from '../roomLeague.ts'
 import { squadIds } from '../roomMarket.ts'
 import { DraftBoard } from './Draft.tsx'
 import { MatchReplay } from './MatchReplay.tsx'
@@ -388,16 +388,6 @@ function MatchLine(props: {
   )
 }
 
-/** Ticks every half minute, for counting down to a time. */
-function useNow(): Date {
-  const [now, setNow] = useState(() => new Date())
-  useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 30_000)
-    return () => clearInterval(timer)
-  }, [])
-  return now
-}
-
 /** Who is ready for the coming round, the player's "Pronto" and the way to play without waiting. */
 function ReadyCard(props: {
   room: Room
@@ -410,13 +400,11 @@ function ReadyCard(props: {
 }) {
   const { room, userId, mine, summary } = props
   const round = room.round!.no
-  const now = useNow()
   const [busy, setBusy] = useState(false)
   const { people, ready, waiting } = readiness(props.teams, round)
   const everyone = waiting.length === 0
   const amReady = mine?.readyRound === round
-  const force = forceAt(room, userId)!
-  const canForce = everyone || force <= now
+  const canForce = canPlayRound(room, userId, everyone)
 
   const toggle = async () => {
     if (!mine) return
@@ -479,14 +467,22 @@ function ReadyCard(props: {
               room={room.id}
               label={everyone ? 'Jogar agora' : 'Jogar sem esperar'}
               onPlayed={props.onPlayed}
+              confirm={
+                everyone
+                  ? undefined
+                  : {
+                      title: 'Jogar a rodada sem esperar?',
+                      description: `${waiting.length === 1 ? 'Falta 1 pessoa' : `Faltam ${waiting.length} pessoas`} marcar "Pronto". Quem não marcou joga com a escalação da última rodada.`,
+                      action: 'Jogar sem esperar',
+                    }
+              }
             />
           )}
         </div>
         {!everyone && !canForce && (
           <p className="text-xs text-muted-foreground">
-            Se alguém sumir, {room.ownerId === userId ? 'você pode' : 'quem criou a sala pode'}{' '}
-            jogar a rodada sem esperar {timeUntil(forceAt(room, room.ownerId)!, now)}; quem não
-            marcou joga com a escalação da última rodada.
+            Se alguém sumir, quem criou a sala pode jogar a rodada sem esperar; quem não marcou joga
+            com a escalação da última rodada.
           </p>
         )}
       </CardContent>
