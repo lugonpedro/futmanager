@@ -3,7 +3,10 @@ import type { PoolPlayer } from '../engine/room/start.ts'
 import type { RoomSummary } from '../engine/room/summary.ts'
 import type { TeamIdentity } from '../engine/room/team.ts'
 import { supabase } from './client.ts'
-import { roomError } from './rooms.ts'
+import { roomError, type RoomRow } from './rooms.ts'
+
+/** The pick under way as a live update told it, ahead of the next full load of the room. */
+export type LiveClock = { pickNo: number; deadline?: Date }
 
 /** A team of a room once the draft started: a person's or a robot's, by its place. */
 export type DraftTeam = TeamIdentity & {
@@ -121,23 +124,6 @@ export async function loadDraftPool(room: number): Promise<PoolPlayer[]> {
   }
 }
 
-/** The player's queue of favourites in the room, in their order. */
-export async function loadDraftQueue(room: number, userId: string): Promise<string[]> {
-  const { data, error } = await client()
-    .from('room_queues')
-    .select('player_ids')
-    .eq('room_id', room)
-    .eq('user_id', userId)
-    .maybeSingle()
-  if (error) throw roomError(error)
-  return (data?.player_ids as string[] | undefined) ?? []
-}
-
-export async function saveDraftQueue(room: number, playerIds: readonly string[]): Promise<void> {
-  const { error } = await client().rpc('save_draft_queue', { room, player_ids: playerIds })
-  if (error) throw roomError(error)
-}
-
 /** The player's pick; refused when it isn't their turn or the player can't be taken. */
 export async function draftPick(room: number, playerId: string): Promise<void> {
   const { error } = await client().rpc('draft_pick', { room, player: playerId })
@@ -202,7 +188,8 @@ export function watchRoom(
   room: number,
   on: {
     pick: (pick: DraftPick) => void
-    room: () => void
+    /** The room's row changed; `clock` is the pick under way as the change tells it. */
+    room: (clock: LiveClock) => void
     team: (team: DraftTeam) => void
     round?: () => void
     /** Squads, offers or the market's feed changed. */
@@ -220,7 +207,13 @@ export function watchRoom(
     .on(
       'postgres_changes',
       { event: 'UPDATE', schema: 'public', table: 'rooms', filter: `id=eq.${room}` },
-      () => on.room(),
+      (change) => {
+        const row = change.new as Partial<RoomRow>
+        on.room({
+          pickNo: row.pick_no ?? 0,
+          deadline: row.pick_deadline ? new Date(row.pick_deadline) : undefined,
+        })
+      },
     )
     .on(
       'postgres_changes',

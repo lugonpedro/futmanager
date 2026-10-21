@@ -147,10 +147,14 @@ export function makePick(state: RoomState, teamId: string, playerId: string): Ro
   }
 }
 
+/** Picks up to here make the starting eleven; the rest are reserves. */
+export const STARTERS = 11
+
 /**
  * The pick made for a team that isn't picking itself: the first player of its
  * queue still free and allowed, or else the best free player in the position
- * its squad lacks most. Robots pick the same way.
+ * its squad lacks most. From the 12th pick on, the best free player among the
+ * positions still short of the squad's shape. Robots pick the same way.
  */
 export function autoPick(state: RoomState, teamId: string, queue: readonly string[] = []): string {
   const queued = queue.find((id) => checkPick(state, teamId, id) === undefined)
@@ -161,6 +165,10 @@ export function autoPick(state: RoomState, teamId: string, queue: readonly strin
   const shape = squadShape(state.options.squadSize)
   const have = Object.fromEntries(POSITIONS.map((p) => [p, 0])) as SquadShape
   for (const id of state.squads[teamId]) have[state.players[id].position]++
+  // The reserves go by overall, among the positions the squad still lacks.
+  if (state.squads[teamId].length >= STARTERS) {
+    return (free.find((p) => have[p.position] < shape[p.position]) ?? free[0]).id
+  }
   // Lacking most is the biggest share of the position still missing; ties go to the best player.
   const lack = (p: Player) => (shape[p.position] - have[p.position]) / shape[p.position]
   const most = Math.max(...free.map(lack))
@@ -177,7 +185,7 @@ export type DraftAuto = {
 const picksOnItsOwn = (state: RoomState, teamId: string, auto: DraftAuto) =>
   state.teams.find((t) => t.id === teamId)!.robot ||
   auto.auto.has(teamId) ||
-  (state.options.autoReserves && state.squads[teamId].length >= 11)
+  (state.options.autoReserves && state.squads[teamId].length >= STARTERS)
 
 /**
  * Makes the picks of every team that picks on its own, until it is a person's

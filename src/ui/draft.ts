@@ -1,4 +1,4 @@
-import type { DraftPick } from '../cloud/draft.ts'
+import type { DraftPick, LiveClock } from '../cloud/draft.ts'
 import type { Room } from '../cloud/rooms.ts'
 import type { Position } from '../engine/model/types.ts'
 import { teamForPick } from '../engine/room/draft.ts'
@@ -83,3 +83,69 @@ export function moveInQueue(queue: readonly string[], id: string, step: -1 | 1):
 /** A name as typed in the search, without accents or case. */
 export const searchKey = (text: string) =>
   text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim()
+
+/**
+ * How many picks go by before this place picks again, counted from the pick
+ * under way (0 when it is on the clock), or undefined if it doesn't pick again.
+ */
+export function picksUntil(room: Room, slot: number): number | undefined {
+  const draft = room.draft
+  if (!draft) return undefined
+  const order = draft.order.map(String)
+  for (let pick = draft.pickNo; pick < draftTotal(room); pick++) {
+    if (Number(teamForPick(order, pick, room.options.draftOrder)) === slot)
+      return pick - draft.pickNo
+  }
+  return undefined
+}
+
+/** The strongest players still free, of one position or of all. */
+export function strongestFree(
+  pool: readonly PoolPlayer[],
+  picks: readonly DraftPick[],
+  position: Position | undefined,
+  count: number,
+): PoolPlayer[] {
+  const taken = new Set(picks.map((p) => p.playerId))
+  const free = pool.filter((p) => !taken.has(p.id) && (!position || p.position === position))
+  return free.sort((a, b) => a.rank - b.rank).slice(0, count)
+}
+
+/** The starting eleven a squad lines up as it is drafted, position by position. */
+const XI: Record<Position, number> = { G: 1, Z: 2, L: 2, M: 4, A: 2 }
+const XI_SIZE = 11
+const ORDER: Record<Position, number> = { G: 0, Z: 1, L: 2, M: 3, A: 4 }
+
+const byPosition = (a: PoolPlayer, b: PoolPlayer) =>
+  ORDER[a.position] - ORDER[b.position] || b.overall - a.overall
+
+/**
+ * A squad split into its likely eleven (the best of each position in a
+ * 4-4-2, gaps filled by the best outfielders left) and the reserves, both
+ * keepers first and forwards last.
+ */
+export function startersAndReserves(players: readonly PoolPlayer[]): {
+  starters: PoolPlayer[]
+  reserves: PoolPlayer[]
+} {
+  const best = [...players].sort((a, b) => b.overall - a.overall)
+  const starters = new Set<PoolPlayer>()
+  for (const position of Object.keys(XI) as Position[]) {
+    for (const player of best.filter((p) => p.position === position).slice(0, XI[position]))
+      starters.add(player)
+  }
+  for (const player of best) {
+    if (starters.size >= XI_SIZE) break
+    if (player.position !== 'G') starters.add(player)
+  }
+  return {
+    starters: [...starters].sort(byPosition),
+    reserves: best.filter((p) => !starters.has(p)).sort(byPosition),
+  }
+}
+
+/** The room with the newer of its own clock and the live one. */
+export function withLiveClock(room: Room, live: LiveClock | undefined): Room {
+  if (!room.draft || !live || live.pickNo <= room.draft.pickNo) return room
+  return { ...room, draft: { ...room.draft, pickNo: live.pickNo, deadline: live.deadline } }
+}

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { BotIcon, CopyIcon, CrownIcon, PlayIcon, RefreshCwIcon, XIcon } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router'
 import { toast } from 'sonner'
@@ -17,28 +17,12 @@ import {
 } from '../../cloud/rooms.ts'
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { useAccountStore } from '../../store/account.ts'
-import {
-  Note,
-  RoomOptionsFields,
-  RoomPage,
-  TeamCrest,
-  TeamFields,
-} from '../components/RoomParts.tsx'
-import { DraftView, QueueBeforeDraft } from '../components/Draft.tsx'
+import { Note, RoomPage, RoomRulesFields, TeamCrest, TeamFields } from '../components/RoomParts.tsx'
+import { DraftView } from '../components/Draft.tsx'
 import { LeagueView } from '../components/League.tsx'
 import { RoomNotices } from '../components/RoomNotices.tsx'
 import { confirm } from '../confirm.ts'
-import { usePackPool } from '../usePackPool.ts'
-import {
-  checkRoomDraft,
-  describeOptions,
-  formatDraftAt,
-  fromLocalInput,
-  roomInviteLink,
-  STATUS_LABELS,
-  toLocalInput,
-  type RoomOptionsDraft,
-} from '../room.ts'
+import { describeOptions, formatDraftAt, roomInviteLink, STATUS_LABELS } from '../room.ts'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -51,16 +35,21 @@ export function RoomScreen() {
   const [loaded, setLoaded] = useState<Loaded | null>()
   const [failed, setFailed] = useState(false)
 
-  const reload = useCallback(
-    () =>
-      loadRoom(id)
-        .then((found) => {
-          setLoaded(found ?? null)
-          setFailed(false)
-        })
-        .catch(() => setFailed(true)),
-    [id],
-  )
+  // Live updates come in bursts (robots pick many in a row); only the latest answer counts, so
+  // a slow older one never takes the page back to an earlier pick.
+  const latest = useRef(0)
+  const reload = useCallback(() => {
+    const asked = ++latest.current
+    return loadRoom(id)
+      .then((found) => {
+        if (asked !== latest.current) return
+        setLoaded(found ?? null)
+        setFailed(false)
+      })
+      .catch(() => {
+        if (asked === latest.current) setFailed(true)
+      })
+  }, [id])
 
   useEffect(() => {
     if (!cloudEnabled || !ready || !user || !Number.isInteger(id)) return
@@ -112,7 +101,6 @@ function WaitingRoom(props: BodyProps) {
   const waiting = room.status === 'espera'
   const me = members.find((m) => m.userId === userId)
   const robots = Math.max(0, room.options.teams - members.length)
-  const pool = usePackPool(waiting ? room.pack : undefined)
   const [starting, setStarting] = useState(false)
 
   // The owner starting the draft, or the time coming, turns this page into the draft.
@@ -190,24 +178,30 @@ function WaitingRoom(props: BodyProps) {
               Atualizar
             </Button>
           </CardTitle>
-          <CardDescription>
-            {waiting
-              ? `O draft está marcado para ${formatDraftAt(room.draftAt)}.`
-              : 'O draft já começou.'}
-          </CardDescription>
         </CardHeader>
-        {waiting && (
-          <CardContent className="flex flex-col gap-4">
-            <Invite code={room.inviteCode} />
-            {owner && (
-              <Button className="self-start" onClick={start} disabled={starting}>
-                <PlayIcon />
-                Começar o draft agora
-              </Button>
+        <CardContent className="flex flex-col gap-4">
+          {waiting && <Invite code={room.inviteCode} />}
+          <p className="text-sm">
+            {waiting ? (
+              <>
+                O draft começará <strong>{formatDraftAt(room.draftAt)}</strong>.
+              </>
+            ) : (
+              'O draft já começou.'
             )}
-          </CardContent>
-        )}
+          </p>
+          {owner && waiting && (
+            <Button className="self-start" onClick={start} disabled={starting}>
+              <PlayIcon />
+              Começar o draft agora
+            </Button>
+          )}
+        </CardContent>
       </Card>
+
+      {me && waiting && (
+        <MyTeam roomId={room.id} team={me} onSaved={props.reload} key={JSON.stringify(me)} />
+      )}
 
       <Card>
         <CardHeader>
@@ -221,29 +215,33 @@ function WaitingRoom(props: BodyProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <ul className="flex flex-col gap-1">
+          <ul className="flex flex-wrap gap-x-2 gap-y-3">
             {members.map((member) => (
-              <li key={member.userId} className="flex items-center gap-2 rounded-md border p-2">
-                <TeamCrest team={member} id={member.userId} className="size-8 shrink-0" />
-                <span className="flex min-w-0 flex-1 flex-col">
-                  <span className="truncate font-medium">{member.name}</span>
-                  <span className="truncate text-xs text-muted-foreground">
-                    {member.shortName}
-                    {member.nickname && ` · ${member.nickname}`}
-                    {member.userId === userId && ' · você'}
-                  </span>
+              <li
+                key={member.userId}
+                className="relative flex w-20 flex-col items-center gap-1 text-center"
+                title={member.nickname ? `${member.name} · ${member.nickname}` : member.name}
+              >
+                <TeamCrest team={member} id={member.userId} className="size-12" />
+                <span className="w-full truncate text-xs font-medium">{member.name}</span>
+                <span className="-mt-1 w-full truncate text-[0.7rem] text-muted-foreground">
+                  {member.userId === userId ? 'você' : (member.nickname ?? member.shortName)}
                 </span>
                 {member.userId === room.ownerId && (
-                  <CrownIcon className="size-4 text-muted-foreground" aria-label="Criou a sala" />
+                  <CrownIcon
+                    className="absolute top-0 left-1 size-4 fill-highlight text-highlight"
+                    aria-label="Criou a sala"
+                  />
                 )}
                 {owner && waiting && member.userId !== userId && (
                   <Button
-                    variant="ghost"
+                    variant="secondary"
                     size="icon"
+                    className="absolute -top-1 right-1 size-5 rounded-full"
                     aria-label={`Tirar ${member.name} da sala`}
                     onClick={() => remove(member)}
                   >
-                    <XIcon />
+                    <XIcon className="size-3" />
                   </Button>
                 )}
               </li>
@@ -251,21 +249,17 @@ function WaitingRoom(props: BodyProps) {
             {Array.from({ length: robots }, (_, i) => (
               <li
                 key={`robo-${i}`}
-                className="flex items-center gap-2 rounded-md border border-dashed p-2 text-sm text-muted-foreground"
+                className="flex w-20 flex-col items-center gap-1 text-center text-xs text-muted-foreground"
               >
-                <BotIcon className="size-8 shrink-0 p-1" />
+                <span className="flex size-12 items-center justify-center rounded-full border border-dashed">
+                  <BotIcon className="size-6" />
+                </span>
                 Vaga livre
               </li>
             ))}
           </ul>
         </CardContent>
       </Card>
-
-      {waiting && pool && <QueueBeforeDraft room={room} userId={userId} pool={pool} />}
-
-      {me && waiting && (
-        <MyTeam roomId={room.id} team={me} onSaved={props.reload} key={JSON.stringify(me)} />
-      )}
 
       {owner && waiting ? (
         <EditRoom room={room} people={members.length} onSaved={props.reload} />
@@ -363,26 +357,17 @@ function MyTeam(props: { roomId: number; team: TeamIdentity; onSaved: () => Prom
 
 function EditRoom(props: { room: Room; people: number; onSaved: () => Promise<void> }) {
   const { room } = props
-  const initial: RoomOptionsDraft = {
-    name: room.name,
-    options: room.options,
-    draftAt: toLocalInput(room.draftAt),
-  }
-  const [draft, setDraft] = useState(initial)
+  const [options, setOptions] = useState(room.options)
   const [busy, setBusy] = useState(false)
-  const changed = JSON.stringify(draft) !== JSON.stringify(initial)
+  const changed = JSON.stringify(options) !== JSON.stringify(room.options)
 
   const save = async () => {
-    const problem = checkRoomDraft(draft, new Date(), room.createdAt)
-    if (problem) {
-      toast.error(problem)
-      return
-    }
     setBusy(true)
     try {
-      await updateRoom(room.id, draft.name, draft.options, fromLocalInput(draft.draftAt)!)
+      // The name and the time of the draft stay as the room was created.
+      await updateRoom(room.id, room.name, options, room.draftAt)
       await props.onSaved()
-      toast.success('Sala salva.')
+      toast.success('Regras salvas.')
     } catch (error) {
       toast.error(messageOf(error))
     } finally {
@@ -399,7 +384,7 @@ function EditRoom(props: { room: Room; people: number; onSaved: () => Promise<vo
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <RoomOptionsFields value={draft} onChange={setDraft} people={props.people} />
+        <RoomRulesFields value={options} onChange={setOptions} people={props.people} />
         <Button className="self-end" onClick={save} disabled={busy || !changed}>
           Salvar regras
         </Button>

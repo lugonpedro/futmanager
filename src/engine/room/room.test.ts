@@ -34,8 +34,16 @@ const teams = (count: number, people = 0): RoomTeam[] =>
     colors: { primary: '#000000', secondary: '#ffffff' },
     robot: i >= people,
   }))
+/** The options these tests were written against, kept apart from the defaults the app offers. */
+const BASE: RoomOptions = {
+  ...DEFAULT_ROOM_OPTIONS,
+  squadSize: 18,
+  draftOrder: 'serpentina',
+  graceHours: 24,
+  trades: 'ate-dois-tercos',
+}
 const room = (options: Partial<RoomOptions> = {}, people = 0) => {
-  const merged = { ...DEFAULT_ROOM_OPTIONS, ...options }
+  const merged = { ...BASE, ...options }
   return createRoom(5, world, teams(merged.teams, people), merged)
 }
 const NO_AUTO = { auto: new Set<string>(), queues: {} }
@@ -123,6 +131,33 @@ describe('draft', () => {
     }
     expect(checkPick(state, team, freeOutfield().id)).toMatch(/goleiros/)
     expect(autoPick(state, team)).toSatisfy((id: string) => state.players[id].position === 'G')
+  })
+
+  it('takes the reserves by overall, among the positions still short', () => {
+    let state = room({ teams: 2, squadSize: 16 }, 2)
+    const team = state.order[0]
+    // The team fills its eleven with forwards and keepers only.
+    while (state.squads[team].length < 11 || teamOnTheClock(state) !== team) {
+      const onClock = teamOnTheClock(state)!
+      const keepers = state.squads[team].filter((id) => state.players[id].position === 'G')
+      const wanted = keepers.length < 2 ? 'G' : 'A'
+      const id =
+        onClock === team
+          ? Object.values(state.players)
+              .filter((p) => p.clubId === FREE_AGENT && p.position === wanted)
+              .sort((a, b) => b.overall - a.overall)[0].id
+          : autoPick(state, onClock)
+      state = makePick(state, onClock, id)
+    }
+    const shape = squadShape(16)
+    const picked = state.players[autoPick(state, team)]
+    expect(['G', 'A']).not.toContain(picked.position)
+    const best = Object.values(state.players)
+      .filter((p) => p.clubId === FREE_AGENT && p.position !== 'G' && p.position !== 'A')
+      .filter((p) => checkPick(state, team, p.id) === undefined)
+      .sort((a, b) => b.overall - a.overall || a.id.localeCompare(b.id))[0]
+    expect(shape[picked.position]).toBeGreaterThan(0)
+    expect(picked.id).toBe(best.id)
   })
 
   it('lets the reserves come from the queue when asked', () => {

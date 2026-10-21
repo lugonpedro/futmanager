@@ -51,14 +51,14 @@ describe('describeOptions', () => {
   it('sums up the default room', () => {
     expect(describeOptions(DEFAULT_ROOM_OPTIONS)).toEqual([
       '8 times',
-      'elenco de 18',
-      'ordem serpentina',
+      'elenco de 16',
+      'ordem invertida na 3ª volta',
       '45 s por escolha',
       'todas as escolhas na mão',
       'ida e volta',
-      'prazo de 24 h para o "Pronto"',
+      'prazo de 6 h para o "Pronto"',
       'lesões normais',
-      'trocas até 2/3 da liga',
+      'trocas a liga toda',
     ])
   })
 })
