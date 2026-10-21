@@ -1,6 +1,6 @@
 import type { MatchReplay } from '../engine/match/simulate.ts'
 import type { Lineup } from '../engine/model/types.ts'
-import type { TeamSheet } from '../engine/room/summary.ts'
+import type { RoomMatchLine, TeamSheet } from '../engine/room/summary.ts'
 import { supabase } from './client.ts'
 import { unpackJson } from './codec.ts'
 import { roomError } from './rooms.ts'
@@ -63,4 +63,21 @@ export async function rematchRoom(room: number): Promise<number> {
   const { data, error } = await client().rpc('room_rematch', { room })
   if (error) throw roomError(error)
   return data as number
+}
+
+/** The results of every round played so far, the first first. */
+export async function loadRoundResults(
+  room: number,
+): Promise<{ round: number; matches: RoomMatchLine[] }[]> {
+  const { data, error } = await client()
+    .from('room_rounds')
+    .select('round, last:summary->last')
+    .eq('room_id', room)
+    .gt('round', 0)
+    .order('round')
+  if (error) throw roomError(error)
+  return (data as { round: number; last: RoomMatchLine[] | null }[]).map((row) => ({
+    round: row.round,
+    matches: row.last ?? [],
+  }))
 }
