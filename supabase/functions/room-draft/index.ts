@@ -9,6 +9,7 @@ import brasileirao from '../../../src/packs/brasileirao-2026.json' with { type: 
 import { packJson } from '../../../src/cloud/codec.ts'
 import { parsePackFile } from '../../../src/engine/pack/file.ts'
 import { startDraft } from '../../../src/engine/room/start.ts'
+import { withOveralls } from '../../../src/packs/ratings.ts'
 import type { RoomOptions } from '../../../src/engine/room/types.ts'
 
 const PACKS: Record<string, unknown> = { 'brasileirao-2026': brasileirao }
@@ -82,7 +83,10 @@ Deno.serve(async (req) => {
       .eq('id', room)
       .single()
     if (roomError) throw roomError
-    const pack = parsePackFile(JSON.stringify(PACKS[options.pack]), `${options.pack}.json`).pack
+    const pack = parsePackFile(
+      JSON.stringify(withOveralls(PACKS[options.pack])),
+      `${options.pack}.json`,
+    ).pack
     const roomOptions: RoomOptions = {
       teams: options.teams,
       squadSize: options.squad_size,

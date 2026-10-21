@@ -17,11 +17,15 @@ import {
   startLeague,
 } from '../src/engine/room/league.ts'
 import { DEFAULT_ROOM_OPTIONS, type RoomTeam } from '../src/engine/room/types.ts'
+import { withOveralls } from '../src/packs/ratings.ts'
 
 const rooms = Number(process.argv[2] ?? 200)
 const seed = Number(process.argv[3] ?? 1)
 const file = 'src/packs/brasileirao-2026.json'
-const pack = parsePackFile(readFileSync(file, 'utf8'), file).pack
+const pack = parsePackFile(
+  JSON.stringify(withOveralls(JSON.parse(readFileSync(file, 'utf8')))),
+  file,
+).pack
 const order = process.argv[4] === 'terceira-invertida' ? 'terceira-invertida' : 'serpentina'
 const options = { ...DEFAULT_ROOM_OPTIONS, draftOrder: order } as const
 const teams: RoomTeam[] = Array.from({ length: options.teams }, (_, i) => ({
