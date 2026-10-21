@@ -119,8 +119,9 @@ function skills(player: Player): Skills {
         0.65 * face('DEF') +
         0.2 * face('FIS') +
         0.15 * face('RIT') +
-        styleBonus(player, 'muralha', 'desarmador'),
-      midfield: 0.55 * pas + 0.3 * dri + 0.15 * face('FIS') + styleBonus(player, 'passador'),
+        styleBonus(player, 'muralha', 'desarmador', 'trator'),
+      midfield:
+        0.55 * pas + 0.3 * dri + 0.15 * face('FIS') + styleBonus(player, 'passador', 'trator'),
       attack:
         0.4 * pas + 0.35 * dri + 0.25 * face('FIN') + styleBonus(player, 'armador', 'driblador'),
     },
@@ -128,7 +129,7 @@ function skills(player: Player): Skills {
     // Shot-stopping: reflexes, diving and positioning.
     keeper: (face('REF') + face('ELA') + face('POS')) / 3 + keeperStyles,
     // Finishing, with a word from the weaker foot.
-    finishing: face('FIN') + (player.weakFoot - 3) + styleBonus(player, 'finalizador'),
+    finishing: face('FIN') + (player.weakFoot - 3) + styleBonus(player, 'finalizador', 'chutador'),
     heading: 0.6 * attributes.heading + 0.4 * attributes.jumping + styleBonus(player, 'cabeceador'),
     pace: face('RIT') + 2 * styleBonus(player, 'velocista'),
   }

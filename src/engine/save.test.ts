@@ -37,6 +37,17 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('keeps the styles of a version 13 save and adds the ones the attributes earn', () => {
+    const [first, second] = fresh.world.clubs.C10.playerIds
+    const random = { ...fresh.world.players[first], styles: ['cruzador' as const] }
+    const bare = { ...fresh.world.players[second], styles: [] }
+    const players = { ...fresh.world.players, [first]: random, [second]: bare }
+    const upgraded = upgradeOld({ ...fresh, version: 13, world: { ...fresh.world, players } })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.world.players[first].styles[0]).toBe('cruzador')
+    expect(upgraded.world.players[second].styles).toEqual(fresh.world.players[second].styles)
+  })
+
   it('gives a version 12 save no favorites and the asking price on bids for listed players', () => {
     const [listed, unlisted] = fresh.world.clubs.C10.playerIds
     const offer = (playerId: string) => ({
@@ -127,7 +138,7 @@ describe('upgradeGame', () => {
     })
     expect(upgraded.version).toBe(SAVE_VERSION)
     expect(upgraded.season.roundStars).toEqual([])
-    expect(upgraded.world).toBe(fresh.world)
+    expect(upgraded.world).toEqual(fresh.world)
   })
 
   it('marks the names of a version 5 save as generated', () => {
@@ -135,7 +146,7 @@ describe('upgradeGame', () => {
     const upgraded = upgradeOld({ ...v5, version: 5 })
     expect(upgraded.version).toBe(SAVE_VERSION)
     expect(upgraded.names).toEqual({})
-    expect(upgraded.world).toBe(fresh.world)
+    expect(upgraded.world).toEqual(fresh.world)
   })
 
   it('gives a version 4 save attributes that keep each overall at the old strength', () => {
@@ -147,7 +158,7 @@ describe('upgradeGame', () => {
       expect(Math.abs(player.overall - old[player.id].strength)).toBeLessThanOrEqual(1)
       expect(player.potential).toBeGreaterThanOrEqual(player.overall)
       expect(player.attributes.finishing).toBeGreaterThanOrEqual(1)
-      if (old[player.id].traits.length > 0) expect(player.styles).toHaveLength(2)
+      expect(player.styles.length).toBeGreaterThanOrEqual(old[player.id].traits.length)
     }
     // The same save always upgrades to the same players.
     expect(upgradeOld({ ...current, version: 4 }).world.players).toEqual(upgraded.world.players)

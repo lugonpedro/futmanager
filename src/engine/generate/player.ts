@@ -1,9 +1,10 @@
 import type { Player, PlayStyle, Position } from '../model/types.ts'
 import {
+  earnedStyles,
   generateAttributes,
   overallAt,
   pickFeet,
-  pickStyles,
+  pickTalents,
   secondaryPositions,
 } from '../player/attributes.ts'
 import type { Rng } from '../rng.ts'
@@ -36,19 +37,23 @@ export type PlayerSeed = {
   season: number
 }
 
-/** A player's skills and the numbers that follow from them, for a given overall. */
+/**
+ * A player's skills and the numbers that follow from them, for a given
+ * overall. `talents` are the styles he is gifted at; his styles are the ones
+ * his attributes earn.
+ */
 export function playerProfile(
   rng: Rng,
   position: Position,
   overall: number,
-  styles: PlayStyle[] = pickStyles(rng, position, overall),
+  talents: PlayStyle[] = pickTalents(rng, position, overall),
 ): Pick<Player, 'attributes' | 'overall' | 'secondary' | 'styles' | 'foot' | 'weakFoot'> {
-  const attributes = generateAttributes(rng, position, overall, styles)
+  const attributes = generateAttributes(rng, position, overall, talents)
   return {
     attributes,
     overall: overallAt(attributes, position),
     secondary: secondaryPositions(attributes, position),
-    styles,
+    styles: earnedStyles(attributes, position),
     ...pickFeet(rng),
   }
 }

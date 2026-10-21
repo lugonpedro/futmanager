@@ -3,7 +3,18 @@ import { playerProfile } from '../generate/player.ts'
 import { generateWorld } from '../generate/world.ts'
 import type { Player, Position } from '../model/types.ts'
 import { createRng } from '../rng.ts'
-import { faces, overallAt, STYLE_PLUS_FROM, styleLevel } from './attributes.ts'
+import {
+  earnedStyles,
+  faces,
+  gainStyles,
+  MAX_STYLES,
+  nextStyle,
+  overallAt,
+  STYLE_ATTRIBUTES,
+  STYLE_PLUS_FROM,
+  styleLevel,
+  STYLES_BY_POSITION,
+} from './attributes.ts'
 
 const POSITIONS: Position[] = ['G', 'Z', 'L', 'M', 'A']
 
@@ -72,6 +83,61 @@ describe('attributes', () => {
     }
     expect(styleLevel(raised, p.styles[0])).toBe(2)
     expect(styleLevel({ ...p, styles: [] }, p.styles[0])).toBe(0)
+  })
+
+  it('give each player the styles his attributes earn, strong players more of them', () => {
+    const players = Object.values(generateWorld(7).players)
+    const average = (list: Player[]) =>
+      list.reduce((sum, p) => sum + p.styles.length, 0) / list.length
+    for (const p of players) {
+      expect(p.styles).toEqual(earnedStyles(p.attributes, p.position))
+      expect(p.styles.length).toBeLessThanOrEqual(MAX_STYLES)
+      for (const style of p.styles) expect(STYLES_BY_POSITION[p.position]).toContain(style)
+    }
+    const strong = players.filter((p) => p.overall >= 70)
+    const weak = players.filter((p) => p.overall < 50)
+    expect(average(strong)).toBeGreaterThan(1.2)
+    expect(average(weak)).toBeLessThan(average(strong))
+    const seen = new Set(players.flatMap((p) => p.styles))
+    for (const style of ['chutador', 'cobrador', 'incansavel', 'trator', 'lancador'] as const) {
+      expect(seen).toContain(style)
+    }
+  })
+
+  it('never take a style away, and pick up one the attributes now earn', () => {
+    const rng = createRng(9)
+    const p = { position: 'A', ...playerProfile(rng, 'A', 70, []) } as Player
+    const keys = STYLE_ATTRIBUTES.velocista
+    const quick = {
+      ...p.attributes,
+      ...Object.fromEntries(keys.map((k) => [k, p.attributes[k] + 20])),
+    }
+    const styles = gainStyles(['cabeceador'], quick, 'A')
+    expect(styles[0]).toBe('cabeceador')
+    expect(styles).toContain('velocista')
+    const full = gainStyles(['cabeceador', 'finalizador', 'driblador'], quick, 'A')
+    expect(full).toEqual(['cabeceador', 'finalizador', 'driblador'])
+  })
+
+  it('turn a "+" back into the plain style when the attributes fall', () => {
+    const rng = createRng(10)
+    const p = { position: 'A', ...playerProfile(rng, 'A', 80, []) } as Player
+    const star = (value: number) => ({
+      ...p,
+      styles: ['velocista' as const],
+      attributes: { ...p.attributes, acceleration: value, sprintSpeed: value },
+    })
+    expect(styleLevel(star(90), 'velocista')).toBe(2)
+    expect(styleLevel(star(70), 'velocista')).toBe(1)
+  })
+
+  it('point at a style a player is close to but does not have yet', () => {
+    const players = Object.values(generateWorld(11).players)
+    const close = players.filter((p) => nextStyle(p) !== undefined)
+    expect(close.length).toBeGreaterThan(players.length / 10)
+    for (const p of close) expect(p.styles).not.toContain(nextStyle(p))
+    const full = players.find((p) => p.styles.length === MAX_STYLES)!
+    expect(nextStyle(full)).toBeUndefined()
   })
 
   it('come out the same from the same seed', () => {

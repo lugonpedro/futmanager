@@ -11,7 +11,14 @@ import { cn } from '@/lib/utils'
 import type { Player, Position, TacticalRole } from '../../engine/model/types.ts'
 import { roleOf, ROLES_BY_POSITION } from '../../engine/match/roles.ts'
 import { bestRole, slotFit } from '../../engine/match/strength.ts'
-import { FACE_ATTRIBUTES, faceValue, FACES, KEEPER_FACES } from '../../engine/player/attributes.ts'
+import {
+  FACE_ATTRIBUTES,
+  faceValue,
+  FACES,
+  KEEPER_FACES,
+  nextStyle,
+  styleLevel,
+} from '../../engine/player/attributes.ts'
 import {
   ATTRIBUTE_NAMES,
   FACE_NAMES,
@@ -20,6 +27,10 @@ import {
   POSITION_NAMES,
   rangeText,
   signedChange,
+  STYLE_EFFECTS,
+  STYLE_NAMES,
+  styleName,
+  styleSource,
   TACTICAL_ROLE_NAMES,
 } from '../format.ts'
 import { PlayerCard } from './PlayerCard.tsx'
@@ -133,6 +144,8 @@ export function PlayerSheetView(props: {
           {props.facts}
         </dl>
 
+        <StylesSection player={player} />
+
         <SheetSection title="Atributos">
           <div className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
             {(player.position === 'G' ? KEEPER_FACES : FACES).map((face) => {
@@ -165,6 +178,39 @@ export function PlayerSheetView(props: {
         {props.footer && <SheetFooter className="flex-row flex-wrap">{props.footer}</SheetFooter>}
       </SheetContent>
     </Sheet>
+  )
+}
+
+/**
+ * His styles with what each does and where it comes from, and the one he is
+ * close to picking up, so training has something to aim at.
+ */
+function StylesSection({ player }: { player: Player }) {
+  const next = nextStyle(player)
+  if (player.styles.length === 0 && !next) return null
+  return (
+    <SheetSection title="Estilos de jogo">
+      <ul className="flex flex-col gap-2 text-sm">
+        {player.styles.map((style) => {
+          const level = styleLevel(player, style)
+          return (
+            <li key={style}>
+              <span className="font-semibold">{styleName(style, level)}</span>{' '}
+              <span className="text-muted-foreground">
+                {STYLE_EFFECTS[style]} Vem de {styleSource(style).toLowerCase()}.
+                {level === 2 && ' O "+" vale o dobro.'}
+              </span>
+            </li>
+          )
+        })}
+        {next && (
+          <li className="text-muted-foreground">
+            Perto de ganhar <span className="font-semibold">{STYLE_NAMES[next]}</span>: falta pouco
+            em {styleSource(next).toLowerCase()}.
+          </li>
+        )}
+      </ul>
+    </SheetSection>
   )
 }
 

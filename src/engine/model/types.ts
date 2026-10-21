@@ -40,7 +40,10 @@ export type Attributes = {
 
 export type Attribute = keyof Attributes
 
-/** Named play styles, the standout skills of a player; the best have the "+" version. */
+/**
+ * Named play styles, the standout skills of a player, worked out from his
+ * attributes; the best have the "+" version.
+ */
 export type PlayStyle =
   | 'paredao'
   | 'colocacao'
@@ -54,6 +57,11 @@ export type PlayStyle =
   | 'armador'
   | 'driblador'
   | 'finalizador'
+  | 'chutador'
+  | 'cobrador'
+  | 'incansavel'
+  | 'trator'
+  | 'lancador'
 
 export type Foot = 'direito' | 'esquerdo'
 

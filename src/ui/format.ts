@@ -18,7 +18,7 @@ import type {
 } from '../engine/model/types.ts'
 import { CUP_NAME } from '../engine/season/cup.ts'
 import { PROMOTION_SPOTS } from '../engine/season/rules.ts'
-import type { AnyFace } from '../engine/player/attributes.ts'
+import { STYLE_ATTRIBUTES, type AnyFace } from '../engine/player/attributes.ts'
 import { formatDate } from '../engine/season/calendar.ts'
 
 export { formatMoney, formatReais } from '../engine/money.ts'
@@ -74,11 +74,51 @@ export const STYLE_NAMES: Record<PlayStyle, string> = {
   armador: 'Armador',
   driblador: 'Driblador',
   finalizador: 'Finalizador',
+  chutador: 'Chute de longe',
+  cobrador: 'Bola parada',
+  incansavel: 'Incansável',
+  trator: 'Trator',
+  lancador: 'Passe em profundidade',
+}
+
+/** What each style does in a match. */
+export const STYLE_EFFECTS: Record<PlayStyle, string> = {
+  paredao: 'Pega mais chutes.',
+  colocacao: 'Pega mais chutes.',
+  saida: 'Sai do gol e corta os contra-ataques do adversário.',
+  muralha: 'Reforça a defesa.',
+  desarmador: 'Reforça a defesa.',
+  cabeceador: 'Ganha mais bolas aéreas na área.',
+  cruzador: 'O time leva mais bolas para a área.',
+  velocista: 'Puxa contra-ataques e ganha na corrida.',
+  passador: 'Reforça o meio-campo.',
+  armador: 'Cria mais jogadas de ataque.',
+  driblador: 'Cria mais jogadas de ataque.',
+  finalizador: 'Aparece mais para chutar e marca mais.',
+  chutador: 'Arrisca mais, e mais gols saem de fora da área.',
+  cobrador: 'Escanteios e faltas levam mais perigo à área.',
+  incansavel: 'Cansa menos durante o jogo.',
+  trator: 'Ganha as divididas na defesa e no meio.',
+  lancador: 'Deixa os atacantes na cara do gol nos contra-ataques.',
 }
 
 /** "Finalizador+" for the "+" version. */
 export const styleName = (style: PlayStyle, level: number) =>
   `${STYLE_NAMES[style]}${level === 2 ? '+' : ''}`
+
+/** The attributes a style comes from, as "Drible e agilidade". */
+export const styleSource = (style: PlayStyle) => {
+  const names = STYLE_ATTRIBUTES[style].map((a, i) =>
+    i === 0 ? ATTRIBUTE_NAMES[a] : ATTRIBUTE_NAMES[a].toLowerCase(),
+  )
+  return names.join(' e ')
+}
+
+/** A style explained in a line, for tooltips. */
+export const styleTitle = (style: PlayStyle, level: number) =>
+  `${styleName(style, level)}: ${STYLE_EFFECTS[style]} Vem de ${styleSource(style).toLowerCase()}.${
+    level === 2 ? ' O "+" vale o dobro.' : ''
+  }`
 
 /** Card abbreviations and what they stand for. */
 export const FACE_NAMES: Record<AnyFace, { short: string; name: string }> = {

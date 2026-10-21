@@ -2,7 +2,14 @@ import { cn } from '@/lib/utils'
 import type { Club, GameState, Player } from '../../engine/model/types.ts'
 import { faces, styleLevel } from '../../engine/player/attributes.ts'
 import { FREE_AGENT } from '../../engine/model/types.ts'
-import { CARD_TIER_NAMES, cardTier, FACE_NAMES, styleName, type CardTier } from '../format.ts'
+import {
+  CARD_TIER_NAMES,
+  cardTier,
+  FACE_NAMES,
+  styleName,
+  styleTitle,
+  type CardTier,
+} from '../format.ts'
 import { ClubCrest } from './ClubCrest.tsx'
 
 const TIER_CLASSES: Record<CardTier, string> = {
@@ -91,14 +98,21 @@ export function PlayerCard(props: {
       </div>
       {player.styles.length > 0 && (
         <div className="mt-1 flex flex-wrap justify-center gap-1">
-          {player.styles.map((style) => (
-            <span
-              key={style}
-              className="rounded-full bg-current/15 px-1.5 text-[0.65rem] leading-4 font-bold"
-            >
-              {styleName(style, styleLevel(player, style))}
-            </span>
-          ))}
+          {player.styles.map((style) => {
+            const level = styleLevel(player, style)
+            return (
+              <span
+                key={style}
+                title={styleTitle(style, level)}
+                className={cn(
+                  'rounded-full px-1.5 text-[0.65rem] leading-4 font-bold',
+                  level === 2 ? 'bg-black/70 text-yellow-300' : 'bg-current/15',
+                )}
+              >
+                {styleName(style, level)}
+              </span>
+            )
+          })}
         </div>
       )}
       {special && (

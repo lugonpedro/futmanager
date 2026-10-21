@@ -25,9 +25,13 @@ import { mixSeed, SAVE_VERSION } from './season/season.ts'
 import { withRoles } from './match/lineup.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
+import { gainStyles } from './player/attributes.ts'
+
+/** A career as stored before version 14, when styles were drawn at random, not earned. */
+type V13Game = Omit<GameState, 'version'> & { version: 13 }
 
 /** A career as stored before version 13, without favorites or asking prices on bids. */
-type V12Game = Omit<GameState, 'version' | 'favorites'> & { version: 12 }
+type V12Game = Omit<V13Game, 'version' | 'favorites'> & { version: 12 }
 
 /** A career as stored before version 12, when the lineup had no tactical roles. */
 type V11Game = Omit<V12Game, 'version'> & { version: 11 }
@@ -237,13 +241,14 @@ function fromV4(saved: V4Game): V5Game {
   const { world, season } = saved
   const players = mapValues(world.players, ({ strength, traits, ...player }): Player => {
     const rng = createRng(mixSeed(world.seed, player.id))
-    const profile = playerProfile(
-      rng,
-      player.position,
-      strength,
-      traits.map((t) => TRAIT_STYLES[t]),
-    )
-    return { ...player, ...profile, potential: Math.max(player.potential, profile.overall) }
+    const talents = traits.map((t) => TRAIT_STYLES[t])
+    const profile = playerProfile(rng, player.position, strength, talents)
+    return {
+      ...player,
+      ...profile,
+      styles: gainStyles(talents, profile.attributes, player.position),
+      potential: Math.max(player.potential, profile.overall),
+    }
   })
   return {
     ...saved,
@@ -319,20 +324,31 @@ function fromV11(saved: V11Game): V12Game {
 }
 
 /** No favorites yet; open bids take the asking price of players still up for sale. */
-function fromV12(saved: V12Game): GameState {
+function fromV12(saved: V12Game): V13Game {
   const { listed } = saved.market
   const offers = saved.market.offers.map((offer) =>
     listed[offer.playerId] === undefined
       ? offer
       : { ...offer, askingPrice: listed[offer.playerId] },
   )
-  return { ...saved, version: SAVE_VERSION, market: { ...saved.market, offers }, favorites: [] }
+  return { ...saved, version: 13, market: { ...saved.market, offers }, favorites: [] }
+}
+
+/** Everyone keeps the styles he had and picks up the ones his attributes now earn. */
+function fromV13(saved: V13Game): GameState {
+  const { world } = saved
+  const players = mapValues(world.players, (player) => ({
+    ...player,
+    styles: gainStyles(player.styles, player.attributes, player.position),
+  }))
+  return { ...saved, version: SAVE_VERSION, world: { ...world, players } }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
   saved:
     | GameState
+    | V13Game
     | V12Game
     | V11Game
     | V10Game
@@ -359,5 +375,6 @@ export function upgradeGame(
   const v10 = version < 10 ? fromV9(v9) : (saved as V10Game)
   const v11 = version < 11 ? fromV10(v10) : (saved as V11Game)
   const v12 = version < 12 ? fromV11(v11) : (saved as V12Game)
-  return fromV12(v12)
+  const v13 = version < 13 ? fromV12(v12) : (saved as V13Game)
+  return fromV13(v13)
 }

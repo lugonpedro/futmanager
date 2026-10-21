@@ -8,7 +8,13 @@ import { FAMILIARITY, FORM_EFFECT, POSTURE_EFFECT, STYLE_POINTS } from '../engin
 import { ROLE_SECTORS } from '../engine/match/roles.ts'
 import type { LearnShot } from './learnShots.ts'
 import type { Formation, Position, TacticalRole } from '../engine/model/types.ts'
-import { ATTRIBUTES, FACES, KEEPER_FACES, STYLE_PLUS_FROM } from '../engine/player/attributes.ts'
+import {
+  ATTRIBUTES,
+  FACES,
+  KEEPER_FACES,
+  MAX_STYLES,
+  STYLE_PLUS_FROM,
+} from '../engine/player/attributes.ts'
 import { PROGRESSION } from '../engine/progression/progression.ts'
 import { TRAINING } from '../engine/progression/training.ts'
 import {
@@ -204,6 +210,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       'O geral depende da posição: num zagueiro conta quase só defesa e físico; num atacante, finalização, ritmo e drible.',
       `Cor da carta: bronze abaixo de ${CARD_CUTS.prata}, prata de ${CARD_CUTS.prata} a ${CARD_CUTS.ouro - 1} e ouro a partir de ${CARD_CUTS.ouro}. A seleção da rodada e o craque da temporada têm cartas próprias.`,
       `Estilos como ${listText([STYLE_NAMES.paredao, STYLE_NAMES.muralha, STYLE_NAMES.finalizador, STYLE_NAMES.velocista])} dão ${num(STYLE_POINTS)} ponto a mais no lance em que contam. A versão "+" vale o dobro e aparece quando os atributos do estilo têm média ${STYLE_PLUS_FROM} ou mais.`,
+      `Os estilos saem dos atributos: o jogador ganha um quando os atributos dele se destacam do normal para a posição e o geral, até ${MAX_STYLES} estilos. Treinando, ele pode ganhar um novo, e os detalhes do jogador mostram qual está perto. Ninguém perde um estilo, mas com a idade o "+" pode virar o normal.`,
     ],
   },
   evolucao: {
