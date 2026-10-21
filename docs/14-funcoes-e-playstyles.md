@@ -2,7 +2,7 @@
 
 Pedido de 21/10/2026. Inspirado no EA FC 26: escolher a função de cada jogador em campo (corta pra dentro, falso 9, atacante sombra...) tanto na carreira quanto no draft online, e ter playstyles nas cartas tirados dos atributos. Conferido no código da `main` no commit `677d5f5` (PR #73).
 
-Andamento: os playstyles (parte 1) entraram no PR da thread "Funções em campo e playstyles", em 21/10/2026. As funções (parte 2) ainda são plano.
+Andamento: os playstyles (parte 1) estão no PR #75, de 21/10/2026. As funções (parte 2) ainda são plano.
 
 ## Decisões do Lugon
 
