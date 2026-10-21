@@ -26,6 +26,7 @@ import {
 } from '../components/RoomParts.tsx'
 import { DraftView, QueueBeforeDraft } from '../components/Draft.tsx'
 import { LeagueView } from '../components/League.tsx'
+import { RoomNotices } from '../components/RoomNotices.tsx'
 import { confirm } from '../confirm.ts'
 import { usePackPool } from '../usePackPool.ts'
 import {
@@ -83,7 +84,10 @@ export function RoomScreen() {
       ) : !loaded || !user ? (
         <Note>Carregando…</Note>
       ) : (
-        <RoomBody {...loaded} userId={user.id} reload={reload} />
+        <>
+          <RoomBody {...loaded} userId={user.id} reload={reload} />
+          {loaded.room.status !== 'encerrada' && <RoomNotices />}
+        </>
       )}
     </RoomPage>
   )
