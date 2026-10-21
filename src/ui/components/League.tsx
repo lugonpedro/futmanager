@@ -30,7 +30,7 @@ import {
 } from '../../cloud/draft.ts'
 import { loadRoundReplays, rematchRoom, setRoomReady } from '../../cloud/roomLeague.ts'
 import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
-import type { Room } from '../../cloud/rooms.ts'
+import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
@@ -510,7 +510,12 @@ function LeagueEnd(props: {
     try {
       navigate(`/sala/${await rematchRoom(room.id)}`)
     } catch (error) {
-      toast.error(messageOf(error))
+      toast.error(
+        messageOf(error),
+        messageOf(error) === PASS_NEEDED
+          ? { action: { label: 'Ver o passe', onClick: () => navigate('/passe') } }
+          : undefined,
+      )
       setBusy(false)
     }
   }
@@ -560,7 +565,7 @@ function LeagueEnd(props: {
             </Button>
             <p className="text-xs text-muted-foreground">
               Abre uma sala nova com as mesmas pessoas e as mesmas regras, com o draft marcado para
-              amanhã. Quem abrir a revanche fica como dono dela.
+              amanhã. Quem abrir a revanche fica como dono dela e precisa do passe.
             </p>
           </div>
         )}

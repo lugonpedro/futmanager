@@ -20,6 +20,7 @@ import { LegalScreen } from './ui/screens/LegalScreen.tsx'
 import { LiveMatchScreen } from './ui/screens/LiveMatchScreen.tsx'
 import { NewGameScreen } from './ui/screens/NewGameScreen.tsx'
 import { NotFoundScreen } from './ui/screens/NotFoundScreen.tsx'
+import { PassScreen } from './ui/screens/PassScreen.tsx'
 import { PrivacyScreen } from './ui/screens/PrivacyScreen.tsx'
 import { RoomInviteScreen } from './ui/screens/RoomInviteScreen.tsx'
 import { RoomScreen } from './ui/screens/RoomScreen.tsx'
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/nuvem" element={<CloudScreen />} />
         <Route path="/fantasia/*" element={<Navigate to="/" replace />} />
         <Route path="/salas" element={<RoomsScreen />} />
+        <Route path="/passe" element={<PassScreen />} />
         <Route path="/sala/convite/:code" element={<RoomInviteScreen />} />
         <Route path="/sala/:id" element={<RoomScreen />} />
         <Route path="/aprenda/:tab?" element={<LearnScreen />} />
