@@ -5,6 +5,7 @@ import type { PoolPlayer } from '../engine/room/start.ts'
 import { DEFAULT_ROOM_OPTIONS } from '../engine/room/types.ts'
 import {
   draftPlayers,
+  handZoom,
   moveInQueue,
   pickProblem,
   picksUntil,
@@ -169,5 +170,18 @@ describe('draftPlayers', () => {
     expect(byId.get('a')).toMatchObject({ overall: pool[0].overall + 9, prime: 9 })
     expect(byId.get('b')).toBe(pool[1])
     expect(byId.get('c')).toMatchObject({ overall: pool[2].overall + 11, prime: 11 })
+  })
+})
+
+describe('handZoom', () => {
+  it('keeps the cards full size when they fit, and never wider than the space', () => {
+    expect(handZoom(2000)).toBe(1)
+    expect(handZoom(760)).toBeCloseTo((760 - 4 * 12) / (5 * 192))
+  })
+
+  it('goes three and two on a phone, so the cards stay readable without scrolling', () => {
+    const zoom = handZoom(358)
+    expect(zoom).toBeCloseTo((358 - 2 * 12) / (3 * 192))
+    expect(3 * 192 * zoom + 2 * 12).toBeLessThanOrEqual(358)
   })
 })

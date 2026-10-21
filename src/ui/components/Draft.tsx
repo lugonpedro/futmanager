@@ -3,6 +3,7 @@ import { BotIcon, TimerIcon } from 'lucide-react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import {
   draftPick,
@@ -33,6 +34,7 @@ import type { PoolPlayer } from '../../engine/room/start.ts'
 import {
   draftPlayers,
   draftTotal,
+  handZoom,
   pickProblem,
   picksUntil,
   roundOfPick,
@@ -190,7 +192,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
             onChanged={after}
           />
         )}
-        <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
+        <DraftBoard room={room} teams={teams} byId={byId} picks={picks} world={world} />
       </div>
     </div>
   )
@@ -514,6 +516,7 @@ function DealTable(props: {
 }) {
   const { room, byId, picks, mine, deal, world } = props
   const [selected, setSelected] = useState<string>()
+  const [handRef, zoom] = useHandZoom()
   const [busy, setBusy] = useState(false)
   const slot = slotOnTheClock(room)
   const team = props.teams.find((t) => t.slot === slot)
@@ -563,14 +566,14 @@ function DealTable(props: {
       <CardContent className="flex flex-col gap-3">
         <ul
           key={deal?.pick ?? 'monte'}
-          className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pt-4 pb-3 [perspective:1200px]"
+          ref={handRef}
+          className="flex flex-wrap justify-center gap-3 pt-3 pb-2 [perspective:1200px]"
         >
           {deal
             ? cards.map((player, i) => {
-                const full = world?.players[player.id]
                 const isSelected = player.id === selected
                 return (
-                  <li key={player.id} className="snap-start">
+                  <li key={player.id} style={{ zoom }}>
                     <button
                       type="button"
                       disabled={!myTurn}
@@ -589,28 +592,14 @@ function DealTable(props: {
                         glow={
                           player.prime ? 'prime' : player.overall >= WALKOUT ? 'walkout' : undefined
                         }
-                        front={
-                          full ? (
-                            <PlayerCard
-                              player={{
-                                ...primePlayer(full, player.prime ?? 0),
-                                name: player.name,
-                                overall: player.overall,
-                              }}
-                              club={world.clubs[full.clubId]}
-                              tier={player.prime ? 'prime' : undefined}
-                            />
-                          ) : (
-                            <PlainCard player={player} />
-                          )
-                        }
+                        front={<DraftCard player={player} world={world} />}
                       />
                     </button>
                   </li>
                 )
               })
             : Array.from({ length: CARDS_PER_DEAL }, (_, i) => (
-                <li key={i} className="snap-start">
+                <li key={i} style={{ zoom }}>
                   <CardBack className={cn(!myTurn && 'animate-pulse')} />
                 </li>
               ))}
@@ -629,6 +618,36 @@ function DealTable(props: {
         {problem && <p className="text-center text-sm text-destructive">{problem}</p>}
       </CardContent>
     </Card>
+  )
+}
+
+function useHandZoom(): [(node: HTMLUListElement | null) => void, number] {
+  const [zoom, setZoom] = useState(1)
+  const observer = useRef<ResizeObserver>(undefined)
+  const ref = useCallback((node: HTMLUListElement | null) => {
+    observer.current?.disconnect()
+    if (!node) return
+    observer.current = new ResizeObserver(([entry]) => setZoom(handZoom(entry.contentRect.width)))
+    observer.current.observe(node)
+  }, [])
+  return [ref, zoom]
+}
+
+/** A draft player's card: the pack's full card when it has loaded, boosted if prime. */
+function DraftCard(props: { player: DraftPlayer; world?: World }) {
+  const { player, world } = props
+  const full = world?.players[player.id]
+  if (!world || !full) return <PlainCard player={player} />
+  return (
+    <PlayerCard
+      player={{
+        ...primePlayer(full, player.prime ?? 0),
+        name: player.name,
+        overall: player.overall,
+      }}
+      club={world.clubs[full.clubId]}
+      tier={player.prime ? 'prime' : undefined}
+    />
   )
 }
 
@@ -840,10 +859,21 @@ function PlainCard(props: { player: DraftPlayer }) {
 }
 
 /** A player's line in the lists: overall, position, name, club of origin and age. */
-function PlayerLine(props: { player: DraftPlayer }) {
-  const { player } = props
+function PlayerLine(props: { player: DraftPlayer; onOpen?: (player: DraftPlayer) => void }) {
+  const { player, onOpen } = props
+  const Line = onOpen ? 'button' : 'span'
   return (
-    <span className="flex min-w-0 flex-1 items-center gap-2">
+    <Line
+      {...(onOpen && {
+        type: 'button' as const,
+        onClick: () => onOpen(player),
+        title: `Ver a carta de ${player.name}`,
+      })}
+      className={cn(
+        'flex min-w-0 flex-1 items-center gap-2 text-left',
+        onOpen && 'cursor-pointer rounded hover:bg-accent',
+      )}
+    >
       <span
         className={cn(
           'w-7 shrink-0 text-right font-mono font-bold tabular-nums',
@@ -861,7 +891,7 @@ function PlayerLine(props: { player: DraftPlayer }) {
       </span>
       <span className="min-w-0 flex-1 truncate">{player.name}</span>
       <span className="shrink-0 text-xs text-muted-foreground">{player.origin}</span>
-    </span>
+    </Line>
   )
 }
 
@@ -887,9 +917,19 @@ export function DraftBoard(props: {
   teams: DraftTeam[]
   byId: ReadonlyMap<string, DraftPlayer>
   picks: DraftPick[]
+  /** The pack's world, for the cards; loaded here on the first card opened if not given. */
+  world?: World
 }) {
   const { room, teams, byId, picks } = props
   const [view, setView] = useState<'elencos' | 'historico'>('elencos')
+  const [open, setOpen] = useState<DraftPlayer>()
+  const [wanted, setWanted] = useState(false)
+  const loaded = usePackWorld(props.world || !wanted ? undefined : room.pack)
+  const world = props.world ?? loaded
+  const onOpen = (player: DraftPlayer) => {
+    setWanted(true)
+    setOpen(player)
+  }
   const squads = squadsOf(picks)
   const teamOf = new Map(teams.map((t) => [t.slot, t]))
   const recent = [...picks].sort((a, b) => b.pick - a.pick)
@@ -930,7 +970,7 @@ export function DraftBoard(props: {
                       />
                     )}
                     <span className="w-10 shrink-0 text-xs font-semibold">{team?.shortName}</span>
-                    {player && <PlayerLine player={player} />}
+                    {player && <PlayerLine player={player} onOpen={onOpen} />}
                     {pick.auto && !team?.robot && (
                       <BotIcon
                         className="size-3.5 shrink-0 text-muted-foreground"
@@ -970,7 +1010,7 @@ export function DraftBoard(props: {
                     <ul className="flex flex-col text-xs">
                       {starters.map((player) => (
                         <li key={player.id}>
-                          <PlayerLine player={player} />
+                          <PlayerLine player={player} onOpen={onOpen} />
                         </li>
                       ))}
                       {reserves.length > 0 && (
@@ -980,7 +1020,7 @@ export function DraftBoard(props: {
                       )}
                       {reserves.map((player) => (
                         <li key={player.id}>
-                          <PlayerLine player={player} />
+                          <PlayerLine player={player} onOpen={onOpen} />
                         </li>
                       ))}
                     </ul>
@@ -991,6 +1031,12 @@ export function DraftBoard(props: {
           </div>
         )}
       </CardContent>
+      <Dialog open={open !== undefined} onOpenChange={(on) => !on && setOpen(undefined)}>
+        <DialogContent className="w-auto items-center justify-items-center">
+          <DialogTitle className="sr-only">{open ? `Carta de ${open.name}` : 'Carta'}</DialogTitle>
+          {open && <DraftCard player={open} world={world} />}
+        </DialogContent>
+      </Dialog>
     </Card>
   )
 }
