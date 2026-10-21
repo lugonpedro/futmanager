@@ -9,6 +9,7 @@ import {
   FORMATION_LIST,
   FORMATIONS,
   formationLines,
+  dropUnknownDuties,
   repairLineup,
   setDuty,
   swapPlayers,
@@ -255,12 +256,12 @@ describe('picked roles', () => {
   })
 
   it('stay with the slot when players swap', () => {
-    const picked = setDuty(lineup, forward.playerId, 'PIV')
+    const picked = setDuty(lineup, forward.playerId, 'AS')
     const other = picked.starters.find((s) => s.role === 'PE')!
     const swapped = swapPlayers(picked, forward.playerId, other.playerId)
     expect(swapped.starters.find((s) => s.role === 'CA')).toMatchObject({
       playerId: other.playerId,
-      duty: 'PIV',
+      duty: 'AS',
     })
   })
 
@@ -273,13 +274,26 @@ describe('picked roles', () => {
     )
   })
 
+  it('drop roles that left the game, keeping the rest of the lineup', () => {
+    const picked = setDuty(lineup, forward.playerId, 'F9')
+    const old = {
+      ...picked,
+      starters: picked.starters.map((s) =>
+        s.role === 'ZAG' ? { ...s, duty: 'XER' as unknown as typeof s.role } : s,
+      ),
+    }
+    const cleaned = dropUnknownDuties(old)
+    expect(cleaned.starters.filter((s) => s.role === 'ZAG').every((s) => !('duty' in s))).toBe(true)
+    expect(cleaned.starters.find((s) => s.playerId === forward.playerId)?.duty).toBe('F9')
+    expect(dropUnknownDuties(picked)).toBe(picked)
+  })
+
   it('offer a slot the roles of its part of the pitch, on its own wing only', () => {
     expect(dutiesFor({ position: 'A', role: 'PE' })).toContain('CPD')
     expect(dutiesFor({ position: 'A', role: 'PE' })).not.toContain('PD')
     expect(dutiesFor({ position: 'A', role: 'CA' })).not.toContain('PE')
-    expect(dutiesFor({ position: 'Z', role: 'ZAG' })).toEqual(
-      expect.arrayContaining(['XER', 'ZC', 'AO']),
-    )
+    expect(dutiesFor({ position: 'Z', role: 'ZAG' })).toEqual(['ZAG', 'LAT', 'AO', 'LI'])
+    expect(dutiesFor({ position: 'G', role: 'GOL' })).toEqual(['GOL'])
     for (const roles of Object.values(DUTIES_BY_POSITION)) {
       for (const role of roles) expect(roleOverall(squad[0], role)).toBeGreaterThan(0)
     }

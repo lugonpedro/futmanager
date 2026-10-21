@@ -20,6 +20,7 @@ import {
   FACES,
   KEEPER_FACES,
   MAX_STYLES,
+  MIN_STYLES_FROM,
   STYLE_PLUS_FROM,
 } from '../engine/player/attributes.ts'
 import { PROGRESSION } from '../engine/progression/progression.ts'
@@ -183,7 +184,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
     items: [
       `${formations.length} formações: ${listText(formations)}. Cada vaga da formação tem uma função, que muda o quanto o jogador ajuda na defesa, no meio e no ataque: ${listText(roleList)}.`,
       'O volante protege a defesa e chuta pouco; o meia ofensivo e os pontas reforçam o ataque. A ficha do jogador mostra a função em que ele rende mais.',
-      'Tocando num titular da escalação, você escolhe outra função para a vaga, entre todas do setor: falso 9, pivô, corta pra dentro, atacante sombra, regista, box-to-box, lateral invertido, ala ofensivo, xerife, zagueiro construtor ou goleiro-líbero, entre outras. A função fica com a vaga quando você troca jogadores, e volta à da formação se você mudar a formação ou escalar automaticamente.',
+      'Tocando num titular da escalação, você escolhe outra função para a vaga, entre as do setor: falso 9, corta pra dentro, atacante sombra, regista, lateral invertido e ala ofensivo, além das funções das formações. A função fica com a vaga quando você troca jogadores, e volta à da formação se você mudar a formação.',
       `Cada nível de um estilo que combina com a função escolhida rende ${Math.round(ROLE_STYLE_EFFECT * 1000) / 10}% a mais. O corta pra dentro rende ${Math.round(INSIDE_FOOT_EFFECT * 100)}% a mais no lado contrário ao pé bom e ${Math.round(INSIDE_FOOT_EFFECT * 100)}% a menos no mesmo lado.`,
       `Posições: ${positionList}. Fora da posição o jogador rende menos: ${Math.round(FAMILIARITY.secondary * 100)}% numa posição secundária dele e ${Math.round(FAMILIARITY.other * 100)}% em qualquer outra. Jogador de linha no gol é desastre. No campo, a cor da sigla avisa: verde, amarelo ou vermelho.`,
       `Postura defensiva: ${percent(POSTURE_EFFECT.defensiva.defense)} mais defesa, ${percent(POSTURE_EFFECT.defensiva.attack)} menos ataque, e o time cansa menos. Ofensiva: ${percent(POSTURE_EFFECT.ofensiva.attack)} mais ataque, ${percent(POSTURE_EFFECT.ofensiva.defense)} menos defesa, e cansa ${percent(POSTURE_EFFECT.ofensiva.tiring)} mais.`,
@@ -219,7 +220,7 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
       'O geral depende da posição: num zagueiro conta quase só defesa e físico; num atacante, finalização, ritmo e drible.',
       `Cor da carta: bronze abaixo de ${CARD_CUTS.prata}, prata de ${CARD_CUTS.prata} a ${CARD_CUTS.ouro - 1} e ouro a partir de ${CARD_CUTS.ouro}. A seleção da rodada e o craque da temporada têm cartas próprias.`,
       `Estilos como ${listText([STYLE_NAMES.paredao, STYLE_NAMES.muralha, STYLE_NAMES.finalizador, STYLE_NAMES.velocista])} dão ${num(STYLE_POINTS)} ponto a mais no lance em que contam. A versão "+" vale o dobro e aparece quando os atributos do estilo têm média ${STYLE_PLUS_FROM} ou mais.`,
-      `Os estilos saem dos atributos: o jogador ganha um quando os atributos dele se destacam do normal para a posição e o geral, até ${MAX_STYLES} estilos. Treinando, ele pode ganhar um novo, e os detalhes do jogador mostram qual está perto. Ninguém perde um estilo, mas com a idade o "+" pode virar o normal.`,
+      `Os estilos saem dos atributos: o jogador ganha um quando os atributos dele se destacam do normal para a posição e o geral, até ${MAX_STYLES} estilos. Quem tem geral ${MIN_STYLES_FROM.one} ou mais tem pelo menos um, e de ${MIN_STYLES_FROM.two} para cima pelo menos dois, os seus mais fortes. Treinando, ele pode ganhar um novo, e os detalhes do jogador mostram qual está perto. Ninguém perde um estilo, mas com a idade o "+" pode virar o normal.`,
     ],
   },
   evolucao: {

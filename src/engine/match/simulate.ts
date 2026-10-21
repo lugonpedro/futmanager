@@ -202,7 +202,7 @@ const SCORING_WEIGHT: Record<Position, number> = { G: 0, Z: 0.6, L: 0.6, M: 2.2,
 const scoringWeight = (p: OnPitch) =>
   SCORING_WEIGHT[p.duty ? ROLE_HOME[p.duty] : p.position] * (ROLE_SHOOTING[roleOf(p)] ?? 1)
 /** What the picked roles on the pitch add up to for one of their traits. */
-const traitSum = (team: TeamState, trait: 'crosses' | 'pulls' | 'counter' | 'sweeper') =>
+const traitSum = (team: TeamState, trait: 'crosses' | 'pulls' | 'counter') =>
   team.onPitch.reduce((sum, p) => sum + ((p.duty && ROLE_TRAITS[p.duty]?.[trait]) || 0), 0)
 /** Who gets on the end of a cross or a corner. */
 const AERIAL_WEIGHT: Record<Position, number> = { G: 0, Z: 2.2, L: 0.4, M: 0.8, A: 3 }
@@ -292,7 +292,7 @@ function paceEdge(team: TeamState, opponent: TeamState, possession: number): num
     Math.max(0, ...team.onPitch.map((p) => styleBonus(p.player, 'lancador'))) +
     traitSum(team, 'counter')
   const keeper = opponent.onPitch.find((p) => p.position === 'G')
-  const sweeper = (keeper ? styleBonus(keeper.player, 'saida') : 0) + traitSum(opponent, 'sweeper')
+  const sweeper = keeper ? styleBonus(keeper.player, 'saida') : 0
   const gap =
     average(runners.map(quickness)) -
     average(chasers.map(quickness)) -

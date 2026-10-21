@@ -91,7 +91,7 @@ export { INJURY_DAYS, YELLOWS_FOR_SUSPENSION } from './discipline.ts'
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 15
+export const SAVE_VERSION = 16
 
 export { mixSeed } from '../rng.ts'
 

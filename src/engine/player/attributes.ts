@@ -182,15 +182,28 @@ export function styleStandout(attributes: Attributes, position: Position, style:
   )
 }
 
-/** The styles the attributes earn in a position, the most outstanding first, up to MAX_STYLES. */
+/**
+ * Fewest styles a player of this overall has. Near the top of the scale the
+ * attributes run into 99 and can hardly stand out from the usual, so the
+ * best players get their strongest styles anyway.
+ */
+export const MIN_STYLES_FROM = { one: 65, two: 80 }
+export const minStyles = (overall: number) =>
+  overall >= MIN_STYLES_FROM.two ? 2 : overall >= MIN_STYLES_FROM.one ? 1 : 0
+
+/**
+ * The styles the attributes earn in a position, the most outstanding first,
+ * up to MAX_STYLES: those that stand out, topped up to minStyles with the
+ * player's strongest others.
+ */
 export function earnedStyles(attributes: Attributes, position: Position): PlayStyle[] {
-  return STYLES_BY_POSITION[position]
+  const ranked = STYLES_BY_POSITION[position]
     .map((style) => ({ style, standout: styleStandout(attributes, position, style) }))
-    .filter(
-      ({ style, standout }) =>
-        standout >= STYLE_MARGIN && keyAverage(attributes, style) >= STYLE_FLOOR,
-    )
+    .filter(({ style }) => keyAverage(attributes, style) >= STYLE_FLOOR)
     .sort((a, b) => b.standout - a.standout)
+  const least = minStyles(overallAt(attributes, position))
+  return ranked
+    .filter(({ standout }, i) => standout >= STYLE_MARGIN || i < least)
     .slice(0, MAX_STYLES)
     .map(({ style }) => style)
 }
