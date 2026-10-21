@@ -3,6 +3,7 @@ import type { Room } from '../cloud/rooms.ts'
 import type { Position } from '../engine/model/types.ts'
 import { teamForPick } from '../engine/room/draft.ts'
 import type { PoolPlayer } from '../engine/room/start.ts'
+import { CARDS_PER_DEAL } from '../engine/room/slots.ts'
 import { ROOM_LIMITS } from '../engine/room/types.ts'
 
 export const draftTotal = (room: Room) => room.options.teams * room.options.squadSize
@@ -172,4 +173,20 @@ export function draftPlayers(
     }
   }
   return byId
+}
+
+/** Width of a card at full size, in pixels (w-48), and the gap between cards (gap-3). */
+const CARD_PX = 192
+const HAND_GAP_PX = 12
+/** Below this size five cards in a row are too small to read; they go three and two. */
+const MIN_ROW_ZOOM = 0.65
+
+/**
+ * How much to shrink the five cards so they fit the width without scrolling:
+ * all in a row when they can stay readable, else three on top and two below.
+ */
+export function handZoom(width: number, cards: number = CARDS_PER_DEAL): number {
+  const fit = (perRow: number) => (width - (perRow - 1) * HAND_GAP_PX) / (perRow * CARD_PX)
+  const zoom = fit(cards) >= MIN_ROW_ZOOM ? fit(cards) : fit(Math.ceil(cards / 2))
+  return Math.min(1, Math.max(0.4, zoom))
 }
