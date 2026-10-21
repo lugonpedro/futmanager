@@ -2,7 +2,7 @@
 
 Pedido de 21/10/2026. Inspirado no EA FC 26: escolher a função de cada jogador em campo (corta pra dentro, falso 9, atacante sombra...) tanto na carreira quanto no draft online, e ter playstyles nas cartas tirados dos atributos. Conferido no código da `main` no commit `677d5f5` (PR #73).
 
-Andamento: os playstyles (parte 1) entraram no PR #75, de 21/10/2026. As funções (parte 2) estão no PR seguinte, do mesmo dia; o que ficou diferente do plano está em "Como ficou" no fim da parte 2. O passo a passo para tudo funcionar no ar está em "Para ligar no ar", no fim do documento.
+Andamento: os playstyles (parte 1) entraram no PR #75 e as funções (parte 2) no PR #78, ambos de 21/10/2026. Depois do primeiro teste, ainda no mesmo dia, veio uma rodada de ajustes; ela está em "Ajustes depois do primeiro teste", e o que ficou diferente do plano está em "Como ficou". O passo a passo para tudo funcionar no ar está em "Para ligar no ar", no fim do documento.
 
 ## Decisões do Lugon
 
@@ -117,6 +117,15 @@ Quando o jogador tem um playstyle que combina com a função, ele rende um pouco
 - **Playstyle que combina:** cada nível de um playstyle que combina com a função escolhida rende 1,5% a mais.
 - **Equilíbrio:** com as mesmas sementes, trocar a função de uma vaga muda o saldo médio de gols do time em no máximo uns 0,09 por jogo, para mais ou para menos. A exceção são as funções de ataque numa vaga de volante (até 0,12), que ficam abaixo do Meia ofensivo nessa vaga, que já existia (0,2). O motor premia o ataque, então funções mais ofensivas tendem a render um pouco mais; as defensivas trocam gols marcados por gols sofridos.
 - **Save na versão 15:** só o número sobe. A escalação ganhou o campo opcional `duty` em cada vaga, e saves antigos abrem com todas as vagas na função da formação.
+
+## Ajustes depois do primeiro teste
+
+Pedidos do Lugon de 21/10/2026, depois de jogar o draft:
+
+- **Menos funções, sem repetir os playstyles.** Saíram Goleiro-líbero, Xerife, Zagueiro construtor, Box-to-box e Pivô, que faziam o mesmo que os playstyles Goleiro-líbero, Muralha e Trator, Passe em profundidade, Incansável e Cabeceador. Ficaram as seis que mudam o jeito de jogar: Ala ofensivo, Lateral invertido, Regista, Atacante sombra, Corta pra dentro e Falso 9, além das funções das formações. O goleiro não tem mais escolha.
+- **Escalações que tinham uma função que saiu** perdem só a função: a vaga volta à da formação, e o resto da escalação fica. Isso vale nas salas (antes de conferir a escalação salva) e na carreira (save na versão 16).
+- **Jogador de geral alto sem playstyle.** Era a regra: perto do topo da escala, os atributos esbarram no 99 e quase não conseguem ficar acima do normal para o geral. No Brasileirão do draft, 20 dos 209 jogadores de 70 a 79 e 6 dos 49 de 80 para cima não tinham nenhum, como o Pedro (86). Agora quem tem geral 65 ou mais tem pelo menos um playstyle, e de 80 para cima pelo menos dois: os seus mais fortes, mesmo que não se destaquem tanto. Na carreira, o save na versão 16 aplica isso a todo mundo; nas salas, vale para as salas criadas depois de publicar `room-draft`.
+- **Trocar a função tira a seleção do jogador**, para a escalação não ficar com um jogador marcado à espera de troca.
 
 ## Para ligar no ar
 

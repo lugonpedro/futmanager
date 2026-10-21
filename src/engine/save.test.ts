@@ -37,6 +37,34 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('drops roles of a version 15 lineup that left the game, and gives the best players styles', () => {
+    const lineup = autoLineup(
+      fresh.world.clubs.C10.playerIds.map((id) => fresh.world.players[id]),
+      '4-4-2',
+    )
+    const old = {
+      ...lineup,
+      starters: lineup.starters.map((s) =>
+        s.position === 'Z' ? { ...s, duty: 'XER' } : s.position === 'A' ? { ...s, duty: 'F9' } : s,
+      ),
+    }
+    const best = Object.values(fresh.world.players).reduce((a, b) =>
+      a.overall > b.overall ? a : b,
+    )
+    const players = { ...fresh.world.players, [best.id]: { ...best, styles: [] } }
+    const upgraded = upgradeOld({
+      ...fresh,
+      version: 15,
+      userLineup: old,
+      world: { ...fresh.world, players },
+    })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    for (const slot of upgraded.userLineup!.starters) {
+      expect(slot.duty).toBe(slot.position === 'A' ? 'F9' : undefined)
+    }
+    expect(upgraded.world.players[best.id].styles.length).toBeGreaterThan(0)
+  })
+
   it('keeps the styles of a version 13 save and adds the ones the attributes earn', () => {
     const [first, second] = fresh.world.clubs.C10.playerIds
     const random = { ...fresh.world.players[first], styles: ['cruzador' as const] }
