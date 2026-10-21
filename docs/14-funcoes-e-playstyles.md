@@ -2,7 +2,7 @@
 
 Pedido de 21/10/2026. Inspirado no EA FC 26: escolher a função de cada jogador em campo (corta pra dentro, falso 9, atacante sombra...) tanto na carreira quanto no draft online, e ter playstyles nas cartas tirados dos atributos. Conferido no código da `main` no commit `677d5f5` (PR #73).
 
-Andamento: os playstyles (parte 1) estão no PR #75, de 21/10/2026. As funções (parte 2) ainda são plano.
+Andamento: os playstyles (parte 1) entraram no PR #75, de 21/10/2026. As funções (parte 2) estão no PR seguinte, do mesmo dia; o que ficou diferente do plano está em "Como ficou" no fim da parte 2. O passo a passo para tudo funcionar no ar está em "Para ligar no ar", no fim do documento.
 
 ## Decisões do Lugon
 
@@ -61,7 +61,7 @@ Em negrito, os cinco novos, inspirados no Power Shot, Dead Ball, Relentless, Bru
 - **Ficha do jogador:** seção nova "Estilos de jogo", com o que cada um faz, de onde vem, e o playstyle que ele está perto de ganhar ("Perto de ganhar Driblador: falta pouco em drible e agilidade"), para o treino ter um alvo.
 - **Aprenda:** um item novo explica que os playstyles saem dos atributos, que nunca se perdem e que o "+" pode cair com a idade.
 
-## Parte 2: funções em campo (plano)
+## Parte 2: funções em campo
 
 ### Como funciona para o jogador
 
@@ -106,3 +106,26 @@ Quando o jogador tem um playstyle que combina com a função, ele rende um pouco
 - `roles.ts` ganha as funções novas, com o setor de cada uma, em vez de só as que aparecem em alguma formação.
 - A escalação da carreira e a do draft (`RoomLineup`) ganham a escolha. As funções do Supabase (`room-round`) precisam ser publicadas de novo, porque usam o motor.
 - Testes de equilíbrio: nenhuma função pode ser melhor que as outras em tudo. A ideia é cada uma trocar algo por algo.
+
+### Como ficou
+
+- **Onde escolher:** na escalação, tocar num titular (no campo ou na lista) abre "Função de Fulano", com todas as funções do setor da vaga e a nota dele em cada uma. A mesma tela vale na carreira e nas salas do draft.
+- **Padrão:** sem escolha, a vaga joga a função da formação, como antes, e a IA não escolhe funções. Assim o equilíbrio das partidas sem escolha fica igual ao de hoje. A ficha continua mostrando a "Melhor função", agora entre todas as do setor.
+- **A função fica com a vaga:** trocando dois jogadores de lugar, quem entra na vaga herda a função escolhida, e o mesmo vale para quem entra numa substituição. Mudar a formação ou escalar automaticamente volta todas as vagas para a função da formação.
+- **Ponta aberta:** é a própria Ponta esquerda ou direita (PE e PD). As funções que pertencem a um lado (PE, PD, ME, MD) só aparecem nas vagas daquele lado.
+- **Corta pra dentro:** rende 3% a mais no lado contrário ao pé bom e 3% a menos no mesmo lado; numa vaga central não há lado.
+- **Playstyle que combina:** cada nível de um playstyle que combina com a função escolhida rende 1,5% a mais.
+- **Equilíbrio:** com as mesmas sementes, trocar a função de uma vaga muda o saldo médio de gols do time em no máximo uns 0,09 por jogo, para mais ou para menos. A exceção são as funções de ataque numa vaga de volante (até 0,12), que ficam abaixo do Meia ofensivo nessa vaga, que já existia (0,2). O motor premia o ataque, então funções mais ofensivas tendem a render um pouco mais; as defensivas trocam gols marcados por gols sofridos.
+- **Save na versão 15:** só o número sobe. A escalação ganhou o campo opcional `duty` em cada vaga, e saves antigos abrem com todas as vagas na função da formação.
+
+## Para ligar no ar
+
+O site da Vercel publica sozinho quando o PR entra na `main`, então a carreira já fica com tudo: os playstyles, os efeitos novos e as funções. Não há migração nova do banco. O que falta é o Supabase, que roda o motor nas salas do draft:
+
+1. Publicar de novo as três funções que usam o motor: `supabase functions deploy room-round room-draft room-market`.
+   - `room-round` joga as rodadas e confere a escalação salva. Sem ela, as funções escolhidas são ignoradas nas partidas das salas, e os playstyles novos não têm efeito.
+   - `room-draft` cria as salas. Sem ela, as salas novas sorteiam os playstyles do jeito antigo.
+   - `room-market` aplica trocas e dispensas, e usa o mesmo estado da sala.
+   - `room-notify`, `pass` e `mercadopago-webhook` não mudaram e não precisam ser publicadas.
+2. Salas que já existem guardam os jogadores do dia em que foram criadas, então mantêm os playstyles que tinham. As funções e os efeitos novos valem nelas a partir da primeira rodada jogada depois do passo 1.
+3. Nada muda nos segredos nem nas tabelas.

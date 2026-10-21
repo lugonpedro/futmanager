@@ -200,6 +200,21 @@ export function changeFormation(
 }
 
 /**
+ * Gives a starter's slot the role the user picked, or back its own when the
+ * pick is the slot's role. The role stays with the slot when players swap.
+ */
+export function setDuty(lineup: Lineup, playerId: string, duty: TacticalRole): Lineup {
+  return {
+    ...lineup,
+    starters: lineup.starters.map((slot) => {
+      if (slot.playerId !== playerId) return slot
+      const { duty: _, ...rest } = slot
+      return duty === roleOf(rest) ? rest : { ...rest, duty }
+    }),
+  }
+}
+
+/**
  * Swaps two players of the squad. Two starters trade places on the pitch; a
  * starter and anyone else trade the starter's slot for the other's place on the
  * bench or in the stands; two bench players swap order.
@@ -242,7 +257,7 @@ export function repairLineup(
     return index >= 0
   }
   for (const slot of kept) {
-    if (!close((s) => s.position === slot.position && s.role === roleOf(slot))) {
+    if (!close((s) => s.position === slot.position && s.role === slot.role)) {
       close((s) => s.position === slot.position)
     }
   }

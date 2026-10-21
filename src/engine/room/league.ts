@@ -1,5 +1,5 @@
 import { autoFormation, autoLineup, FORMATIONS, repairLineup } from '../match/lineup.ts'
-import { ROLES_BY_POSITION } from '../match/roles.ts'
+import { dutiesFor, ROLES_BY_POSITION } from '../match/roles.ts'
 import { simulateMatch, type MatchInput, type MatchReplay } from '../match/simulate.ts'
 import {
   POSITIONS,
@@ -80,7 +80,8 @@ export function checkLineup(state: RoomState, teamId: string, lineup: Lineup): s
   if (!['defensiva', 'normal', 'ofensiva'].includes(lineup.posture)) return 'Postura inválida.'
   const badSlot = (s: Lineup['starters'][number]) =>
     !POSITIONS.includes(s?.position) ||
-    (s.role !== undefined && !ROLES_BY_POSITION[s.position].includes(s.role))
+    (s.role !== undefined && !ROLES_BY_POSITION[s.position].includes(s.role)) ||
+    (s.duty !== undefined && !dutiesFor(s).includes(s.duty))
   if (lineup.starters.some(badSlot)) return 'Posição inválida.'
   const squad = new Set(state.squads[teamId])
   const ids = [...lineup.starters.map((s) => s.playerId), ...lineup.bench]

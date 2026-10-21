@@ -14,15 +14,29 @@ import { useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { cn } from '@/lib/utils'
 import {
   autoLineup,
   changeFormation,
   formationLines,
+  setDuty,
   swapPlayers,
 } from '../../engine/match/lineup.ts'
-import { roleOf as slotRole } from '../../engine/match/roles.ts'
-import { positionFit, sectorStrength, slotFit } from '../../engine/match/strength.ts'
+import { dutiesFor, ROLE_STYLES, roleOf as slotRole, sideOf } from '../../engine/match/roles.ts'
+import {
+  dutyFactor,
+  positionFit,
+  roleOverall,
+  sectorStrength,
+  slotFit,
+} from '../../engine/match/strength.ts'
 import type {
   Lineup,
   LineupSlot,
@@ -36,6 +50,8 @@ import {
   fitLevel,
   POSITION_NAMES,
   POSTURE_NAMES,
+  STYLE_NAMES,
+  TACTICAL_ROLE_EFFECTS,
   TACTICAL_ROLE_NAMES,
   type Role,
 } from '../format.ts'
@@ -139,6 +155,7 @@ export function LineupEditor(props: {
     player: players[s.playerId],
     position: s.position,
     role: s.role,
+    duty: s.duty,
   }))
   const sectors = sectorStrength(
     starters.map((s) => ({
@@ -158,6 +175,7 @@ export function LineupEditor(props: {
     change,
   }
   const dragged = dragging ? players[dragging] : undefined
+  const selectedSlot = selected ? editing.slotOf(selected) : undefined
 
   return (
     <DndContext
@@ -227,9 +245,18 @@ export function LineupEditor(props: {
           />
         )}
 
+        {selectedSlot && (
+          <DutyPicker
+            player={players[selectedSlot.playerId]}
+            slot={selectedSlot}
+            onPick={(duty) => props.onChange(setDuty(lineup, selectedSlot.playerId, duty))}
+          />
+        )}
+
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-xs text-muted-foreground">
             Arraste um jogador até outro, ou toque em um e depois no outro, para trocá-los de lugar.
+            Tocando num titular, dá para escolher a função dele, como falso 9 ou corta pra dentro.
             Cada vaga tem uma função, como volante ou ponta, e a cor dela mostra o encaixe:{' '}
             <span className={fitClass(1)}>bom</span>, <span className={fitClass(0.95)}>serve</span>{' '}
             ou <span className={fitClass(0.72)}>improvisado</span>.
@@ -308,6 +335,64 @@ function savePitchPreference(pitch: boolean) {
   }
 }
 
+/**
+ * The role picker for the starter picked on the pitch: any role of his part
+ * of the pitch, each with his level in it, and what the chosen one does.
+ */
+function DutyPicker(props: {
+  player: Player
+  slot: LineupSlot
+  onPick: (duty: TacticalRole) => void
+}) {
+  const { player, slot } = props
+  const role = slotRole(slot)
+  const suits = (ROLE_STYLES[role] ?? []).filter((style) => player.styles.includes(style))
+  const side = sideOf(slot.role)
+  const factor = dutyFactor(player, slot)
+  return (
+    <div className="flex flex-col gap-1.5 rounded-md border p-3">
+      <label className="flex flex-wrap items-center gap-2 text-sm">
+        <span>
+          Função de <span className="font-semibold">{player.name}</span>
+        </span>
+        <Select value={role} onValueChange={(value) => props.onPick(value as TacticalRole)}>
+          <SelectTrigger size="sm" className="min-w-44" aria-label="Função">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {dutiesFor(slot).map((duty) => (
+              <SelectItem key={duty} value={duty}>
+                <span className="w-8 font-bold">{duty}</span>
+                {TACTICAL_ROLE_NAMES[duty]}
+                <span className="text-xs text-muted-foreground tabular-nums">
+                  {Math.round(roleOverall(player, duty))}
+                </span>
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        {slot.duty && slot.role && (
+          <span className="text-xs text-muted-foreground">
+            (a vaga é de {TACTICAL_ROLE_NAMES[slot.role].toLowerCase()})
+          </span>
+        )}
+      </label>
+      <p className="text-xs text-muted-foreground">
+        {TACTICAL_ROLE_EFFECTS[role]}
+        {role === 'CPD' &&
+          side &&
+          ` Pé ${player.foot}, ${(side === 'direita') === (player.foot === 'esquerdo') ? 'rende mais' : 'rende menos'} pela ${side}.`}
+        {slot.duty &&
+          suits.length > 0 &&
+          ` Combina com ${suits.map((s) => STYLE_NAMES[s]).join(' e ')}.`}
+        {slot.duty &&
+          factor !== 1 &&
+          ` Rende ${factor > 1 ? '+' : ''}${Math.round((factor - 1) * 100)}% nessa função.`}
+      </p>
+    </div>
+  )
+}
+
 /** What each line of the XI is called, from the keeper forwards. */
 function lineName(line: readonly { position: Position; role?: TacticalRole }[]): string {
   const position = line[0].position
@@ -321,7 +406,7 @@ function lineName(line: readonly { position: Position; role?: TacticalRole }[]):
 
 /** The XI as chips by line, each one a drag handle and a drop target like on the pitch. */
 function StarterLines(props: {
-  lines: { player: Player; position: Position; role?: TacticalRole }[][]
+  lines: { player: Player; position: Position; role?: TacticalRole; duty?: TacticalRole }[][]
   unavailable: ReadonlySet<string>
   selected?: string
   onSelect: (playerId: string) => void

@@ -27,8 +27,11 @@ import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 import { gainStyles } from './player/attributes.ts'
 
+/** A career as stored before version 15, when a lineup slot had no picked role. */
+type V14Game = Omit<GameState, 'version'> & { version: 14 }
+
 /** A career as stored before version 14, when styles were drawn at random, not earned. */
-type V13Game = Omit<GameState, 'version'> & { version: 13 }
+type V13Game = Omit<V14Game, 'version'> & { version: 13 }
 
 /** A career as stored before version 13, without favorites or asking prices on bids. */
 type V12Game = Omit<V13Game, 'version' | 'favorites'> & { version: 12 }
@@ -335,19 +338,25 @@ function fromV12(saved: V12Game): V13Game {
 }
 
 /** Everyone keeps the styles he had and picks up the ones his attributes now earn. */
-function fromV13(saved: V13Game): GameState {
+function fromV13(saved: V13Game): V14Game {
   const { world } = saved
   const players = mapValues(world.players, (player) => ({
     ...player,
     styles: gainStyles(player.styles, player.attributes, player.position),
   }))
-  return { ...saved, version: SAVE_VERSION, world: { ...world, players } }
+  return { ...saved, version: 14, world: { ...world, players } }
+}
+
+/** Every slot plays its own role until the user picks another. */
+function fromV14(saved: V14Game): GameState {
+  return { ...saved, version: SAVE_VERSION }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
   saved:
     | GameState
+    | V14Game
     | V13Game
     | V12Game
     | V11Game
@@ -376,5 +385,6 @@ export function upgradeGame(
   const v11 = version < 11 ? fromV10(v10) : (saved as V11Game)
   const v12 = version < 12 ? fromV11(v11) : (saved as V12Game)
   const v13 = version < 13 ? fromV12(v12) : (saved as V13Game)
-  return fromV13(v13)
+  const v14 = version < 14 ? fromV13(v13) : (saved as V14Game)
+  return fromV14(v14)
 }

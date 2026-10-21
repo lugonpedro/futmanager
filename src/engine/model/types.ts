@@ -157,17 +157,50 @@ export type Posture = 'defensiva' | 'normal' | 'ofensiva'
  * What a slot of a formation asks of its player, on top of the position:
  * GOL goleiro, ZAG zagueiro, LAT lateral, ALA ala, VOL volante, MC
  * meio-campista, MEI meia ofensivo, ME/MD meia pela esquerda/direita, PE/PD
- * ponta esquerda/direita, CA centroavante, SA segundo atacante.
+ * ponta esquerda/direita, CA centroavante, SA segundo atacante. The rest are
+ * only ever chosen by the user, inspired by EA FC: GL goleiro-líbero, XER
+ * xerife, ZC zagueiro construtor, AO ala ofensivo, LI lateral invertido, REG
+ * regista, BB box-to-box, AS atacante sombra, CPD corta pra dentro, PIV pivô,
+ * F9 falso 9.
  */
 export type TacticalRole =
-  'GOL' | 'ZAG' | 'LAT' | 'ALA' | 'VOL' | 'MC' | 'MEI' | 'ME' | 'MD' | 'PE' | 'PD' | 'CA' | 'SA'
+  | 'GOL'
+  | 'ZAG'
+  | 'LAT'
+  | 'ALA'
+  | 'VOL'
+  | 'MC'
+  | 'MEI'
+  | 'ME'
+  | 'MD'
+  | 'PE'
+  | 'PD'
+  | 'CA'
+  | 'SA'
+  | 'GL'
+  | 'XER'
+  | 'ZC'
+  | 'AO'
+  | 'LI'
+  | 'REG'
+  | 'BB'
+  | 'AS'
+  | 'CPD'
+  | 'PIV'
+  | 'F9'
 
 /**
  * A starter, the position they play in this match (may differ from their
  * own) and the role of the slot. Saves from before roles have none; the
- * position's plain role stands in.
+ * position's plain role stands in. `duty` is the role the user picked for
+ * him instead; the slot keeps its role, which says where it stands.
  */
-export type LineupSlot = { playerId: string; position: Position; role?: TacticalRole }
+export type LineupSlot = {
+  playerId: string
+  position: Position
+  role?: TacticalRole
+  duty?: TacticalRole
+}
 
 export type Lineup = {
   formation: Formation

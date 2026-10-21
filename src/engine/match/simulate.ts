@@ -12,7 +12,7 @@ import type {
 } from '../model/types.ts'
 import { createRng, mixSeed, type Rng } from '../rng.ts'
 import { fillSlots, formationSlots, withRoles } from './lineup.ts'
-import { ROLE_SHOOTING, roleOf } from './roles.ts'
+import { DEFAULT_ROLE, ROLE_HOME, ROLE_SHOOTING, ROLE_TRAITS, roleOf } from './roles.ts'
 import { narrate, type GoalKind } from './narration.ts'
 import {
   finishingSkill,
@@ -107,7 +107,10 @@ export type Play = {
 export type OnPitch = {
   player: Player
   position: Position
+  /** The role of his slot, which says where he stands. */
   role: TacticalRole
+  /** The role the user picked for him, if not his slot's. */
+  duty?: TacticalRole
   energy: number
   form: number
   booked: boolean
@@ -168,7 +171,8 @@ function teamState(input: MatchTeamInput, match: MatchInput, side: MatchSide): T
     onPitch: withRoles(input.lineup).starters.map((slot) => ({
       player: match.players[slot.playerId],
       position: slot.position,
-      role: roleOf(slot),
+      role: slot.role ?? DEFAULT_ROLE[slot.position],
+      ...(slot.duty && slot.duty !== slot.role && { duty: slot.duty }),
       energy: match.condition?.[slot.playerId] ?? 100,
       form: match.form?.[slot.playerId] ?? 0,
       booked: false,
@@ -194,7 +198,12 @@ function weightedPick<T>(rng: Rng, items: readonly T[], weight: (item: T) => num
 }
 
 const SCORING_WEIGHT: Record<Position, number> = { G: 0, Z: 0.6, L: 0.6, M: 2.2, A: 5 }
-const scoringWeight = (p: OnPitch) => SCORING_WEIGHT[p.position] * (ROLE_SHOOTING[p.role] ?? 1)
+/** How often a player shoots; a picked role shoots as it does in its own position. */
+const scoringWeight = (p: OnPitch) =>
+  SCORING_WEIGHT[p.duty ? ROLE_HOME[p.duty] : p.position] * (ROLE_SHOOTING[roleOf(p)] ?? 1)
+/** What the picked roles on the pitch add up to for one of their traits. */
+const traitSum = (team: TeamState, trait: 'crosses' | 'pulls' | 'counter' | 'sweeper') =>
+  team.onPitch.reduce((sum, p) => sum + ((p.duty && ROLE_TRAITS[p.duty]?.[trait]) || 0), 0)
 /** Who gets on the end of a cross or a corner. */
 const AERIAL_WEIGHT: Record<Position, number> = { G: 0, Z: 2.2, L: 0.4, M: 0.8, A: 3 }
 const FOUL_WEIGHT: Record<Position, number> = { G: 0.2, Z: 1.6, L: 1.2, M: 1.2, A: 0.6 }
@@ -279,9 +288,11 @@ function paceEdge(team: TeamState, opponent: TeamState, possession: number): num
   const chasers = opponent.onPitch.filter((p) => p.position === 'Z' || p.position === 'L')
   if (runners.length === 0 || chasers.length === 0) return 0
   const quickness = (p: OnPitch) => (paceSkill(p.player) - p.player.overall) * shape(p)
-  const throughBall = Math.max(0, ...team.onPitch.map((p) => styleBonus(p.player, 'lancador')))
+  const throughBall =
+    Math.max(0, ...team.onPitch.map((p) => styleBonus(p.player, 'lancador'))) +
+    traitSum(team, 'counter')
   const keeper = opponent.onPitch.find((p) => p.position === 'G')
-  const sweeper = keeper ? styleBonus(keeper.player, 'saida') : 0
+  const sweeper = (keeper ? styleBonus(keeper.player, 'saida') : 0) + traitSum(opponent, 'sweeper')
   const gap =
     average(runners.map(quickness)) -
     average(chasers.map(quickness)) -
@@ -310,7 +321,7 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
   const opponent = state[side === 'home' ? 'away' : 'home']
   const ratio = edge(
     sectors(state, side).attack + paceEdge(team, opponent, possession),
-    sectors(state, side === 'home' ? 'away' : 'home').defense,
+    sectors(state, side === 'home' ? 'away' : 'home').defense - traitSum(team, 'pulls'),
   )
   if (rng.next() >= BALANCE.shotRate * ratio ** BALANCE.chancePower) return { end: 'none' }
   const quality = ratio ** BALANCE.qualityPower
@@ -318,17 +329,19 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
   const outfield = team.onPitch.filter((p) => p.position !== 'G')
   if (outfield.length === 0) return { end: 'none' }
   // Crosses from open play, and corners and free kicks from a set-piece taker.
-  const crossers = outfield.reduce(
-    (sum, p) => sum + styleBonus(p.player, 'cruzador') + 0.5 * styleBonus(p.player, 'cobrador'),
-    0,
-  )
-  const aerial = rng.next() < BALANCE.aerialShare * (1 + crossers / 20)
+  const crossers =
+    outfield.reduce(
+      (sum, p) => sum + styleBonus(p.player, 'cruzador') + 0.5 * styleBonus(p.player, 'cobrador'),
+      0,
+    ) + traitSum(team, 'crosses')
+  const aerial = rng.next() < BALANCE.aerialShare * Math.max(0.2, 1 + crossers / 20)
   const shooter = aerial
     ? weightedPick(
         rng,
         outfield,
         (p) =>
           AERIAL_WEIGHT[p.position] *
+          ((p.duty && ROLE_TRAITS[p.duty]?.aerial) || 1) *
           (1 + 0.25 * styleLevel(p.player, 'cabeceador')) *
           Math.max(1, headingSkill(p.player)) *
           shape(p),
@@ -452,6 +465,7 @@ export function substitute(
     player: coming,
     position: leaving.position,
     role: leaving.role,
+    ...(leaving.duty && { duty: leaving.duty }),
     energy: state.condition[inId] ?? 100,
     form: state.form[inId] ?? 0,
     booked: false,
@@ -479,6 +493,7 @@ export function swapPositions(state: MatchState, side: MatchSide, aId: string, b
   const [a, b] = [team.onPitch[i], team.onPitch[j]]
   ;[a.position, b.position] = [b.position, a.position]
   ;[a.role, b.role] = [b.role, a.role]
+  ;[a.duty, b.duty] = [b.duty, a.duty]
   team.onPitch[i] = b
   team.onPitch[j] = a
   team.played[aId] = a.position
@@ -514,6 +529,7 @@ export function setFormation(state: MatchState, side: MatchSide, formation: Form
     if (slot) {
       p.position = slot.position
       p.role = roleOf(slot)
+      delete p.duty
     }
   }
 }
@@ -555,10 +571,12 @@ function sendOff(state: MatchState, side: MatchSide, offender: OnPitch) {
     const weakest = outfield.reduce((a, b) => (a.player.overall <= b.player.overall ? a : b))
     weakest.position = 'G'
     weakest.role = 'GOL'
+    delete weakest.duty
     substitute(state, side, weakest.player.id, keeper.id)
   } else if (outfield.length > 0) {
     outfield[0].position = 'G'
     outfield[0].role = 'GOL'
+    delete outfield[0].duty
   }
 }
 

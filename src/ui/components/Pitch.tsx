@@ -10,6 +10,7 @@ export type PitchSlot = {
   player: Player
   position: Position
   role?: TacticalRole
+  duty?: TacticalRole
   energy?: number
   booked?: boolean
 }

@@ -10,11 +10,12 @@ import {
   FORMATIONS,
   formationLines,
   repairLineup,
+  setDuty,
   swapPlayers,
   withRoles,
 } from './lineup.ts'
-import { FORMATION_LINES } from './roles.ts'
-import { roleOverall } from './strength.ts'
+import { dutiesFor, DUTIES_BY_POSITION, FORMATION_LINES, roleOf } from './roles.ts'
+import { dutyFactor, roleOverall, sectorStrength } from './strength.ts'
 
 const world = generateWorld(2027)
 const squad = world.clubs.C1.playerIds.map((id) => world.players[id])
@@ -237,5 +238,69 @@ describe('roles', () => {
     const repaired = repairLineup(lineup, remaining)
     expect(repaired.starters.filter((s) => s.role === 'VOL')).toHaveLength(2)
     expect(repaired.starters.filter((s) => s.role === 'MEI')).toHaveLength(1)
+  })
+})
+
+describe('picked roles', () => {
+  const lineup = autoLineup(squad, '4-3-3')
+  const forward = lineup.starters.find((s) => s.role === 'CA')!
+
+  it("play the picked role in the slot, and drop it when the pick is the slot's own", () => {
+    const picked = setDuty(lineup, forward.playerId, 'F9')
+    const slot = picked.starters.find((s) => s.playerId === forward.playerId)!
+    expect(slot.role).toBe('CA')
+    expect(roleOf(slot)).toBe('F9')
+    const back = setDuty(picked, forward.playerId, 'CA')
+    expect(back.starters.find((s) => s.playerId === forward.playerId)).not.toHaveProperty('duty')
+  })
+
+  it('stay with the slot when players swap', () => {
+    const picked = setDuty(lineup, forward.playerId, 'PIV')
+    const other = picked.starters.find((s) => s.role === 'PE')!
+    const swapped = swapPlayers(picked, forward.playerId, other.playerId)
+    expect(swapped.starters.find((s) => s.role === 'CA')).toMatchObject({
+      playerId: other.playerId,
+      duty: 'PIV',
+    })
+  })
+
+  it('survive a repair of the lineup', () => {
+    const picked = setDuty(lineup, forward.playerId, 'F9')
+    const repaired = repairLineup(picked, squad)
+    expect(repaired.starters.find((s) => s.playerId === forward.playerId)?.duty).toBe('F9')
+    expect(repaired.starters.map((s) => s.role).sort()).toEqual(
+      lineup.starters.map((s) => s.role).sort(),
+    )
+  })
+
+  it('offer a slot the roles of its part of the pitch, on its own wing only', () => {
+    expect(dutiesFor({ position: 'A', role: 'PE' })).toContain('CPD')
+    expect(dutiesFor({ position: 'A', role: 'PE' })).not.toContain('PD')
+    expect(dutiesFor({ position: 'A', role: 'CA' })).not.toContain('PE')
+    expect(dutiesFor({ position: 'Z', role: 'ZAG' })).toEqual(
+      expect.arrayContaining(['XER', 'ZC', 'AO']),
+    )
+    for (const roles of Object.values(DUTIES_BY_POSITION)) {
+      for (const role of roles) expect(roleOverall(squad[0], role)).toBeGreaterThan(0)
+    }
+  })
+
+  it('trade one part of the pitch for another', () => {
+    const sectors = (next: typeof lineup) =>
+      sectorStrength(
+        next.starters.map((s) => ({ ...s, player: world.players[s.playerId], energy: 100 })),
+        'normal',
+      )
+    const before = sectors(lineup)
+    const falseNine = sectors(setDuty(lineup, forward.playerId, 'F9'))
+    expect(falseNine.midfield).toBeGreaterThan(before.midfield)
+    expect(falseNine.attack).toBeLessThan(before.attack)
+  })
+
+  it('make a corta pra dentro better on the wing of his weaker foot', () => {
+    const player = { ...world.players[forward.playerId], foot: 'esquerdo' as const }
+    expect(dutyFactor(player, { role: 'PD', duty: 'CPD' })).toBeGreaterThan(1)
+    expect(dutyFactor(player, { role: 'PE', duty: 'CPD' })).toBeLessThan(1)
+    expect(dutyFactor(player, { role: 'PE' })).toBe(1)
   })
 })

@@ -1,4 +1,4 @@
-import type { Formation, Position, TacticalRole } from '../model/types.ts'
+import type { Formation, PlayStyle, Position, TacticalRole } from '../model/types.ts'
 import { OVERALL_WEIGHTS, type AnyFace } from '../player/attributes.ts'
 
 /** A slot of a formation: the position it counts as and what it asks of its player. */
@@ -13,8 +13,12 @@ export const DEFAULT_ROLE: Record<Position, TacticalRole> = {
   A: 'CA',
 }
 
-export const roleOf = (slot: { position: Position; role?: TacticalRole }): TacticalRole =>
-  slot.role ?? DEFAULT_ROLE[slot.position]
+/** The role a starter plays: the one the user picked, or else his slot's. */
+export const roleOf = (slot: {
+  position: Position
+  role?: TacticalRole
+  duty?: TacticalRole
+}): TacticalRole => slot.duty ?? slot.role ?? DEFAULT_ROLE[slot.position]
 
 /**
  * How much each face counts towards a player's level in a role. The plain
@@ -35,6 +39,17 @@ export const ROLE_WEIGHTS: Record<TacticalRole, Partial<Record<AnyFace, number>>
   PD: { RIT: 0.3, DRI: 0.35, FIN: 0.2, PAS: 0.1, FIS: 0.05 },
   CA: OVERALL_WEIGHTS.A,
   SA: { FIN: 0.35, DRI: 0.25, PAS: 0.2, RIT: 0.15, FIS: 0.05 },
+  GL: { REF: 0.2, POS: 0.2, ELA: 0.15, MAO: 0.15, REP: 0.15, VEL: 0.15 },
+  XER: { DEF: 0.6, FIS: 0.35, RIT: 0.05 },
+  ZC: { DEF: 0.45, PAS: 0.3, FIS: 0.15, RIT: 0.1 },
+  AO: { RIT: 0.3, PAS: 0.25, DRI: 0.2, DEF: 0.15, FIS: 0.1 },
+  LI: { PAS: 0.35, DEF: 0.3, DRI: 0.15, RIT: 0.1, FIS: 0.1 },
+  REG: { PAS: 0.6, DRI: 0.15, DEF: 0.15, FIS: 0.1 },
+  BB: { FIS: 0.3, PAS: 0.25, DEF: 0.2, DRI: 0.1, FIN: 0.1, RIT: 0.05 },
+  AS: { FIN: 0.4, DRI: 0.25, RIT: 0.2, PAS: 0.1, FIS: 0.05 },
+  CPD: { DRI: 0.35, FIN: 0.3, RIT: 0.25, PAS: 0.1 },
+  PIV: { FIS: 0.4, FIN: 0.35, PAS: 0.1, DRI: 0.1, RIT: 0.05 },
+  F9: { PAS: 0.35, DRI: 0.3, FIN: 0.25, RIT: 0.1 },
 }
 
 /**
@@ -59,6 +74,17 @@ export const ROLE_SECTORS: Record<
   PD: { defense: 0, midfield: 0.35, attack: 1 },
   CA: { defense: 0, midfield: 0.3, attack: 1 },
   SA: { defense: 0, midfield: 0.45, attack: 0.95 },
+  GL: { defense: 1.5, midfield: 0, attack: 0 },
+  XER: { defense: 1.1, midfield: 0.1, attack: 0.05 },
+  ZC: { defense: 0.9, midfield: 0.4, attack: 0.1 },
+  AO: { defense: 0.5, midfield: 0.5, attack: 0.45 },
+  LI: { defense: 0.6, midfield: 0.8, attack: 0.2 },
+  REG: { defense: 0.3, midfield: 1.1, attack: 0.4 },
+  BB: { defense: 0.35, midfield: 0.85, attack: 0.6 },
+  AS: { defense: 0, midfield: 0.5, attack: 0.9 },
+  CPD: { defense: 0, midfield: 0.3, attack: 1.05 },
+  PIV: { defense: 0.05, midfield: 0.4, attack: 0.95 },
+  F9: { defense: 0, midfield: 0.75, attack: 0.75 },
 }
 
 /** How often a role ends up shooting, against the plain role of its position. */
@@ -71,6 +97,112 @@ export const ROLE_SHOOTING: Partial<Record<TacticalRole, number>> = {
   PE: 0.85,
   PD: 0.85,
   SA: 0.85,
+  XER: 0.7,
+  AO: 1.6,
+  LI: 1.2,
+  REG: 0.45,
+  BB: 1.2,
+  AS: 1.9,
+  CPD: 1,
+  PIV: 0.95,
+  F9: 0.6,
+}
+
+/** The position each role belongs to, which its shooting above is measured against. */
+export const ROLE_HOME: Record<TacticalRole, Position> = {
+  GOL: 'G',
+  GL: 'G',
+  ZAG: 'Z',
+  XER: 'Z',
+  ZC: 'Z',
+  LAT: 'L',
+  AO: 'L',
+  LI: 'L',
+  ALA: 'M',
+  VOL: 'M',
+  REG: 'M',
+  MC: 'M',
+  BB: 'M',
+  MEI: 'M',
+  AS: 'M',
+  ME: 'M',
+  MD: 'M',
+  PE: 'A',
+  PD: 'A',
+  CPD: 'A',
+  CA: 'A',
+  PIV: 'A',
+  F9: 'A',
+  SA: 'A',
+}
+
+/**
+ * What a picked role does beyond its sectors and shooting: `crosses` adds to
+ * the side's balls into the box (in style points), `aerial` scales how often
+ * he is the one on the end of them, `pulls` takes points off the defence he
+ * attacks, `counter` adds to the side's counter-attacks and `sweeper` cuts
+ * the other side's. `side` roles stand on one wing: a CPD is better on the
+ * wing of his weaker foot, cutting in onto the stronger one.
+ */
+export const ROLE_TRAITS: Partial<
+  Record<
+    TacticalRole,
+    { crosses?: number; aerial?: number; pulls?: number; counter?: number; sweeper?: number }
+  >
+> = {
+  GL: { sweeper: 1.5 },
+  AO: { crosses: 3 },
+  LI: { crosses: -2 },
+  REG: { counter: 1.5 },
+  CPD: { crosses: -3 },
+  PIV: { aerial: 1.6 },
+  F9: { aerial: 0.4, pulls: 1.5 },
+}
+
+/** Styles that suit a picked role: each level of them makes him a little better in it. */
+export const ROLE_STYLES: Partial<Record<TacticalRole, PlayStyle[]>> = {
+  GL: ['saida'],
+  XER: ['muralha', 'trator'],
+  ZC: ['lancador', 'passador'],
+  AO: ['cruzador', 'incansavel'],
+  LI: ['passador'],
+  REG: ['lancador', 'armador'],
+  BB: ['incansavel', 'trator'],
+  AS: ['finalizador', 'chutador'],
+  CPD: ['chutador', 'driblador'],
+  PIV: ['trator', 'cabeceador'],
+  F9: ['passador', 'driblador'],
+}
+
+/** The wing a slot's role stands on, for the roles that stand on one. */
+export function sideOf(role: TacticalRole | undefined): 'esquerda' | 'direita' | undefined {
+  if (role === 'PE' || role === 'ME') return 'esquerda'
+  if (role === 'PD' || role === 'MD') return 'direita'
+  return undefined
+}
+
+/**
+ * The roles the user may pick for a slot of each position: any of its part of
+ * the pitch (goal, defence, midfield or attack), the plain one first.
+ */
+export const DUTIES_BY_POSITION: Record<Position, TacticalRole[]> = {
+  G: ['GOL', 'GL'],
+  Z: ['ZAG', 'XER', 'ZC', 'LAT', 'AO', 'LI'],
+  L: ['LAT', 'AO', 'LI', 'ZAG', 'XER', 'ZC'],
+  M: ['MC', 'VOL', 'REG', 'BB', 'MEI', 'AS', 'ME', 'MD', 'ALA', 'CPD'],
+  A: ['CA', 'PIV', 'F9', 'SA', 'AS', 'PE', 'PD', 'CPD'],
+}
+
+/**
+ * The roles on offer for a slot: those of its position, without the ones
+ * that stand on the other wing, or on a wing at all when the slot is central.
+ */
+export function dutiesFor(slot: { position: Position; role?: TacticalRole }): TacticalRole[] {
+  const side = sideOf(slot.role)
+  return DUTIES_BY_POSITION[slot.position].filter((duty) => {
+    const dutySide = sideOf(duty)
+    return dutySide === undefined || dutySide === side
+  })
 }
 
 const g = { position: 'G', role: 'GOL' } as const
