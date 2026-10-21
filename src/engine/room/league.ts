@@ -1,6 +1,14 @@
-import { autoFormation, autoLineup, repairLineup } from '../match/lineup.ts'
+import { autoFormation, autoLineup, FORMATIONS, repairLineup } from '../match/lineup.ts'
+import { ROLES_BY_POSITION } from '../match/roles.ts'
 import { simulateMatch, type MatchInput, type MatchReplay } from '../match/simulate.ts'
-import type { Club, Fixture, Lineup, MatchResult, Player } from '../model/types.ts'
+import {
+  POSITIONS,
+  type Club,
+  type Fixture,
+  type Lineup,
+  type MatchResult,
+  type Player,
+} from '../model/types.ts'
 import { createRng, mixSeed } from '../rng.ts'
 import { addDays, type GameDate } from '../season/calendar.ts'
 import { applyDiscipline } from '../season/discipline.ts'
@@ -66,6 +74,14 @@ export function roundLineup(state: RoomState, teamId: string): Lineup {
 /** Why a person can't save this lineup for the next round, if they can't. */
 export function checkLineup(state: RoomState, teamId: string, lineup: Lineup): string | undefined {
   if (roomPhase(state) !== 'liga') return 'A liga não está em andamento.'
+  // A lineup may come from anyone's browser, so its shape is checked too.
+  if (!Array.isArray(lineup?.starters) || !Array.isArray(lineup.bench)) return 'Escalação inválida.'
+  if (!Object.hasOwn(FORMATIONS, lineup.formation)) return 'Formação inválida.'
+  if (!['defensiva', 'normal', 'ofensiva'].includes(lineup.posture)) return 'Postura inválida.'
+  const badSlot = (s: Lineup['starters'][number]) =>
+    !POSITIONS.includes(s?.position) ||
+    (s.role !== undefined && !ROLES_BY_POSITION[s.position].includes(s.role))
+  if (lineup.starters.some(badSlot)) return 'Posição inválida.'
   const squad = new Set(state.squads[teamId])
   const ids = [...lineup.starters.map((s) => s.playerId), ...lineup.bench]
   if (lineup.starters.length !== 11) return 'A escalação precisa de 11 titulares.'

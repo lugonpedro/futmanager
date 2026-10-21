@@ -29,16 +29,16 @@ import { MatchStats } from './MatchStats.tsx'
 const VIEWS: MatchView[] = ['Campo', 'Só texto']
 
 /**
- * A match of the official season played again from its replay, minute by
- * minute, exactly as the server played it. At the final whistle it shows
- * what everyone scored in the fantasy game.
+ * A match the server played, played again from its replay, minute by minute,
+ * exactly as it went. Given fantasy points, it shows what everyone scored at
+ * the final whistle; otherwise the ratings stay.
  */
 export function MatchReplay(props: {
   replay: Replay
   title: string
-  points: Readonly<Record<string, number>>
+  points?: Readonly<Record<string, number>>
   /** The player's own picks in the round, marked in the points list. */
-  mine: ReadonlySet<string>
+  mine?: ReadonlySet<string>
   onClose: () => void
 }) {
   const [run, setRun] = useState(0)
@@ -48,8 +48,8 @@ export function MatchReplay(props: {
 function Playback(props: {
   replay: Replay
   title: string
-  points: Readonly<Record<string, number>>
-  mine: ReadonlySet<string>
+  points?: Readonly<Record<string, number>>
+  mine?: ReadonlySet<string>
   onClose: () => void
   onRestart: () => void
 }) {
@@ -162,12 +162,12 @@ function Playback(props: {
           names={{ home: state.home.club.shortName, away: state.away.club.shortName }}
           kits={kits}
         />
-        {finished ? (
+        {finished && props.points ? (
           <MatchPoints
             played={{ home: state.home.played, away: state.away.played }}
             names={props.replay.input.players}
             points={props.points}
-            mine={props.mine}
+            mine={props.mine ?? new Set()}
             clubs={{ home: state.home.club.shortName, away: state.away.club.shortName }}
             kits={kits}
           />

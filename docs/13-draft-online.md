@@ -2,7 +2,7 @@
 
 Pedido de 20/10/2026. Trocar a fantasia online de [05-online.md](05-online.md) por um modo em que um grupo de amigos cria uma sala, escolhe os elencos num draft (cada futebolista só pode ir para um time) e disputa uma liga entre esses times, com as partidas simuladas pelo nosso motor. Conferido no código da `main` no commit `6cadfa0` (PR #53).
 
-Andamento: o passo P (passe por tempo) entrou no PR #58 o D0 no PR #60 e o D1 (regras da sala em `src/engine/room/` e `npm run room`) no PR #63 e o D2 (sala de espera, ainda sem link na tela inicial) no PR #64 e o D3 (draft ao vivo) no PR #65, todos de 20/10/2026. O PR seguinte traz uma liga mínima, pedida para testar com os amigos antes do D4: o dono começa a liga e joga cada rodada com um botão, todos os times escalam no automático, e a tela mostra tabela, resultados, próxima rodada e artilharia. O D4 completa com a escalação de cada um, o "Pronto", o prazo e os replays. No D3, o mundo de onde a sala escolhe passou a ter semente fixa por pacote: um jogador é o mesmo em toda sala, e a fila de favoritos pode ser montada antes do draft. O resto ainda é plano.
+Andamento: o passo P (passe por tempo) entrou no PR #58 o D0 no PR #60 e o D1 (regras da sala em `src/engine/room/` e `npm run room`) no PR #63 e o D2 (sala de espera, ainda sem link na tela inicial) no PR #64 e o D3 (draft ao vivo) no PR #65, todos de 20/10/2026. A liga mínima entrou no PR #66, pedida para testar com os amigos antes do D4. O D4 vem no PR seguinte: cada um escala o próprio time e marca "Pronto", a rodada é jogada assim que todos marcam, o dono pode jogar sem esperar depois do prazo de segurança (e qualquer pessoa da sala depois do dobro do prazo, para um dono sumido não travar a liga), cada jogo pode ser assistido, e o fim da liga mostra campeão, artilheiro e melhor jogador, com o botão "Revanche". No D3, o mundo de onde a sala escolhe passou a ter semente fixa por pacote: um jogador é o mesmo em toda sala, e a fila de favoritos pode ser montada antes do draft. O resto ainda é plano.
 
 ## Resumo
 
@@ -151,11 +151,11 @@ A restrição `unique (room_id, player_id)` em `room_picks` é o que impede dois
 
 ### Rodadas
 
-- **Pronto** é uma função do Postgres, `room_ready(sala, pronto)`. Quando ela vê que todas as pessoas estão prontas, marca a rodada como "jogando" e chama a função `room-round` (Deno) pelo `pg_net`, do mesmo jeito que o `pg_cron` chama a `fantasy-round` hoje. O dono, passado o prazo de segurança, chama `room_force_round(sala)`, que faz o mesmo.
-- A `room-round` joga a rodada e a publica. Ela confere a situação da sala antes, então duas chamadas para a mesma rodada nunca jogam duas vezes. Um `pg_cron` a cada 5 minutos só repete as rodadas que ficaram em "jogando" por mais de 2 minutos (uma chamada que falhou).
+- **Pronto** é uma função do Postgres, `room_ready(sala, pronto)`, que guarda a rodada para a qual cada um marcou (assim nada precisa ser desfeito quando a rodada é jogada). Quando ela vê que todas as pessoas estão prontas, chama a função `room-round` (Deno) pelo `pg_net`, com o número da rodada, do mesmo jeito que o `pg_cron` chama a `room-draft`. Passado o prazo de segurança, o dono chama a `room-round` direto, e ela confere com `can_play_round(sala)`.
+- A `room-round` joga a rodada e a publica. A linha da rodada é gravada antes do estado, com a sala e a rodada como chave, então duas chamadas para a mesma rodada nunca jogam duas vezes. Um `pg_cron` a cada minuto repete a chamada das salas em que todos estão prontos e a última tentativa tem mais de 2 minutos (uma chamada que falhou).
 - Cada rodada recebe uma semente nova, pelo mesmo motivo do O4: o replay publicado não pode entregar o futuro.
 - Antes de jogar, a função resolve os pedidos de livres na ordem de preferência e cancela as propostas de troca que ninguém respondeu.
-- **Escalar** passa pela função `room-lineup`, que confere a escalação com as regras do motor e com o prazo, como a `fantasy-team` faz hoje.
+- **Escalar** passa pela função do Postgres `save_room_lineup(sala, escalação)`, que confere o formato e se todos são do elenco. Na hora de jogar, a `room-round` confere de novo com as regras do motor (`checkLineup`) e, se a escalação não servir, o time joga com a da última rodada. Depois de cada rodada, a `room-round` grava em `room_squads` o que cada time precisa para escalar a próxima: elenco, energia, forma e quem está fora.
 - **Trocas e dispensas**: funções do Postgres (`room_propose_trade`, `room_answer_trade`, `room_release`, `room_claim`), que conferem o elenco e o prazo.
 - Medida de tamanho: a fantasia joga um dia do mundo inteiro (40 clubes, copa e Série B) em cerca de 0,1 s; uma rodada de sala com 8 times é bem menos. Cada rodada guarda uns 20 KB de replays com 4 jogos.
 

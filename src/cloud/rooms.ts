@@ -27,6 +27,10 @@ export type Room = {
     /** When the clock of the pick under way runs out; none once the draft is over. */
     deadline?: Date
   }
+  /** Set while the league is on: the round people are setting their teams for. */
+  round?: { no: number; openedAt: Date }
+  /** The room "Revanche" opened, once someone pressed it. */
+  rematchId?: number
 }
 
 /** A person in a room, with their team. */
@@ -71,6 +75,9 @@ const MESSAGES: Record<string, string> = {
   escolhido: 'Esse jogador já foi escolhido.',
   goleiros: 'Faltam goleiros: o elenco precisa de 2.',
   fila: 'A fila tem no máximo 200 jogadores.',
+  liga: 'A liga não está em andamento.',
+  escalacao: 'Essa escalação não vale. Confira e tente de novo.',
+  'nao-acabou': 'A liga ainda não acabou.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */
@@ -107,11 +114,14 @@ export type RoomRow = {
   squad_shape: SquadShape | null
   pick_no: number
   pick_deadline: string | null
+  round_no: number | null
+  round_opened_at: string | null
+  rematch_id: number | null
   room_members: { count: number }[]
 }
 
 const ROOM_COLUMNS =
-  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, room_members(count)'
+  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, round_no, round_opened_at, rematch_id, room_members(count)'
 
 /** A room as the database keeps it, turned into the app's shape. */
 export function toRoom(row: RoomRow): Room {
@@ -145,6 +155,11 @@ export function toRoom(row: RoomRow): Room {
             deadline: row.pick_deadline ? new Date(row.pick_deadline) : undefined,
           }
         : undefined,
+    round:
+      row.round_no !== null && row.round_opened_at
+        ? { no: row.round_no, openedAt: new Date(row.round_opened_at) }
+        : undefined,
+    rematchId: row.rematch_id ?? undefined,
   }
 }
 
