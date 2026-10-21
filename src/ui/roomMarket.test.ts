@@ -18,7 +18,6 @@ const row: RoomRow = {
   legs: 2,
   injuries: 'normais',
   trades: 'ate-dois-tercos',
-  draft_at: '2026-10-22T00:00:00Z',
   created_at: '2026-10-20T00:00:00Z',
   pick_order: null,
   squad_shape: null,

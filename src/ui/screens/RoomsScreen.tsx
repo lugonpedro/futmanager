@@ -16,12 +16,8 @@ import { Pager } from '../components/Pager.tsx'
 import { RoomBasicsFields, RoomPage, Note, TeamFields } from '../components/RoomParts.tsx'
 import {
   checkRoomDraft,
-  formatDraftAt,
-  fromLocalInput,
   readRoomInviteCode,
   STATUS_LABELS,
-  suggestedDraftAt,
-  toLocalInput,
   type RoomOptionsDraft,
 } from '../room.ts'
 import { signInLink } from '../signIn.ts'
@@ -127,7 +123,6 @@ function RoomList(props: { rooms: Room[] }) {
               <span className="truncate font-medium">{room.name}</span>
               <span className="truncate text-xs text-muted-foreground">
                 {STATUS_LABELS[room.status]}
-                {room.status === 'espera' && `, draft ${formatDraftAt(room.draftAt)}`}
               </span>
             </span>
             <span className="text-xs text-muted-foreground">
@@ -210,7 +205,6 @@ function NewRoom() {
   const [draft, setDraft] = useState<RoomOptionsDraft>(() => ({
     name: '',
     options: DEFAULT_ROOM_OPTIONS,
-    draftAt: toLocalInput(suggestedDraftAt(new Date())),
   }))
   const [busy, setBusy] = useState(false)
   // Creating needs a running pass; unknown until the server answers, or if it can't.
@@ -228,14 +222,14 @@ function NewRoom() {
 
   const create = async (event: FormEvent) => {
     event.preventDefault()
-    const problem = checkRoomDraft(draft, new Date()) ?? checkTeamIdentity(team)
+    const problem = checkRoomDraft(draft) ?? checkTeamIdentity(team)
     if (problem) {
       toast.error(problem)
       return
     }
     setBusy(true)
     try {
-      const id = await createRoom(draft.name, draft.options, fromLocalInput(draft.draftAt)!, team)
+      const id = await createRoom(draft.name, draft.options, team)
       navigate(`/sala/${id}`)
     } catch (error) {
       if (messageOf(error) === PASS_NEEDED) {

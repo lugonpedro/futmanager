@@ -27,7 +27,6 @@ const room = (pickNo: number, options = DEFAULT_ROOM_OPTIONS): Room => ({
   status: 'draft',
   inviteCode: 'ABCD2345',
   options,
-  draftAt: new Date(),
   createdAt: new Date(),
   members: 1,
   draft: { order: [2, 0, 1, 3], shape: { G: 2, Z: 1, L: 0, M: 0, A: 1 }, pickNo },

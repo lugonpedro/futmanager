@@ -17,7 +17,6 @@ const row: RoomRow = {
   legs: 2,
   injuries: 'normais',
   trades: 'temporada',
-  draft_at: '2026-10-22T00:00:00+00:00',
   created_at: '2026-10-20T12:00:00+00:00',
   pick_order: null,
   squad_shape: null,
@@ -34,7 +33,6 @@ describe('toRoom', () => {
     const room = toRoom(row)
     expect(room.options).toEqual(DEFAULT_ROOM_OPTIONS)
     expect(room.members).toBe(3)
-    expect(room.draftAt.toISOString()).toBe('2026-10-22T00:00:00.000Z')
   })
 
   it('has a column for every option', () => {

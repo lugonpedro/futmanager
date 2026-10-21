@@ -142,7 +142,7 @@ function Option(props: { label: string; hint?: string; children: ReactNode }) {
   )
 }
 
-/** What creating a room asks: its name, when the draft is and how many teams; the rest starts as the defaults. */
+/** What creating a room asks: its name and how many teams; the rest starts as the defaults. */
 export function RoomBasicsFields(props: {
   value: RoomOptionsDraft
   onChange: (value: RoomOptionsDraft) => void
@@ -157,15 +157,6 @@ export function RoomBasicsFields(props: {
           maxLength={40}
           onChange={(e) => props.onChange({ ...value, name: e.target.value })}
           placeholder="Liga dos amigos"
-        />
-      </Field>
-      <Field label="Data e hora do draft" htmlFor="sala-draft">
-        <Input
-          id="sala-draft"
-          type="datetime-local"
-          value={value.draftAt}
-          onChange={(e) => props.onChange({ ...value, draftAt: e.target.value })}
-          className="w-fit"
         />
       </Field>
       <TeamsOption

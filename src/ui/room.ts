@@ -65,61 +65,15 @@ export function describeOptions(options: RoomOptions): string[] {
   ]
 }
 
-const pad = (n: number) => String(n).padStart(2, '0')
-
-/** A moment as a `datetime-local` input shows it, in the player's time zone. */
-export function toLocalInput(date: Date): string {
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`
-}
-
-/** The moment a `datetime-local` input holds, or undefined while it is incomplete. */
-export function fromLocalInput(value: string): Date | undefined {
-  const date = new Date(value)
-  return value && !Number.isNaN(date.getTime()) ? date : undefined
-}
-
-/** Longest wait for the draft, as the database allows it. */
-export const MAX_DRAFT_DAYS = 7
-
-/** The draft time suggested for a new room: tomorrow at 21h. */
-export function suggestedDraftAt(now: Date): Date {
-  const date = new Date(now)
-  date.setDate(date.getDate() + 1)
-  date.setHours(21, 0, 0, 0)
-  return date
-}
-
-/** Why the draft can't be at that time, if it can't: from now to a week after `from`. */
-export function checkDraftAt(date: Date | undefined, now: Date, from = now): string | undefined {
-  if (!date) return 'Escolha a data e a hora do draft.'
-  if (date.getTime() < now.getTime()) return 'O draft precisa ser marcado para depois de agora.'
-  if (date.getTime() > from.getTime() + MAX_DRAFT_DAYS * 24 * 3600 * 1000)
-    return `O draft precisa ser marcado para daqui a no máximo ${MAX_DRAFT_DAYS} dias.`
-  return undefined
-}
-
-const draftTime = new Intl.DateTimeFormat('pt-BR', {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  hour: '2-digit',
-  minute: '2-digit',
-})
-
-/** When the draft is, like "quarta-feira, 21 de outubro às 21:00". */
-export const formatDraftAt = (date: Date) => draftTime.format(date)
-
 /** What the room form holds while the owner fills it in. */
 export type RoomOptionsDraft = {
   name: string
   options: RoomOptions
-  /** As the `datetime-local` input holds it. */
-  draftAt: string
 }
 
 /** Why the room can't be saved as filled in, if it can't. */
-export function checkRoomDraft(draft: RoomOptionsDraft, now: Date, from = now): string | undefined {
+export function checkRoomDraft(draft: RoomOptionsDraft): string | undefined {
   const name = draft.name.trim()
   if (name.length < 3 || name.length > 40) return 'O nome da sala precisa ter de 3 a 40 letras.'
-  return checkDraftAt(fromLocalInput(draft.draftAt), now, from)
+  return undefined
 }

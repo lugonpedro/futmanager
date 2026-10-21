@@ -268,6 +268,8 @@ export function watchRoom(
     round?: () => void
     /** Squads, offers or the market's feed changed. */
     market?: () => void
+    /** Someone joined, left, changed their team or marked "Pronto" in the waiting room. */
+    members?: () => void
   },
 ): () => void {
   const db = client()
@@ -304,6 +306,13 @@ export function watchRoom(
       { event: 'INSERT', schema: 'public', table: 'room_rounds', filter: `room_id=eq.${room}` },
       () => on.round?.(),
     )
+  if (on.members) {
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'room_members', filter: `room_id=eq.${room}` },
+      () => on.members?.(),
+    )
+  }
   if (on.market) {
     for (const table of ['room_rosters', 'room_trades', 'room_feed', 'room_squads']) {
       channel.on(

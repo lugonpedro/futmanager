@@ -14,7 +14,6 @@ export type Room = {
   status: RoomStatus
   inviteCode: string
   options: RoomOptions
-  draftAt: Date
   createdAt: Date
   members: number
   /** Set once the draft starts. */
@@ -37,6 +36,8 @@ export type Room = {
 export type RoomMember = TeamIdentity & {
   userId: string
   nickname?: string
+  /** Marked "Pronto" in the waiting room. */
+  ready: boolean
 }
 
 /** What the invite page shows before joining. */
@@ -47,7 +48,6 @@ export type RoomInvite = {
   members: number
   teams: number
   status: RoomStatus
-  draftAt: Date
   joined: boolean
 }
 
@@ -123,7 +123,6 @@ export type RoomRow = {
   legs: number
   injuries: string
   trades: string
-  draft_at: string
   created_at: string
   pick_order: number[] | null
   squad_shape: SquadShape | null
@@ -136,7 +135,7 @@ export type RoomRow = {
 }
 
 const ROOM_COLUMNS =
-  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, round_no, round_opened_at, rematch_id, room_members(count)'
+  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, injuries, trades, created_at, pick_order, squad_shape, pick_no, pick_deadline, round_no, round_opened_at, rematch_id, room_members(count)'
 
 /** A room as the database keeps it, turned into the app's shape. */
 export function toRoom(row: RoomRow): Room {
@@ -157,7 +156,6 @@ export function toRoom(row: RoomRow): Room {
       injuries: row.injuries as RoomOptions['injuries'],
       trades: row.trades as RoomOptions['trades'],
     },
-    draftAt: new Date(row.draft_at),
     createdAt: new Date(row.created_at),
     members: row.room_members[0]?.count ?? 0,
     draft:
@@ -185,9 +183,12 @@ const teamArgs = (team: TeamIdentity) => ({
   color_secondary: team.colors.secondary,
 })
 
-/** The rooms the player is in, the ones still going first, then by draft time. */
+/** The rooms the player is in, the ones still going first, then the newest first. */
 export async function loadMyRooms(): Promise<Room[]> {
-  const { data, error } = await client().from('rooms').select(ROOM_COLUMNS).order('draft_at')
+  const { data, error } = await client()
+    .from('rooms')
+    .select(ROOM_COLUMNS)
+    .order('created_at', { ascending: false })
   if (error) throw roomError(error)
   const rooms = (data as RoomRow[]).map(toRoom)
   const over = (room: Room) => (room.status === 'encerrada' ? 1 : 0)
@@ -214,6 +215,7 @@ export async function loadRoom(
         short_name: string
         color_primary: string
         color_secondary: string
+        ready: boolean | null
       }[]
     ).map((r) => ({
       userId: r.user_id,
@@ -221,6 +223,7 @@ export async function loadRoom(
       name: r.team_name,
       shortName: r.short_name,
       colors: { primary: r.color_primary, secondary: r.color_secondary },
+      ready: r.ready === true,
     })),
   }
 }
@@ -229,31 +232,25 @@ export async function loadRoom(
 export async function createRoom(
   name: string,
   options: RoomOptions,
-  draftAt: Date,
   team: TeamIdentity,
 ): Promise<number> {
   const { data, error } = await client().rpc('create_room', {
     room_name: name,
     options,
-    draft_at: draftAt.toISOString(),
+    draft_at: null,
     ...teamArgs(team),
   })
   if (error) throw roomError(error)
   return (data as { room_id: number }[])[0].room_id
 }
 
-/** Changes a waiting room's name, options and draft time; only its owner can. */
-export async function updateRoom(
-  id: number,
-  name: string,
-  options: RoomOptions,
-  draftAt: Date,
-): Promise<void> {
+/** Changes a waiting room's name and options; only its owner can. */
+export async function updateRoom(id: number, name: string, options: RoomOptions): Promise<void> {
   const { error } = await client().rpc('update_room', {
     room: id,
     room_name: name,
     options,
-    draft_at: draftAt.toISOString(),
+    draft_at: null,
   })
   if (error) throw roomError(error)
 }
@@ -270,7 +267,6 @@ export async function loadInvite(code: string): Promise<RoomInvite | undefined> 
       members: number
       teams: number
       status: RoomStatus
-      draft_at: string
       joined: boolean
     }[]
   )[0]
@@ -282,7 +278,6 @@ export async function loadInvite(code: string): Promise<RoomInvite | undefined> 
       members: Number(row.members),
       teams: row.teams,
       status: row.status,
-      draftAt: new Date(row.draft_at),
       joined: row.joined,
     }
   )
@@ -311,4 +306,11 @@ export async function leaveRoom(id: number, userId: string): Promise<void> {
 export async function deleteRoom(id: number): Promise<void> {
   const { error } = await client().from('rooms').delete().eq('id', id)
   if (error) throw roomError(error)
+}
+
+/** The player's "Pronto" in a waiting room; true when that made the full room ready. */
+export async function setWaitingReady(room: number, on: boolean): Promise<boolean> {
+  const { data, error } = await client().rpc('room_wait_ready', { room, on_ready: on })
+  if (error) throw roomError(error)
+  return data === true
 }
