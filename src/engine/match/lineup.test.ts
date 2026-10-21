@@ -118,17 +118,22 @@ describe('swapPlayers', () => {
 })
 
 describe('repairLineup', () => {
-  const lineup = autoLineup(squad, '4-3-3', 'ofensiva')
+  const lineup = autoLineup(squad, '4-3-3')
 
   it('leaves a playable lineup alone', () => {
     expect(repairLineup(lineup, squad)).toEqual(lineup)
+  })
+
+  it('puts a lineup saved with another posture back to the normal one', () => {
+    const attacking = autoLineup(squad, '4-3-3', 'ofensiva')
+    expect(repairLineup(attacking, squad)).toEqual({ ...attacking, posture: 'normal' })
   })
 
   it('fills the slot of an unavailable starter and keeps the tactics', () => {
     const striker = lineup.starters.find((s) => s.position === 'A')!.playerId
     const keeper = lineup.starters.find((s) => s.position === 'G')!.playerId
     const repaired = repairLineup(lineup, squad, new Set([striker, keeper]))
-    expect(repaired).toMatchObject({ formation: '4-3-3', posture: 'ofensiva' })
+    expect(repaired).toMatchObject({ formation: '4-3-3', posture: 'normal' })
     expect(positionsOf(repaired.starters)).toEqual(expectedShape('4-3-3'))
     const ids = [...repaired.starters.map((s) => s.playerId), ...repaired.bench]
     expect(ids).not.toContain(striker)

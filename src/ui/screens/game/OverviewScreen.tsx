@@ -37,7 +37,6 @@ import {
   formatDayDate,
   formatDayMonth,
   formatMoney,
-  POSTURE_NAMES,
   rangeText,
   roundStarFeats,
 } from '../../format.ts'
@@ -246,7 +245,7 @@ function NextRound({ game }: { game: GameState }) {
         )}
         <CupLine game={game} shown={fixture} />
         <p className="text-sm text-muted-foreground">
-          Escalação: {lineup.formation}, postura {POSTURE_NAMES[lineup.posture].toLowerCase()}.{' '}
+          Escalação: {lineup.formation}.{' '}
           <Link to="/jogo/time" className="text-primary underline">
             Mudar
           </Link>

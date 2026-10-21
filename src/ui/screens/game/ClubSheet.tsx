@@ -21,7 +21,7 @@ import { useGame } from '../../../store/game.ts'
 import { ClubName } from '../../components/ClubName.tsx'
 import { Pitch } from '../../components/Pitch.tsx'
 import { PlayerStatus } from '../../components/PlayerStatus.tsx'
-import { divisionName, POSITION_NAMES, POSTURE_NAMES } from '../../format.ts'
+import { divisionName, POSITION_NAMES } from '../../format.ts'
 import { PlayerSheet } from './PlayerSheet.tsx'
 
 const OUTCOME_STYLE = {
@@ -87,7 +87,7 @@ export function ClubSheet(props: { game: GameState; club: Club; onClose: () => v
       energy: conditionOn(season, s.player, game.today),
       form: formOf(season, s.player.id),
     })),
-    lineup.posture,
+    'normal',
   )
   const starting = new Set(lineup.starters.map((s) => s.playerId))
   const out = unavailablePlayers(season)
@@ -122,10 +122,7 @@ export function ClubSheet(props: { game: GameState; club: Club; onClose: () => v
         </SheetHeader>
 
         <section className="flex flex-col gap-2 px-4 pb-4">
-          <h3 className="text-sm font-semibold">
-            Escalação de hoje: {lineup.formation}, postura{' '}
-            {POSTURE_NAMES[lineup.posture].toLowerCase()}
-          </h3>
+          <h3 className="text-sm font-semibold">Escalação de hoje: {lineup.formation}</h3>
           <p className="text-xs text-muted-foreground tabular-nums">
             Defesa {Math.round(sectors.defense)} · Meio {Math.round(sectors.midfield)} · Ataque{' '}
             {Math.round(sectors.attack)}

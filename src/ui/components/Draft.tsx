@@ -51,12 +51,16 @@ import { usePackWorld } from '../usePackWorld.ts'
 import { Choices } from './Choices.tsx'
 import { PlayerCard } from './PlayerCard.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
+import { RoomPlayerSheet } from './RoomPlayerSheet.tsx'
 import { TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
 /** Seconds between calls to the server once the clock ran out, until the pick shows up. */
 const TICK_RETRY_MS = 2000
+
+/** A robot's clock, set by the server, long enough to watch its cards turn. */
+const ROBOT_PICK_SECONDS = 5
 /** A fresh look at the whole draft now and then, in case a live update got lost. */
 const SAFETY_RELOAD_MS = 20_000
 /** Picks merged by number, so an older full list never drops a newer live one. */
@@ -379,7 +383,7 @@ function Clock(props: {
     )
   }
 
-  const share = Math.min(1, left / room.options.pickSeconds)
+  const share = Math.min(1, left / (team.robot ? ROBOT_PICK_SECONDS : room.options.pickSeconds))
   return (
     <Card
       className={cn('gap-3 overflow-hidden', myTurn && 'border-highlight ring-2 ring-highlight/40')}
@@ -408,7 +412,7 @@ function Clock(props: {
         <span
           className={cn(
             'flex items-center gap-1 font-mono text-2xl font-bold tabular-nums',
-            left <= 10 && 'text-destructive',
+            left <= 10 && !team.robot && 'text-destructive',
           )}
           aria-label={`${left} segundos`}
         >
@@ -647,6 +651,43 @@ function DraftCard(props: { player: DraftPlayer; world?: World }) {
       }}
       club={world.clubs[full.clubId]}
       tier={player.prime ? 'prime' : undefined}
+    />
+  )
+}
+
+/**
+ * A drafted player's whole sheet, his card as it was picked; just the card
+ * for a player the pack's world doesn't know.
+ */
+function DraftPlayerSheet(props: {
+  player: DraftPlayer
+  world: World
+  team?: string
+  onClose: () => void
+}) {
+  const { player, world, onClose } = props
+  const full = world.players[player.id]
+  if (!full) {
+    return (
+      <Dialog open onOpenChange={(on) => !on && onClose()}>
+        <DialogContent className="w-auto items-center justify-items-center">
+          <DialogTitle className="sr-only">Carta de {player.name}</DialogTitle>
+          <PlainCard player={player} />
+        </DialogContent>
+      </Dialog>
+    )
+  }
+  return (
+    <RoomPlayerSheet
+      player={{
+        ...primePlayer(full, player.prime ?? 0),
+        name: player.name,
+        overall: player.overall,
+      }}
+      world={world}
+      prime={!!player.prime}
+      team={props.team}
+      onClose={onClose}
     />
   )
 }
@@ -1031,12 +1072,14 @@ export function DraftBoard(props: {
           </div>
         )}
       </CardContent>
-      <Dialog open={open !== undefined} onOpenChange={(on) => !on && setOpen(undefined)}>
-        <DialogContent className="w-auto items-center justify-items-center">
-          <DialogTitle className="sr-only">{open ? `Carta de ${open.name}` : 'Carta'}</DialogTitle>
-          {open && <DraftCard player={open} world={world} />}
-        </DialogContent>
-      </Dialog>
+      {open && world && (
+        <DraftPlayerSheet
+          player={open}
+          world={world}
+          team={teamOf.get(picks.find((p) => p.playerId === open.id)?.slot ?? -1)?.name}
+          onClose={() => setOpen(undefined)}
+        />
+      )}
     </Card>
   )
 }

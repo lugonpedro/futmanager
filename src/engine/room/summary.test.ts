@@ -80,6 +80,24 @@ describe('saved lineups', () => {
     expect(ignored.state.lineups['0'].starters).toHaveLength(11)
   })
 
+  it('tells who is injured, banned or carrying yellows, and for how long', () => {
+    const [hurt, banned, booked] = league.squads['0']
+    const third = league.fixtures[2][0].date
+    const marked = {
+      ...league,
+      discipline: {
+        injuries: { [hurt]: third, [league.squads['1'][0]]: third },
+        suspensions: { [banned]: 1 },
+        yellowCards: { [booked]: 2 },
+      },
+    }
+    const sheet = teamSheet(marked, '0')
+    expect(sheet.injured).toEqual({ [hurt]: 2 })
+    expect(sheet.suspended).toEqual({ [banned]: 1 })
+    expect(sheet.yellows).toEqual({ [booked]: 2 })
+    expect(new Set(sheet.out)).toEqual(new Set([hurt, banned]))
+  })
+
   it('keeps only the players a replay needs', () => {
     const played = playSavedRound(league, {}, 2)
     const slim = slimReplay(played.replays[0])

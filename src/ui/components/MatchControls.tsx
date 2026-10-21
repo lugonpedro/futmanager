@@ -3,20 +3,16 @@ import { Card } from '@/components/ui/card'
 import { slotFit } from '../../engine/match/strength.ts'
 import {
   setFormation,
-  setPosture,
   substitute,
   swapPositions,
   type MatchSide,
   type MatchState,
 } from '../../engine/match/simulate.ts'
-import type { Posture } from '../../engine/model/types.ts'
-import { POSTURE_NAMES } from '../format.ts'
-import { Choices } from './Choices.tsx'
 import { FormationSelect } from './FormationSelect.tsx'
 import { Pitch } from './Pitch.tsx'
 
 /**
- * The user's touchline: formation, posture, substitutions and players
+ * The user's touchline: formation, substitutions and players
  * swapping places while the match runs. Any touch pauses the match so
  * changes happen between minutes.
  */
@@ -71,14 +67,6 @@ export function MatchControls(props: {
         value={team.formation}
         disabled={locked}
         onChange={(f) => act(() => setFormation(state, side, f))}
-      />
-      <Choices
-        ariaLabel="Postura"
-        options={Object.keys(POSTURE_NAMES) as Posture[]}
-        value={team.posture}
-        disabled={locked}
-        onChange={(p) => act(() => setPosture(state, side, p))}
-        label={(p) => POSTURE_NAMES[p]}
       />
 
       <div className="grid gap-3 sm:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">

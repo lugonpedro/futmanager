@@ -303,7 +303,8 @@ export function repairLineup(
   }
   bench = [...bench, ...rest.map((p) => p.id)].slice(0, BENCH_SIZE)
 
-  return { ...lineup, starters, bench }
+  // The posture left the game (21/10/2026); a lineup saved before plays at the normal one.
+  return { ...lineup, posture: 'normal', starters, bench }
 }
 
 /**

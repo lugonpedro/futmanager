@@ -9,11 +9,11 @@ import { cn } from '@/lib/utils'
 import { cloudEnabled } from '../../cloud/client.ts'
 import { hasPass, PASS_PRICE } from '../../cloud/pass.ts'
 import { createRoom, loadMyRooms, PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
-import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
+import { checkTeamIdentity } from '../../engine/room/team.ts'
 import { DEFAULT_ROOM_OPTIONS } from '../../engine/room/types.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Pager } from '../components/Pager.tsx'
-import { RoomBasicsFields, RoomPage, Note, TeamFields } from '../components/RoomParts.tsx'
+import { RoomBasicsFields, RoomPage, Note } from '../components/RoomParts.tsx'
 import {
   checkRoomDraft,
   readRoomInviteCode,
@@ -197,11 +197,9 @@ function JoinByCode() {
 
 function NewRoom() {
   const navigate = useNavigate()
-  const suggested = useSuggestedTeam()
+  // The team starts from the profile; its name and colours change in the waiting room.
+  const team = useSuggestedTeam()
   const [open, setOpen] = useState(false)
-  // The suggestion follows the profile, which may load after the page, until the player edits it.
-  const [edited, setTeam] = useState<TeamIdentity>()
-  const team = edited ?? suggested
   const [draft, setDraft] = useState<RoomOptionsDraft>(() => ({
     name: '',
     options: DEFAULT_ROOM_OPTIONS,
@@ -256,16 +254,12 @@ function NewRoom() {
       <CardHeader>
         <CardTitle>Nova sala</CardTitle>
         <CardDescription>
-          Dê um nome e marque o draft. As outras regras dá para mudar depois, na sala de espera.
-          Depois é só mandar o convite; as vagas que ninguém pegar viram robôs.
+          Dê um nome e escolha quantos times. O seu time e as outras regras dá para mudar depois, na
+          sala de espera. Depois é só mandar o convite; as vagas que ninguém pegar viram robôs.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={create} className="flex flex-col gap-6">
-          <section className="flex flex-col gap-2">
-            <h2 className="text-sm font-semibold">Seu time</h2>
-            <TeamFields id="novo-time" value={team} onChange={setTeam} />
-          </section>
           <RoomBasicsFields value={draft} onChange={setDraft} />
           <div className="flex justify-end gap-2">
             <Button type="button" variant="ghost" onClick={() => setOpen(false)}>

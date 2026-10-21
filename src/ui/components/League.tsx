@@ -33,6 +33,7 @@ import {
   type DraftTeam,
 } from '../../cloud/draft.ts'
 import {
+  loadTeamSheet,
   loadPlayedRound,
   loadRoundReplays,
   loadRoundResults,
@@ -43,7 +44,8 @@ import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
-import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
+import type { RoomMatchLine, RoomSummary, TeamSheet } from '../../engine/room/summary.ts'
+import { draftPlayers } from '../draft.ts'
 import { LIVE, markRoundSeen, roundOver, roundTimeline, seenRound } from '../liveRound.ts'
 import { describeOptions } from '../room.ts'
 import { roomPageSlug, type RoomPageSlug } from '../roomPages.ts'
@@ -58,6 +60,7 @@ import { RoomLineup } from './RoomLineup.tsx'
 import { RoomLayout } from './RoomLayout.tsx'
 import { RoomLiveRound } from './RoomLiveRound.tsx'
 import { RoomNotices } from './RoomNotices.tsx'
+import { RoomTeamSquad } from './RoomTeamSquad.tsx'
 import { Note, TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
@@ -95,6 +98,8 @@ export function LeagueView(props: {
   const [loaded, setLoaded] = useState<Loaded>()
   const [failed, setFailed] = useState(false)
   const [watching, setWatching] = useState<{ replay: Replay; title: string }>()
+  /** The team whose squad is open, from the table. */
+  const [squadOf, setSquadOf] = useState<string>()
   const [live, setLive] = useState<Live>()
   /** The last round checked for being live, so its results don't show before that is known. */
   const [checked, setChecked] = useState(0)
@@ -184,7 +189,7 @@ export function LeagueView(props: {
     }
   }, [room.id, played])
 
-  const byId = useMemo(() => new Map((loaded?.pool ?? []).map((p) => [p.id, p])), [loaded])
+  const byId = useMemo(() => draftPlayers(loaded?.pool ?? [], loaded?.picks ?? []), [loaded])
   const slug = roomPageSlug(props.page)
   const frame = (status: string, children: ReactNode, mine?: DraftTeam, marked = NONE) => (
     <RoomLayout room={room} page={slug} mine={mine} status={status} marked={marked}>
@@ -273,6 +278,7 @@ export function LeagueView(props: {
           room={room.id}
           slot={mine.slot}
           round={room.round!.no}
+          pack={room.pack}
         />
       ) : (
         <Note>
@@ -306,7 +312,7 @@ export function LeagueView(props: {
           <TabsTrigger value="artilharia">Artilharia</TabsTrigger>
         </TabsList>
         <TabsContent value="classificacao">
-          <StandingsCard summary={summary} teamOf={teamOf} mine={mine} />
+          <StandingsCard summary={summary} teamOf={teamOf} mine={mine} onOpen={setSquadOf} />
         </TabsContent>
         <TabsContent value="artilharia">
           <ScorersCard summary={summary} teamOf={teamOf} />
@@ -368,6 +374,7 @@ export function LeagueView(props: {
                 <span className="text-muted-foreground">x</span>
                 <TeamName team={teamOf.get(next.awayId)} id={`seu-${next.awayId}`} end />
               </span>
+              {mine && <Absences room={room.id} slot={mine.slot} round={summary.played} />}
               {open && (
                 <Button asChild variant="outline" size="sm" className="self-start">
                   <Link to={`/sala/${room.id}/time`}>
@@ -391,14 +398,36 @@ export function LeagueView(props: {
                     key={`${match.homeId}-${match.awayId}`}
                     match={match}
                     teamOf={teamOf}
-                    onWatch={() => watch(match, summary.played)}
                   />
                 ))}
               </ul>
             </CardContent>
           </Card>
         )}
-        <StandingsCard summary={summary} teamOf={teamOf} mine={mine} top={4} roomId={room.id} />
+        <StandingsCard
+          summary={summary}
+          teamOf={teamOf}
+          mine={mine}
+          top={4}
+          roomId={room.id}
+          onOpen={setSquadOf}
+        />
+      </>
+    )
+  }
+
+  const squadTeam = squadOf !== undefined ? teamOf.get(squadOf) : undefined
+  if (squadTeam) {
+    page = (
+      <>
+        {page}
+        <RoomTeamSquad
+          room={room}
+          team={squadTeam}
+          squad={squadIds(loaded.rosters, squadTeam.slot)}
+          byId={byId}
+          onClose={() => setSquadOf(undefined)}
+        />
       </>
     )
   }
@@ -435,8 +464,10 @@ function StandingsCard(props: {
   mine?: DraftTeam
   top?: number
   roomId?: number
+  /** Opens a team's squad. */
+  onOpen?: (teamId: string) => void
 }) {
-  const { summary, teamOf, mine, top } = props
+  const { summary, teamOf, mine, top, onOpen } = props
   const rows = top ? summary.standings.slice(0, top) : summary.standings
   return (
     <Card>
@@ -494,7 +525,18 @@ function StandingsCard(props: {
                           className="size-5 shrink-0"
                         />
                       )}
-                      <span className="truncate">{team?.name}</span>
+                      {onOpen ? (
+                        <button
+                          type="button"
+                          onClick={() => onOpen(row.teamId)}
+                          className="cursor-pointer truncate text-left hover:underline"
+                          title="Ver o elenco"
+                        >
+                          {team?.name}
+                        </button>
+                      ) : (
+                        <span className="truncate">{team?.name}</span>
+                      )}
                     </span>
                   </TableCell>
                   <TableCell className="text-right font-bold">{row.points}</TableCell>
@@ -662,7 +704,8 @@ function TeamName(props: { team?: DraftTeam; id: string; end?: boolean }) {
 function MatchLine(props: {
   match: RoomMatchLine
   teamOf: ReadonlyMap<string, DraftTeam>
-  onWatch: () => void
+  /** Without it, the result alone. */
+  onWatch?: () => void
 }) {
   const { match, teamOf } = props
   const goals = (teamId: string) =>
@@ -684,11 +727,61 @@ function MatchLine(props: {
         <span>{goals(match.homeId)}</span>
         <span className="text-right">{goals(match.awayId)}</span>
       </span>
-      <Button variant="ghost" size="sm" className="self-center" onClick={props.onWatch}>
-        <MonitorPlayIcon />
-        Assistir
-      </Button>
+      {props.onWatch && (
+        <Button variant="ghost" size="sm" className="self-center" onClick={props.onWatch}>
+          <MonitorPlayIcon />
+          Assistir
+        </Button>
+      )}
     </li>
+  )
+}
+
+/**
+ * The player's team's absences for the coming round, as the career's
+ * overview lists them: who is injured or banned, and for how long.
+ */
+function Absences(props: { room: number; slot: number; round: number }) {
+  const { room, slot, round } = props
+  const [sheet, setSheet] = useState<TeamSheet | null>()
+  useEffect(() => {
+    let live = true
+    loadTeamSheet(room, slot)
+      .then((found) => live && setSheet(found ?? null))
+      .catch(() => live && setSheet(null))
+    return () => {
+      live = false
+    }
+  }, [room, slot, round])
+  if (!sheet) return null
+  const out = sheet.players.filter((p) => sheet.out.includes(p.id))
+  const reason = (id: string) => {
+    const injured = sheet.injured?.[id]
+    const banned = sheet.suspended?.[id]
+    if (injured) {
+      return `lesionado, fora ${injured === 1 ? 'da próxima rodada' : `das próximas ${injured} rodadas`}`
+    }
+    if (banned) return `suspenso ${banned === 1 ? 'na próxima rodada' : `por ${banned} rodadas`}`
+    return 'fora'
+  }
+  return (
+    <div className="flex flex-col gap-1">
+      <h3 className="text-sm font-semibold">Desfalques</h3>
+      {out.length === 0 ? (
+        <p className="text-sm text-muted-foreground">Elenco completo.</p>
+      ) : (
+        <ul className="text-sm">
+          {out.map((p) => (
+            <li key={p.id}>
+              {p.name}{' '}
+              <span className="text-muted-foreground">
+                ({p.position}), {reason(p.id)}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   )
 }
 
