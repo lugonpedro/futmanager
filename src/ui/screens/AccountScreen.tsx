@@ -4,17 +4,26 @@ import {
   LogOutIcon,
   MailIcon,
   RefreshCwIcon,
+  TicketIcon,
   Trash2Icon,
 } from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import { cloudEnabled } from '../../cloud/client.ts'
+import {
+  loadPassHistory,
+  PASS_DAYS,
+  PASS_PRICE,
+  type PassHistory,
+  type PassPayment,
+} from '../../cloud/pass.ts'
 import { FREE_CLOUD_SLOTS } from '../../cloud/sync.ts'
 import {
   deleteAccount,
@@ -36,11 +45,15 @@ import { toast } from 'sonner'
 
 const syncTime = new Intl.DateTimeFormat('pt-BR', { timeStyle: 'short' })
 
+const longDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeStyle: 'short' })
+const shortDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short' })
+
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
 /** The account page's tabs, by their address under /conta. */
 const TABS = {
   perfil: 'Perfil',
+  assinatura: 'Assinatura',
 }
 
 type Tab = keyof typeof TABS
@@ -93,6 +106,9 @@ export function AccountScreen() {
             <ProfileCard />
             <CloudCard />
             <AccountCard email={user.email} />
+          </TabsContent>
+          <TabsContent value="assinatura" className="flex flex-col gap-4">
+            <SubscriptionCard userId={user.id} />
           </TabsContent>
           <ConflictDialog />
         </Tabs>
@@ -429,5 +445,144 @@ function AccountCard(props: { email?: string }) {
         )}
       </CardContent>
     </Card>
+  )
+}
+
+const PAYMENT_STATES: Record<PassPayment['state'], string> = {
+  running: 'Em uso',
+  next: 'A seguir',
+  over: 'Encerrado',
+}
+
+const PROVIDERS: Record<string, string> = {
+  mercadopago: 'Mercado Pago',
+  stripe: 'Cartão',
+  cortesia: 'Cortesia',
+}
+
+const money = (cents: number) =>
+  (cents / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+/** The player's pass: how long it still runs, the payments behind it, or the way to buy one. */
+function SubscriptionCard(props: { userId: string }) {
+  const [history, setHistory] = useState<PassHistory>()
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    let live = true
+    loadPassHistory(props.userId)
+      .then((found) => live && setHistory(found))
+      .catch(() => live && setFailed(true))
+    return () => {
+      live = false
+    }
+  }, [props.userId])
+
+  if (failed)
+    return (
+      <p role="alert" className="text-sm text-destructive">
+        Não deu para carregar a assinatura agora. Tente de novo mais tarde.
+      </p>
+    )
+  if (!history) return <p className="text-sm text-muted-foreground">Carregando…</p>
+
+  const active = history.lifetime || !!history.endsAt
+
+  return (
+    <>
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TicketIcon className="size-5" />
+            Passe
+            <Badge variant={active ? 'default' : 'outline'}>{active ? 'Ativo' : 'Sem passe'}</Badge>
+          </CardTitle>
+          <CardDescription>
+            O passe deixa você criar salas de draft e chamar os amigos. Entrar nas salas é grátis.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-3 text-sm">
+          {history.lifetime ? (
+            <p className="rounded-md bg-highlight-soft p-3 font-medium">
+              Seu passe é vitalício: não acaba.
+            </p>
+          ) : history.endsAt ? (
+            <>
+              <div className="rounded-md bg-highlight-soft p-3">
+                <p className="text-2xl font-bold">
+                  {history.daysLeft} {history.daysLeft === 1 ? 'dia' : 'dias'}
+                </p>
+                <p className="text-muted-foreground">de passe restantes</p>
+              </div>
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
+                <dt className="text-muted-foreground">Vale até</dt>
+                <dd>{longDate.format(history.endsAt)}</dd>
+                {history.since && (
+                  <>
+                    <dt className="text-muted-foreground">Ativo desde</dt>
+                    <dd>{longDate.format(history.since)}</dd>
+                  </>
+                )}
+                <dt className="text-muted-foreground">Renovação</dt>
+                <dd>Não renova sozinho. Comprar de novo soma os dias no fim do passe atual.</dd>
+              </dl>
+              <Button asChild variant="outline" className="self-start">
+                <Link to="/passe">
+                  <TicketIcon />
+                  Comprar mais {PASS_DAYS} dias
+                </Link>
+              </Button>
+            </>
+          ) : (
+            <>
+              <p>
+                Você não tem um passe ativo.{' '}
+                {history.payments.length > 0 && 'Seu último passe já acabou. '}O passe custa{' '}
+                <strong>{PASS_PRICE}</strong> por {PASS_DAYS} dias, no Pix ou no cartão.
+              </p>
+              <Button asChild className="self-start">
+                <Link to="/passe">
+                  <TicketIcon />
+                  Comprar passe
+                </Link>
+              </Button>
+            </>
+          )}
+        </CardContent>
+      </Card>
+      {history.payments.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Pagamentos</CardTitle>
+            <CardDescription>Cada compra do passe e o período que ela cobre.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="flex flex-col gap-2 text-sm">
+              {history.payments.map((payment) => (
+                <li
+                  key={`${payment.provider}:${payment.paymentId}`}
+                  className="flex flex-wrap items-center justify-between gap-2 rounded-md border px-3 py-2"
+                >
+                  <div className="flex flex-col">
+                    <span className="font-medium">
+                      {shortDate.format(payment.startsAt)}
+                      {' – '}
+                      {payment.endsAt ? shortDate.format(payment.endsAt) : 'vitalício'}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      {payment.amountCents > 0 ? money(payment.amountCents) : 'Grátis'} ·{' '}
+                      {PROVIDERS[payment.provider] ?? payment.provider}
+                    </span>
+                  </div>
+                  <Badge variant={payment.state === 'over' ? 'outline' : 'secondary'}>
+                    {PAYMENT_STATES[payment.state]}
+                  </Badge>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+    </>
   )
 }
