@@ -77,7 +77,6 @@ const MESSAGES: Record<string, string> = {
   jogador: 'Esse jogador não está na lista do draft.',
   escolhido: 'Esse jogador já foi escolhido.',
   goleiros: 'Faltam goleiros: o elenco precisa de 2.',
-  fila: 'A fila tem no máximo 200 jogadores.',
   liga: 'A liga não está em andamento.',
   escalacao: 'Essa escalação não vale. Confira e tente de novo.',
   'nao-acabou': 'A liga ainda não acabou.',
@@ -90,6 +89,11 @@ const MESSAGES: Record<string, string> = {
   propostas: 'Você já tem 5 propostas esperando resposta.',
   proposta: 'Essa proposta já foi respondida.',
   passe: PASS_NEEDED,
+  formacao: 'Essa formação não existe.',
+  'formacao-fixa': 'A formação não muda depois da primeira carta.',
+  'ja-abriu': 'As cartas desta escolha já foram abertas.',
+  vaga: 'Essa vaga já está preenchida.',
+  carta: 'Escolha uma das cartas abertas.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */
@@ -117,7 +121,6 @@ export type RoomRow = {
   pick_seconds: number
   auto_reserves: boolean
   legs: number
-  grace_hours: number
   injuries: string
   trades: string
   draft_at: string
@@ -133,7 +136,7 @@ export type RoomRow = {
 }
 
 const ROOM_COLUMNS =
-  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, round_no, round_opened_at, rematch_id, room_members(count)'
+  'id, name, owner_id, pack, status, invite_code, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, injuries, trades, draft_at, created_at, pick_order, squad_shape, pick_no, pick_deadline, round_no, round_opened_at, rematch_id, room_members(count)'
 
 /** A room as the database keeps it, turned into the app's shape. */
 export function toRoom(row: RoomRow): Room {
@@ -151,7 +154,6 @@ export function toRoom(row: RoomRow): Room {
       pickSeconds: row.pick_seconds as RoomOptions['pickSeconds'],
       autoReserves: row.auto_reserves,
       legs: row.legs as RoomOptions['legs'],
-      graceHours: row.grace_hours as RoomOptions['graceHours'],
       injuries: row.injuries as RoomOptions['injuries'],
       trades: row.trades as RoomOptions['trades'],
     },

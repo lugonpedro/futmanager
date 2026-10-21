@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { cn } from '@/lib/utils'
 import { cleanShortName } from '../../engine/pack/pack.ts'
 import { TEAM_LIMITS, type TeamIdentity } from '../../engine/room/team.ts'
 import type { RoomOptions } from '../../engine/room/types.ts'
@@ -21,9 +22,15 @@ import { Crest } from './ClubCrest.tsx'
 import { ThemeToggle } from './ThemeToggle.tsx'
 
 /** The frame of the room pages: a title, the way back and the theme switch. */
-export function RoomPage(props: { title: string; back?: string; children: ReactNode }) {
+export function RoomPage(props: {
+  title: string
+  back?: string
+  /** Room for a side column, as the draft has. */
+  wide?: boolean
+  children: ReactNode
+}) {
   return (
-    <main className="mx-auto flex max-w-3xl flex-col gap-4 p-4">
+    <main className={cn('mx-auto flex flex-col gap-4 p-4', props.wide ? 'max-w-6xl' : 'max-w-3xl')}>
       <header className="flex items-center justify-between gap-2">
         <div className="flex min-w-0 items-center gap-1">
           <Button asChild variant="ghost" size="icon" aria-label="Voltar">
@@ -199,7 +206,6 @@ export function RoomRulesFields(props: {
   const options = props.value
   const set = (patch: Partial<RoomOptions>) => props.onChange({ ...options, ...patch })
   const legs = String(options.legs) as '1' | '2' | '3'
-  const grace = String(options.graceHours) as '6' | '12' | '24' | '48'
   return (
     <div className="flex flex-col gap-4">
       <TeamsOption options={options} people={props.people} onChange={(teams) => set({ teams })} />
@@ -231,7 +237,7 @@ export function RoomRulesFields(props: {
       </Option>
       <Option
         label="Reservas no automático"
-        hint="Depois do 11º jogador, o automático escolhe por todo mundo o de maior geral entre as posições que ainda faltam no elenco, para o draft acabar mais rápido."
+        hint="Depois do 11º jogador, o automático abre a próxima vaga vazia de cada time e fica com a melhor das 5 cartas, para o draft acabar mais rápido."
       >
         <Choices
           ariaLabel="Reservas no automático"
@@ -248,18 +254,6 @@ export function RoomRulesFields(props: {
           value={legs}
           label={(l) => LEGS_LABELS[Number(l) as RoomOptions['legs']]}
           onChange={(l) => set({ legs: Number(l) as RoomOptions['legs'] })}
-        />
-      </Option>
-      <Option
-        label="Prazo de segurança"
-        hint='Depois de quanto tempo esperando o "Pronto" de todos você pode jogar a rodada mesmo assim.'
-      >
-        <Choices
-          ariaLabel="Prazo de segurança"
-          options={offered(['6', '12', '24'] as const, grace)}
-          value={grace}
-          label={(h) => `${h} h`}
-          onChange={(h) => set({ graceHours: Number(h) as RoomOptions['graceHours'] })}
         />
       </Option>
       <Option label="Lesões" hint="Curtas duram no máximo duas rodadas.">

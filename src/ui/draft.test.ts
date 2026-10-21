@@ -7,8 +7,8 @@ import {
   moveInQueue,
   pickProblem,
   picksUntil,
+  roundOrder,
   startersAndReserves,
-  strongestFree,
   withLiveClock,
   positionCounts,
   roundOfPick,
@@ -111,17 +111,6 @@ describe('the draft screen', () => {
     expect(picksUntil(room(15, serpent), 1)).toBeUndefined()
   })
 
-  it('lists the strongest free players, by position too', () => {
-    const ranked = (id: string, position: PoolPlayer['position'], rank: number) => ({
-      ...player(id, position),
-      rank,
-    })
-    const all = [ranked('a', 'A', 2), ranked('g', 'G', 0), ranked('m', 'M', 1), ranked('z', 'Z', 3)]
-    const taken: DraftPick[] = [{ pick: 0, slot: 0, playerId: 'g', auto: false }]
-    expect(strongestFree(all, taken, undefined, 2).map((p) => p.id)).toEqual(['m', 'a'])
-    expect(strongestFree(all, taken, 'Z', 10).map((p) => p.id)).toEqual(['z'])
-  })
-
   it('splits a squad into eleven and reserves, keepers first', () => {
     const rated = (id: string, position: PoolPlayer['position'], overall: number) => ({
       ...player(id, position),
@@ -150,6 +139,12 @@ describe('the draft screen', () => {
       ),
     )
     expect(reserves.map((p) => p.id)).toEqual(['g2', 'a4'])
+  })
+
+  it('lists the order of the round under way', () => {
+    expect(roundOrder(room(1, serpent))).toEqual([2, 0, 1, 3])
+    expect(roundOrder(room(5, serpent))).toEqual([3, 1, 0, 2])
+    expect(roundOrder(room(16, serpent))).toEqual([3, 1, 0, 2])
   })
 
   it('takes the newer clock', () => {

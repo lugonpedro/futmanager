@@ -58,7 +58,6 @@ export function describeOptions(options: RoomOptions): string[] {
     `${options.pickSeconds} s por escolha`,
     options.autoReserves ? 'reservas no automático' : 'todas as escolhas na mão',
     LEGS_LABELS[options.legs].toLowerCase(),
-    `prazo de ${options.graceHours} h para o "Pronto"`,
     `lesões ${INJURY_LABELS[options.injuries].toLowerCase()}`,
     options.trades === 'desligadas'
       ? 'sem trocas'

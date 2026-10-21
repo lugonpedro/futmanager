@@ -39,7 +39,6 @@ const BASE: RoomOptions = {
   ...DEFAULT_ROOM_OPTIONS,
   squadSize: 18,
   draftOrder: 'serpentina',
-  graceHours: 24,
   trades: 'ate-dois-tercos',
 }
 const room = (options: Partial<RoomOptions> = {}, people = 0) => {

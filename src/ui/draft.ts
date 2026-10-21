@@ -99,18 +99,6 @@ export function picksUntil(room: Room, slot: number): number | undefined {
   return undefined
 }
 
-/** The strongest players still free, of one position or of all. */
-export function strongestFree(
-  pool: readonly PoolPlayer[],
-  picks: readonly DraftPick[],
-  position: Position | undefined,
-  count: number,
-): PoolPlayer[] {
-  const taken = new Set(picks.map((p) => p.playerId))
-  const free = pool.filter((p) => !taken.has(p.id) && (!position || p.position === position))
-  return free.sort((a, b) => a.rank - b.rank).slice(0, count)
-}
-
 /** The starting eleven a squad lines up as it is drafted, position by position. */
 const XI: Record<Position, number> = { G: 1, Z: 2, L: 2, M: 4, A: 2 }
 const XI_SIZE = 11
@@ -148,4 +136,17 @@ export function startersAndReserves(players: readonly PoolPlayer[]): {
 export function withLiveClock(room: Room, live: LiveClock | undefined): Room {
   if (!room.draft || !live || live.pickNo <= room.draft.pickNo) return room
   return { ...room, draft: { ...room.draft, pickNo: live.pickNo, deadline: live.deadline } }
+}
+
+/** The places in the order they pick in the round under way (the last round once the draft is over). */
+export function roundOrder(room: Room): number[] {
+  const draft = room.draft
+  if (!draft) return []
+  const teams = room.options.teams
+  const pick = Math.min(draft.pickNo, draftTotal(room) - 1)
+  const first = Math.floor(pick / teams) * teams
+  const order = draft.order.map(String)
+  return Array.from({ length: teams }, (_, i) =>
+    Number(teamForPick(order, first + i, room.options.draftOrder)),
+  )
 }

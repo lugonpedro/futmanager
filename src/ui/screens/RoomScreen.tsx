@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { BotIcon, CopyIcon, CrownIcon, PlayIcon, RefreshCwIcon, XIcon } from 'lucide-react'
+import {
+  BotIcon,
+  CopyIcon,
+  CrownIcon,
+  PlayIcon,
+  RefreshCwIcon,
+  Trash2Icon,
+  XIcon,
+} from 'lucide-react'
 import { useNavigate, useParams } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -61,7 +69,7 @@ export function RoomScreen() {
   }, [id, ready, user, reload])
 
   return (
-    <RoomPage title={loaded?.room.name ?? 'Sala'}>
+    <RoomPage title={loaded?.room.name ?? 'Sala'} wide={loaded?.room.status === 'draft'}>
       {!cloudEnabled ? (
         <Note>O jogo online não está disponível nesta versão.</Note>
       ) : ready && !user ? (
@@ -86,12 +94,52 @@ type BodyProps = Loaded & { userId: string; reload: () => Promise<void> }
 
 function RoomBody(props: BodyProps) {
   const { room } = props
+  return (
+    <>
+      <RoomView {...props} />
+      {room.ownerId === props.userId && room.status !== 'espera' && <DeleteRoom room={room} />}
+    </>
+  )
+}
+
+function RoomView(props: BodyProps) {
+  const { room } = props
   if (room.status === 'liga' || room.status === 'encerrada')
     return <LeagueView room={room} userId={props.userId} reload={props.reload} />
   if (room.status !== 'draft') return <WaitingRoom {...props} />
   if (!room.draft)
     return <Note>Preparando o draft: montando a lista de jogadores e sorteando a ordem…</Note>
   return <DraftView room={room} userId={props.userId} reload={props.reload} />
+}
+
+/** The owner's way to delete the room once the draft started: it ends for everyone in it. */
+function DeleteRoom(props: { room: Room }) {
+  const { room } = props
+  const navigate = useNavigate()
+  const remove = async () => {
+    const ok = await confirm({
+      title: 'Apagar a sala?',
+      description:
+        room.status === 'encerrada'
+          ? 'A sala e a liga que acabou somem para todo mundo que entrou nela.'
+          : `${room.status === 'draft' ? 'O draft' : 'A liga'} acaba na hora e a sala some para todo mundo que entrou nela. Não dá para desfazer.`,
+      action: 'Apagar sala',
+      destructive: true,
+    })
+    if (!ok) return
+    try {
+      await deleteRoom(room.id)
+      navigate('/salas')
+    } catch (error) {
+      toast.error(messageOf(error))
+    }
+  }
+  return (
+    <Button variant="outline" className="self-start text-destructive" onClick={remove}>
+      <Trash2Icon />
+      Apagar sala
+    </Button>
+  )
 }
 
 function WaitingRoom(props: BodyProps) {
@@ -278,7 +326,7 @@ function WaitingRoom(props: BodyProps) {
         </Card>
       )}
 
-      {(waiting || (owner && room.status === 'encerrada')) && (
+      {waiting && (
         <Button variant="outline" className="self-start" onClick={leave}>
           {owner ? 'Apagar sala' : 'Sair da sala'}
         </Button>

@@ -78,7 +78,7 @@ Deno.serve(async (req) => {
     const { data: options, error: roomError } = await db
       .from('rooms')
       .select(
-        'pack, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, grace_hours, injuries, trades',
+        'pack, teams, squad_size, draft_order, pick_seconds, auto_reserves, legs, injuries, trades',
       )
       .eq('id', room)
       .single()
@@ -94,7 +94,6 @@ Deno.serve(async (req) => {
       pickSeconds: options.pick_seconds,
       autoReserves: options.auto_reserves,
       legs: options.legs,
-      graceHours: options.grace_hours,
       injuries: options.injuries,
       trades: options.trades,
     }

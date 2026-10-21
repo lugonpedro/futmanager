@@ -1,4 +1,5 @@
 import type { RealtimeChannel } from '@supabase/supabase-js'
+import type { Formation } from '../engine/model/types.ts'
 import type { PoolPlayer } from '../engine/room/start.ts'
 import type { RoomSummary } from '../engine/room/summary.ts'
 import type { TeamIdentity } from '../engine/room/team.ts'
@@ -17,9 +18,21 @@ export type DraftTeam = TeamIdentity & {
   auto: boolean
   /** The round of the league its person marked "Pronto" for. */
   readyRound?: number
+  /** The formation whose places it fills in the draft; none until chosen or first dealt. */
+  formation?: Formation
 }
 
-export type DraftPick = { pick: number; slot: number; playerId: string; auto: boolean }
+export type DraftPick = {
+  pick: number
+  slot: number
+  playerId: string
+  auto: boolean
+  /** The place of the team it filled, as teamSlots() lists them; none in drafts made before. */
+  slotIndex?: number
+}
+
+/** The cards dealt for a pick: for one place of the team on the clock, which keeps one. */
+export type DraftDeal = { pick: number; slot: number; slotIndex: number; playerIds: string[] }
 
 function client() {
   if (!supabase) throw new Error('O jogo online não está disponível nesta versão.')
@@ -39,6 +52,7 @@ type TeamRow = {
   robot: boolean
   auto: boolean
   ready_round: number | null
+  formation?: string | null
 }
 
 export const toDraftTeam = (row: TeamRow): DraftTeam => ({
@@ -50,22 +64,39 @@ export const toDraftTeam = (row: TeamRow): DraftTeam => ({
   robot: row.robot,
   auto: row.auto,
   readyRound: row.ready_round ?? undefined,
+  formation: (row.formation ?? undefined) as Formation | undefined,
 })
 
-type PickRow = { pick: number; slot: number; player_id: string; auto: boolean }
+type PickRow = {
+  pick: number
+  slot: number
+  player_id: string
+  auto: boolean
+  slot_index?: number | null
+}
 
 export const toDraftPick = (row: PickRow): DraftPick => ({
   pick: row.pick,
   slot: row.slot,
   playerId: row.player_id,
   auto: row.auto,
+  slotIndex: row.slot_index ?? undefined,
+})
+
+type DealRow = { pick: number; slot: number; slot_index: number; player_ids: string[] }
+
+const toDraftDeal = (row: DealRow): DraftDeal => ({
+  pick: row.pick,
+  slot: row.slot,
+  slotIndex: row.slot_index,
+  playerIds: row.player_ids,
 })
 
 export async function loadDraftTeams(room: number): Promise<DraftTeam[]> {
   const { data, error } = await client()
     .from('room_teams')
     .select(
-      'slot, user_id, team_name, short_name, color_primary, color_secondary, robot, auto, ready_round',
+      'slot, user_id, team_name, short_name, color_primary, color_secondary, robot, auto, ready_round, formation',
     )
     .eq('room_id', room)
     .order('slot')
@@ -78,7 +109,7 @@ export async function loadDraftPicks(room: number): Promise<DraftPick[]> {
   for (let from = 0; ; from += PAGE) {
     const { data, error } = await client()
       .from('room_picks')
-      .select('pick, slot, player_id, auto')
+      .select('pick, slot, player_id, auto, slot_index')
       .eq('room_id', room)
       .order('pick')
       .range(from, from + PAGE - 1)
@@ -86,6 +117,30 @@ export async function loadDraftPicks(room: number): Promise<DraftPick[]> {
     picks.push(...(data as PickRow[]).map(toDraftPick))
     if (data.length < PAGE) return picks
   }
+}
+
+/** The cards dealt for a pick, if they were dealt. */
+export async function loadDraftDeal(room: number, pick: number): Promise<DraftDeal | undefined> {
+  const { data, error } = await client()
+    .from('room_deals')
+    .select('pick, slot, slot_index, player_ids')
+    .eq('room_id', room)
+    .eq('pick', pick)
+    .maybeSingle()
+  if (error) throw roomError(error)
+  return data ? toDraftDeal(data as DealRow) : undefined
+}
+
+/** On the player's turn, deals the cards for an empty place of their team. */
+export async function openDraftSlot(room: number, place: number): Promise<void> {
+  const { error } = await client().rpc('draft_open_slot', { room, place })
+  if (error) throw roomError(error)
+}
+
+/** The player's formation, before their first card is dealt. */
+export async function setDraftFormation(room: number, formation: Formation): Promise<void> {
+  const { error } = await client().rpc('draft_set_formation', { room, chosen: formation })
+  if (error) throw roomError(error)
 }
 
 /** The players the room drafts from, as the server listed them; strongest first. */
@@ -137,11 +192,6 @@ export async function draftTick(room: number): Promise<boolean> {
   return data === true
 }
 
-export async function setDraftAuto(room: number, on: boolean): Promise<void> {
-  const { error } = await client().rpc('draft_set_auto', { room, on_auto: on })
-  if (error) throw roomError(error)
-}
-
 /** Calls one of the room's server functions, with the message it answers on failure. */
 export async function invoke(
   name: string,
@@ -162,7 +212,7 @@ export const startDraftNow = (room: number) =>
 
 /**
  * Starts the league once the draft is over, or plays its next round: anyone
- * once everyone is ready, the owner after the grace period.
+ * once everyone is ready, or the owner whenever they want.
  */
 export const playRoomRound = (room: number) =>
   invoke('room-round', { room }, 'Não deu para jogar a rodada agora. Tente de novo.')
@@ -188,6 +238,8 @@ export function watchRoom(
   room: number,
   on: {
     pick: (pick: DraftPick) => void
+    /** Cards were dealt for a pick. */
+    deal?: (deal: DraftDeal) => void
     /** The room's row changed; `clock` is the pick under way as the change tells it. */
     room: (clock: LiveClock) => void
     team: (team: DraftTeam) => void
@@ -203,6 +255,11 @@ export function watchRoom(
       'postgres_changes',
       { event: 'INSERT', schema: 'public', table: 'room_picks', filter: `room_id=eq.${room}` },
       (change) => on.pick(toDraftPick(change.new as PickRow)),
+    )
+    .on(
+      'postgres_changes',
+      { event: 'INSERT', schema: 'public', table: 'room_deals', filter: `room_id=eq.${room}` },
+      (change) => on.deal?.(toDraftDeal(change.new as DealRow)),
     )
     .on(
       'postgres_changes',
