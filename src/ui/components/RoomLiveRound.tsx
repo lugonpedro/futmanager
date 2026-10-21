@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { DraftTeam } from '../../cloud/draft.ts'
+import type { MatchView } from '../../store/matchView.ts'
 import {
   playMinute,
   replayMatch,
@@ -13,9 +14,12 @@ import {
 import { matchKits } from '../kits.ts'
 import { LIVE, minutesAt, roundOver } from '../liveRound.ts'
 import { useShownScore } from '../useShownScore.ts'
+import { Choices } from './Choices.tsx'
 import { MatchFeed } from './MatchFeed.tsx'
 import { MatchPitch } from './MatchPitch.tsx'
 import { TeamCrest } from './RoomParts.tsx'
+
+const VIEWS: MatchView[] = ['Só texto', 'Campo']
 
 /**
  * The round just played, shown live to the whole room at once: the
@@ -36,6 +40,8 @@ export function RoomLiveRound(props: {
   const { replays, kickOff, timeline, teamOf } = props
   const [states] = useState(() => replays.map(replayMatch))
   const [elapsed, setElapsed] = useState(() => Date.now() - kickOff)
+  const [view, setView] = useState<MatchView>('Só texto')
+  const onPitch = view === 'Campo'
   const [chosen, setChosen] = useState(() => {
     const slot = props.mine && String(props.mine.slot)
     return Math.max(
@@ -65,7 +71,7 @@ export function RoomLiveRound(props: {
   const over = roundOver(timeline, elapsed)
   const kits = useMemo(() => matchKits(state.home.club, state.away.club), [state])
   const kitsByClub = { [state.home.club.id]: kits.home, [state.away.club.id]: kits.away }
-  const score = useShownScore(state, true, LIVE.unitMs)
+  const score = useShownScore(state, onPitch, LIVE.unitMs)
   const clock =
     elapsed < 0
       ? `Começa em ${Math.ceil(-elapsed / 1000)} s`
@@ -96,7 +102,7 @@ export function RoomLiveRound(props: {
         </div>
         <p className="text-center text-sm text-muted-foreground">{clock}</p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {over ? (
             <Button onClick={props.onDone}>
               <TableIcon />
@@ -108,10 +114,18 @@ export function RoomLiveRound(props: {
               Pular para o fim
             </Button>
           )}
+          <div className="ml-auto">
+            <Choices ariaLabel="Visualização" options={VIEWS} value={view} onChange={setView} />
+          </div>
         </div>
 
-        <MatchPitch key={chosen} state={state} unitMs={LIVE.unitMs} kits={kits} />
-        <MatchFeed events={state.events} kits={kitsByClub} className="max-h-40 min-h-24" />
+        {onPitch && <MatchPitch key={chosen} state={state} unitMs={LIVE.unitMs} kits={kits} />}
+        <MatchFeed
+          key={chosen}
+          events={state.events}
+          kits={kitsByClub}
+          className={onPitch ? 'max-h-40 min-h-24' : 'max-h-[50vh] min-h-48'}
+        />
       </Card>
 
       {states.length > 1 && (

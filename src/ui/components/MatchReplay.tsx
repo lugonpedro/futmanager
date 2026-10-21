@@ -12,10 +12,10 @@ import {
   type MatchReplay as Replay,
   type MatchSide,
 } from '../../engine/match/simulate.ts'
-import { useMatchViewStore, type MatchView } from '../../store/matchView.ts'
+import type { MatchView } from '../../store/matchView.ts'
 import { tenths } from '../format.ts'
 import { matchKits, type Kit } from '../kits.ts'
-import { PLAY_SPEEDS, SPEEDS, type Speed } from '../matchSpeeds.ts'
+import { PLAY_SPEEDS, SPEEDS } from '../matchSpeeds.ts'
 import { movingShare, playDuration } from '../pitchScene.ts'
 import { useRevealed } from '../useRevealed.ts'
 import { useShownScore } from '../useShownScore.ts'
@@ -26,11 +26,14 @@ import { MatchPitch } from './MatchPitch.tsx'
 import { MatchRatings } from './MatchRatings.tsx'
 import { MatchStats } from './MatchStats.tsx'
 
-const VIEWS: MatchView[] = ['Campo', 'Só texto']
+const VIEWS: MatchView[] = ['Só texto', 'Campo']
+/** One speed for everyone in the room, as in the live round. */
+const SPEED = 'Normal'
 
 /**
  * A match the server played, played again from its replay, minute by minute,
- * exactly as it went. Given fantasy points, it shows what everyone scored at
+ * exactly as it went, in text unless the player picks the pitch, at one speed
+ * and without stopping at half-time. Given fantasy points, it shows what everyone scored at
  * the final whistle; otherwise the ratings stay.
  */
 export function MatchReplay(props: {
@@ -54,27 +57,23 @@ function Playback(props: {
   onRestart: () => void
 }) {
   const [state] = useState(() => replayMatch(props.replay))
-  const [speed, setSpeed] = useState<Speed>('Normal')
   const [paused, setPaused] = useState(false)
   const [tick, setTick] = useState(0)
-  const view = useMatchViewStore((s) => s.view)
-  const setView = useMatchViewStore((s) => s.setView)
+  const [view, setView] = useState<MatchView>('Só texto')
   const onPitch = view === 'Campo'
   const { finished } = state
   const kits = useMemo(() => matchKits(state.home.club, state.away.club), [state])
   const kitsByClub = { [state.home.club.id]: kits.home, [state.away.club.id]: kits.away }
-  const halftime = state.minute === 45 && paused
 
   useEffect(() => {
     if (paused || finished) return
-    const delay = onPitch ? playDuration(state.plays.at(-1)) * PLAY_SPEEDS[speed] : SPEEDS[speed]
+    const delay = onPitch ? playDuration(state.plays.at(-1)) * PLAY_SPEEDS[SPEED] : SPEEDS[SPEED]
     const timer = setTimeout(() => {
       playMinute(state)
-      if (state.minute === 45) setPaused(true)
       setTick((t) => t + 1)
     }, delay)
     return () => clearTimeout(timer)
-  }, [state, speed, paused, finished, onPitch, tick])
+  }, [state, paused, finished, onPitch, tick])
 
   const skipToEnd = () => {
     while (!state.finished) playMinute(state)
@@ -83,10 +82,10 @@ function Playback(props: {
   }
 
   const result = finished ? matchResult(state) : undefined
-  const score = useShownScore(state, onPitch, PLAY_SPEEDS[speed])
+  const score = useShownScore(state, onPitch, PLAY_SPEEDS[SPEED])
   const lastPlay = state.plays.at(-1)
   const reveal =
-    onPitch && !finished ? playDuration(lastPlay) * PLAY_SPEEDS[speed] * movingShare(lastPlay) : 0
+    onPitch && !finished ? playDuration(lastPlay) * PLAY_SPEEDS[SPEED] * movingShare(lastPlay) : 0
   const stats = useRevealed(liveStats(state), state.minute, reveal)
   const ratings = useRevealed(result?.ratings ?? liveRatings(state), state.minute, reveal)
 
@@ -115,7 +114,7 @@ function Playback(props: {
           </span>
         </div>
         <p className="text-center text-sm text-muted-foreground">
-          {finished ? 'Encerrado' : halftime ? 'Intervalo' : `${state.minute}'`}
+          {finished ? 'Encerrado' : state.minute === 45 ? 'Intervalo' : `${state.minute}'`}
         </p>
 
         <div className="flex flex-wrap items-center gap-2">
@@ -128,7 +127,7 @@ function Playback(props: {
             <>
               <Button onClick={() => setPaused(!paused)}>
                 {paused ? <PlayIcon /> : <PauseIcon />}
-                {halftime ? 'Começar 2º tempo' : paused ? 'Continuar' : 'Pausar'}
+                {paused ? 'Continuar' : 'Pausar'}
               </Button>
               <Button variant="outline" onClick={skipToEnd}>
                 <SkipForwardIcon />
@@ -136,18 +135,12 @@ function Playback(props: {
               </Button>
             </>
           )}
-          <div className="ml-auto flex flex-wrap gap-2">
+          <div className="ml-auto">
             <Choices ariaLabel="Visualização" options={VIEWS} value={view} onChange={setView} />
-            <Choices
-              ariaLabel="Velocidade"
-              options={Object.keys(SPEEDS) as Speed[]}
-              value={speed}
-              onChange={setSpeed}
-            />
           </div>
         </div>
 
-        {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[speed]} kits={kits} />}
+        {onPitch && <MatchPitch state={state} unitMs={PLAY_SPEEDS[SPEED]} kits={kits} />}
 
         <MatchFeed
           events={state.events}
