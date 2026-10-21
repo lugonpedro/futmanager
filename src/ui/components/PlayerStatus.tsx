@@ -7,6 +7,8 @@ import { formatDayDate, formatDayMonth } from '../format.ts'
 export type PlayerAvailability = {
   /** The day he can play again, when injured. */
   injured?: GameDate
+  /** Rounds he still misses injured, where rounds count instead of days (the online rooms). */
+  injuredRounds?: number
   /** Matches still to sit out. */
   suspended?: number
   /** Yellow cards towards the next ban. */
@@ -25,9 +27,10 @@ export function PlayerStatus({ playerId, season }: { playerId: string; season: S
 }
 
 /** The tags of {@link PlayerStatus}, from the availability alone. */
-export function AvailabilityTags({ injured, suspended, yellows }: PlayerAvailability) {
+export function AvailabilityTags(props: PlayerAvailability) {
+  const { injured, injuredRounds, suspended, yellows } = props
   // An empty tag box would still take a line where the name wraps.
-  if (!injured && !suspended && !yellows) return null
+  if (!injured && !injuredRounds && !suspended && !yellows) return null
   return (
     <span className="inline-flex flex-wrap gap-1 text-xs">
       {injured && (
@@ -36,6 +39,18 @@ export function AvailabilityTags({ injured, suspended, yellows }: PlayerAvailabi
           title={`Lesionado, volta a jogar em ${formatDayDate(injured)}`}
         >
           lesão até {formatDayMonth(injured)}
+        </span>
+      )}
+      {injuredRounds && (
+        <span
+          className="rounded bg-orange-500/20 px-1 text-orange-700 dark:text-orange-200"
+          title={
+            injuredRounds === 1
+              ? 'Lesionado, fora da próxima rodada'
+              : `Lesionado, fora das próximas ${injuredRounds} rodadas`
+          }
+        >
+          lesão, {injuredRounds} {injuredRounds === 1 ? 'rodada' : 'rodadas'}
         </span>
       )}
       {suspended && (

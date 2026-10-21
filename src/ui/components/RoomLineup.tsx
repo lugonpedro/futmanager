@@ -7,8 +7,12 @@ import { repairLineup } from '../../engine/match/lineup.ts'
 import type { Lineup, Player } from '../../engine/model/types.ts'
 import type { TeamSheet } from '../../engine/room/summary.ts'
 import { POSITION_NAMES, POSITION_ORDER, ROLE_NAMES, type Role } from '../format.ts'
+import { sheetAvailability } from '../roomLeague.ts'
+import { usePackWorld } from '../usePackWorld.ts'
 import { LineupEditor, type LineupEditing } from './LineupEditor.tsx'
 import { FormArrow } from './PlayerSheetView.tsx'
+import { AvailabilityTags, type PlayerAvailability } from './PlayerStatus.tsx'
+import { RoomPlayerSheet } from './RoomPlayerSheet.tsx'
 import { useSwapSpot } from './swapSpot.ts'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
@@ -22,7 +26,7 @@ type Loaded = { sheet?: TeamSheet; saved?: Lineup }
  * The player's lineup for the coming round, saved on the server as it
  * changes. Without changes, the team plays the lineup of the last round.
  */
-export function RoomLineup(props: { room: number; slot: number; round: number }) {
+export function RoomLineup(props: { room: number; slot: number; round: number; pack?: string }) {
   const { room, slot, round } = props
   const [loaded, setLoaded] = useState<Loaded>()
   const [failed, setFailed] = useState(false)
@@ -58,12 +62,23 @@ export function RoomLineup(props: { room: number; slot: number; round: number })
       round={round}
       sheet={loaded.sheet}
       start={loaded.saved}
+      pack={props.pack}
     />
   )
 }
 
-function Editor(props: { room: number; round: number; sheet: TeamSheet; start?: Lineup }) {
+function Editor(props: {
+  room: number
+  round: number
+  sheet: TeamSheet
+  start?: Lineup
+  pack?: string
+}) {
   const { room, sheet } = props
+  const [viewing, setViewing] = useState<string>()
+  // The pack's world puts the real club on the card; loaded on the first sheet opened.
+  const [wanted, setWanted] = useState(false)
+  const world = usePackWorld(wanted ? props.pack : undefined)
   // A saved lineup may name someone who left in a trade since; the gaps get filled.
   const [lineup, setLineup] = useState(() =>
     repairLineup(props.start ?? sheet.lineup, sheet.players, new Set(sheet.out)),
@@ -106,22 +121,47 @@ function Editor(props: { room: number; round: number; sheet: TeamSheet; start?: 
       </Card>
       <LineupEditor
         players={players}
-        squad={sheet.players}
         lineup={lineup}
         onChange={change}
         unavailable={out}
         condition={(id) => sheet.condition[id] ?? 100}
         form={(id) => sheet.form[id] ?? 0}
       >
-        {(editing) => <SquadList sheet={sheet} out={out} editing={editing} />}
+        {(editing) => (
+          <SquadList
+            sheet={sheet}
+            out={out}
+            editing={editing}
+            onOpen={(id) => {
+              setWanted(true)
+              setViewing(id)
+            }}
+          />
+        )}
       </LineupEditor>
+      {viewing && players[viewing] && (
+        <RoomPlayerSheet
+          player={players[viewing]}
+          world={world}
+          sheet={sheet}
+          onClose={() => setViewing(undefined)}
+        />
+      )}
     </section>
   )
 }
 
 const GROUPS: Role[] = ['titular', 'reserva', 'fora']
 
-function SquadList(props: { sheet: TeamSheet; out: ReadonlySet<string>; editing: LineupEditing }) {
+/** Sheets saved before the reasons were kept only know that a player is out. */
+const hasReason = (a: PlayerAvailability) => !!(a.injuredRounds || a.suspended)
+
+function SquadList(props: {
+  sheet: TeamSheet
+  out: ReadonlySet<string>
+  editing: LineupEditing
+  onOpen: (id: string) => void
+}) {
   const { sheet, out, editing } = props
   const sorted = [...sheet.players].sort(
     (a, b) => POSITION_ORDER[a.position] - POSITION_ORDER[b.position] || b.overall - a.overall,
@@ -142,15 +182,18 @@ function SquadList(props: { sheet: TeamSheet; out: ReadonlySet<string>; editing:
                   key={player.id}
                   player={player}
                   out={out.has(player.id)}
+                  availability={sheetAvailability(sheet, player.id)}
                   condition={sheet.condition[player.id] ?? 100}
                   form={sheet.form[player.id] ?? 0}
                   editing={editing}
+                  onOpen={() => props.onOpen(player.id)}
                 />
               ))}
             </ul>
           </div>
         )
       })}
+      <p className="text-xs text-muted-foreground">Toque no nome para ver a carta completa.</p>
     </Card>
   )
 }
@@ -158,9 +201,11 @@ function SquadList(props: { sheet: TeamSheet; out: ReadonlySet<string>; editing:
 function SquadRow(props: {
   player: Player
   out: boolean
+  availability: PlayerAvailability
   condition: number
   form: number
   editing: LineupEditing
+  onOpen: () => void
 }) {
   const { player, editing } = props
   const disabled = !editing.movable(player.id)
@@ -182,10 +227,25 @@ function SquadRow(props: {
       <span className="w-4 font-semibold" title={POSITION_NAMES[player.position]}>
         {player.position}
       </span>
-      <span className={cn('min-w-0 flex-1 truncate', props.out && 'line-through')}>
-        {player.name}
+      <span className="flex min-w-0 flex-1 flex-wrap items-center gap-x-1.5">
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation()
+            props.onOpen()
+          }}
+          className={cn(
+            'cursor-pointer truncate text-left hover:underline',
+            props.out && 'line-through',
+          )}
+        >
+          {player.name}
+        </button>
+        <AvailabilityTags {...props.availability} />
+        {props.out && !hasReason(props.availability) && (
+          <span className="text-xs text-destructive">fora</span>
+        )}
       </span>
-      {props.out && <span className="text-xs text-destructive">fora</span>}
       <FormArrow form={props.form} />
       <span className="w-9 text-right text-xs text-muted-foreground tabular-nums" title="Energia">
         {Math.round(props.condition)}%

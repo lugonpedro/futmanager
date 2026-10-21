@@ -240,7 +240,6 @@ export function TeamScreen() {
       <div className="flex flex-col gap-4">
         <LineupEditor
           players={world.players}
-          squad={squad}
           lineup={lineup}
           onChange={save}
           unavailable={out}

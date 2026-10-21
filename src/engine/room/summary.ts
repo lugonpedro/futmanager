@@ -90,17 +90,39 @@ export type TeamSheet = {
   form: Record<string, number>
   /** Injured or banned for the next round. */
   out: string[]
+  /**
+   * Rounds each injured player still misses, the coming one included. This
+   * and the two below are missing in sheets saved before 21/10/2026.
+   */
+  injured?: Record<string, number>
+  /** Rounds each banned player still sits out. */
+  suspended?: Record<string, number>
+  /** Yellow cards towards the next ban. */
+  yellows?: Record<string, number>
   /** The lineup the team plays if its person changes nothing. */
   lineup: Lineup
 }
 
 export function teamSheet(state: RoomState, teamId: string): TeamSheet {
   const squad = squadOf(state, teamId)
+  const ids = new Set(state.squads[teamId])
+  const ofSquad = <T>(record: Record<string, T>) =>
+    Object.entries(record).filter(([id]) => ids.has(id))
+  const { injuries, suspensions, yellowCards } = state.discipline
+  // The rounds still to play, by date: an injury lasts until the first round on or after its end.
+  const dates = state.fixtures.slice(state.round - 1).map((round) => round[0]?.date)
   return {
     players: squad.map(({ history: _history, ...player }) => player),
     condition: Object.fromEntries(squad.map((p) => [p.id, conditionOn(state, p, state.today)])),
     form: Object.fromEntries(squad.map((p) => [p.id, formOf(state, p.id)])),
-    out: [...unavailableOn(state, state.today)].filter((id) => squad.some((p) => p.id === id)),
+    out: [...unavailableOn(state, state.today)].filter((id) => ids.has(id)),
+    injured: Object.fromEntries(
+      ofSquad(injuries)
+        .filter(([, back]) => back > state.today)
+        .map(([id, back]) => [id, Math.max(1, dates.filter((date) => date && date < back).length)]),
+    ),
+    suspended: Object.fromEntries(ofSquad(suspensions)),
+    yellows: Object.fromEntries(ofSquad(yellowCards).filter(([, cards]) => cards > 0)),
     lineup: roundLineup(state, teamId),
   }
 }

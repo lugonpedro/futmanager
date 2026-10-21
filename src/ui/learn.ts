@@ -8,7 +8,6 @@ import {
   FAMILIARITY,
   FORM_EFFECT,
   INSIDE_FOOT_EFFECT,
-  POSTURE_EFFECT,
   ROLE_STYLE_EFFECT,
   STYLE_POINTS,
 } from '../engine/match/strength.ts'
@@ -183,11 +182,10 @@ export const CAREER_GUIDE: Record<CareerSection, LearnContent> = {
     items: [
       `${formations.length} formações: ${listText(formations)}. Cada vaga da formação tem uma função, que muda o quanto o jogador ajuda na defesa, no meio e no ataque: ${listText(roleList)}.`,
       'O volante protege a defesa e chuta pouco; o meia ofensivo e os pontas reforçam o ataque. A ficha do jogador mostra a função em que ele rende mais.',
-      'Tocando num titular da escalação, você escolhe outra função para a vaga, entre todas do setor: falso 9, pivô, corta pra dentro, atacante sombra, regista, box-to-box, lateral invertido, ala ofensivo, xerife, zagueiro construtor ou goleiro-líbero, entre outras. A função fica com a vaga quando você troca jogadores, e volta à da formação se você mudar a formação ou escalar automaticamente.',
+      'Tocando num titular da escalação, você escolhe outra função para a vaga, entre todas do setor: falso 9, pivô, corta pra dentro, atacante sombra, regista, box-to-box, lateral invertido, ala ofensivo, xerife, zagueiro construtor ou goleiro-líbero, entre outras. A função fica com a vaga quando você troca jogadores, e volta à da formação se você mudar a formação.',
       `Cada nível de um estilo que combina com a função escolhida rende ${Math.round(ROLE_STYLE_EFFECT * 1000) / 10}% a mais. O corta pra dentro rende ${Math.round(INSIDE_FOOT_EFFECT * 100)}% a mais no lado contrário ao pé bom e ${Math.round(INSIDE_FOOT_EFFECT * 100)}% a menos no mesmo lado.`,
       `Posições: ${positionList}. Fora da posição o jogador rende menos: ${Math.round(FAMILIARITY.secondary * 100)}% numa posição secundária dele e ${Math.round(FAMILIARITY.other * 100)}% em qualquer outra. Jogador de linha no gol é desastre. No campo, a cor da sigla avisa: verde, amarelo ou vermelho.`,
-      `Postura defensiva: ${percent(POSTURE_EFFECT.defensiva.defense)} mais defesa, ${percent(POSTURE_EFFECT.defensiva.attack)} menos ataque, e o time cansa menos. Ofensiva: ${percent(POSTURE_EFFECT.ofensiva.attack)} mais ataque, ${percent(POSTURE_EFFECT.ofensiva.defense)} menos defesa, e cansa ${percent(POSTURE_EFFECT.ofensiva.tiring)} mais.`,
-      `Até ${MAX_SUBSTITUTIONS} substituições, com ${BENCH_SIZE} no banco. Durante o jogo dá para mudar a formação, a postura e trocar jogadores de posição sem gastar substituição.`,
+      `Até ${MAX_SUBSTITUTIONS} substituições, com ${BENCH_SIZE} no banco. Durante o jogo dá para mudar a formação e trocar jogadores de posição sem gastar substituição.`,
       `O mandante joga com vantagem. Atacantes rápidos contra zagueiros lentos rendem mais, principalmente no contra-ataque. Cerca de ${Math.round(BALANCE.aerialShare * 100)}% das chances vêm pelo alto, em cruzamentos, escanteios e faltas, e aí o cabeceio conta.`,
       'Em média saem uns 2,5 gols por jogo, e o mandante vence perto de 45% das vezes.',
     ],

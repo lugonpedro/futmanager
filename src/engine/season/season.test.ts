@@ -337,7 +337,7 @@ describe('lineups', () => {
     game.world.clubs[game.userClubId].playerIds.map((id) => game.world.players[id])
 
   it('plays the user with the lineup they saved', () => {
-    const saved = autoLineup(squadOf(start), '5-3-2', 'defensiva')
+    const saved = autoLineup(squadOf(start), '5-3-2')
     const game = { ...start, userLineup: saved }
     const fixture = userFixture(game)!
     const input = matchInput(game, fixture)

@@ -9,7 +9,7 @@ import {
   type DragEndEvent,
   type DragStartEvent,
 } from '@dnd-kit/core'
-import { ListIcon, MapIcon, WandSparklesIcon } from 'lucide-react'
+import { ListIcon, MapIcon } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -22,13 +22,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { cn } from '@/lib/utils'
-import {
-  autoLineup,
-  changeFormation,
-  formationLines,
-  setDuty,
-  swapPlayers,
-} from '../../engine/match/lineup.ts'
+import { changeFormation, formationLines, setDuty, swapPlayers } from '../../engine/match/lineup.ts'
 import { dutiesFor, ROLE_STYLES, roleOf as slotRole, sideOf } from '../../engine/match/roles.ts'
 import {
   dutyFactor,
@@ -42,20 +36,17 @@ import type {
   LineupSlot,
   Player,
   Position,
-  Posture,
   TacticalRole,
 } from '../../engine/model/types.ts'
 import {
   fitClass,
   fitLevel,
   POSITION_NAMES,
-  POSTURE_NAMES,
   STYLE_NAMES,
   TACTICAL_ROLE_EFFECTS,
   TACTICAL_ROLE_NAMES,
   type Role,
 } from '../format.ts'
-import { Choices } from './Choices.tsx'
 import { FormationSelect } from './FormationSelect.tsx'
 import { Pitch } from './Pitch.tsx'
 import { useSwapSpot } from './swapSpot.ts'
@@ -75,7 +66,7 @@ export type LineupEditing = {
 }
 
 /**
- * The lineup editor on its own: formation, posture, automatic lineup, the XI
+ * The lineup editor on its own: formation, the XI
  * on the pitch or by line, and swaps by drag and drop or tap-and-tap. It only
  * gets data and hands back the new lineup, so the career and the online rooms
  * share it. The squad list goes in `children`, inside the same drag area, so
@@ -84,7 +75,6 @@ export type LineupEditing = {
 export function LineupEditor(props: {
   /** Every player the lineup may name, by id. */
   players: Readonly<Record<string, Player>>
-  squad: Player[]
   lineup: Lineup
   onChange: (next: Lineup) => void
   /** Who can't play now (injured or banned): kept out of the automatic lineup and of swaps in. */
@@ -163,7 +153,7 @@ export function LineupEditor(props: {
       energy: props.condition(s.player.id),
       form: props.form(s.player.id),
     })),
-    lineup.posture,
+    'normal',
   )
 
   const editing: LineupEditing = {
@@ -195,25 +185,6 @@ export function LineupEditor(props: {
               onChange={(f) => change(changeFormation(lineup, f, players))}
             />
           </label>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground">Postura</span>
-            <Choices
-              ariaLabel="Postura"
-              options={Object.keys(POSTURE_NAMES) as Posture[]}
-              value={lineup.posture}
-              onChange={(p) => change({ ...lineup, posture: p })}
-              label={(p) => POSTURE_NAMES[p]}
-            />
-          </div>
-          <Button
-            size="sm"
-            onClick={() =>
-              change(autoLineup(props.squad, lineup.formation, lineup.posture, unavailable))
-            }
-          >
-            <WandSparklesIcon />
-            Escalar automaticamente
-          </Button>
           <p className="text-sm text-muted-foreground tabular-nums">
             Defesa {Math.round(sectors.defense)} · Meio {Math.round(sectors.midfield)} · Ataque{' '}
             {Math.round(sectors.attack)}
