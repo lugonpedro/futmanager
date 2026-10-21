@@ -90,6 +90,11 @@ const MESSAGES: Record<string, string> = {
   propostas: 'Você já tem 5 propostas esperando resposta.',
   proposta: 'Essa proposta já foi respondida.',
   passe: PASS_NEEDED,
+  formacao: 'Essa formação não existe.',
+  'formacao-fixa': 'A formação não muda depois da primeira carta.',
+  'ja-abriu': 'As cartas desta escolha já foram abertas.',
+  vaga: 'Essa vaga já está preenchida.',
+  carta: 'Escolha uma das cartas abertas.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */

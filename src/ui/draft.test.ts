@@ -9,7 +9,6 @@ import {
   picksUntil,
   roundOrder,
   startersAndReserves,
-  strongestFree,
   withLiveClock,
   positionCounts,
   roundOfPick,
@@ -110,17 +109,6 @@ describe('the draft screen', () => {
     expect(picksUntil(room(1, serpent), 2)).toBe(6)
     expect(picksUntil(room(1, serpent), 3)).toBe(2)
     expect(picksUntil(room(15, serpent), 1)).toBeUndefined()
-  })
-
-  it('lists the strongest free players, by position too', () => {
-    const ranked = (id: string, position: PoolPlayer['position'], rank: number) => ({
-      ...player(id, position),
-      rank,
-    })
-    const all = [ranked('a', 'A', 2), ranked('g', 'G', 0), ranked('m', 'M', 1), ranked('z', 'Z', 3)]
-    const taken: DraftPick[] = [{ pick: 0, slot: 0, playerId: 'g', auto: false }]
-    expect(strongestFree(all, taken, undefined, 2).map((p) => p.id)).toEqual(['m', 'a'])
-    expect(strongestFree(all, taken, 'Z', 10).map((p) => p.id)).toEqual(['z'])
   })
 
   it('splits a squad into eleven and reserves, keepers first', () => {

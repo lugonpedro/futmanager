@@ -237,7 +237,7 @@ export function RoomRulesFields(props: {
       </Option>
       <Option
         label="Reservas no automático"
-        hint="Depois do 11º jogador, o automático escolhe por todo mundo o de maior geral entre as posições que ainda faltam no elenco, para o draft acabar mais rápido."
+        hint="Depois do 11º jogador, o automático abre a próxima vaga vazia de cada time e fica com a melhor das 5 cartas, para o draft acabar mais rápido."
       >
         <Choices
           ariaLabel="Reservas no automático"
