@@ -212,7 +212,7 @@ export const startDraftNow = (room: number) =>
 
 /**
  * Starts the league once the draft is over, or plays its next round: anyone
- * once everyone is ready, the owner after the grace period.
+ * once everyone is ready, or the owner whenever they want.
  */
 export const playRoomRound = (room: number) =>
   invoke('room-round', { room }, 'Não deu para jogar a rodada agora. Tente de novo.')

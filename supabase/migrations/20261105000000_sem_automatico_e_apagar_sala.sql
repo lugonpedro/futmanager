@@ -30,7 +30,13 @@ $$;
 
 update public.room_teams set auto = false, misses = 0 where auto;
 
-revoke execute on function public.draft_set_auto(bigint, boolean) from authenticated;
+-- What nothing calls any more: the switch itself, and the queue of
+-- favourites, which left the screen and which the FUT Draft's automatic pick
+-- no longer reads. rooms.grace_hours stays, unused, since create_room,
+-- update_room and room_rematch still write it.
+drop function public.draft_set_auto(bigint, boolean);
+drop function public.save_draft_queue(bigint, text[]);
+drop table public.room_queues;
 
 -- The owner can delete the room at any point, in the middle of the draft or
 -- the league too; everything of it goes with it.

@@ -16,7 +16,6 @@ const row: RoomRow = {
   pick_seconds: 45,
   auto_reserves: false,
   legs: 2,
-  grace_hours: 24,
   injuries: 'normais',
   trades: 'ate-dois-tercos',
   draft_at: '2026-10-22T00:00:00Z',
