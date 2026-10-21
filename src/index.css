@@ -140,6 +140,18 @@
   }
 }
 
+/* The card just picked rises out of the hand for everyone to see. */
+@keyframes card-lift {
+  from {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 0 rgb(250 204 21 / 0);
+  }
+  to {
+    transform: translateY(-1.5rem) scale(1.08);
+    box-shadow: 0 0 2.5rem 0.75rem rgb(250 204 21 / 0.7);
+  }
+}
+
 @keyframes prime-glow {
   0%,
   100% {

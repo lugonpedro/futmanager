@@ -1,11 +1,27 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import { execSync } from 'node:child_process'
 import path from 'node:path'
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vitest/config'
 
+/** The commit being built: Vercel's, or the local checkout's. */
+function buildCommit(): string {
+  const vercel = process.env.VERCEL_GIT_COMMIT_SHA
+  if (vercel) return vercel.slice(0, 7)
+  try {
+    return execSync('git rev-parse --short HEAD').toString().trim()
+  } catch {
+    return 'local'
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
+  // The version the home screen shows, so it's clear which build is running.
+  define: {
+    __APP_VERSION__: JSON.stringify({ commit: buildCommit(), builtAt: new Date().toISOString() }),
+  },
   plugins: [
     react(),
     tailwindcss(),

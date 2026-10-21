@@ -24,6 +24,7 @@ import { ManagerCrest } from '../components/ManagerCrest.tsx'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { formatSavedAt, slotProgress } from '../format.ts'
 import { confirm } from '../confirm.ts'
+import { versionText } from '../version.ts'
 
 export function HomeScreen() {
   const saves = useLiveQuery(listSaves)
@@ -197,6 +198,9 @@ export function HomeScreen() {
               Privacidade
             </Link>
           </nav>
+          <p className="text-center text-xs text-muted-foreground" title="A versão deste jogo">
+            {versionText()}
+          </p>
         </CardContent>
       </Card>
       <ConflictDialog />

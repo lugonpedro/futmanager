@@ -60,7 +60,9 @@ const messageOf = (error: unknown) => (error instanceof Error ? error.message : 
 const TICK_RETRY_MS = 2000
 
 /** A robot's clock, set by the server, long enough to watch its cards turn. */
-const ROBOT_PICK_SECONDS = 5
+const ROBOT_PICK_SECONDS = 7
+/** How long the table keeps a pick's cards, the chosen one raised, before the next turn. */
+const REVEAL_MS = 2000
 /** A fresh look at the whole draft now and then, in case a live update got lost. */
 const SAFETY_RELOAD_MS = 20_000
 /** Picks merged by number, so an older full list never drops a newer live one. */
@@ -138,6 +140,28 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
   }, [roomId, pickNo])
   const current = deal?.pick === pickNo ? deal : undefined
 
+  // Every deal shown on the table, so its pick can be shown with the chosen card raised.
+  const shown = useRef(new Map<number, DraftDeal>())
+  useEffect(() => {
+    if (current) shown.current.set(current.pick, current)
+  }, [current])
+  const [reveal, setReveal] = useState<Reveal>()
+  const last = picks.at(-1)
+  const lastNo = last?.pick
+  const lastId = last?.playerId
+  useEffect(() => {
+    if (lastNo === undefined || lastId === undefined) return
+    const dealt = shown.current.get(lastNo)
+    if (!dealt) return
+    shown.current.delete(lastNo)
+    setReveal({ deal: dealt, playerId: lastId })
+  }, [lastNo, lastId])
+  useEffect(() => {
+    if (!reveal) return
+    const timer = setTimeout(() => setReveal(undefined), REVEAL_MS)
+    return () => clearTimeout(timer)
+  }, [reveal])
+
   const byId = useMemo(() => draftPlayers(pool ?? [], picks, current), [pool, picks, current])
   if (failed) {
     return (
@@ -174,17 +198,21 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
       </aside>
       <div className="flex min-w-0 flex-col gap-4">
         <LastPick room={room} teams={teams} byId={byId} picks={picks} />
-        {slotOnTheClock(room) !== undefined && (
-          <DealTable
-            room={room}
-            teams={teams}
-            byId={byId}
-            picks={picks}
-            mine={mine}
-            deal={current}
-            world={world}
-            onPicked={after}
-          />
+        {reveal ? (
+          <RevealTable reveal={reveal} teams={teams} byId={byId} world={world} />
+        ) : (
+          slotOnTheClock(room) !== undefined && (
+            <DealTable
+              room={room}
+              teams={teams}
+              byId={byId}
+              picks={picks}
+              mine={mine}
+              deal={current}
+              world={world}
+              onPicked={after}
+            />
+          )
         )}
         {mine && slotOnTheClock(room) !== undefined && (
           <MyPlaces
@@ -695,6 +723,65 @@ function DraftPlayerSheet(props: {
 /** The position of a team's place, from its formation (4-4-2 until it picks one). */
 function placePosition(team: DraftTeam, room: Room, index: number): Position | undefined {
   return teamSlots(team.formation ?? '4-4-2', room.options.squadSize)[index]
+}
+
+type Reveal = { deal: DraftDeal; playerId: string }
+
+/**
+ * The cards of the pick just made, for everyone in the room: the chosen one
+ * raised and shining, the others dimmed, for a moment before the next turn.
+ */
+function RevealTable(props: {
+  reveal: Reveal
+  teams: DraftTeam[]
+  byId: ReadonlyMap<string, DraftPlayer>
+  world?: World
+}) {
+  const { reveal, byId, world } = props
+  const [handRef, zoom] = useHandZoom()
+  const team = props.teams.find((t) => t.slot === reveal.deal.slot)
+  const cards = reveal.deal.playerIds
+    .map((id) => byId.get(id))
+    .filter((p) => p !== undefined)
+    .sort(
+      (a, b) => Number(!!b.prime) - Number(!!a.prime) || b.overall - a.overall || a.rank - b.rank,
+    )
+  const chosen = cards.find((p) => p.id === reveal.playerId)
+  return (
+    <Card className="gap-3 overflow-hidden">
+      <CardHeader>
+        <CardTitle>
+          {team?.shortName} escolheu {chosen?.name ?? 'um jogador'}
+        </CardTitle>
+        <CardDescription>As outras cartas voltam para o monte.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ul
+          ref={handRef}
+          className="flex flex-wrap justify-center gap-3 pt-8 pb-2"
+          aria-label="Cartas da escolha"
+        >
+          {cards.map((player) => {
+            const picked = player.id === reveal.playerId
+            return (
+              <li key={player.id} style={{ zoom }}>
+                <span
+                  className={cn(
+                    'block rounded-[2.6rem_2.6rem_1.1rem_1.1rem] transition-all duration-500',
+                    picked
+                      ? 'z-10 animate-[card-lift_0.6s_cubic-bezier(0.2,0.8,0.3,1)_both] ring-4 ring-highlight ring-offset-4 ring-offset-card'
+                      : 'scale-90 opacity-35 grayscale',
+                  )}
+                >
+                  <DraftCard player={player} world={world} />
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+      </CardContent>
+    </Card>
+  )
 }
 
 /** A card that comes face down and turns over after `delayMs`. */
