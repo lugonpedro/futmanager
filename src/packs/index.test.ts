@@ -4,6 +4,8 @@ import { applyPack, packSlots } from '../engine/pack/pack.ts'
 import { POSITIONS } from '../engine/model/types.ts'
 import { newGame } from '../engine/season/season.ts'
 import { BUILT_IN_PACKS } from './index.ts'
+import { overallFromRating, withOveralls } from './ratings.ts'
+import raw from './brasileirao-2026.json?raw'
 
 const squadSize = Object.values(SQUAD_SHAPE).reduce((a, b) => a + b, 0)
 
@@ -66,5 +68,24 @@ describe('the Brasileirão 2026 ratings', () => {
     for (const player of named) {
       if (player.age > 29) expect(player.potential, player.name).toBe(player.overall)
     }
+  })
+})
+
+describe('pack ratings', () => {
+  it('turn the EA FC-like scale into overalls on one fixed line', () => {
+    expect(overallFromRating(83)).toBe(92)
+    expect(overallFromRating(70)).toBe(66)
+    expect(overallFromRating(55)).toBe(36)
+    expect(overallFromRating(95)).toBe(99)
+  })
+
+  it('give every player of the Brasileirão a rating and keep overalls already set', () => {
+    const file = JSON.parse(raw) as { clubes: { jogadores: Record<string, unknown>[] }[] }
+    const players = file.clubes.flatMap((c) => c.jogadores)
+    for (const player of players) expect(player.nota, String(player.nome)).toBeTypeOf('number')
+    const rated = withOveralls({
+      clubes: [{ jogadores: [{ nota: 80 }, { nota: 80, overall: 50 }] }],
+    })
+    expect(rated.clubes[0].jogadores).toEqual([{ overall: 86 }, { overall: 50 }])
   })
 })
