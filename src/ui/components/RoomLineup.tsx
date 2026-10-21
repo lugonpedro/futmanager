@@ -3,6 +3,7 @@ import { toast } from 'sonner'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import { loadSavedLineup, loadTeamSheet, saveRoomLineup } from '../../cloud/roomLeague.ts'
+import { repairLineup } from '../../engine/match/lineup.ts'
 import type { Lineup, Player } from '../../engine/model/types.ts'
 import type { TeamSheet } from '../../engine/room/summary.ts'
 import { POSITION_NAMES, POSITION_ORDER, ROLE_NAMES, type Role } from '../format.ts'
@@ -63,7 +64,10 @@ export function RoomLineup(props: { room: number; slot: number; round: number })
 
 function Editor(props: { room: number; round: number; sheet: TeamSheet; start?: Lineup }) {
   const { room, sheet } = props
-  const [lineup, setLineup] = useState(props.start ?? sheet.lineup)
+  // A saved lineup may name someone who left in a trade since; the gaps get filled.
+  const [lineup, setLineup] = useState(() =>
+    repairLineup(props.start ?? sheet.lineup, sheet.players, new Set(sheet.out)),
+  )
   const [saving, setSaving] = useState<'salvo' | 'salvando' | undefined>(
     props.start ? 'salvo' : undefined,
   )

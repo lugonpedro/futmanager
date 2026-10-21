@@ -29,14 +29,17 @@ import {
   type DraftTeam,
 } from '../../cloud/draft.ts'
 import { loadRoundReplays, rematchRoom, setRoomReady } from '../../cloud/roomLeague.ts'
+import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import type { Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
 import { forceAt, readiness, timeUntil } from '../roomLeague.ts'
+import { squadIds } from '../roomMarket.ts'
 import { DraftBoard } from './Draft.tsx'
 import { MatchReplay } from './MatchReplay.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
+import { MarketView } from './Market.tsx'
 import { RoomLineup } from './RoomLineup.tsx'
 import { TeamCrest } from './RoomParts.tsx'
 
@@ -47,6 +50,7 @@ type Loaded = {
   pool: PoolPlayer[]
   picks: DraftPick[]
   summary?: RoomSummary
+  rosters: RosterEntry[]
 }
 
 /**
@@ -66,13 +70,32 @@ export function LeagueView(props: { room: Room; userId: string; reload: () => Pr
         loadDraftPool(room.id),
         loadDraftPicks(room.id),
         loadRoomSummary(room.id),
-      ]).then(([teams, pool, picks, summary]) => ({ teams, pool, picks, summary })),
+        loadRosters(room.id),
+      ]).then(([teams, pool, picks, summary, rosters]) => ({
+        teams,
+        pool,
+        picks,
+        summary,
+        rosters,
+      })),
     [room.id],
   )
   const loadSummary = useCallback(async () => {
     const summary = await loadRoomSummary(room.id)
     setLoaded((now) => now && { ...now, summary })
   }, [room.id])
+  const [marketTick, setMarketTick] = useState(0)
+
+  // Squads change in bursts of rows; read them once the burst is over.
+  useEffect(() => {
+    if (marketTick === 0) return
+    const timer = setTimeout(() => {
+      loadRosters(room.id)
+        .then((rosters) => setLoaded((now) => now && { ...now, rosters }))
+        .catch(() => {})
+    }, 400)
+    return () => clearTimeout(timer)
+  }, [room.id, marketTick])
 
   useEffect(() => {
     let live = true
@@ -88,6 +111,7 @@ export function LeagueView(props: { room: Room; userId: string; reload: () => Pr
         ),
       room: () => void reload(),
       round: () => void loadSummary(),
+      market: () => setMarketTick((t) => t + 1),
     })
     return () => {
       live = false
@@ -191,7 +215,24 @@ export function LeagueView(props: { room: Room; userId: string; reload: () => Pr
       )}
 
       {!over && room.round && mine && (
-        <RoomLineup room={room.id} slot={mine.slot} round={room.round.no} />
+        <RoomLineup
+          // A new squad (a trade, a claim, a release) starts the editor over.
+          key={squadIds(loaded.rosters, mine.slot).sort().join()}
+          room={room.id}
+          slot={mine.slot}
+          round={room.round.no}
+        />
+      )}
+
+      {!over && room.round && (
+        <MarketView
+          room={room}
+          teams={teams}
+          mine={mine}
+          pool={loaded.pool}
+          rosters={loaded.rosters}
+          tick={marketTick}
+        />
       )}
 
       <Card>

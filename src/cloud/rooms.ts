@@ -78,6 +78,14 @@ const MESSAGES: Record<string, string> = {
   liga: 'A liga não está em andamento.',
   escalacao: 'Essa escalação não vale. Confira e tente de novo.',
   'nao-acabou': 'A liga ainda não acabou.',
+  livre: 'Esse jogador não está livre.',
+  elenco: 'Algum jogador não está no elenco certo.',
+  pedidos: 'Você já tem 10 pedidos. Tire algum antes.',
+  trocas: 'As trocas estão fechadas nesta sala.',
+  parceiro: 'Só dá para trocar com outra pessoa da sala.',
+  troca: 'Escolha de 1 a 3 jogadores de cada lado, o mesmo número dos dois.',
+  propostas: 'Você já tem 5 propostas esperando resposta.',
+  proposta: 'Essa proposta já foi respondida.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */
