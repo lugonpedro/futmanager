@@ -24,9 +24,9 @@ export type RoomOptions = {
   pickSeconds: 30 | 45 | 60 | 90
   /** Picks after the 11th come from each person's queue, for a quicker draft. */
   autoReserves: boolean
-  /** 1 only the first half, 2 home and away, 3 a third leg on top. */
+  /** 1 only the first half, 2 home and away, 3 a third leg on top (no longer offered). */
   legs: 1 | 2 | 3
-  /** Hours the owner waits for everyone's "Pronto" before playing the round anyway. */
+  /** Hours the owner waits for everyone's "Pronto" before playing the round anyway; 48 is no longer offered. */
   graceHours: 6 | 12 | 24 | 48
   injuries: InjuryRule
   trades: TradeRule
@@ -34,14 +34,14 @@ export type RoomOptions = {
 
 export const DEFAULT_ROOM_OPTIONS: RoomOptions = {
   teams: 8,
-  squadSize: 18,
-  draftOrder: 'serpentina',
+  squadSize: 16,
+  draftOrder: 'terceira-invertida',
   pickSeconds: 45,
   autoReserves: false,
   legs: 2,
-  graceHours: 24,
+  graceHours: 6,
   injuries: 'normais',
-  trades: 'ate-dois-tercos',
+  trades: 'temporada',
 }
 
 export const ROOM_LIMITS = {

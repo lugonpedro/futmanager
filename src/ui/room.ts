@@ -23,6 +23,14 @@ export const DRAFT_ORDER_LABELS: Record<DraftOrder, string> = {
   'terceira-invertida': 'Invertida na 3ª volta',
 }
 
+/** How each draft order works, under the choice. */
+export const DRAFT_ORDER_HINTS: Record<DraftOrder, string> = {
+  serpentina:
+    'A ordem vai e volta: 1º ao 8º na primeira volta, 8º ao 1º na segunda, e assim por diante. Quem escolhe primeiro pega o melhor jogador e ainda abre a terceira volta, então sai com uma pequena vantagem.',
+  'terceira-invertida':
+    'Igual à serpentina, mas a 3ª volta repete a ordem da 2ª (8º ao 1º de novo). Quem pegou o melhor jogador fica por último duas voltas seguidas, e os elencos terminam com força parecida, seja qual for a sua posição na ordem.',
+}
+
 export const LEGS_LABELS: Record<RoomOptions['legs'], string> = {
   1: 'Só ida',
   2: 'Ida e volta',

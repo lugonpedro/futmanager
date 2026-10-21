@@ -6,6 +6,10 @@ import { DEFAULT_ROOM_OPTIONS } from '../engine/room/types.ts'
 import {
   moveInQueue,
   pickProblem,
+  picksUntil,
+  startersAndReserves,
+  strongestFree,
+  withLiveClock,
   positionCounts,
   roundOfPick,
   searchKey,
@@ -93,5 +97,64 @@ describe('queue and search', () => {
 
   it('ignores accents and case', () => {
     expect(searchKey(' Gérson ')).toBe('gerson')
+  })
+})
+
+describe('the draft screen', () => {
+  const serpent = { ...four, draftOrder: 'serpentina' as const }
+
+  it('counts the picks until a place picks again', () => {
+    // Order 2, 0, 1, 3 then back: 3, 1, 0, 2.
+    expect(picksUntil(room(0, serpent), 2)).toBe(0)
+    expect(picksUntil(room(1, serpent), 2)).toBe(6)
+    expect(picksUntil(room(1, serpent), 3)).toBe(2)
+    expect(picksUntil(room(15, serpent), 1)).toBeUndefined()
+  })
+
+  it('lists the strongest free players, by position too', () => {
+    const ranked = (id: string, position: PoolPlayer['position'], rank: number) => ({
+      ...player(id, position),
+      rank,
+    })
+    const all = [ranked('a', 'A', 2), ranked('g', 'G', 0), ranked('m', 'M', 1), ranked('z', 'Z', 3)]
+    const taken: DraftPick[] = [{ pick: 0, slot: 0, playerId: 'g', auto: false }]
+    expect(strongestFree(all, taken, undefined, 2).map((p) => p.id)).toEqual(['m', 'a'])
+    expect(strongestFree(all, taken, 'Z', 10).map((p) => p.id)).toEqual(['z'])
+  })
+
+  it('splits a squad into eleven and reserves, keepers first', () => {
+    const rated = (id: string, position: PoolPlayer['position'], overall: number) => ({
+      ...player(id, position),
+      overall,
+    })
+    const squad = [
+      rated('g1', 'G', 80),
+      rated('g2', 'G', 70),
+      rated('z1', 'Z', 75),
+      rated('z2', 'Z', 74),
+      rated('z3', 'Z', 60),
+      rated('l1', 'L', 72),
+      rated('m1', 'M', 79),
+      rated('m2', 'M', 78),
+      rated('m3', 'M', 77),
+      rated('a1', 'A', 85),
+      rated('a2', 'A', 84),
+      rated('a3', 'A', 83),
+      rated('a4', 'A', 50),
+    ]
+    const { starters, reserves } = startersAndReserves(squad)
+    // One full-back and three midfielders short: the best outfielders left fill in.
+    expect(starters.map((p) => p.id)).toEqual(
+      ['g1', 'z1', 'z2', 'l1', 'm1', 'm2', 'm3', 'a1', 'a2', 'a3', 'z3'].sort(
+        (a, b) => 'GZLMA'.indexOf(a[0].toUpperCase()) - 'GZLMA'.indexOf(b[0].toUpperCase()),
+      ),
+    )
+    expect(reserves.map((p) => p.id)).toEqual(['g2', 'a4'])
+  })
+
+  it('takes the newer clock', () => {
+    const deadline = new Date('2026-10-21T21:00:30Z')
+    expect(withLiveClock(room(3), { pickNo: 4, deadline }).draft?.pickNo).toBe(4)
+    expect(withLiveClock(room(5), { pickNo: 4, deadline }).draft?.pickNo).toBe(5)
   })
 })

@@ -7,8 +7,9 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cleanShortName } from '../../engine/pack/pack.ts'
 import { TEAM_LIMITS, type TeamIdentity } from '../../engine/room/team.ts'
-import { ROOM_LIMITS, type RoomOptions } from '../../engine/room/types.ts'
+import type { RoomOptions } from '../../engine/room/types.ts'
 import {
+  DRAFT_ORDER_HINTS,
   DRAFT_ORDER_LABELS,
   INJURY_LABELS,
   LEGS_LABELS,
@@ -117,10 +118,12 @@ export function TeamFields(props: {
   )
 }
 
-const TEAM_COUNTS = Array.from(
-  { length: (ROOM_LIMITS.maxTeams - ROOM_LIMITS.minTeams) / 2 + 1 },
-  (_, i) => String(ROOM_LIMITS.minTeams + 2 * i),
-)
+/** Team counts offered; a room made before keeps its own count on the list. */
+const TEAM_COUNTS = ['4', '8', '12']
+
+/** The choices offered, with the room's current value kept if it is one no longer offered. */
+const offered = <T extends string>(choices: readonly T[], current: T): T[] =>
+  choices.includes(current) ? [...choices] : [...choices, current]
 
 function Option(props: { label: string; hint?: string; children: ReactNode }) {
   return (
@@ -132,18 +135,12 @@ function Option(props: { label: string; hint?: string; children: ReactNode }) {
   )
 }
 
-/** Everything the owner picks for a room: the options of the draft and the league, and when the draft is. */
-export function RoomOptionsFields(props: {
+/** What creating a room asks: its name, when the draft is and how many teams; the rest starts as the defaults. */
+export function RoomBasicsFields(props: {
   value: RoomOptionsDraft
   onChange: (value: RoomOptionsDraft) => void
-  /** People already in the room; the number of teams can't go below it. */
-  people?: number
 }) {
   const { value } = props
-  const options = value.options
-  const set = (patch: Partial<RoomOptions>) =>
-    props.onChange({ ...value, options: { ...options, ...patch } })
-  const people = props.people ?? 1
   return (
     <div className="flex flex-col gap-4">
       <Field label="Nome da sala" htmlFor="sala-nome">
@@ -164,14 +161,48 @@ export function RoomOptionsFields(props: {
           className="w-fit"
         />
       </Field>
-      <Option label="Times" hint="Pessoas e robôs juntos: quem não entrar até o draft vira robô.">
-        <Choices
-          ariaLabel="Times"
-          options={TEAM_COUNTS.filter((n) => Number(n) >= people)}
-          value={String(options.teams)}
-          onChange={(n) => set({ teams: Number(n) })}
-        />
-      </Option>
+      <TeamsOption
+        options={value.options}
+        people={1}
+        onChange={(teams) => props.onChange({ ...value, options: { ...value.options, teams } })}
+      />
+    </div>
+  )
+}
+
+function TeamsOption(props: {
+  options: RoomOptions
+  people: number
+  onChange: (teams: number) => void
+}) {
+  return (
+    <Option label="Times" hint="Pessoas e robôs juntos: quem não entrar até o draft vira robô.">
+      <Choices
+        ariaLabel="Times"
+        options={offered(TEAM_COUNTS, String(props.options.teams)).filter(
+          (n) => Number(n) >= props.people,
+        )}
+        value={String(props.options.teams)}
+        onChange={(n) => props.onChange(Number(n))}
+      />
+    </Option>
+  )
+}
+
+/** The rules of the draft and the league, which the owner can change in the waiting room. */
+export function RoomRulesFields(props: {
+  value: RoomOptions
+  onChange: (value: RoomOptions) => void
+  /** People already in the room; the number of teams can't go below it. */
+  people: number
+}) {
+  const options = props.value
+  const set = (patch: Partial<RoomOptions>) => props.onChange({ ...options, ...patch })
+  const legs = String(options.legs) as '1' | '2' | '3'
+  const grace = String(options.graceHours) as '6' | '12' | '24' | '48'
+  return (
+    <div className="flex flex-col gap-4">
+      <TeamsOption options={options} people={props.people} onChange={(teams) => set({ teams })} />
       <Option label="Elenco" hint="Jogadores de cada time, com no mínimo 2 goleiros.">
         <Choices
           ariaLabel="Elenco"
@@ -180,10 +211,7 @@ export function RoomOptionsFields(props: {
           onChange={(n) => set({ squadSize: Number(n) as RoomOptions['squadSize'] })}
         />
       </Option>
-      <Option
-        label="Ordem do draft"
-        hint="Na serpentina, quem escolhe por último numa volta escolhe primeiro na seguinte. Invertida na 3ª volta tira quase toda a vantagem de escolher primeiro."
-      >
+      <Option label="Ordem do draft" hint={DRAFT_ORDER_HINTS[options.draftOrder]}>
         <Choices
           ariaLabel="Ordem do draft"
           options={Object.keys(DRAFT_ORDER_LABELS) as RoomOptions['draftOrder'][]}
@@ -203,7 +231,7 @@ export function RoomOptionsFields(props: {
       </Option>
       <Option
         label="Reservas no automático"
-        hint="As escolhas depois da 11ª saem da fila de cada um, para o draft acabar mais rápido."
+        hint="Depois do 11º jogador, o automático escolhe por todo mundo o de maior geral entre as posições que ainda faltam no elenco, para o draft acabar mais rápido."
       >
         <Choices
           ariaLabel="Reservas no automático"
@@ -216,8 +244,8 @@ export function RoomOptionsFields(props: {
       <Option label="Turnos">
         <Choices
           ariaLabel="Turnos"
-          options={['1', '2', '3'] as const}
-          value={String(options.legs) as '1' | '2' | '3'}
+          options={offered(['1', '2'] as const, legs)}
+          value={legs}
           label={(l) => LEGS_LABELS[Number(l) as RoomOptions['legs']]}
           onChange={(l) => set({ legs: Number(l) as RoomOptions['legs'] })}
         />
@@ -228,8 +256,8 @@ export function RoomOptionsFields(props: {
       >
         <Choices
           ariaLabel="Prazo de segurança"
-          options={['6', '12', '24', '48'] as const}
-          value={String(options.graceHours) as '6' | '12' | '24' | '48'}
+          options={offered(['6', '12', '24'] as const, grace)}
+          value={grace}
           label={(h) => `${h} h`}
           onChange={(h) => set({ graceHours: Number(h) as RoomOptions['graceHours'] })}
         />

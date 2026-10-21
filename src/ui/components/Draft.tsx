@@ -1,39 +1,41 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowDownIcon, ArrowUpIcon, BotIcon, StarIcon, TimerIcon, XIcon } from 'lucide-react'
+import { BotIcon, TimerIcon } from 'lucide-react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import {
   draftPick,
   draftTick,
   loadDraftPicks,
   loadDraftPool,
-  loadDraftQueue,
   loadDraftTeams,
-  saveDraftQueue,
   setDraftAuto,
   watchRoom,
   type DraftPick,
   type DraftTeam,
+  type LiveClock,
 } from '../../cloud/draft.ts'
 import type { Room } from '../../cloud/rooms.ts'
-import { POSITIONS, type Position } from '../../engine/model/types.ts'
+import { POSITIONS, type Position, type World } from '../../engine/model/types.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import {
   draftTotal,
-  moveInQueue,
   pickProblem,
+  picksUntil,
   positionCounts,
   roundOfPick,
-  searchKey,
   secondsLeft,
   slotOnTheClock,
   squadsOf,
+  startersAndReserves,
+  strongestFree,
+  withLiveClock,
 } from '../draft.ts'
-import { POSITION_NAMES } from '../format.ts'
+import { CARD_CUTS, POSITION_NAMES } from '../format.ts'
+import { usePackWorld } from '../usePackWorld.ts'
 import { Choices } from './Choices.tsx'
+import { PlayerCard } from './PlayerCard.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { TeamCrest } from './RoomParts.tsx'
 
@@ -43,51 +45,58 @@ const messageOf = (error: unknown) => (error instanceof Error ? error.message : 
 const TICK_RETRY_MS = 2000
 /** A fresh look at the whole draft now and then, in case a live update got lost. */
 const SAFETY_RELOAD_MS = 20_000
-/** Players listed at first; more on demand. */
-const PAGE = 40
+/** Cards on the table at a time. */
+const CARDS = 10
 
 type PositionFilter = Position | 'todas'
 
-/** The live draft: the clock, the players, the queue, the squads and every pick. */
+/** Picks merged by number, so an older full list never drops a newer live one. */
+const mergePicks = (now: DraftPick[], more: DraftPick[]) => {
+  const byNo = new Map(now.map((p) => [p.pick, p]))
+  for (const pick of more) byNo.set(pick.pick, pick)
+  return [...byNo.values()].sort((a, b) => a.pick - b.pick)
+}
+
+/** The live draft: the clock, the latest pick, the strongest cards still free, and the squads. */
 export function DraftView(props: { room: Room; userId: string; reload: () => Promise<void> }) {
-  const { room, userId, reload } = props
+  const { userId, reload } = props
   const [teams, setTeams] = useState<DraftTeam[]>()
   const [pool, setPool] = useState<PoolPlayer[]>()
   const [picks, setPicks] = useState<DraftPick[]>([])
-  const [queue, setQueue] = useState<string[]>([])
+  const [live, setLive] = useState<LiveClock>()
   const [failed, setFailed] = useState(false)
+  const world = usePackWorld(props.room.pack)
+  // A live update moves the clock at once; the full room follows.
+  const room = withLiveClock(props.room, live)
+  const roomId = room.id
 
   const refresh = useCallback(
     () =>
-      Promise.all([loadDraftTeams(room.id), loadDraftPicks(room.id)]).then(
+      Promise.all([loadDraftTeams(roomId), loadDraftPicks(roomId)]).then(
         ([loadedTeams, loadedPicks]) => {
           setTeams(loadedTeams)
-          setPicks(loadedPicks)
+          setPicks((now) => mergePicks(now, loadedPicks))
         },
       ),
-    [room.id],
+    [roomId],
   )
 
   useEffect(() => {
     let live = true
-    Promise.all([
-      loadDraftPool(room.id),
-      loadDraftQueue(room.id, userId),
-      loadDraftTeams(room.id),
-      loadDraftPicks(room.id),
-    ])
-      .then(([loadedPool, loadedQueue, loadedTeams, loadedPicks]) => {
+    Promise.all([loadDraftPool(roomId), loadDraftTeams(roomId), loadDraftPicks(roomId)])
+      .then(([loadedPool, loadedTeams, loadedPicks]) => {
         if (!live) return
         setPool(loadedPool)
-        setQueue(loadedQueue)
         setTeams(loadedTeams)
-        setPicks(loadedPicks)
+        setPicks((now) => mergePicks(now, loadedPicks))
       })
       .catch(() => live && setFailed(true))
-    const stop = watchRoom(room.id, {
-      pick: (pick) =>
-        setPicks((now) => (now.some((p) => p.pick === pick.pick) ? now : [...now, pick])),
-      room: () => void reload(),
+    const stop = watchRoom(roomId, {
+      pick: (pick) => setPicks((now) => mergePicks(now, [pick])),
+      room: (clock) => {
+        setLive((now) => (now && now.pickNo > clock.pickNo ? now : clock))
+        void reload()
+      },
       team: (team) => setTeams((now) => now?.map((t) => (t.slot === team.slot ? team : t))),
     })
     const safety = setInterval(() => {
@@ -99,7 +108,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
       stop()
       clearInterval(safety)
     }
-  }, [room.id, userId, refresh, reload])
+  }, [roomId, refresh, reload])
 
   const byId = useMemo(() => new Map((pool ?? []).map((p) => [p.id, p])), [pool])
   if (failed) {
@@ -120,10 +129,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
   }
 
   const mine = teams.find((t) => t.userId === userId)
-  const changeQueue = (next: string[]) => {
-    setQueue(next)
-    saveDraftQueue(room.id, next).catch((error) => toast.error(messageOf(error)))
-  }
+  const after = () => Promise.all([refresh(), reload()]).then(() => undefined)
 
   return (
     <>
@@ -132,27 +138,43 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
         teams={teams}
         mine={mine}
         owner={room.ownerId === userId}
-        onTicked={() => Promise.all([refresh(), reload()]).then(() => undefined)}
+        onTicked={after}
       />
-      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_20rem]">
-        <PoolCard
+      <LastPick room={room} teams={teams} byId={byId} picks={picks} />
+      {slotOnTheClock(room) !== undefined && (
+        <CardTable
           room={room}
           pool={pool}
           byId={byId}
           picks={picks}
           mine={mine}
-          queue={queue}
-          onQueue={changeQueue}
-          onPicked={() => Promise.all([refresh(), reload()]).then(() => undefined)}
+          world={world}
+          onPicked={after}
         />
-        <div className="flex flex-col gap-4">
-          {mine && <QueueCard byId={byId} picks={picks} queue={queue} onChange={changeQueue} />}
-          {mine && <SquadCard room={room} byId={byId} picks={picks} team={mine} />}
-        </div>
-      </div>
+      )}
       <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
     </>
   )
+}
+
+/** While it is the player's turn: a buzz, and the tab's title says so. */
+function useYourTurnAlert(myTurn: boolean) {
+  useEffect(() => {
+    if (!myTurn) return
+    // Browsers only let a page buzz after the player touched it.
+    if (navigator.userActivation?.hasBeenActive) navigator.vibrate?.([200, 100, 200])
+    const title = document.title
+    let on = true
+    const blink = setInterval(() => {
+      on = !on
+      document.title = on ? '⚽ Sua vez!' : title
+    }, 1000)
+    document.title = '⚽ Sua vez!'
+    return () => {
+      clearInterval(blink)
+      document.title = title
+    }
+  }, [myTurn])
 }
 
 function Clock(props: {
@@ -173,6 +195,8 @@ function Clock(props: {
   const total = draftTotal(room)
   const pickNo = room.draft?.pickNo ?? 0
   const { round, inRound } = roundOfPick(pickNo, room.options.teams)
+  const until = mine ? picksUntil(room, mine.slot) : undefined
+  useYourTurnAlert(myTurn && !mine?.auto)
 
   useEffect(() => {
     const timer = setInterval(() => setNow(Date.now()), 250)
@@ -237,8 +261,14 @@ function Clock(props: {
     )
   }
 
+  const share = Math.min(1, left / room.options.pickSeconds)
   return (
-    <Card className={cn(myTurn && 'border-highlight ring-2 ring-highlight/40')}>
+    <Card
+      className={cn(
+        'sticky top-2 z-10 gap-3 overflow-hidden',
+        myTurn && 'border-highlight ring-2 ring-highlight/40',
+      )}
+    >
       <CardContent className="flex flex-wrap items-center gap-3">
         <TeamCrest team={team} id={`relogio-${team.slot}`} className="size-10 shrink-0" />
         <div className="flex min-w-40 flex-1 flex-col">
@@ -248,11 +278,17 @@ function Clock(props: {
           <span className="truncate text-lg font-bold">
             {myTurn ? 'Sua vez de escolher!' : `Vez do ${team.name}`}
           </span>
-          {team.robot ? (
-            <span className="text-xs text-muted-foreground">Robô escolhendo…</span>
-          ) : (
-            team.auto && <span className="text-xs text-muted-foreground">No automático</span>
-          )}
+          <span className="text-xs text-muted-foreground">
+            {team.robot
+              ? 'Robô escolhendo…'
+              : team.auto
+                ? 'No automático'
+                : !myTurn && until !== undefined
+                  ? until === 1
+                    ? 'Você é o próximo!'
+                    : `Você escolhe daqui a ${until} escolhas.`
+                  : ' '}
+          </span>
         </div>
         <span
           className={cn(
@@ -276,39 +312,107 @@ function Clock(props: {
           </Button>
         )}
       </CardContent>
+      <div className="h-1.5 w-full bg-muted" aria-hidden>
+        <div
+          className={cn(
+            'h-full transition-[width] duration-300 ease-linear',
+            left <= 10 ? 'bg-destructive' : 'bg-highlight',
+          )}
+          style={{ width: `${share * 100}%` }}
+        />
+      </div>
     </Card>
   )
 }
 
-function PoolCard(props: {
+/** The latest pick, revealed like a card flipped on the table. */
+function LastPick(props: {
+  room: Room
+  teams: DraftTeam[]
+  byId: ReadonlyMap<string, PoolPlayer>
+  picks: DraftPick[]
+}) {
+  const last = props.picks.at(-1)
+  if (!last) return null
+  const team = props.teams.find((t) => t.slot === last.slot)
+  const player = props.byId.get(last.playerId)
+  if (!team || !player) return null
+  const { round, inRound } = roundOfPick(last.pick, props.room.options.teams)
+  return (
+    <div
+      key={last.pick}
+      className="flex items-center gap-3 rounded-xl border bg-card p-3 shadow-sm duration-500 animate-in fade-in zoom-in-95 slide-in-from-top-2"
+    >
+      <TeamCrest team={team} id={`ultima-${last.pick}`} className="size-9 shrink-0" />
+      <div className="flex min-w-0 flex-1 flex-col">
+        <span className="text-xs text-muted-foreground">
+          Escolha {round}.{inRound} · {team.name}
+          {last.auto && !team.robot && ' (automático)'}
+        </span>
+        <span className="truncate font-bold">{player.name}</span>
+        <span className="text-xs text-muted-foreground">
+          {POSITION_NAMES[player.position]} · {player.origin}
+        </span>
+      </div>
+      <MiniCard player={player} />
+    </div>
+  )
+}
+
+/** A small card face: overall and position on the band colour of the player's card. */
+function MiniCard(props: { player: PoolPlayer }) {
+  const { player } = props
+  const tier =
+    player.overall >= CARD_CUTS.ouro
+      ? 'ouro'
+      : player.overall >= CARD_CUTS.prata
+        ? 'prata'
+        : 'bronze'
+  return (
+    <span
+      className={cn(
+        'flex w-12 shrink-0 flex-col items-center rounded-lg bg-gradient-to-br py-1 leading-none shadow ring-1 ring-black/20 duration-700 animate-in spin-in-12 zoom-in-50',
+        tier === 'ouro' && 'from-amber-500 via-yellow-200 to-amber-500 text-amber-950',
+        tier === 'prata' && 'from-slate-400 via-slate-100 to-slate-400 text-slate-900',
+        tier === 'bronze' && 'from-amber-800 via-orange-300 to-amber-700 text-amber-950',
+      )}
+    >
+      <span className="text-xl font-black tabular-nums">{player.overall}</span>
+      <span className="text-xs font-bold">{player.position}</span>
+    </span>
+  )
+}
+
+/**
+ * The strongest players still free as cards, of all positions or one. Tapping
+ * a card picks it out; the button under the row makes the pick.
+ */
+function CardTable(props: {
   room: Room
   pool: PoolPlayer[]
   byId: ReadonlyMap<string, PoolPlayer>
   picks: DraftPick[]
   mine?: DraftTeam
-  queue: string[]
-  onQueue: (queue: string[]) => void
+  world?: World
   onPicked: () => Promise<void>
 }) {
-  const { room, pool, byId, picks, mine, queue } = props
+  const { room, pool, byId, picks, mine, world } = props
   const [position, setPosition] = useState<PositionFilter>('todas')
-  const [search, setSearch] = useState('')
-  const [shown, setShown] = useState(PAGE)
+  const [selected, setSelected] = useState<string>()
   const [busy, setBusy] = useState(false)
-  const takenBy = useMemo(() => new Map(picks.map((p) => [p.playerId, p.slot])), [picks])
   const myTurn = mine !== undefined && slotOnTheClock(room) === mine.slot
-  const key = searchKey(search)
-  const matching = pool.filter(
-    (p) =>
-      !takenBy.has(p.id) &&
-      (position === 'todas' || p.position === position) &&
-      (!key || searchKey(p.name).includes(key) || searchKey(p.origin).includes(key)),
-  )
+  const cards = strongestFree(pool, picks, position === 'todas' ? undefined : position, CARDS)
+  const chosen = cards.find((p) => p.id === selected)
+  const problem = mine && chosen ? pickProblem(room, byId, picks, mine.slot, chosen.id) : undefined
+  const counts = mine ? positionCounts(squadsOf(picks).get(mine.slot) ?? [], byId) : undefined
+  const shape = room.draft?.shape
 
-  const pick = async (player: PoolPlayer) => {
+  const pick = async () => {
+    if (!chosen) return
     setBusy(true)
     try {
-      await draftPick(room.id, player.id)
+      await draftPick(room.id, chosen.id)
+      setSelected(undefined)
       await props.onPicked()
     } catch (error) {
       toast.error(messageOf(error))
@@ -318,94 +422,99 @@ function PoolCard(props: {
   }
 
   return (
-    <Card>
+    <Card className="gap-3">
       <CardHeader>
-        <CardTitle>Jogadores livres</CardTitle>
+        <CardTitle>{position === 'todas' ? 'Os mais fortes' : POSITION_NAMES[position]}</CardTitle>
         <CardDescription>
-          {matching.length} de {pool.length - takenBy.size} livres. A estrela põe o jogador na sua
-          fila: quando o tempo acaba, sai o primeiro dela que ainda estiver livre.
+          {counts && shape
+            ? 'Nos botões, quantos você tem de cada posição e quantos o elenco pede.'
+            : 'As 10 cartas mais fortes ainda livres.'}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
-        <div className="flex flex-wrap gap-2">
-          <Choices
-            ariaLabel="Posição"
-            options={['todas', ...POSITIONS] as PositionFilter[]}
-            value={position}
-            label={(p) => (p === 'todas' ? 'Todas' : p)}
-            title={(p) => (p === 'todas' ? 'Todas as posições' : POSITION_NAMES[p])}
-            onChange={(p) => {
-              setPosition(p)
-              setShown(PAGE)
-            }}
-          />
-          <Input
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value)
-              setShown(PAGE)
-            }}
-            placeholder="Nome ou clube"
-            aria-label="Buscar jogador"
-            className="min-w-32 flex-1"
-          />
-        </div>
-        <ul className="flex max-h-[30rem] flex-col divide-y overflow-y-auto rounded-md border">
-          {matching.slice(0, shown).map((player) => {
-            const queued = queue.includes(player.id)
-            const problem = mine ? pickProblem(room, byId, picks, mine.slot, player.id) : undefined
+        <Choices
+          ariaLabel="Posição"
+          options={['todas', ...POSITIONS] as PositionFilter[]}
+          value={position}
+          label={(p) =>
+            p === 'todas' ? 'Todas' : counts && shape ? `${p} ${counts[p]}/${shape[p]}` : p
+          }
+          title={(p) => (p === 'todas' ? 'Todas as posições' : POSITION_NAMES[p])}
+          onChange={setPosition}
+        />
+        <ul className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pt-4 pb-3">
+          {cards.map((player, i) => {
+            const full = world?.players[player.id]
+            const isSelected = player.id === selected
             return (
-              <li key={player.id} className="flex items-center gap-2 px-2 py-1.5">
-                <PlayerLine player={player} />
-                {mine && (
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    aria-label={
-                      queued ? `Tirar ${player.name} da fila` : `Pôr ${player.name} na fila`
-                    }
-                    aria-pressed={queued}
-                    onClick={() =>
-                      props.onQueue(
-                        queued ? queue.filter((id) => id !== player.id) : [...queue, player.id],
-                      )
-                    }
-                  >
-                    {queued ? <StarIcon className="fill-current text-highlight" /> : <StarIcon />}
-                  </Button>
-                )}
-                {myTurn && (
-                  <Button
-                    size="sm"
-                    disabled={busy || problem !== undefined}
-                    title={problem}
-                    onClick={() => pick(player)}
-                  >
-                    Escolher
-                  </Button>
-                )}
+              <li
+                key={player.id}
+                className="snap-start duration-300 animate-in fade-in slide-in-from-right-4"
+                style={{ animationDelay: `${i * 40}ms`, animationFillMode: 'backwards' }}
+              >
+                <button
+                  type="button"
+                  aria-pressed={isSelected}
+                  aria-label={`${player.name}, ${POSITION_NAMES[player.position]}, geral ${player.overall}`}
+                  onClick={() => setSelected(isSelected ? undefined : player.id)}
+                  className={cn(
+                    'block rounded-[2.6rem_2.6rem_1.1rem_1.1rem] transition-transform outline-none hover:-translate-y-1 focus-visible:ring-3 focus-visible:ring-ring',
+                    isSelected &&
+                      '-translate-y-2 ring-4 ring-highlight ring-offset-4 ring-offset-card',
+                  )}
+                >
+                  {full ? (
+                    <PlayerCard
+                      player={{ ...full, name: player.name, overall: player.overall }}
+                      club={world.clubs[full.clubId]}
+                    />
+                  ) : (
+                    <PlainCard player={player} />
+                  )}
+                </button>
               </li>
             )
           })}
-          {matching.length === 0 && (
-            <li className="p-3 text-sm text-muted-foreground">Ninguém livre com esse filtro.</li>
+          {cards.length === 0 && (
+            <li className="p-3 text-sm text-muted-foreground">Ninguém livre nessa posição.</li>
           )}
         </ul>
-        {matching.length > shown && (
-          <Button variant="outline" size="sm" onClick={() => setShown(shown + PAGE)}>
-            Mostrar mais
-          </Button>
-        )}
+        {mine &&
+          (myTurn ? (
+            <Button size="lg" onClick={pick} disabled={busy || !chosen || problem !== undefined}>
+              {chosen ? `Escolher ${chosen.name}` : 'Toque numa carta para escolher'}
+            </Button>
+          ) : (
+            chosen && (
+              <p className="text-center text-sm text-muted-foreground">
+                Quando chegar a sua vez, é só tocar em escolher.
+              </p>
+            )
+          ))}
+        {problem && <p className="text-center text-sm text-destructive">{problem}</p>}
       </CardContent>
     </Card>
   )
 }
 
-/** A player's line in the lists: overall, position, name, club of origin and age. */
-function PlayerLine(props: { player: PoolPlayer; muted?: boolean; compact?: boolean }) {
+/** A card for a player the pack no longer has in full: overall, position, name and club. */
+function PlainCard(props: { player: PoolPlayer }) {
   const { player } = props
   return (
-    <span className={cn('flex min-w-0 flex-1 items-center gap-2', props.muted && 'opacity-50')}>
+    <span className="flex h-64 w-48 flex-col items-center justify-center gap-1 rounded-t-[2.5rem] rounded-b-2xl bg-gradient-to-br from-slate-400 via-slate-100 to-slate-400 p-3 text-slate-900 shadow-lg ring-1 ring-black/20">
+      <span className="text-4xl font-black tabular-nums">{player.overall}</span>
+      <span className="text-sm font-bold">{player.position}</span>
+      <span className="w-full truncate text-center font-extrabold uppercase">{player.name}</span>
+      <span className="text-xs">{player.origin}</span>
+    </span>
+  )
+}
+
+/** A player's line in the lists: overall, position, name, club of origin and age. */
+function PlayerLine(props: { player: PoolPlayer }) {
+  const { player } = props
+  return (
+    <span className="flex min-w-0 flex-1 items-center gap-2">
       <span className="w-7 shrink-0 text-right font-mono font-bold tabular-nums">
         {player.overall}
       </span>
@@ -415,129 +524,13 @@ function PlayerLine(props: { player: PoolPlayer; muted?: boolean; compact?: bool
       >
         {player.position}
       </span>
-      <span className={cn('min-w-0 flex-1 truncate', props.muted && 'line-through')}>
-        {player.name}
-      </span>
-      <span className="shrink-0 text-xs text-muted-foreground">
-        {player.origin}
-        {!props.compact && ` · ${player.age}`}
-      </span>
+      <span className="min-w-0 flex-1 truncate">{player.name}</span>
+      <span className="shrink-0 text-xs text-muted-foreground">{player.origin}</span>
     </span>
   )
 }
 
-function QueueCard(props: {
-  byId: ReadonlyMap<string, PoolPlayer>
-  picks?: DraftPick[]
-  queue: string[]
-  onChange: (queue: string[]) => void
-}) {
-  const { byId, queue } = props
-  const taken = new Set((props.picks ?? []).map((p) => p.playerId))
-  const players = queue.map((id) => byId.get(id)).filter((p) => p !== undefined)
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Sua fila</CardTitle>
-        <CardDescription>
-          {players.length === 0
-            ? 'Vazia: sem fila, o automático pega o melhor livre na posição que mais falta.'
-            : 'Na ordem em que o automático escolhe por você. Os já escolhidos são pulados.'}
-        </CardDescription>
-      </CardHeader>
-      {players.length > 0 && (
-        <CardContent>
-          <ol className="flex flex-col gap-1">
-            {players.map((player, i) => (
-              <li key={player.id} className="flex items-center gap-1 text-sm">
-                <span className="w-5 text-right text-xs text-muted-foreground">{i + 1}</span>
-                <PlayerLine player={player} muted={taken.has(player.id)} compact />
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="size-7"
-                  aria-label={`Subir ${player.name}`}
-                  disabled={i === 0}
-                  onClick={() => props.onChange(moveInQueue(queue, player.id, -1))}
-                >
-                  <ArrowUpIcon />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="size-7"
-                  aria-label={`Descer ${player.name}`}
-                  disabled={i === players.length - 1}
-                  onClick={() => props.onChange(moveInQueue(queue, player.id, 1))}
-                >
-                  <ArrowDownIcon />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="size-7"
-                  aria-label={`Tirar ${player.name} da fila`}
-                  onClick={() => props.onChange(queue.filter((id) => id !== player.id))}
-                >
-                  <XIcon />
-                </Button>
-              </li>
-            ))}
-          </ol>
-        </CardContent>
-      )}
-    </Card>
-  )
-}
-
-function SquadCard(props: {
-  room: Room
-  byId: ReadonlyMap<string, PoolPlayer>
-  picks: DraftPick[]
-  team: DraftTeam
-}) {
-  const { room, byId, team } = props
-  const ids = squadsOf(props.picks).get(team.slot) ?? []
-  const counts = positionCounts(ids, byId)
-  const shape = room.draft?.shape
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          Seu elenco ({ids.length} de {room.options.squadSize})
-        </CardTitle>
-        <CardDescription className="flex flex-wrap gap-x-3">
-          {POSITIONS.map((p) => (
-            <span key={p} title={POSITION_NAMES[p]}>
-              {p} {counts[p]}
-              {shape && `/${shape[p]}`}
-            </span>
-          ))}
-        </CardDescription>
-      </CardHeader>
-      {ids.length > 0 && (
-        <CardContent>
-          <ul className="flex flex-col gap-1 text-sm">
-            {ids
-              .map((id) => byId.get(id))
-              .filter((p) => p !== undefined)
-              .sort(
-                (a, b) =>
-                  POSITIONS.indexOf(a.position) - POSITIONS.indexOf(b.position) ||
-                  b.overall - a.overall,
-              )
-              .map((player) => (
-                <li key={player.id}>
-                  <PlayerLine player={player} />
-                </li>
-              ))}
-          </ul>
-        </CardContent>
-      )}
-    </Card>
-  )
-}
-
+/** Every team's squad as it stands, eleven then reserves, or every pick, the latest first. */
 export function DraftBoard(props: {
   room: Room
   teams: DraftTeam[]
@@ -545,7 +538,7 @@ export function DraftBoard(props: {
   picks: DraftPick[]
 }) {
   const { room, teams, byId, picks } = props
-  const [view, setView] = useState<'escolhas' | 'elencos'>('escolhas')
+  const [view, setView] = useState<'elencos' | 'historico'>('elencos')
   const squads = squadsOf(picks)
   const teamOf = new Map(teams.map((t) => [t.slot, t]))
   const recent = [...picks].sort((a, b) => b.pick - a.pick)
@@ -553,18 +546,18 @@ export function DraftBoard(props: {
     <Card>
       <CardHeader>
         <CardTitle className="flex flex-wrap items-center justify-between gap-2">
-          Quadro do draft
+          {view === 'elencos' ? 'Elencos' : 'Histórico'}
           <Choices
             ariaLabel="Ver"
-            options={['escolhas', 'elencos'] as const}
+            options={['elencos', 'historico'] as const}
             value={view}
-            label={(v) => (v === 'escolhas' ? 'Escolhas' : 'Elencos')}
+            label={(v) => (v === 'elencos' ? 'Elencos' : 'Histórico')}
             onChange={setView}
           />
         </CardTitle>
       </CardHeader>
       <CardContent>
-        {view === 'escolhas' ? (
+        {view === 'historico' ? (
           recent.length === 0 ? (
             <p className="text-sm text-muted-foreground">Ninguém escolheu ainda.</p>
           ) : (
@@ -600,135 +593,50 @@ export function DraftBoard(props: {
           )
         ) : (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {teams.map((team) => (
-              <section key={team.slot} className="flex flex-col gap-1 rounded-md border p-2">
-                <h3 className="flex items-center gap-2 text-sm font-semibold">
-                  <TeamCrest team={team} id={`elenco-${team.slot}`} className="size-5" />
-                  <span className="truncate">{team.name}</span>
-                  {team.robot && (
-                    <BotIcon className="size-3.5 text-muted-foreground" aria-label="Robô" />
+            {teams.map((team) => {
+              const players = (squads.get(team.slot) ?? [])
+                .map((id) => byId.get(id))
+                .filter((p) => p !== undefined)
+              const { starters, reserves } = startersAndReserves(players)
+              return (
+                <section key={team.slot} className="flex flex-col gap-1 rounded-md border p-2">
+                  <h3 className="flex items-center gap-2 text-sm font-semibold">
+                    <TeamCrest team={team} id={`elenco-${team.slot}`} className="size-5" />
+                    <span className="truncate">{team.name}</span>
+                    {team.robot && (
+                      <BotIcon className="size-3.5 text-muted-foreground" aria-label="Robô" />
+                    )}
+                    <span className="ml-auto text-xs font-normal text-muted-foreground tabular-nums">
+                      {players.length}/{room.options.squadSize}
+                    </span>
+                  </h3>
+                  {players.length === 0 ? (
+                    <p className="text-xs text-muted-foreground">Ainda sem jogadores.</p>
+                  ) : (
+                    <ul className="flex flex-col text-xs">
+                      {starters.map((player) => (
+                        <li key={player.id}>
+                          <PlayerLine player={player} />
+                        </li>
+                      ))}
+                      {reserves.length > 0 && (
+                        <li className="mt-1 mb-0.5 border-t pt-1 text-[0.65rem] font-semibold tracking-wide text-muted-foreground uppercase">
+                          Reservas
+                        </li>
+                      )}
+                      {reserves.map((player) => (
+                        <li key={player.id}>
+                          <PlayerLine player={player} />
+                        </li>
+                      ))}
+                    </ul>
                   )}
-                </h3>
-                <ul className="flex flex-col text-xs">
-                  {(squads.get(team.slot) ?? [])
-                    .map((id) => byId.get(id))
-                    .filter((p) => p !== undefined)
-                    .map((player) => (
-                      <li key={player.id}>
-                        <PlayerLine player={player} />
-                      </li>
-                    ))}
-                </ul>
-              </section>
-            ))}
+                </section>
+              )
+            })}
           </div>
         )}
       </CardContent>
     </Card>
-  )
-}
-
-/**
- * The queue before the draft, with the pool the app lists from the pack
- * itself (the same one the server lists when the draft starts).
- */
-export function QueueBeforeDraft(props: { room: Room; userId: string; pool: PoolPlayer[] }) {
-  const { room, userId, pool } = props
-  const [queue, setQueue] = useState<string[]>()
-  const byId = useMemo(() => new Map(pool.map((p) => [p.id, p])), [pool])
-  const [position, setPosition] = useState<PositionFilter>('todas')
-  const [search, setSearch] = useState('')
-  const [shown, setShown] = useState(PAGE)
-
-  useEffect(() => {
-    let live = true
-    loadDraftQueue(room.id, userId)
-      .then((loaded) => live && setQueue(loaded))
-      .catch(() => live && setQueue([]))
-    return () => {
-      live = false
-    }
-  }, [room.id, userId])
-
-  if (!queue) return null
-  const change = (next: string[]) => {
-    setQueue(next)
-    saveDraftQueue(room.id, next).catch((error) => toast.error(messageOf(error)))
-  }
-  const key = searchKey(search)
-  const matching = pool.filter(
-    (p) =>
-      (position === 'todas' || p.position === position) &&
-      (!key || searchKey(p.name).includes(key) || searchKey(p.origin).includes(key)),
-  )
-
-  return (
-    <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_20rem]">
-      <Card>
-        <CardHeader>
-          <CardTitle>Monte sua fila</CardTitle>
-          <CardDescription>
-            Marque com a estrela quem você quer, na ordem de preferência. No draft, quando o seu
-            tempo acaba, sai o primeiro da fila que ainda estiver livre.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-3">
-          <div className="flex flex-wrap gap-2">
-            <Choices
-              ariaLabel="Posição"
-              options={['todas', ...POSITIONS] as PositionFilter[]}
-              value={position}
-              label={(p) => (p === 'todas' ? 'Todas' : p)}
-              title={(p) => (p === 'todas' ? 'Todas as posições' : POSITION_NAMES[p])}
-              onChange={(p) => {
-                setPosition(p)
-                setShown(PAGE)
-              }}
-            />
-            <Input
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value)
-                setShown(PAGE)
-              }}
-              placeholder="Nome ou clube"
-              aria-label="Buscar jogador"
-              className="min-w-32 flex-1"
-            />
-          </div>
-          <ul className="flex max-h-[30rem] flex-col divide-y overflow-y-auto rounded-md border">
-            {matching.slice(0, shown).map((player) => {
-              const queued = queue.includes(player.id)
-              return (
-                <li key={player.id} className="flex items-center gap-2 px-2 py-1.5">
-                  <PlayerLine player={player} />
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    aria-label={
-                      queued ? `Tirar ${player.name} da fila` : `Pôr ${player.name} na fila`
-                    }
-                    aria-pressed={queued}
-                    onClick={() =>
-                      change(
-                        queued ? queue.filter((id) => id !== player.id) : [...queue, player.id],
-                      )
-                    }
-                  >
-                    {queued ? <StarIcon className="fill-current text-highlight" /> : <StarIcon />}
-                  </Button>
-                </li>
-              )
-            })}
-          </ul>
-          {matching.length > shown && (
-            <Button variant="outline" size="sm" onClick={() => setShown(shown + PAGE)}>
-              Mostrar mais
-            </Button>
-          )}
-        </CardContent>
-      </Card>
-      <QueueCard byId={byId} queue={queue} onChange={change} />
-    </div>
   )
 }

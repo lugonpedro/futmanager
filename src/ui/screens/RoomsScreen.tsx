@@ -1,17 +1,19 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { ChevronRightIcon, PlusIcon, TicketIcon, UsersIcon } from 'lucide-react'
+import { ChevronDownIcon, ChevronRightIcon, PlusIcon, TicketIcon, UsersIcon } from 'lucide-react'
 import { Link, useNavigate } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import { cn } from '@/lib/utils'
 import { cloudEnabled } from '../../cloud/client.ts'
 import { hasPass, PASS_PRICE } from '../../cloud/pass.ts'
 import { createRoom, loadMyRooms, PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { DEFAULT_ROOM_OPTIONS } from '../../engine/room/types.ts'
 import { useAccountStore } from '../../store/account.ts'
-import { RoomOptionsFields, RoomPage, Note, TeamFields } from '../components/RoomParts.tsx'
+import { Pager } from '../components/Pager.tsx'
+import { RoomBasicsFields, RoomPage, Note, TeamFields } from '../components/RoomParts.tsx'
 import {
   checkRoomDraft,
   formatDraftAt,
@@ -23,7 +25,11 @@ import {
   type RoomOptionsDraft,
 } from '../room.ts'
 import { signInLink } from '../signIn.ts'
+import { usePage } from '../usePage.ts'
 import { useSuggestedTeam } from '../useSuggestedTeam.ts'
+
+/** Ended rooms shown at a time, under their toggle. */
+const ENDED_PAGE = 5
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -50,9 +56,9 @@ export function RoomsScreen() {
         </Card>
       ) : (
         <>
-          <MyRooms />
-          <JoinByCode />
           <NewRoom />
+          <JoinByCode />
+          <MyRooms />
         </>
       )}
     </RoomPage>
@@ -73,6 +79,9 @@ function MyRooms() {
     }
   }, [])
 
+  const going = rooms?.filter((room) => room.status !== 'encerrada') ?? []
+  const ended = rooms?.filter((room) => room.status === 'encerrada') ?? []
+
   return (
     <Card>
       <CardHeader>
@@ -90,32 +99,72 @@ function MyRooms() {
         ) : rooms.length === 0 ? (
           <p className="text-sm text-muted-foreground">Você ainda não está em nenhuma sala.</p>
         ) : (
-          <ul className="flex flex-col gap-1">
-            {rooms.map((room) => (
-              <li key={room.id}>
-                <Link
-                  to={`/sala/${room.id}`}
-                  className="flex items-center gap-2 rounded-md border p-2 hover:bg-accent"
-                >
-                  <UsersIcon className="size-4 shrink-0 text-muted-foreground" />
-                  <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="truncate font-medium">{room.name}</span>
-                    <span className="truncate text-xs text-muted-foreground">
-                      {STATUS_LABELS[room.status]}
-                      {room.status === 'espera' && `, draft ${formatDraftAt(room.draftAt)}`}
-                    </span>
-                  </span>
-                  <span className="text-xs text-muted-foreground">
-                    {room.members}/{room.options.teams}
-                  </span>
-                  <ChevronRightIcon className="size-4 text-muted-foreground" />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-col gap-3">
+            {going.length === 0 ? (
+              <p className="text-sm text-muted-foreground">Nenhuma sala em andamento.</p>
+            ) : (
+              <RoomList rooms={going} />
+            )}
+            {ended.length > 0 && <EndedRooms rooms={ended} />}
+          </div>
         )}
       </CardContent>
     </Card>
+  )
+}
+
+function RoomList(props: { rooms: Room[] }) {
+  return (
+    <ul className="flex flex-col gap-1">
+      {props.rooms.map((room) => (
+        <li key={room.id}>
+          <Link
+            to={`/sala/${room.id}`}
+            className="flex items-center gap-2 rounded-md border p-2 hover:bg-accent"
+          >
+            <UsersIcon className="size-4 shrink-0 text-muted-foreground" />
+            <span className="flex min-w-0 flex-1 flex-col">
+              <span className="truncate font-medium">{room.name}</span>
+              <span className="truncate text-xs text-muted-foreground">
+                {STATUS_LABELS[room.status]}
+                {room.status === 'espera' && `, draft ${formatDraftAt(room.draftAt)}`}
+              </span>
+            </span>
+            <span className="text-xs text-muted-foreground">
+              {room.members}/{room.options.teams}
+            </span>
+            <ChevronRightIcon className="size-4 text-muted-foreground" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+/** The ended rooms, closed until opened, five at a time. */
+function EndedRooms(props: { rooms: Room[] }) {
+  const [open, setOpen] = useState(false)
+  const paged = usePage(props.rooms, ENDED_PAGE)
+  return (
+    <section className="flex flex-col gap-2">
+      <button
+        type="button"
+        className="flex items-center justify-between gap-2 rounded-md px-1 py-1 text-left text-sm font-medium hover:bg-accent"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        Encerradas ({props.rooms.length})
+        <ChevronDownIcon
+          className={cn('size-4 text-muted-foreground transition-transform', open && 'rotate-180')}
+        />
+      </button>
+      {open && (
+        <>
+          <RoomList rooms={paged.items} />
+          <Pager paged={paged} />
+        </>
+      )}
+    </section>
   )
 }
 
@@ -213,8 +262,8 @@ function NewRoom() {
       <CardHeader>
         <CardTitle>Nova sala</CardTitle>
         <CardDescription>
-          Escolha as regras e marque o draft. Depois é só mandar o convite; as vagas que ninguém
-          pegar viram robôs.
+          Dê um nome e marque o draft. As outras regras dá para mudar depois, na sala de espera.
+          Depois é só mandar o convite; as vagas que ninguém pegar viram robôs.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -223,7 +272,7 @@ function NewRoom() {
             <h2 className="text-sm font-semibold">Seu time</h2>
             <TeamFields id="novo-time" value={team} onChange={setTeam} />
           </section>
-          <RoomOptionsFields value={draft} onChange={setDraft} />
+          <RoomBasicsFields value={draft} onChange={setDraft} />
           <div className="flex justify-end gap-2">
             <Button type="button" variant="ghost" onClick={() => setOpen(false)}>
               Cancelar
