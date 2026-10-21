@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { generateWorld } from '../generate/world.ts'
 import type { Formation, MatchResult, Posture, TacticalRole, World } from '../model/types.ts'
 import { createRng } from '../rng.ts'
-import { autoLineup } from './lineup.ts'
+import { autoLineup, setDuty } from './lineup.ts'
 import {
   createMatch,
   liveRatings,
@@ -417,5 +417,29 @@ describe('attributes in the match', () => {
     const heading = (events: typeof goals) =>
       events.reduce((sum, e) => sum + players[e.playerId!].attributes.heading, 0) / events.length
     expect(heading(headers)).toBeGreaterThan(heading(others) + 5)
+  })
+})
+
+describe('picked roles in a match', () => {
+  it('keep the slot, and pass to whoever comes on in it', () => {
+    const base = input('C1', 'C2')
+    const forward = base.home.lineup.starters.find((s) => s.position === 'A')!
+    const lineup = setDuty(base.home.lineup, forward.playerId, 'F9')
+    const match = createMatch({ ...base, home: { ...base.home, lineup } }, createRng(3))
+    const onPitch = match.home.onPitch.find((p) => p.player.id === forward.playerId)!
+    expect(onPitch).toMatchObject({ role: 'CA', duty: 'F9' })
+    expect(substitute(match, 'home', forward.playerId, lineup.bench[1])).toBe(true)
+    expect(match.home.onPitch.find((p) => p.player.id === lineup.bench[1])).toMatchObject({
+      role: 'CA',
+      duty: 'F9',
+    })
+  })
+
+  it('play out the same from the same seed', () => {
+    const base = input('C1', 'C2')
+    const forward = base.home.lineup.starters.find((s) => s.position === 'A')!
+    const lineup = setDuty(base.home.lineup, forward.playerId, 'PIV')
+    const picked = { ...base, home: { ...base.home, lineup } }
+    expect(simulateMatch(picked, createRng(5))).toEqual(simulateMatch(picked, createRng(5)))
   })
 })

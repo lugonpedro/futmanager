@@ -241,6 +241,20 @@ describe('league', () => {
     const other = state.lineups[state.teams[1].id]
     expect(checkLineup(state, team, other)).toMatch(/elenco/)
   })
+
+  it('takes a role picked from the part of the pitch of the slot, and nothing else', () => {
+    const state = startLeague(drafted())
+    const team = state.teams[0].id
+    const lineup = state.lineups[team]
+    const forward = lineup.starters.findIndex((s) => s.position === 'A')
+    const withDuty = (duty: string) => ({
+      ...lineup,
+      starters: lineup.starters.map((s, i) => (i === forward ? { ...s, duty } : s)),
+    })
+    expect(checkLineup(state, team, withDuty('F9') as typeof lineup)).toBeUndefined()
+    expect(checkLineup(state, team, withDuty('ZAG') as typeof lineup)).toMatch(/Posição/)
+    expect(checkLineup(state, team, withDuty('XYZ') as typeof lineup)).toMatch(/Posição/)
+  })
 })
 
 describe('market', () => {

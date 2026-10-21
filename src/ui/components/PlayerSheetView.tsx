@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import type { Player, Position, TacticalRole } from '../../engine/model/types.ts'
-import { roleOf, ROLES_BY_POSITION } from '../../engine/match/roles.ts'
+import { DUTIES_BY_POSITION, roleOf } from '../../engine/match/roles.ts'
 import { bestRole, slotFit } from '../../engine/match/strength.ts'
 import {
   FACE_ATTRIBUTES,
@@ -116,7 +116,7 @@ export function PlayerSheetView(props: {
           <SheetItem label="Posições" wide>
             {[player.position, ...player.secondary].map((p) => POSITION_NAMES[p]).join(', ')}
           </SheetItem>
-          {ROLES_BY_POSITION[player.position].length > 1 && (
+          {DUTIES_BY_POSITION[player.position].length > 1 && (
             <SheetItem label="Melhor função">{TACTICAL_ROLE_NAMES[bestRole(player)]}</SheetItem>
           )}
           {slot && fit !== undefined && (

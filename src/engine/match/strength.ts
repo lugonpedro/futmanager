@@ -2,11 +2,13 @@ import type { Player, PlayStyle, Position, Posture, TacticalRole } from '../mode
 import { faceValue, overallAt, styleLevel, type AnyFace } from '../player/attributes.ts'
 import {
   DEFAULT_ROLE,
+  DUTIES_BY_POSITION,
   FORMATION_LINES,
   ROLE_SECTORS,
+  ROLE_STYLES,
   ROLE_WEIGHTS,
   roleOf,
-  ROLES_BY_POSITION,
+  sideOf,
 } from './roles.ts'
 
 export type Sectors = { defense: number; midfield: number; attack: number }
@@ -80,10 +82,35 @@ export function slotFit(player: Player, slot: { position: Position; role?: Tacti
 /** The role of his own position a player is best at; the plain one when nothing beats it. */
 export function bestRole(player: Player): TacticalRole {
   let best = DEFAULT_ROLE[player.position]
-  for (const role of ROLES_BY_POSITION[player.position]) {
+  for (const role of DUTIES_BY_POSITION[player.position]) {
     if (roleOverall(player, role) > roleOverall(player, best)) best = role
   }
   return best
+}
+
+/** Share a picked role gains for each level of a style that suits it. */
+export const ROLE_STYLE_EFFECT = 0.015
+/** Share a corta pra dentro gains on the wing of his weaker foot, and loses on the other. */
+export const INSIDE_FOOT_EFFECT = 0.03
+
+/**
+ * How much more a player gives in the role the user picked for him: a bit for
+ * each style that suits it, and for a corta pra dentro, which wing he is on.
+ * Nothing changes in the role of his slot.
+ */
+export function dutyFactor(
+  player: Player,
+  slot: { role?: TacticalRole; duty?: TacticalRole },
+): number {
+  if (!slot.duty) return 1
+  const styles = ROLE_STYLES[slot.duty] ?? []
+  let factor = 1 + ROLE_STYLE_EFFECT * styles.reduce((sum, s) => sum + styleLevel(player, s), 0)
+  const side = sideOf(slot.role)
+  if (slot.duty === 'CPD' && side) {
+    const inside = (side === 'direita') === (player.foot === 'esquerdo')
+    factor *= 1 + (inside ? INSIDE_FOOT_EFFECT : -INSIDE_FOOT_EFFECT)
+  }
+  return factor
 }
 
 /** Points a style adds where it counts, and twice as many for its "+". */
@@ -171,6 +198,7 @@ export function sectorStrength(
     player: Player
     position: Position
     role?: TacticalRole
+    duty?: TacticalRole
     energy: number
     form?: number
   }[],
@@ -179,7 +207,7 @@ export function sectorStrength(
   const totals: Sectors = { defense: 0, midfield: 0, attack: 0 }
   for (const slot of onPitch) {
     const { player, position, energy, form } = slot
-    const shape = matchShape(player, position, energy, form)
+    const shape = matchShape(player, position, energy, form) * dutyFactor(player, slot)
     const skills = sectorSkills(player, position)
     const weights = ROLE_SECTORS[roleOf(slot)]
     for (const sector of SECTORS) totals[sector] += weights[sector] * skills[sector] * shape
