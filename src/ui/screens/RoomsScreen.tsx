@@ -1,12 +1,13 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { ChevronRightIcon, PlusIcon, UsersIcon } from 'lucide-react'
+import { ChevronRightIcon, PlusIcon, TicketIcon, UsersIcon } from 'lucide-react'
 import { Link, useNavigate } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { cloudEnabled } from '../../cloud/client.ts'
-import { createRoom, loadMyRooms, type Room } from '../../cloud/rooms.ts'
+import { hasPass, PASS_PRICE } from '../../cloud/pass.ts'
+import { createRoom, loadMyRooms, PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { DEFAULT_ROOM_OPTIONS } from '../../engine/room/types.ts'
 import { useAccountStore } from '../../store/account.ts'
@@ -163,6 +164,18 @@ function NewRoom() {
     draftAt: toLocalInput(suggestedDraftAt(new Date())),
   }))
   const [busy, setBusy] = useState(false)
+  // Creating needs a running pass; unknown until the server answers, or if it can't.
+  const [pass, setPass] = useState<boolean>()
+
+  useEffect(() => {
+    let live = true
+    hasPass()
+      .then((found) => live && setPass(found))
+      .catch(() => undefined)
+    return () => {
+      live = false
+    }
+  }, [])
 
   const create = async (event: FormEvent) => {
     event.preventDefault()
@@ -176,10 +189,15 @@ function NewRoom() {
       const id = await createRoom(draft.name, draft.options, fromLocalInput(draft.draftAt)!, team)
       navigate(`/sala/${id}`)
     } catch (error) {
-      toast.error(messageOf(error))
+      if (messageOf(error) === PASS_NEEDED) {
+        setPass(false)
+        setOpen(false)
+      } else toast.error(messageOf(error))
       setBusy(false)
     }
   }
+
+  if (pass === false) return <PassNeeded />
 
   if (!open) {
     return (
@@ -215,6 +233,32 @@ function NewRoom() {
             </Button>
           </div>
         </form>
+      </CardContent>
+    </Card>
+  )
+}
+
+/** Instead of the form, for someone without a running pass. */
+function PassNeeded() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <TicketIcon className="size-5" />
+          Criar uma sala
+        </CardTitle>
+        <CardDescription>
+          Para criar uma sala você precisa do passe de 30 dias, por {PASS_PRICE}. Entrar nas salas
+          dos amigos continua grátis.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Button asChild size="sm">
+          <Link to="/passe">
+            <TicketIcon />
+            Ver o passe
+          </Link>
+        </Button>
       </CardContent>
     </Card>
   )

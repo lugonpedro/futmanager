@@ -51,6 +51,9 @@ export type RoomInvite = {
   joined: boolean
 }
 
+/** The message for creating a room without a running pass. */
+export const PASS_NEEDED = 'Para criar uma sala você precisa do passe de 30 dias.'
+
 /** Messages for the rules the database enforces, by the hint it raises them with. */
 const MESSAGES: Record<string, string> = {
   conta: 'Entre na sua conta primeiro.',
@@ -86,6 +89,7 @@ const MESSAGES: Record<string, string> = {
   troca: 'Escolha de 1 a 3 jogadores de cada lado, o mesmo número dos dois.',
   propostas: 'Você já tem 5 propostas esperando resposta.',
   proposta: 'Essa proposta já foi respondida.',
+  passe: PASS_NEEDED,
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */
