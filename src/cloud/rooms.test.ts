@@ -24,6 +24,9 @@ const row: RoomRow = {
   squad_shape: null,
   pick_no: 0,
   pick_deadline: null,
+  round_no: null,
+  round_opened_at: null,
+  rematch_id: null,
   room_members: [{ count: 3 }],
 }
 
@@ -61,6 +64,20 @@ describe('toRoom in the draft', () => {
       deadline: new Date('2026-10-22T00:00:45Z'),
     })
     expect(toRoom(row).draft).toBeUndefined()
+  })
+})
+
+describe('toRoom in the league', () => {
+  it('reads the round people are setting their teams for', () => {
+    const room = toRoom({
+      ...row,
+      status: 'liga',
+      round_no: 3,
+      round_opened_at: '2026-10-23T10:00:00+00:00',
+    })
+    expect(room.round).toEqual({ no: 3, openedAt: new Date('2026-10-23T10:00:00Z') })
+    expect(toRoom(row).round).toBeUndefined()
+    expect(toRoom({ ...row, rematch_id: 9 }).rematchId).toBe(9)
   })
 })
 

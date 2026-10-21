@@ -12,6 +12,8 @@ export type DraftTeam = TeamIdentity & {
   robot: boolean
   /** Picking on its own: switched on, or after two missed picks in a row. */
   auto: boolean
+  /** The round of the league its person marked "Pronto" for. */
+  readyRound?: number
 }
 
 export type DraftPick = { pick: number; slot: number; playerId: string; auto: boolean }
@@ -33,6 +35,7 @@ type TeamRow = {
   color_secondary: string
   robot: boolean
   auto: boolean
+  ready_round: number | null
 }
 
 export const toDraftTeam = (row: TeamRow): DraftTeam => ({
@@ -43,6 +46,7 @@ export const toDraftTeam = (row: TeamRow): DraftTeam => ({
   colors: { primary: row.color_primary, secondary: row.color_secondary },
   robot: row.robot,
   auto: row.auto,
+  readyRound: row.ready_round ?? undefined,
 })
 
 type PickRow = { pick: number; slot: number; player_id: string; auto: boolean }
@@ -57,7 +61,9 @@ export const toDraftPick = (row: PickRow): DraftPick => ({
 export async function loadDraftTeams(room: number): Promise<DraftTeam[]> {
   const { data, error } = await client()
     .from('room_teams')
-    .select('slot, user_id, team_name, short_name, color_primary, color_secondary, robot, auto')
+    .select(
+      'slot, user_id, team_name, short_name, color_primary, color_secondary, robot, auto, ready_round',
+    )
     .eq('room_id', room)
     .order('slot')
   if (error) throw roomError(error)
@@ -164,7 +170,10 @@ async function invoke(name: string, room: number, fallback: string): Promise<voi
 export const startDraftNow = (room: number) =>
   invoke('room-draft', room, 'Não deu para começar o draft agora. Tente de novo.')
 
-/** Starts the league once the draft is over, or plays its next round; only the owner can. */
+/**
+ * Starts the league once the draft is over, or plays its next round: anyone
+ * once everyone is ready, the owner after the grace period.
+ */
 export const playRoomRound = (room: number) =>
   invoke('room-round', room, 'Não deu para jogar a rodada agora. Tente de novo.')
 
