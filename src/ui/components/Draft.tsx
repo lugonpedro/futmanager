@@ -28,8 +28,10 @@ import {
   STARTING_PLACES,
   teamSlots,
 } from '../../engine/room/slots.ts'
+import { primePlayer } from '../../engine/room/prime.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import {
+  draftPlayers,
   draftTotal,
   pickProblem,
   picksUntil,
@@ -40,6 +42,7 @@ import {
   squadsOf,
   startersAndReserves,
   withLiveClock,
+  type DraftPlayer,
 } from '../draft.ts'
 import { CARD_CUTS, POSITION_NAMES } from '../format.ts'
 import { usePackWorld } from '../usePackWorld.ts'
@@ -129,7 +132,7 @@ export function DraftView(props: { room: Room; userId: string; reload: () => Pro
   }, [roomId, pickNo])
   const current = deal?.pick === pickNo ? deal : undefined
 
-  const byId = useMemo(() => new Map((pool ?? []).map((p) => [p.id, p])), [pool])
+  const byId = useMemo(() => draftPlayers(pool ?? [], picks, current), [pool, picks, current])
   if (failed) {
     return (
       <Card>
@@ -428,7 +431,7 @@ function Clock(props: {
 function LastPick(props: {
   room: Room
   teams: DraftTeam[]
-  byId: ReadonlyMap<string, PoolPlayer>
+  byId: ReadonlyMap<string, DraftPlayer>
   picks: DraftPick[]
 }) {
   const last = props.picks.at(-1)
@@ -459,10 +462,11 @@ function LastPick(props: {
 }
 
 /** A small card face: overall and position on the band colour of the player's card. */
-function MiniCard(props: { player: PoolPlayer }) {
+function MiniCard(props: { player: DraftPlayer }) {
   const { player } = props
-  const tier =
-    player.overall >= CARD_CUTS.ouro
+  const tier = player.prime
+    ? 'prime'
+    : player.overall >= CARD_CUTS.ouro
       ? 'ouro'
       : player.overall >= CARD_CUTS.prata
         ? 'prata'
@@ -474,7 +478,9 @@ function MiniCard(props: { player: PoolPlayer }) {
         tier === 'ouro' && 'from-amber-500 via-yellow-200 to-amber-500 text-amber-950',
         tier === 'prata' && 'from-slate-400 via-slate-100 to-slate-400 text-slate-900',
         tier === 'bronze' && 'from-amber-800 via-orange-300 to-amber-700 text-amber-950',
+        tier === 'prime' && PRIME_CLASSES,
       )}
+      title={player.prime ? `Prime: +${player.prime} de geral nesta sala` : undefined}
     >
       <span className="text-xl font-black tabular-nums">{player.overall}</span>
       <span className="text-xs font-bold">{player.position}</span>
@@ -482,20 +488,24 @@ function MiniCard(props: { player: PoolPlayer }) {
   )
 }
 
+/** The purple of a prime card, on a gradient. */
+const PRIME_CLASSES = 'from-violet-950 via-purple-600 to-violet-950 text-violet-50'
+
 /** How long each card waits before it turns, one after the other. */
 const FLIP_STEP_MS = 450
 /** Overall from which a card comes out with a glow, like a walkout. */
 const WALKOUT = 85
 
 /**
- * The cards dealt for the pick under way, turned one by one for everyone in
- * the room, the best one last. On the player's turn, tapping a card picks it
- * out and the button keeps it.
+ * The cards dealt for the pick under way, the prime first and then the best
+ * on the left, turned one by one for everyone in the room from the right, so
+ * the best turns last. On the player's turn, tapping a card picks it out and
+ * the button keeps it.
  */
 function DealTable(props: {
   room: Room
   teams: DraftTeam[]
-  byId: ReadonlyMap<string, PoolPlayer>
+  byId: ReadonlyMap<string, DraftPlayer>
   picks: DraftPick[]
   mine?: DraftTeam
   deal?: DraftDeal
@@ -511,7 +521,9 @@ function DealTable(props: {
   const cards = (deal?.playerIds ?? [])
     .map((id) => byId.get(id))
     .filter((p) => p !== undefined)
-    .sort((a, b) => a.overall - b.overall || b.rank - a.rank)
+    .sort(
+      (a, b) => Number(!!b.prime) - Number(!!a.prime) || b.overall - a.overall || a.rank - b.rank,
+    )
   const chosen = cards.find((p) => p.id === selected)
   const problem = mine && chosen ? pickProblem(room, byId, picks, mine.slot, chosen.id) : undefined
   const position = deal && team ? placePosition(team, room, deal.slotIndex) : undefined
@@ -563,7 +575,7 @@ function DealTable(props: {
                       type="button"
                       disabled={!myTurn}
                       aria-pressed={isSelected}
-                      aria-label={`${player.name}, ${POSITION_NAMES[player.position]}, geral ${player.overall}`}
+                      aria-label={`${player.name}, ${POSITION_NAMES[player.position]}, geral ${player.overall}${player.prime ? ', carta prime' : ''}`}
                       onClick={() => setSelected(isSelected ? undefined : player.id)}
                       className={cn(
                         'block rounded-[2.6rem_2.6rem_1.1rem_1.1rem] transition-transform outline-none focus-visible:ring-3 focus-visible:ring-ring disabled:cursor-default',
@@ -573,13 +585,20 @@ function DealTable(props: {
                       )}
                     >
                       <FlipCard
-                        delayMs={i * FLIP_STEP_MS}
-                        walkout={player.overall >= WALKOUT}
+                        delayMs={(cards.length - 1 - i) * FLIP_STEP_MS}
+                        glow={
+                          player.prime ? 'prime' : player.overall >= WALKOUT ? 'walkout' : undefined
+                        }
                         front={
                           full ? (
                             <PlayerCard
-                              player={{ ...full, name: player.name, overall: player.overall }}
+                              player={{
+                                ...primePlayer(full, player.prime ?? 0),
+                                name: player.name,
+                                overall: player.overall,
+                              }}
                               club={world.clubs[full.clubId]}
+                              tier={player.prime ? 'prime' : undefined}
                             />
                           ) : (
                             <PlainCard player={player} />
@@ -619,7 +638,7 @@ function placePosition(team: DraftTeam, room: Room, index: number): Position | u
 }
 
 /** A card that comes face down and turns over after `delayMs`. */
-function FlipCard(props: { front: ReactNode; delayMs: number; walkout: boolean }) {
+function FlipCard(props: { front: ReactNode; delayMs: number; glow?: 'walkout' | 'prime' }) {
   return (
     <span
       className="relative block animate-[card-flip_0.7s_cubic-bezier(0.2,0.8,0.3,1)_both] [transform-style:preserve-3d]"
@@ -628,10 +647,11 @@ function FlipCard(props: { front: ReactNode; delayMs: number; walkout: boolean }
       <span
         className={cn(
           'block [backface-visibility:hidden]',
-          props.walkout &&
-            'animate-[walkout_1.8s_ease-in-out_infinite] rounded-[2.5rem_2.5rem_1rem_1rem]',
+          props.glow && 'rounded-[2.5rem_2.5rem_1rem_1rem]',
+          props.glow === 'walkout' && 'animate-[walkout_1.8s_ease-in-out_infinite]',
+          props.glow === 'prime' && 'animate-[prime-glow_1.4s_ease-in-out_infinite]',
         )}
-        style={props.walkout ? { animationDelay: `${props.delayMs + 700}ms` } : undefined}
+        style={props.glow ? { animationDelay: `${props.delayMs + 700}ms` } : undefined}
       >
         {props.front}
       </span>
@@ -665,7 +685,7 @@ function CardBack(props: { className?: string }) {
 function MyPlaces(props: {
   room: Room
   team: DraftTeam
-  byId: ReadonlyMap<string, PoolPlayer>
+  byId: ReadonlyMap<string, DraftPlayer>
   picks: DraftPick[]
   deal?: DraftDeal
   onChanged: () => Promise<void>
@@ -717,7 +737,11 @@ function MyPlaces(props: {
       return (
         <span
           key={index}
-          className="flex w-16 flex-col items-center rounded-md bg-background/80 px-1 py-0.5 text-center shadow-sm ring-1 ring-black/10 sm:w-20"
+          className={cn(
+            'flex w-16 flex-col items-center rounded-md bg-background/80 px-1 py-0.5 text-center shadow-sm ring-1 ring-black/10 sm:w-20',
+            player.prime && cn('bg-gradient-to-br', PRIME_CLASSES),
+          )}
+          title={player.prime ? `Prime: +${player.prime} de geral nesta sala` : undefined}
         >
           <span className="font-mono text-sm font-bold tabular-nums">{player.overall}</span>
           <span className="w-full truncate text-[0.65rem] leading-tight">
@@ -793,24 +817,40 @@ function MyPlaces(props: {
 }
 
 /** A card for a player the pack no longer has in full: overall, position, name and club. */
-function PlainCard(props: { player: PoolPlayer }) {
+function PlainCard(props: { player: DraftPlayer }) {
   const { player } = props
   return (
-    <span className="flex h-64 w-48 flex-col items-center justify-center gap-1 rounded-t-[2.5rem] rounded-b-2xl bg-gradient-to-br from-slate-400 via-slate-100 to-slate-400 p-3 text-slate-900 shadow-lg ring-1 ring-black/20">
+    <span
+      className={cn(
+        'flex h-64 w-48 flex-col items-center justify-center gap-1 rounded-t-[2.5rem] rounded-b-2xl bg-gradient-to-br p-3 shadow-lg ring-1 ring-black/20',
+        player.prime ? PRIME_CLASSES : 'from-slate-400 via-slate-100 to-slate-400 text-slate-900',
+      )}
+    >
       <span className="text-4xl font-black tabular-nums">{player.overall}</span>
       <span className="text-sm font-bold">{player.position}</span>
       <span className="w-full truncate text-center font-extrabold uppercase">{player.name}</span>
       <span className="text-xs">{player.origin}</span>
+      {player.prime && (
+        <span className="rounded-full bg-black/30 px-2 text-[0.65rem] font-bold uppercase">
+          Prime
+        </span>
+      )}
     </span>
   )
 }
 
 /** A player's line in the lists: overall, position, name, club of origin and age. */
-function PlayerLine(props: { player: PoolPlayer }) {
+function PlayerLine(props: { player: DraftPlayer }) {
   const { player } = props
   return (
     <span className="flex min-w-0 flex-1 items-center gap-2">
-      <span className="w-7 shrink-0 text-right font-mono font-bold tabular-nums">
+      <span
+        className={cn(
+          'w-7 shrink-0 text-right font-mono font-bold tabular-nums',
+          player.prime && 'rounded bg-purple-600 px-0.5 text-white',
+        )}
+        title={player.prime ? `Prime: +${player.prime} de geral nesta sala` : undefined}
+      >
         {player.overall}
       </span>
       <span
@@ -829,7 +869,7 @@ function PlayerLine(props: { player: PoolPlayer }) {
  * A team's eleven and reserves: the places its cards went to, or for a draft
  * made before the places, the likely eleven of its players.
  */
-function squadSplit(picks: readonly DraftPick[], byId: ReadonlyMap<string, PoolPlayer>) {
+function squadSplit(picks: readonly DraftPick[], byId: ReadonlyMap<string, DraftPlayer>) {
   const players = picks.map((p) => byId.get(p.playerId)).filter((p) => p !== undefined)
   if (!picks.every((p) => p.slotIndex !== undefined)) return startersAndReserves(players)
   const placed = [...picks].sort((a, b) => a.slotIndex! - b.slotIndex!)
@@ -845,7 +885,7 @@ function squadSplit(picks: readonly DraftPick[], byId: ReadonlyMap<string, PoolP
 export function DraftBoard(props: {
   room: Room
   teams: DraftTeam[]
-  byId: ReadonlyMap<string, PoolPlayer>
+  byId: ReadonlyMap<string, DraftPlayer>
   picks: DraftPick[]
 }) {
   const { room, teams, byId, picks } = props

@@ -1,4 +1,4 @@
-import type { DraftPick, LiveClock } from '../cloud/draft.ts'
+import type { DraftDeal, DraftPick, LiveClock } from '../cloud/draft.ts'
 import type { Room } from '../cloud/rooms.ts'
 import type { Position } from '../engine/model/types.ts'
 import { teamForPick } from '../engine/room/draft.ts'
@@ -112,12 +112,14 @@ const byPosition = (a: PoolPlayer, b: PoolPlayer) =>
  * 4-4-2, gaps filled by the best outfielders left) and the reserves, both
  * keepers first and forwards last.
  */
-export function startersAndReserves(players: readonly PoolPlayer[]): {
-  starters: PoolPlayer[]
-  reserves: PoolPlayer[]
+export function startersAndReserves<P extends PoolPlayer>(
+  players: readonly P[],
+): {
+  starters: P[]
+  reserves: P[]
 } {
   const best = [...players].sort((a, b) => b.overall - a.overall)
-  const starters = new Set<PoolPlayer>()
+  const starters = new Set<P>()
   for (const position of Object.keys(XI) as Position[]) {
     for (const player of best.filter((p) => p.position === position).slice(0, XI[position]))
       starters.add(player)
@@ -149,4 +151,25 @@ export function roundOrder(room: Room): number[] {
   return Array.from({ length: teams }, (_, i) =>
     Number(teamForPick(order, first + i, room.options.draftOrder)),
   )
+}
+
+/** A player of the draft as the room sees him: boosted, with `prime` set, when he came as a prime card. */
+export type DraftPlayer = PoolPlayer & { prime?: number }
+
+/** The pool by id, with the primes taken so far and the one dealt now boosted. */
+export function draftPlayers(
+  pool: readonly PoolPlayer[],
+  picks: readonly DraftPick[],
+  deal?: DraftDeal,
+): Map<string, DraftPlayer> {
+  const byId = new Map<string, DraftPlayer>(pool.map((p) => [p.id, p]))
+  const boosts = picks.filter((p) => p.primeBoost).map((p) => [p.playerId, p.primeBoost!] as const)
+  if (deal?.prime) boosts.push([deal.prime.playerId, deal.prime.boost])
+  for (const [id, boost] of boosts) {
+    const player = byId.get(id)
+    if (player && !player.prime) {
+      byId.set(id, { ...player, overall: Math.min(99, player.overall + boost), prime: boost })
+    }
+  }
+  return byId
 }

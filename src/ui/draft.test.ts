@@ -4,6 +4,7 @@ import type { Room } from '../cloud/rooms.ts'
 import type { PoolPlayer } from '../engine/room/start.ts'
 import { DEFAULT_ROOM_OPTIONS } from '../engine/room/types.ts'
 import {
+  draftPlayers,
   moveInQueue,
   pickProblem,
   picksUntil,
@@ -151,5 +152,23 @@ describe('the draft screen', () => {
     const deadline = new Date('2026-10-21T21:00:30Z')
     expect(withLiveClock(room(3), { pickNo: 4, deadline }).draft?.pickNo).toBe(4)
     expect(withLiveClock(room(5), { pickNo: 4, deadline }).draft?.pickNo).toBe(5)
+  })
+})
+
+describe('draftPlayers', () => {
+  const pool = [player('a', 'M'), player('b', 'M'), player('c', 'A')]
+  const picks: DraftPick[] = [{ pick: 0, slot: 0, playerId: 'a', auto: false, primeBoost: 9 }]
+
+  it('boosts the primes taken and the one dealt now, and no one else', () => {
+    const byId = draftPlayers(pool, picks, {
+      pick: 1,
+      slot: 1,
+      slotIndex: 3,
+      playerIds: ['b', 'c'],
+      prime: { playerId: 'c', boost: 11 },
+    })
+    expect(byId.get('a')).toMatchObject({ overall: pool[0].overall + 9, prime: 9 })
+    expect(byId.get('b')).toBe(pool[1])
+    expect(byId.get('c')).toMatchObject({ overall: pool[2].overall + 11, prime: 11 })
   })
 })

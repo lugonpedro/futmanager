@@ -64,7 +64,12 @@ export type RoomTeam = {
   robot: boolean
 }
 
-export type DraftPick = { teamId: string; playerId: string }
+export type DraftPick = {
+  teamId: string
+  playerId: string
+  /** Overall added when the pick was a prime card (see prime.ts). */
+  prime?: number
+}
 
 export type RoomPhase = 'draft' | 'liga' | 'encerrada'
 

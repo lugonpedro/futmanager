@@ -85,11 +85,11 @@ Deno.serve(async (req) => {
 /** Turns the finished draft into the league, with round 0 for the page. */
 async function startLeague(db: SupabaseClient, room: number) {
   const { state: drafted, version } = await loadState(db, room)
-  const picks: { slot: number; player_id: string }[] = []
+  const picks: { slot: number; player_id: string; prime_boost: number | null }[] = []
   for (let from = 0; ; from += PAGE) {
     const page = await db
       .from('room_picks')
-      .select('slot, player_id')
+      .select('slot, player_id, prime_boost')
       .eq('room_id', room)
       .order('pick')
       .range(from, from + PAGE - 1)
@@ -99,7 +99,11 @@ async function startLeague(db: SupabaseClient, room: number) {
   }
   const state = leagueFromDraft(
     drafted,
-    picks.map((p) => ({ teamId: String(p.slot), playerId: p.player_id })),
+    picks.map((p) => ({
+      teamId: String(p.slot),
+      playerId: p.player_id,
+      prime: p.prime_boost ?? undefined,
+    })),
   )
   const claimed = await db
     .from('room_rounds')
