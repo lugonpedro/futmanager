@@ -62,14 +62,14 @@ export function roomNotice(
     case 'rodada':
       return data.over
         ? {
-            title: 'A liga acabou',
-            body: `${room.name}: veja quem foi o campeão.`,
+            title: 'A última rodada começou',
+            body: `${room.name}: a bola já está rolando. Venha ver quem fica com o título.`,
             url,
             tag,
           }
         : {
-            title: `Rodada ${data.round} jogada`,
-            body: `${room.name}: veja os resultados e escale o time para a próxima.`,
+            title: `Rodada ${data.round} ao vivo`,
+            body: `${room.name}: a bola já está rolando. Venha assistir.`,
             url,
             tag,
           }

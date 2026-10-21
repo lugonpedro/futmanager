@@ -88,6 +88,14 @@ A alternativa mais simples é cada um assistir no seu ritmo, com pausa e velocid
 
 O aviso de "rodada jogada" (D6) passa a dizer "A rodada começou, venha assistir", e o link abre a Rodada ao vivo.
 
+## Como ficou a rodada ao vivo (21/10/2026)
+
+- Cada minuto da rodada dura o lance mais longo daquele minuto entre todos os jogos, na velocidade "Normal". Assim todos os jogos andam juntos, e a rodada dura de 1,5 a 2,5 minutos, contando 8 segundos de intervalo (medido com rodadas de 4, 8 e 12 times).
+- O jogo começa 5 segundos depois de `played_at`, para as páginas terem tempo de carregar.
+- Quem abre a página no meio da rodada entra no minuto em que ela está. A conta usa o relógio do aparelho, então um relógio adiantado ou atrasado entra uns segundos fora.
+- A rodada que a pessoa já viu (ou pulou) fica guardada no `localStorage`, por sala.
+- O aviso de rodada jogada virou "Rodada N ao vivo".
+
 ## Ordem dos PRs
 
 | Passo | O que entra                                                                                                         | Tamanho      |

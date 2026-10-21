@@ -1,6 +1,6 @@
 import type { MatchReplay } from '../engine/match/simulate.ts'
 import type { Lineup } from '../engine/model/types.ts'
-import type { RoomMatchLine, TeamSheet } from '../engine/room/summary.ts'
+import type { RoomMatchLine, RoomSummary, TeamSheet } from '../engine/room/summary.ts'
 import { supabase } from './client.ts'
 import { unpackJson } from './codec.ts'
 import { roomError } from './rooms.ts'
@@ -80,4 +80,24 @@ export async function loadRoundResults(
     round: row.round,
     matches: row.last ?? [],
   }))
+}
+
+/** A round as it was played: when, the table after it and its matches to replay. */
+export async function loadPlayedRound(
+  room: number,
+  round: number,
+): Promise<{ playedAt: Date; summary: RoomSummary; replays: MatchReplay[] } | undefined> {
+  const { data, error } = await client()
+    .from('room_rounds')
+    .select('played_at, summary, replays')
+    .eq('room_id', room)
+    .eq('round', round)
+    .maybeSingle()
+  if (error) throw roomError(error)
+  if (!data) return undefined
+  return {
+    playedAt: new Date(data.played_at),
+    summary: data.summary as RoomSummary,
+    replays: data.replays ? await unpackJson<MatchReplay[]>(data.replays) : [],
+  }
 }
