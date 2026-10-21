@@ -1,9 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   CheckIcon,
   ClockIcon,
+  CrownIcon,
   MonitorPlayIcon,
   RepeatIcon,
+  ShirtIcon,
   StarIcon,
   TrophyIcon,
 } from 'lucide-react'
@@ -11,6 +13,8 @@ import { Link, useNavigate } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { cn } from '@/lib/utils'
 import {
   Table,
   TableBody,
@@ -28,20 +32,30 @@ import {
   type DraftPick,
   type DraftTeam,
 } from '../../cloud/draft.ts'
-import { loadRoundReplays, rematchRoom, setRoomReady } from '../../cloud/roomLeague.ts'
+import {
+  loadRoundReplays,
+  loadRoundResults,
+  rematchRoom,
+  setRoomReady,
+} from '../../cloud/roomLeague.ts'
 import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
+import { describeOptions } from '../room.ts'
+import { roomPageSlug, type RoomPageSlug } from '../roomPages.ts'
 import { canPlayRound, readiness } from '../roomLeague.ts'
 import { squadIds } from '../roomMarket.ts'
+import { DeleteRoomButton } from './DeleteRoomButton.tsx'
 import { DraftBoard } from './Draft.tsx'
 import { MatchReplay } from './MatchReplay.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { MarketView } from './Market.tsx'
 import { RoomLineup } from './RoomLineup.tsx'
-import { TeamCrest } from './RoomParts.tsx'
+import { RoomLayout } from './RoomLayout.tsx'
+import { RoomNotices } from './RoomNotices.tsx'
+import { Note, TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -54,10 +68,17 @@ type Loaded = {
 }
 
 /**
- * The room's league: who is ready for the coming round, the player's lineup,
- * the last results to watch, the table, the next round and the squads.
+ * The room's league, a page for each part in the room's menu: the summary
+ * (who is ready, the next match, the last results), the lineup, the market,
+ * the table, every round and the room itself.
  */
-export function LeagueView(props: { room: Room; userId: string; reload: () => Promise<void> }) {
+export function LeagueView(props: {
+  room: Room
+  userId: string
+  reload: () => Promise<void>
+  /** The page of the room's menu, from the address. */
+  page?: string
+}) {
   const { room, userId, reload } = props
   const [loaded, setLoaded] = useState<Loaded>()
   const [failed, setFailed] = useState(false)
@@ -120,187 +141,349 @@ export function LeagueView(props: { room: Room; userId: string; reload: () => Pr
   }, [room.id, load, loadSummary, reload])
 
   const byId = useMemo(() => new Map((loaded?.pool ?? []).map((p) => [p.id, p])), [loaded])
+  const slug = roomPageSlug(props.page)
+  const frame = (status: string, children: ReactNode, mine?: DraftTeam, marked = NONE) => (
+    <RoomLayout room={room} page={slug} mine={mine} status={status} marked={marked}>
+      {children}
+    </RoomLayout>
+  )
   if (failed) {
-    return (
-      <Card>
-        <CardContent className="text-sm text-muted-foreground">
-          Não deu para carregar a liga agora. Atualize a página.
-        </CardContent>
-      </Card>
-    )
+    return frame('', <Note>Não deu para carregar a liga agora. Atualize a página.</Note>)
   }
-  if (!loaded?.summary) {
-    return (
-      <Card>
-        <CardContent className="text-sm text-muted-foreground">Carregando a liga…</CardContent>
-      </Card>
-    )
-  }
+  if (!loaded?.summary) return frame('', <Note>Carregando a liga…</Note>)
 
   const { teams, picks, summary } = loaded
   const teamOf = new Map(teams.map((t) => [String(t.slot), t]))
   const over = summary.next.length === 0
   const mine = teams.find((t) => t.userId === userId && !t.robot)
+  const owner = room.ownerId === userId
+  const open = !over && room.round !== undefined
   const played = async () => {
     await Promise.all([loadSummary(), reload()])
   }
-  const watch = async (match: RoomMatchLine) => {
+  const watch = async (match: RoomMatchLine, round: number) => {
     try {
-      const replays = await loadRoundReplays(room.id, summary.played)
+      const replays = await loadRoundReplays(room.id, round)
       const replay = replays.find(
         (r) => r.input.home.club.id === match.homeId && r.input.away.club.id === match.awayId,
       )
       if (!replay) throw new Error('Esse jogo não está guardado.')
-      setWatching({ replay, title: `${room.name} · rodada ${summary.played}` })
+      setWatching({ replay, title: `${room.name} · rodada ${round}` })
       window.scrollTo({ top: 0 })
     } catch (error) {
       toast.error(messageOf(error))
     }
   }
+  const status = over
+    ? 'liga encerrada'
+    : `rodada ${room.round?.no ?? summary.played + 1} de ${summary.totalRounds}`
+  const marked = new Set<RoomPageSlug>()
+  if (open && mine && mine.readyRound !== room.round!.no) marked.add('')
 
   if (watching) {
-    return (
+    return frame(
+      status,
       <MatchReplay
         replay={watching.replay}
         title={watching.title}
         onClose={() => setWatching(undefined)}
-      />
+      />,
+      mine,
+      marked,
     )
   }
 
-  return (
-    <>
-      {over ? (
-        <LeagueEnd room={room} summary={summary} teamOf={teamOf} />
-      ) : (
-        room.round && (
-          <ReadyCard
-            room={room}
-            userId={userId}
-            teams={teams}
-            mine={mine}
-            summary={summary}
-            onPlayed={played}
-            onTeam={(team) =>
-              setLoaded(
-                (now) =>
-                  now && {
-                    ...now,
-                    teams: now.teams.map((t) => (t.slot === team.slot ? team : t)),
-                  },
-              )
-            }
-          />
-        )
-      )}
+  const onTeam = (team: DraftTeam) =>
+    setLoaded(
+      (now) => now && { ...now, teams: now.teams.map((t) => (t.slot === team.slot ? team : t)) },
+    )
 
-      {summary.last.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Resultados da rodada {summary.played}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="flex flex-col gap-4">
-              {summary.last.map((match) => (
-                <MatchLine
-                  key={`${match.homeId}-${match.awayId}`}
-                  match={match}
-                  teamOf={teamOf}
-                  onWatch={() => watch(match)}
-                />
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      )}
-
-      {!over && room.round && mine && (
+  let page: ReactNode
+  if (slug === 'time') {
+    page =
+      open && mine ? (
         <RoomLineup
           // A new squad (a trade, a claim, a release) starts the editor over.
           key={squadIds(loaded.rosters, mine.slot).sort().join()}
           room={room.id}
           slot={mine.slot}
-          round={room.round.no}
+          round={room.round!.no}
         />
-      )}
+      ) : (
+        <Note>
+          {over
+            ? 'A liga acabou; não há mais rodadas para escalar.'
+            : mine
+              ? 'A escalação abre quando a próxima rodada abrir.'
+              : 'Você não tem time nesta sala.'}
+        </Note>
+      )
+  } else if (slug === 'mercado') {
+    page = open ? (
+      <MarketView
+        room={room}
+        teams={teams}
+        mine={mine}
+        pool={loaded.pool}
+        rosters={loaded.rosters}
+        tick={marketTick}
+      />
+    ) : (
+      <Note>
+        {over ? 'O mercado fechou com o fim da liga.' : 'O mercado abre com a próxima rodada.'}
+      </Note>
+    )
+  } else if (slug === 'tabela') {
+    page = (
+      <Tabs defaultValue="classificacao">
+        <TabsList>
+          <TabsTrigger value="classificacao">Classificação</TabsTrigger>
+          <TabsTrigger value="artilharia">Artilharia</TabsTrigger>
+        </TabsList>
+        <TabsContent value="classificacao">
+          <StandingsCard summary={summary} teamOf={teamOf} mine={mine} />
+        </TabsContent>
+        <TabsContent value="artilharia">
+          <ScorersCard summary={summary} teamOf={teamOf} />
+        </TabsContent>
+      </Tabs>
+    )
+  } else if (slug === 'rodadas') {
+    page = <RoundsPage room={room} summary={summary} teamOf={teamOf} mine={mine} onWatch={watch} />
+  } else if (slug === 'sala') {
+    page = (
+      <>
+        <MembersCard teams={teams} userId={userId} ownerId={room.ownerId} />
+        <Card>
+          <CardHeader>
+            <CardTitle>Regras</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-muted-foreground">
+              {describeOptions(room.options).map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+        <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
+        {!over && <RoomNotices />}
+        {owner && <DeleteRoomButton room={room} />}
+      </>
+    )
+  } else {
+    const next = mine
+      ? summary.next.find((m) => m.homeId === String(mine.slot) || m.awayId === String(mine.slot))
+      : undefined
+    page = (
+      <>
+        {over ? (
+          <LeagueEnd room={room} summary={summary} teamOf={teamOf} />
+        ) : (
+          room.round && (
+            <ReadyCard
+              room={room}
+              userId={userId}
+              teams={teams}
+              mine={mine}
+              summary={summary}
+              onPlayed={played}
+              onTeam={onTeam}
+            />
+          )
+        )}
+        {next && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Seu próximo jogo</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col gap-3">
+              <span className="flex items-center gap-2">
+                <TeamName team={teamOf.get(next.homeId)} id={`seu-${next.homeId}`} />
+                <span className="text-muted-foreground">x</span>
+                <TeamName team={teamOf.get(next.awayId)} id={`seu-${next.awayId}`} end />
+              </span>
+              {open && (
+                <Button asChild variant="outline" size="sm" className="self-start">
+                  <Link to={`/sala/${room.id}/time`}>
+                    <ShirtIcon />
+                    Escalar o time
+                  </Link>
+                </Button>
+              )}
+            </CardContent>
+          </Card>
+        )}
+        {summary.last.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Resultados da rodada {summary.played}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="flex flex-col gap-4">
+                {summary.last.map((match) => (
+                  <MatchLine
+                    key={`${match.homeId}-${match.awayId}`}
+                    match={match}
+                    teamOf={teamOf}
+                    onWatch={() => watch(match, summary.played)}
+                  />
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
+        <StandingsCard summary={summary} teamOf={teamOf} mine={mine} top={4} roomId={room.id} />
+      </>
+    )
+  }
 
-      {!over && room.round && (
-        <MarketView
-          room={room}
-          teams={teams}
-          mine={mine}
-          pool={loaded.pool}
-          rosters={loaded.rosters}
-          tick={marketTick}
-        />
-      )}
+  return frame(status, page, mine, marked)
+}
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Tabela</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-6">#</TableHead>
-                <TableHead>Time</TableHead>
-                <TableHead className="text-right" title="Pontos">
-                  P
-                </TableHead>
-                <TableHead className="text-right" title="Jogos">
-                  J
-                </TableHead>
-                <TableHead className="text-right" title="Vitórias">
-                  V
-                </TableHead>
-                <TableHead className="text-right" title="Empates">
-                  E
-                </TableHead>
-                <TableHead className="text-right" title="Derrotas">
-                  D
-                </TableHead>
-                <TableHead className="text-right" title="Saldo de gols">
-                  SG
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {summary.standings.map((row, i) => {
-                const team = teamOf.get(row.teamId)
-                return (
-                  <TableRow key={row.teamId}>
-                    <TableCell>{i + 1}</TableCell>
-                    <TableCell>
-                      <span className="flex items-center gap-2">
-                        {team && (
-                          <TeamCrest
-                            team={team}
-                            id={`tabela-${row.teamId}`}
-                            className="size-5 shrink-0"
-                          />
-                        )}
-                        <span className="truncate">{team?.name}</span>
-                      </span>
-                    </TableCell>
-                    <TableCell className="text-right font-bold">{row.points}</TableCell>
-                    <TableCell className="text-right">{row.played}</TableCell>
-                    <TableCell className="text-right">{row.wins}</TableCell>
-                    <TableCell className="text-right">{row.draws}</TableCell>
-                    <TableCell className="text-right">{row.losses}</TableCell>
-                    <TableCell className="text-right">{row.goalsFor - row.goalsAgainst}</TableCell>
-                  </TableRow>
-                )
-              })}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+const NONE: ReadonlySet<RoomPageSlug> = new Set()
 
+/** The table, or its top rows with a link to the whole of it. */
+function StandingsCard(props: {
+  summary: RoomSummary
+  teamOf: ReadonlyMap<string, DraftTeam>
+  mine?: DraftTeam
+  top?: number
+  roomId?: number
+}) {
+  const { summary, teamOf, mine, top } = props
+  const rows = top ? summary.standings.slice(0, top) : summary.standings
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center justify-between gap-2">
+          Tabela
+          {top && props.roomId !== undefined && (
+            <Button asChild variant="ghost" size="sm">
+              <Link to={`/sala/${props.roomId}/tabela`}>Ver toda</Link>
+            </Button>
+          )}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-6">#</TableHead>
+              <TableHead>Time</TableHead>
+              <TableHead className="text-right" title="Pontos">
+                P
+              </TableHead>
+              <TableHead className="text-right" title="Jogos">
+                J
+              </TableHead>
+              <TableHead className="text-right" title="Vitórias">
+                V
+              </TableHead>
+              <TableHead className="text-right" title="Empates">
+                E
+              </TableHead>
+              <TableHead className="text-right" title="Derrotas">
+                D
+              </TableHead>
+              <TableHead className="text-right" title="Saldo de gols">
+                SG
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {rows.map((row, i) => {
+              const team = teamOf.get(row.teamId)
+              return (
+                <TableRow
+                  key={row.teamId}
+                  className={cn(mine && row.teamId === String(mine.slot) && 'bg-highlight-soft')}
+                >
+                  <TableCell>{i + 1}</TableCell>
+                  <TableCell>
+                    <span className="flex items-center gap-2">
+                      {team && (
+                        <TeamCrest
+                          team={team}
+                          id={`tabela-${row.teamId}`}
+                          className="size-5 shrink-0"
+                        />
+                      )}
+                      <span className="truncate">{team?.name}</span>
+                    </span>
+                  </TableCell>
+                  <TableCell className="text-right font-bold">{row.points}</TableCell>
+                  <TableCell className="text-right">{row.played}</TableCell>
+                  <TableCell className="text-right">{row.wins}</TableCell>
+                  <TableCell className="text-right">{row.draws}</TableCell>
+                  <TableCell className="text-right">{row.losses}</TableCell>
+                  <TableCell className="text-right">{row.goalsFor - row.goalsAgainst}</TableCell>
+                </TableRow>
+              )
+            })}
+          </TableBody>
+        </Table>
+      </CardContent>
+    </Card>
+  )
+}
+
+function ScorersCard(props: { summary: RoomSummary; teamOf: ReadonlyMap<string, DraftTeam> }) {
+  const { summary, teamOf } = props
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Artilharia</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {summary.scorers.length === 0 ? (
+          <p className="text-sm text-muted-foreground">Ninguém marcou ainda.</p>
+        ) : (
+          <ol className="flex flex-col gap-1 text-sm">
+            {summary.scorers.map((row, i) => (
+              <li key={`${row.name}-${row.teamId}`} className="flex items-center gap-2">
+                <span className="w-5 text-right text-muted-foreground">{i + 1}</span>
+                <span className="min-w-0 flex-1 truncate">{row.name}</span>
+                <span className="text-xs text-muted-foreground">
+                  {teamOf.get(row.teamId)?.shortName}
+                </span>
+                <span className="w-6 text-right font-bold">{row.goals}</span>
+              </li>
+            ))}
+          </ol>
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+
+/** The round to come, then every round played, the latest first, each match to watch. */
+function RoundsPage(props: {
+  room: Room
+  summary: RoomSummary
+  teamOf: ReadonlyMap<string, DraftTeam>
+  mine?: DraftTeam
+  onWatch: (match: RoomMatchLine, round: number) => void
+}) {
+  const { room, summary, teamOf } = props
+  const [rounds, setRounds] = useState<{ round: number; matches: RoomMatchLine[] }[]>()
+  const [failed, setFailed] = useState(false)
+  useEffect(() => {
+    let live = true
+    loadRoundResults(room.id)
+      .then((found) => live && setRounds(found))
+      .catch(() => live && setFailed(true))
+    return () => {
+      live = false
+    }
+  }, [room.id, summary.played])
+  return (
+    <>
       {summary.next.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle>Próxima rodada</CardTitle>
+            <CardTitle>Rodada {summary.played + 1}</CardTitle>
+            <CardDescription>A próxima, ainda por jogar.</CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="flex flex-col gap-1 text-sm">
@@ -315,31 +498,64 @@ export function LeagueView(props: { room: Room; userId: string; reload: () => Pr
           </CardContent>
         </Card>
       )}
-
-      {summary.scorers.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Artilharia</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ol className="flex flex-col gap-1 text-sm">
-              {summary.scorers.map((row, i) => (
-                <li key={`${row.name}-${row.teamId}`} className="flex items-center gap-2">
-                  <span className="w-5 text-right text-muted-foreground">{i + 1}</span>
-                  <span className="min-w-0 flex-1 truncate">{row.name}</span>
-                  <span className="text-xs text-muted-foreground">
-                    {teamOf.get(row.teamId)?.shortName}
-                  </span>
-                  <span className="w-6 text-right font-bold">{row.goals}</span>
-                </li>
-              ))}
-            </ol>
-          </CardContent>
-        </Card>
+      {failed ? (
+        <Note>Não deu para carregar as rodadas agora.</Note>
+      ) : !rounds ? (
+        <Note>Carregando as rodadas…</Note>
+      ) : rounds.length === 0 ? (
+        <Note>Nenhuma rodada jogada ainda.</Note>
+      ) : (
+        [...rounds].reverse().map(({ round, matches }) => (
+          <Card key={round}>
+            <CardHeader>
+              <CardTitle>Rodada {round}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="flex flex-col gap-4">
+                {matches.map((match) => (
+                  <MatchLine
+                    key={`${match.homeId}-${match.awayId}`}
+                    match={match}
+                    teamOf={teamOf}
+                    onWatch={() => props.onWatch(match, round)}
+                  />
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))
       )}
-
-      <DraftBoard room={room} teams={teams} byId={byId} picks={picks} />
     </>
+  )
+}
+
+/** Everyone in the room, people and robots, with the owner's crown. */
+function MembersCard(props: { teams: DraftTeam[]; userId: string; ownerId: string }) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Times</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ul className="flex flex-col gap-2 text-sm">
+          {props.teams.map((team) => (
+            <li key={team.slot} className="flex items-center gap-2">
+              <TeamCrest team={team} id={`membro-${team.slot}`} className="size-6 shrink-0" />
+              <span className="min-w-0 flex-1 truncate">{team.name}</span>
+              {team.userId === props.ownerId && (
+                <CrownIcon
+                  className="size-4 fill-highlight text-highlight"
+                  aria-label="Criou a sala"
+                />
+              )}
+              <span className="text-xs text-muted-foreground">
+                {team.robot ? 'robô' : team.userId === props.userId ? 'você' : team.shortName}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
   )
 }
 

@@ -52,7 +52,7 @@ export default function App() {
         <Route path="/salas" element={<RoomsScreen />} />
         <Route path="/passe" element={<PassScreen />} />
         <Route path="/sala/convite/:code" element={<RoomInviteScreen />} />
-        <Route path="/sala/:id" element={<RoomScreen />} />
+        <Route path="/sala/:id/:page?" element={<RoomScreen />} />
         <Route path="/aprenda/:tab?" element={<LearnScreen />} />
         <Route path="/jogo" element={<GameLayout />}>
           <Route index element={<OverviewScreen />} />

@@ -1,13 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import {
-  BotIcon,
-  CopyIcon,
-  CrownIcon,
-  PlayIcon,
-  RefreshCwIcon,
-  Trash2Icon,
-  XIcon,
-} from 'lucide-react'
+import { BotIcon, CopyIcon, CrownIcon, PlayIcon, RefreshCwIcon, XIcon } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -26,6 +18,7 @@ import {
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Note, RoomPage, RoomRulesFields, TeamCrest, TeamFields } from '../components/RoomParts.tsx'
+import { DeleteRoomButton } from '../components/DeleteRoomButton.tsx'
 import { DraftView } from '../components/Draft.tsx'
 import { LeagueView } from '../components/League.tsx'
 import { RoomNotices } from '../components/RoomNotices.tsx'
@@ -38,7 +31,9 @@ type Loaded = { room: Room; members: RoomMember[] }
 
 /** A room's page. Before the draft, the waiting room: who is in, their teams, the invite and the options. */
 export function RoomScreen() {
-  const id = Number(useParams().id)
+  const params = useParams()
+  const id = Number(params.id)
+  const page = params.page
   const { ready, user } = useAccountStore()
   const [loaded, setLoaded] = useState<Loaded | null>()
   const [failed, setFailed] = useState(false)
@@ -68,6 +63,12 @@ export function RoomScreen() {
     return () => document.removeEventListener('visibilitychange', onFocus)
   }, [id, ready, user, reload])
 
+  // Once the league starts, the room has its own frame with a page for each part.
+  const status = loaded?.room.status
+  if (user && loaded && (status === 'liga' || status === 'encerrada')) {
+    return <LeagueView room={loaded.room} userId={user.id} reload={reload} page={page} />
+  }
+
   return (
     <RoomPage title={loaded?.room.name ?? 'Sala'} wide={loaded?.room.status === 'draft'}>
       {!cloudEnabled ? (
@@ -83,7 +84,7 @@ export function RoomScreen() {
       ) : (
         <>
           <RoomBody {...loaded} userId={user.id} reload={reload} />
-          {loaded.room.status !== 'encerrada' && <RoomNotices />}
+          <RoomNotices />
         </>
       )}
     </RoomPage>
@@ -97,49 +98,17 @@ function RoomBody(props: BodyProps) {
   return (
     <>
       <RoomView {...props} />
-      {room.ownerId === props.userId && room.status !== 'espera' && <DeleteRoom room={room} />}
+      {room.ownerId === props.userId && room.status === 'draft' && <DeleteRoomButton room={room} />}
     </>
   )
 }
 
 function RoomView(props: BodyProps) {
   const { room } = props
-  if (room.status === 'liga' || room.status === 'encerrada')
-    return <LeagueView room={room} userId={props.userId} reload={props.reload} />
   if (room.status !== 'draft') return <WaitingRoom {...props} />
   if (!room.draft)
     return <Note>Preparando o draft: montando a lista de jogadores e sorteando a ordem…</Note>
   return <DraftView room={room} userId={props.userId} reload={props.reload} />
-}
-
-/** The owner's way to delete the room once the draft started: it ends for everyone in it. */
-function DeleteRoom(props: { room: Room }) {
-  const { room } = props
-  const navigate = useNavigate()
-  const remove = async () => {
-    const ok = await confirm({
-      title: 'Apagar a sala?',
-      description:
-        room.status === 'encerrada'
-          ? 'A sala e a liga que acabou somem para todo mundo que entrou nela.'
-          : `${room.status === 'draft' ? 'O draft' : 'A liga'} acaba na hora e a sala some para todo mundo que entrou nela. Não dá para desfazer.`,
-      action: 'Apagar sala',
-      destructive: true,
-    })
-    if (!ok) return
-    try {
-      await deleteRoom(room.id)
-      navigate('/salas')
-    } catch (error) {
-      toast.error(messageOf(error))
-    }
-  }
-  return (
-    <Button variant="outline" className="self-start text-destructive" onClick={remove}>
-      <Trash2Icon />
-      Apagar sala
-    </Button>
-  )
 }
 
 function WaitingRoom(props: BodyProps) {
