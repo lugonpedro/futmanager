@@ -9,7 +9,7 @@ import { joinRoom, loadInvite, type RoomInvite } from '../../cloud/rooms.ts'
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { useAccountStore } from '../../store/account.ts'
 import { Note, RoomPage, TeamFields } from '../components/RoomParts.tsx'
-import { formatDraftAt, readRoomInviteCode } from '../room.ts'
+import { readRoomInviteCode } from '../room.ts'
 import { signInLink } from '../signIn.ts'
 import { useSuggestedTeam } from '../useSuggestedTeam.ts'
 
@@ -97,7 +97,7 @@ function Join(props: { code: string; invite: RoomInvite }) {
         <CardDescription>
           {invite.ownerNickname ? `Sala criada por ${invite.ownerNickname}` : 'Sala de draft'}, com{' '}
           {invite.members} de {invite.teams} times.{' '}
-          {!started && `O draft está marcado para ${formatDraftAt(invite.draftAt)}.`}
+          {!started && 'O draft começa quando a sala encher e todos marcarem "Pronto".'}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">

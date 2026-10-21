@@ -42,7 +42,8 @@ Deno.serve(async (req) => {
   const room = Number((await req.json().catch(() => ({})))?.room)
   if (!Number.isInteger(room)) return json({ error: 'Sala inválida.' }, 400)
 
-  // The cron job carries the shared secret; anyone else must be the owner of a waiting room.
+  // The cron job carries the shared secret; anyone else must be the owner of a waiting room,
+  // or in a full room where everyone is ready.
   const secret = Deno.env.get('FANTASY_CRON_SECRET')
   if (!secret || req.headers.get('x-cron-secret') !== secret) {
     const asUser = createClient(url, Deno.env.get('SUPABASE_ANON_KEY')!, {
@@ -50,7 +51,11 @@ Deno.serve(async (req) => {
       auth: { persistSession: false },
     })
     const { data: allowed } = await asUser.rpc('can_start_draft', { room })
-    if (allowed !== true) return json({ error: 'Só quem criou a sala começa o draft.' }, 403)
+    if (allowed !== true)
+      return json(
+        { error: 'Só quem criou a sala começa o draft antes de todos estarem prontos.' },
+        403,
+      )
   }
 
   const db = createClient(url, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!, {

@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { BotIcon, CopyIcon, CrownIcon, PlayIcon, RefreshCwIcon, XIcon } from 'lucide-react'
+import {
+  BotIcon,
+  CheckIcon,
+  CopyIcon,
+  CrownIcon,
+  PlayIcon,
+  RefreshCwIcon,
+  XIcon,
+} from 'lucide-react'
 import { useNavigate, useParams } from 'react-router'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
@@ -11,6 +19,7 @@ import {
   leaveRoom,
   loadRoom,
   saveRoomTeam,
+  setWaitingReady,
   updateRoom,
   type Room,
   type RoomMember,
@@ -23,7 +32,7 @@ import { DraftView } from '../components/Draft.tsx'
 import { LeagueView } from '../components/League.tsx'
 import { RoomNotices } from '../components/RoomNotices.tsx'
 import { confirm } from '../confirm.ts'
-import { describeOptions, formatDraftAt, roomInviteLink, STATUS_LABELS } from '../room.ts'
+import { describeOptions, roomInviteLink, STATUS_LABELS } from '../room.ts'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -119,14 +128,36 @@ function WaitingRoom(props: BodyProps) {
   const me = members.find((m) => m.userId === userId)
   const robots = Math.max(0, room.options.teams - members.length)
   const [starting, setStarting] = useState(false)
+  const [readying, setReadying] = useState(false)
+  const ready = members.filter((m) => m.ready).length
 
-  // The owner starting the draft, or the time coming, turns this page into the draft.
+  // The draft starting turns this page into the draft; people joining or marking "Pronto" show up.
   const { reload } = props
   useEffect(
     () =>
-      waiting ? watchRoom(room.id, { pick: () => {}, room: reload, team: () => {} }) : undefined,
+      waiting
+        ? watchRoom(room.id, { pick: () => {}, room: reload, team: () => {}, members: reload })
+        : undefined,
     [room.id, waiting, reload],
   )
+
+  const toggleReady = async () => {
+    if (!me) return
+    setReadying(true)
+    try {
+      const everyone = await setWaitingReady(room.id, !me.ready)
+      // The last one ready starts the draft; the server would also do it within a minute.
+      if (everyone) {
+        toast.success('Todos prontos! O draft vai começar.')
+        await startDraftNow(room.id).catch(() => undefined)
+      }
+      await reload()
+    } catch (error) {
+      toast.error(messageOf(error))
+    } finally {
+      setReadying(false)
+    }
+  }
 
   const start = async () => {
     const ok = await confirm({
@@ -201,17 +232,35 @@ function WaitingRoom(props: BodyProps) {
           <p className="text-sm">
             {waiting ? (
               <>
-                O draft começará <strong>{formatDraftAt(room.draftAt)}</strong>.
+                O draft começa quando a sala encher e todos marcarem <strong>Pronto</strong> (
+                {ready} de {room.options.teams} prontos).{' '}
+                {owner
+                  ? 'Você pode começar antes; as vagas livres viram robôs.'
+                  : 'Quem criou a sala pode começar antes, com robôs nas vagas livres.'}
               </>
             ) : (
               'O draft já começou.'
             )}
           </p>
-          {owner && waiting && (
-            <Button className="self-start" onClick={start} disabled={starting}>
-              <PlayIcon />
-              Começar o draft agora
-            </Button>
+          {waiting && (
+            <div className="flex flex-wrap gap-2">
+              {me && (
+                <Button
+                  onClick={toggleReady}
+                  disabled={readying}
+                  variant={me.ready ? 'outline' : 'default'}
+                >
+                  <CheckIcon />
+                  {me.ready ? 'Desmarcar "Pronto"' : 'Pronto'}
+                </Button>
+              )}
+              {owner && (
+                <Button variant="outline" onClick={start} disabled={starting}>
+                  <PlayIcon />
+                  Começar o draft agora
+                </Button>
+              )}
+            </div>
           )}
         </CardContent>
       </Card>
@@ -227,7 +276,7 @@ function WaitingRoom(props: BodyProps) {
           </CardTitle>
           <CardDescription>
             {robots > 0
-              ? `Faltam ${robots} ${robots === 1 ? 'pessoa' : 'pessoas'}. As vagas que ninguém pegar até o draft viram robôs, que escolhem e escalam sozinhos.`
+              ? `Faltam ${robots} ${robots === 1 ? 'pessoa' : 'pessoas'}. As vagas que ninguém pegar viram robôs quando o draft começar; eles escolhem e escalam sozinhos.`
               : 'A sala está completa.'}
           </CardDescription>
         </CardHeader>
@@ -240,6 +289,12 @@ function WaitingRoom(props: BodyProps) {
                 title={member.nickname ? `${member.name} · ${member.nickname}` : member.name}
               >
                 <TeamCrest team={member} id={member.userId} className="size-12" />
+                {waiting && member.ready && (
+                  <CheckIcon
+                    className="absolute top-8 right-3 size-5 rounded-full bg-green-600 p-0.5 text-white"
+                    aria-label="Pronto"
+                  />
+                )}
                 <span className="w-full truncate text-xs font-medium">{member.name}</span>
                 <span className="-mt-1 w-full truncate text-[0.7rem] text-muted-foreground">
                   {member.userId === userId ? 'você' : (member.nickname ?? member.shortName)}
@@ -381,8 +436,8 @@ function EditRoom(props: { room: Room; people: number; onSaved: () => Promise<vo
   const save = async () => {
     setBusy(true)
     try {
-      // The name and the time of the draft stay as the room was created.
-      await updateRoom(room.id, room.name, options, room.draftAt)
+      // The name stays as the room was created.
+      await updateRoom(room.id, room.name, options)
       await props.onSaved()
       toast.success('Regras salvas.')
     } catch (error) {
