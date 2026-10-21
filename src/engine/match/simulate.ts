@@ -254,11 +254,12 @@ function keeperName(team: TeamState): string {
   return team.onPitch.find((p) => p.position === 'G')?.player.name ?? 'o goleiro improvisado'
 }
 
-function goalKind(rng: Rng, aerial: boolean): GoalKind {
+/** How a goal went in; a long-range shooter scores more of his from outside the box. */
+function goalKind(rng: Rng, aerial: boolean, longShots: number): GoalKind {
   if (aerial) return 'cabeca'
   const roll = rng.next()
   if (roll < 0.1) return 'penalti'
-  if (roll < 0.75) return rng.next() < 0.5 ? 'chute' : 'jogada'
+  if (roll < 0.75 - 0.15 * longShots) return rng.next() < 0.5 ? 'chute' : 'jogada'
   return 'fora'
 }
 
@@ -269,15 +270,23 @@ const average = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / x
 
 /**
  * Extra attack from forwards quicker than their level would say against
- * defenders slower than theirs. It counts most for the side seeing less of
- * the ball, which plays on the counter.
+ * defenders slower than theirs, sent through by the side's best through
+ * ball and cut out by a keeper who comes off his line. It counts most for
+ * the side seeing less of the ball, which plays on the counter.
  */
 function paceEdge(team: TeamState, opponent: TeamState, possession: number): number {
   const runners = team.onPitch.filter((p) => p.position === 'A' || p.position === 'L')
   const chasers = opponent.onPitch.filter((p) => p.position === 'Z' || p.position === 'L')
   if (runners.length === 0 || chasers.length === 0) return 0
   const quickness = (p: OnPitch) => (paceSkill(p.player) - p.player.overall) * shape(p)
-  const gap = average(runners.map(quickness)) - average(chasers.map(quickness)) - PACE_GAP
+  const throughBall = Math.max(0, ...team.onPitch.map((p) => styleBonus(p.player, 'lancador')))
+  const keeper = opponent.onPitch.find((p) => p.position === 'G')
+  const sweeper = keeper ? styleBonus(keeper.player, 'saida') : 0
+  const gap =
+    average(runners.map(quickness)) -
+    average(chasers.map(quickness)) -
+    PACE_GAP +
+    2 * (throughBall - sweeper)
   return BALANCE.paceWeight * gap * 2 * (1 - possession)
 }
 
@@ -308,7 +317,11 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
 
   const outfield = team.onPitch.filter((p) => p.position !== 'G')
   if (outfield.length === 0) return { end: 'none' }
-  const crossers = outfield.reduce((sum, p) => sum + styleBonus(p.player, 'cruzador'), 0)
+  // Crosses from open play, and corners and free kicks from a set-piece taker.
+  const crossers = outfield.reduce(
+    (sum, p) => sum + styleBonus(p.player, 'cruzador') + 0.5 * styleBonus(p.player, 'cobrador'),
+    0,
+  )
   const aerial = rng.next() < BALANCE.aerialShare * (1 + crossers / 20)
   const shooter = aerial
     ? weightedPick(
@@ -326,6 +339,7 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
         (p) =>
           scoringWeight(p) *
           (1 + 0.25 * styleLevel(p.player, 'finalizador')) *
+          (1 + 0.25 * styleLevel(p.player, 'chutador')) *
           Math.max(1, finishingSkill(p.player)) *
           shape(p),
       )
@@ -353,7 +367,11 @@ function attack(state: MatchState, side: MatchSide, possession: number): AttackO
       type: 'gol',
       clubId: team.club.id,
       playerId: shooter.player.id,
-      text: narrate.goal(rng, goalKind(rng, aerial), shooter.player.name),
+      text: narrate.goal(
+        rng,
+        goalKind(rng, aerial, styleLevel(shooter.player, 'chutador')),
+        shooter.player.name,
+      ),
     })
     return { end: 'goal', shooterId: shooter.player.id }
   } else {
@@ -573,11 +591,13 @@ function discipline(state: MatchState, side: MatchSide) {
   }
 }
 
-/** Everyone tires each minute; stamina decides how fast. */
+/** Everyone tires each minute; stamina decides how fast, and a tireless player tires less. */
 function tire(team: TeamState, rng: Rng) {
   const rate = BALANCE.tiring * POSTURE_EFFECT[team.posture].tiring
   for (const p of team.onPitch) {
-    const stamina = 1.35 - (BALANCE.staminaEffect * p.player.attributes.stamina) / 100
+    const stamina =
+      (1.35 - (BALANCE.staminaEffect * p.player.attributes.stamina) / 100) *
+      (1 - 0.12 * styleLevel(p.player, 'incansavel'))
     p.energy = Math.max(0, p.energy - rate * stamina * (0.7 + 0.6 * rng.next()))
   }
 }

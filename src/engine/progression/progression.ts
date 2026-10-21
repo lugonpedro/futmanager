@@ -3,6 +3,7 @@ import { SQUAD_SHAPE } from '../generate/world.ts'
 import {
   ATTRIBUTES,
   FACE_PARTS,
+  gainStyles,
   OVERALL_WEIGHTS,
   overallAt,
   type AnyFace,
@@ -206,6 +207,7 @@ export function developStep(
     ...player,
     attributes,
     overall,
+    styles: gainStyles(player.styles, attributes, player.position),
     potential: Math.max(potential, overall),
     marketValue: marketValueFor(overall, potential, player.age),
   }

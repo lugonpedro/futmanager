@@ -96,7 +96,7 @@ function rawOverall(attributes: Attributes, position: Position): number {
 export const overallAt = (attributes: Attributes, position: Position): number =>
   Math.min(99, Math.max(1, Math.round(rawOverall(attributes, position))))
 
-/** Each style's key attributes: generating a player with it raises them, and their average decides the "+". */
+/** Each style's key attributes: their average decides whether a player has it, and the "+". */
 export const STYLE_ATTRIBUTES: Record<PlayStyle, Attribute[]> = {
   paredao: ['reflexes', 'diving'],
   colocacao: ['keeperPositioning', 'handling'],
@@ -110,9 +110,39 @@ export const STYLE_ATTRIBUTES: Record<PlayStyle, Attribute[]> = {
   armador: ['vision', 'longPassing'],
   driblador: ['dribbling', 'agility'],
   finalizador: ['finishing', 'attackPositioning'],
+  chutador: ['shotPower', 'ballControl'],
+  cobrador: ['penalties', 'crossing'],
+  incansavel: ['stamina'],
+  trator: ['strength', 'aggression'],
+  lancador: ['vision', 'shortPassing'],
 }
 
+/** The styles a player of each position can have. */
 export const STYLES_BY_POSITION: Record<Position, readonly PlayStyle[]> = {
+  G: ['paredao', 'colocacao', 'saida'],
+  Z: ['muralha', 'desarmador', 'cabeceador', 'velocista', 'trator', 'lancador'],
+  L: ['muralha', 'cruzador', 'velocista', 'passador', 'incansavel', 'cobrador'],
+  M: [
+    'passador',
+    'armador',
+    'desarmador',
+    'driblador',
+    'finalizador',
+    'chutador',
+    'lancador',
+    'incansavel',
+    'trator',
+    'cobrador',
+  ],
+  A: ['finalizador', 'driblador', 'cabeceador', 'velocista', 'chutador', 'trator'],
+}
+
+/**
+ * The styles a new player may be born gifted at, which raises their key
+ * attributes. Kept as they were before styles came from the attributes, so
+ * the same seed still makes the same players.
+ */
+const TALENTS_BY_POSITION: Record<Position, readonly PlayStyle[]> = {
   G: ['paredao', 'colocacao', 'saida'],
   Z: ['muralha', 'desarmador', 'cabeceador', 'velocista'],
   L: ['muralha', 'cruzador', 'velocista', 'passador'],
@@ -123,12 +153,83 @@ export const STYLES_BY_POSITION: Record<Position, readonly PlayStyle[]> = {
 /** Key attributes averaging this much give the "+" version of a style. */
 export const STYLE_PLUS_FROM = 84
 
+/**
+ * A player has a style when its key attributes are this much above what is
+ * usual for his position and overall, and average at least STYLE_FLOOR.
+ */
+export const STYLE_MARGIN = 4
+export const STYLE_FLOOR = 50
+/** Most styles a player picks up; he never loses one he has. */
+export const MAX_STYLES = 3
+
 /** 0 without the style, 1 with it, 2 with its "+" version. */
 export function styleLevel(player: Player, style: PlayStyle): 0 | 1 | 2 {
   if (!player.styles.includes(style)) return 0
+  return keyAverage(player.attributes, style) >= STYLE_PLUS_FROM ? 2 : 1
+}
+
+const keyAverage = (attributes: Attributes, style: PlayStyle) =>
+  STYLE_ATTRIBUTES[style].reduce((sum, key) => sum + attributes[key], 0) /
+  STYLE_ATTRIBUTES[style].length
+
+/** How far a style's key attributes stand above the usual for the position and overall. */
+export function styleStandout(attributes: Attributes, position: Position, style: PlayStyle) {
+  const overall = rawOverall(attributes, position)
   const keys = STYLE_ATTRIBUTES[style]
-  const average = keys.reduce((sum, key) => sum + player.attributes[key], 0) / keys.length
-  return average >= STYLE_PLUS_FROM ? 2 : 1
+  return (
+    keys.reduce((sum, key) => sum + attributes[key] - usualAttribute(position, overall, key), 0) /
+    keys.length
+  )
+}
+
+/** The styles the attributes earn in a position, the most outstanding first, up to MAX_STYLES. */
+export function earnedStyles(attributes: Attributes, position: Position): PlayStyle[] {
+  return STYLES_BY_POSITION[position]
+    .map((style) => ({ style, standout: styleStandout(attributes, position, style) }))
+    .filter(
+      ({ style, standout }) =>
+        standout >= STYLE_MARGIN && keyAverage(attributes, style) >= STYLE_FLOOR,
+    )
+    .sort((a, b) => b.standout - a.standout)
+    .slice(0, MAX_STYLES)
+    .map(({ style }) => style)
+}
+
+/** Standout short of STYLE_MARGIN at which a style counts as close. */
+const CLOSE_TO_STYLE = 2
+
+/**
+ * The style a player is closest to picking up, when he has room for one and
+ * is nearly there: what training his key attributes would bring.
+ */
+export function nextStyle(player: Player): PlayStyle | undefined {
+  if (player.styles.length >= MAX_STYLES) return undefined
+  let best: { style: PlayStyle; standout: number } | undefined
+  for (const style of STYLES_BY_POSITION[player.position]) {
+    if (player.styles.includes(style)) continue
+    const standout = styleStandout(player.attributes, player.position, style)
+    if (standout >= STYLE_MARGIN - CLOSE_TO_STYLE && (!best || standout > best.standout)) {
+      best = { style, standout }
+    }
+  }
+  return best?.style
+}
+
+/**
+ * A player's styles after his attributes moved: he keeps every one he had,
+ * and picks up new ones he now stands out in while he has room for them.
+ */
+export function gainStyles(
+  styles: readonly PlayStyle[],
+  attributes: Attributes,
+  position: Position,
+): PlayStyle[] {
+  const next = [...styles]
+  for (const style of earnedStyles(attributes, position)) {
+    if (next.length >= MAX_STYLES) break
+    if (!next.includes(style)) next.push(style)
+  }
+  return next
 }
 
 /**
@@ -217,14 +318,28 @@ const TWEAKS: Partial<Record<Position, Partial<Record<Attribute, number>>>> = {
   G: { strength: 10, jumping: 10 },
 }
 
-/** Points a style adds to its key attributes when a player is generated. */
+/** The face each attribute is generated from; pace sits under both RIT and VEL, and RIT decides it. */
+const ATTRIBUTE_FACE = Object.fromEntries(
+  ATTRIBUTES.map((attribute) => [
+    attribute,
+    (Object.keys(FACE_PARTS) as AnyFace[]).find(
+      (f) => f !== 'VEL' && FACE_PARTS[f][attribute] !== undefined,
+    )!,
+  ]),
+) as Record<Attribute, AnyFace>
+
+/** What an attribute usually is for a player of a position and overall. */
+const usualAttribute = (position: Position, overall: number, attribute: Attribute) =>
+  overall + PROFILE[position][ATTRIBUTE_FACE[attribute]] + (TWEAKS[position]?.[attribute] ?? 0)
+
+/** Points a gifted style adds to its key attributes when a player is generated. */
 const STYLE_BOOST = 8
 
 const clampAttribute = (value: number) => Math.min(99, Math.max(1, Math.round(value)))
 
 /**
  * Attributes for a player of a given overall: the position's usual shape, some
- * personality, the styles' key skills raised, then all shifted together so
+ * personality, the gifted styles' key skills raised, then all shifted together so
  * the overall comes out at the target (give or take one at the extremes).
  */
 export function generateAttributes(
@@ -238,15 +353,9 @@ export function generateAttributes(
     [...FACES, ...KEEPER_FACES].map((face) => [face, rng.normal(0, 4)]),
   ) as Record<AnyFace, number>
   for (const attribute of ATTRIBUTES) {
-    // Pace sits under both RIT and VEL; the outfield face decides it.
-    const face = (Object.keys(FACE_PARTS) as AnyFace[]).find(
-      (f) => f !== 'VEL' && FACE_PARTS[f][attribute] !== undefined,
-    )!
     values[attribute] =
-      overall +
-      PROFILE[position][face] +
-      (TWEAKS[position]?.[attribute] ?? 0) +
-      faceNoise[face] +
+      usualAttribute(position, overall, attribute) +
+      faceNoise[ATTRIBUTE_FACE[attribute]] +
       rng.normal(0, 3)
   }
   for (const style of styles) {
@@ -295,10 +404,10 @@ export function secondaryPositions(attributes: Attributes, position: Position): 
   )
 }
 
-/** Strong players stand out in a style or two; weak ones in one at most. */
-export function pickStyles(rng: Rng, position: Position, overall: number): PlayStyle[] {
+/** The styles a new player is gifted at: strong players a style or two, weak ones one at most. */
+export function pickTalents(rng: Rng, position: Position, overall: number): PlayStyle[] {
   const count = overall >= 70 ? 2 : overall >= 50 ? rng.int(1, 2) : rng.int(0, 1)
-  return rng.shuffle(STYLES_BY_POSITION[position]).slice(0, count)
+  return rng.shuffle(TALENTS_BY_POSITION[position]).slice(0, count)
 }
 
 /** About one in five is left-footed; most have an average weaker foot. */
