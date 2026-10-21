@@ -128,7 +128,7 @@ export const ATTRIBUTE_NAMES: Record<Attribute, string> = {
 export const FOOT_NAMES: Record<Foot, string> = { direito: 'Direito', esquerdo: 'Esquerdo' }
 
 /** Card colour: by overall band, or a special card for the round's best XI and the player of the season. */
-export type CardTier = 'bronze' | 'prata' | 'ouro' | 'rodada' | 'craque'
+export type CardTier = 'bronze' | 'prata' | 'ouro' | 'rodada' | 'craque' | 'prime'
 
 export const CARD_TIER_NAMES: Record<CardTier, string> = {
   bronze: 'Bronze',
@@ -136,6 +136,7 @@ export const CARD_TIER_NAMES: Record<CardTier, string> = {
   ouro: 'Ouro',
   rodada: 'Seleção da rodada',
   craque: 'Craque da temporada',
+  prime: 'Prime',
 }
 
 /**

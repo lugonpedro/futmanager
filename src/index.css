@@ -140,6 +140,16 @@
   }
 }
 
+@keyframes prime-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0.5rem 0.1rem rgb(168 85 247 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 2.5rem 0.75rem rgb(168 85 247 / 0.9);
+  }
+}
+
 @keyframes walkout {
   0%,
   100% {

@@ -11,6 +11,7 @@ const TIER_CLASSES: Record<CardTier, string> = {
   ouro: 'from-amber-500 via-yellow-200 to-amber-500 text-amber-950',
   rodada: 'from-slate-950 via-emerald-800 to-slate-950 text-yellow-300',
   craque: 'from-indigo-950 via-fuchsia-700 to-indigo-950 text-white',
+  prime: 'from-violet-950 via-purple-600 to-violet-950 text-violet-50',
 }
 
 /** Initials for the portrait spot: we have no photos, and never use real ones. */
@@ -43,15 +44,17 @@ export function PlayerCard(props: {
   player: Player
   game?: GameState
   club?: Club
+  /** A colour other than the overall's, such as a draft's prime card. */
+  tier?: CardTier
   className?: string
 }) {
   const { player, game } = props
-  const tier = cardTier(player, game)
+  const tier = props.tier ?? cardTier(player, game)
   const club =
     props.club ??
     (game && player.clubId !== FREE_AGENT ? game.world.clubs[player.clubId] : undefined)
   const numbers = faces(player)
-  const special = tier === 'rodada' || tier === 'craque'
+  const special = tier === 'rodada' || tier === 'craque' || tier === 'prime'
   return (
     <figure
       className={cn(

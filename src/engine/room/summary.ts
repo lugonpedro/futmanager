@@ -2,6 +2,7 @@ import type { MatchReplay } from '../match/simulate.ts'
 import type { Lineup, Player } from '../model/types.ts'
 import { conditionOn, formOf } from '../season/form.ts'
 import { makePick, roomPhase } from './draft.ts'
+import { primePlayer } from './prime.ts'
 import {
   checkLineup,
   playRoomRound,
@@ -51,7 +52,14 @@ export type RoomSummary = {
 
 /** Turns a finished draft into the league: the picks made, in order, then the fixtures. */
 export function leagueFromDraft(start: RoomState, picks: readonly DraftPick[]): RoomState {
-  const drafted = picks.reduce((state, p) => makePick(state, p.teamId, p.playerId), start)
+  const players = { ...start.players }
+  for (const p of picks) {
+    if (p.prime) players[p.playerId] = primePlayer(players[p.playerId], p.prime)
+  }
+  const drafted = picks.reduce((state, p) => makePick(state, p.teamId, p.playerId), {
+    ...start,
+    players,
+  })
   return startLeague(drafted)
 }
 

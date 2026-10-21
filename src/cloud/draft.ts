@@ -29,10 +29,19 @@ export type DraftPick = {
   auto: boolean
   /** The place of the team it filled, as teamSlots() lists them; none in drafts made before. */
   slotIndex?: number
+  /** Overall added when the card taken was the deal's prime. */
+  primeBoost?: number
 }
 
 /** The cards dealt for a pick: for one place of the team on the clock, which keeps one. */
-export type DraftDeal = { pick: number; slot: number; slotIndex: number; playerIds: string[] }
+export type DraftDeal = {
+  pick: number
+  slot: number
+  slotIndex: number
+  playerIds: string[]
+  /** The card dealt as a prime, if any, and the overall it gains. */
+  prime?: { playerId: string; boost: number }
+}
 
 function client() {
   if (!supabase) throw new Error('O jogo online não está disponível nesta versão.')
@@ -73,6 +82,7 @@ type PickRow = {
   player_id: string
   auto: boolean
   slot_index?: number | null
+  prime_boost?: number | null
 }
 
 export const toDraftPick = (row: PickRow): DraftPick => ({
@@ -81,15 +91,27 @@ export const toDraftPick = (row: PickRow): DraftPick => ({
   playerId: row.player_id,
   auto: row.auto,
   slotIndex: row.slot_index ?? undefined,
+  primeBoost: row.prime_boost ?? undefined,
 })
 
-type DealRow = { pick: number; slot: number; slot_index: number; player_ids: string[] }
+type DealRow = {
+  pick: number
+  slot: number
+  slot_index: number
+  player_ids: string[]
+  prime_id?: string | null
+  prime_boost?: number | null
+}
 
 const toDraftDeal = (row: DealRow): DraftDeal => ({
   pick: row.pick,
   slot: row.slot,
   slotIndex: row.slot_index,
   playerIds: row.player_ids,
+  prime:
+    row.prime_id && row.prime_boost
+      ? { playerId: row.prime_id, boost: row.prime_boost }
+      : undefined,
 })
 
 export async function loadDraftTeams(room: number): Promise<DraftTeam[]> {
@@ -109,7 +131,7 @@ export async function loadDraftPicks(room: number): Promise<DraftPick[]> {
   for (let from = 0; ; from += PAGE) {
     const { data, error } = await client()
       .from('room_picks')
-      .select('pick, slot, player_id, auto, slot_index')
+      .select('pick, slot, player_id, auto, slot_index, prime_boost')
       .eq('room_id', room)
       .order('pick')
       .range(from, from + PAGE - 1)
@@ -123,7 +145,7 @@ export async function loadDraftPicks(room: number): Promise<DraftPick[]> {
 export async function loadDraftDeal(room: number, pick: number): Promise<DraftDeal | undefined> {
   const { data, error } = await client()
     .from('room_deals')
-    .select('pick, slot, slot_index, player_ids')
+    .select('pick, slot, slot_index, player_ids, prime_id, prime_boost')
     .eq('room_id', room)
     .eq('pick', pick)
     .maybeSingle()
