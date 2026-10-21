@@ -497,9 +497,10 @@ const FLIP_STEP_MS = 450
 const WALKOUT = 85
 
 /**
- * The cards dealt for the pick under way, turned one by one for everyone in
- * the room, the best one last. On the player's turn, tapping a card picks it
- * out and the button keeps it.
+ * The cards dealt for the pick under way, the prime first and then the best
+ * on the left, turned one by one for everyone in the room from the right, so
+ * the best turns last. On the player's turn, tapping a card picks it out and
+ * the button keeps it.
  */
 function DealTable(props: {
   room: Room
@@ -520,7 +521,9 @@ function DealTable(props: {
   const cards = (deal?.playerIds ?? [])
     .map((id) => byId.get(id))
     .filter((p) => p !== undefined)
-    .sort((a, b) => a.overall - b.overall || b.rank - a.rank)
+    .sort(
+      (a, b) => Number(!!b.prime) - Number(!!a.prime) || b.overall - a.overall || a.rank - b.rank,
+    )
   const chosen = cards.find((p) => p.id === selected)
   const problem = mine && chosen ? pickProblem(room, byId, picks, mine.slot, chosen.id) : undefined
   const position = deal && team ? placePosition(team, room, deal.slotIndex) : undefined
@@ -582,7 +585,7 @@ function DealTable(props: {
                       )}
                     >
                       <FlipCard
-                        delayMs={i * FLIP_STEP_MS}
+                        delayMs={(cards.length - 1 - i) * FLIP_STEP_MS}
                         glow={
                           player.prime ? 'prime' : player.overall >= WALKOUT ? 'walkout' : undefined
                         }
