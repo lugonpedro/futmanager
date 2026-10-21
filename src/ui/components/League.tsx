@@ -33,6 +33,7 @@ import {
   type DraftTeam,
 } from '../../cloud/draft.ts'
 import {
+  loadPlayedRound,
   loadRoundReplays,
   loadRoundResults,
   rematchRoom,
@@ -43,6 +44,7 @@ import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary } from '../../engine/room/summary.ts'
+import { LIVE, markRoundSeen, roundOver, roundTimeline, seenRound } from '../liveRound.ts'
 import { describeOptions } from '../room.ts'
 import { roomPageSlug, type RoomPageSlug } from '../roomPages.ts'
 import { canPlayRound, readiness } from '../roomLeague.ts'
@@ -54,10 +56,20 @@ import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { MarketView } from './Market.tsx'
 import { RoomLineup } from './RoomLineup.tsx'
 import { RoomLayout } from './RoomLayout.tsx'
+import { RoomLiveRound } from './RoomLiveRound.tsx'
 import { RoomNotices } from './RoomNotices.tsx'
 import { Note, TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
+
+/** The round being shown live, and the table as it stood before it, so nothing gives it away. */
+type Live = {
+  round: number
+  replays: Replay[]
+  kickOff: number
+  timeline: number[]
+  before: RoomSummary
+}
 
 type Loaded = {
   teams: DraftTeam[]
@@ -83,6 +95,9 @@ export function LeagueView(props: {
   const [loaded, setLoaded] = useState<Loaded>()
   const [failed, setFailed] = useState(false)
   const [watching, setWatching] = useState<{ replay: Replay; title: string }>()
+  const [live, setLive] = useState<Live>()
+  /** The last round checked for being live, so its results don't show before that is known. */
+  const [checked, setChecked] = useState(0)
 
   const load = useCallback(
     () =>
@@ -140,6 +155,35 @@ export function LeagueView(props: {
     }
   }, [room.id, load, loadSummary, reload])
 
+  // A round played less than its length ago is shown live, unless the player already saw it.
+  const played = loaded?.summary?.played ?? 0
+  useEffect(() => {
+    if (played === 0 || seenRound(room.id) >= played) return
+    let on = true
+    Promise.all([loadPlayedRound(room.id, played), loadPlayedRound(room.id, played - 1)])
+      .then(([now, before]) => {
+        if (!on) return
+        const timeline = now ? roundTimeline(now.replays) : []
+        const kickOff = (now?.playedAt.getTime() ?? 0) + LIVE.leadMs
+        if (!now || !before || roundOver(timeline, Date.now() - kickOff)) {
+          markRoundSeen(room.id, played)
+        } else {
+          setLive({
+            round: played,
+            replays: now.replays,
+            kickOff,
+            timeline,
+            before: before.summary,
+          })
+        }
+        setChecked(played)
+      })
+      .catch(() => on && setChecked(played))
+    return () => {
+      on = false
+    }
+  }, [room.id, played])
+
   const byId = useMemo(() => new Map((loaded?.pool ?? []).map((p) => [p.id, p])), [loaded])
   const slug = roomPageSlug(props.page)
   const frame = (status: string, children: ReactNode, mine?: DraftTeam, marked = NONE) => (
@@ -150,15 +194,17 @@ export function LeagueView(props: {
   if (failed) {
     return frame('', <Note>Não deu para carregar a liga agora. Atualize a página.</Note>)
   }
-  if (!loaded?.summary) return frame('', <Note>Carregando a liga…</Note>)
+  const pending = played > 0 && checked < played && seenRound(room.id) < played
+  if (!loaded?.summary || pending) return frame('', <Note>Carregando a liga…</Note>)
 
-  const { teams, picks, summary } = loaded
+  const { teams, picks } = loaded
+  const summary = live?.before ?? loaded.summary
   const teamOf = new Map(teams.map((t) => [String(t.slot), t]))
   const over = summary.next.length === 0
   const mine = teams.find((t) => t.userId === userId && !t.robot)
   const owner = room.ownerId === userId
   const open = !over && room.round !== undefined
-  const played = async () => {
+  const onPlayed = async () => {
     await Promise.all([loadSummary(), reload()])
   }
   const watch = async (match: RoomMatchLine, round: number) => {
@@ -174,11 +220,17 @@ export function LeagueView(props: {
       toast.error(messageOf(error))
     }
   }
-  const status = over
-    ? 'liga encerrada'
-    : `rodada ${room.round?.no ?? summary.played + 1} de ${summary.totalRounds}`
+  const status = live
+    ? `rodada ${live.round} ao vivo`
+    : over
+      ? 'liga encerrada'
+      : `rodada ${room.round?.no ?? summary.played + 1} de ${summary.totalRounds}`
   const marked = new Set<RoomPageSlug>()
-  if (open && mine && mine.readyRound !== room.round!.no) marked.add('')
+  if (live || (open && mine && mine.readyRound !== room.round!.no)) marked.add('')
+  const doneWatching = () => {
+    markRoundSeen(room.id, live!.round)
+    setLive(undefined)
+  }
 
   if (watching) {
     return frame(
@@ -199,7 +251,20 @@ export function LeagueView(props: {
     )
 
   let page: ReactNode
-  if (slug === 'time') {
+  if (live && slug === '') {
+    page = (
+      <RoomLiveRound
+        key={live.round}
+        round={live.round}
+        replays={live.replays}
+        kickOff={live.kickOff}
+        timeline={live.timeline}
+        teamOf={teamOf}
+        mine={mine}
+        onDone={doneWatching}
+      />
+    )
+  } else if (slug === 'time') {
     page =
       open && mine ? (
         <RoomLineup
@@ -287,7 +352,7 @@ export function LeagueView(props: {
               teams={teams}
               mine={mine}
               summary={summary}
-              onPlayed={played}
+              onPlayed={onPlayed}
               onTeam={onTeam}
             />
           )
@@ -338,7 +403,27 @@ export function LeagueView(props: {
     )
   }
 
-  return frame(status, page, mine, marked)
+  return frame(
+    status,
+    live && slug !== '' ? (
+      <>
+        <Card className="flex-row items-center justify-between gap-3 px-4 py-3">
+          <span className="text-sm">A rodada {live.round} está sendo jogada agora.</span>
+          <Button asChild size="sm">
+            <Link to={`/sala/${room.id}`}>
+              <MonitorPlayIcon />
+              Assistir
+            </Link>
+          </Button>
+        </Card>
+        {page}
+      </>
+    ) : (
+      page
+    ),
+    mine,
+    marked,
+  )
 }
 
 const NONE: ReadonlySet<RoomPageSlug> = new Set()
@@ -502,28 +587,31 @@ function RoundsPage(props: {
         <Note>Não deu para carregar as rodadas agora.</Note>
       ) : !rounds ? (
         <Note>Carregando as rodadas…</Note>
-      ) : rounds.length === 0 ? (
+      ) : rounds.every(({ round }) => round > summary.played) ? (
         <Note>Nenhuma rodada jogada ainda.</Note>
       ) : (
-        [...rounds].reverse().map(({ round, matches }) => (
-          <Card key={round}>
-            <CardHeader>
-              <CardTitle>Rodada {round}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="flex flex-col gap-4">
-                {matches.map((match) => (
-                  <MatchLine
-                    key={`${match.homeId}-${match.awayId}`}
-                    match={match}
-                    teamOf={teamOf}
-                    onWatch={() => props.onWatch(match, round)}
-                  />
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        ))
+        rounds
+          .filter(({ round }) => round <= summary.played)
+          .reverse()
+          .map(({ round, matches }) => (
+            <Card key={round}>
+              <CardHeader>
+                <CardTitle>Rodada {round}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="flex flex-col gap-4">
+                  {matches.map((match) => (
+                    <MatchLine
+                      key={`${match.homeId}-${match.awayId}`}
+                      match={match}
+                      teamOf={teamOf}
+                      onWatch={() => props.onWatch(match, round)}
+                    />
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))
       )}
     </>
   )

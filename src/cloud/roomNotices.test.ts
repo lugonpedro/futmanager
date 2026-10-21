@@ -12,8 +12,10 @@ describe('roomNotice', () => {
   })
 
   it('tells a round from the end of the league', () => {
-    expect(roomNotice('rodada', room, { round: 3, over: false }).title).toBe('Rodada 3 jogada')
-    expect(roomNotice('rodada', room, { round: 14, over: true }).title).toBe('A liga acabou')
+    expect(roomNotice('rodada', room, { round: 3, over: false }).title).toBe('Rodada 3 ao vivo')
+    expect(roomNotice('rodada', room, { round: 14, over: true }).title).toBe(
+      'A última rodada começou',
+    )
   })
 
   it('names who offered a trade', () => {
