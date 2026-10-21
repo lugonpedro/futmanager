@@ -422,6 +422,10 @@ verify_jwt = false
 [functions.room-draft]
 verify_jwt = false
 
-# Called by the room's owner, whose token the function checks.
+# Called by the database with a shared secret, and by people in the room, whose token the function checks.
 [functions.room-round]
+verify_jwt = false
+
+# Called by people in the room, whose token the function checks.
+[functions.room-market]
 verify_jwt = false

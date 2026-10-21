@@ -157,8 +157,12 @@ export async function setDraftAuto(room: number, on: boolean): Promise<void> {
 }
 
 /** Calls one of the room's server functions, with the message it answers on failure. */
-async function invoke(name: string, room: number, fallback: string): Promise<void> {
-  const { data, error } = await client().functions.invoke(name, { body: { room } })
+export async function invoke(
+  name: string,
+  body: Record<string, unknown>,
+  fallback: string,
+): Promise<void> {
+  const { data, error } = await client().functions.invoke(name, { body })
   if (error) {
     const body = await (error as { context?: Response }).context?.json?.().catch(() => undefined)
     throw new Error(body?.error ?? fallback)
@@ -168,14 +172,14 @@ async function invoke(name: string, room: number, fallback: string): Promise<voi
 
 /** Starts the draft of a waiting room now; only its owner can. */
 export const startDraftNow = (room: number) =>
-  invoke('room-draft', room, 'Não deu para começar o draft agora. Tente de novo.')
+  invoke('room-draft', { room }, 'Não deu para começar o draft agora. Tente de novo.')
 
 /**
  * Starts the league once the draft is over, or plays its next round: anyone
  * once everyone is ready, the owner after the grace period.
  */
 export const playRoomRound = (room: number) =>
-  invoke('room-round', room, 'Não deu para jogar a rodada agora. Tente de novo.')
+  invoke('room-round', { room }, 'Não deu para jogar a rodada agora. Tente de novo.')
 
 /** What the room's page shows of the league, as of the last round played. */
 export async function loadRoomSummary(room: number): Promise<RoomSummary | undefined> {
@@ -201,6 +205,8 @@ export function watchRoom(
     room: () => void
     team: (team: DraftTeam) => void
     round?: () => void
+    /** Squads, offers or the market's feed changed. */
+    market?: () => void
   },
 ): () => void {
   const db = client()
@@ -226,7 +232,16 @@ export function watchRoom(
       { event: 'INSERT', schema: 'public', table: 'room_rounds', filter: `room_id=eq.${room}` },
       () => on.round?.(),
     )
-    .subscribe()
+  if (on.market) {
+    for (const table of ['room_rosters', 'room_trades', 'room_feed', 'room_squads']) {
+      channel.on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table, filter: `room_id=eq.${room}` },
+        () => on.market?.(),
+      )
+    }
+  }
+  channel.subscribe()
   return () => {
     db.removeChannel(channel)
   }
