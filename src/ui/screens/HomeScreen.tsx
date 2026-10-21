@@ -7,6 +7,7 @@ import {
   PlayIcon,
   PlusIcon,
   Trash2Icon,
+  TriangleAlertIcon,
   UserIcon,
   UsersIcon,
 } from 'lucide-react'
@@ -84,6 +85,8 @@ export function HomeScreen() {
             <h1 className="text-4xl font-bold">onzemestre</h1>
             <p className="text-muted-foreground">Gerencie seu time rumo à primeira divisão.</p>
           </div>
+
+          <BetaNote />
 
           {latest && (
             <Button
@@ -198,6 +201,22 @@ export function HomeScreen() {
       </Card>
       <ConflictDialog />
     </main>
+  )
+}
+
+/** The game is still changing, so old careers may stop opening. */
+function BetaNote() {
+  return (
+    <div
+      role="note"
+      className="flex gap-3 rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm"
+    >
+      <TriangleAlertIcon className="mt-0.5 size-4 shrink-0 text-destructive" />
+      <p>
+        <strong className="font-semibold">Estamos em beta.</strong> Com as novas funcionalidades e
+        os rebalanceamentos dos jogadores, suas carreiras salvas podem ser perdidas.
+      </p>
+    </div>
   )
 }
 
