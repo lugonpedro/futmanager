@@ -25,14 +25,14 @@ No celular isso vira uma rolagem longa, e o mercado sozinho já ocupa uma tela i
 
 ### As páginas
 
-| Página | Endereço | O que tem |
-| --- | --- | --- |
-| **Resumo** | `/sala/:id` | O "Pronto" (ou o fim da liga com campeão e revanche), seu próximo jogo, os resultados da última rodada e os 4 primeiros da tabela |
-| **Time** | `/sala/:id/time` | Escalação e elenco, com a formação e o banco |
-| **Mercado** | `/sala/:id/mercado` | Livres, propostas e dispensas; as abas atuais do mercado viram abas da página |
-| **Tabela** | `/sala/:id/tabela` | Classificação e artilharia em abas, como em Competições na carreira |
-| **Rodadas** | `/sala/:id/rodadas` | Todas as rodadas jogadas, cada jogo com o botão de assistir, e as próximas |
-| **Sala** | `/sala/:id/sala` | Quem está na sala, as regras, o histórico do draft e o apagar sala para o dono |
+| Página      | Endereço            | O que tem                                                                                                                         |
+| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Resumo**  | `/sala/:id`         | O "Pronto" (ou o fim da liga com campeão e revanche), seu próximo jogo, os resultados da última rodada e os 4 primeiros da tabela |
+| **Time**    | `/sala/:id/time`    | Escalação e elenco, com a formação e o banco                                                                                      |
+| **Mercado** | `/sala/:id/mercado` | Livres, propostas e dispensas; as abas atuais do mercado viram abas da página                                                     |
+| **Tabela**  | `/sala/:id/tabela`  | Classificação e artilharia em abas, como em Competições na carreira                                                               |
+| **Rodadas** | `/sala/:id/rodadas` | Todas as rodadas jogadas, cada jogo com o botão de assistir, e as próximas                                                        |
+| **Sala**    | `/sala/:id/sala`    | Quem está na sala, as regras, o histórico do draft e o apagar sala para o dono                                                    |
 
 A página Rodadas é nova. Hoje só a última rodada aparece, mas cada linha de `room_rounds` guarda o resumo daquela rodada, então dá para listar todas sem mudar o banco.
 
@@ -90,12 +90,12 @@ O aviso de "rodada jogada" (D6) passa a dizer "A rodada começou, venha assistir
 
 ## Ordem dos PRs
 
-| Passo | O que entra | Tamanho |
-| --- | --- | --- |
-| M1 | `RoomLayout` com o menu, rotas filhas e as páginas Resumo, Time, Mercado, Tabela e Sala, recortadas do `League.tsx` | Médio |
-| M2 | Página Rodadas, com todas as rodadas jogadas e o botão de assistir | Pequeno |
-| M3 | Rodada ao vivo: `replayAt`, modo ao vivo no `MatchReplay`, placares dos outros jogos, tela de fim, sem spoiler | Médio/grande |
-| M4 | Texto do aviso e acertos depois de testar com a turma | Pequeno |
+| Passo | O que entra                                                                                                         | Tamanho      |
+| ----- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
+| M1    | `RoomLayout` com o menu, rotas filhas e as páginas Resumo, Time, Mercado, Tabela e Sala, recortadas do `League.tsx` | Médio        |
+| M2    | Página Rodadas, com todas as rodadas jogadas e o botão de assistir                                                  | Pequeno      |
+| M3    | Rodada ao vivo: `replayAt`, modo ao vivo no `MatchReplay`, placares dos outros jogos, tela de fim, sem spoiler      | Médio/grande |
+| M4    | Texto do aviso e acertos depois de testar com a turma                                                               | Pequeno      |
 
 Os passos M1 e M2 só mexem no app, sem banco. O M3 também não precisa de banco, só usa `played_at` e `replays`, que já existem.
 
