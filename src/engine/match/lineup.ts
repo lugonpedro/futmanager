@@ -7,7 +7,7 @@ import type {
   Posture,
   TacticalRole,
 } from '../model/types.ts'
-import { DEFAULT_ROLE, FORMATION_LINES, roleOf, type Slot } from './roles.ts'
+import { DEFAULT_ROLE, dutiesFor, FORMATION_LINES, roleOf, type Slot } from './roles.ts'
 import { positionFit, roleOverall } from './strength.ts'
 
 /** How many players each formation puts in each position. Laterais count as defenders. */
@@ -215,6 +215,21 @@ export function setDuty(lineup: Lineup, playerId: string, duty: TacticalRole): L
 }
 
 /**
+ * Takes away picked roles the slot can no longer have, such as the ones that
+ * left the game, so the slot plays its own again.
+ */
+export function dropUnknownDuties(lineup: Lineup): Lineup {
+  const known = (slot: LineupSlot) => !slot?.duty || dutiesFor(slot).includes(slot.duty)
+  if (lineup.starters.every(known)) return lineup
+  const starters = lineup.starters.map((slot) => {
+    if (known(slot)) return slot
+    const { duty: _, ...rest } = slot
+    return rest
+  })
+  return { ...lineup, starters }
+}
+
+/**
  * Swaps two players of the squad. Two starters trade places on the pitch; a
  * starter and anyone else trade the starter's slot for the other's place on the
  * bench or in the stands; two bench players swap order.
@@ -248,7 +263,7 @@ export function repairLineup(
     return true
   }
 
-  const kept = withRoles(lineup).starters.filter((slot) => keep(slot.playerId))
+  const kept = withRoles(dropUnknownDuties(lineup)).starters.filter((slot) => keep(slot.playerId))
   let bench = lineup.bench.filter(keep)
   const open = formationSlots(lineup.formation)
   const close = (match: (slot: Slot) => boolean) => {

@@ -22,13 +22,19 @@ import { addDays, seasonDates, type GameDate } from './season/calendar.ts'
 import { NO_TRAINING } from './progression/training.ts'
 import { createCup, CUP_ROUNDS } from './season/cup.ts'
 import { mixSeed, SAVE_VERSION } from './season/season.ts'
-import { withRoles } from './match/lineup.ts'
+import { dropUnknownDuties, withRoles } from './match/lineup.ts'
 import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 import { gainStyles } from './player/attributes.ts'
 
+/**
+ * A career as stored before version 16, when the lineup could pick roles
+ * that have since left the game, and the best players could have no style.
+ */
+type V15Game = Omit<GameState, 'version'> & { version: 15 }
+
 /** A career as stored before version 15, when a lineup slot had no picked role. */
-type V14Game = Omit<GameState, 'version'> & { version: 14 }
+type V14Game = Omit<V15Game, 'version'> & { version: 14 }
 
 /** A career as stored before version 14, when styles were drawn at random, not earned. */
 type V13Game = Omit<V14Game, 'version'> & { version: 13 }
@@ -348,14 +354,33 @@ function fromV13(saved: V13Game): V14Game {
 }
 
 /** Every slot plays its own role until the user picks another. */
-function fromV14(saved: V14Game): GameState {
-  return { ...saved, version: SAVE_VERSION }
+function fromV14(saved: V14Game): V15Game {
+  return { ...saved, version: 15 }
+}
+
+/**
+ * Slots drop roles that left the game, and everyone picks up the styles the
+ * attributes now earn, which gives the best players at least one or two.
+ */
+function fromV15(saved: V15Game): GameState {
+  const { world, userLineup } = saved
+  const players = mapValues(world.players, (player) => ({
+    ...player,
+    styles: gainStyles(player.styles, player.attributes, player.position),
+  }))
+  return {
+    ...saved,
+    version: SAVE_VERSION,
+    world: { ...world, players },
+    ...(userLineup && { userLineup: dropUnknownDuties(userLineup) }),
+  }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
   saved:
     | GameState
+    | V15Game
     | V14Game
     | V13Game
     | V12Game
@@ -386,5 +411,6 @@ export function upgradeGame(
   const v12 = version < 12 ? fromV11(v11) : (saved as V12Game)
   const v13 = version < 13 ? fromV12(v12) : (saved as V13Game)
   const v14 = version < 14 ? fromV13(v13) : (saved as V14Game)
-  return fromV14(v14)
+  const v15 = version < 15 ? fromV14(v14) : (saved as V15Game)
+  return fromV15(v15)
 }

@@ -158,9 +158,8 @@ export type Posture = 'defensiva' | 'normal' | 'ofensiva'
  * GOL goleiro, ZAG zagueiro, LAT lateral, ALA ala, VOL volante, MC
  * meio-campista, MEI meia ofensivo, ME/MD meia pela esquerda/direita, PE/PD
  * ponta esquerda/direita, CA centroavante, SA segundo atacante. The rest are
- * only ever chosen by the user, inspired by EA FC: GL goleiro-líbero, XER
- * xerife, ZC zagueiro construtor, AO ala ofensivo, LI lateral invertido, REG
- * regista, BB box-to-box, AS atacante sombra, CPD corta pra dentro, PIV pivô,
+ * only ever chosen by the user, inspired by EA FC: AO ala ofensivo, LI
+ * lateral invertido, REG regista, AS atacante sombra, CPD corta pra dentro,
  * F9 falso 9.
  */
 export type TacticalRole =
@@ -177,16 +176,11 @@ export type TacticalRole =
   | 'PD'
   | 'CA'
   | 'SA'
-  | 'GL'
-  | 'XER'
-  | 'ZC'
   | 'AO'
   | 'LI'
   | 'REG'
-  | 'BB'
   | 'AS'
   | 'CPD'
-  | 'PIV'
   | 'F9'
 
 /**

@@ -220,7 +220,7 @@ export function LineupEditor(props: {
           <DutyPicker
             player={players[selectedSlot.playerId]}
             slot={selectedSlot}
-            onPick={(duty) => props.onChange(setDuty(lineup, selectedSlot.playerId, duty))}
+            onPick={(duty) => change(setDuty(lineup, selectedSlot.playerId, duty))}
           />
         )}
 

@@ -1,3 +1,4 @@
+import { dropUnknownDuties } from '../match/lineup.ts'
 import type { MatchReplay } from '../match/simulate.ts'
 import type { Lineup, Player } from '../model/types.ts'
 import { conditionOn, formOf } from '../season/form.ts'
@@ -75,7 +76,9 @@ export function playSavedRound(
 ): PlayedRound {
   const lineups = { ...state.lineups }
   for (const [teamId, lineup] of Object.entries(saved)) {
-    if (!checkLineup(state, teamId, lineup)) lineups[teamId] = lineup
+    // A role picked before it left the game is dropped rather than the whole lineup.
+    const kept = Array.isArray(lineup?.starters) ? dropUnknownDuties(lineup) : lineup
+    if (!checkLineup(state, teamId, kept)) lineups[teamId] = kept
   }
   return playRoomRound({ ...state, lineups }, seed)
 }

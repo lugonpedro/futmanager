@@ -56,16 +56,11 @@ export const TACTICAL_ROLE_NAMES: Record<TacticalRole, string> = {
   PD: 'Ponta direita',
   CA: 'Centroavante',
   SA: 'Segundo atacante',
-  GL: 'Goleiro-líbero',
-  XER: 'Xerife',
-  ZC: 'Zagueiro construtor',
   AO: 'Ala ofensivo',
   LI: 'Lateral invertido',
   REG: 'Regista',
-  BB: 'Box-to-box',
   AS: 'Atacante sombra',
   CPD: 'Corta pra dentro',
-  PIV: 'Pivô',
   F9: 'Falso 9',
 }
 
@@ -84,16 +79,11 @@ export const TACTICAL_ROLE_EFFECTS: Record<TacticalRole, string> = {
   PD: 'Ponta aberta pela direita, ataca pelo lado.',
   CA: 'Fica na área para finalizar.',
   SA: 'Ataca perto do centroavante e ajuda a armar.',
-  GL: 'Sai do gol e corta os contra-ataques do adversário.',
-  XER: 'Só defende: mais defesa, quase nada no resto.',
-  ZC: 'Sai jogando: menos defesa, mais meio.',
   AO: 'Vive no ataque e cruza muito; deixa a defesa.',
   LI: 'Vira meio-campista no ataque: mais meio, menos cruzamento.',
   REG: 'Arma de trás: reforça o meio e o contra-ataque, chuta pouco.',
-  BB: 'Vai de área a área: um pouco de tudo, chega para chutar.',
   AS: 'Chega de trás para finalizar; ajuda pouco no meio.',
   CPD: 'Corta para o meio e chuta em vez de cruzar. Rende mais no lado contrário ao pé bom.',
-  PIV: 'Segura a bola e ganha no alto: cabeceia muito mais.',
   F9: 'Recua para armar e puxa o zagueiro: mais meio, menos bola aérea.',
 }
 

@@ -438,7 +438,7 @@ describe('picked roles in a match', () => {
   it('play out the same from the same seed', () => {
     const base = input('C1', 'C2')
     const forward = base.home.lineup.starters.find((s) => s.position === 'A')!
-    const lineup = setDuty(base.home.lineup, forward.playerId, 'PIV')
+    const lineup = setDuty(base.home.lineup, forward.playerId, 'AS')
     const picked = { ...base, home: { ...base.home, lineup } }
     expect(simulateMatch(picked, createRng(5))).toEqual(simulateMatch(picked, createRng(5)))
   })
