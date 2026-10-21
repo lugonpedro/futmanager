@@ -429,3 +429,7 @@ verify_jwt = false
 # Called by people in the room, whose token the function checks.
 [functions.room-market]
 verify_jwt = false
+
+# Called by the database with a shared secret.
+[functions.room-notify]
+verify_jwt = false
