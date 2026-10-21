@@ -57,6 +57,93 @@ export function passStatus(
   return endsAt ? { endsAt } : {}
 }
 
+/** One payment of the pass, as the account page lists it. */
+export type PassPayment = {
+  provider: string
+  paymentId: string
+  amountCents: number
+  startsAt: Date
+  /** Missing for a lifetime pass. */
+  endsAt?: Date
+  state: 'running' | 'next' | 'over'
+}
+
+/** The player's pass history and the stretch that runs now, for the account page. */
+export type PassHistory = {
+  /** When the running pass ends; missing when none runs or it is for life. */
+  endsAt?: Date
+  /** When the running pass began, counting the periods chained before it. */
+  since?: Date
+  lifetime: boolean
+  /** Whole days left, the day it ends counting as one. */
+  daysLeft?: number
+  /** Newest first. */
+  payments: PassPayment[]
+}
+
+type PassRow = {
+  provider: string
+  payment_id: string
+  amount_cents: number
+  starts_at: string
+  ends_at: string
+}
+
+const DAY_MS = 24 * 60 * 60 * 1000
+
+/** A pass end as milliseconds; Postgres sends a lifetime pass as 'infinity'. */
+const endTime = (end: string) => (end === 'infinity' ? Infinity : new Date(end).getTime())
+
+/**
+ * Every payment of the pass, with the stretch running at `now`: periods
+ * bought while a pass runs start where it ends, so they chain on.
+ */
+export function passHistory(rows: readonly PassRow[], now: Date): PassHistory {
+  const at = now.getTime()
+  const periods = rows
+    .map((r) => ({ row: r, start: new Date(r.starts_at).getTime(), end: endTime(r.ends_at) }))
+    .sort((a, b) => a.start - b.start)
+
+  let since: number | undefined
+  let end: number | undefined
+  for (const period of periods) {
+    const chains = end !== undefined ? period.start <= end : period.start <= at
+    if (!chains || period.end <= at) continue
+    if (end === undefined) since = period.start
+    end = Math.max(end ?? 0, period.end)
+  }
+
+  const payments = periods
+    .map(({ row, start, end: stop }): PassPayment => ({
+      provider: row.provider,
+      paymentId: row.payment_id,
+      amountCents: row.amount_cents,
+      startsAt: new Date(start),
+      endsAt: stop === Infinity ? undefined : new Date(stop),
+      state: stop <= at ? 'over' : start <= at ? 'running' : 'next',
+    }))
+    .reverse()
+
+  if (end === undefined) return { lifetime: false, payments }
+  const lifetime = end === Infinity
+  return {
+    since: new Date(since!),
+    lifetime,
+    ...(lifetime ? {} : { endsAt: new Date(end), daysLeft: Math.ceil((end - at) / DAY_MS) }),
+    payments,
+  }
+}
+
+/** All the passes the player ever had, for the account page. */
+export async function loadPassHistory(userId: string): Promise<PassHistory> {
+  const { data, error } = await client()
+    .from('passes')
+    .select('provider, payment_id, amount_cents, starts_at, ends_at')
+    .eq('user_id', userId)
+  if (error) throw error
+  return passHistory(data as PassRow[], new Date())
+}
+
 /** Opens Mercado Pago's payment page for 30 more days of pass. */
 export async function buyPass(): Promise<void> {
   const { data, error } = await client().functions.invoke('pass')
