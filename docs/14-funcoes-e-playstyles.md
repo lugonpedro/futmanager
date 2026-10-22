@@ -112,7 +112,7 @@ Quando o jogador tem um playstyle que combina com a função, ele rende um pouco
 - **Onde escolher:** na escalação, tocar num titular (no campo ou na lista) abre "Função de Fulano", com todas as funções do setor da vaga e a nota dele em cada uma. A mesma tela vale na carreira e nas salas do draft.
 - **Padrão:** sem escolha, a vaga joga a função da formação, como antes, e a IA não escolhe funções. Assim o equilíbrio das partidas sem escolha fica igual ao de hoje. A ficha continua mostrando a "Melhor função", agora entre todas as do setor.
 - **A função fica com a vaga:** trocando dois jogadores de lugar, quem entra na vaga herda a função escolhida, e o mesmo vale para quem entra numa substituição. Mudar a formação ou escalar automaticamente volta todas as vagas para a função da formação.
-- **Ponta aberta:** é a própria Ponta esquerda ou direita (PE e PD). As funções que pertencem a um lado (PE, PD, ME, MD) só aparecem nas vagas daquele lado.
+- **Ponta aberta:** é a própria Ponta esquerda ou direita (PE e PD). As funções que pertencem a um lado (PE, PD, ME, MD) não aparecem nas vagas do outro lado; numa vaga central, aparecem as dos dois lados.
 - **Corta pra dentro:** rende 3% a mais no lado contrário ao pé bom e 3% a menos no mesmo lado; numa vaga central não há lado.
 - **Playstyle que combina:** cada nível de um playstyle que combina com a função escolhida rende 1,5% a mais.
 - **Equilíbrio:** com as mesmas sementes, trocar a função de uma vaga muda o saldo médio de gols do time em no máximo uns 0,09 por jogo, para mais ou para menos. A exceção são as funções de ataque numa vaga de volante (até 0,12), que ficam abaixo do Meia ofensivo nessa vaga, que já existia (0,2). O motor premia o ataque, então funções mais ofensivas tendem a render um pouco mais; as defensivas trocam gols marcados por gols sofridos.
@@ -126,6 +126,7 @@ Pedidos do Lugon de 21/10/2026, depois de jogar o draft:
 - **Escalações que tinham uma função que saiu** perdem só a função: a vaga volta à da formação, e o resto da escalação fica. Isso vale nas salas (antes de conferir a escalação salva) e na carreira (save na versão 16).
 - **Jogador de geral alto sem playstyle.** Era a regra: perto do topo da escala, os atributos esbarram no 99 e quase não conseguem ficar acima do normal para o geral. No Brasileirão do draft, 20 dos 209 jogadores de 70 a 79 e 6 dos 49 de 80 para cima não tinham nenhum, como o Pedro (86). Agora quem tem geral 65 ou mais tem pelo menos um playstyle, e de 80 para cima pelo menos dois: os seus mais fortes, mesmo que não se destaquem tanto. Na carreira, o save na versão 16 aplica isso a todo mundo; nas salas, vale para as salas criadas depois de publicar `room-draft`.
 - **Trocar a função tira a seleção do jogador**, para a escalação não ficar com um jogador marcado à espera de troca.
+- **Ponta para qualquer atacante** (22/10/2026). Antes, Ponta esquerda e Ponta direita só apareciam nas vagas de ponta. Agora uma vaga central (centroavante, meia, volante) também pode escolher as funções de lado, dos dois lados: o atacante de um 4-4-2 pode jogar aberto. Nada muda no save, porque a escolha só ficou mais larga.
 
 ## Para ligar no ar
 
