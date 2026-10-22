@@ -4,16 +4,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BoardPanel, HistoryPanel } from './BoardPanels.tsx'
 import { EditorPanel } from './EditorPanel.tsx'
 import { FinancePanel, StadiumPanel } from './FinancePanels.tsx'
-import { LearnLink } from '../../components/LearnLink.tsx'
-import type { CareerSection } from '../../learn.ts'
 import { SponsorPanel } from './SponsorPanel.tsx'
 
 /** The parts of the club overview, in page order; their old tab addresses open the page there. */
 const SECTIONS = {
-  diretoria: { label: 'Diretoria', panel: BoardPanel, learn: 'diretoria' },
-  patrocinio: { label: 'Patrocínio', panel: SponsorPanel, learn: 'financas' },
-  estadio: { label: 'Estádio', panel: StadiumPanel, learn: 'financas' },
-} satisfies Record<string, { label: string; panel: unknown; learn: CareerSection }>
+  diretoria: { label: 'Diretoria', panel: BoardPanel },
+  patrocinio: { label: 'Patrocínio', panel: SponsorPanel },
+  estadio: { label: 'Estádio', panel: StadiumPanel },
+} satisfies Record<string, { label: string; panel: unknown }>
 
 type Section = keyof typeof SECTIONS
 
@@ -71,14 +69,13 @@ function ClubOverview() {
   return (
     <div className="flex flex-col gap-8">
       {(Object.keys(SECTIONS) as Section[]).map((key) => {
-        const { label, panel: Panel, learn } = SECTIONS[key]
+        const { label, panel: Panel } = SECTIONS[key]
         return (
           <section key={key} id={key} aria-labelledby={`${key}-title`} className="scroll-mt-16">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
               <h2 id={`${key}-title`} className="text-lg font-semibold">
                 {label}
               </h2>
-              <LearnLink tab="carreira" section={learn} />
             </div>
             <Panel />
           </section>
@@ -94,7 +91,6 @@ function FinanceTab() {
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="text-lg font-semibold">Finanças</h2>
-        <LearnLink tab="carreira" section="financas" />
       </div>
       <FinancePanel />
     </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog'
 import { loadTeamSheet } from '../../cloud/roomLeague.ts'
 import type { Room } from '../../cloud/rooms.ts'
-import type { Player } from '../../engine/model/types.ts'
+import type { Player, World } from '../../engine/model/types.ts'
 import { primePlayer } from '../../engine/room/prime.ts'
 import type { TeamSheet } from '../../engine/room/summary.ts'
 import type { DraftPlayer } from '../draft.ts'
@@ -83,8 +83,9 @@ export function TradeCompare(props: {
               title={`Você recebe de ${props.partnerName}`}
               cards={coming}
               drafted={drafted}
+              clubs={world.clubs}
             />
-            <Column title="Você dá" cards={going} drafted={drafted} />
+            <Column title="Você dá" cards={going} drafted={drafted} clubs={world.clubs} />
           </div>
         )}
       </DialogContent>
@@ -96,6 +97,7 @@ function Column(props: {
   title: string
   cards: { id: string; player?: Player; sheet?: TeamSheet }[]
   drafted: ReadonlyMap<string, DraftPlayer>
+  clubs: World['clubs']
 }) {
   return (
     <section className="flex min-w-0 flex-col items-center gap-3">
@@ -105,6 +107,7 @@ function Column(props: {
           <div key={id} className="flex flex-col items-center gap-1">
             <PlayerCard
               player={player}
+              club={props.clubs[player.clubId]}
               tier={props.drafted.get(id)?.prime ? 'prime' : undefined}
               className="[zoom:0.72] sm:[zoom:1]"
             />

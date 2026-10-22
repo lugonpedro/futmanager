@@ -24,7 +24,6 @@ import { acceptOffer, rejectOffer } from '../../../engine/transfer/market.ts'
 import { inTransferWindow } from '../../../engine/season/calendar.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
-import { LearnLink } from '../../components/LearnLink.tsx'
 import { ClubName } from '../../components/ClubName.tsx'
 import { Pager } from '../../components/Pager.tsx'
 import { FilterField, PlayerFilterBar } from '../../components/PlayerFilterBar.tsx'
@@ -76,7 +75,6 @@ export function MarketScreen() {
           </TabsTrigger>
           <TabsTrigger value="noticias">Movimentações</TabsTrigger>
         </TabsList>
-        <LearnLink tab="carreira" section="mercado" />
       </div>
       <TabsContent value="contratar">
         <BuyTab game={game} />

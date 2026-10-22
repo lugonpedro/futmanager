@@ -56,7 +56,6 @@ import { useLineupPrefs } from '../../../store/lineupPrefs.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { FocusSelect } from '../../components/FocusSelect.tsx'
-import { listText } from '../../learn.ts'
 import { FavoriteStar } from '../../components/FavoriteStar.tsx'
 import { LineupEditor } from '../../components/LineupEditor.tsx'
 import { useSwapSpot } from '../../components/swapSpot.ts'
@@ -72,6 +71,7 @@ import {
   rangeText,
   signedChange,
   type Role,
+  listText,
 } from '../../format.ts'
 import { ListDialog, RenewDialog } from './MarketDialogs.tsx'
 import { FormArrow } from '../../components/PlayerSheetView.tsx'
