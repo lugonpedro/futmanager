@@ -91,7 +91,7 @@ export { INJURY_DAYS, YELLOWS_FOR_SUSPENSION } from './discipline.ts'
 /** Prize for winning each division; it falls steadily to a quarter of that for last place. */
 export const CHAMPION_PRIZE: Record<number, number> = { 1: 30_000_000, 2: 8_000_000 }
 /** Bumped when the save format changes; see upgradeGame(). */
-export const SAVE_VERSION = 16
+export const SAVE_VERSION = 17
 
 export { mixSeed } from '../rng.ts'
 
@@ -140,7 +140,7 @@ export function newGame(seed: number, userClubId: string, pack?: DataPack): Game
     userClubId,
     season,
     ledger: [],
-    market: { listed: {}, offers: [], news: [] },
+    market: { listed: {}, offers: [], news: [], talks: {} },
     sponsorship: openSponsorship(world, userClubId, career.target, season),
     training: NO_TRAINING,
     loans: [],
@@ -847,7 +847,7 @@ export function startNextSeason(game: GameState, nextClubId = game.userClubId): 
     ...(moving && {
       userClubId: nextClubId,
       userLineup: undefined,
-      market: { ...paid.market, listed: {}, offers: [] },
+      market: { ...paid.market, listed: {}, offers: [], talks: {} },
       training: { ...paid.training, individual: {} },
       growth: undefined,
     }),

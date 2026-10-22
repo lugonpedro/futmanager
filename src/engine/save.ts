@@ -8,6 +8,7 @@ import type {
   GameState,
   IndividualFocus,
   LedgerEntry,
+  Market,
   Player,
   PlayStyle,
   Season,
@@ -27,11 +28,17 @@ import { MARKET } from './transfer/market.ts'
 import { createRng } from './rng.ts'
 import { gainStyles } from './player/attributes.ts'
 
+/** A career as stored before version 17, when the user couldn't haggle over fees. */
+type V16Game = Omit<GameState, 'version' | 'market'> & {
+  version: 16
+  market: Omit<Market, 'talks'>
+}
+
 /**
  * A career as stored before version 16, when the lineup could pick roles
  * that have since left the game, and the best players could have no style.
  */
-type V15Game = Omit<GameState, 'version'> & { version: 15 }
+type V15Game = Omit<V16Game, 'version'> & { version: 15 }
 
 /** A career as stored before version 15, when a lineup slot had no picked role. */
 type V14Game = Omit<V15Game, 'version'> & { version: 14 }
@@ -362,7 +369,7 @@ function fromV14(saved: V14Game): V15Game {
  * Slots drop roles that left the game, and everyone picks up the styles the
  * attributes now earn, which gives the best players at least one or two.
  */
-function fromV15(saved: V15Game): GameState {
+function fromV15(saved: V15Game): V16Game {
   const { world, userLineup } = saved
   const players = mapValues(world.players, (player) => ({
     ...player,
@@ -370,16 +377,22 @@ function fromV15(saved: V15Game): GameState {
   }))
   return {
     ...saved,
-    version: SAVE_VERSION,
+    version: 16,
     world: { ...world, players },
     ...(userLineup && { userLineup: dropUnknownDuties(userLineup) }),
   }
+}
+
+/** No talks under way yet. */
+function fromV16(saved: V16Game): GameState {
+  return { ...saved, version: SAVE_VERSION, market: { ...saved.market, talks: {} } }
 }
 
 /** Brings a saved career up to the current format, so old saves keep working. */
 export function upgradeGame(
   saved:
     | GameState
+    | V16Game
     | V15Game
     | V14Game
     | V13Game
@@ -412,5 +425,6 @@ export function upgradeGame(
   const v13 = version < 13 ? fromV12(v12) : (saved as V13Game)
   const v14 = version < 14 ? fromV13(v13) : (saved as V14Game)
   const v15 = version < 15 ? fromV14(v14) : (saved as V15Game)
-  return fromV15(v15)
+  const v16 = version < 16 ? fromV15(v15) : (saved as V16Game)
+  return fromV16(v16)
 }

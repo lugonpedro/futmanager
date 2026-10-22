@@ -1,6 +1,6 @@
 import { FREE_AGENT, type GameState, type Player } from '../engine/model/types.ts'
 import { careerGames, potentialRange } from '../engine/progression/progression.ts'
-import { askingPrice, canLeave, wageDemand } from '../engine/transfer/market.ts'
+import { canLeave, currentAsk, wageDemand } from '../engine/transfer/market.ts'
 import {
   activePlayerFilters,
   matchesPlayer,
@@ -80,7 +80,7 @@ export function marketRows(
     .filter((p) => canLeave(world, p))
     .map((player) => ({
       player,
-      price: askingPrice(game, player),
+      price: currentAsk(game, player),
       wage: wageDemand(world, player, userClubId),
       potential: potentialRange(player, careerGames(player, season.appearances)),
     }))

@@ -407,10 +407,24 @@ export type TransferNews = {
   fee: number
 }
 
+/** The user haggling with a club over one of its players' fee. */
+export type TransferTalk = {
+  /** What the club now asks: its first price, or its latest counter. */
+  ask: number
+  /** Bids the user has made so far. */
+  bids: number
+  /** Last day the talks stand; when broken off, the day the club will talk again after. */
+  until: GameDate
+  /** The club got tired of the bids and won't sell until `until` has passed. */
+  brokenOff: boolean
+}
+
 export type Market = {
   /** User players up for sale, with the asking price. */
   listed: Record<string, number>
   offers: TransferOffer[]
+  /** Fee talks for other clubs' players, by player. */
+  talks: Record<string, TransferTalk>
   /** Latest transfers, newest first. */
   news: TransferNews[]
 }

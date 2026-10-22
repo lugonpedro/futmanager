@@ -13,21 +13,23 @@ import { Label } from '@/components/ui/label'
 import { FREE_AGENT, type GameState, type Player } from '../../../engine/model/types.ts'
 import {
   askingPrice,
+  bidForPlayer,
   checkRenewal,
-  checkSigning,
+  currentAsk,
   listPlayer,
   MARKET,
   renewalDemand,
   renewContract,
-  signPlayer,
+  sellerLeverage,
   wageDemand,
+  type BidOutcome,
 } from '../../../engine/transfer/market.ts'
 import { useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
 import { MoneyInput } from '../../components/MoneyInput.tsx'
 import { styleLevel } from '../../../engine/player/attributes.ts'
 import { careerGames, potentialRange } from '../../../engine/progression/progression.ts'
-import { formatMoney, POSITION_NAMES, rangeText, styleName } from '../../format.ts'
+import { formatDayMonth, formatMoney, POSITION_NAMES, rangeText, styleName } from '../../format.ts'
 
 const YEARS = Array.from({ length: MARKET.maxContractYears }, (_, i) => String(i + 1))
 
@@ -46,27 +48,36 @@ function PlayerSummary({ game, player }: { game: GameState; player: Player }) {
   )
 }
 
-/** Offer a fee to the player's club and terms to the player. */
+/**
+ * Offer a fee to the player's club and terms to the player. The club may
+ * take less than it asks: it answers each bid, and counters the fair ones.
+ */
 export function SignDialog(props: { game: GameState; player: Player; onClose: () => void }) {
   const { game, player } = props
   const setGame = useGameStore((s) => s.setGame)
   const asking = askingPrice(game, player)
+  const ask = currentAsk(game, player)
   const demand = wageDemand(game.world, player, game.userClubId)
-  const [fee, setFee] = useState(asking)
+  const [fee, setFee] = useState(ask)
   const [wage, setWage] = useState(demand)
   const [years, setYears] = useState('2')
-  const [error, setError] = useState<string>()
+  const [reply, setReply] = useState<{ outcome: BidOutcome; message: string }>()
   const cash = game.world.clubs[game.userClubId].cash
+  const hasClub = player.clubId !== FREE_AGENT
+  const talk = game.market.talks[player.id]
+  const brokenOff = talk?.brokenOff ?? false
+  const leverage = hasClub ? sellerLeverage(game, player) : []
 
   const submit = () => {
-    const bid = { fee, wage, years: Number(years) }
-    const verdict = checkSigning(game, player.id, bid)
-    if (!verdict.ok) return setError(verdict.reason)
-    setGame(signPlayer(game, player.id, bid))
-    toast.success(
-      `${player.name} assinou até ${game.season.year + bid.years - 1}${bid.fee > 0 ? `, por ${formatMoney(bid.fee)}` : ''}.`,
-    )
-    props.onClose()
+    const answer = bidForPlayer(game, player.id, { fee, wage, years: Number(years) })
+    if (answer.outcome === 'assinou') {
+      setGame(answer.game)
+      toast.success(answer.message)
+      return props.onClose()
+    }
+    if (answer.game !== game) setGame(answer.game)
+    if (answer.outcome === 'contraproposta') setFee(answer.game.market.talks[player.id].ask)
+    setReply(answer)
   }
 
   return (
@@ -81,9 +92,15 @@ export function SignDialog(props: { game: GameState; player: Player; onClose: ()
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 sm:grid-cols-2">
-          {player.clubId !== FREE_AGENT && (
+          {hasClub && (
             <div className="flex flex-col gap-2">
-              <Label htmlFor="fee">Proposta ao clube (pede {formatMoney(asking)})</Label>
+              <Label htmlFor="fee">
+                Proposta ao clube (
+                {ask < asking
+                  ? `pedia ${formatMoney(asking)}, agora ${formatMoney(ask)}`
+                  : `pede ${formatMoney(ask)}`}
+                )
+              </Label>
               <MoneyInput id="fee" value={fee} onChange={setFee} />
             </div>
           )}
@@ -96,16 +113,50 @@ export function SignDialog(props: { game: GameState; player: Player; onClose: ()
             <Choices ariaLabel="Temporadas" options={YEARS} value={years} onChange={setYears} />
           </div>
         </div>
+        {hasClub && !brokenOff && (
+          <div className="text-sm text-muted-foreground">
+            <p>
+              Dá para oferecer menos que o pedido: o clube aceita, recusa ou faz uma contraproposta.
+              Depois de {MARKET.talkBids} propostas sem acordo, encerra a conversa.
+            </p>
+            {leverage.length > 0 && (
+              <ul className="mt-1 list-disc pl-5">
+                {leverage.map((l) => (
+                  <li key={l.note}>{l.note}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
         <p className="text-sm text-muted-foreground">
           Custo no primeiro ano: {formatMoney(fee + wage * 12)} (transferência mais 12 salários).
           Caixa: {formatMoney(cash)}.
         </p>
-        {error && <p className="text-sm text-destructive">{error}</p>}
+        {brokenOff && !reply && (
+          <p className="text-sm text-destructive">
+            {game.world.clubs[player.clubId].name} encerrou a conversa. Só volta a negociar depois
+            de {formatDayMonth(talk!.until)}.
+          </p>
+        )}
+        {reply && (
+          <p
+            role="status"
+            className={
+              reply.outcome === 'contraproposta'
+                ? 'text-sm font-medium'
+                : 'text-sm text-destructive'
+            }
+          >
+            {reply.message}
+          </p>
+        )}
         <DialogFooter>
           <Button variant="outline" onClick={props.onClose}>
             Cancelar
           </Button>
-          <Button onClick={submit}>Fazer proposta</Button>
+          <Button onClick={submit} disabled={brokenOff}>
+            {hasClub && fee >= ask ? `Fechar por ${formatMoney(fee)}` : 'Fazer proposta'}
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
