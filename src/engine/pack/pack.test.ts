@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { generateWorld } from '../generate/world.ts'
 import { newGame, playRound } from '../season/season.ts'
+import { MARKET } from '../transfer/market.ts'
 import {
   applyPack,
   matchSquad,
@@ -97,8 +98,28 @@ describe('data packs', () => {
     expect(extra).toEqual([])
     const crowd = Array.from({ length: squad.length + 2 }, (_, i) => ({ name: `J${i}` }))
     expect(matchSquad(squad, crowd).extra).toHaveLength(2)
-    const { report } = applyPack(world, { name: '', clubs: [{ players: crowd }] })
+    const { report } = applyPack(world, { name: '', clubs: [{ players: crowd }] }, 'names')
     expect(report.warnings).toHaveLength(1)
+  })
+
+  it('signs the players beyond a generated squad, up to the market limit', () => {
+    const crowd = Array.from({ length: MARKET.maxSquad + 2 }, (_, i) => ({
+      name: `J${i}`,
+      position: 'A' as const,
+      overall: 60,
+    }))
+    const { world: bigger, report } = applyPack(world, { name: '', clubs: [{ players: crowd }] })
+    const club = bigger.clubs[slots[0].id]
+    expect(club.playerIds).toHaveLength(MARKET.maxSquad)
+    expect(report.warnings).toHaveLength(1)
+    const signed = club.playerIds.slice(slots[0].playerIds.length).map((id) => bigger.players[id])
+    for (const player of signed) {
+      expect(player.clubId).toBe(slots[0].id)
+      expect(player.position).toBe('A')
+      expect(player.overall).toBe(60)
+      expect(player.name).toMatch(/^J\d+$/)
+    }
+    expect(applyPack(world, { name: '', clubs: [{ players: crowd }] }).world).toEqual(bigger)
   })
 
   it('round-trips a world through a pack', () => {

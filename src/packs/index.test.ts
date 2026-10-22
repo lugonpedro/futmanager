@@ -1,13 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { generateWorld, SQUAD_SHAPE } from '../engine/generate/world.ts'
+import { generateWorld } from '../engine/generate/world.ts'
 import { applyPack, packSlots } from '../engine/pack/pack.ts'
-import { POSITIONS } from '../engine/model/types.ts'
 import { newGame } from '../engine/season/season.ts'
+import { MARKET } from '../engine/transfer/market.ts'
 import { BUILT_IN_PACKS } from './index.ts'
 import { overallFromRating, withOveralls } from './ratings.ts'
 import raw from './brasileirao-2026.json?raw'
-
-const squadSize = Object.values(SQUAD_SHAPE).reduce((a, b) => a + b, 0)
 
 describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
   it('names every club of both divisions and fits their squads', async () => {
@@ -18,11 +16,9 @@ describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
       expect(club.name).toBeTruthy()
       expect(club.shortName).toMatch(/^[A-Z0-9]{2,4}$/)
       expect(club.colors?.primary).toMatch(/^#[0-9a-f]{6}$/i)
-      expect(club.players!.length).toBeLessThanOrEqual(squadSize)
-      for (const position of POSITIONS) {
-        const count = club.players!.filter((p) => p.position === position).length
-        expect(count, `${club.name} ${position}`).toBeLessThanOrEqual(SQUAD_SHAPE[position])
-      }
+      expect(club.players!.length).toBeLessThanOrEqual(MARKET.maxSquad)
+      const keepers = club.players!.filter((p) => p.position === 'G').length
+      expect(keepers, club.name).toBeGreaterThanOrEqual(MARKET.minKeepers)
     }
     const { report } = applyPack(world, pack)
     expect(report.warnings).toEqual([])
