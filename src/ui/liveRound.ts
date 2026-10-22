@@ -15,7 +15,22 @@ export const LIVE = {
   leadMs: 3_000,
   /** The break after the 45th minute. */
   halftimeMs: 8_000,
+  /** How many times faster the round runs once everyone asked to speed it up. */
+  fastFactor: 4,
 }
+
+/**
+ * How far into the round's timeline the room is at `now`, in ms after
+ * kick-off: real time, and `LIVE.fastFactor` times that from `spedAt` on.
+ */
+export function liveElapsed(kickOff: number, now: number, spedAt?: number): number {
+  if (spedAt === undefined || now <= spedAt) return now - kickOff
+  return spedAt - kickOff + (now - spedAt) * LIVE.fastFactor
+}
+
+/** How many times faster than normal the round is running at `now`. */
+export const liveFactor = (now: number, spedAt?: number) =>
+  spedAt !== undefined && now > spedAt ? LIVE.fastFactor : 1
 
 /**
  * When each minute of the round is played, in milliseconds after kick-off,

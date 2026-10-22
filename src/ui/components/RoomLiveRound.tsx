@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRightIcon, RadioIcon, SkipForwardIcon } from 'lucide-react'
+import { ArrowRightIcon, FastForwardIcon, RadioIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
@@ -12,7 +12,7 @@ import {
   type MatchState,
 } from '../../engine/match/simulate.ts'
 import { matchKits } from '../kits.ts'
-import { LIVE, minutesAt, roundOver } from '../liveRound.ts'
+import { LIVE, liveElapsed, liveFactor, minutesAt, roundOver } from '../liveRound.ts'
 import { useShownScore } from '../useShownScore.ts'
 import { Choices } from './Choices.tsx'
 import { MatchFeed } from './MatchFeed.tsx'
@@ -34,14 +34,20 @@ export function RoomLiveRound(props: {
   timeline: readonly number[]
   teamOf: ReadonlyMap<string, DraftTeam>
   mine?: DraftTeam
+  /** When the round sped up, everyone having asked, in ms since the epoch. */
+  spedAt?: number
+  /** The places of the people who asked to speed up. */
+  asked: readonly number[]
+  /** How many people have to ask before it speeds up. */
+  people: number
+  /** Asks to speed up; only for someone with a team in the room. */
+  onSpeedUp?: () => void
   /** The player is done watching, with "Continuar" after the final whistle. */
   onDone: () => void
 }) {
-  const { replays, kickOff, timeline, teamOf } = props
+  const { replays, kickOff, timeline, teamOf, spedAt } = props
   const [states] = useState(() => replays.map(replayMatch))
-  const [elapsed, setElapsed] = useState(() => Date.now() - kickOff)
-  /** Skipped to the end: every match is played out and the page stays on it. */
-  const [skipped, setSkipped] = useState(false)
+  const [elapsed, setElapsed] = useState(() => liveElapsed(kickOff, Date.now(), spedAt))
   const [view, setView] = useState<MatchView>('Só texto')
   const onPitch = view === 'Campo'
   const [chosen, setChosen] = useState(() => {
@@ -54,34 +60,34 @@ export function RoomLiveRound(props: {
 
   // Each page plays the minutes the shared clock has reached, then waits for the next one.
   useEffect(() => {
-    if (skipped) return
     let timer: ReturnType<typeof setTimeout>
     const step = () => {
-      const now = Date.now() - kickOff
+      const at = Date.now()
+      const now = liveElapsed(kickOff, at, spedAt)
       const minutes = minutesAt(timeline, now)
       for (const state of states) while (state.minute < minutes) playMinute(state)
       setElapsed(now)
       if (roundOver(timeline, now)) return
       const next = minutes < timeline.length - 1 ? timeline[minutes] : timeline.at(-1)!
+      const wait = (next - now) / liveFactor(at, spedAt)
       // Before kick-off the countdown ticks every second.
-      timer = setTimeout(step, Math.min(1000, Math.max(0, next - now)))
+      timer = setTimeout(step, Math.min(1000, Math.max(0, wait)))
     }
     step()
     return () => clearTimeout(timer)
-  }, [states, kickOff, timeline, skipped])
-
-  const skip = () => {
-    for (const state of states) while (!state.finished) playMinute(state)
-    setSkipped(true)
-  }
+  }, [states, kickOff, timeline, spedAt])
 
   const state = states[chosen]
-  const over = skipped || roundOver(timeline, elapsed)
+  const over = roundOver(timeline, elapsed)
+  const sped = spedAt !== undefined && elapsed > spedAt - kickOff
+  const unitMs = LIVE.unitMs / (sped ? LIVE.fastFactor : 1)
   const kits = useMemo(() => matchKits(state.home.club, state.away.club), [state])
   const kitsByClub = { [state.home.club.id]: kits.home, [state.away.club.id]: kits.away }
-  const score = useShownScore(state, onPitch, LIVE.unitMs)
+  const score = useShownScore(state, onPitch, unitMs)
+  const askedMe = props.mine !== undefined && props.asked.includes(props.mine.slot)
+  const count = props.people > 1 ? ` (${props.asked.length}/${props.people})` : ''
   const clock =
-    elapsed < 0 && !skipped
+    elapsed < 0
       ? `Começa em ${Math.ceil(-elapsed / 1000)} s`
       : over
         ? 'Encerrado'
@@ -116,11 +122,23 @@ export function RoomLiveRound(props: {
               <ArrowRightIcon />
               Continuar
             </Button>
-          ) : (
-            <Button variant="outline" onClick={skip}>
-              <SkipForwardIcon />
-              Pular para o fim
+          ) : spedAt !== undefined ? (
+            <Button variant="outline" disabled>
+              <FastForwardIcon />
+              Acelerado
             </Button>
+          ) : (
+            props.onSpeedUp && (
+              <Button
+                variant="outline"
+                disabled={askedMe}
+                onClick={props.onSpeedUp}
+                title="Acelera a rodada quando todos da sala pedirem"
+              >
+                <FastForwardIcon />
+                {askedMe ? `Esperando os outros${count}` : `Acelerar${count}`}
+              </Button>
+            )
           )}
           <div className="ml-auto">
             <Choices ariaLabel="Visualização" options={VIEWS} value={view} onChange={setView} />
@@ -129,7 +147,7 @@ export function RoomLiveRound(props: {
 
         {/* Keys apart: two siblings with the same key left a stale pitch behind on "Só texto". */}
         {onPitch && (
-          <MatchPitch key={`campo-${chosen}`} state={state} unitMs={LIVE.unitMs} kits={kits} />
+          <MatchPitch key={`campo-${chosen}`} state={state} unitMs={unitMs} kits={kits} />
         )}
         <MatchFeed
           key={`lances-${chosen}`}

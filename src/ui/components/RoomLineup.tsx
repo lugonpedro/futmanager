@@ -26,7 +26,14 @@ type Loaded = { sheet?: TeamSheet; saved?: Lineup }
  * The player's lineup for the coming round, saved on the server as it
  * changes. Without changes, the team plays the lineup of the last round.
  */
-export function RoomLineup(props: { room: number; slot: number; round: number; pack?: string }) {
+export function RoomLineup(props: {
+  room: number
+  slot: number
+  round: number
+  pack?: string
+  /** Who came as a prime card in the draft, for the card's colour. */
+  primes?: ReadonlySet<string>
+}) {
   const { room, slot, round } = props
   const [loaded, setLoaded] = useState<Loaded>()
   const [failed, setFailed] = useState(false)
@@ -63,6 +70,7 @@ export function RoomLineup(props: { room: number; slot: number; round: number; p
       sheet={loaded.sheet}
       start={loaded.saved}
       pack={props.pack}
+      primes={props.primes}
     />
   )
 }
@@ -73,6 +81,7 @@ function Editor(props: {
   sheet: TeamSheet
   start?: Lineup
   pack?: string
+  primes?: ReadonlySet<string>
 }) {
   const { room, sheet } = props
   const [viewing, setViewing] = useState<string>()
@@ -131,6 +140,7 @@ function Editor(props: {
           <SquadList
             sheet={sheet}
             out={out}
+            primes={props.primes}
             editing={editing}
             onOpen={(id) => {
               setWanted(true)
@@ -143,6 +153,7 @@ function Editor(props: {
         <RoomPlayerSheet
           player={players[viewing]}
           world={world}
+          prime={props.primes?.has(viewing)}
           sheet={sheet}
           onClose={() => setViewing(undefined)}
         />
@@ -159,6 +170,7 @@ const hasReason = (a: PlayerAvailability) => !!(a.injuredRounds || a.suspended)
 function SquadList(props: {
   sheet: TeamSheet
   out: ReadonlySet<string>
+  primes?: ReadonlySet<string>
   editing: LineupEditing
   onOpen: (id: string) => void
 }) {
@@ -182,6 +194,7 @@ function SquadList(props: {
                   key={player.id}
                   player={player}
                   out={out.has(player.id)}
+                  prime={!!props.primes?.has(player.id)}
                   availability={sheetAvailability(sheet, player.id)}
                   condition={sheet.condition[player.id] ?? 100}
                   form={sheet.form[player.id] ?? 0}
@@ -201,6 +214,7 @@ function SquadList(props: {
 function SquadRow(props: {
   player: Player
   out: boolean
+  prime: boolean
   availability: PlayerAvailability
   condition: number
   form: number
@@ -250,7 +264,15 @@ function SquadRow(props: {
       <span className="w-9 text-right text-xs text-muted-foreground tabular-nums" title="Energia">
         {Math.round(props.condition)}%
       </span>
-      <span className="w-6 text-right font-semibold tabular-nums">{player.overall}</span>
+      <span
+        className={cn(
+          'w-6 text-right font-semibold tabular-nums',
+          props.prime && 'rounded bg-purple-600 px-0.5 text-white',
+        )}
+        title={props.prime ? 'Prime' : undefined}
+      >
+        {player.overall}
+      </span>
     </li>
   )
 }
