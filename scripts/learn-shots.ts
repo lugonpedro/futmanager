@@ -9,7 +9,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { chromium, type Browser, type Locator, type Page } from 'playwright'
 import { preview } from 'vite'
-import { LEARN_SHOTS, type LearnShot } from '../src/ui/learnShots.ts'
+import { LEARN_SHOTS, type AutoShot } from '../src/ui/learnShots.ts'
 
 const OUT = 'public/aprenda'
 const SEED = 20270101
@@ -28,11 +28,7 @@ type Device = keyof typeof DEVICES
 const MAX_HEIGHT: Record<Device, number> = { celular: 760, computador: 640 }
 
 /** What each shot frames, once the career is under way. */
-const FRAMES: Record<LearnShot, (page: Page) => Promise<Locator | number>> = {
-  resumo: async (page) => {
-    await open(page, '/jogo')
-    return 640
-  },
+const FRAMES: Record<AutoShot, (page: Page) => Promise<Locator | number>> = {
   calendario: async (page) => {
     await open(page, '/jogo/calendario')
     await page
@@ -43,12 +39,6 @@ const FRAMES: Record<LearnShot, (page: Page) => Promise<Locator | number>> = {
   },
   tabela: async (page) => {
     await open(page, '/jogo/competicoes')
-    return 640
-  },
-  copa: async (page) => {
-    await open(page, '/jogo/competicoes')
-    await page.locator('[aria-label="Competição"]').getByText('Copa', { exact: true }).click()
-    await page.waitForTimeout(300)
     return 640
   },
   diretoria: async (page) => {
@@ -193,7 +183,7 @@ async function toWebp(page: Page, png: Buffer): Promise<Buffer> {
   return Buffer.from(data.split(',')[1], 'base64')
 }
 
-async function shoot(page: Page, device: Device, shot: LearnShot) {
+async function shoot(page: Page, device: Device, shot: AutoShot) {
   const frame = await FRAMES[shot](page)
   await clearToasts(page)
   const { width } = DEVICES[device].viewport

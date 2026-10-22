@@ -1,51 +1,41 @@
-import { ArrowLeftIcon } from 'lucide-react'
+import { ArrowLeftIcon, ImageIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import {
-  CAREER_GUIDE,
-  CAREER_SECTIONS,
+  LEARN_TABS,
   learnPath,
+  MOVED_SECTIONS,
   type LearnAnchor,
   type LearnContent,
+  type LearnTab,
 } from '../learn.ts'
-import { shotPath, type LearnShot } from '../learnShots.ts'
+import { missingShot, shotPath, type LearnShot } from '../learnShots.ts'
 
-const TABS = {
-  carreira: { label: 'Carreira', guide: CAREER_GUIDE, sections: CAREER_SECTIONS },
-} as const
+const isTab = (tab: string): tab is LearnTab => tab in LEARN_TABS
 
-type Tab = keyof typeof TABS
-
-const isTab = (tab: string): tab is Tab => tab in TABS
-
-/** How the career works, one tab per mode, with an index of sections. */
+/** How the game works: what holds in both modes, then a tab for each mode. */
 export function LearnScreen() {
   const navigate = useNavigate()
   const location = useLocation()
-  const { tab = 'carreira' } = useParams()
+  const { tab = 'em-campo' } = useParams()
+  const hash = decodeURIComponent(location.hash.slice(1))
 
   useEffect(() => {
-    const id = decodeURIComponent(location.hash.slice(1))
-    if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' })
+    if (hash) document.getElementById(hash)?.scrollIntoView({ block: 'start' })
     else window.scrollTo({ top: 0 })
-  }, [tab, location.hash])
+  }, [tab, hash])
 
   if (!isTab(tab)) return <Navigate to="/aprenda" replace />
+  // A link to a section of the old career tab that moved.
+  const moved = tab === 'carreira' ? MOVED_SECTIONS[hash] : undefined
+  if (moved) return <Navigate to={learnPath(moved)} replace />
 
-  // Opened from inside a career, going back returns there; opened directly, to the menu.
+  // Opened from inside a career or a room, going back returns there; opened directly, to the menu.
   const back = () => (location.key === 'default' ? navigate('/') : navigate(-1))
 
   return (
@@ -60,28 +50,32 @@ export function LearnScreen() {
         <ThemeToggle />
       </header>
 
-      <Tabs value={tab} onValueChange={(next) => navigate(learnPath({ tab: next as Tab }))}>
+      <Tabs value={tab} onValueChange={(next) => navigate(learnPath({ tab: next as LearnTab }))}>
         <TabsList>
-          {(Object.keys(TABS) as Tab[]).map((key) => (
+          {(Object.keys(LEARN_TABS) as LearnTab[]).map((key) => (
             <TabsTrigger key={key} value={key}>
-              {TABS[key].label}
+              {LEARN_TABS[key].label}
             </TabsTrigger>
           ))}
         </TabsList>
-        <TabsContent value="carreira" className="flex flex-col gap-4">
-          <Guide tab="carreira" />
+        <TabsContent value={tab} className="flex flex-col gap-4">
+          <Guide tab={tab} />
         </TabsContent>
       </Tabs>
     </main>
   )
 }
 
-/** The tab's index, then one card per section, each with an anchor other screens link to. */
-function Guide(props: { tab: Tab }) {
-  const { guide, sections } = TABS[props.tab]
-  const content = guide as Record<string, LearnContent>
+/** The tab's opening line and index, then one card per section, each with an anchor other screens link to. */
+function Guide(props: { tab: LearnTab }) {
+  const { intro, sections, content } = LEARN_TABS[props.tab] as {
+    intro: string
+    sections: readonly string[]
+    content: Record<string, LearnContent>
+  }
   return (
     <>
+      <p className="text-sm text-muted-foreground">{intro}</p>
       <nav aria-label="Nesta página" className="rounded-md border p-3">
         <ol className="grid gap-x-4 gap-y-1 text-sm sm:grid-cols-2">
           {sections.map((id) => (
@@ -104,7 +98,7 @@ function Guide(props: { tab: Tab }) {
 }
 
 function Section(props: { id: string; content: LearnContent }) {
-  const { title, items, table, shot } = props.content
+  const { title, items, shot } = props.content
   return (
     <Card id={props.id} className="scroll-mt-4 gap-3">
       <CardHeader>
@@ -119,28 +113,6 @@ function Section(props: { id: string; content: LearnContent }) {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        {table && (
-          <Table>
-            <TableHeader>
-              <TableRow>
-                {table.head.map((cell) => (
-                  <TableHead key={cell}>{cell}</TableHead>
-                ))}
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {table.rows.map((row) => (
-                <TableRow key={row[0]}>
-                  {row.map((cell, i) => (
-                    <TableCell key={i} className="whitespace-normal">
-                      {cell}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        )}
       </CardContent>
     </Card>
   )
@@ -166,6 +138,8 @@ function ShotPicture(props: { shot: LearnShot; alt: string; className?: string; 
 
 /** A screenshot of the screen the section is about; tapping it opens it full size. */
 function Shot(props: { shot: LearnShot; title: string }) {
+  const missing = missingShot(props.shot)
+  if (missing) return <ShotPlaceholder caption={missing} />
   const alt = `Tela do jogo: ${props.title}`
   return (
     <Dialog>
@@ -188,5 +162,19 @@ function Shot(props: { shot: LearnShot; title: string }) {
         <ShotPicture shot={props.shot} alt={alt} className="w-full rounded-md" />
       </DialogContent>
     </Dialog>
+  )
+}
+
+/** Where a screenshot still to be taken goes, saying what it will show. */
+function ShotPlaceholder(props: { caption: string }) {
+  return (
+    <div
+      role="img"
+      aria-label={`Print em breve: ${props.caption}`}
+      className="flex h-40 flex-col items-center justify-center gap-2 rounded-md border border-dashed bg-muted/40 p-4 text-center text-xs text-muted-foreground"
+    >
+      <ImageIcon className="size-6" />
+      <span>Print em breve: {props.caption}</span>
+    </div>
   )
 }

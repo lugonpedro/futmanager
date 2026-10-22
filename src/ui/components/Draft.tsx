@@ -50,6 +50,7 @@ import {
 import { CARD_CUTS, POSITION_NAMES } from '../format.ts'
 import { usePackWorld } from '../usePackWorld.ts'
 import { Choices } from './Choices.tsx'
+import { LearnLink } from './LearnLink.tsx'
 import { PlayerCard } from './PlayerCard.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { RoomPlayerSheet } from './RoomPlayerSheet.tsx'
@@ -924,8 +925,11 @@ function MyPlaces(props: {
       <CardHeader>
         <CardTitle className="flex flex-wrap items-center justify-between gap-2">
           {canOpen ? 'Escolha uma vaga' : 'Seu time'}
-          <span className="text-sm font-normal text-muted-foreground tabular-nums">
-            {mine.length}/{room.options.squadSize}
+          <span className="flex items-center gap-3">
+            <LearnLink tab="draft" section="draft" />
+            <span className="text-sm font-normal text-muted-foreground tabular-nums">
+              {mine.length}/{room.options.squadSize}
+            </span>
           </span>
         </CardTitle>
         <CardDescription>
