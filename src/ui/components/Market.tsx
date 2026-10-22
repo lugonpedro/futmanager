@@ -27,7 +27,6 @@ import { POSITIONS, type Position } from '../../engine/model/types.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import { ROOM_LIMITS } from '../../engine/room/types.ts'
 import { confirm } from '../confirm.ts'
-import { LearnLink } from './LearnLink.tsx'
 import { moveInQueue, searchKey, type DraftPlayer } from '../draft.ts'
 import { POSITION_NAMES, POSITION_ORDER } from '../format.ts'
 import { feedLine, freePlayers, squadIds, tradesOpen } from '../roomMarket.ts'
@@ -87,10 +86,7 @@ export function MarketView(props: {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex flex-wrap items-center justify-between gap-2">
-          Mercado
-          <LearnLink tab="draft" section="mercado" />
-        </CardTitle>
+        <CardTitle>Mercado</CardTitle>
         <CardDescription>
           Sem dinheiro: peça jogadores livres, troque com os amigos ou dispense quem não quer mais.
         </CardDescription>

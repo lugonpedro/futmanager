@@ -39,8 +39,8 @@ import {
   formatMoney,
   rangeText,
   roundStarFeats,
+  listText,
 } from '../../format.ts'
-import { listText } from '../../learn.ts'
 import { competitionsPath, CUP_SLUG } from '../../routes.ts'
 import { FixtureLine } from './FixtureLine.tsx'
 import { PlayerSheet } from './PlayerSheet.tsx'
