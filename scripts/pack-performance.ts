@@ -41,7 +41,14 @@ type FotmobTeam = {
 }
 type FotmobRank = {
   TopLists: {
-    StatList: { ParticiantId: number; StatValue: number; MinutesPlayed: number; TeamId: number }[]
+    StatList: {
+      ParticiantId: number
+      ParticipantName: string
+      StatValue: number
+      MinutesPlayed: number
+      TeamId: number
+      TeamName: string
+    }[]
   }[]
 }
 type CartolaAthlete = {
@@ -141,11 +148,11 @@ const findTeam = (club: PackClub) =>
   )
 
 const fotmobRatings = new Map<number, { value: number; minutes: number }>()
-for (const league of [SERIE_A, SERIE_B]) {
-  const list = readJson<FotmobRank>(`fotmob-${league}-rating.json`).TopLists[0].StatList
-  for (const row of list) {
-    fotmobRatings.set(row.ParticiantId, { value: row.StatValue, minutes: row.MinutesPlayed })
-  }
+const rankedRows = [SERIE_A, SERIE_B].flatMap(
+  (league) => readJson<FotmobRank>(`fotmob-${league}-rating.json`).TopLists[0].StatList,
+)
+for (const row of rankedRows) {
+  fotmobRatings.set(row.ParticiantId, { value: row.StatValue, minutes: row.MinutesPlayed })
 }
 
 const cartola = readJson<Cartola>('cartola-mercado.json')
@@ -170,37 +177,92 @@ type Row = {
 }
 const rows: Row[] = []
 const missingClubs: string[] = []
+/** FotMob's squad groups, and the pack positions each can hold. */
+const GROUP_POSITIONS: Record<string, Position[]> = {
+  keepers: ['G'],
+  defenders: ['Z', 'L'],
+  midfielders: ['M', 'L', 'A'],
+  attackers: ['A', 'M'],
+  // Rated by FotMob but gone from the squad page, so no group or age.
+  unknown: ['G', 'Z', 'L', 'M', 'A'],
+}
+type Member = FotmobMember & { group: string }
+const words = (name: string) => plain(name).split(' ')
+/**
+ * Second chance for pack players left without a FotMob match: the pack and
+ * FotMob may each use a name the other only partly shares ("Flaco López" and
+ * "José Manuel López", "Gabriel Boschilia" and "Boschilia"). A pair counts
+ * when they share a surname-like word, play compatible positions, are within
+ * a year of age, and neither has another candidate. The same full name at the
+ * same club and position is enough, since the pack's ages are sometimes off.
+ * Without FotMob's age, the shared word has to be FotMob's last name.
+ */
+function looseMatches(players: PackPlayer[], members: Member[]) {
+  const fits = (p: PackPlayer, m: Member) => {
+    if (!(GROUP_POSITIONS[m.group] ?? []).includes(p.posicao)) return false
+    if (plain(p.nome) === plain(m.name)) return true
+    const theirs = words(m.name)
+    const shared = words(p.nome).filter((w) => w.length >= 4 && theirs.includes(w))
+    if (shared.length === 0) return false
+    if (m.age === undefined) return shared.includes(theirs[theirs.length - 1])
+    return p.idade !== undefined && Math.abs(m.age - p.idade) <= 1
+  }
+  const pairs = new Map<PackPlayer, Member>()
+  for (const p of players) {
+    const options = members.filter((m) => fits(p, m))
+    if (options.length !== 1) continue
+    const rivals = players.filter((other) => fits(other, options[0]))
+    if (rivals.length === 1) pairs.set(p, options[0])
+  }
+  return pairs
+}
+const looseFound: { row: Row; member: Member }[] = []
 for (const [index, club] of pack.clubes.entries()) {
   const team = findTeam(club)
   if (!team) missingClubs.push(club.nome)
-  const members = team?.squad.squad.filter((g) => g.title !== 'coach').flatMap((g) => g.members)
+  const squad: Member[] =
+    team?.squad.squad
+      .filter((g) => g.title !== 'coach')
+      .flatMap((g) => g.members.map((m) => ({ ...m, group: g.title }))) ?? []
+  const inSquad = new Set(squad.map((m) => m.id))
+  const members: Member[] = [
+    ...squad,
+    ...rankedRows
+      .filter((r) => r.TeamId === team?.details.id && !inSquad.has(r.ParticiantId))
+      .map((r) => ({ id: r.ParticiantId, name: r.ParticipantName, group: 'unknown' })),
+  ]
   const cartolaId = division(index) === 1 ? cartolaClub(club)?.id : undefined
   const athletes = cartola.atletas.filter((a) => a.clube_id === cartolaId)
+  const used = new Set<number>()
+  const clubRows: Row[] = []
   for (const player of club.jogadores) {
     // A player the pack still lists at his old club is looked for everywhere,
-    // by exact name only, since a club-less search on parts of names misfires.
+    // by exact full name only, since a club-less search on parts of names (or
+    // on a lone "Willian") misfires.
     const member =
-      (members &&
-        findMatch(
-          player,
-          members,
-          (m) => [m.name],
-          (m) => m.age,
-        )) ||
       findMatch(
         player,
-        everyMember.filter((m) => fotmobRatings.has(m.id)),
+        members,
         (m) => [m.name],
         (m) => m.age,
-        true,
-      )
+      ) ||
+      (words(player.nome).length > 1 &&
+        findMatch(
+          player,
+          everyMember.filter((m) => fotmobRatings.has(m.id)),
+          (m) => [m.name],
+          (m) => m.age,
+          true,
+        )) ||
+      undefined
+    if (member) used.add(member.id)
     const athlete = findMatch(
       player,
       athletes.filter((a) => CARTOLA_POSITION[a.posicao_id] !== undefined),
       (a) => [a.apelido, a.nome],
       () => undefined,
     )
-    rows.push({
+    clubRows.push({
       club,
       player,
       division: division(index),
@@ -208,6 +270,18 @@ for (const [index, club] of pack.clubes.entries()) {
       cartola: athlete && athlete.jogos_num >= CARTOLA_MIN_GAMES ? athlete : undefined,
     })
   }
+  const left = clubRows.filter((r) => !r.fotmob)
+  const loose = looseMatches(
+    left.map((r) => r.player),
+    members.filter((m) => !used.has(m.id) && fotmobRatings.has(m.id)),
+  )
+  for (const row of left) {
+    const member = loose.get(row.player)
+    if (!member) continue
+    row.fotmob = fotmobRatings.get(member.id)
+    looseFound.push({ row, member })
+  }
+  rows.push(...clubRows)
 }
 
 // --- New ratings -----------------------------------------------------------
@@ -290,14 +364,15 @@ sorted
   .reverse()
   .forEach((c) => console.log(line(c)))
 
+console.log(`\npareados por sobrenome (${looseFound.length}):`)
+looseFound.forEach(({ row, member }) =>
+  console.log(`  ${row.player.nome} (${row.club.nome}, ${row.player.posicao}) = ${member.name}`),
+)
+
 // Regulars FotMob rates that matched no one: new signings, or a spelling to fix.
 const matched = new Set(rows.flatMap((r) => (r.fotmob ? [r.fotmob] : [])))
 const memberName = new Map(
-  teams.flatMap((t) =>
-    t.squad.squad.flatMap((g) =>
-      g.members.map((m) => [m.id, `${m.name} (${t.details.name})`] as const),
-    ),
-  ),
+  rankedRows.map((r) => [r.ParticiantId, `${r.ParticipantName} (${r.TeamName})`] as const),
 )
 const unmatched = [...fotmobRatings.entries()]
   .filter(([, r]) => !matched.has(r) && r.minutes >= 1000)
