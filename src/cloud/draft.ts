@@ -252,6 +252,9 @@ export async function loadRoomSummary(room: number): Promise<RoomSummary | undef
   return (data?.summary as RoomSummary | undefined) ?? undefined
 }
 
+/** Tells each watch its own channel, so a page that remounts never picks up one still leaving. */
+let watches = 0
+
 /**
  * Calls back on every new pick, change to the room and change to its teams,
  * live. Returns what stops listening.
@@ -274,7 +277,7 @@ export function watchRoom(
 ): () => void {
   const db = client()
   const channel: RealtimeChannel = db
-    .channel(`sala-${room}`)
+    .channel(`sala-${room}-${++watches}`)
     .on(
       'postgres_changes',
       { event: 'INSERT', schema: 'public', table: 'room_picks', filter: `room_id=eq.${room}` },
