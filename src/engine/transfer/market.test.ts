@@ -6,6 +6,7 @@ import { newGame, playRound } from '../season/season.ts'
 import {
   acceptOffer,
   askingPrice,
+  bidForPlayer,
   canLeave,
   checkSigning,
   closeContracts,
@@ -17,6 +18,8 @@ import {
   rejectOffer,
   renewalDemand,
   renewContract,
+  sellerFloor,
+  sellerLeverage,
   signPlayer,
   squadOf,
   toggleFavorite,
@@ -43,6 +46,63 @@ function withFreeAgent(): { game: GameState; free: Player } {
   })
   return { game: { ...start, world }, free: world.players[spare.id] }
 }
+
+describe('haggling over a fee', () => {
+  const asking = askingPrice(start, target)
+  const floor = sellerFloor(start, target)
+  const bidOf = (fee: number) => ({ ...fairBid(start, target), fee })
+
+  it('has the club take less than it asks, but not much less', () => {
+    expect(floor).toBeLessThan(asking)
+    expect(floor).toBeGreaterThanOrEqual(asking * (1 - MARKET.maxDiscount))
+    expect(sellerFloor(start, target)).toBe(floor)
+  })
+
+  it('signs at a fee the club would take', () => {
+    const reply = bidForPlayer(start, target.id, bidOf(floor))
+    expect(reply.outcome).toBe('assinou')
+    expect(reply.game.world.players[target.id].clubId).toBe(user)
+    expect(reply.game.world.clubs[user].cash).toBe(start.world.clubs[user].cash - floor)
+  })
+
+  it('counters a fair bid, and the counter then closes the deal', () => {
+    const fee = floor - 10_000
+    const reply = bidForPlayer(start, target.id, bidOf(fee))
+    expect(reply.outcome).toBe('contraproposta')
+    const talk = reply.game.market.talks[target.id]
+    expect(talk.ask).toBeGreaterThanOrEqual(floor)
+    expect(talk.ask).toBeLessThanOrEqual(asking)
+    expect(checkSigning(reply.game, target.id, bidOf(talk.ask)).ok).toBe(true)
+    expect(bidForPlayer(reply.game, target.id, bidOf(talk.ask)).outcome).toBe('assinou')
+  })
+
+  it('ignores an insulting bid and breaks off after too many', () => {
+    const insult = bidForPlayer(start, target.id, bidOf(10_000))
+    expect(insult.outcome).toBe('recusou')
+    expect(insult.game.market.talks[target.id].ask).toBe(asking)
+    const fed = bidForPlayer(insult.game, target.id, bidOf(floor - 10_000))
+    expect(fed.outcome).toBe('rompeu')
+    expect(checkSigning(fed.game, target.id, bidOf(asking)).ok).toBe(false)
+    const later = addDays(fed.game.market.talks[target.id].until, 1)
+    expect(dropLapsedOffers(fed.game.market, later).talks).toEqual({})
+  })
+
+  it('leaves the game alone when the bid itself is not valid', () => {
+    const reply = bidForPlayer(start, target.id, { ...bidOf(floor), wage: 0 })
+    expect(reply.outcome).toBe('invalida')
+    expect(reply.game).toBe(start)
+  })
+
+  it('comes down further for a club in debt', () => {
+    const club = start.world.clubs[target.clubId]
+    const broke = {
+      ...start,
+      world: { ...start.world, clubs: { ...start.world.clubs, [club.id]: { ...club, cash: -1 } } },
+    }
+    expect(sellerLeverage(broke, target).map((l) => l.note)).toContain('O clube está endividado.')
+    expect(sellerFloor(broke, target)).toBeLessThan(floor)
+  })
+})
 
 describe('signing a player', () => {
   it('needs the asking price, the wage he wants and the cash to pay', () => {

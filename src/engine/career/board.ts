@@ -131,7 +131,7 @@ export function takeJob(game: GameState, clubId: string): GameState {
     userClubId: clubId,
     userLineup: undefined,
     ledger: [],
-    market: { ...game.market, listed: {}, offers: [] },
+    market: { ...game.market, listed: {}, offers: [], talks: {} },
     career: newCareer(game.world, clubId, game.career.history),
   }
 }

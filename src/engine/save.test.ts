@@ -37,6 +37,13 @@ describe('upgradeGame', () => {
     expect(upgradeGame(fresh)).toBe(fresh)
   })
 
+  it('opens a version 16 save with no fee talks under way', () => {
+    const { talks: _, ...market } = fresh.market
+    const upgraded = upgradeOld({ ...fresh, version: 16, market })
+    expect(upgraded.version).toBe(SAVE_VERSION)
+    expect(upgraded.market.talks).toEqual({})
+  })
+
   it('drops roles of a version 15 lineup that left the game, and gives the best players styles', () => {
     const lineup = autoLineup(
       fresh.world.clubs.C10.playerIds.map((id) => fresh.world.players[id]),
@@ -210,7 +217,7 @@ describe('upgradeGame', () => {
     const upgraded = upgradeOld(v1)
     expect(upgraded.version).toBe(SAVE_VERSION)
     expect(upgraded.ledger).toEqual([])
-    expect(upgraded.market).toEqual({ listed: {}, offers: [], news: [] })
+    expect(upgraded.market).toEqual({ listed: {}, offers: [], news: [], talks: {} })
     const club = upgraded.world.clubs.C10
     expect(club.ticketPrice).toBe(fairTicketPrice(club.reputation))
     expect(club.cash).toBeGreaterThan(1_000_000)
