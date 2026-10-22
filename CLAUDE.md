@@ -6,7 +6,7 @@ Jogo de gerenciamento de futebol no navegador, inspirado no Brasfoot. Vite + Rea
 
 - Pull requests em português do Brasil: título e descrição. Mensagens de commit também.
 - O código (nomes, comentários, testes) fica em inglês; textos que o jogador vê ficam em português.
-- Documentos em `docs/` seguem uma linha do tempo: cada arquivo novo leva o próximo número na frente (`00-pesquisa.md`, `01-plano-mvp.md`, `02-...`). Não renumere os que já existem.
+- Documentos em `docs/` seguem uma linha do tempo: cada arquivo novo leva o próximo número na frente. Hoje são o `18-o-jogo-hoje.md` (o que existe) e o `19-ideias.md` (o que não existe); quando algo de `19` for feito, mova para o `18`. Não renumere os que já existem.
 
 ## Estrutura
 

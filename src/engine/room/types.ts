@@ -14,7 +14,7 @@ export type TradeRule = 'ate-dois-tercos' | 'temporada' | 'desligadas'
 /** Snake order, or snake with the third round in the second's order, which evens out picking first. */
 export type DraftOrder = 'serpentina' | 'terceira-invertida'
 
-/** What the owner picks when creating a room (pesquisa/13-draft-online.md). */
+/** What the owner picks when creating a room (docs/18-o-jogo-hoje.md). */
 export type RoomOptions = {
   /** Teams in the league, people and robots together; always even. */
   teams: number

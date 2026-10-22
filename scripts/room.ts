@@ -1,6 +1,6 @@
 /**
  * Drafts and plays whole rooms of the Brasileirão pack with everyone on
- * automatic and prints what the plan asked to check (pesquisa/13-draft-online.md):
+ * automatic and prints what the plan asked to check (pesquisa/13-draft-online.md, in the project folder):
  * whether picking first decides the league, whether drafted teams make silly
  * scores, and how long starters stay injured. Run with `npm run room -- 200`, or
  * `npm run room -- 200 1 terceira-invertida` for the other draft order.
