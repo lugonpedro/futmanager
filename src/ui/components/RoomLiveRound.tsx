@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { RadioIcon, SkipForwardIcon, TableIcon } from 'lucide-react'
+import { ArrowRightIcon, RadioIcon, SkipForwardIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
@@ -34,12 +34,14 @@ export function RoomLiveRound(props: {
   timeline: readonly number[]
   teamOf: ReadonlyMap<string, DraftTeam>
   mine?: DraftTeam
-  /** The player is done watching: at the final whistle, or skipping to it. */
+  /** The player is done watching, with "Continuar" after the final whistle. */
   onDone: () => void
 }) {
   const { replays, kickOff, timeline, teamOf } = props
   const [states] = useState(() => replays.map(replayMatch))
   const [elapsed, setElapsed] = useState(() => Date.now() - kickOff)
+  /** Skipped to the end: every match is played out and the page stays on it. */
+  const [skipped, setSkipped] = useState(false)
   const [view, setView] = useState<MatchView>('Só texto')
   const onPitch = view === 'Campo'
   const [chosen, setChosen] = useState(() => {
@@ -52,6 +54,7 @@ export function RoomLiveRound(props: {
 
   // Each page plays the minutes the shared clock has reached, then waits for the next one.
   useEffect(() => {
+    if (skipped) return
     let timer: ReturnType<typeof setTimeout>
     const step = () => {
       const now = Date.now() - kickOff
@@ -65,15 +68,20 @@ export function RoomLiveRound(props: {
     }
     step()
     return () => clearTimeout(timer)
-  }, [states, kickOff, timeline])
+  }, [states, kickOff, timeline, skipped])
+
+  const skip = () => {
+    for (const state of states) while (!state.finished) playMinute(state)
+    setSkipped(true)
+  }
 
   const state = states[chosen]
-  const over = roundOver(timeline, elapsed)
+  const over = skipped || roundOver(timeline, elapsed)
   const kits = useMemo(() => matchKits(state.home.club, state.away.club), [state])
   const kitsByClub = { [state.home.club.id]: kits.home, [state.away.club.id]: kits.away }
   const score = useShownScore(state, onPitch, LIVE.unitMs)
   const clock =
-    elapsed < 0
+    elapsed < 0 && !skipped
       ? `Começa em ${Math.ceil(-elapsed / 1000)} s`
       : over
         ? 'Encerrado'
@@ -105,11 +113,11 @@ export function RoomLiveRound(props: {
         <div className="flex flex-wrap items-center gap-2">
           {over ? (
             <Button onClick={props.onDone}>
-              <TableIcon />
-              Ver resultados e tabela
+              <ArrowRightIcon />
+              Continuar
             </Button>
           ) : (
-            <Button variant="outline" onClick={props.onDone}>
+            <Button variant="outline" onClick={skip}>
               <SkipForwardIcon />
               Pular para o fim
             </Button>
@@ -119,9 +127,12 @@ export function RoomLiveRound(props: {
           </div>
         </div>
 
-        {onPitch && <MatchPitch key={chosen} state={state} unitMs={LIVE.unitMs} kits={kits} />}
+        {/* Keys apart: two siblings with the same key left a stale pitch behind on "Só texto". */}
+        {onPitch && (
+          <MatchPitch key={`campo-${chosen}`} state={state} unitMs={LIVE.unitMs} kits={kits} />
+        )}
         <MatchFeed
-          key={chosen}
+          key={`lances-${chosen}`}
           events={state.events}
           kits={kitsByClub}
           className={onPitch ? 'max-h-40 min-h-24' : 'max-h-[50vh] min-h-48'}

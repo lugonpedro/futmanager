@@ -49,7 +49,14 @@ import { draftPlayers } from '../draft.ts'
 import { LIVE, markRoundSeen, roundOver, roundTimeline, seenRound } from '../liveRound.ts'
 import { describeOptions } from '../room.ts'
 import { roomPageSlug, type RoomPageSlug } from '../roomPages.ts'
-import { canPlayRound, readiness } from '../roomLeague.ts'
+import {
+  absenceNews,
+  announcedAbsences,
+  canPlayRound,
+  readiness,
+  saveAnnouncedAbsences,
+} from '../roomLeague.ts'
+import { announce } from '../announce.ts'
 import { squadIds } from '../roomMarket.ts'
 import { DeleteRoomButton } from './DeleteRoomButton.tsx'
 import { DraftBoard } from './Draft.tsx'
@@ -169,7 +176,8 @@ export function LeagueView(props: {
       .then(([now, before]) => {
         if (!on) return
         const timeline = now ? roundTimeline(now.replays) : []
-        const kickOff = (now?.playedAt.getTime() ?? 0) + LIVE.leadMs
+        // Never further off than the lead: a device clock behind the server's would make the wait long.
+        const kickOff = Math.min(now?.playedAt.getTime() ?? 0, Date.now()) + LIVE.leadMs
         if (!now || !before || roundOver(timeline, Date.now() - kickOff)) {
           markRoundSeen(room.id, played)
         } else {
@@ -188,6 +196,30 @@ export function LeagueView(props: {
       on = false
     }
   }, [room.id, played])
+
+  // After a round (once it was watched or skipped), the toasts of the team's new injuries and bans.
+  const navigate = useNavigate()
+  const mineSlot = loaded?.teams.find((t) => t.userId === userId && !t.robot)?.slot
+  const watched = played > 0 && !live && (checked >= played || seenRound(room.id) >= played)
+  useEffect(() => {
+    if (mineSlot === undefined || !watched) return
+    let on = true
+    loadTeamSheet(room.id, mineSlot)
+      .then((sheet) => {
+        if (!on || !sheet) return
+        const { news, keys } = absenceNews(sheet, announcedAbsences(room.id))
+        saveAnnouncedAbsences(room.id, keys)
+        const team = { label: 'Ver time', to: `/sala/${room.id}/time` }
+        announce(
+          news.map((item) => ({ ...item, link: team })),
+          navigate,
+        )
+      })
+      .catch(() => undefined)
+    return () => {
+      on = false
+    }
+  }, [room.id, mineSlot, watched, played, navigate])
 
   const byId = useMemo(() => draftPlayers(loaded?.pool ?? [], loaded?.picks ?? []), [loaded])
   const slug = roomPageSlug(props.page)
