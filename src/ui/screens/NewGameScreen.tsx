@@ -23,13 +23,11 @@ import { divisionName, formatMoney } from '../format.ts'
 import { usePackMessage } from '../usePackMessage.ts'
 import { confirmReplace } from '../usePackMessage.ts'
 
-const BRASILEIRAO = BUILT_IN_PACKS[0]
-
 type Names = 'gerado' | 'pacote'
 const NAME_LABELS: Record<Names, string> = { gerado: 'Mundo gerado', pacote: 'Usar pacote' }
 
-/** Which pack: the one that comes with the game, or the player's own. */
-type PackChoice = 'brasileirao' | 'proprio'
+/** The player's own pack, chosen alongside the ids of those that come with the game. */
+const OWN_PACK = 'proprio'
 
 const randomSeed = () => Math.floor(Math.random() * 2 ** 31)
 
@@ -39,25 +37,27 @@ export function NewGameScreen() {
   const { pack, setPack } = usePackStore()
   const hasPack = !packIsEmpty(pack)
   const [names, setNames] = useState<Names>('gerado')
-  const [packChoice, setPackChoice] = useState<PackChoice>('brasileirao')
-  const [builtIn, setBuiltIn] = useState<DataPack>()
-  const [loadError, setLoadError] = useState<string>()
-  const usingBuiltIn = names === 'pacote' && packChoice === 'brasileirao'
+  const [packChoice, setPackChoice] = useState(BUILT_IN_PACKS[0].id)
+  const [loaded, setLoaded] = useState<Record<string, DataPack>>({})
+  const [loadError, setLoadError] = useState<{ id: string; text: string }>()
+  const builtInChoice = BUILT_IN_PACKS.find((p) => p.id === packChoice)
+  const usingBuiltIn = names === 'pacote' && builtInChoice !== undefined
+  const builtIn = builtInChoice && loaded[builtInChoice.id]
   const chosen =
-    names !== 'pacote'
-      ? undefined
-      : packChoice === 'brasileirao'
-        ? builtIn
-        : hasPack
-          ? pack
-          : undefined
+    names !== 'pacote' ? undefined : builtInChoice ? builtIn : hasPack ? pack : undefined
   const message = usePackMessage()
   useEffect(() => {
     if (!usingBuiltIn || builtIn) return
-    BRASILEIRAO.load().then(setBuiltIn, () =>
-      setLoadError('Não deu para carregar o pacote. Confira a conexão e tente de novo.'),
+    const id = builtInChoice.id
+    builtInChoice.load().then(
+      (data) => setLoaded((all) => ({ ...all, [id]: data })),
+      () =>
+        setLoadError({
+          id,
+          text: 'Não deu para carregar o pacote. Confira a conexão e tente de novo.',
+        }),
     )
-  }, [usingBuiltIn, builtIn])
+  }, [usingBuiltIn, builtIn, builtInChoice])
   const world = useMemo(() => {
     const generated = generateWorld(seed)
     return chosen ? applyPack(generated, chosen).world : generated
@@ -110,18 +110,23 @@ export function NewGameScreen() {
           {names === 'pacote' && (
             <>
               <ul className="flex flex-col gap-2" aria-label="Pacotes">
-                <PackOption
-                  selected={packChoice === 'brasileirao'}
-                  onSelect={() => setPackChoice('brasileirao')}
-                  title={BRASILEIRAO.name}
-                  detail={
-                    packChoice === 'brasileirao' && loadError ? loadError : BRASILEIRAO.description
-                  }
-                />
+                {BUILT_IN_PACKS.map((built) => (
+                  <PackOption
+                    key={built.id}
+                    selected={packChoice === built.id}
+                    onSelect={() => setPackChoice(built.id)}
+                    title={built.name}
+                    detail={
+                      loadError?.id === built.id && packChoice === built.id
+                        ? loadError.text
+                        : built.description
+                    }
+                  />
+                ))}
                 {hasPack && (
                   <PackOption
-                    selected={packChoice === 'proprio'}
-                    onSelect={() => setPackChoice('proprio')}
+                    selected={packChoice === OWN_PACK}
+                    onSelect={() => setPackChoice(OWN_PACK)}
                     title={pack.name || 'Seu pacote'}
                     detail="O pacote que você importou: os nomes dele entram no lugar dos gerados, clube por clube; o que faltar continua gerado."
                   />
@@ -138,14 +143,14 @@ export function NewGameScreen() {
                       return
                     }
                     setPack(loaded)
-                    setPackChoice('proprio')
+                    setPackChoice(OWN_PACK)
                     message.show(`Pacote "${loaded.name || 'sem nome'}" importado.`, warnings)
                   }}
                   onError={message.fail}
                 />
               </div>
               <PackMessage warnings={message.warnings} />
-              {packChoice === 'brasileirao' ? <BuiltInPackNote /> : <PackLegalNote />}
+              {builtInChoice ? <BuiltInPackNote /> : <PackLegalNote />}
             </>
           )}
         </CardContent>
