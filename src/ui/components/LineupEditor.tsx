@@ -216,12 +216,14 @@ export function LineupEditor(props: {
           />
         )}
 
-        {selectedSlot && (
+        {selectedSlot ? (
           <DutyPicker
             player={players[selectedSlot.playerId]}
             slot={selectedSlot}
             onPick={(duty) => change(setDuty(lineup, selectedSlot.playerId, duty))}
           />
+        ) : (
+          <EmptyDutyPicker />
         )}
 
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -322,9 +324,15 @@ function DutyPicker(props: {
   const factor = dutyFactor(player, slot)
   return (
     <div className="flex flex-col gap-1.5 rounded-md border p-3">
-      <label className="flex flex-wrap items-center gap-2 text-sm">
-        <span>
+      <label className="flex flex-col items-start gap-1.5 text-sm">
+        <span className="w-full truncate">
           Função de <span className="font-semibold">{player.name}</span>
+          {slot.duty && slot.role && (
+            <span className="text-xs text-muted-foreground">
+              {' '}
+              (a vaga é de {TACTICAL_ROLE_NAMES[slot.role].toLowerCase()})
+            </span>
+          )}
         </span>
         <Select value={role} onValueChange={(value) => props.onPick(value as TacticalRole)}>
           <SelectTrigger size="sm" className="min-w-44" aria-label="Função">
@@ -342,13 +350,8 @@ function DutyPicker(props: {
             ))}
           </SelectContent>
         </Select>
-        {slot.duty && slot.role && (
-          <span className="text-xs text-muted-foreground">
-            (a vaga é de {TACTICAL_ROLE_NAMES[slot.role].toLowerCase()})
-          </span>
-        )}
       </label>
-      <p className="text-xs text-muted-foreground">
+      <p className="min-h-12 text-xs sm:min-h-8 text-muted-foreground">
         {TACTICAL_ROLE_EFFECTS[role]}
         {role === 'CPD' &&
           side &&
@@ -359,6 +362,28 @@ function DutyPicker(props: {
         {slot.duty &&
           factor !== 1 &&
           ` Rende ${factor > 1 ? '+' : ''}${Math.round((factor - 1) * 100)}% nessa função.`}
+      </p>
+    </div>
+  )
+}
+
+/**
+ * Stands in for the role picker while no starter is picked, with the same
+ * frame, so picking a player doesn't push the rest of the screen around.
+ */
+function EmptyDutyPicker() {
+  return (
+    <div className="flex flex-col gap-1.5 rounded-md border p-3">
+      <label className="flex flex-col items-start gap-1.5 text-sm text-muted-foreground">
+        <span>Função</span>
+        <Select disabled>
+          <SelectTrigger size="sm" className="min-w-44" aria-label="Função">
+            <SelectValue placeholder="Toque num titular" />
+          </SelectTrigger>
+        </Select>
+      </label>
+      <p className="min-h-12 text-xs sm:min-h-8 text-muted-foreground">
+        Toque num titular, no campo ou na lista, para escolher a função dele.
       </p>
     </div>
   )
