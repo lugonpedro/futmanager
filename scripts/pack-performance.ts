@@ -401,7 +401,12 @@ const NATURAL_GROUP: Record<Position, string> = {
   A: 'attackers',
 }
 const POSITION_ORDER: Position[] = ['G', 'Z', 'L', 'M', 'A']
-const SQUAD_SHAPE: Record<Position, number> = { G: 3, Z: 5, L: 4, M: 7, A: 6 }
+/**
+ * A real squad, capped where the game's market caps it (32), with room per
+ * position for the depth Brazilian clubs carry.
+ */
+const SQUAD_MAX = 32
+const POSITION_MAX: Record<Position, number> = { G: 4, Z: 7, L: 6, M: 10, A: 9 }
 /** FotMob's numeric position ids, read off the squad pages that carry both. */
 const POSITION_NAMES = new Map<string, string>()
 for (const m of everyMember) {
@@ -416,13 +421,14 @@ const positionOf = (m: Member) => {
 }
 
 /**
- * Brings each squad up to date with FotMob: every player FotMob rated this
- * season at a club joins it if the pack doesn't have him there. One the pack
- * lists at another club moves with his rating; a newcomer is rated from the
- * club's level at his position and his FotMob average. When a position is
- * full, the place goes to him over a pack player FotMob's squad page doesn't
- * list, then over one with no minutes in either source and no higher rating,
- * and last over the lowest rated of the position if that one is below him.
+ * Brings each squad up to date with FotMob. Pack players its squad page
+ * doesn't list at their club have left: they move if it lists them at another
+ * club of the pack, and go otherwise. Then every player FotMob rated this
+ * season at a club joins it if the pack doesn't have him there, rated from
+ * the club's level at his position and his FotMob average. A full position
+ * or squad (see SQUAD_MAX) gives his place to someone with no minutes in
+ * either source and no higher rating, or else to the lowest rated one below
+ * him.
  */
 type Added = { club: PackClub; player: PackPlayer; source: string }
 type Dropped = { club: PackClub; player: PackPlayer; reason: string }
@@ -432,6 +438,45 @@ const moved: { from: PackClub; to: PackClub; player: PackPlayer }[] = []
 const full: { club: PackClub; name: string }[] = []
 const rowByMember = new Map(rows.flatMap((r) => (r.memberId ? [[r.memberId, r] as const] : [])))
 const rowsOf = (club: PackClub) => rows.filter((r) => r.club === club)
+
+// Pack players FotMob's squad page for their club doesn't list have left it:
+// those it lists at another club of the pack move there, the rest go.
+const clubOfTeam = new Map(
+  pack.clubes.flatMap((c) => {
+    const team = findTeam(c)
+    return team ? [[team.details.id, c] as const] : []
+  }),
+)
+const teamOfMember = new Map(
+  teams.flatMap((t) => t.squad.squad.flatMap((g) => g.members.map((m) => [m.id, t] as const))),
+)
+for (const row of rows.filter((r) => r.memberId === undefined)) {
+  const sameName = everyMember.filter(
+    (m) =>
+      plain(m.name) === plain(row.player.nome) &&
+      (m.age === undefined ||
+        row.player.idade === undefined ||
+        Math.abs(m.age - row.player.idade) <= 1),
+  )
+  const team = sameName.length === 1 ? teamOfMember.get(sameName[0].id) : undefined
+  const to = team && clubOfTeam.get(team.details.id)
+  // A club that already has him by name got him twice in the pack: one goes.
+  const twice = to && rowsOf(to).some((r) => plain(r.player.nome) === plain(row.player.nome))
+  if (to && to !== row.club && !twice && rowsOf(to).length < SQUAD_MAX) {
+    moved.push({ from: row.club, to, player: row.player })
+    row.club = to
+    row.division = division(pack.clubes.indexOf(to))
+    row.memberId = sameName[0].id
+    row.inSquad = true
+    continue
+  }
+  rows.splice(rows.indexOf(row), 1)
+  dropped.push({
+    club: row.club,
+    player: row.player,
+    reason: twice ? `repetido em ${to!.nome}` : 'fora do elenco no FotMob',
+  })
+}
 for (const [index, club] of pack.clubes.entries()) {
   const squad = squads.get(club) ?? []
   const here = new Set(rowsOf(club).flatMap((r) => (r.memberId ? [r.memberId] : [])))
@@ -445,7 +490,7 @@ for (const [index, club] of pack.clubes.entries()) {
     if (elsewhere?.inSquad) continue
     const mine = rowsOf(club)
     const hasRoom = (p: Position) =>
-      mine.filter((r) => r.player.posicao === p).length < SQUAD_SHAPE[p]
+      mine.filter((r) => r.player.posicao === p).length < POSITION_MAX[p]
     // A full position sends him to another one he can play that has room.
     const natural = elsewhere?.player.posicao ?? positionOf(member)
     const position = hasRoom(natural)
@@ -460,17 +505,23 @@ for (const [index, club] of pack.clubes.entries()) {
     const lift = z * (stats?.rs ?? 0) * Math.min(1, rating.minutes / FOTMOB_FULL_MINUTES)
     const nota =
       elsewhere?.player.nota ?? Math.max(MIN_RATING, Math.min(MAX_RATING, Math.round(level + lift)))
-    if (taken.length >= SQUAD_SHAPE[position]) {
+    const positionFull = taken.length >= POSITION_MAX[position]
+    if (positionFull || mine.length >= SQUAD_MAX) {
+      // With the squad full but not his position, anyone but a club's last two keepers can go.
+      const keepers = mine.filter((r) => r.player.posicao === 'G').length
+      const pool = positionFull
+        ? taken
+        : mine.filter((r) => r.player.posicao !== 'G' || keepers > 2)
       // First someone the club's squad page no longer lists, then someone
       // still there but without minutes, as long as he isn't rated higher,
       // and last the weakest of the position if he is rated lower.
       const byRating = (a: Row, b: Row) => a.player.nota - b.player.nota
-      const gone = taken.filter((r) => r.memberId === undefined).sort(byRating)
-      const idle = taken
+      const gone = pool.filter((r) => r.memberId === undefined).sort(byRating)
+      const idle = pool
         .filter((r) => r.memberId !== undefined && !r.fotmob && !r.cartola)
         .filter((r) => r.player.nota <= nota)
         .sort(byRating)
-      const weaker = taken.filter((r) => r.player.nota < nota).sort(byRating)
+      const weaker = pool.filter((r) => r.player.nota < nota).sort(byRating)
       const out = gone[0] ?? idle[0] ?? weaker[0]
       if (!out) {
         full.push({ club, name: member.name })
@@ -515,6 +566,42 @@ for (const [index, club] of pack.clubes.entries()) {
       player,
       source: `FotMob ${rating.value.toFixed(2)} em ${rating.minutes} min`,
     })
+  }
+}
+
+/**
+ * A squad left short of a generated one (25) is filled from the rest of its
+ * FotMob squad page, players without a rating yet, at the position it is
+ * thinnest at, a little below the club's level there; otherwise the game
+ * would fill it with invented names.
+ */
+const GENERATED_SHAPE: Record<Position, number> = { G: 3, Z: 5, L: 4, M: 7, A: 6 }
+const GENERATED_SIZE = Object.values(GENERATED_SHAPE).reduce((a, b) => a + b, 0)
+const BENCH_GAP = 4
+for (const [index, club] of pack.clubes.entries()) {
+  const here = new Set(rowsOf(club).flatMap((r) => (r.memberId ? [r.memberId] : [])))
+  const bench = (squads.get(club) ?? []).filter(
+    (m) => m.group !== 'unknown' && !here.has(m.id) && !rowByMember.has(m.id),
+  )
+  while (rowsOf(club).length < GENERATED_SIZE && bench.length > 0) {
+    const mine = rowsOf(club)
+    const count = (p: Position) => mine.filter((r) => r.player.posicao === p).length
+    const thinnest = [...POSITION_ORDER].sort(
+      (a, b) => count(a) / GENERATED_SHAPE[a] - count(b) / GENERATED_SHAPE[b],
+    )[0]
+    const pick = bench.find((m) => positionOf(m) === thinnest) ?? bench[0]
+    bench.splice(bench.indexOf(pick), 1)
+    const position = positionOf(pick)
+    const peers = mine.filter((r) => r.player.posicao === position)
+    const level = average((peers.length ? peers : mine).map((r) => r.player.nota))
+    const player: PackPlayer = {
+      nome: pick.name,
+      posicao: position,
+      ...(pick.age !== undefined ? { idade: pick.age } : {}),
+      nota: Math.max(MIN_RATING, Math.round(level - BENCH_GAP)),
+    }
+    rows.push({ club, player, division: division(index), memberId: pick.id, inSquad: true })
+    added.push({ club, player, source: 'elenco do FotMob, sem nota' })
   }
 }
 

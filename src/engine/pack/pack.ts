@@ -1,8 +1,15 @@
-import { marketValueFor, playerProfile, potentialRoom, wageFor } from '../generate/player.ts'
+import {
+  generatePlayer,
+  marketValueFor,
+  playerProfile,
+  potentialRoom,
+  wageFor,
+} from '../generate/player.ts'
 import { generateWorld } from '../generate/world.ts'
 import type { Club, Player, Position, World } from '../model/types.ts'
 import { POSITIONS } from '../model/types.ts'
 import { createRng, mixSeed } from '../rng.ts'
+import { MARKET } from '../transfer/market.ts'
 
 /**
  * A data pack: names the user brings for the clubs and players of a generated
@@ -212,10 +219,32 @@ export function applyPack(
         report.players++
       }
     }
-    if (extra.length > 0) {
+    // A real squad can be bigger than a generated one: the pack's extra
+    // players join as new ones, up to what the market lets a club hold.
+    const room = mode === 'full' ? Math.max(0, MARKET.maxSquad - squadSize(club)) : 0
+    const level = average(club.playerIds.map((id) => world.players[id].overall))
+    const newIds = extra.slice(0, room).map((entry, i) => {
+      const id = `${club.id}-pacote-${i + 1}`
+      const base = generatePlayer(createRng(mixSeed(world.seed, id)), {
+        id,
+        clubId: club.id,
+        position: entry.position ?? 'M',
+        level,
+        season: world.season,
+      })
+      players[id] = applyPlayer(world, base, entry, mode)
+      report.players++
+      return id
+    })
+    if (newIds.length > 0) {
+      clubs[club.id] = { ...clubs[club.id], playerIds: [...club.playerIds, ...newIds] }
+    }
+    const left = extra.length - newIds.length
+    if (left > 0) {
       const label = clubs[club.id].name
+      const limit = mode === 'full' ? MARKET.maxSquad : squadSize(club)
       report.warnings.push(
-        `${label}: ${extra.length} jogador(es) a mais que o elenco de ${squadSize(club)} ficaram de fora.`,
+        `${label}: ${left} jogador(es) a mais que o elenco de ${limit} ficaram de fora.`,
       )
     }
   })
@@ -228,6 +257,7 @@ export function applyPack(
 }
 
 const squadSize = (club: Club) => club.playerIds.length
+const average = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / Math.max(1, xs.length)
 
 const definedOnly = <T extends object>(fields: T): Partial<T> =>
   Object.fromEntries(
