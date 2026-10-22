@@ -89,9 +89,9 @@ export function bestRole(player: Player): TacticalRole {
 }
 
 /** Share a picked role gains for each level of a style that suits it. */
-export const ROLE_STYLE_EFFECT = 0.015
+export const ROLE_STYLE_EFFECT = 0.04
 /** Share a corta pra dentro gains on the wing of his weaker foot, and loses on the other. */
-export const INSIDE_FOOT_EFFECT = 0.03
+export const INSIDE_FOOT_EFFECT = 0.05
 
 /**
  * How much more a player gives in the role the user picked for him: a bit for
@@ -174,7 +174,7 @@ export const sectorSkills = (player: Player, position: Position): Sectors =>
   position === 'G' ? skills(player).inGoal : skills(player).outfield
 
 /** Form, from -2 to +2, moves a player's level by this much each step. */
-export const FORM_EFFECT = 0.015
+export const FORM_EFFECT = 0.03
 
 /** Share of his level a player gives right now: familiarity, tiredness and form. */
 export const matchShape = (player: Player, position: Position, energy: number, form = 0) =>

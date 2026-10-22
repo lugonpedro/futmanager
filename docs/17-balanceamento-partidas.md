@@ -75,6 +75,30 @@ O Lugon escolheu a proposta A junto com a B:
 - `strengthScale 70`, `homeAdvantage 5.5`, `conversion 0.26` em `BALANCE`. O teste das zebras passa a pedir que o pior da Série A vença o melhor em mais de 0,3% dos jogos (dá 0,7% com a semente do teste).
 - A sala do draft volta a oferecer três turnos e ganha quatro. Do terceiro turno em diante, a tabela repete os dois primeiros, com o mesmo mando. Uma migração aceita `legs` até 4.
 
+## Proposta C: o técnico pesa mais (entrou depois)
+
+Times idênticos de média 79 (6 elencos, o mesmo elenco dos dois lados) e 4.000 jogos por linha, mando alternado. Só muda o que o técnico controla.
+
+| Cenário (V/E/D do lado cuidado)                   | Antes        | Depois           |
+| ------------------------------------------------- | ------------ | ---------------- |
+| Forma +2 x forma 0                                | 41 / 27 / 31 | 44 / 26 / 29     |
+| Forma +2 x forma -2                               | 44 / 28 / 29 | 53 / 24 / 23     |
+| Funções escolhidas pelos estilos x funções padrão | 39 / 26 / 35 | 45 / 24 / 31     |
+| Descansado x cansado (energia 75)                 | 45 / 27 / 29 | igual            |
+| **Time de 78 bem cuidado x time de 80 largado**   | 41 / 26 / 33 | **49 / 24 / 27** |
+
+O time de 78 bem cuidado tem funções escolhidas pelos estilos e forma +1; o de 80 largado tem funções padrão e forma -1. Sem ninguém mexer, 80 x 78 dá 40 / 28 / 33.
+
+Mudou em `src/engine/match/strength.ts`:
+
+- `FORM_EFFECT 0.015 → 0.03`: cada passo de forma vale 3%, e um time em forma +2 rende 6% a mais que um em forma 0. Escalar quem está bem e poupar quem está mal passa a contar.
+- `ROLE_STYLE_EFFECT 0.015 → 0.04`: cada nível de estilo que combina com a função escolhida vale 4%. Um meia com lançador jogando de regista, por exemplo, ganha 4% (8% com o "+").
+- `INSIDE_FOOT_EFFECT 0.03 → 0.05`: o corta pra dentro no lado certo ganha 5% e, no lado errado, perde 5%.
+
+Testei também deixar mais duro jogar fora de posição (`FAMILIARITY` de 0,97/0,92 para 0,95/0,85). Isso não mudou nada que desse para medir, porque os atributos já derrubam o jogador fora da posição dele, então ficou como estava. O cansaço também ficou como estava: rodar o elenco já vale tanto quanto forma +2.
+
+Um risco a acompanhar: a forma vem das notas, e as notas sobem quando o time vence. Com a forma valendo o dobro, um time embalado tende a continuar embalado. Os testes de balanço do modo carreira continuam passando.
+
 ## Como reproduzir
 
 `npm run balance:match` imprime a tabela de confrontos (2.000 jogos cada; `-- 4000` para mais). `npm run room` mostra o lado do draft.
