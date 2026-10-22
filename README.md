@@ -4,11 +4,11 @@ Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Nome provis�
 
 ## Documentação
 
-- [O jogo hoje](docs/18-o-jogo-hoje.md): o que a Carreira, o Draft com amigos e a plataforma têm agora
-- [Ideias para o futuro](docs/19-ideias.md): o que ainda não foi feito, o que está em andamento e o que já foi descartado
-- [Operação do servidor](docs/20-operacao.md): Supabase, login por código, Mercado Pago, avisos e domínio
+- [O jogo hoje](docs/00-o-jogo-hoje.md): o que a Carreira, o Draft com amigos e a plataforma têm agora
+- [Ideias para o futuro](docs/01-ideias.md): o que ainda não foi feito, o que está em andamento e o que já foi descartado
+- [Operação do servidor](docs/02-operacao.md): Supabase, login por código, Mercado Pago, avisos e domínio
 
-Os planos de cada etapa (00 a 15) saíram da pasta e continuam no histórico do git.
+Os planos antigos de cada etapa (00 a 15, de antes destes três) saíram da pasta e continuam no histórico do git.
 
 ## Rodando
 
@@ -65,7 +65,7 @@ Para montar o servidor:
 
 1. Crie um projeto no Supabase e rode `supabase/migrations/*.sql` no SQL Editor (ou `npx supabase link` e `npx supabase db push`).
 2. Em Authentication > URL Configuration, use o endereço do jogo como Site URL e acrescente `https://<seu-dominio>/conta` (e as prévias da Vercel, se quiser) em Redirect URLs.
-3. O login é por um código de 6 dígitos no e-mail: os modelos "Magic Link" e "Confirm signup" em Authentication > Emails precisam mostrar `{{ .Token }}`. O passo a passo está em [`docs/20-operacao.md`](docs/20-operacao.md#login-por-código).
+3. O login é por um código de 6 dígitos no e-mail: os modelos "Magic Link" e "Confirm signup" em Authentication > Emails precisam mostrar `{{ .Token }}`. O passo a passo está em [`docs/02-operacao.md`](docs/02-operacao.md#login-por-código).
 
 Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails com o código aparecem no Mailpit em `http://127.0.0.1:54324`.
 

@@ -1,6 +1,6 @@
 # O jogo hoje
 
-Retrato do onzemestre em 22/10/2026 (commit `602c1de`, PR #99). Junta o que os planos 00 a 16 entregaram e que continua no ar; os planos foram tirados de `docs/` e seguem no histórico do git. O que ainda não foi feito está em [19-ideias.md](19-ideias.md), e a configuração do servidor em [20-operacao.md](20-operacao.md).
+Retrato do onzemestre em 22/10/2026 (commit `602c1de`, PR #99). Junta o que os planos 00 a 16 entregaram e que continua no ar; os planos foram tirados de `docs/` e seguem no histórico do git. O que ainda não foi feito está em [01-ideias.md](01-ideias.md), e a configuração do servidor em [02-operacao.md](02-operacao.md).
 
 São dois modos: a **Carreira**, solo e offline, e o **Draft com amigos**, online. Os dois usam o mesmo motor de partida, as mesmas cartas e a mesma escalação.
 

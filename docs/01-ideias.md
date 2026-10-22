@@ -1,6 +1,6 @@
 # Ideias para o futuro
 
-Tudo o que os planos 00 a 17 citaram e que **ainda não existe** no jogo (conferido na `main` em 22/10/2026, commit `602c1de`). O que já existe está em [18-o-jogo-hoje.md](18-o-jogo-hoje.md). Sem ordem dentro de cada grupo; cada ideia vira um plano novo em `docs/` quando chegar a vez.
+Tudo o que os planos 00 a 17 citaram e que **ainda não existe** no jogo (conferido na `main` em 22/10/2026, commit `602c1de`). O que já existe está em [00-o-jogo-hoje.md](00-o-jogo-hoje.md). Sem ordem dentro de cada grupo; cada ideia vira um plano novo em `docs/` quando chegar a vez.
 
 ## Em andamento
 
