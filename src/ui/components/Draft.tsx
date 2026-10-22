@@ -22,12 +22,13 @@ import {
 } from '../../cloud/draft.ts'
 import type { Room } from '../../cloud/rooms.ts'
 import { FORMATION_LINES } from '../../engine/match/roles.ts'
-import type { Formation, Position, World } from '../../engine/model/types.ts'
+import type { Formation, World } from '../../engine/model/types.ts'
 import {
   CARDS_PER_DEAL,
   DRAFT_FORMATIONS,
   STARTING_PLACES,
   teamSlots,
+  type DraftPlace,
 } from '../../engine/room/slots.ts'
 import { primePlayer } from '../../engine/room/prime.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
@@ -584,7 +585,7 @@ function DealTable(props: {
       <CardHeader>
         <CardTitle>
           {deal
-            ? `${myTurn ? 'Suas cartas' : `Cartas do ${team.shortName}`}${position ? `: ${POSITION_NAMES[position].toLowerCase()}` : ''}`
+            ? `${myTurn ? 'Suas cartas' : `Cartas do ${team.shortName}`}${position ? `: ${PLACE_NAMES[position].toLowerCase()}` : ''}`
             : `${team.name} está escolhendo a vaga…`}
         </CardTitle>
         <CardDescription>
@@ -720,8 +721,11 @@ function DraftPlayerSheet(props: {
   )
 }
 
+/** What a place is called: its position, or a defender for a reserve's "D". */
+const PLACE_NAMES: Record<DraftPlace, string> = { ...POSITION_NAMES, D: 'Zagueiro ou lateral' }
+
 /** The position of a team's place, from its formation (4-4-2 until it picks one). */
-function placePosition(team: DraftTeam, room: Room, index: number): Position | undefined {
+function placePosition(team: DraftTeam, room: Room, index: number): DraftPlace | undefined {
   return teamSlots(team.formation ?? '4-4-2', room.options.squadSize)[index]
 }
 
@@ -903,14 +907,14 @@ function MyPlaces(props: {
         type="button"
         disabled={!canOpen}
         onClick={() => open(index)}
-        title={POSITION_NAMES[position]}
+        title={PLACE_NAMES[position]}
         className={cn(
           'flex h-11 w-16 flex-col items-center justify-center rounded-md border-2 border-dashed border-white/50 text-sm font-bold text-white sm:w-20',
           canOpen && 'cursor-pointer border-highlight bg-highlight/20 hover:bg-highlight/40',
           dealing && 'animate-pulse border-solid border-highlight bg-highlight/40',
         )}
       >
-        {position}
+        {position === 'D' ? 'Z/L' : position}
       </button>
     )
   }
