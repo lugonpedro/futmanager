@@ -34,7 +34,9 @@ export function RoomLayout(props: {
   const [menuOpen, setMenuOpen] = useState(false)
   const current = ROOM_PAGES.find((p) => p.slug === page)!
 
-  useEffect(() => window.scrollTo({ top: 0 }), [page])
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [page])
 
   return (
     <div className="min-h-screen md:grid md:grid-cols-[15rem_minmax(0,1fr)]">
