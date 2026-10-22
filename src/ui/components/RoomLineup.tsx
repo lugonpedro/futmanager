@@ -10,6 +10,7 @@ import { POSITION_NAMES, POSITION_ORDER, ROLE_NAMES, type Role } from '../format
 import { sheetAvailability } from '../roomLeague.ts'
 import { usePackWorld } from '../usePackWorld.ts'
 import { LineupEditor, type LineupEditing } from './LineupEditor.tsx'
+import { LearnLink } from './LearnLink.tsx'
 import { FormArrow } from './PlayerSheetView.tsx'
 import { AvailabilityTags, type PlayerAvailability } from './PlayerStatus.tsx'
 import { RoomPlayerSheet } from './RoomPlayerSheet.tsx'
@@ -118,7 +119,10 @@ function Editor(props: {
     <section className="flex flex-col gap-3">
       <Card className="gap-1">
         <CardHeader>
-          <CardTitle>Seu time para a rodada {props.round}</CardTitle>
+          <CardTitle className="flex flex-wrap items-center justify-between gap-2">
+            Seu time para a rodada {props.round}
+            <LearnLink tab="em-campo" section="funcoes" />
+          </CardTitle>
           <CardDescription>
             {saving === 'salvando'
               ? 'Salvando…'

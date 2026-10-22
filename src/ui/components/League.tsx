@@ -69,6 +69,7 @@ import { announce } from '../announce.ts'
 import { squadIds } from '../roomMarket.ts'
 import { DeleteRoomButton } from './DeleteRoomButton.tsx'
 import { DraftBoard } from './Draft.tsx'
+import { LearnLink } from './LearnLink.tsx'
 import { MatchReplay } from './MatchReplay.tsx'
 import { PlayRoundButton } from './PlayRoundButton.tsx'
 import { MarketView } from './Market.tsx'
@@ -914,8 +915,9 @@ function ReadyCard(props: {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>
+        <CardTitle className="flex flex-wrap items-center justify-between gap-2">
           Rodada {round} de {summary.totalRounds}
+          <LearnLink tab="draft" section="rodadas" />
         </CardTitle>
         <CardDescription>
           {everyone

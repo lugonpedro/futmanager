@@ -58,6 +58,7 @@ import { Choices } from '../../components/Choices.tsx'
 import { FocusSelect } from '../../components/FocusSelect.tsx'
 import { listText } from '../../learn.ts'
 import { FavoriteStar } from '../../components/FavoriteStar.tsx'
+import { LearnLink } from '../../components/LearnLink.tsx'
 import { LineupEditor } from '../../components/LineupEditor.tsx'
 import { useSwapSpot } from '../../components/swapSpot.ts'
 import { RowDetails } from '../../components/RowDetails.tsx'
@@ -267,6 +268,7 @@ export function TeamScreen() {
                   Trocar desfalques automaticamente
                 </label>
               )}
+              <LearnLink tab="em-campo" section="funcoes" className="self-start" />
             </>
           )}
           hint="Toque no nome para ver a carta, vender ou renovar."

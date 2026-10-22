@@ -11,8 +11,8 @@ import { SponsorPanel } from './SponsorPanel.tsx'
 /** The parts of the club overview, in page order; their old tab addresses open the page there. */
 const SECTIONS = {
   diretoria: { label: 'Diretoria', panel: BoardPanel, learn: 'diretoria' },
-  patrocinio: { label: 'Patrocínio', panel: SponsorPanel, learn: 'financas' },
-  estadio: { label: 'Estádio', panel: StadiumPanel, learn: 'financas' },
+  patrocinio: { label: 'Patrocínio', panel: SponsorPanel, learn: 'dinheiro' },
+  estadio: { label: 'Estádio', panel: StadiumPanel, learn: 'dinheiro' },
 } satisfies Record<string, { label: string; panel: unknown; learn: CareerSection }>
 
 type Section = keyof typeof SECTIONS
@@ -94,7 +94,7 @@ function FinanceTab() {
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="text-lg font-semibold">Finanças</h2>
-        <LearnLink tab="carreira" section="financas" />
+        <LearnLink tab="carreira" section="dinheiro" />
       </div>
       <FinancePanel />
     </div>
