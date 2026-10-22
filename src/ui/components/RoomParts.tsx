@@ -196,7 +196,7 @@ export function RoomRulesFields(props: {
 }) {
   const options = props.value
   const set = (patch: Partial<RoomOptions>) => props.onChange({ ...options, ...patch })
-  const legs = String(options.legs) as '1' | '2' | '3'
+  const legs = String(options.legs) as '1' | '2' | '3' | '4'
   return (
     <div className="flex flex-col gap-4">
       <TeamsOption options={options} people={props.people} onChange={(teams) => set({ teams })} />
@@ -238,10 +238,13 @@ export function RoomRulesFields(props: {
           onChange={(o) => set({ autoReserves: o === 'sim' })}
         />
       </Option>
-      <Option label="Turnos">
+      <Option
+        label="Turnos"
+        hint="Quanto mais turnos, menos sorte: o time mais forte é campeão mais vezes."
+      >
         <Choices
           ariaLabel="Turnos"
-          options={offered(['1', '2'] as const, legs)}
+          options={['1', '2', '3', '4'] as const}
           value={legs}
           label={(l) => LEGS_LABELS[Number(l) as RoomOptions['legs']]}
           onChange={(l) => set({ legs: Number(l) as RoomOptions['legs'] })}
