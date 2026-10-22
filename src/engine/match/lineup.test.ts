@@ -296,7 +296,7 @@ describe('picked roles', () => {
   it('offer a slot the roles of its part of the pitch, on its own wing only', () => {
     expect(dutiesFor({ position: 'A', role: 'PE' })).toContain('CPD')
     expect(dutiesFor({ position: 'A', role: 'PE' })).not.toContain('PD')
-    expect(dutiesFor({ position: 'A', role: 'CA' })).not.toContain('PE')
+    expect(dutiesFor({ position: 'A', role: 'CA' })).toEqual(expect.arrayContaining(['PE', 'PD']))
     expect(dutiesFor({ position: 'Z', role: 'ZAG' })).toEqual(['ZAG', 'LAT', 'AO', 'LI'])
     expect(dutiesFor({ position: 'G', role: 'GOL' })).toEqual(['GOL'])
     for (const roles of Object.values(DUTIES_BY_POSITION)) {

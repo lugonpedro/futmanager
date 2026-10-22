@@ -165,13 +165,13 @@ export const DUTIES_BY_POSITION: Record<Position, TacticalRole[]> = {
 
 /**
  * The roles on offer for a slot: those of its position, without the ones
- * that stand on the other wing, or on a wing at all when the slot is central.
+ * that stand on the other wing. A central slot may drift to either wing.
  */
 export function dutiesFor(slot: { position: Position; role?: TacticalRole }): TacticalRole[] {
   const side = sideOf(slot.role)
   return (DUTIES_BY_POSITION[slot.position] ?? []).filter((duty) => {
     const dutySide = sideOf(duty)
-    return dutySide === undefined || dutySide === side
+    return dutySide === undefined || side === undefined || dutySide === side
   })
 }
 
