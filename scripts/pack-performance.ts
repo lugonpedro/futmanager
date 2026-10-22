@@ -34,7 +34,13 @@ type PackPlayer = { nome: string; posicao: Position; idade?: number; nota: numbe
 type PackClub = { nome: string; sigla: string; jogadores: PackPlayer[] }
 type PackFile = { clubes: PackClub[] }
 
-type FotmobMember = { id: number; name: string; age?: number }
+type FotmobMember = {
+  id: number
+  name: string
+  age?: number
+  positionIds?: string | null
+  positionIdsDesc?: string | null
+}
 type FotmobTeam = {
   details: { id: number; name: string; shortName?: string }
   squad: { squad: { title: string; members: FotmobMember[] }[] }
@@ -48,6 +54,7 @@ type FotmobRank = {
       MinutesPlayed: number
       TeamId: number
       TeamName: string
+      Positions?: number[]
     }[]
   }[]
 }
@@ -174,6 +181,9 @@ type Row = {
   division: number
   fotmob?: { value: number; minutes: number }
   cartola?: CartolaAthlete
+  /** The FotMob player he was matched to, and whether that one is on this club's squad page. */
+  memberId?: number
+  inSquad: boolean
 }
 const rows: Row[] = []
 const missingClubs: string[] = []
@@ -217,6 +227,7 @@ function looseMatches(players: PackPlayer[], members: Member[]) {
   return pairs
 }
 const looseFound: { row: Row; member: Member }[] = []
+const squads = new Map<PackClub, Member[]>()
 for (const [index, club] of pack.clubes.entries()) {
   const team = findTeam(club)
   if (!team) missingClubs.push(club.nome)
@@ -229,8 +240,14 @@ for (const [index, club] of pack.clubes.entries()) {
     ...squad,
     ...rankedRows
       .filter((r) => r.TeamId === team?.details.id && !inSquad.has(r.ParticiantId))
-      .map((r) => ({ id: r.ParticiantId, name: r.ParticipantName, group: 'unknown' })),
+      .map((r) => ({
+        id: r.ParticiantId,
+        name: r.ParticipantName,
+        group: 'unknown',
+        positionIds: r.Positions?.join(','),
+      })),
   ]
+  squads.set(club, members)
   const cartolaId = division(index) === 1 ? cartolaClub(club)?.id : undefined
   const athletes = cartola.atletas.filter((a) => a.clube_id === cartolaId)
   const used = new Set<number>()
@@ -238,7 +255,8 @@ for (const [index, club] of pack.clubes.entries()) {
   for (const player of club.jogadores) {
     // A player the pack still lists at his old club is looked for everywhere,
     // by exact full name only, since a club-less search on parts of names (or
-    // on a lone "Willian") misfires.
+    // on a lone "Willian") misfires, and only when his own club has no one of
+    // that name (who would be him, with the pack's age off).
     const member =
       findMatch(
         player,
@@ -247,6 +265,7 @@ for (const [index, club] of pack.clubes.entries()) {
         (m) => m.age,
       ) ||
       (words(player.nome).length > 1 &&
+        !members.some((m) => plain(m.name) === plain(player.nome)) &&
         findMatch(
           player,
           everyMember.filter((m) => fotmobRatings.has(m.id)),
@@ -268,6 +287,8 @@ for (const [index, club] of pack.clubes.entries()) {
       division: division(index),
       fotmob: member ? fotmobRatings.get(member.id) : undefined,
       cartola: athlete && athlete.jogos_num >= CARTOLA_MIN_GAMES ? athlete : undefined,
+      memberId: member?.id,
+      inSquad: member !== undefined && inSquad.has(member.id),
     })
   }
   const left = clubRows.filter((r) => !r.fotmob)
@@ -279,6 +300,8 @@ for (const [index, club] of pack.clubes.entries()) {
     const member = loose.get(row.player)
     if (!member) continue
     row.fotmob = fotmobRatings.get(member.id)
+    row.memberId = member.id
+    row.inSquad = inSquad.has(member.id)
     looseFound.push({ row, member })
   }
   rows.push(...clubRows)
@@ -291,25 +314,32 @@ for (const [index, club] of pack.clubes.entries()) {
  * the same division and position that the source covers, laid over the spread
  * of those same players' current ratings.
  */
-function targets(pick: (r: Row) => number | undefined, group: (r: Row) => string) {
+type GroupStats = { vm: number; vs: number; rm: number; rs: number }
+function targets(
+  pick: (r: Row) => number | undefined,
+  group: (r: Row) => string,
+  stats = new Map<string, GroupStats>(),
+) {
   const out = new Map<Row, number>()
   const groups = new Map<string, Row[]>()
   for (const r of rows) {
     if (pick(r) === undefined) continue
     groups.set(group(r), [...(groups.get(group(r)) ?? []), r])
   }
-  for (const members of groups.values()) {
+  for (const [key, members] of groups) {
     if (members.length < 5) continue
     const values = members.map((r) => pick(r)!)
     const ratings = members.map((r) => r.player.nota)
     const [vm, vs] = [average(values), spread(values) || 1]
     const [rm, rs] = [average(ratings), spread(ratings)]
+    stats.set(key, { vm, vs, rm, rs })
     for (const r of members) out.set(r, rm + ((pick(r)! - vm) / vs) * rs)
   }
   return out
 }
 const byPosition = (r: Row) => `${r.division}${r.player.posicao}`
-const fotmobTarget = targets((r) => r.fotmob?.value, byPosition)
+const fotmobStats = new Map<string, GroupStats>()
+const fotmobTarget = targets((r) => r.fotmob?.value, byPosition, fotmobStats)
 const cartolaTarget = targets(
   (r) => r.cartola?.media_num,
   (r) => (r.player.posicao === 'L' || r.player.posicao === 'Z' ? 'D' : r.player.posicao),
@@ -336,6 +366,148 @@ for (const row of rows) {
   const after = Math.max(MIN_RATING, Math.min(MAX_RATING, Math.round(before + step)))
   if (after !== before) changes.push({ row, before, after, source })
   row.player.nota = after
+}
+
+// --- Squads ----------------------------------------------------------------
+
+/** The pack position for FotMob's main position, or its squad group. */
+const FOTMOB_POSITION: Record<string, Position> = {
+  GK: 'G',
+  CB: 'Z',
+  LB: 'L',
+  RB: 'L',
+  LWB: 'L',
+  RWB: 'L',
+  CDM: 'M',
+  CM: 'M',
+  CAM: 'M',
+  LM: 'M',
+  RM: 'M',
+  LW: 'A',
+  RW: 'A',
+  ST: 'A',
+}
+const GROUP_POSITION: Record<string, Position> = {
+  keepers: 'G',
+  defenders: 'Z',
+  midfielders: 'M',
+  attackers: 'A',
+}
+const NATURAL_GROUP: Record<Position, string> = {
+  G: 'keepers',
+  Z: 'defenders',
+  L: 'defenders',
+  M: 'midfielders',
+  A: 'attackers',
+}
+const POSITION_ORDER: Position[] = ['G', 'Z', 'L', 'M', 'A']
+const SQUAD_SHAPE: Record<Position, number> = { G: 3, Z: 5, L: 4, M: 7, A: 6 }
+/** FotMob's numeric position ids, read off the squad pages that carry both. */
+const POSITION_NAMES = new Map<string, string>()
+for (const m of everyMember) {
+  const ids = m.positionIds?.split(',') ?? []
+  const names = m.positionIdsDesc?.split(',') ?? []
+  ids.forEach((id, i) => names[i] && POSITION_NAMES.set(id, names[i]))
+}
+const positionOf = (m: Member) => {
+  const name =
+    m.positionIdsDesc?.split(',')[0] ?? POSITION_NAMES.get(m.positionIds?.split(',')[0] ?? '')
+  return FOTMOB_POSITION[name ?? ''] ?? GROUP_POSITION[m.group] ?? 'M'
+}
+
+/**
+ * Brings each squad up to date with FotMob: every player FotMob rated this
+ * season at a club joins it if the pack doesn't have him there. One the pack
+ * lists at another club moves with his rating; a newcomer is rated from the
+ * club's level at his position and his FotMob average. When a position is
+ * full, the place goes to him over a pack player FotMob's squad page doesn't
+ * list, or else over one with no minutes in either source and no higher rating.
+ */
+type Added = { club: PackClub; player: PackPlayer; source: string }
+type Dropped = { club: PackClub; player: PackPlayer; reason: string }
+const added: Added[] = []
+const dropped: Dropped[] = []
+const moved: { from: PackClub; to: PackClub; player: PackPlayer }[] = []
+const full: { club: PackClub; name: string }[] = []
+const rowByMember = new Map(rows.flatMap((r) => (r.memberId ? [[r.memberId, r] as const] : [])))
+const rowsOf = (club: PackClub) => rows.filter((r) => r.club === club)
+for (const [index, club] of pack.clubes.entries()) {
+  const squad = squads.get(club) ?? []
+  const here = new Set(rowsOf(club).flatMap((r) => (r.memberId ? [r.memberId] : [])))
+  const newcomers = squad
+    .filter((m) => fotmobRatings.has(m.id) && !here.has(m.id))
+    .sort((a, b) => fotmobRatings.get(b.id)!.minutes - fotmobRatings.get(a.id)!.minutes)
+  for (const member of newcomers) {
+    const rating = fotmobRatings.get(member.id)!
+    const elsewhere = rowByMember.get(member.id)
+    // Still on his own club's squad page: FotMob lists him at both, so he stays.
+    if (elsewhere?.inSquad) continue
+    const mine = rowsOf(club)
+    const hasRoom = (p: Position) =>
+      mine.filter((r) => r.player.posicao === p).length < SQUAD_SHAPE[p]
+    // A full position sends him to another one he can play that has room.
+    const natural = elsewhere?.player.posicao ?? positionOf(member)
+    const position = hasRoom(natural)
+      ? natural
+      : ((
+          GROUP_POSITIONS[member.group === 'unknown' ? NATURAL_GROUP[natural] : member.group] ?? []
+        ).find(hasRoom) ?? natural)
+    const taken = mine.filter((r) => r.player.posicao === position)
+    const stats = fotmobStats.get(`${division(index)}${position}`)
+    const level = average((taken.length ? taken : mine).map((r) => r.player.nota))
+    const z = stats ? (rating.value - stats.vm) / stats.vs : 0
+    const lift = z * (stats?.rs ?? 0) * Math.min(1, rating.minutes / FOTMOB_FULL_MINUTES)
+    const nota =
+      elsewhere?.player.nota ?? Math.max(MIN_RATING, Math.min(MAX_RATING, Math.round(level + lift)))
+    if (taken.length >= SQUAD_SHAPE[position]) {
+      // First someone the club's squad page no longer lists, then someone
+      // still there but without minutes, as long as he isn't rated higher.
+      const byRating = (a: Row, b: Row) => a.player.nota - b.player.nota
+      const gone = taken.filter((r) => r.memberId === undefined).sort(byRating)
+      const idle = taken
+        .filter((r) => r.memberId !== undefined && !r.fotmob && !r.cartola)
+        .filter((r) => r.player.nota <= nota)
+        .sort(byRating)
+      const out = gone[0] ?? idle[0]
+      if (!out) {
+        full.push({ club, name: member.name })
+        continue
+      }
+      rows.splice(rows.indexOf(out), 1)
+      dropped.push({
+        club,
+        player: out.player,
+        reason: out === gone[0] ? 'fora do elenco no FotMob' : 'sem minutos',
+      })
+    }
+    if (elsewhere) {
+      moved.push({ from: elsewhere.club, to: club, player: elsewhere.player })
+      elsewhere.club = club
+      elsewhere.division = division(index)
+      elsewhere.inSquad = true
+      if (member.age !== undefined) elsewhere.player.idade = member.age
+      continue
+    }
+    const player: PackPlayer = {
+      nome: member.name,
+      posicao: position,
+      ...(member.age !== undefined ? { idade: member.age } : {}),
+      nota,
+    }
+    rows.push({
+      club,
+      player,
+      division: division(index),
+      fotmob: rating,
+      memberId: member.id,
+      inSquad: true,
+    })
+    added.push({
+      club,
+      player,
+      source: `FotMob ${rating.value.toFixed(2)} em ${rating.minutes} min`,
+    })
+  }
 }
 
 // --- Report and file -------------------------------------------------------
@@ -369,6 +541,27 @@ looseFound.forEach(({ row, member }) =>
   console.log(`  ${row.player.nome} (${row.club.nome}, ${row.player.posicao}) = ${member.name}`),
 )
 
+console.log(`\nentraram nos elencos (${added.length}):`)
+added.forEach((a) =>
+  console.log(
+    `  ${a.player.nota}  ${a.player.nome} (${a.club.nome}, ${a.player.posicao}, ${a.player.idade ?? '?'}) · ${a.source}`,
+  ),
+)
+console.log(`\ntrocaram de clube (${moved.length}):`)
+moved.forEach((m) =>
+  console.log(`  ${m.player.nome} (${m.player.posicao}): ${m.from.nome} -> ${m.to.nome}`),
+)
+console.log(`\nsaíram para abrir vaga (${dropped.length}):`)
+dropped.forEach((d) =>
+  console.log(
+    `  ${d.player.nota}  ${d.player.nome} (${d.club.nome}, ${d.player.posicao}) · ${d.reason}`,
+  ),
+)
+if (full.length) {
+  console.log(`\nsem vaga na posição (${full.length}):`)
+  full.forEach((f) => console.log(`  ${f.name} (${f.club.nome})`))
+}
+
 // Regulars FotMob rates that matched no one: new signings, or a spelling to fix.
 const matched = new Set(rows.flatMap((r) => (r.fotmob ? [r.fotmob] : [])))
 const memberName = new Map(
@@ -383,12 +576,17 @@ unmatched.forEach(([id, r]) =>
 )
 
 if (write) {
-  // Same layout as the hand-kept file: one player per line.
-  const text = readFileSync(PACK, 'utf8')
-  let i = 0
-  const flat = rows.map((r) => r.player)
-  const updated = text.replace(/("nota": )\d+/g, (_, key: string) => `${key}${flat[i++].nota}`)
-  if (i !== flat.length) throw new Error(`expected ${flat.length} ratings, found ${i}`)
-  writeFileSync(PACK, updated)
+  // Same layout as the hand-kept file: one player per line, by position.
+  for (const club of pack.clubes) {
+    club.jogadores = rowsOf(club)
+      .map((r) => r.player)
+      .sort((a, b) => POSITION_ORDER.indexOf(a.posicao) - POSITION_ORDER.indexOf(b.posicao))
+  }
+  const text = JSON.stringify(pack, null, 2)
+    .replace(/"cores": \[\s*("[^"]*"),\s*("[^"]*")\s*\]/g, '"cores": [$1, $2]')
+    .replace(/\{\s*("nome": [^{}[\]]*?"nota": \d+)\s*\}/g, (_, body: string) => {
+      return `{ ${body.replace(/,\s+/g, ', ')} }`
+    })
+  writeFileSync(PACK, `${text}\n`)
   console.log(`\n${PACK} atualizado`)
 }
