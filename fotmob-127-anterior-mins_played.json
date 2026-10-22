@@ -1,0 +1,6943 @@
+{
+  "TopLists": [
+    {
+      "StatName": "mins_played",
+      "Title": "Minutes played",
+      "Subtitle": "Total matches",
+      "LocalizedTitleId": "minutes_played",
+      "LocalizedSubtitleId": "penalty_conceded_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Assaf Tzur",
+          "ParticiantId": 1187774,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2970.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 1,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Silva",
+          "ParticiantId": 571298,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2970.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 1,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Omer Katz",
+          "ParticiantId": 978686,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2970.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 1,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Itay Rotman",
+          "ParticiantId": 1339625,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2961.0,
+          "SubStatValue": 34.0,
+          "MinutesPlayed": 2961,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 4,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Or Blorian",
+          "ParticiantId": 1091999,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2941.0,
+          "SubStatValue": 35.0,
+          "MinutesPlayed": 2941,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 5,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Brayan Carabalí",
+          "ParticiantId": 1390198,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2915.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2915,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 6,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Chico",
+          "ParticiantId": 1174302,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2894.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2894,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 7,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jelle Bataille",
+          "ParticiantId": 862634,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2886.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2886,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 8,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Nadav Zamir",
+          "ParticiantId": 1793019,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 2880.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 9,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Ventura",
+          "ParticiantId": 846750,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2836.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2836,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 10,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Karol Niemczycki",
+          "ParticiantId": 867286,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 2835.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2835,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 11,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Georgiy Yermakov",
+          "ParticiantId": 1274553,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2801.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2801,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 12,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Tenenbaum",
+          "ParticiantId": 580664,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2790.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 13,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Diakite",
+          "ParticiantId": 1708621,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 2769.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2769,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 14,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Kings Kangwa",
+          "ParticiantId": 1061612,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2755.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2755,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 15,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alon Azugi",
+          "ParticiantId": 1244231,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2734.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2734,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 16,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            32,
+            51,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mohammad Abu Nil",
+          "ParticiantId": 1592617,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2719.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2719,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 17,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dor Peretz",
+          "ParticiantId": 580694,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 2708.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2708,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 18,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            85,
+            104,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Tyrese Asante",
+          "ParticiantId": 1285713,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 2704.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2704,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 19,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ron Unger",
+          "ParticiantId": 1792982,
+          "TeamId": 543580,
+          "StatValue": 2680.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2680,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 20,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Eugene Ansah",
+          "ParticiantId": 497753,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 2639.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2639,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 21,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            107,
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Karem Jaber",
+          "ParticiantId": 1135673,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2633.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2633,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 22,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Guy Mizrahi",
+          "ParticiantId": 1238236,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2615.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2615,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 23,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Igor Zlatanović",
+          "ParticiantId": 805779,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2615.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2615,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 23,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Eliel Peretz",
+          "ParticiantId": 763312,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2606.0,
+          "SubStatValue": 34.0,
+          "MinutesPlayed": 2606,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 25,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Karlo Bručić",
+          "ParticiantId": 305432,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2603.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2603,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 26,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Nemanja Ljubisavljević",
+          "ParticiantId": 1100022,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2599.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2599,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 27,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Adrián Ugarriza",
+          "ParticiantId": 547722,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2592.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2592,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 28,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Obeida Darwish",
+          "ParticiantId": 1092013,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2587.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2587,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 29,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Luka Gadrani",
+          "ParticiantId": 1044327,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2577.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2577,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 30,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Shay Pinhas Ben-David",
+          "ParticiantId": 767253,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2572.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2572,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 31,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sambinha",
+          "ParticiantId": 500937,
+          "TeamId": 543580,
+          "StatValue": 2529.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2529,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 32,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Roy Revivo",
+          "ParticiantId": 1337914,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 2526.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2526,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 33,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            38,
+            59,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Falcão",
+          "ParticiantId": 1043787,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2507.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2507,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 34,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Ahmad Ebraheim",
+          "ParticiantId": 1324171,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2503.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2503,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 35,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            106,
+            59,
+            78,
+            85,
+            51,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Yarden Cohen",
+          "ParticiantId": 1034328,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2500.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2500,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 36,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Naor Sabag",
+          "ParticiantId": 715555,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 2495.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2495,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 37,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Omer Atzili",
+          "ParticiantId": 652942,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2483.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2483,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 38,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            103,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Clé",
+          "ParticiantId": 1304486,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2476.0,
+          "SubStatValue": 36.0,
+          "MinutesPlayed": 2476,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 39,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            87,
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Mohammed Abu Rumi",
+          "ParticiantId": 1497826,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2475.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2475,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 40,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Yarden Shua",
+          "ParticiantId": 860792,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2442.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2442,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 41,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            105,
+            107,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Fernand Mayembo",
+          "ParticiantId": 765205,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2438.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 2438,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 42,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Cristian Martínez",
+          "ParticiantId": 727101,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2437.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2437,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 43,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            64,
+            84,
+            73,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Loizos Loizou",
+          "ParticiantId": 1050203,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2423.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2423,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 44,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            85,
+            82,
+            87,
+            78,
+            104,
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Ofek Nadir",
+          "ParticiantId": 1131940,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 2409.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2409,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 45,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Andrian Kraev",
+          "ParticiantId": 1187963,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2391.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2391,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 46,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Ethane Azoulay",
+          "ParticiantId": 1319182,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2384.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2384,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 47,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Johnbosco Samuel Kalu",
+          "ParticiantId": 1350981,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 2382.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2382,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 48,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            107,
+            79,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Maroun Gantus",
+          "ParticiantId": 897600,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2368.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2368,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 49,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            33,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Cédric",
+          "ParticiantId": 1401002,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2338.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2338,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 50,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            85,
+            87,
+            78,
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Davó",
+          "ParticiantId": 1082894,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2336.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2336,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 51,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Artur Miranyan",
+          "ParticiantId": 546185,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2321.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2321,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 52,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Heriberto Tavares",
+          "ParticiantId": 776583,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2320.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2320,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 53,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            88,
+            51,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Niv Antman",
+          "ParticiantId": 792415,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2307.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2307,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 54,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "George Diba",
+          "ParticiantId": 1120991,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 2257.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 2257,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 55,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yair Mordechai",
+          "ParticiantId": 1561580,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 2254.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 2254,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 56,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ofek Melika",
+          "ParticiantId": 1477918,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 2250.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 2250,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 57,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Stanislav Bilenkyi",
+          "ParticiantId": 843124,
+          "TeamId": 543580,
+          "StatValue": 2242.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 2242,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 58,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            106,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Oz Bilu",
+          "ParticiantId": 1227886,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2222.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2222,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 59,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            83,
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Guy Hadida",
+          "ParticiantId": 716877,
+          "TeamId": 543580,
+          "StatValue": 2211.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 2211,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 60,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dor Malul",
+          "ParticiantId": 174363,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 2206.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2206,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 61,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Maor Levi",
+          "ParticiantId": 1269253,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2199.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2199,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 62,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            73,
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Javon East",
+          "ParticiantId": 919525,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2179.0,
+          "SubStatValue": 34.0,
+          "MinutesPlayed": 2179,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 63,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            115,
+            103,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Abdoulaye Seck",
+          "ParticiantId": 588626,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2173.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2173,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 64,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Eliyahu Balilti",
+          "ParticiantId": 660115,
+          "TeamId": 543580,
+          "StatValue": 2158.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 2158,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 65,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Hassan Hilo",
+          "ParticiantId": 1129298,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2158.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 2158,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 66,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lisav Naif Eissat",
+          "ParticiantId": 1413851,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 2148.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2148,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 67,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dan Biton",
+          "ParticiantId": 557603,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2126.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 2126,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 68,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            103,
+            71,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mathew Anim Cudjoe",
+          "ParticiantId": 1228626,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 2121.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2121,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 69,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            72,
+            83,
+            104,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Yonatan Laish",
+          "ParticiantId": 1610970,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 2115.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2115,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 70,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Aziz Mohammed",
+          "ParticiantId": 1242913,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 2102.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2102,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 71,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Mohammed Shakar",
+          "ParticiantId": 753189,
+          "TeamId": 1121750,
+          "StatValue": 2101.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 2101,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 72,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            83,
+            51,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Stav Turiel",
+          "ParticiantId": 1231810,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 2094.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 2094,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 73,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Niv Eliasi",
+          "ParticiantId": 1284486,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2070.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 2070,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 74,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Shavit Mazal",
+          "ParticiantId": 1356300,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2056.0,
+          "SubStatValue": 36.0,
+          "MinutesPlayed": 2056,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 75,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Timothy Awany",
+          "ParticiantId": 736125,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 2051.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 2051,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 76,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Shahar Rosen",
+          "ParticiantId": 1363904,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2048.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2048,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 77,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ondřej Bačo",
+          "ParticiantId": 740255,
+          "TeamId": 543580,
+          "StatValue": 2047.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 2047,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 78,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Awaka Eshata",
+          "ParticiantId": 1091036,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 2041.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2041,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 79,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            76,
+            66,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Diop",
+          "ParticiantId": 1316534,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 2031.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 2031,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 80,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Noam Malmud",
+          "ParticiantId": 1451135,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 2024.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 2024,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 81,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Tomer Altman",
+          "ParticiantId": 889957,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 2004.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 2004,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 82,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Fares Abu Akel",
+          "ParticiantId": 978382,
+          "TeamId": 543580,
+          "StatValue": 2002.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 2002,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 83,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Ido Shahar",
+          "ParticiantId": 1116740,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1995.0,
+          "SubStatValue": 34.0,
+          "MinutesPlayed": 1995,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 84,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            77,
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Ayid Habashi",
+          "ParticiantId": 512749,
+          "TeamId": 1121750,
+          "StatValue": 1986.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1986,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 85,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Orel Dgani",
+          "ParticiantId": 174096,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1980.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 86,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Hélio Varela",
+          "ParticiantId": 1524518,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1978.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1978,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 87,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Saná",
+          "ParticiantId": 1120633,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1973.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1973,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 88,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            38,
+            59,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Eden Shamir",
+          "ParticiantId": 561246,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 1966.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1966,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 89,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Abdallah Jaber",
+          "ParticiantId": 608827,
+          "TeamId": 1121750,
+          "StatValue": 1956.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1956,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 90,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            38,
+            59,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Niv Gotlieb",
+          "ParticiantId": 1317330,
+          "TeamId": 543580,
+          "StatValue": 1939.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1939,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 91,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            51,
+            83,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Amir Ganah",
+          "ParticiantId": 1414052,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 1915.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 1915,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 92,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            107,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Hélder Lopes",
+          "ParticiantId": 361723,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 1903.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1903,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 93,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Illi Tamam",
+          "ParticiantId": 1317335,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1901.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1901,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 94,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            73,
+            64,
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ilay Elmkies",
+          "ParticiantId": 1047976,
+          "TeamId": 1121750,
+          "StatValue": 1894.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1894,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 95,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            77,
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Lior Gliklich",
+          "ParticiantId": 1477921,
+          "TeamId": 1121750,
+          "StatValue": 1890.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1890,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 96,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Andrew Idoko",
+          "ParticiantId": 1241568,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1885.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1885,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 97,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            106,
+            78,
+            87,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Guy Badash",
+          "ParticiantId": 723019,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1875.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1875,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 98,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Aly Camara",
+          "ParticiantId": 848174,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1857.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1857,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 99,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Sayed Abu Farkhi",
+          "ParticiantId": 1518943,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1844.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1844,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 100,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Shahar Piven",
+          "ParticiantId": 831467,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1831.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1831,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 101,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Omer Agvadish",
+          "ParticiantId": 1233183,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1831.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1831,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 102,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Yarin Levi",
+          "ParticiantId": 1612237,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1829.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1829,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 103,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Iyad Khalaili",
+          "ParticiantId": 1699275,
+          "TeamId": 1121750,
+          "StatValue": 1802.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1802,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 104,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            87,
+            71,
+            78,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Ido Sharon",
+          "ParticiantId": 1792984,
+          "TeamId": 543580,
+          "StatValue": 1800.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 105,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Omer Yaacov Nir On",
+          "ParticiantId": 1517864,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1800.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 105,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rotem Keller",
+          "ParticiantId": 1353326,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1779.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1779,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 107,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            59,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "David Keltjens",
+          "ParticiantId": 652983,
+          "TeamId": 543580,
+          "StatValue": 1757.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1757,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 108,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            64,
+            75,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jubayer Bushnak",
+          "ParticiantId": 1543425,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 1750.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1750,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 109,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Roei Gordana",
+          "ParticiantId": 184992,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1733.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1733,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 110,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            75,
+            65,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Issouf Sissokho",
+          "ParticiantId": 1233589,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1733.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1733,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 111,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Timothy Muzie",
+          "ParticiantId": 1238252,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1716.0,
+          "SubStatValue": 35.0,
+          "MinutesPlayed": 1716,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 112,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            87,
+            38,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Raz Shlomo",
+          "ParticiantId": 940461,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1699.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1699,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 113,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Songa Chipyoka",
+          "ParticiantId": 1558824,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1681.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1681,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 114,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dor Micha",
+          "ParticiantId": 289466,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1674.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 1674,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 115,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Yuval Sade",
+          "ParticiantId": 1235064,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1656.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1656,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 116,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            37,
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Iyad Khutaba",
+          "ParticiantId": 288632,
+          "TeamId": 1121750,
+          "StatValue": 1655.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1655,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 117,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Iyad Abu Abaid",
+          "ParticiantId": 624072,
+          "TeamId": 1121750,
+          "StatValue": 1654.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1654,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 118,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Noam Mucha",
+          "ParticiantId": 1406435,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1648.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1648,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 119,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            77,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Itay Ben Shabat",
+          "ParticiantId": 1317239,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1644.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1644,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 120,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Maor Yashilirmak",
+          "ParticiantId": 1792894,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1643.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1643,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 121,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            37,
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Roee David",
+          "ParticiantId": 1633720,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1639.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1639,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 122,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            85,
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Peter Agba",
+          "ParticiantId": 1637764,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1637.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1637,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 123,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Noam Cohen",
+          "ParticiantId": 1072198,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1631.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1631,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 124,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Boni Amian",
+          "ParticiantId": 1658900,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1630.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1630,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 125,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Amit Cohen",
+          "ParticiantId": 1042137,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1613.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1613,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 126,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            38,
+            32,
+            51,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Omar Abuhav",
+          "ParticiantId": 1425772,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 1607.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1607,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 127,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kenji Gorré",
+          "ParticiantId": 643232,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1605.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1605,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 128,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            87,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Dolev Haziza",
+          "ParticiantId": 614161,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1600.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1600,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 129,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            86,
+            77,
+            87,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Heitor",
+          "ParticiantId": 1233132,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1588.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1588,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 130,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "John Otomewo",
+          "ParticiantId": 1867219,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1586.0,
+          "SubStatValue": 19.0,
+          "MinutesPlayed": 1586,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 131,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Dappa",
+          "ParticiantId": 1768322,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1585.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 1585,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 132,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Grigori Morozov",
+          "ParticiantId": 542470,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1584.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1584,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 133,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Matan Hozez",
+          "ParticiantId": 732901,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1579.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1579,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 134,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            72,
+            85,
+            107,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Roei Alkukin",
+          "ParticiantId": 1746273,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1569.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 1569,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 135,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            85,
+            66,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tamir Haimovich",
+          "ParticiantId": 1680389,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1569.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1569,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 136,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            36,
+            74,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Denis Kulikov",
+          "ParticiantId": 1755916,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1566.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1566,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 137,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Adi Yona",
+          "ParticiantId": 1458220,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1566.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1566,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 138,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jean Batoum",
+          "ParticiantId": 1807668,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1565.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1565,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 139,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Roy Nawi",
+          "ParticiantId": 1477916,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1564.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1564,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 140,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Wahib Habiballa",
+          "ParticiantId": 932815,
+          "TeamId": 543580,
+          "StatValue": 1555.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1555,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 141,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            83,
+            104,
+            71,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Yinon Feingsicht",
+          "ParticiantId": 1845779,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1542.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1542,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 142,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Mohamad Amer",
+          "ParticiantId": 1792890,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1535.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1535,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 143,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Idan Cohen",
+          "ParticiantId": 915988,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1527.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1527,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 144,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Boris Enow",
+          "ParticiantId": 1052937,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1521.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 1521,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 145,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ariel Sheratzky",
+          "ParticiantId": 1531261,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 1513.0,
+          "SubStatValue": 33.0,
+          "MinutesPlayed": 1513,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 146,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Itamar Noy",
+          "ParticiantId": 1298551,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1498.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1498,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 147,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Ofir Benvenisti",
+          "ParticiantId": 1325270,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 1496.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1496,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 148,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Guy Melamed",
+          "ParticiantId": 623860,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1486.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1486,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 149,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Osher Davida",
+          "ParticiantId": 1155249,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1473.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1473,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 150,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Bilal Shaheen",
+          "ParticiantId": 1793012,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 1472.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1472,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 151,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Márk Koszta",
+          "ParticiantId": 777785,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1465.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1465,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 152,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Wale Musa Alli",
+          "ParticiantId": 1042903,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 1464.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1464,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 153,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            87,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Zahi Ahmed",
+          "ParticiantId": 1202240,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 1451.0,
+          "SubStatValue": 32.0,
+          "MinutesPlayed": 1451,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 154,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Miladin Stevanović",
+          "ParticiantId": 592529,
+          "TeamId": 1121750,
+          "StatValue": 1444.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 1444,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 155,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sean Goldberg",
+          "ParticiantId": 656556,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1439.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1439,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 156,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Trivante Stewart",
+          "ParticiantId": 1420378,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1430.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1430,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 157,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Ohad Almagor",
+          "ParticiantId": 1363919,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1421.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1421,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 158,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            106,
+            78,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Sagiv Yehezkel",
+          "ParticiantId": 557532,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1410.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1410,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 159,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            83,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Arial Mendy",
+          "ParticiantId": 725261,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1410.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 1410,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 160,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Ramires",
+          "ParticiantId": 602865,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1406.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 1406,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 161,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Yonatan Ferber",
+          "ParticiantId": 1304986,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1394.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1394,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 162,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            85,
+            87,
+            77,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Matan Baltaxa",
+          "ParticiantId": 809171,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 1392.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1392,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 163,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Banda",
+          "ParticiantId": 848295,
+          "TeamId": 1121750,
+          "StatValue": 1386.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1386,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 164,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Doron Leidner",
+          "ParticiantId": 1292697,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1382.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1382,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 165,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ali Mohamed",
+          "ParticiantId": 833591,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1363.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1363,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 166,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Dzhulani",
+          "ParticiantId": 1159866,
+          "TeamId": 543580,
+          "StatValue": 1358.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1358,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 167,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            59,
+            87,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nadav Aviv Nidam",
+          "ParticiantId": 1235037,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1355.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1355,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 168,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kenneth Saief",
+          "ParticiantId": 577045,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1347.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1347,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 169,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            83,
+            38,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Karim Kimvuidi",
+          "ParticiantId": 1596373,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1339.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1339,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 170,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            104,
+            84,
+            73,
+            83,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Júnior Pius",
+          "ParticiantId": 554300,
+          "TeamId": 1121750,
+          "StatValue": 1322.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 1322,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 171,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Asil Kanani",
+          "ParticiantId": 1433288,
+          "TeamId": 1121750,
+          "StatValue": 1318.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1318,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 172,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            103,
+            104,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ofek Biton",
+          "ParticiantId": 1212172,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1293.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1293,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 173,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Basam Zaarura",
+          "ParticiantId": 1347371,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1289.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 1289,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 174,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Omri Altman",
+          "ParticiantId": 451212,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1261.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1261,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 175,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            87,
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "David Domgjoni",
+          "ParticiantId": 858137,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1260.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1260,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 176,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Nevo Shedo",
+          "ParticiantId": 1401601,
+          "TeamId": 1121750,
+          "StatValue": 1250.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1250,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 177,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            38,
+            59,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Ziv Ben Shimol",
+          "ParticiantId": 1561581,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 1246.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1246,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 178,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Kričak",
+          "ParticiantId": 1050896,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1246.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 1246,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 179,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Harel Shalom",
+          "ParticiantId": 972386,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 1236.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1236,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 180,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            32,
+            38,
+            72,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Mohammed Usman",
+          "ParticiantId": 773420,
+          "TeamId": 543580,
+          "StatValue": 1230.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1230,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 181,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Vitalie Damaşcan",
+          "ParticiantId": 798522,
+          "TeamId": 1121750,
+          "StatValue": 1204.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 1204,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 182,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Rotem Hatuel",
+          "ParticiantId": 942013,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1201.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1201,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 183,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Itamar Shviro",
+          "ParticiantId": 972387,
+          "TeamId": 543580,
+          "StatValue": 1200.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1200,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 184,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Peter Michael",
+          "ParticiantId": 915443,
+          "TeamId": 543580,
+          "StatValue": 1190.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1190,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 185,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Tal Archel",
+          "ParticiantId": 1588805,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1189.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 1189,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 186,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            34,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Aleksa Pejić",
+          "ParticiantId": 1083666,
+          "TeamId": 1121750,
+          "StatValue": 1183.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 1183,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 187,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            35,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Ofir Marciano",
+          "ParticiantId": 487334,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 1170.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 1170,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 188,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Noam Harush",
+          "ParticiantId": 1477915,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1166.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 1166,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 189,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            32,
+            38,
+            51,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Elad Madmon",
+          "ParticiantId": 1559823,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1165.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1165,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 190,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dror Nir",
+          "ParticiantId": 1293472,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1155.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 1155,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 191,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tamir Arbel",
+          "ParticiantId": 1384330,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1145.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1145,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 192,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            32,
+            72,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Gontie Diomandé",
+          "ParticiantId": 1297878,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 1133.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 1133,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 193,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Sékou Bangoura",
+          "ParticiantId": 1355686,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 1129.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 1129,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 194,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Amit Lemkin",
+          "ParticiantId": 1752860,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1127.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 1127,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 195,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            87,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Yoav Gerafi",
+          "ParticiantId": 913574,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1108.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 1108,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 196,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Roei Zikri",
+          "ParticiantId": 762701,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1104.0,
+          "SubStatValue": 28.0,
+          "MinutesPlayed": 1104,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 197,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Liran Rotman",
+          "ParticiantId": 645934,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1097.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 1097,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 198,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            87,
+            77,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Sefer",
+          "ParticiantId": 1078516,
+          "TeamId": 1121750,
+          "StatValue": 1096.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 1096,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 199,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            73,
+            85,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Owusu Kwabena",
+          "ParticiantId": 791675,
+          "TeamId": 1121750,
+          "StatValue": 1093.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 1093,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 200,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            78,
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ihab Ganaem",
+          "ParticiantId": 963144,
+          "TeamId": 1121750,
+          "StatValue": 1090.0,
+          "SubStatValue": 20.0,
+          "MinutesPlayed": 1090,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 201,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Yonatan Cohen",
+          "ParticiantId": 686786,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 1080.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1080,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 202,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            83,
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Rogério",
+          "ParticiantId": 875143,
+          "TeamId": 543580,
+          "StatValue": 1080.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 1080,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 203,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Silva Kani",
+          "ParticiantId": 1157214,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1076.0,
+          "SubStatValue": 31.0,
+          "MinutesPlayed": 1076,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 204,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            103,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Alon Turgeman",
+          "ParticiantId": 289545,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1076.0,
+          "SubStatValue": 30.0,
+          "MinutesPlayed": 1076,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 205,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Pierre Cornud",
+          "ParticiantId": 1050156,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 1075.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 1075,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 206,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Saar Fadida",
+          "ParticiantId": 954577,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1072.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1072,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 207,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Yonatan Teper",
+          "ParticiantId": 1440187,
+          "TeamId": 543580,
+          "StatValue": 1053.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 1053,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 208,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Regis Coco",
+          "ParticiantId": 606491,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1040.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 1040,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 209,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Shalev Harush",
+          "ParticiantId": 1284451,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 1029.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1029,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 210,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kervin Andrade",
+          "ParticiantId": 1249296,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 1019.0,
+          "SubStatValue": 27.0,
+          "MinutesPlayed": 1019,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 211,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            87,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Mustafa Sheikh Yosef",
+          "ParticiantId": 819410,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 1012.0,
+          "SubStatValue": 26.0,
+          "MinutesPlayed": 1012,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 212,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            74,
+            72,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Altunashvili",
+          "ParticiantId": 689047,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 1010.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 1010,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 213,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            73,
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Xande Silva",
+          "ParticiantId": 571296,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 1004.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 1004,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 214,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Gad Amos",
+          "ParticiantId": 173875,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 215,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Emir Sahiti",
+          "ParticiantId": 652295,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 984.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 984,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 216,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Navot Ratner",
+          "ParticiantId": 1838844,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 981.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 981,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 217,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Christ Tiéhi",
+          "ParticiantId": 853112,
+          "TeamId": 1121750,
+          "StatValue": 981.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 981,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 218,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Segun James Adeniyi",
+          "ParticiantId": 552029,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 951.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 951,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 219,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Maicom",
+          "ParticiantId": 1553714,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 941.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 941,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 220,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Zé Turbo",
+          "ParticiantId": 645731,
+          "TeamId": 1121750,
+          "StatValue": 940.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 940,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 221,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Marko Rakonjac",
+          "ParticiantId": 1067253,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 937.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 937,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 222,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Alex Moucketou-Moussounda",
+          "ParticiantId": 1295703,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 934.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 934,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 223,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Victor Ochayi",
+          "ParticiantId": 1637552,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 932.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 932,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 224,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Yazen Nassar",
+          "ParticiantId": 1362872,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 917.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 917,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 225,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Mor Brami",
+          "ParticiantId": 1792994,
+          "TeamId": 1121750,
+          "StatValue": 917.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 917,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 226,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ilay Madmon",
+          "ParticiantId": 1179179,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 909.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 909,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 227,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Aílson Tavares",
+          "ParticiantId": 1223337,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 908.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 908,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 228,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Nana Antwi",
+          "ParticiantId": 1340168,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 907.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 907,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 229,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            32,
+            72,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Yanai Distelfeld",
+          "ParticiantId": 1413870,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 905.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 905,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 230,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dario Župarić",
+          "ParticiantId": 206517,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 231,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Maxim Plakushchenko",
+          "ParticiantId": 741022,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 895.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 895,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 232,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Roey Elimelech",
+          "ParticiantId": 1270435,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 883.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 883,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 233,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Roi Mishpati",
+          "ParticiantId": 1284333,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 868.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 868,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 234,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Régis N'Do",
+          "ParticiantId": 1300483,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 861.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 861,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 235,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jocelin Ta Bi",
+          "ParticiantId": 1690655,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 858.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 858,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 236,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ofir Davidzada",
+          "ParticiantId": 557580,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 855.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 855,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 237,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Mamady Diarra",
+          "ParticiantId": 1054116,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 840.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 840,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 238,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            83,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Avishay Cohen",
+          "ParticiantId": 652943,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 823.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 823,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 239,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            32,
+            51,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Aviv Avraham",
+          "ParticiantId": 797478,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 820.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 820,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 240,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Itzik Shoolmaister",
+          "ParticiantId": 922869,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 812.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 812,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 241,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Michael Ohana",
+          "ParticiantId": 612210,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 800.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 800,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 242,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Bakary Konaté",
+          "ParticiantId": 1522846,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 798.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 798,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 243,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Omer Yitzhak",
+          "ParticiantId": 1384763,
+          "TeamId": 543580,
+          "StatValue": 760.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 760,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 244,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Roy Korine",
+          "ParticiantId": 1293471,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 750.0,
+          "SubStatValue": 25.0,
+          "MinutesPlayed": 750,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 245,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Suf Podgoreanu",
+          "ParticiantId": 1201833,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 729.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 729,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 246,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Nehoray Dabush",
+          "ParticiantId": 1518965,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 724.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 724,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 247,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            103,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ahmad Taha",
+          "ParticiantId": 1792906,
+          "TeamId": 1121750,
+          "StatValue": 717.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 717,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 248,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Shay Elias",
+          "ParticiantId": 939043,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 710.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 710,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 249,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Efmamjjasond González",
+          "ParticiantId": 1783583,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 693.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 693,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 250,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Boateng",
+          "ParticiantId": 561219,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 691.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 691,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 251,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kristijan Belić",
+          "ParticiantId": 1124392,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 689.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 689,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 252,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahima Dramé",
+          "ParticiantId": 1053680,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 686.0,
+          "SubStatValue": 22.0,
+          "MinutesPlayed": 686,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 253,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Gil Cohen",
+          "ParticiantId": 1100584,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 684.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 684,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 254,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Liran Sardal",
+          "ParticiantId": 708929,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 682.0,
+          "SubStatValue": 23.0,
+          "MinutesPlayed": 682,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 255,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Anis Porat Ayash",
+          "ParticiantId": 1724715,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 680.0,
+          "SubStatValue": 21.0,
+          "MinutesPlayed": 680,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 256,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Eylon Almog",
+          "ParticiantId": 973767,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 671.0,
+          "SubStatValue": 19.0,
+          "MinutesPlayed": 671,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 257,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ariel Cohen",
+          "ParticiantId": 1621125,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 656.0,
+          "SubStatValue": 19.0,
+          "MinutesPlayed": 656,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 258,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            77,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Idan Goren",
+          "ParticiantId": 1905628,
+          "TeamId": 1121750,
+          "StatValue": 648.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 648,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 259,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Haroun Shapso",
+          "ParticiantId": 1208848,
+          "TeamId": 543580,
+          "StatValue": 641.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 641,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 260,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Oren Bitton",
+          "ParticiantId": 793508,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 627.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 627,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 261,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Benson",
+          "ParticiantId": 536457,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 625.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 262,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Agyei",
+          "ParticiantId": 1422565,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 615.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 615,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 263,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            75,
+            66,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Matan Gosha",
+          "ParticiantId": 1161747,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 595.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 595,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 264,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Vítor",
+          "ParticiantId": 96937,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 586.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 586,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 265,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ran Binyamin",
+          "ParticiantId": 1477917,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 584.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 584,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 266,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            77,
+            87,
+            62,
+            38,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Israel Cowma Daphah",
+          "ParticiantId": 1793025,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 576.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 576,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 267,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Yaw Ackah",
+          "ParticiantId": 1050301,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 567.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 567,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 268,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Machini",
+          "ParticiantId": 467465,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 565.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 565,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 269,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Elad Amir",
+          "ParticiantId": 1762961,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 564.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 564,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 270,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Nir Bitton",
+          "ParticiantId": 291932,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 555.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 555,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 271,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Omri Shamir",
+          "ParticiantId": 1428895,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 550.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 550,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 272,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Liel Deri",
+          "ParticiantId": 1328485,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 549.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 549,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 273,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Roy Levi",
+          "ParticiantId": 1214364,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 548.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 548,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 274,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            107,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ori Azo",
+          "ParticiantId": 1671347,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 547.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 547,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 275,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Itai Ben Hamo",
+          "ParticiantId": 1358125,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 538.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 538,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 276,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Johan N'zi",
+          "ParticiantId": 1109084,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 525.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 525,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 277,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            78,
+            85,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Itay Boganim",
+          "ParticiantId": 1238123,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 518.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 518,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 278,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mohamad Kanaan",
+          "ParticiantId": 1109151,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 513.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 279,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            77,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Wilson Harris",
+          "ParticiantId": 945167,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 512.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 512,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 280,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lenny Nangis",
+          "ParticiantId": 289155,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 505.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 281,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Fernando Pacheco",
+          "ParticiantId": 844386,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 492.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 492,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 282,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Nadim Vrasana",
+          "ParticiantId": 1793029,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 487.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 283,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ziv Morgan",
+          "ParticiantId": 1319784,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 487.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 284,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dor Hugy",
+          "ParticiantId": 612209,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 481.0,
+          "SubStatValue": 29.0,
+          "MinutesPlayed": 481,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 285,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Maksim Grechkin",
+          "ParticiantId": 1056844,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 475.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 475,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 286,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Harel Goldenberg",
+          "ParticiantId": 1793011,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 473.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 287,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Noam Sztejfman",
+          "ParticiantId": 1838812,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 473.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 288,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yarin Swisa",
+          "ParticiantId": 1792980,
+          "TeamId": 543580,
+          "StatValue": 467.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 289,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Basil Khuri",
+          "ParticiantId": 1469207,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 456.0,
+          "SubStatValue": 19.0,
+          "MinutesPlayed": 456,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 290,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Leiva",
+          "ParticiantId": 517941,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 456.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 456,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 291,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Stav Nachmani",
+          "ParticiantId": 1183752,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 455.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 455,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 292,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tom Ben-Zaken",
+          "ParticiantId": 971135,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 443.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 443,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 293,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ido Vaier",
+          "ParticiantId": 1242117,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 442.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 442,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 294,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sharif Kaiuf",
+          "ParticiantId": 1179196,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 439.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 295,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ibeh Ransom Jidechukwu",
+          "ParticiantId": 1793024,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 436.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 436,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 296,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ilai Hagag",
+          "ParticiantId": 1294706,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 425.0,
+          "SubStatValue": 13.0,
+          "MinutesPlayed": 425,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 297,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            88,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Zohar Zasano",
+          "ParticiantId": 1284497,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 424.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 424,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 298,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Omer Korsia",
+          "ParticiantId": 1403603,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 406.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 299,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Idan Baranes",
+          "ParticiantId": 1730213,
+          "TeamId": 543580,
+          "StatValue": 402.0,
+          "SubStatValue": 24.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 300,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Uri Dahan",
+          "ParticiantId": 1159387,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 398.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 398,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 301,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Benny Feldman",
+          "ParticiantId": 1792971,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 397.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 397,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 302,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "El Yam Kancepolsky",
+          "ParticiantId": 1379609,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 396.0,
+          "SubStatValue": 15.0,
+          "MinutesPlayed": 396,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 303,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Mor Siman Tov",
+          "ParticiantId": 1428146,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 386.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 386,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 304,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Virgile Pinson",
+          "ParticiantId": 960446,
+          "TeamId": 1121750,
+          "StatValue": 374.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 374,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 305,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Saba Khvadagiani",
+          "ParticiantId": 1177449,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 374.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 374,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 306,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Djordje Jovanović",
+          "ParticiantId": 858993,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 372.0,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 372,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 307,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Limbombe",
+          "ParticiantId": 215419,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 370.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 370,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 308,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Adir Levi",
+          "ParticiantId": 1420944,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 367.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 367,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 309,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Hayford Adu Boahen",
+          "ParticiantId": 1910613,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 363.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 310,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Ion Nicolăescu",
+          "ParticiantId": 938375,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 363.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 310,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Wylan Cyprien",
+          "ParticiantId": 423058,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 356.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 356,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 312,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            76,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Mor Buskila",
+          "ParticiantId": 1685801,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 347.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 347,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 313,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Jwan Al Halabi",
+          "ParticiantId": 1793009,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 335.0,
+          "SubStatValue": 18.0,
+          "MinutesPlayed": 335,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 314,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Golan Beni",
+          "ParticiantId": 1792877,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 332.0,
+          "SubStatValue": 16.0,
+          "MinutesPlayed": 332,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 315,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Noam Cohen",
+          "ParticiantId": 1795596,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 321.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 321,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 316,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Andrija Radulović",
+          "ParticiantId": 1156913,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 306.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 306,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 317,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Amit Glazer",
+          "ParticiantId": 1176854,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 302.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 302,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 318,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Luccas Paraizo",
+          "ParticiantId": 1435396,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 286.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 286,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 319,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Amitay Yamin",
+          "ParticiantId": 1792887,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 283.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 283,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 320,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Reem Abraham Tal",
+          "ParticiantId": 1837691,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 278.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 278,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 321,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Elia Gethon",
+          "ParticiantId": 1792902,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 275.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 275,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 322,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Yehonatan Ozer",
+          "ParticiantId": 1787809,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 323,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Israel Coll",
+          "ParticiantId": 622508,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 256.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 324,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Orel Baye",
+          "ParticiantId": 1384793,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 254.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 254,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 325,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ruel Sotiriou",
+          "ParticiantId": 890363,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 252.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 326,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            104,
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mohamad Ganame",
+          "ParticiantId": 1792910,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 221.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 221,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 327,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Goni Naor",
+          "ParticiantId": 1130794,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 220.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 220,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 328,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            74,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Larry Angulo",
+          "ParticiantId": 863793,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 217.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 217,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 329,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Yosef Raz Meir",
+          "ParticiantId": 722020,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 199.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 199,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 330,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Naftali Balay",
+          "ParticiantId": 1116808,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 197.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 331,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Liam Cohen",
+          "ParticiantId": 1792968,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 196.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 196,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 332,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Yaad Gonen",
+          "ParticiantId": 1792975,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 194.0,
+          "SubStatValue": 12.0,
+          "MinutesPlayed": 194,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 333,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Adam Grimberg",
+          "ParticiantId": 1838874,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 194.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 194,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 334,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Li On Mizrahi",
+          "ParticiantId": 1179212,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 191.0,
+          "SubStatValue": 17.0,
+          "MinutesPlayed": 191,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 335,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Anas Mahamid",
+          "ParticiantId": 937325,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 190.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 336,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Muhammed Djetei",
+          "ParticiantId": 695394,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 189.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 189,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 337,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Niv Gabay",
+          "ParticiantId": 1838875,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 187.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 187,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 338,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Itay Hazut",
+          "ParticiantId": 1782737,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 184.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 184,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 339,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Gai Herman",
+          "ParticiantId": 1792883,
+          "TeamId": 1121750,
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 340,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Shahar Amsalem",
+          "ParticiantId": 860774,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 340,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Yoav Karadi",
+          "ParticiantId": 1793018,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 178.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 178,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 342,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Matan Zalmanovich",
+          "ParticiantId": 1793008,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 172.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 172,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 343,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Yoan Stoyanov",
+          "ParticiantId": 1308396,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 163.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 163,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 344,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ben Lederman",
+          "ParticiantId": 1139809,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 158.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 345,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Amit Danziger",
+          "ParticiantId": 1902257,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 151.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 151,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 346,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Noam Gissin",
+          "ParticiantId": 1165855,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 149.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 149,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 347,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Darzi",
+          "ParticiantId": 1835857,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 140.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 348,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Netanel Shprauo",
+          "ParticiantId": 1793028,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 140.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 348,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Salam Jiddou",
+          "ParticiantId": 1640705,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 139.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 139,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 350,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Yonas Malede",
+          "ParticiantId": 929781,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 138.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 138,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 351,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Raz Karmi",
+          "ParticiantId": 1384862,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 135.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 352,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nehoray Yosef Hen",
+          "ParticiantId": 1837696,
+          "TeamId": 543580,
+          "StatValue": 123.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 353,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Aviel Zargary",
+          "ParticiantId": 1179229,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 122.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 122,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 354,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jardel",
+          "ParticiantId": 890844,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 121.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 121,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 355,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Denny Gropper",
+          "ParticiantId": 963120,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 119.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 119,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 356,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ido Oli",
+          "ParticiantId": 1682890,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 117.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 117,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 357,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Roei Shukrani",
+          "ParticiantId": 660120,
+          "TeamId": 1121750,
+          "StatValue": 117.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 117,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 358,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Glid Otanga",
+          "ParticiantId": 1651646,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 116.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 116,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 359,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Mido Badarna",
+          "ParticiantId": 978464,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 116.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 116,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 360,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Atlan",
+          "ParticiantId": 1792966,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 103.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 103,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 361,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Liam Lusky",
+          "ParticiantId": 1838845,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 101.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 101,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 362,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Liav Farada",
+          "ParticiantId": 1645552,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 101.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 101,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 362,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Yasmao Cabeda",
+          "ParticiantId": 1691432,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 101.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 101,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 364,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Or Dasa",
+          "ParticiantId": 894834,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 96.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 96,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 365,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Asaf Arania",
+          "ParticiantId": 1641037,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 91.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 91,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 366,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Abed Yassin",
+          "ParticiantId": 1553354,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ali Gnameh",
+          "ParticiantId": 1832864,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Amit Mashiah",
+          "ParticiantId": 1792881,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ben Gordin",
+          "ParticiantId": 1661605,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dor Benyamini",
+          "ParticiantId": 1793007,
+          "TeamId": 10181,
+          "TeamColor": "#E81820",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Hapoel Tel Aviv",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gons Abu Nigma",
+          "ParticiantId": 1792981,
+          "TeamId": 543580,
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Matan Ambar",
+          "ParticiantId": 1909823,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tomer Zarfati",
+          "ParticiantId": 1212872,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 367,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ben Hadadi",
+          "ParticiantId": 1599583,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 70.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 70,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 375,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Yinon Eliyahu",
+          "ParticiantId": 632578,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 68.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 68,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 376,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Alex Talpa",
+          "ParticiantId": 1966057,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 65.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 65,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 377,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Durel Avounou",
+          "ParticiantId": 687250,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 57.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 57,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 378,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Pedrinho",
+          "ParticiantId": 1409599,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 50.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 50,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 379,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Aiham Mater",
+          "ParticiantId": 1792993,
+          "TeamId": 1121750,
+          "StatValue": 49.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 49,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 380,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Ori Shnaper",
+          "ParticiantId": 1793017,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 47.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 381,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Ahmad Haman",
+          "ParticiantId": 1792977,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 382,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Idan Dadia",
+          "ParticiantId": 1990749,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 382,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mahmoud Jabarin",
+          "ParticiantId": 1792997,
+          "TeamId": 1121750,
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 382,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Maor Cuba",
+          "ParticiantId": 1990747,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 382,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Yehonatan Malka",
+          "ParticiantId": 1793014,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 42.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 42,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 386,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Loai Halaf",
+          "ParticiantId": 1658184,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 41.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 41,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 387,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ido Tassa",
+          "ParticiantId": 1792885,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 34.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 34,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 388,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Eithan Velblum",
+          "ParticiantId": 766819,
+          "TeamId": 543580,
+          "StatValue": 32.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 32,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 389,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Sahar Tagi",
+          "ParticiantId": 1792970,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 29.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 29,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 390,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Shaker Abu Husein",
+          "ParticiantId": 1792914,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 29.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 29,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 390,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Diab",
+          "ParticiantId": 1905702,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 26.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 26,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 392,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Saar Elkayam",
+          "ParticiantId": 1792974,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 26.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 26,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 393,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Onyemuchara",
+          "ParticiantId": 1699344,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 22.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 22,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 394,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Sabobo",
+          "ParticiantId": 1609689,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 22.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 22,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 395,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Amit Ohana",
+          "ParticiantId": 1828112,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 21.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 21,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 396,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Roaf Saief",
+          "ParticiantId": 1990748,
+          "TeamId": 6203,
+          "TeamColor": "#C00818",
+          "StatValue": 21.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 21,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 396,
+          "TeamName": "FC Ashdod",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Omri Cohen",
+          "ParticiantId": 1984790,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 20.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 20,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 398,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Itay Solomon",
+          "ParticiantId": 1838821,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 19.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 19,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 399,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ravid Abergel",
+          "ParticiantId": 1406681,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 17.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 17,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 400,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Xander Severina",
+          "ParticiantId": 1239800,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 17.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 17,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 401,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Maor Ben Shimon",
+          "ParticiantId": 1990750,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 15.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 15,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 402,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Lior Kasa",
+          "ParticiantId": 1618922,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 12.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 12,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 403,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lotem Assras",
+          "ParticiantId": 1896940,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 12.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 12,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 403,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Ayanaw Ferede",
+          "ParticiantId": 1497828,
+          "TeamId": 459591,
+          "TeamColor": "#585050",
+          "StatValue": 11.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 11,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 405,
+          "TeamName": "Hapoel Jerusalem FC",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Shai Belhassen",
+          "ParticiantId": 1235632,
+          "TeamId": 8301,
+          "TeamColor": "#003080",
+          "StatValue": 11.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 11,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 405,
+          "TeamName": "Hapoel Haifa",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Cohen",
+          "ParticiantId": 1792969,
+          "TeamId": 1832,
+          "TeamColor": "#888028",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 8,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 407,
+          "TeamName": "Maccabi Netanya",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Roy Shedo",
+          "ParticiantId": 1902275,
+          "TeamId": 2095,
+          "TeamColor": "#383880",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 8,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 407,
+          "TeamName": "Hapoel Ironi Kiryat Shmona",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Subhi Abu Yunes",
+          "ParticiantId": 1950600,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 7.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 7,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 409,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Ali Ibrahim",
+          "ParticiantId": 1792998,
+          "TeamId": 1121750,
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 7,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 410,
+          "TeamName": "Maccabi Bnei Raina",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Muhammad Taha",
+          "ParticiantId": 1792907,
+          "TeamId": 8718,
+          "TeamColor": "#F80000",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 7,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 410,
+          "TeamName": "Bnei Sakhnin",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Yan Shikut",
+          "ParticiantId": 1909696,
+          "TeamId": 8173,
+          "TeamColor": "#000000",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 7,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 410,
+          "TeamName": "Beitar Jerusalem",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Roy Ben Navi",
+          "ParticiantId": 1510213,
+          "TeamId": 9755,
+          "TeamColor": "#0840B8",
+          "StatValue": 6.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 6,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 413,
+          "TeamName": "Hapoel Petah Tikva",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Eylon Baruch",
+          "ParticiantId": 1845777,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 5.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 5,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 414,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Samir Farhud",
+          "ParticiantId": 1212176,
+          "TeamId": 9754,
+          "TeamColor": "#C80828",
+          "StatValue": 5.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 5,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 414,
+          "TeamName": "Hapoel Beer Sheva",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Ilay Ben Simon",
+          "ParticiantId": 1837416,
+          "TeamId": 7855,
+          "TeamColor": "#d9a000",
+          "StatValue": 4.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 4,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 416,
+          "TeamName": "Maccabi Tel Aviv",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Omer David Dahan",
+          "ParticiantId": 1561075,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 4.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 4,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 416,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Pedrão",
+          "ParticiantId": 940134,
+          "TeamId": 10185,
+          "TeamColor": "#0f6f39",
+          "StatValue": 4.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 4,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 416,
+          "TeamName": "Maccabi Haifa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Hasson",
+          "ParticiantId": 1792886,
+          "TeamId": 543580,
+          "StatValue": 3.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 419,
+          "TeamName": "Ironi Tiberias",
+          "Positions": [
+            1
+          ]
+        }
+      ],
+      "StatFormat": "number",
+      "SubstatFormat": "number",
+      "StatDecimals": 0,
+      "SubstatDecimals": 0,
+      "Order": 5,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Ligat ha'Al"
+}

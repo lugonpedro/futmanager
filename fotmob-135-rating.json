@@ -1,0 +1,4358 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Kenneth Vargas",
+          "ParticiantId": 1237185,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 8.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 234,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 1,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "Kalamata",
+          "Positions": [
+            106,
+            79,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Andrija Živković",
+          "ParticiantId": 463268,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.98,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 2,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Răzvan Marin",
+          "ParticiantId": 574844,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 512,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 3,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Davide Calabria",
+          "ParticiantId": 612755,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 4,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            32,
+            62,
+            72,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jorge Pombo",
+          "ParticiantId": 623758,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 7.83,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 543,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 5,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Kifisia",
+          "Positions": [
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Barnabás Varga",
+          "ParticiantId": 796504,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 272,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 6,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Fabiano Leismann",
+          "ParticiantId": 498313,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 7.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 7,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Filipe Relvas",
+          "ParticiantId": 1285815,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 8,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Stavros Pilios",
+          "ParticiantId": 1015750,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 9,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            38,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Lovro Majer",
+          "ParticiantId": 762721,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 446,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 10,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            85,
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Panagiotis Retsos",
+          "ParticiantId": 719055,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.57,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 11,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kings Kangwa",
+          "ParticiantId": 1061612,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 419,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 12,
+          "ParticipantCountryCode": "ZAM",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Taha Abdi Ali",
+          "ParticiantId": 1135782,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 194,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 13,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            72,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Luka Jović",
+          "ParticiantId": 463291,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.51,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 488,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 14,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Stefan de Vrij",
+          "ParticiantId": 188555,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 15,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Vicente Taborda",
+          "ParticiantId": 1280328,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 16,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            83,
+            84,
+            72,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Nikolaos Athanasiou",
+          "ParticiantId": 1225435,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 546,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 16,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Milán Vitális",
+          "ParticiantId": 1197823,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 296,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 18,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            64,
+            74,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Giorgos Kyriakopoulos",
+          "ParticiantId": 518633,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 494,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 18,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            38,
+            68,
+            78,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Alberto Brignoli",
+          "ParticiantId": 299879,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 20,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jeremy Petris",
+          "ParticiantId": 1002682,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 283,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 21,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            32,
+            72,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Uroš Račić",
+          "ParticiantId": 764624,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 7.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 22,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            66,
+            76,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Abdul Rahman Baba",
+          "ParticiantId": 324910,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 23,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Ortega",
+          "ParticiantId": 276729,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.4,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 24,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Benjamín Garré",
+          "ParticiantId": 872965,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 580,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 25,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            83,
+            72,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Fortounis",
+          "ParticiantId": 209430,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 316,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 26,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            106,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Étienne Camara",
+          "ParticiantId": 1222191,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 448,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 26,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Pirola",
+          "ParticiantId": 1050165,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.32,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 28,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Pelkas",
+          "ParticiantId": 358937,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 388,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 29,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Bouchalakis",
+          "ParticiantId": 300618,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 7.31,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 438,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 30,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            65,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jirí Pavlenka",
+          "ParticiantId": 429697,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 31,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Imrân Louza",
+          "ParticiantId": 993022,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 332,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 32,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            74,
+            66,
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Nair Tiknizyan",
+          "ParticiantId": 951976,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 476,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 33,
+          "ParticipantCountryCode": "ARM",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Santino Andino Valencia",
+          "ParticiantId": 1680164,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 556,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 33,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            107,
+            78,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Michailidis",
+          "ParticiantId": 1076939,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 35,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Diego Esteban",
+          "ParticiantId": 1204365,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 525,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 35,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            84,
+            74,
+            83,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Puerta",
+          "ParticiantId": 1331597,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 334,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 35,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Andrews Tetteh",
+          "ParticiantId": 1318701,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 464,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 38,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigues",
+          "ParticiantId": 759276,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 39,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Kalamata",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "David Carmo",
+          "ParticiantId": 954962,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 169,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 40,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Julián Bartolo",
+          "ParticiantId": 908534,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 7.24,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 41,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            103,
+            95,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Kargas",
+          "ParticiantId": 531931,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 7.22,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 42,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mijat Gaćinović",
+          "ParticiantId": 448859,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 43,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            78,
+            72,
+            85,
+            32,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Manolis Saliakas",
+          "ParticiantId": 530197,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.17,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 244,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 44,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Rick van Drongelen",
+          "ParticiantId": 690302,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 45,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Chiquinho",
+          "ParticiantId": 566644,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 419,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 45,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            85,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Hatim Essaoubi",
+          "ParticiantId": 1434534,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 45,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Erik Hamza",
+          "ParticiantId": 1814500,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 560,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 48,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kalamata",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Lazaros Rota",
+          "ParticiantId": 949866,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 447,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 49,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ahmad Mendes Moreira",
+          "ParticiantId": 947883,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 49,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Kalamata",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Zine",
+          "ParticiantId": 1106943,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 51,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Levi García",
+          "ParticiantId": 717557,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 488,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 52,
+          "ParticipantCountryCode": "TRI",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            115,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Moutoussamy",
+          "ParticiantId": 866108,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 53,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Thiago Nuss",
+          "ParticiantId": 1033314,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 54,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "OFI",
+          "Positions": [
+            107,
+            86,
+            105,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Remo Freuler",
+          "ParticiantId": 201704,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 365,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 55,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Kristijan Jakić",
+          "ParticiantId": 643448,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 243,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 56,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            64,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Petros Kaloutsikidis",
+          "ParticiantId": 1288239,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 608,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 56,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kalamata",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Carles Soria",
+          "ParticiantId": 725737,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 58,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            32,
+            51,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Ioannis Kosti",
+          "ParticiantId": 750828,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 610,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 59,
+          "ParticipantCountryCode": "CYP",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            66,
+            76,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Iñaki Peña",
+          "ParticiantId": 990996,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.06,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 60,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Cherif Ndiaye",
+          "ParticiantId": 819972,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 61,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Joel Roca",
+          "ParticiantId": 1326043,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 240,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 62,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ognjen Ugrešić",
+          "ParticiantId": 1574188,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 201,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 62,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            84,
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Yohan Roche",
+          "ParticiantId": 929777,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 64,
+          "ParticipantCountryCode": "BEN",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Silva",
+          "ParticiantId": 494184,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 65,
+          "ParticipantCountryCode": "MEX",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Joca",
+          "ParticiantId": 566470,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 327,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 65,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            83,
+            77,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Jonjoe Kenny",
+          "ParticiantId": 605252,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 65,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Harold Moukoudi",
+          "ParticiantId": 637737,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 65,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Azzedine Ounahi",
+          "ParticiantId": 1073143,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 69,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            85,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Juan Perea",
+          "ParticiantId": 1087743,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 219,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 70,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Kourbelis",
+          "ParticiantId": 260750,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 494,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Stefanos Stroungis",
+          "ParticiantId": 900344,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kalamata",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Kornezos",
+          "ParticiantId": 1065320,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 70,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Apostolos Apostolopoulos",
+          "ParticiantId": 1173343,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 74,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Kotsiras",
+          "ParticiantId": 780816,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 616,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 74,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            32,
+            72,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Christian Kouamé",
+          "ParticiantId": 776940,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 292,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 76,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Julio Alonso",
+          "ParticiantId": 882068,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 602,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 76,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Kalamata",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jota Silva",
+          "ParticiantId": 1114798,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            87,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lazar Kojić",
+          "ParticiantId": 919741,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 200,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 78,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            34,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Omar Richards",
+          "ParticiantId": 798608,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 80,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Athanasiadis",
+          "ParticiantId": 365306,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 81,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Theocharis Tsingaras",
+          "ParticiantId": 1076940,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 380,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 82,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Gustav Granath",
+          "ParticiantId": 1015654,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 546,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 83,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nanú",
+          "ParticiantId": 470547,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 551,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 83,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            32,
+            59,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Christos Zafeiris",
+          "ParticiantId": 1124529,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 85,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            64,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Leroy Abanda",
+          "ParticiantId": 1133599,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 85,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Kifisia",
+          "Positions": [
+            38,
+            59,
+            79,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Amine Bassi",
+          "ParticiantId": 844782,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 460,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 85,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Moisés Ramirez",
+          "ParticiantId": 978290,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 88,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Kifisia",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Aboubakary Koïta",
+          "ParticiantId": 725695,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 262,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 88,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            78,
+            87,
+            72,
+            104,
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nikos Christogeorgos",
+          "ParticiantId": 1106824,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 585,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 90,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gonzalo Piñeiro",
+          "ParticiantId": 1359227,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 91,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Kalamata",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Hördur Magnusson",
+          "ParticiantId": 179759,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 275,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 91,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ketu Jih Kalvin",
+          "ParticiantId": 834643,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 93,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            107,
+            78,
+            72,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Cyriel Dessers",
+          "ParticiantId": 526230,
+          "TeamId": 10200,
+          "TeamColor": "#206830",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 216,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 94,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Panathinaikos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Bernardo Martins",
+          "ParticiantId": 776606,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 284,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 95,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kifisia",
+          "Positions": [
+            73,
+            84,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lefteris Choutesiotis",
+          "ParticiantId": 574217,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.9,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 96,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gelson Martins",
+          "ParticiantId": 575225,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 250,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 97,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Kostoulas",
+          "ParticiantId": 1574181,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 458,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 97,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Eder González",
+          "ParticiantId": 1078491,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 571,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 97,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            74,
+            86,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Marios Siabanis",
+          "ParticiantId": 656648,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 100,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Sá",
+          "ParticiantId": 1395482,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 100,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Mattheos Mountes",
+          "ParticiantId": 1428562,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 295,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 102,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Roukounakis",
+          "ParticiantId": 1284538,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 102,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kifisia",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Holmgren Pedersen",
+          "ParticiantId": 935622,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 266,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 104,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            62,
+            71,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Strakosha",
+          "ParticiantId": 403049,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 104,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Satsias",
+          "ParticiantId": 1178049,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 282,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 104,
+          "ParticipantCountryCode": "CYP",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            32,
+            72,
+            64,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Antonis Papakanellos",
+          "ParticiantId": 1561078,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 152,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 107,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            103,
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Tsivelekidis",
+          "ParticiantId": 1300381,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 107,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Gianniotas",
+          "ParticiantId": 282603,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 309,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 109,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Kenan Kodro",
+          "ParticiantId": 574623,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 361,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 110,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "OFI",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Rob Nizet",
+          "ParticiantId": 1089736,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 565,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 110,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            72,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Octavian Popescu",
+          "ParticiantId": 1190097,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 141,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 110,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Boško Šutalo",
+          "ParticiantId": 949350,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 113,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            37,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Stajić",
+          "ParticiantId": 1384034,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 113,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Matías González",
+          "ParticiantId": 1200040,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 115,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            72,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Charalampos Mavrias",
+          "ParticiantId": 209439,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 115,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Diego Costa",
+          "ParticiantId": 1090333,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 117,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Christian Manrique",
+          "ParticiantId": 958187,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 405,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 118,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Arnór Sigurðsson",
+          "ParticiantId": 650234,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 193,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 118,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Kalamata",
+          "Positions": [
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Apostolakis",
+          "ParticiantId": 1318668,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 198,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 120,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            74,
+            68,
+            66,
+            72,
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Clément Jolibois",
+          "ParticiantId": 1668201,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 121,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Kifisia",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Alex Méndez",
+          "ParticiantId": 1159261,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 122,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            38,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Yevhenii Kucherenko",
+          "ParticiantId": 1139858,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 123,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Manso",
+          "ParticiantId": 1525157,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 124,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kifisia",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lefteris Lyratzis",
+          "ParticiantId": 914839,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 196,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 125,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            51,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Marques",
+          "ParticiantId": 727228,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 368,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Steven Zuber",
+          "ParticiantId": 140819,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 516,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            85,
+            115,
+            87,
+            73,
+            103,
+            67
+          ]
+        },
+        {
+          "ParticipantName": "Vasilios Sourlis",
+          "ParticiantId": 1072697,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 539,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 128,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Maximiliano Comba",
+          "ParticiantId": 890242,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 535,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 128,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            66,
+            74,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Agustín Urzi",
+          "ParticiantId": 989371,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 130,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            103,
+            87,
+            78,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ángelo Sagal",
+          "ParticiantId": 304555,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 509,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 131,
+          "ParticipantCountryCode": "CHI",
+          "TeamName": "Kifisia",
+          "Positions": [
+            105,
+            83,
+            72,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Federico Macheda",
+          "ParticiantId": 165709,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 391,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 131,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Diarra",
+          "ParticiantId": 1478000,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 133,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Kalamata",
+          "Positions": [
+            66,
+            33,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Lazaros Lamprou",
+          "ParticiantId": 560847,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 133,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            87,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nemanja Radoja",
+          "ParticiantId": 425985,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 345,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 133,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kaan Kairinen",
+          "ParticiantId": 547454,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 101,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 136,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Franco Orozco",
+          "ParticiantId": 1109039,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 202,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 137,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Alexandru Pantea",
+          "ParticiantId": 1161609,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 588,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 137,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Aritz Elustondo",
+          "ParticiantId": 607148,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 313,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 139,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Velho",
+          "ParticiantId": 863848,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 139,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Hezze",
+          "ParticiantId": 1131349,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 304,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 139,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Piña",
+          "ParticiantId": 800200,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 621,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 142,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Borja González",
+          "ParticiantId": 1071487,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 251,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 143,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "OFI",
+          "Positions": [
+            62,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marco Krainz",
+          "ParticiantId": 677342,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 191,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 144,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Praxitelis Vouros",
+          "ParticiantId": 521754,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 629,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 144,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Sebastián Palacios",
+          "ParticiantId": 432949,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 144,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            83,
+            72,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Bouzoukis",
+          "ParticiantId": 851199,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 141,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 144,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tom Dele-Bashiru",
+          "ParticiantId": 872963,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 144,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            65,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Giorgios Kanellopoulos",
+          "ParticiantId": 916949,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 263,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 149,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Krešimir Krizmanić",
+          "ParticiantId": 1240425,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 149,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "OFI",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Marius Mouandilmadji",
+          "ParticiantId": 953517,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 149,
+          "ParticipantCountryCode": "CHA",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ayoub El Kaabi",
+          "ParticiantId": 884382,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 209,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 152,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Taison",
+          "ParticiantId": 130589,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 263,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 152,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            87,
+            78,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Nikas",
+          "ParticiantId": 892618,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 380,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 154,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Sotiris Tsiloulis",
+          "ParticiantId": 612027,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 330,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 154,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Noah Fadiga",
+          "ParticiantId": 988119,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 449,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 156,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            38,
+            32,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Vasiljević",
+          "ParticiantId": 435741,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 157,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Kalamata",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jovanny Bolívar",
+          "ParticiantId": 1138511,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 380,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 158,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Kalamata",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ivi López",
+          "ParticiantId": 530460,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 353,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 158,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Derek Agyakwa",
+          "ParticiantId": 1182566,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 158,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Stavropoulos",
+          "ParticiantId": 819752,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 158,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Chrysopoulos",
+          "ParticiantId": 1428135,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 162,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Dickmann",
+          "ParticiantId": 543172,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 162,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "OFI",
+          "Positions": [
+            62,
+            72,
+            32,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Tino Kadewere",
+          "ParticiantId": 666860,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 164,
+          "ParticipantCountryCode": "ZIM",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Gerasimos Mitoglou",
+          "ParticiantId": 1085343,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 164,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Thanasis Karamanis",
+          "ParticiantId": 1429994,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 186,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 164,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Goumas",
+          "ParticiantId": 1575953,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 143,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 164,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Sousa",
+          "ParticiantId": 276261,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 443,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 164,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kifisia",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Xesc Regis",
+          "ParticiantId": 720021,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 328,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 164,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            62,
+            86,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Argyrios Liatsikouras",
+          "ParticiantId": 1692887,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 113,
+          "MatchesPlayed": 6,
+          "StatValueCount": 3,
+          "Rank": 170,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kalamata",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Thanasis Androutsos",
+          "ParticiantId": 784493,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 385,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 170,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            76,
+            64,
+            85,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Nikolaou",
+          "ParticiantId": 723574,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 328,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 172,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Julián Bonetto",
+          "ParticiantId": 839891,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 216,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 173,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Kalamata",
+          "Positions": [
+            103,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Messemo Junior Bakayoko",
+          "ParticiantId": 1081232,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 86,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 173,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Kalamata",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mahamadou Balde",
+          "ParticiantId": 1792870,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 188,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 175,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Jere Uronen",
+          "ParticiantId": 261654,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 522,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 175,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kwadwo Opoku",
+          "ParticiantId": 1195006,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 305,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 177,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Stavros Pnevmonidis",
+          "ParticiantId": 1561233,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 339,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 178,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Roshon van Eijma",
+          "ParticiantId": 924844,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 179,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "Kifisia",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Panagiotis Liagas",
+          "ParticiantId": 994411,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 462,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 179,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Petros Mantalos",
+          "ParticiantId": 184639,
+          "TeamId": 8563,
+          "TeamColor": "#d99f00",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 103,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 181,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "AEK Athens",
+          "Positions": [
+            85,
+            64,
+            76,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Adrian Șut",
+          "ParticiantId": 1025630,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 222,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 181,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jeremy Antonisse",
+          "ParticiantId": 1210947,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 483,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 183,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "Kifisia",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Rafa Mir",
+          "ParticiantId": 640492,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 184,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 184,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            104,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Zisis Karachalios",
+          "ParticiantId": 655165,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 156,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 184,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Marios Vichos",
+          "ParticiantId": 988775,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 574,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 186,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Furtado",
+          "ParticiantId": 1077671,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 369,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 186,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            115,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Dženis Burnić",
+          "ParticiantId": 660148,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 188,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            74,
+            55,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Kosta Aleksić",
+          "ParticiantId": 1067286,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 149,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 189,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            115,
+            82,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Manu García",
+          "ParticiantId": 659201,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 190,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            85,
+            77,
+            66,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Taxiarchis Fountas",
+          "ParticiantId": 307446,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 369,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 191,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            103,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kylian Kaiboué",
+          "ParticiantId": 980424,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 221,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 191,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            36,
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Novica Eraković",
+          "ParticiantId": 857707,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 283,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 193,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Djenepo",
+          "ParticiantId": 862645,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 193,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Vasilios Grosdis",
+          "ParticiantId": 1337880,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 297,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 193,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            66,
+            77,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Charalampoglou",
+          "ParticiantId": 1665411,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 112,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 193,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Imam Jagne",
+          "ParticiantId": 1103937,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 465,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 197,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Kifisia",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Martin Hongla",
+          "ParticiantId": 797758,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 258,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 198,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Chatsidis",
+          "ParticiantId": 1727377,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 198,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Baptiste Santamaría",
+          "ParticiantId": 478105,
+          "TeamId": 8619,
+          "TeamColor": "#1A1A1A",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 118,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 198,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "PAOK Thessaloniki",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Jordi Mboula",
+          "ParticiantId": 748378,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 198,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "Kifisia",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Achilleas Poungouras",
+          "ParticiantId": 604348,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 198,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Anastasios Chatzigiovanis",
+          "ParticiantId": 801780,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 168,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 203,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            87,
+            85,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Tzovaras",
+          "ParticiantId": 1065450,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 109,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 204,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Salifou Soumah",
+          "ParticiantId": 1388477,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 100,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 204,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Cristopher Núnez",
+          "ParticiantId": 848335,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 202,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 206,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            75,
+            104,
+            85,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Theodoridis",
+          "ParticiantId": 1634971,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 335,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 206,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kifisia",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Youssouph Badji",
+          "ParticiantId": 1053689,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 330,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 208,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Thimianis",
+          "ParticiantId": 916990,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 208,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Laskaris",
+          "ParticiantId": 1526927,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 431,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 210,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Othman Boussaid",
+          "ParticiantId": 839476,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 210,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Mygas",
+          "ParticiantId": 474502,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 286,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 210,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            33,
+            32,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ioannis Gelios",
+          "ParticiantId": 215645,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 213,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kalamata",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Niv Eliasi",
+          "ParticiantId": 1284486,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 214,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Panagiotis Simelidis",
+          "ParticiantId": 625626,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 136,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 215,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            85,
+            87,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Juan Bauza",
+          "ParticiantId": 798149,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 127,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 216,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Emmanouilidis",
+          "ParticiantId": 863872,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 370,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 216,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            107,
+            83,
+            78,
+            84,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marvelous Nakamba",
+          "ParticiantId": 541330,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 317,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 218,
+          "ParticipantCountryCode": "ZIM",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Gerson Sousa",
+          "ParticiantId": 1050830,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 271,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 219,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kifisia",
+          "Positions": [
+            72,
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Aitor Cantalapiedra",
+          "ParticiantId": 675600,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 295,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 220,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "OFI",
+          "Positions": [
+            86,
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Hamza Mendyl",
+          "ParticiantId": 782154,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 397,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 220,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Juan Cataldi",
+          "ParticiantId": 955212,
+          "TeamId": 1585,
+          "TeamColor": "#101010",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 289,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 222,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Kalamata",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Mbunga Kimpioka",
+          "ParticiantId": 961305,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 222,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            115,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Stefanos Katsikas",
+          "ParticiantId": 1288474,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 224,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Franz Brorsson",
+          "ParticiantId": 614193,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 514,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 225,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Theodosoulakis",
+          "ParticiantId": 1398146,
+          "TeamId": 7753,
+          "TeamColor": "#101010",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 125,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 225,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "OFI",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Jan Hurtado",
+          "ParticiantId": 776012,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 235,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 227,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ricardinho",
+          "ParticiantId": 1238739,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 245,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 228,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Elvir Koljić",
+          "ParticiantId": 497796,
+          "TeamId": 8675,
+          "TeamColor": "#214790",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 261,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Iraklis 1908",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Keidi Bare",
+          "ParticiantId": 820143,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 272,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 230,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Apostolos Christopoulos",
+          "ParticiantId": 1423601,
+          "TeamId": 488099,
+          "TeamColor": "#022c66",
+          "StatValue": 6.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 79,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 231,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kifisia",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Jensen",
+          "ParticiantId": 774625,
+          "TeamId": 8239,
+          "TeamColor": "#d7a100",
+          "StatValue": 6.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 409,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 232,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Aris Thessaloniki",
+          "Positions": [
+            85,
+            36,
+            75,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Panagiotis Tsantilas",
+          "ParticiantId": 1683522,
+          "TeamId": 10187,
+          "TeamColor": "#004078",
+          "StatValue": 6.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 202,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 232,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Atromitos Athens",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Athanasios Prodromitis",
+          "ParticiantId": 1461223,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 89,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 234,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Roman Yaremchuk",
+          "ParticiantId": 643690,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 103,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 235,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Armando González",
+          "ParticiantId": 1456983,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 236,
+          "ParticipantCountryCode": "MEX",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Mejía",
+          "ParticiantId": 1457935,
+          "TeamId": 162386,
+          "TeamColor": "#df9c00",
+          "StatValue": 6.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 278,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 237,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Panetolikos",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Ognjen Ožegović",
+          "ParticiantId": 463293,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 6.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 230,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 238,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Cobnan",
+          "ParticiantId": 1280732,
+          "TeamId": 4493,
+          "TeamColor": "#4CAE6A",
+          "StatValue": 5.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 322,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 239,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Levadiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Lykourinos",
+          "ParticiantId": 1667984,
+          "TeamId": 885256,
+          "TeamColor": "#00439c",
+          "StatValue": 5.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 240,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Volos NFC",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nikos Papadopoulos",
+          "ParticiantId": 281627,
+          "TeamId": 80654,
+          "TeamColor": "#0056a5",
+          "StatValue": 5.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Asteras Tripolis",
+          "Positions": [
+            11
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Super League 1"
+}

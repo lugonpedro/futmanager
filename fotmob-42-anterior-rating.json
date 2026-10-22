@@ -1,0 +1,5922 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Kylian Mbappé",
+          "ParticiantId": 701154,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 8.38,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 912,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lamine Yamal",
+          "ParticiantId": 1467236,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 8.28,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 874,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 2,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Harry Kane",
+          "ParticiantId": 194165,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.2,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1039,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 3,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bayern München",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Michael Olise",
+          "ParticiantId": 1029063,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.04,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1081,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 4,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bayern München",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Khvicha Kvaratskhelia",
+          "ParticiantId": 900433,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.94,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 1140,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 5,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            107,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Szoboszlai",
+          "ParticiantId": 846005,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.91,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1053,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 6,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Liverpool",
+          "Positions": [
+            64,
+            85,
+            83,
+            32,
+            87,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Grimaldo",
+          "ParticiantId": 288406,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.84,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1079,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 7,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Luis Díaz",
+          "ParticiantId": 860914,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 980,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 8,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Bayern München",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "David Raya",
+          "ParticiantId": 562727,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.81,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1290,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 9,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Anan Khalaili",
+          "ParticiantId": 1477878,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.8,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 703,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 10,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            62,
+            72,
+            32,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Vítinha",
+          "ParticiantId": 1061249,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.75,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1544,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 11,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            75,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Désiré Doué",
+          "ParticiantId": 1339208,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 871,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 12,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            103,
+            87,
+            105,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Julián Álvarez",
+          "ParticiantId": 974753,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.71,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1240,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 13,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Xavi Simons",
+          "ParticiantId": 1173787,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 572,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 14,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            85,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jens Petter Hauge",
+          "ParticiantId": 741397,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.67,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 988,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 15,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Achraf Hakimi",
+          "ParticiantId": 770881,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1154,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 16,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Weston McKennie",
+          "ParticiantId": 848266,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.61,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 899,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Juventus",
+          "Positions": [
+            85,
+            62,
+            73,
+            83,
+            64,
+            72,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Federico Valverde",
+          "ParticiantId": 743533,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.6,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1162,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 18,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            32,
+            72,
+            64,
+            73,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "João Neves",
+          "ParticiantId": 1342757,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1144,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 19,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Mason Greenwood",
+          "ParticiantId": 950473,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 671,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 19,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Marseille",
+          "Positions": [
+            83,
+            84,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Federico Dimarco",
+          "ParticiantId": 605224,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.55,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 714,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 21,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            79,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Fermín López",
+          "ParticiantId": 1404415,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.55,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 801,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 22,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            85,
+            73,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Thibaut Courtois",
+          "ParticiantId": 170323,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 945,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 23,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Hans Vanaken",
+          "ParticiantId": 203666,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.53,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 24,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            85,
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Nuno Mendes",
+          "ParticiantId": 1158945,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.52,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1403,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 25,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Victor Osimhen",
+          "ParticiantId": 687681,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.51,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 841,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 26,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Vinícius Júnior",
+          "ParticiantId": 846033,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.51,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1170,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 27,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Florian Wirtz",
+          "ParticiantId": 1152455,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 840,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 28,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Liverpool",
+          "Positions": [
+            85,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Erling Haaland",
+          "ParticiantId": 737066,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 755,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 29,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Dembélé",
+          "ParticiantId": 692984,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.5,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 827,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 30,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            105,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Arda Güler",
+          "ParticiantId": 1253890,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1030,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 31,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            85,
+            74,
+            78,
+            83,
+            64,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Declan Rice",
+          "ParticiantId": 654096,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1069,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 32,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Trincão",
+          "ParticiantId": 732282,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.47,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 956,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 33,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            85,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Jérémy Doku",
+          "ParticiantId": 942368,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 34,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Manchester City",
+          "Positions": [
+            87,
+            86,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Gordon",
+          "ParticiantId": 906937,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.45,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 770,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 35,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            107,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Forbs",
+          "ParticiantId": 1186529,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 674,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 36,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            83,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Harvey Barnes",
+          "ParticiantId": 760359,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 808,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 37,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Scott McTominay",
+          "ParticiantId": 843099,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 699,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 38,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Napoli",
+          "Positions": [
+            66,
+            77,
+            86,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Nikita Haikin",
+          "ParticiantId": 625360,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.39,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1110,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 39,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Gravenberch",
+          "ParticiantId": 956683,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 961,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 40,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Maxi Araújo",
+          "ParticiantId": 1031656,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 980,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 41,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            38,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Pedri",
+          "ParticiantId": 1083323,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 695,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 42,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Joshua Kimmich",
+          "ParticiantId": 460632,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1160,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 42,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            64,
+            32,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Aleix García",
+          "ParticiantId": 642551,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1005,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 42,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Nick Pope",
+          "ParticiantId": 280484,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 45,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jude Bellingham",
+          "ParticiantId": 1077894,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.37,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 607,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 46,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            85,
+            74,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Maghnes Akliouche",
+          "ParticiantId": 1305618,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 835,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 47,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            83,
+            84,
+            104,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Porro",
+          "ParticiantId": 941573,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 772,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 47,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Aurélien Tchouaméni",
+          "ParticiantId": 914458,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1125,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 49,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Virgil van Dijk",
+          "ParticiantId": 209405,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1080,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 50,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Berg",
+          "ParticiantId": 530635,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1110,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 51,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            75,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Serge Gnabry",
+          "ParticiantId": 385437,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 561,
+          "MatchesPlayed": 11,
+          "StatValueCount": 10,
+          "Rank": 51,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Locatelli",
+          "ParticiantId": 624166,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.33,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 646,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 53,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Juventus",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Morten Hjulmand",
+          "ParticiantId": 950199,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 910,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 54,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Pierre-Emerick Aubameyang",
+          "ParticiantId": 150565,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.31,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 55,
+          "ParticipantCountryCode": "GAB",
+          "TeamName": "Marseille",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kieran Trippier",
+          "ParticiantId": 191869,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 669,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 56,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Tonali",
+          "ParticiantId": 867414,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 955,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 57,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Rashford",
+          "ParticiantId": 696365,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 579,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 58,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Barcelona",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Noni Madueke",
+          "ParticiantId": 1084981,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 608,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 59,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Mislav Oršić",
+          "ParticiantId": 184595,
+          "TeamId": 2137,
+          "TeamColor": "#1fb3e2",
+          "StatValue": 7.28,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 645,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 60,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Pafos",
+          "Positions": [
+            87,
+            84,
+            103,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Rodinei",
+          "ParticiantId": 400256,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 671,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 61,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Pavlović",
+          "ParticiantId": 1473580,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1174,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 62,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Fabián Ruiz",
+          "ParticiantId": 605654,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 650,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 63,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel",
+          "ParticiantId": 795179,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1002,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 63,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Salah",
+          "ParticiantId": 292462,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.26,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 687,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 65,
+          "ParticipantCountryCode": "EGY",
+          "TeamName": "Liverpool",
+          "Positions": [
+            83,
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Bastoni",
+          "ParticiantId": 805451,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 691,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 66,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Pierre-Emile Højbjerg",
+          "ParticiantId": 266523,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 658,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 66,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Marseille",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Uğurcan Çakir",
+          "ParticiantId": 603669,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.24,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1088,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 68,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Martinelli",
+          "ParticiantId": 1021586,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.24,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 698,
+          "MatchesPlayed": 14,
+          "StatValueCount": 13,
+          "Rank": 69,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            87,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Charles De Ketelaere",
+          "ParticiantId": 1095432,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.23,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 584,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 70,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Atalanta",
+          "Positions": [
+            84,
+            115,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Alvaro Carreras",
+          "ParticiantId": 1190025,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 797,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 71,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Håkon Evjen",
+          "ParticiantId": 632870,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1030,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 71,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Bukayo Saka",
+          "ParticiantId": 961995,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 687,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 71,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dean Huijsen",
+          "ParticiantId": 1367619,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 770,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 71,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Luis Suárez",
+          "ParticiantId": 792303,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 956,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 75,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Éderson",
+          "ParticiantId": 957203,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 724,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 76,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Yann Sommer",
+          "ParticiantId": 41618,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 77,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Internazionale",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Konrad Laimer",
+          "ParticiantId": 526827,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 854,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 78,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Bayern München",
+          "Positions": [
+            32,
+            38,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Leandro Trossard",
+          "ParticiantId": 318615,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 631,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 79,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Arsenal",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Josip Stanišić",
+          "ParticiantId": 950824,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 769,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 79,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Bayern München",
+          "Positions": [
+            32,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Guglielmo Vicario",
+          "ParticiantId": 538501,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.19,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 883,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 81,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jurriën Timber",
+          "ParticiantId": 942381,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 567,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 82,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Arsenal",
+          "Positions": [
+            32,
+            34,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "William Saliba",
+          "ParticiantId": 955406,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1110,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 83,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Abdellah Zoubir",
+          "ParticiantId": 425950,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 859,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 83,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Barrios",
+          "ParticiantId": 1338192,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 680,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 85,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Nico O'Reilly",
+          "ParticiantId": 1300526,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.17,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 671,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 86,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            38,
+            65,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Willian Pacho",
+          "ParticiantId": 1137670,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1560,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 87,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Fernández",
+          "ParticiantId": 1137705,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 748,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 88,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            85,
+            66,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Joey Veerman",
+          "ParticiantId": 792429,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 88,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Felix Nmecha",
+          "ParticiantId": 966019,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 753,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 90,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Matvey Safonov",
+          "ParticiantId": 800880,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.15,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1020,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 91,
+          "ParticipantCountryCode": "RUS",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Myles Lewis-Skelly",
+          "ParticiantId": 1406436,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 700,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 92,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            38,
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Igor Paixão",
+          "ParticiantId": 1265963,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 471,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 92,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Marseille",
+          "Positions": [
+            87,
+            68,
+            86,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Ruggeri",
+          "ParticiantId": 1051097,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1208,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 92,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kenan Yıldız",
+          "ParticiantId": 1412132,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 768,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 95,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Juventus",
+          "Positions": [
+            87,
+            86,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Martín Zubimendi",
+          "ParticiantId": 1031325,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.13,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 997,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 96,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            64,
+            75,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Piero Hincapié",
+          "ParticiantId": 1137667,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 694,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 97,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Arsenal",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Marco Carnesecchi",
+          "ParticiantId": 1013021,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.12,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 98,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahima Konaté",
+          "ParticiantId": 820140,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 871,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 99,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Liverpool",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Schick",
+          "ParticiantId": 540097,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.1,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 537,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 100,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Bradley Barcola",
+          "ParticiantId": 1297165,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 989,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 101,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            107,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Barella",
+          "ParticiantId": 541820,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 101,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            73,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Teun Koopmeiners",
+          "ParticiantId": 866516,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 744,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 101,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Juventus",
+          "Positions": [
+            37,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Ekitiké",
+          "ParticiantId": 1197030,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 838,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 101,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Liverpool",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Mac Allister",
+          "ParticiantId": 831489,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 853,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 105,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Liverpool",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Giuliano Simeone",
+          "ParticiantId": 1226147,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1192,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 105,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            72,
+            103,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Thuram",
+          "ParticiantId": 621562,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 577,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 107,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mario Pašalić",
+          "ParticiantId": 446266,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 604,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 108,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Atalanta",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dayot Upamecano",
+          "ParticiantId": 658554,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1013,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 109,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bayern München",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Hezze",
+          "ParticiantId": 1131349,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 699,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 110,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Gerard Martín",
+          "ParticiantId": 1598982,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 791,
+          "MatchesPlayed": 12,
+          "StatValueCount": 11,
+          "Rank": 110,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Pau Cubarsí",
+          "ParticiantId": 1532137,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 744,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 110,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Christos Tzolis",
+          "ParticiantId": 1157237,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 722,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 113,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            87,
+            86,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jules Koundé",
+          "ParticiantId": 705450,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 868,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 113,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Barcelona",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Gelson Martins",
+          "ParticiantId": 575225,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 723,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 113,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Cristian Romero",
+          "ParticiantId": 789066,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 694,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 116,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mario Lemina",
+          "ParticiantId": 421786,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 730,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 117,
+          "ParticipantCountryCode": "GAB",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            66,
+            34,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Teze",
+          "ParticiantId": 890263,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 673,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 118,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Monaco",
+          "Positions": [
+            33,
+            64,
+            62,
+            72,
+            32,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Moisés Caicedo",
+          "ParticiantId": 1137668,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.05,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 851,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 119,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Chelsea",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Waarts Høgh",
+          "ParticiantId": 934960,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.05,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 922,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 119,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Brunstad Fet",
+          "ParticiantId": 540975,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 895,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 121,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dávid Hancko",
+          "ParticiantId": 727897,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1111,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 122,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Julian Brandt",
+          "ParticiantId": 516846,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.03,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 449,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 123,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Anatoliy Trubin",
+          "ParticiantId": 1022350,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 124,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Benfica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Llorente",
+          "ParticiantId": 602563,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1151,
+          "MatchesPlayed": 14,
+          "StatValueCount": 13,
+          "Rank": 124,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            32,
+            74,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Gianluigi Donnarumma",
+          "ParticiantId": 618878,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 126,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Manchester City",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ademola Lookman",
+          "ParticiantId": 690516,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 930,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 126,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            106,
+            78,
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Sven Botman",
+          "ParticiantId": 956682,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 544,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 126,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Serhou Guirassy",
+          "ParticiantId": 448540,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 710,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 126,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jostein Gundersen",
+          "ParticiantId": 540929,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 658,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 130,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Folarin Balogun",
+          "ParticiantId": 982677,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 813,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 130,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Monaco",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Marquinhos",
+          "ParticiantId": 267365,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1320,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 132,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Richard Ríos",
+          "ParticiantId": 1174630,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 133,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Benfica",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Khéphren Thuram-Ulien",
+          "ParticiantId": 980793,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 593,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 134,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jarell Quansah",
+          "ParticiantId": 1107620,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 135,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "João Palhinha",
+          "ParticiantId": 524434,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 377,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 135,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            64,
+            33,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Mac Allister",
+          "ParticiantId": 728290,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 697,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 137,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Adem Zorgane",
+          "ParticiantId": 972406,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.98,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 673,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 138,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            64,
+            74,
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Pote",
+          "ParticiantId": 875133,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 139,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Georgiy Sudakov",
+          "ParticiantId": 1192398,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 651,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 140,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Benfica",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Guus Til",
+          "ParticiantId": 774947,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 583,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 140,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            85,
+            115,
+            73,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Christos Mouzakitis",
+          "ParticiantId": 1574198,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 678,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 142,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Gyökeres",
+          "ParticiantId": 664500,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 914,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 143,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Arsenal",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Inácio",
+          "ParticiantId": 1165710,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 956,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 144,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ole Blomberg",
+          "ParticiantId": 1086551,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 636,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 144,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            103,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Griezmann",
+          "ParticiantId": 184138,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 870,
+          "MatchesPlayed": 15,
+          "StatValueCount": 15,
+          "Rank": 144,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Micky van de Ven",
+          "ParticiantId": 1097466,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 147,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Davinson Sánchez",
+          "ParticiantId": 643533,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1020,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 148,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nathaniel Brown",
+          "ParticiantId": 1395447,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 682,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 148,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            38,
+            68,
+            78,
+            85,
+            32,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Petar Sučić",
+          "ParticiantId": 1382000,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 480,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 148,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Internazionale",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Leroy Sané",
+          "ParticiantId": 530859,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 723,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 151,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Caio Henrique",
+          "ParticiantId": 769525,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 765,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 151,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            38,
+            37,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Warren Zaïre-Emery",
+          "ParticiantId": 1367615,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1343,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 151,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            73,
+            32,
+            64,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Bernardo Silva",
+          "ParticiantId": 488139,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 551,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 151,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            64,
+            84,
+            82,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Panagiotis Retsos",
+          "ParticiantId": 719055,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 806,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 155,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Eberechi Eze",
+          "ParticiantId": 818975,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 772,
+          "MatchesPlayed": 13,
+          "StatValueCount": 13,
+          "Rank": 156,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            85,
+            87,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Amar Dedić",
+          "ParticiantId": 958010,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 804,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 156,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Benfica",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Noa Lang",
+          "ParticiantId": 837341,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 501,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 156,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Oscar Gloukh",
+          "ParticiantId": 1337911,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 159,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Ajax",
+          "Positions": [
+            85,
+            107,
+            77,
+            103,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Joelinton",
+          "ParticiantId": 535936,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 160,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            77,
+            87,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Senny Mayulu",
+          "ParticiantId": 1574189,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 444,
+          "MatchesPlayed": 11,
+          "StatValueCount": 8,
+          "Rank": 160,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            73,
+            105,
+            32,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Chiquinho",
+          "ParticiantId": 566644,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 563,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 160,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            85,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dani Olmo",
+          "ParticiantId": 614834,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 163,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            85,
+            73,
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Geny Catamo",
+          "ParticiantId": 1088753,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 772,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 164,
+          "ParticipantCountryCode": "MOZ",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Randal Kolo Muani",
+          "ParticiantId": 823825,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 449,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 165,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            115,
+            83,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jerdy Schouten",
+          "ParticiantId": 772104,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 675,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 165,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            34,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Burn",
+          "ParticiantId": 188058,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 965,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 165,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Andrea Cambiaso",
+          "ParticiantId": 1078846,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 642,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 168,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Juventus",
+          "Positions": [
+            68,
+            38,
+            78,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Edmond Tapsoba",
+          "ParticiantId": 789914,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 811,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 168,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Abdülkerim Bardakci",
+          "ParticiantId": 291399,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 968,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 170,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Coulibaly",
+          "ParticiantId": 1524548,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 516,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 170,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            64,
+            83,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Pêpê",
+          "ParticiantId": 672721,
+          "TeamId": 2137,
+          "TeamColor": "#1fb3e2",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 697,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 172,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Pafos",
+          "Positions": [
+            66,
+            75,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Camilo Durán",
+          "ParticiantId": 1576597,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.88,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 755,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 173,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Aursnes",
+          "ParticiantId": 310768,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 863,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 174,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Benfica",
+          "Positions": [
+            66,
+            32,
+            83,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Francesco Pio Esposito",
+          "ParticiantId": 1367618,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 518,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 174,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Barış Alper Yılmaz",
+          "ParticiantId": 890232,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 989,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 174,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            87,
+            115,
+            83,
+            78,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Pépé",
+          "ParticiantId": 575735,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 177,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Villarreal",
+          "Positions": [
+            72,
+            104,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Iván Fresneda",
+          "ParticiantId": 1325998,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 920,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 178,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tomás Araújo",
+          "ParticiantId": 1187283,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 656,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 178,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Benfica",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Koke",
+          "ParticiantId": 184533,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 947,
+          "MatchesPlayed": 16,
+          "StatValueCount": 15,
+          "Rank": 178,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Neuer",
+          "ParticiantId": 27299,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 181,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Provod",
+          "ParticiantId": 791682,
+          "TeamId": 7787,
+          "TeamColor": "#D82333",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 701,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 181,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Slavia Prague",
+          "Positions": [
+            84,
+            103,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Ben White",
+          "ParticiantId": 776151,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 11,
+          "StatValueCount": 9,
+          "Rank": 183,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Stanković",
+          "ParticiantId": 1410437,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 876,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 184,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Larsson",
+          "ParticiantId": 560584,
+          "TeamId": 8391,
+          "TeamColor": "#375196",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 185,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "FC København",
+          "Positions": [
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Maza",
+          "ParticiantId": 1457626,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 788,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 185,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            85,
+            64,
+            77,
+            83,
+            105,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik André Bjørkan",
+          "ParticiantId": 630228,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 912,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 185,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Murphy",
+          "ParticiantId": 521148,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 369,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 185,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            103,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Jobe Bellingham",
+          "ParticiantId": 1287373,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 644,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 185,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Davide Zappacosta",
+          "ParticiantId": 244811,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 746,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 190,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            62,
+            68,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tijjani Reijnders",
+          "ParticiantId": 868344,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 579,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 191,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Manchester City",
+          "Positions": [
+            77,
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Tah",
+          "ParticiantId": 469700,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1120,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 191,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Rui Silva",
+          "ParticiantId": 361717,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1020,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 193,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Julian Ryerson",
+          "ParticiantId": 659272,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 193,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            62,
+            32,
+            71,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Conceição",
+          "ParticiantId": 1185336,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 500,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 193,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Juventus",
+          "Positions": [
+            83,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Marcos López",
+          "ParticiantId": 823209,
+          "TeamId": 8391,
+          "TeamColor": "#375196",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 657,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 193,
+          "ParticipantCountryCode": "PER",
+          "TeamName": "FC København",
+          "Positions": [
+            38,
+            78,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Johnny Cardoso",
+          "ParticiantId": 1173678,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 197,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Pierre Kalulu",
+          "ParticiantId": 1131217,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 919,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 197,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Malick Thiaw",
+          "ParticiantId": 1137407,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 927,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 197,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Joan García",
+          "ParticiantId": 1167220,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 802,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 197,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jan Oblak",
+          "ParticiantId": 177126,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1080,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 201,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Sørloth",
+          "ParticiantId": 440330,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.82,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 617,
+          "MatchesPlayed": 14,
+          "StatValueCount": 14,
+          "Rank": 202,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Ferrán Torres",
+          "ParticiantId": 881771,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 203,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            115,
+            103,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Cody Gakpo",
+          "ParticiantId": 806552,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 203,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            87,
+            115,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Karim Adeyemi",
+          "ParticiantId": 959594,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 205,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            84,
+            103,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Neto",
+          "ParticiantId": 843040,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 614,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 206,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Chelsea",
+          "Positions": [
+            83,
+            87,
+            62,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Joaquin Seys",
+          "ParticiantId": 1489449,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 700,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 206,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Eduardo Camavinga",
+          "ParticiantId": 1015185,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 478,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 206,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            66,
+            76,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Piotr Zieliński",
+          "ParticiantId": 362212,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 633,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 206,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Internazionale",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Sara",
+          "ParticiantId": 902710,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 737,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 210,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Sjøvold",
+          "ParticiantId": 1281021,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1110,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 211,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Robert Sánchez",
+          "ParticiantId": 789571,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 675,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 211,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Chelsea",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Eric García",
+          "ParticiantId": 940573,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 780,
+          "MatchesPlayed": 11,
+          "StatValueCount": 10,
+          "Rank": 211,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            36,
+            32,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Valeri Gromyko",
+          "ParticiantId": 841384,
+          "TeamId": 8037,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 539,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 211,
+          "ParticipantCountryCode": "BLR",
+          "TeamName": "Kairat",
+          "Positions": [
+            73,
+            87,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Köhn",
+          "ParticiantId": 872934,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 215,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Monaco",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Unai Simón",
+          "ParticiantId": 660625,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 216,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Diakhon",
+          "ParticiantId": 1484998,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 341,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 217,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Berat Djimsiti",
+          "ParticiantId": 260964,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 702,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 217,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Atalanta",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás Otamendi",
+          "ParticiantId": 174321,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 217,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Benfica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ramy Bensebaini",
+          "ParticiantId": 559065,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 774,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 217,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            37,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Man",
+          "ParticiantId": 805767,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 458,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 221,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "PSV",
+          "Positions": [
+            83,
+            72,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Michal Sadílek",
+          "ParticiantId": 806551,
+          "TeamId": 7787,
+          "TeamColor": "#D82333",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 599,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 222,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Slavia Prague",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Derrick Luckassen",
+          "ParticiantId": 562801,
+          "TeamId": 2137,
+          "TeamColor": "#1fb3e2",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 223,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Pafos",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Tzolakis",
+          "ParticiantId": 1072068,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 224,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Garnacho",
+          "ParticiantId": 1203665,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 330,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 225,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Tresoldi",
+          "ParticiantId": 1334552,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 550,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 225,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marc Pubill",
+          "ParticiantId": 1323897,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 823,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 227,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Robert Lewandowski",
+          "ParticiantId": 93447,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 227,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Barcelona",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Svensson",
+          "ParticiantId": 1209228,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 713,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 227,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            68,
+            62,
+            79,
+            38,
+            37,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Leandro Andrade",
+          "ParticiantId": 1171780,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 578,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 230,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Robert Andrich",
+          "ParticiantId": 411851,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 744,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 230,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            35,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Mehdi Taremi",
+          "ParticiantId": 619506,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 485,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 230,
+          "ParticipantCountryCode": "IRN",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Gerónimo Rulli",
+          "ParticiantId": 245555,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 230,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Marseille",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Stepán Chaloupek",
+          "ParticiantId": 1288146,
+          "TeamId": 7787,
+          "TeamColor": "#D82333",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 230,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Slavia Prague",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Elanga",
+          "ParticiantId": 1050166,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 478,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 230,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Odin Lurås Bjørtuft",
+          "ParticiantId": 917774,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1110,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 236,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Leandro Barreiro",
+          "ParticiantId": 930065,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 236,
+          "ParticipantCountryCode": "LUX",
+          "TeamName": "Benfica",
+          "Positions": [
+            64,
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Dahl",
+          "ParticiantId": 1085674,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 789,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 238,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Benfica",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Marten de Roon",
+          "ParticiantId": 198559,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 899,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 239,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Atalanta",
+          "Positions": [
+            64,
+            37,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Brahim Díaz",
+          "ParticiantId": 750027,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 413,
+          "MatchesPlayed": 12,
+          "StatValueCount": 10,
+          "Rank": 239,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            83,
+            104,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Ortega",
+          "ParticiantId": 902969,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 855,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 241,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Hall",
+          "ParticiantId": 1197655,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 648,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 242,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Akanji",
+          "ParticiantId": 521318,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 707,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 243,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Internazionale",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Hidemasa Morita",
+          "ParticiantId": 915102,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 466,
+          "MatchesPlayed": 11,
+          "StatValueCount": 9,
+          "Rank": 243,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Djed Spence",
+          "ParticiantId": 894803,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 706,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 245,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            38,
+            32,
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Beier",
+          "ParticiantId": 1047667,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 529,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 246,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            84,
+            68,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ernest Poku",
+          "ParticiantId": 1251666,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 770,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 246,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            86,
+            107,
+            62,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Torreira",
+          "ParticiantId": 592909,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 989,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 246,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Roland Sallai",
+          "ParticiantId": 583601,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 246,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            32,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ansgar Knauff",
+          "ParticiantId": 1175708,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 250,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            115,
+            103,
+            86,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lloyd Kelly",
+          "ParticiantId": 819215,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 769,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 250,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Juventus",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Pirola",
+          "ParticiantId": 1050165,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 735,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 250,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Nick Woltemade",
+          "ParticiantId": 1106563,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 653,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 253,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Pape Sarr",
+          "ParticiantId": 1107280,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 643,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 253,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            66,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ayoub El Kaabi",
+          "ParticiantId": 884382,
+          "TeamId": 8638,
+          "TeamColor": "#DC0D15",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 723,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 255,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Olympiakos",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kyriani Sabbe",
+          "ParticiantId": 1227590,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 671,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 256,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Kamiel van de Perre",
+          "ParticiantId": 1417095,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 256,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Odilon Kossounou",
+          "ParticiantId": 1014496,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 812,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 258,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Atalanta",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Malik Tillman",
+          "ParticiantId": 1126058,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 259,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            84,
+            66,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Vanderson",
+          "ParticiantId": 1207992,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 260,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Cristhian Mosquera",
+          "ParticiantId": 1298907,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 261,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Scamacca",
+          "ParticiantId": 721089,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 502,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 261,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Diomande",
+          "ParticiantId": 1425182,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 614,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 261,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ismail Jakobs",
+          "ParticiantId": 906945,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 871,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 264,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Robin Le Normand",
+          "ParticiantId": 609516,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 806,
+          "MatchesPlayed": 14,
+          "StatValueCount": 12,
+          "Rank": 264,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gregor Kobel",
+          "ParticiantId": 764018,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 266,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Vangelis Pavlidis",
+          "ParticiantId": 637749,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 811,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 267,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Benfica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Mika Godts",
+          "ParticiantId": 1396372,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 584,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 268,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Ajax",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Yunus Akgün",
+          "ParticiantId": 845991,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 269,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            85,
+            83,
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Christian Burgess",
+          "ParticiantId": 332300,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 269,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jorginho",
+          "ParticiantId": 1209942,
+          "TeamId": 8037,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 590,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 271,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kairat",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Curtis Jones",
+          "ParticiantId": 933768,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 271,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Liverpool",
+          "Positions": [
+            66,
+            32,
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Christian Kofane",
+          "ParticiantId": 1705081,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 600,
+          "MatchesPlayed": 11,
+          "StatValueCount": 9,
+          "Rank": 273,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Brandon Mechele",
+          "ParticiantId": 445873,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 898,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 273,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Raúl Asencio",
+          "ParticiantId": 1580528,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 273,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Vlad Dragomir",
+          "ParticiantId": 759567,
+          "TeamId": 2137,
+          "TeamColor": "#1fb3e2",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 668,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 276,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Pafos",
+          "Positions": [
+            85,
+            77,
+            64,
+            115,
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Molina",
+          "ParticiantId": 726345,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 696,
+          "MatchesPlayed": 13,
+          "StatValueCount": 12,
+          "Rank": 276,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            32,
+            51,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Marc Cucurella",
+          "ParticiantId": 873289,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 721,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 276,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Chelsea",
+          "Positions": [
+            38,
+            79,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Youri Baas",
+          "ParticiantId": 1214036,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 685,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 276,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Elvin Cəfərquliyev",
+          "ParticiantId": 1105448,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 820,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 280,
+          "ParticipantCountryCode": "AZE",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Kang-In Lee",
+          "ParticiantId": 940976,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 263,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 281,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            104,
+            103,
+            84,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Kjell Scherpen",
+          "ParticiantId": 796398,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 281,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ronald Araujo",
+          "ParticiantId": 921253,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 442,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 283,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Barcelona",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Waldemar Anton",
+          "ParticiantId": 664970,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 747,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 284,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Matěj Kovár",
+          "ParticiantId": 1077903,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 285,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "PSV",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Bernasconi",
+          "ParticiantId": 1191093,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 847,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 285,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Erkin Tapalov",
+          "ParticiantId": 988184,
+          "TeamId": 8037,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 516,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 285,
+          "ParticipantCountryCode": "KAZ",
+          "TeamName": "Kairat",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandr Mrynskiy",
+          "ParticiantId": 1780058,
+          "TeamId": 8037,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 711,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 288,
+          "ParticipantCountryCode": "KAZ",
+          "TeamName": "Kairat",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "João Simões",
+          "ParticiantId": 1663855,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 654,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 289,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Youri Regeer",
+          "ParticiantId": 1111980,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 289,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            75,
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Farès Chaïbi",
+          "ParticiantId": 1345875,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 498,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 291,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            64,
+            87,
+            77,
+            85,
+            78,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Egor Sorokin",
+          "ParticiantId": 581546,
+          "TeamId": 8037,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 291,
+          "ParticipantCountryCode": "RUS",
+          "TeamName": "Kairat",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Medina",
+          "ParticiantId": 955800,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 871,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 291,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "João Pedro",
+          "ParticiantId": 1021382,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 294,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Chelsea",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Santi Comesaña",
+          "ParticiantId": 671865,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 604,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 295,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            74,
+            72,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jeremie Frimpong",
+          "ParticiantId": 966018,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 464,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 296,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Marko Janković",
+          "ParticiantId": 577904,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 730,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 296,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Theate",
+          "ParticiantId": 1173250,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 298,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Davy Klaassen",
+          "ParticiantId": 298448,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 562,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 299,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Romeo Vermant",
+          "ParticiantId": 1178453,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 327,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 299,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Joel Ordóñez",
+          "ParticiantId": 1354085,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 872,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 301,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Raoul Bellanova",
+          "ParticiantId": 902651,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 479,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 301,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ellyes Skhiri",
+          "ParticiantId": 574642,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 365,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 303,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            66,
+            75,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás González",
+          "ParticiantId": 841672,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 11,
+          "StatValueCount": 10,
+          "Rank": 303,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            78,
+            85,
+            68,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Ramos",
+          "ParticiantId": 940087,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 202,
+          "MatchesPlayed": 11,
+          "StatValueCount": 9,
+          "Rank": 303,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Silva",
+          "ParticiantId": 960415,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 872,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 306,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Isak Hien",
+          "ParticiantId": 939780,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 710,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 307,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Atalanta",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Auklend",
+          "ParticiantId": 1160076,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 10,
+          "StatValueCount": 9,
+          "Rank": 307,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            73,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Krstović",
+          "ParticiantId": 833638,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 576,
+          "MatchesPlayed": 12,
+          "StatValueCount": 12,
+          "Rank": 309,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Atalanta",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Bicalho",
+          "ParticiantId": 994445,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 863,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 309,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Pereira",
+          "ParticiantId": 1288187,
+          "TeamId": 8391,
+          "TeamColor": "#375196",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 702,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 309,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "FC København",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mateusz Kochalski",
+          "ParticiantId": 1154332,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 6.33,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 312,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Hernández",
+          "ParticiantId": 504606,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 235,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 313,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "David Zima",
+          "ParticiantId": 1085401,
+          "TeamId": 7787,
+          "TeamColor": "#D82333",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 690,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 314,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Slavia Prague",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Álex Baena",
+          "ParticiantId": 942372,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 455,
+          "MatchesPlayed": 13,
+          "StatValueCount": 11,
+          "Rank": 315,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            78,
+            87,
+            86,
+            106,
+            76,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Arthur",
+          "ParticiantId": 1353457,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 391,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 316,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Trevoh Chalobah",
+          "ParticiantId": 793907,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 567,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 317,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Renato Veiga",
+          "ParticiantId": 1343750,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 318,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Villarreal",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Thilo Kehrer",
+          "ParticiantId": 604088,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 688,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 319,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Monaco",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Helmersen",
+          "ParticiantId": 615292,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 188,
+          "MatchesPlayed": 12,
+          "StatValueCount": 10,
+          "Rank": 320,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Robin Koch",
+          "ParticiantId": 628201,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 710,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 321,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Mauro Icardi",
+          "ParticiantId": 282770,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 240,
+          "MatchesPlayed": 10,
+          "StatValueCount": 8,
+          "Rank": 322,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Kotarski",
+          "ParticiantId": 873557,
+          "TeamId": 8391,
+          "TeamColor": "#375196",
+          "StatValue": 5.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 323,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "FC København",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Bəhlul Mustafazadə",
+          "ParticiantId": 919330,
+          "TeamId": 7981,
+          "TeamColor": "#101010",
+          "StatValue": 5.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 742,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 324,
+          "ParticipantCountryCode": "AZE",
+          "TeamName": "Qarabağ FK",
+          "Positions": [
+            34
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Champions League"
+}

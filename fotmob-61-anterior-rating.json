@@ -1,0 +1,4624 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Luis Suárez",
+          "ParticiantId": 792303,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.88,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2698,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 1,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Morten Hjulmand",
+          "ParticiantId": 950199,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.65,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2325,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 2,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Trincão",
+          "ParticiantId": 732282,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.65,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2851,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 2,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            85,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Pote",
+          "ParticiantId": 875133,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.62,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 1994,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 4,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Horta",
+          "ParticiantId": 432591,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.61,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2149,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 5,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            107,
+            85,
+            106,
+            103,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jan Bednarek",
+          "ParticiantId": 490868,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.54,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2680,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 6,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "FC Porto",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Inácio",
+          "ParticiantId": 1165710,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2506,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 7,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Zalazar",
+          "ParticiantId": 1070776,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.49,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 1944,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 8,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            103,
+            84,
+            77,
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás Otamendi",
+          "ParticiantId": 174321,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.45,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2605,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 9,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Benfica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Aursnes",
+          "ParticiantId": 310768,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2294,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 10,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Benfica",
+          "Positions": [
+            66,
+            83,
+            72,
+            32,
+            87,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Kiwior",
+          "ParticiantId": 1021834,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2217,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 11,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "FC Porto",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Vangelis Pavlidis",
+          "ParticiantId": 637749,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.41,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2667,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 12,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Benfica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Maxi Araújo",
+          "ParticiantId": 1031656,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.4,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2215,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 13,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            38,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Alberto Costa",
+          "ParticiantId": 1387439,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2227,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 14,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "João Carvalho",
+          "ParticiantId": 603808,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2798,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 15,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            107,
+            103,
+            78,
+            77,
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Aghehowa",
+          "ParticiantId": 1414859,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.35,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1414,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 16,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "FC Porto",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Dahl",
+          "ParticiantId": 1085674,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2862,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 17,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Benfica",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Richard Ríos",
+          "ParticiantId": 1174630,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.34,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2279,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 18,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Benfica",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "André Luiz",
+          "ParticiantId": 1284944,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 7.33,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1500,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 19,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Marios Vrousai",
+          "ParticiantId": 914964,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 7.33,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2531,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 19,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            72,
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Geny Catamo",
+          "ParticiantId": 1088753,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.32,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1953,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 21,
+          "ParticipantCountryCode": "MOZ",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Schjelderup",
+          "ParticiantId": 1228558,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.32,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1733,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 22,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Benfica",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Costa",
+          "ParticiantId": 795630,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.32,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2907,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 23,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Victor Froholdt",
+          "ParticiantId": 1436856,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.3,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2875,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 24,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FC Porto",
+          "Positions": [
+            73,
+            84,
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Andrew",
+          "ParticiantId": 958283,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 7.29,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 1496,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 25,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Prestianni",
+          "ParticiantId": 1363660,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1544,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 26,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Benfica",
+          "Positions": [
+            83,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Hornícek",
+          "ParticiantId": 1186978,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.28,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2960,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 27,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Luís Esteves",
+          "ParticiantId": 1222175,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2770,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 28,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            85,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Rui Silva",
+          "ParticiantId": 361717,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 29,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Murilo",
+          "ParticiantId": 586719,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 7.26,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2589,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 30,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Pinheiro",
+          "ParticiantId": 1080508,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.23,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2571,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 31,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lazar Carevic",
+          "ParticiantId": 727379,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.22,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 32,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mathias De Amorim",
+          "ParticiantId": 1527142,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.22,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2468,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 33,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Kaique Pereira",
+          "ParticiantId": 1320169,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 7.2,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2520,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 34,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "António Silva",
+          "ParticiantId": 1292092,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1858,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 35,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Benfica",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Pepê",
+          "ParticiantId": 850356,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.2,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2241,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 36,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "FC Porto",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Holsgrove",
+          "ParticiantId": 877568,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2834,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 37,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            76,
+            65,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Barrenechea",
+          "ParticiantId": 1352923,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.19,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1798,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 38,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Benfica",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Georgios Vagiannidis",
+          "ParticiantId": 1119687,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1277,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 39,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Serginho",
+          "ParticiantId": 1355837,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 7.17,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2580,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 40,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Dinis Pinto",
+          "ParticiantId": 1325525,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 7.16,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2013,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 41,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tomás Araújo",
+          "ParticiantId": 1187283,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1684,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 42,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Benfica",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Justin De Haas",
+          "ParticiantId": 969711,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.16,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 43,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sidny Lopes Cabral",
+          "ParticiantId": 1441786,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.16,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1680,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 43,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Benfica",
+          "Positions": [
+            38,
+            72,
+            51,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Sorriso",
+          "ParticiantId": 1257305,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.16,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2799,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 45,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gil Dias",
+          "ParticiantId": 566467,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.15,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2506,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 46,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Georgiy Sudakov",
+          "ParticiantId": 1192398,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1421,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 47,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Benfica",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Chuchu Ramírez",
+          "ParticiantId": 1075457,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 7.14,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2892,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 48,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Pau Víctor",
+          "ParticiantId": 1159237,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.13,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2269,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 49,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            105,
+            103,
+            107,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alan Varela",
+          "ParticiantId": 1186684,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2320,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 50,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "FC Porto",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Jovane Cabral",
+          "ParticiantId": 785716,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 7.12,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1678,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 51,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Estrela",
+          "Positions": [
+            107,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Travassos",
+          "ParticiantId": 1521234,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 7.12,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2437,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 52,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            83,
+            32,
+            72,
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Sá",
+          "ParticiantId": 1395482,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2711,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 53,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Amar Dedic",
+          "ParticiantId": 958010,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1903,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 53,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Benfica",
+          "Positions": [
+            32,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Léo Realpe",
+          "ParticiantId": 1031759,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1697,
+          "MatchesPlayed": 24,
+          "StatValueCount": 20,
+          "Rank": 55,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gustaf Lagerbielke",
+          "ParticiantId": 919848,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2391,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 56,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahima Ba",
+          "ParticiantId": 1609327,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1655,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 57,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Leonardo Lelo",
+          "ParticiantId": 1281236,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.1,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1838,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 58,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            78,
+            38,
+            68,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Santi García",
+          "ParticiantId": 1470001,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 7.1,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2648,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 59,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Anatoliy Trubin",
+          "ParticiantId": 1022350,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 7.1,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 59,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Benfica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Zaidu Sanusi",
+          "ParticiantId": 1079056,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 995,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 61,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "FC Porto",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Veiga",
+          "ParticiantId": 1116734,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.09,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1623,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 62,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "FC Porto",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Víctor Gómez",
+          "ParticiantId": 927647,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2479,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 63,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            72,
+            32,
+            62,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Ghislain Konan",
+          "ParticiantId": 740997,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2661,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 63,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lincoln",
+          "ParticiantId": 637589,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 7.09,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2373,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 65,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            103,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Amorim",
+          "ParticiantId": 1469120,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1630,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 66,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Hidemasa Morita",
+          "ParticiantId": 915102,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1834,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 66,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Liziero",
+          "ParticiantId": 902693,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 7.07,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2340,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 68,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Zé Vítor",
+          "ParticiantId": 1256692,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2673,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 69,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Yanis Begraoui",
+          "ParticiantId": 933639,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 7.07,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2726,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 70,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            105,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jérémy Livolant",
+          "ParticiantId": 697190,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 7.06,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2776,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 71,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            103,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Moura",
+          "ParticiantId": 919374,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 7.03,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1320,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 72,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Abraham Marcus",
+          "ParticiantId": 1187131,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 7.03,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2573,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 73,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Estrela",
+          "Positions": [
+            103,
+            74,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Gaizka Larrazabal",
+          "ParticiantId": 802329,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2854,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 74,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            72,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Iván Fresneda",
+          "ParticiantId": 1325998,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1604,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 75,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "João Moutinho",
+          "ParticiantId": 37549,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2194,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 75,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "André Ferreira",
+          "ParticiantId": 540415,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 77,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Leandro Barreiro",
+          "ParticiantId": 930065,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1748,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 78,
+          "ParticipantCountryCode": "LUX",
+          "TeamName": "Benfica",
+          "Positions": [
+            64,
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Paulinho Bóia",
+          "ParticiantId": 882631,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2825,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 79,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            107,
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Mario Dorgeles",
+          "ParticiantId": 1395939,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 79,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            72,
+            103,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Rosario",
+          "ParticiantId": 664226,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1365,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 81,
+          "ParticipantCountryCode": "DOM",
+          "TeamName": "FC Porto",
+          "Positions": [
+            75,
+            34,
+            32,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Geovany Quenda",
+          "ParticiantId": 1530314,
+          "TeamId": 9768,
+          "TeamColor": "#106840",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 873,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 81,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Lisbon",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Martim Fernandes",
+          "ParticiantId": 1404949,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1119,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 83,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Figueiredo",
+          "ParticiantId": 1130711,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.97,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1886,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 84,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            103,
+            107,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tommie van de Looi",
+          "ParticiantId": 869364,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2753,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 85,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Maranhão",
+          "ParticiantId": 1174640,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2470,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 86,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Tondela",
+          "Positions": [
+            83,
+            72,
+            87,
+            78,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Esgaio",
+          "ParticiantId": 816222,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2462,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 86,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Arouca",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Bebeto",
+          "ParticiantId": 833979,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1898,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 88,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Tondela",
+          "Positions": [
+            32,
+            33,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Óscar Rivas",
+          "ParticiantId": 1323629,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1620,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 89,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ferro",
+          "ParticiantId": 722778,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1633,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 90,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Espen van Ee",
+          "ParticiantId": 1526602,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1879,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 91,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Arouca",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Nabili Touaizi",
+          "ParticiantId": 940443,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2816,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 92,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Alverca",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Bernardo Fontes",
+          "ParticiantId": 1362439,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.95,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 93,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Tondela",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Naïs Djouahra",
+          "ParticiantId": 770328,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2743,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 94,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Arouca",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Clayton",
+          "ParticiantId": 1290479,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.93,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1600,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 95,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Rafa Soares",
+          "ParticiantId": 289254,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1708,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 96,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rafik Guitane",
+          "ParticiantId": 814869,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1836,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 96,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "David Sousa",
+          "ParticiantId": 1174305,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2265,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 98,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Borja Sainz",
+          "ParticiantId": 1083204,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1603,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 99,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "FC Porto",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Chissumba",
+          "ParticiantId": 1524671,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1510,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 100,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Alverca",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Alan",
+          "ParticiantId": 892751,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2703,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 101,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Moreirense",
+          "Positions": [
+            77,
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Florian Grillitsch",
+          "ParticiantId": 617044,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1129,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 102,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Beni",
+          "ParticiantId": 1372284,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2246,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 103,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            64,
+            76,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nikolaos Athanasiou",
+          "ParticiantId": 1225435,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1313,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 104,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "José Gomes",
+          "ParticiantId": 575065,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.9,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2313,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 105,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Chiquinho",
+          "ParticiantId": 1127007,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.9,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1492,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 106,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Alverca",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Abascal",
+          "ParticiantId": 690223,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2272,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 107,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Batista",
+          "ParticiantId": 846023,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.88,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 108,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alan Núñez",
+          "ParticiantId": 1382059,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1673,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 109,
+          "ParticipantCountryCode": "PAR",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Diego Rodrigues",
+          "ParticiantId": 1524670,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 848,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 109,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            76,
+            86,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Kévin Boma",
+          "ParticiantId": 1187644,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1722,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 109,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Léo Santos",
+          "ParticiantId": 756255,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2719,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 112,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Maracás",
+          "ParticiantId": 938392,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.87,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2594,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 113,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Moreirense",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Frederico Venâncio",
+          "ParticiantId": 361379,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1731,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 114,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Bright Arrey-Mbi",
+          "ParticiantId": 1125232,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1829,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 115,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Zé Carlos",
+          "ParticiantId": 1132158,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2466,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 115,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ricard Sánchez",
+          "ParticiantId": 1098366,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1982,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 117,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            32,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Brandon Aguilera",
+          "ParticiantId": 1021336,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1377,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 118,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jean-Baptiste Gorby",
+          "ParticiantId": 1292369,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1714,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 119,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            74,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Buatu",
+          "ParticiantId": 201102,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2745,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 119,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Nogueira",
+          "ParticiantId": 1413628,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1344,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 121,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Bernardo Schappo",
+          "ParticiantId": 1362306,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2054,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 121,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Felix Bacher",
+          "ParticiantId": 951498,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 123,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Lima",
+          "ParticiantId": 1459257,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.83,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1896,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 124,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "AVS",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Samu",
+          "ParticiantId": 667952,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.83,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2038,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 124,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Franjo Ivanovic",
+          "ParticiantId": 1406419,
+          "TeamId": 9772,
+          "TeamColor": "#C00001",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 868,
+          "MatchesPlayed": 25,
+          "StatValueCount": 19,
+          "Rank": 126,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Benfica",
+          "Positions": [
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Silva",
+          "ParticiantId": 1393510,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1466,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 127,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            115,
+            107,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Silva",
+          "ParticiantId": 1173684,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.82,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2245,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 128,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            107,
+            105,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Bezerra",
+          "ParticiantId": 1693611,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1265,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 129,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Kaiky Naves",
+          "ParticiantId": 1320170,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2835,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 130,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Paulo Victor",
+          "ParticiantId": 1269652,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1357,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 131,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            79,
+            38,
+            59,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Mora",
+          "ParticiantId": 1525065,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1179,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 131,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            77,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Dias",
+          "ParticiantId": 1380814,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2440,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 133,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Sequeira",
+          "ParticiantId": 1237856,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2528,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 134,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Cezary Miszta",
+          "ParticiantId": 943059,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1890,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 135,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Cícero",
+          "ParticiantId": 812637,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1203,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 136,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Tondela",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "William Gomes",
+          "ParticiantId": 1580427,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1168,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 137,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "FC Porto",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jose Fontán",
+          "ParticiantId": 1160390,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2545,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 138,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arouca",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kiko",
+          "ParticiantId": 1525010,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1850,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 139,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Maga",
+          "ParticiantId": 1282445,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1576,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 140,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Otávio",
+          "ParticiantId": 1738366,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1356,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 140,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Taichi Fukui",
+          "ParticiantId": 1269404,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.77,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2529,
+          "MatchesPlayed": 33,
+          "StatValueCount": 31,
+          "Rank": 142,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Arouca",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Ferreira",
+          "ParticiantId": 824642,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1969,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 143,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            75,
+            64,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "João Mendes",
+          "ParticiantId": 1285528,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2441,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 143,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Facundo Cáseres",
+          "ParticiantId": 1200721,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2199,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 145,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Luan Patrick",
+          "ParticiantId": 1118195,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2685,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 146,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Mendonça",
+          "ParticiantId": 1437425,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1401,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 146,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "AVS",
+          "Positions": [
+            73,
+            66,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Makan Aiko",
+          "ParticiantId": 1233935,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1058,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 146,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Tondela",
+          "Positions": [
+            87,
+            105,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Bondo",
+          "ParticiantId": 1230671,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1179,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 146,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Conceição",
+          "ParticiantId": 980264,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1431,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 146,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tondela",
+          "Positions": [
+            38,
+            59,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Renan Ribeiro",
+          "ParticiantId": 181898,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.75,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 151,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Soares",
+          "ParticiantId": 1077665,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2080,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 152,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            32,
+            71,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Charles",
+          "ParticiantId": 267361,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.74,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1710,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 153,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Rivas",
+          "ParticiantId": 1085059,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1527,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 154,
+          "ParticipantCountryCode": "PAR",
+          "TeamName": "AVS",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tamás Nikitscher",
+          "ParticiantId": 1204394,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1375,
+          "MatchesPlayed": 27,
+          "StatValueCount": 22,
+          "Rank": 154,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Brayan Medina",
+          "ParticiantId": 1466127,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2199,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 156,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Tondela",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Manso",
+          "ParticiantId": 1525157,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.73,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1536,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 157,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tondela",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Vinícius",
+          "ParticiantId": 1044194,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1540,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 158,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            103,
+            104,
+            107,
+            84,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Noah Saviolo",
+          "ParticiantId": 1793475,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.72,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1959,
+          "MatchesPlayed": 30,
+          "StatValueCount": 28,
+          "Rank": 159,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Sousa",
+          "ParticiantId": 1701117,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1163,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 160,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Rodri",
+          "ParticiantId": 1395975,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1496,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 161,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Moreirense",
+          "Positions": [
+            73,
+            64,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Tony Strata",
+          "ParticiantId": 1463449,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1404,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 161,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sidney Lima",
+          "ParticiantId": 1285540,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2933,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 161,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Antef Tsoungui",
+          "ParticiantId": 1089750,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1372,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 164,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Abdu Conté",
+          "ParticiantId": 819871,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1429,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 164,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Joel Robles",
+          "ParticiantId": 186054,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 166,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Andreas-Richardos Ntoi",
+          "ParticiantId": 1403350,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2346,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 167,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            74,
+            66,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "José Tavares",
+          "ParticiantId": 1759728,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 955,
+          "MatchesPlayed": 25,
+          "StatValueCount": 19,
+          "Rank": 168,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Adriano",
+          "ParticiantId": 1071102,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1447,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 168,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Barbero",
+          "ParticiantId": 1027396,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.68,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1904,
+          "MatchesPlayed": 31,
+          "StatValueCount": 28,
+          "Rank": 170,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arouca",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Gilberto Batista",
+          "ParticiantId": 1413843,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1933,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 171,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Moreirense",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Brabec",
+          "ParticiantId": 173899,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2150,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 172,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jandro Orellana",
+          "ParticiantId": 1070191,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1315,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 172,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            74,
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Hyun-Ju Lee",
+          "ParticiantId": 1328820,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2023,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 174,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Arouca",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Renato Nhaga",
+          "ParticiantId": 1741323,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1170,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 175,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            74,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Bas Kuipers",
+          "ParticiantId": 467480,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1352,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 175,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Arouca",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kiko Bondoso",
+          "ParticiantId": 1150871,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2012,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 177,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            87,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Marvin Gilbert",
+          "ParticiantId": 1242634,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2432,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 177,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Alfonso Trezza",
+          "ParticiantId": 1139353,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.64,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2329,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 179,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Arouca",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nelson Abbey",
+          "ParticiantId": 1118906,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2090,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 180,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gabri Martínez",
+          "ParticiantId": 1287941,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1321,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 180,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            78,
+            107,
+            68,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Joelson Fernandes",
+          "ParticiantId": 1160747,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1012,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 180,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Kikas",
+          "ParticiantId": 957181,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1212,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 183,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estrela",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "José Fonte",
+          "ParticiantId": 26552,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1438,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 184,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jefferson Encada",
+          "ParticiantId": 824641,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1545,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 185,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Estrela",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Rafael Brito",
+          "ParticiantId": 1080681,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1521,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 185,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Telmo Arcanjo",
+          "ParticiantId": 1165477,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1243,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 187,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            83,
+            85,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Juanse",
+          "ParticiantId": 1661691,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 187,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Tondela",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "André Gomes",
+          "ParticiantId": 1374467,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.61,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2250,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 189,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Alverca",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Babatunde Akinsola",
+          "ParticiantId": 1284404,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2442,
+          "MatchesPlayed": 34,
+          "StatValueCount": 32,
+          "Rank": 190,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "AVS",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dario Spikic",
+          "ParticiantId": 1067806,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1798,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 190,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            107,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Amaral",
+          "ParticiantId": 776584,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1853,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 190,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            78,
+            37,
+            38,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ianis Stoica",
+          "ParticiantId": 957122,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1674,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 193,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Estrela",
+          "Positions": [
+            107,
+            78,
+            106,
+            103,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Oumar Camara",
+          "ParticiantId": 1692879,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1504,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 193,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            87,
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Maviram",
+          "ParticiantId": 1242254,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1458,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 193,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Tondela",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Olé Pohlmann",
+          "ParticiantId": 1187364,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1731,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 196,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            107,
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Christian Marques",
+          "ParticiantId": 1070974,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2715,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 196,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tondela",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Cristian Devenish",
+          "ParticiantId": 1187370,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2165,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 196,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "AVS",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Agustín Moreira",
+          "ParticiantId": 1469852,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1031,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 199,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "André Lacximicant",
+          "ParticiantId": 1254302,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1213,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 200,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Iyad Mohamed",
+          "ParticiantId": 1280355,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 948,
+          "MatchesPlayed": 22,
+          "StatValueCount": 18,
+          "Rank": 201,
+          "ParticipantCountryCode": "COM",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Gozálbez",
+          "ParticiantId": 1118703,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1060,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 201,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arouca",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Félix",
+          "ParticiantId": 1374503,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1335,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 201,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tondela",
+          "Positions": [
+            85,
+            77,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mateja Stjepanovic",
+          "ParticiantId": 1437856,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2412,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 201,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Moreirense",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Bastien Meupiyou",
+          "ParticiantId": 1487920,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2619,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 201,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Tomané",
+          "ParticiantId": 212695,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2024,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 201,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "AVS",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Paulo Vitor",
+          "ParticiantId": 1431809,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.57,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1425,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 207,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "AVS",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Simon Elisor",
+          "ParticiantId": 1178330,
+          "TeamId": 1634,
+          "TeamColor": "#232949",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2053,
+          "MatchesPlayed": 33,
+          "StatValueCount": 30,
+          "Rank": 208,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Famalicão",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Robinho",
+          "ParticiantId": 1461827,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 931,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 209,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            76,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Paulo Moreira",
+          "ParticiantId": 1203521,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2379,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 210,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estrela",
+          "Positions": [
+            74,
+            64,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Zé Carlos II",
+          "ParticiantId": 1287747,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1197,
+          "MatchesPlayed": 30,
+          "StatValueCount": 28,
+          "Rank": 210,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Varela",
+          "ParticiantId": 1585676,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.55,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1521,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 212,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marezi",
+          "ParticiantId": 1284376,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1535,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 213,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Alverca",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Seba Pérez",
+          "ParticiantId": 309353,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1567,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 213,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Moscardo",
+          "ParticiantId": 1503655,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 941,
+          "MatchesPlayed": 23,
+          "StatValueCount": 18,
+          "Rank": 213,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            37,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "João Goulart",
+          "ParticiantId": 1188577,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1914,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 213,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Joe Hodge",
+          "ParticiantId": 1070794,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1423,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 213,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Tondela",
+          "Positions": [
+            74,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Diego Duarte",
+          "ParticiantId": 1108882,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1291,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 218,
+          "ParticipantCountryCode": "PAR",
+          "TeamName": "AVS",
+          "Positions": [
+            115,
+            88,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Cedric Teguia",
+          "ParticiantId": 1093264,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 849,
+          "MatchesPlayed": 21,
+          "StatValueCount": 17,
+          "Rank": 219,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Moreirense",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Guilherme Neiva",
+          "ParticiantId": 1420317,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 923,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 220,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "AVS",
+          "Positions": [
+            107,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Carvalho",
+          "ParticiantId": 1525164,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1248,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 220,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Petrasso",
+          "ParticiantId": 1435030,
+          "TeamId": 7841,
+          "TeamColor": "#015F24",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1440,
+          "MatchesPlayed": 23,
+          "StatValueCount": 18,
+          "Rank": 220,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Rio Ave",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Lima",
+          "ParticiantId": 477205,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1426,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 223,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alverca",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Chiheb Labidi",
+          "ParticiantId": 1242656,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1621,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 223,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Filipe Soares",
+          "ParticiantId": 793256,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 751,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 225,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Sphephelo Sithole",
+          "ParticiantId": 1107735,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1541,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 225,
+          "ParticipantCountryCode": "RSA",
+          "TeamName": "Tondela",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Hevertton Santos",
+          "ParticiantId": 1356431,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 864,
+          "MatchesPlayed": 24,
+          "StatValueCount": 17,
+          "Rank": 225,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sergi Gómez",
+          "ParticiantId": 358148,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2484,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 225,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Alverca",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Brenner",
+          "ParticiantId": 1525452,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1186,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 229,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            103,
+            106,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Puche",
+          "ParticiantId": 1287512,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 710,
+          "MatchesPlayed": 27,
+          "StatValueCount": 19,
+          "Rank": 229,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arouca",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Calila",
+          "ParticiantId": 1014983,
+          "TeamId": 1567,
+          "TeamColor": "#E10126",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 992,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 229,
+          "ParticipantCountryCode": "MOZ",
+          "TeamName": "Santa Clara",
+          "Positions": [
+            32,
+            72,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Deniz Gül",
+          "ParticiantId": 1406300,
+          "TeamId": 9773,
+          "TeamColor": "#005898",
+          "StatValue": 6.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1170,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 232,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "FC Porto",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Kiki Afonso",
+          "ParticiantId": 442593,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 233,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "AVS",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "André Geraldes",
+          "ParticiantId": 209503,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1995,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 233,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            33,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Pinho",
+          "ParticiantId": 667962,
+          "TeamId": 1074320,
+          "TeamColor": "#00613C",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1185,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 233,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Estrela",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Davy Gui",
+          "ParticiantId": 1707494,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 594,
+          "MatchesPlayed": 28,
+          "StatValueCount": 20,
+          "Rank": 236,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Alverca",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Pizzi",
+          "ParticiantId": 186748,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 649,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 236,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            73,
+            95
+          ]
+        },
+        {
+          "ParticipantName": "Ángel Algobia",
+          "ParticiantId": 1122478,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1080,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 238,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "AVS",
+          "Positions": [
+            64,
+            74,
+            32,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Alioune Ndoye",
+          "ParticiantId": 1190493,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 953,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 238,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Landerson",
+          "ParticiantId": 1797925,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1290,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 240,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Moreirense",
+          "Positions": [
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Cassiano",
+          "ParticiantId": 387525,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1883,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 241,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Martín Fernández",
+          "ParticiantId": 1302813,
+          "TeamId": 9764,
+          "TeamColor": "#B20000",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 684,
+          "MatchesPlayed": 26,
+          "StatValueCount": 22,
+          "Rank": 242,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Gil Vicente",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Óscar Perea",
+          "ParticiantId": 1433034,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1258,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 242,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "AVS",
+          "Positions": [
+            107,
+            78,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Cédric Nuozzi",
+          "ParticiantId": 1446701,
+          "TeamId": 9780,
+          "TeamColor": "#F31A0B",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 872,
+          "MatchesPlayed": 25,
+          "StatValueCount": 18,
+          "Rank": 244,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Alverca",
+          "Positions": [
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Marqués",
+          "ParticiantId": 929835,
+          "TeamId": 7842,
+          "TeamColor": "#0858A0",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1145,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 244,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Estoril Praia",
+          "Positions": [
+            106,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Ruan",
+          "ParticiantId": 1536269,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 860,
+          "MatchesPlayed": 23,
+          "StatValueCount": 19,
+          "Rank": 246,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Fran Navarro",
+          "ParticiantId": 671855,
+          "TeamId": 10264,
+          "TeamColor": "#D9222A",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1275,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 246,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sporting Braga",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Witi",
+          "ParticiantId": 610273,
+          "TeamId": 10214,
+          "TeamColor": "#101010",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 935,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 246,
+          "ParticipantCountryCode": "MOZ",
+          "TeamName": "CD Nacional",
+          "Positions": [
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Pefok",
+          "ParticiantId": 613714,
+          "TeamId": 188163,
+          "TeamColor": "#e19c00",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1236,
+          "MatchesPlayed": 22,
+          "StatValueCount": 19,
+          "Rank": 249,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Tondela",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Luís Semedo",
+          "ParticiantId": 1342756,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 989,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 249,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Moreirense",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nélson Oliveira",
+          "ParticiantId": 156556,
+          "TeamId": 7844,
+          "TeamColor": "#181818",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1314,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 251,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Vitória Guimarães",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Morais",
+          "ParticiantId": 1187392,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 672,
+          "MatchesPlayed": 19,
+          "StatValueCount": 17,
+          "Rank": 251,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Nandín",
+          "ParticiantId": 1350681,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 921,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 253,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Arouca",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dailon Livramento",
+          "ParticiantId": 1309634,
+          "TeamId": 212821,
+          "TeamColor": "#171717",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 940,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 254,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Casa Pia AC",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Boris Popovic",
+          "ParticiantId": 1280127,
+          "TeamId": 158085,
+          "TeamColor": "#cca702",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1158,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 255,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Arouca",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Maranhão",
+          "ParticiantId": 1613999,
+          "TeamId": 8348,
+          "TeamColor": "#3EA848",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 732,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 256,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Moreirense",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jaume Grau",
+          "ParticiantId": 893399,
+          "TeamId": 1889,
+          "TeamColor": "#AD1922",
+          "StatValue": 6.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1326,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 257,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "AVS",
+          "Positions": [
+            76,
+            66,
+            37
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Liga Portugal"
+}

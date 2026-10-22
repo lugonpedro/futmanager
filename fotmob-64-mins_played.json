@@ -1,0 +1,5308 @@
+{
+  "TopLists": [
+    {
+      "StatName": "mins_played",
+      "Title": "Minutes played",
+      "Subtitle": "Total matches",
+      "LocalizedTitleId": "minutes_played",
+      "LocalizedSubtitleId": "penalty_conceded_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Alex Gogić",
+          "ParticiantId": 684738,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "CYP",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            35,
+            77,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Alex Paulsen",
+          "ParticiantId": 1272118,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "Motherwell",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Beau Reus",
+          "ParticiantId": 957356,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Hamilton",
+          "ParticiantId": 923281,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            65,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Ivor Pandur",
+          "ParticiantId": 1077684,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Rangers",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jack Walton",
+          "ParticiantId": 627016,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee United",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Chapman",
+          "ParticiantId": 1130329,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jason Kerr",
+          "ParticiantId": 583435,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hibernian",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Joe Hugill",
+          "ParticiantId": 1113699,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Marius Müller",
+          "ParticiantId": 308237,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Michael Forbes",
+          "ParticiantId": 1186459,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Dundee United",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Owen Bevan",
+          "ParticiantId": 1334834,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Dundee",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Owen Goodman",
+          "ParticiantId": 1415372,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Dundee",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Raphael Sallinger",
+          "ParticiantId": 632793,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Hibernian",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Astley",
+          "ParticiantId": 966016,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Dundee",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Scott Bain",
+          "ParticiantId": 186891,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Toby Steward",
+          "ParticiantId": 1313606,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 810.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 1,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Fernandez",
+          "ParticiantId": 1273270,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 809.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 809,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 18,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Rangers",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Strain",
+          "ParticiantId": 896992,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 809.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 809,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 18,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Falkirk",
+          "Positions": [
+            71,
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Josh Mulligan",
+          "ParticiantId": 1052343,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 795.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 795,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 20,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hibernian",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Michael Schjønning-Larsen",
+          "ParticiantId": 1215622,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 794.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 794,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 21,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            38,
+            32,
+            59,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Chris Cadden",
+          "ParticiantId": 523758,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 792.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 792,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 22,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            62,
+            32,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "George Stanger",
+          "ParticiantId": 895291,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 792.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 792,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 22,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Tom Lowery",
+          "ParticiantId": 798596,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 790.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 790,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 24,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            76,
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Bert Esselink",
+          "ParticiantId": 1295678,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 782.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 782,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 25,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Dundee United",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Liam Henderson",
+          "ParticiantId": 661815,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 777.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 777,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 26,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Greg Kiltie",
+          "ParticiantId": 448812,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 775.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 775,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 27,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            85,
+            76,
+            87,
+            78,
+            82,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Nesta Guinness-Walker",
+          "ParticiantId": 981179,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 765.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 765,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 28,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            38,
+            68,
+            78,
+            37,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Fadinger",
+          "ParticiantId": 940801,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 764.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 764,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 29,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Motherwell",
+          "Positions": [
+            64,
+            74,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Reece McAlear",
+          "ParticiantId": 1089741,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 764.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 764,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 29,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Martin Moormann",
+          "ParticiantId": 1199118,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 763.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 763,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 31,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Motherwell",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Longelo",
+          "ParticiantId": 963949,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 746.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 746,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 32,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Motherwell",
+          "Positions": [
+            38,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Carr",
+          "ParticiantId": 1364021,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 744.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 744,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 33,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Felix Passlack",
+          "ParticiantId": 637753,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 734.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 734,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 34,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Hibernian",
+          "Positions": [
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Drey Wright",
+          "ParticiantId": 363341,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 727.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 727,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 35,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            38,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Cláudio Braga",
+          "ParticiantId": 1363019,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 726.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 726,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 36,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            106,
+            85,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Olwethu Makhanya",
+          "ParticiantId": 1469826,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 720.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 37,
+          "ParticipantCountryCode": "RSA",
+          "TeamName": "Rangers",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Viljami Sinisalo",
+          "ParticiantId": 1185782,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 720.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 37,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Celtic",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Nisbet",
+          "ParticiantId": 620134,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 719.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 719,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 39,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Declan John",
+          "ParticiantId": 410359,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 719.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 719,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 40,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            79,
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Jason Holt",
+          "ParticiantId": 264837,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 715.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 715,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 41,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Tom Sparrow",
+          "ParticiantId": 1130768,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 708.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 708,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 42,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Motherwell",
+          "Positions": [
+            32,
+            82,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Joshua Rawlins",
+          "ParticiantId": 1069828,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 701.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 701,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 43,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Dundee United",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Paul Nsio",
+          "ParticiantId": 1709059,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 697.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 697,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 44,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            66,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Callum McGregor",
+          "ParticiantId": 111060,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 690.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 690,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 45,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Cheick Diabate",
+          "ParticiantId": 1101057,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 683.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 683,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 46,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Colby Donovan",
+          "ParticiantId": 1663615,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 679.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 679,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 47,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Finley Barbrook",
+          "ParticiantId": 1599317,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 675.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 675,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 48,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Tait",
+          "ParticiantId": 1037128,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 673.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 673,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 49,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee United",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jordi Altena",
+          "ParticiantId": 1509549,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 673.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 673,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 49,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Laurent Mendy",
+          "ParticiantId": 1578006,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 672.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 672,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 51,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            34,
+            74,
+            66,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Leon McCann",
+          "ParticiantId": 1085811,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 665.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 665,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 52,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Nygren",
+          "ParticiantId": 931605,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 654.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 654,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 53,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Celtic",
+          "Positions": [
+            85,
+            73,
+            104,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Ross",
+          "ParticiantId": 967489,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 646.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 646,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 54,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Djeidi Gassama",
+          "ParticiantId": 1358598,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 645.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 645,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 55,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "Rangers",
+          "Positions": [
+            87,
+            83,
+            78,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Jamie McCart",
+          "ParticiantId": 766621,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 642.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 642,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 56,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Cathal McCarthy",
+          "ParticiantId": 1683723,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 630.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Enes Alić",
+          "ParticiantId": 1174845,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 630.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Henry Fieldson",
+          "ParticiantId": 1245746,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 630.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Neilson",
+          "ParticiantId": 1128622,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 630.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Stanton",
+          "ParticiantId": 302012,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 627.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 627,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 61,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            83,
+            85,
+            75,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Liam Scales",
+          "ParticiantId": 782705,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 626.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 626,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 62,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Celtic",
+          "Positions": [
+            36,
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Liam Smith",
+          "ParticiantId": 158818,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 623.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 63,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Erik Ring",
+          "ParticiantId": 1184206,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 621.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 621,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 64,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            83,
+            87,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Brad Spencer",
+          "ParticiantId": 873762,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 618.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 65,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Joshua McPake",
+          "ParticiantId": 1071400,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 611.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 66,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Alex Lowry",
+          "ParticiantId": 1284069,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 603.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 603,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 67,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Motherwell",
+          "Positions": [
+            85,
+            88,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ben Krauhaus",
+          "ParticiantId": 1413887,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 603.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 603,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 68,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Josh Fowler",
+          "ParticiantId": 1783452,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 602.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 602,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 69,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "James Penrice",
+          "ParticiantId": 719578,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 598.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Rangers",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Raskin",
+          "ParticiantId": 863869,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 595.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 595,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 71,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Rangers",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jesse Randall",
+          "ParticiantId": 1460327,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 594.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 594,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 72,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "Dundee United",
+          "Positions": [
+            78,
+            87,
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Camilo Durán",
+          "ParticiantId": 1576597,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 591.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 73,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Celtic",
+          "Positions": [
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Afeez Aremu",
+          "ParticiantId": 859569,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 589.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 74,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Miller",
+          "ParticiantId": 675041,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 589.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 74,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            87,
+            85,
+            83,
+            72,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Joe Hodge",
+          "ParticiantId": 1070794,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 589.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 76,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Motherwell",
+          "Positions": [
+            66,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Joe Bevan",
+          "ParticiantId": 1430910,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 587.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 587,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 77,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            72,
+            83,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Dujon Sterling",
+          "ParticiantId": 793905,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 585.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 585,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Rangers",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Tawanda Maswanhise",
+          "ParticiantId": 1187314,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 581.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 581,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 79,
+          "ParticipantCountryCode": "ZIM",
+          "TeamName": "Motherwell",
+          "Positions": [
+            115,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Neil",
+          "ParticiantId": 982246,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 575.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 575,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 80,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Rangers",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Toyosi Olusanya",
+          "ParticiantId": 748529,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 574.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 574,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 81,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            104,
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Chaiwa",
+          "ParticiantId": 1313557,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 573.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 573,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 82,
+          "ParticipantCountryCode": "ZAM",
+          "TeamName": "Hibernian",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Ramsay",
+          "ParticiantId": 1076952,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 565.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 565,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 83,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Auston Trusty",
+          "ParticiantId": 688271,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 560.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 560,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 84,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Celtic",
+          "Positions": [
+            34,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Mayo",
+          "ParticiantId": 1067881,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 559.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 85,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Tyreece John-Jules",
+          "ParticiantId": 961993,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 557.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 557,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 86,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            104,
+            85,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Ismeal Kabia",
+          "ParticiantId": 1473063,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 550.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 550,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 87,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            62,
+            72,
+            84,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Mika Baur",
+          "ParticiantId": 1329169,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 550.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 550,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 87,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Celtic",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Don Naderi",
+          "ParticiantId": 1404384,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 545.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 545,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 89,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Rangers",
+          "Positions": [
+            106,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Adam Mayor",
+          "ParticiantId": 1314353,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 540.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 90,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            68,
+            87,
+            78,
+            77,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Cameron Carter-Vickers",
+          "ParticiantId": 643589,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 540.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 91,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Celtic",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Maksymilian Stryjek",
+          "ParticiantId": 609751,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 540.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 91,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Joe Westley",
+          "ParticiantId": 1363144,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 536.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 536,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 93,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            85,
+            115,
+            107,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Said",
+          "ParticiantId": 1109045,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 532.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 94,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Motherwell",
+          "Positions": [
+            87,
+            83,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Alan Forrest",
+          "ParticiantId": 470409,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 531.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 95,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Zach Mitchell",
+          "ParticiantId": 1420196,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 527.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 527,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 96,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Martin Boyle",
+          "ParticiantId": 192782,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 504.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 504,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 97,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Hibernian",
+          "Positions": [
+            104,
+            82,
+            84,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Bennie",
+          "ParticiantId": 1565859,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 503.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 503,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 98,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Dundee United",
+          "Positions": [
+            107,
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jamie Brandon",
+          "ParticiantId": 846237,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 497.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 497,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 99,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Min-Su Kim",
+          "ParticiantId": 1684578,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 487.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 100,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Rangers",
+          "Positions": [
+            107,
+            105,
+            85,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Oisin McEntee",
+          "ParticiantId": 1012563,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 484.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 484,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 101,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            32,
+            34,
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Mats Knoester",
+          "ParticiantId": 1019234,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 484.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 484,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 102,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Stuart Findlay",
+          "ParticiantId": 519951,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 480.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 480,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 103,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Chris Mochrie",
+          "ParticiantId": 1047227,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 474.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 474,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 104,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            104,
+            87,
+            83,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Finnigan",
+          "ParticiantId": 1186512,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 471.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 471,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 105,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Murrell",
+          "ParticiantId": 1610225,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 470.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 106,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Falkirk",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kieran Tierney",
+          "ParticiantId": 582499,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 459.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 459,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 107,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Stuart Armstrong",
+          "ParticiantId": 237563,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 457.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 457,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 108,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            86,
+            77,
+            66,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Idris Odutayo",
+          "ParticiantId": 1113788,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 454.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 454,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 109,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Ruari Paton",
+          "ParticiantId": 1104042,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 453.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 453,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 110,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            106,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Connor Ronan",
+          "ParticiantId": 672484,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 446.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 446,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 111,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Tshibola",
+          "ParticiantId": 490122,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 444.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 444,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 112,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            65,
+            74,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Will Ferry",
+          "ParticiantId": 843138,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 441.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 441,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 113,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Dundee United",
+          "Positions": [
+            78,
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Lowe",
+          "ParticiantId": 1334830,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 436.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 436,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 114,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            115,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jake Girdwood-Reich",
+          "ParticiantId": 1409555,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 435.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 435,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 115,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Motherwell",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Bradley Fink",
+          "ParticiantId": 1329747,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 427.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 427,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 116,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Dundee",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Killian Phillips",
+          "ParticiantId": 1239281,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 426.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 426,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 117,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            73,
+            85,
+            104,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Findlay Curtis",
+          "ParticiantId": 1558461,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 423.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 423,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 118,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Rangers",
+          "Positions": [
+            83,
+            78,
+            72,
+            84,
+            32,
+            67,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Taylor Steven",
+          "ParticiantId": 1389992,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 416.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 119,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            83,
+            87,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "James Wilson",
+          "ParticiantId": 1477601,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 415.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 415,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 120,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            115,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Grant Hanley",
+          "ParticiantId": 202180,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 413.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 413,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 121,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hibernian",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Owen Eames",
+          "ParticiantId": 1469339,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 412.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 412,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 122,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            87,
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Callum Wright",
+          "ParticiantId": 961984,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 410.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 410,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 123,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            86,
+            88,
+            75,
+            104,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Waarts Høgh",
+          "ParticiantId": 934960,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 406.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 124,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Celtic",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Zachary Sapsford",
+          "ParticiantId": 1409171,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 402.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 125,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Dundee United",
+          "Positions": [
+            105,
+            107,
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Sabah Kerjota",
+          "ParticiantId": 1787210,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 396.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 396,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 126,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Haissem Hassan",
+          "ParticiantId": 971787,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 390.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 390,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 127,
+          "ParticipantCountryCode": "EGY",
+          "TeamName": "Celtic",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Ciubotaru",
+          "ParticiantId": 1418669,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 386.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 386,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 128,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Dundee United",
+          "Positions": [
+            38,
+            88,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Eseosa Sule",
+          "ParticiantId": 1469618,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 381.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 381,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 129,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Happe",
+          "ParticiantId": 827248,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 381.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 381,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 130,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Hyun-Jun Yang",
+          "ParticiantId": 1232560,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 377.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 377,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 131,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Celtic",
+          "Positions": [
+            83,
+            87,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Jamie Gullan",
+          "ParticiantId": 865728,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 375.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 375,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 132,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            85,
+            103,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Gavin Molloy",
+          "ParticiantId": 1336979,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 375.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 375,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 133,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Seb Palmer Houlden",
+          "ParticiantId": 1445152,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 370.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 370,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 134,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Motherwell",
+          "Positions": [
+            104,
+            84,
+            82,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Fraser Taylor",
+          "ParticiantId": 1324378,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 368.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 368,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 135,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            77,
+            65,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Panutche Camará",
+          "ParticiantId": 826063,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 364.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 364,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 136,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Dundee United",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Lawrence Shankland",
+          "ParticiantId": 317544,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 363.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 137,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Rangers",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Harry Milne",
+          "ParticiantId": 673609,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 359.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 359,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 138,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            38,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Imari Samuels",
+          "ParticiantId": 1180165,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 357.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 139,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            38,
+            78,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Owen Elding",
+          "ParticiantId": 1459966,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 344.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 344,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 140,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Hibernian",
+          "Positions": [
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Tómas Magnússon",
+          "ParticiantId": 943802,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 339.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 339,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            74,
+            64,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Cameron Devlin",
+          "ParticiantId": 970544,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 335.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 335,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 142,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Rangers",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jamie McGrath",
+          "ParticiantId": 591987,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 332.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 332,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 143,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Hibernian",
+          "Positions": [
+            85,
+            88,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Joel Cotterill",
+          "ParticiantId": 1137367,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 332.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 332,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 143,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            85,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Smith",
+          "ParticiantId": 939407,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 327.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 327,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 145,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            83,
+            87,
+            73,
+            84,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Lyall Cameron",
+          "ParticiantId": 1052340,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 314.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 314,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 146,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee United",
+          "Positions": [
+            84,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Idjessi Metsoko",
+          "ParticiantId": 1408177,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 310.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 310,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 147,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Dundee United",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Lachlan Rose",
+          "ParticiantId": 1217247,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 307.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 148,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Dundee United",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Finlayson",
+          "ParticiantId": 1133890,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 304.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 304,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 149,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            34,
+            32,
+            71,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Obita",
+          "ParticiantId": 214619,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 299.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 299,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 150,
+          "ParticipantCountryCode": "UGA",
+          "TeamName": "Hibernian",
+          "Positions": [
+            37,
+            68,
+            38,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Zidane Iqbal",
+          "ParticiantId": 1138592,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 296.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 296,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 151,
+          "ParticipantCountryCode": "IRQ",
+          "TeamName": "Dundee United",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Regan Charles-Cook",
+          "ParticiantId": 662834,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 292.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 292,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 152,
+          "ParticipantCountryCode": "GRN",
+          "TeamName": "Motherwell",
+          "Positions": [
+            106,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jack Iredale",
+          "ParticiantId": 865302,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 291.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 153,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Hibernian",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ante Šuto",
+          "ParticiantId": 1607998,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 287.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 287,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 154,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Hibernian",
+          "Positions": [
+            83,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Tony Yogane",
+          "ParticiantId": 1680560,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 284.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 284,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 155,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            88,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Ramos",
+          "ParticiantId": 1610893,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 282.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 282,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 156,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            77,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jardell Kanga",
+          "ParticiantId": 1366935,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 274.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 157,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Motherwell",
+          "Positions": [
+            103,
+            75,
+            84,
+            107,
+            105,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Blair Spittal",
+          "ParticiantId": 393272,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 274.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 158,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            76,
+            78,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Thibault Klidje",
+          "ParticiantId": 931167,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 273.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 273,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 159,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Dane Murray",
+          "ParticiantId": 1249915,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 273.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 273,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 160,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Calum Ferrie",
+          "ParticiantId": 823588,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 161,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Matty Foulds",
+          "ParticiantId": 662391,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 161,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nikolas Agrafiotis",
+          "ParticiantId": 1180316,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 267.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 267,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 163,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Deniss Meļņiks",
+          "ParticiantId": 1415282,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 266.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 266,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 164,
+          "ParticipantCountryCode": "LVA",
+          "TeamName": "Falkirk",
+          "Positions": [
+            36,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Findlay Marshall",
+          "ParticiantId": 1426979,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 266.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 266,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 165,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            85,
+            87,
+            77,
+            66,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Matty Todd",
+          "ParticiantId": 948961,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 265.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 265,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 166,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            62,
+            72,
+            85,
+            66,
+            83,
+            73,
+            78,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Devaney",
+          "ParticiantId": 1697819,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 261.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 261,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 167,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Hibernian",
+          "Positions": [
+            65,
+            75,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Kelsy",
+          "ParticiantId": 1355550,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 256.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 168,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Rangers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ayoub Mouloua",
+          "ParticiantId": 1680176,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 255.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 255,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 169,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Bailey Rice",
+          "ParticiantId": 1418638,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 254.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 254,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 170,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jayden Richardson",
+          "ParticiantId": 1076757,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 253.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 253,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 171,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            71,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Callum Jones",
+          "ParticiantId": 923499,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 251.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 251,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 172,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Dundee",
+          "Positions": [
+            76,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Willy Vogt",
+          "ParticiantId": 1411514,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 250.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 250,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 173,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Motherwell",
+          "Positions": [
+            106,
+            83,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Luke Thomas",
+          "ParticiantId": 698499,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 249.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 249,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 174,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            107,
+            103,
+            84,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Jack Milne",
+          "ParticiantId": 1331712,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 249.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 249,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 175,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            35,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jamie Knight-Lebel",
+          "ParticiantId": 1524014,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 249.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 249,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 176,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Motherwell",
+          "Positions": [
+            34,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Tounekti",
+          "ParticiantId": 921919,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 247.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 177,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Celtic",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Charlie Reilly",
+          "ParticiantId": 1092687,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 247.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 178,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Abdoulaye Yoro",
+          "ParticiantId": 1714783,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 242.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 242,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 179,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Dundee United",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Stephen O'Donnell",
+          "ParticiantId": 287156,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 240.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 240,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 180,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Motherwell",
+          "Positions": [
+            32,
+            34,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Vicko Ševelj",
+          "ParticiantId": 1339754,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 240.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 240,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 181,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dundee United",
+          "Positions": [
+            73,
+            33,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Agyei",
+          "ParticiantId": 1422565,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 239.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 239,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 182,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Dundee United",
+          "Positions": [
+            75,
+            66,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Fraser",
+          "ParticiantId": 294863,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 239.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 239,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 182,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Christian Dahle Borchgrevink",
+          "ParticiantId": 837269,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 237.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 237,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 184,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ashley Hay",
+          "ParticiantId": 1417421,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 235.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 235,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 185,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Finlay Robertson",
+          "ParticiantId": 1052338,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 230.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 230,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 186,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            84,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Brad Lyons",
+          "ParticiantId": 623867,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 225.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 187,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            75,
+            65,
+            83,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Jake Young",
+          "ParticiantId": 1184217,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 223.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 223,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 188,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Mehdi Merghem",
+          "ParticiantId": 780589,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 217.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 217,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 189,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Dundee United",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mark O'Hara",
+          "ParticiantId": 384144,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 212.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 212,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 190,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            77,
+            65,
+            71,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ben Parkinson",
+          "ParticiantId": 1296765,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 205.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 205,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 191,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Aodhan Doherty",
+          "ParticiantId": 1512798,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 203.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 203,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 192,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Falkirk",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Josh Campbell",
+          "ParticiantId": 1007733,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 198.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 198,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 193,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "CJ Fodrey",
+          "ParticiantId": 1253499,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 197.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 194,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Falkirk",
+          "Positions": [
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Stephen Kingsley",
+          "ParticiantId": 259810,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 197.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 195,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Djenairo Daniëls",
+          "ParticiantId": 1180289,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 193.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 193,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 196,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Bobby Wales",
+          "ParticiantId": 1394403,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 187.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 187,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 197,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Arne Engels",
+          "ParticiantId": 1178443,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 198,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Celtic",
+          "Positions": [
+            73,
+            66,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Malachi Fagan-Walcott",
+          "ParticiantId": 962022,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 198,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Marko Ivezić",
+          "ParticiantId": 1320446,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 198,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Hibernian",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tuur Rommens",
+          "ParticiantId": 1276501,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 198,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Rangers",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Warren O'Hora",
+          "ParticiantId": 769358,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 198,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Hibernian",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "MJ Kamara",
+          "ParticiantId": 1557503,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 179.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 179,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 203,
+          "ParticipantCountryCode": "SLE",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Craig Sibbald",
+          "ParticiantId": 279854,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 174.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 174,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 204,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Oscar Priestman",
+          "ParticiantId": 1426936,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 172.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 172,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 205,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Motherwell",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Alex Oxlade-Chamberlain",
+          "ParticiantId": 196386,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 171.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 171,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 206,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Celtic",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Briedl",
+          "ParticiantId": 1234640,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 161.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 207,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            66,
+            77,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Finn Yeats",
+          "ParticiantId": 1287609,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 161.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 208,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            85,
+            32,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Levitt",
+          "ParticiantId": 1055825,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 156.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 156,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 209,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Motherwell",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Badredine Bouanani",
+          "ParticiantId": 1388070,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 156.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 156,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 210,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Rangers",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "James Forrest",
+          "ParticiantId": 185566,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 153.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 153,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 211,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mitchy Ntelo",
+          "ParticiantId": 1169694,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 153.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 153,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 212,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Williams",
+          "ParticiantId": 1211647,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 151.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 151,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 213,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Motherwell",
+          "Positions": [
+            66,
+            77,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kai Fotheringham",
+          "ParticiantId": 1197002,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 148.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 148,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 214,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Sabri Guendouz",
+          "ParticiantId": 1514680,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 148.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 148,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 215,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            85,
+            104,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ross MacIver",
+          "ParticiantId": 919890,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 147.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 147,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 216,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Neil Farrugia",
+          "ParticiantId": 863652,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 145.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 217,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Dundee United",
+          "Positions": [
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Scott Tanser",
+          "ParticiantId": 443988,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 145.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 218,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            79,
+            38,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Amadou Ba-Sy",
+          "ParticiantId": 1423260,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 143.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 143,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 219,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "JJ Williams",
+          "ParticiantId": 1025934,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 135.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 220,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Alistair Johnston",
+          "ParticiantId": 1055426,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 135.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 221,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Celtic",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Johnly Yfeko",
+          "ParticiantId": 1224877,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 135.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 221,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Diomandé",
+          "ParticiantId": 1064272,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 135.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 221,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Rangers",
+          "Positions": [
+            85,
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Simon Murray",
+          "ParticiantId": 244035,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 125.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 125,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 224,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dundee",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Sørensen",
+          "ParticiantId": 1097009,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 123.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 225,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Celtic",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kosta Nedeljković",
+          "ParticiantId": 1513910,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 122.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 122,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 226,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Rangers",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Nicky Cleșcenco",
+          "ParticiantId": 1293151,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 119.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 119,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 227,
+          "ParticipantCountryCode": "MDA",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            104,
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Daisuke Yokota",
+          "ParticiantId": 1244356,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 116.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 116,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Rangers",
+          "Positions": [
+            103,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Eythor Martin Bjørgolfsson",
+          "ParticiantId": 1267885,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 115.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 115,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 229,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Motherwell",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kanayochukwu Megwa",
+          "ParticiantId": 1429281,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 113.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 113,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 230,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            62,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Bradley Halliday",
+          "ParticiantId": 504176,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 112.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 112,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 231,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            32,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thelo Aasgaard",
+          "ParticiantId": 1184468,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 112.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 112,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 232,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rangers",
+          "Positions": [
+            85,
+            77,
+            83,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jack Moorhouse",
+          "ParticiantId": 1315314,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 106.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 106,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 233,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            66,
+            73,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Liam Donnelly",
+          "ParticiantId": 546194,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 98.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 234,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            33,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Schilte-Brown",
+          "ParticiantId": 1664114,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 235,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Louis Jackson",
+          "ParticiantId": 1463267,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 235,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sam Johnstone",
+          "ParticiantId": 280287,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 235,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Celtic",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Yan Dhanda",
+          "ParticiantId": 760714,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 235,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            84,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Pierre Landry Kaboré",
+          "ParticiantId": 1635729,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 89.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 89,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 239,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Ageu",
+          "ParticiantId": 1437937,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 87.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 87,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 240,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Gardner",
+          "ParticiantId": 1319809,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 84.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 84,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 241,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            88,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ben Godfrey",
+          "ParticiantId": 662936,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 83.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 83,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 242,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Rangers",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Youssef Chermiti",
+          "ParticiantId": 1356310,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 81.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 81,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 243,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Rangers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Luke McCowan",
+          "ParticiantId": 866570,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 80.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 80,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 244,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Celtic",
+          "Positions": [
+            103,
+            73,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Jack McMillan",
+          "ParticiantId": 609712,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 79.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 79,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 245,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            64,
+            68,
+            32,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Laidlaw",
+          "ParticiantId": 1246153,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 79.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 79,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 246,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Falkirk",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Azeem Abdulai",
+          "ParticiantId": 1329227,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 78.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 78,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 247,
+          "ParticipantCountryCode": "SLE",
+          "TeamName": "Hibernian",
+          "Positions": [
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Callum Osmand",
+          "ParticiantId": 1416581,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 73.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 248,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Celtic",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Rogers Mato",
+          "ParticiantId": 1328312,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 70.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 70,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 249,
+          "ParticipantCountryCode": "UGA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ross McCrorie",
+          "ParticiantId": 700683,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 69.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 69,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 250,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Rangers",
+          "Positions": [
+            62,
+            68,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Rabbi Matondo",
+          "ParticiantId": 872968,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 65.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 65,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 251,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Hibernian",
+          "Positions": [
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Tom Renaud",
+          "ParticiantId": 1081169,
+          "TeamId": 9860,
+          "TeamColor": "#691B32",
+          "StatValue": 64.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 64,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 252,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Heart of Midlothian",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Rory McKenzie",
+          "ParticiantId": 246316,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 61.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 61,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 253,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Jota",
+          "ParticiantId": 820707,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 61.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 61,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 254,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Celtic",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Logan Chalmers",
+          "ParticiantId": 865952,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 58.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 58,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 255,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            83,
+            72,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Macaulay Tait",
+          "ParticiantId": 1344687,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 50.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 50,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 256,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Danny Schmidt",
+          "ParticiantId": 1400523,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 47.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 257,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Meier",
+          "ParticiantId": 939399,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 258,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            32,
+            38,
+            33,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mikey Booth",
+          "ParticiantId": 1600667,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 258,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Motherwell",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Vanja Dragojević",
+          "ParticiantId": 1761677,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 258,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Rangers",
+          "Positions": [
+            65,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Shumaira Mheuka",
+          "ParticiantId": 1346113,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 44.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 44,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 261,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Celtic",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tochi Chukwuani",
+          "ParticiantId": 1087658,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 41.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 41,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 262,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Rangers",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nicky Cadden",
+          "ParticiantId": 490161,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 41.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 41,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 263,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hibernian",
+          "Positions": [
+            68,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Žan Bešir",
+          "ParticiantId": 1094475,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 38.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 38,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 264,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Dundee",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Johnny Koutroumbis",
+          "ParticiantId": 803760,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 35.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 35,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 265,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Motherwell",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Paul McGovern",
+          "ParticiantId": 1593517,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 33.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 33,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 266,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Falkirk",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Roshaun Mathurin",
+          "ParticiantId": 1213661,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 31.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 31,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 267,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            82,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Dario Naamo",
+          "ParticiantId": 1377584,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 30.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 30,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 268,
+          "ParticipantCountryCode": "IRQ",
+          "TeamName": "Dundee United",
+          "Positions": [
+            72,
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Landon Emenalo",
+          "ParticiantId": 1677143,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 30.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 30,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 269,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Celtic",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rudi Allan Molotnikov",
+          "ParticiantId": 1418923,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 30.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 30,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 269,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hibernian",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Iurie Iovu",
+          "ParticiantId": 1313229,
+          "TeamId": 9938,
+          "TeamColor": "#FD6500",
+          "StatValue": 28.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 28,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 271,
+          "ParticipantCountryCode": "MDA",
+          "TeamName": "Dundee United",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Louis Lloyd",
+          "ParticiantId": 1187357,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 27.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 27,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 272,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Cole Burke",
+          "ParticiantId": 1712447,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 27.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 27,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 273,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Joe Wright",
+          "ParticiantId": 480791,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 25.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 25,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 274,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Bojan Miovski",
+          "ParticiantId": 846970,
+          "TeamId": 8548,
+          "TeamColor": "#0033A0",
+          "StatValue": 24.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 24,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 275,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Rangers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Alfie Harrison",
+          "ParticiantId": 1418100,
+          "TeamId": 8284,
+          "TeamColor": "#00163f",
+          "StatValue": 24.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 24,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 276,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Dundee",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Conor McLeod",
+          "ParticiantId": 1413850,
+          "TeamId": 8596,
+          "TeamColor": "#00366e",
+          "StatValue": 22.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 22,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 277,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Falkirk",
+          "Positions": [
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Ewan Wilson",
+          "ParticiantId": 1393393,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 22.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 22,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 277,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Motherwell",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Hicham Mahou",
+          "ParticiantId": 815468,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 22.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 22,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 279,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Roland Idowu",
+          "ParticiantId": 1113766,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 21.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 21,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 280,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            104,
+            103,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Joe Newell",
+          "ParticiantId": 261306,
+          "TeamId": 10251,
+          "TeamColor": "#007040",
+          "StatValue": 20.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 20,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 281,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hibernian",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ieuan Owen",
+          "ParticiantId": 1693384,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 18.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 18,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 282,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Robbie Deas",
+          "ParticiantId": 959609,
+          "TeamId": 8597,
+          "TeamColor": "#0745A4",
+          "StatValue": 18.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 18,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 283,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Kilmarnock",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Gyamfi",
+          "ParticiantId": 1610969,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 14.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 14,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 284,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Josh Farquhar",
+          "ParticiantId": 1908764,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 13.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 13,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 285,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            106,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Lotomba",
+          "ParticiantId": 643771,
+          "TeamId": 9925,
+          "TeamColor": "#007838",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 8,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 286,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Celtic",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Olly Whyte",
+          "ParticiantId": 1591937,
+          "TeamId": 9927,
+          "TeamColor": "#CC8728",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 8,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 286,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Motherwell",
+          "Positions": [
+            77,
+            86,
+            87,
+            66,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Jack Baird",
+          "ParticiantId": 584826,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 5.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 5,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 288,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Andrew Fasanya",
+          "ParticiantId": 2119485,
+          "TeamId": 8485,
+          "TeamColor": "#CF1A29",
+          "StatValue": 3.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 289,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aberdeen",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Božo Mikulić",
+          "ParticiantId": 626524,
+          "TeamId": 8467,
+          "TeamColor": "#2659C2",
+          "StatValue": 1.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 290,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "St. Johnstone",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Marcello De Barros",
+          "ParticiantId": 2200574,
+          "TeamId": 9800,
+          "TeamColor": "#212025",
+          "StatValue": 1.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 290,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "St. Mirren",
+          "Positions": [
+            1
+          ]
+        }
+      ],
+      "StatFormat": "number",
+      "SubstatFormat": "number",
+      "StatDecimals": 0,
+      "SubstatDecimals": 0,
+      "Order": 5,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Premiership"
+}

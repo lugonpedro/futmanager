@@ -1,0 +1,5717 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Lamine Yamal",
+          "ParticiantId": 1467236,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 8.33,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2268,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 1,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Kylian Mbappé",
+          "ParticiantId": 701154,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 8.02,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2604,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 2,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Pedri",
+          "ParticiantId": 1083323,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.8,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2107,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 3,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Raphinha",
+          "ParticiantId": 696679,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.77,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1388,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 4,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Barcelona",
+          "Positions": [
+            87,
+            115,
+            85,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Joan García",
+          "ParticiantId": 1167220,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.73,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 5,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Vinícius Júnior",
+          "ParticiantId": 846033,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.65,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2825,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 6,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Federico Valverde",
+          "ParticiantId": 743533,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2746,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 7,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            32,
+            72,
+            64,
+            73,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jude Bellingham",
+          "ParticiantId": 1077894,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.53,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1917,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 8,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            85,
+            74,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Alvaro Carreras",
+          "ParticiantId": 1190025,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.52,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2334,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 9,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Abdessamad Ezzalzouli",
+          "ParticiantId": 1209399,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.52,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2255,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 9,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Real Betis",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Fornals",
+          "ParticiantId": 683450,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.45,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2865,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 11,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            85,
+            66,
+            73,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Antony",
+          "ParticiantId": 967622,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.43,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2459,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 12,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Real Betis",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Arda Güler",
+          "ParticiantId": 1253890,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2026,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 13,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            85,
+            74,
+            78,
+            83,
+            64,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Eric García",
+          "ParticiantId": 940573,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.41,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2730,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 14,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            36,
+            32,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Aurélien Tchouaméni",
+          "ParticiantId": 914458,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.37,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2622,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 15,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Luis Milla",
+          "ParticiantId": 638090,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 7.35,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3273,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 16,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Dani Olmo",
+          "ParticiantId": 614834,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2077,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 17,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            85,
+            73,
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Fermín López",
+          "ParticiantId": 1404415,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.33,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1797,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 18,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            85,
+            73,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Frenkie de Jong",
+          "ParticiantId": 638622,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.32,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1631,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 19,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Barcelona",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Pépé",
+          "ParticiantId": 575735,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.3,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2396,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 20,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Villarreal",
+          "Positions": [
+            72,
+            104,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Mikel Oyarzabal",
+          "ParticiantId": 678234,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 7.29,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2714,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 21,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Azzedine Ounahi",
+          "ParticiantId": 1073143,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1766,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 22,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Girona",
+          "Positions": [
+            85,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Mouriño",
+          "ParticiantId": 1407468,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2384,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 23,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Villarreal",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Pau Cubarsí",
+          "ParticiantId": 1532137,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2708,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 24,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Florian Lejeune",
+          "ParticiantId": 184521,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 7.27,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3231,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 25,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jules Koundé",
+          "ParticiantId": 705450,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2261,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 26,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Barcelona",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Javi Galán",
+          "ParticiantId": 695062,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 7.25,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1807,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 27,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            38,
+            59,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Kike Salas",
+          "ParticiantId": 1327489,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2203,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 28,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Aleix Febas",
+          "ParticiantId": 671686,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 7.24,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3166,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 29,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Andrei Rațiu",
+          "ParticiantId": 970578,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 7.24,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2804,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 30,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            32,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Gerard Martín",
+          "ParticiantId": 1598982,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2124,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 31,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dean Huijsen",
+          "ParticiantId": 1367619,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2037,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 32,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Vedat Muriqi",
+          "ParticiantId": 517052,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 7.2,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 3134,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 33,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Mallorca",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Tsigankov",
+          "ParticiantId": 564847,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2641,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 34,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Girona",
+          "Positions": [
+            83,
+            71,
+            85,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Barrios",
+          "ParticiantId": 1338192,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1666,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 35,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Rashford",
+          "ParticiantId": 696365,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1761,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 36,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Barcelona",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marc Pubill",
+          "ParticiantId": 1323897,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1382,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 37,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Romero",
+          "ParticiantId": 1395964,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 7.15,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 3195,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 38,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gerard Moreno",
+          "ParticiantId": 246438,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1350,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 39,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Giuliano Simeone",
+          "ParticiantId": 1226147,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2109,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 40,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            72,
+            103,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Edu Expósito",
+          "ParticiantId": 837089,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2542,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 41,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            66,
+            76,
+            85,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Yuri Berchiche",
+          "ParticiantId": 80295,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 7.13,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2709,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 42,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Germán Valera",
+          "ParticiantId": 1102708,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2869,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 43,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            79,
+            59,
+            82,
+            38,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Georges Mikautadze",
+          "ParticiantId": 1117069,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.12,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2117,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 44,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Villarreal",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Juan Hernández",
+          "ParticiantId": 852071,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.12,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2592,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 45,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Real Betis",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Pape Gueye",
+          "ParticiantId": 844544,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.11,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2143,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 46,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Villarreal",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "David Soria",
+          "ParticiantId": 581919,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 7.11,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 3420,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 47,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Alonso",
+          "ParticiantId": 196169,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2770,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 48,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Julián Álvarez",
+          "ParticiantId": 974753,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.11,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1902,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 49,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ferrán Torres",
+          "ParticiantId": 881771,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.1,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1976,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 50,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            115,
+            103,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Thibaut Courtois",
+          "ParticiantId": 170323,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.09,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 51,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marko Dmitrović",
+          "ParticiantId": 280818,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 7.09,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 3330,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 52,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Espanyol",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Luíz Júnior",
+          "ParticiantId": 1187044,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.08,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2520,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 53,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Villarreal",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Aarón Escandell",
+          "ParticiantId": 534955,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 7.08,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 3240,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 54,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Balde",
+          "ParticiantId": 1254166,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1874,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 55,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Barcelona",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Maffeo",
+          "ParticiantId": 673356,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 7.07,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2672,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 56,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Mallorca",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Arnau Martínez",
+          "ParticiantId": 1194892,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 7.06,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2678,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 57,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            32,
+            38,
+            34,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Blanco",
+          "ParticiantId": 845998,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3116,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 58,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Takefusa Kubo",
+          "ParticiantId": 848289,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 7.05,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1508,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 59,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            83,
+            72,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Llorente",
+          "ParticiantId": 602563,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2184,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 60,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            32,
+            74,
+            72,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Augusto Batalla",
+          "ParticiantId": 621415,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 7.05,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 61,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mathew Ryan",
+          "ParticiantId": 185644,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 7.05,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 3240,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 61,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Levante",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "David Affengruber",
+          "ParticiantId": 1073980,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2953,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 63,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Elche",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Eduardo Camavinga",
+          "ParticiantId": 1015185,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1526,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 64,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            66,
+            76,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sergio Gómez",
+          "ParticiantId": 844477,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2705,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 64,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rafa Marín",
+          "ParticiantId": 1313884,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 66,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Toni Martínez",
+          "ParticiantId": 640123,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 7.03,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2725,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 67,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Koke",
+          "ParticiantId": 184533,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.03,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2220,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 68,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Pepelu",
+          "ParticiantId": 673689,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2232,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 69,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            76,
+            36,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Espí",
+          "ParticiantId": 1610744,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1338,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 69,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Nico Williams",
+          "ParticiantId": 1202110,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 7.02,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1687,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 71,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Sotelo",
+          "ParticiantId": 1254218,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1342,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 72,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Álvaro Vallés",
+          "ParticiantId": 999171,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.02,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2520,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 73,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giovani Lo Celso",
+          "ParticiantId": 604126,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 7.02,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1396,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 74,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Real Betis",
+          "Positions": [
+            85,
+            75,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Samú",
+          "ParticiantId": 1130583,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2705,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 75,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Mallorca",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Jan Oblak",
+          "ParticiantId": 177126,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 7.01,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 76,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Suazo",
+          "ParticiantId": 659490,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 7.01,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2096,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 77,
+          "ParticipantCountryCode": "CHI",
+          "TeamName": "Sevilla",
+          "Positions": [
+            38,
+            59,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Ander Barrenetxea",
+          "ParticiantId": 1002618,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 7.01,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1769,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 77,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            87,
+            83,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Rubén Vargas",
+          "ParticiantId": 860752,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1608,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 79,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Sevilla",
+          "Positions": [
+            87,
+            72,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Vicente",
+          "ParticiantId": 1229177,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1256,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 79,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Sergi Darder",
+          "ParticiantId": 282472,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2689,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 79,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            85,
+            77,
+            65,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Valentin Rosier",
+          "ParticiantId": 763970,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2554,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 82,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Osasuna",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Álvaro Núñez",
+          "ParticiantId": 1132355,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1984,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 82,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            33,
+            71,
+            32,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Juan Iglesias",
+          "ParticiantId": 1102289,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3189,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 82,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            32,
+            59,
+            51,
+            33,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Stole Dimitrievski",
+          "ParticiantId": 254241,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.98,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 85,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Molina",
+          "ParticiantId": 726345,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1321,
+          "MatchesPlayed": 26,
+          "StatValueCount": 21,
+          "Rank": 86,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            32,
+            68,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Federico Viñas",
+          "ParticiantId": 1032811,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.98,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2451,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 87,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            115,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Santi Comesaña",
+          "ParticiantId": 671865,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2413,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 88,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            74,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Pathé Ciss",
+          "ParticiantId": 872396,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1995,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 89,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            66,
+            36,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Unai Simón",
+          "ParticiantId": 660625,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.97,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3330,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 90,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Bigas",
+          "ParticiantId": 291635,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2068,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 91,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Axel Witsel",
+          "ParticiantId": 39591,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2533,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 92,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Girona",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Alberto Moleiro",
+          "ParticiantId": 1184694,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2490,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 93,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            78,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Sergio Carreira",
+          "ParticiantId": 1106742,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2693,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 94,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            78,
+            72,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Ruggeri",
+          "ParticiantId": 1051097,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1775,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 94,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás González",
+          "ParticiantId": 841672,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1453,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 96,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            78,
+            85,
+            68,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Alfonso Pedraza",
+          "ParticiantId": 629594,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1690,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 96,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Héctor Bellerín",
+          "ParticiantId": 427438,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1820,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 96,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Matías Dituro",
+          "ParticiantId": 592412,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 99,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Elche",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Íñigo Ruíz de Galarreta",
+          "ParticiantId": 282462,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2231,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 100,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Robert Lewandowski",
+          "ParticiantId": 93447,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1656,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 100,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Barcelona",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jon Martín",
+          "ParticiantId": 1523234,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2250,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 102,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Brais Méndez",
+          "ParticiantId": 640122,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1672,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 103,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            84,
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Aitor Ruibal",
+          "ParticiantId": 676533,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1814,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 104,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            32,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Dávid Hancko",
+          "ParticiantId": 727897,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2434,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 105,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Unai López",
+          "ParticiantId": 571615,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1618,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 105,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jon Moncayola",
+          "ParticiantId": 921825,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3028,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 105,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            64,
+            74,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Álvaro Rodriguez",
+          "ParticiantId": 1327406,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2200,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 108,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Elche",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Javier Guerra",
+          "ParticiantId": 1284429,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2069,
+          "MatchesPlayed": 36,
+          "StatValueCount": 32,
+          "Rank": 108,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            74,
+            64,
+            85,
+            104,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Aymeric Laporte",
+          "ParticiantId": 411617,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2060,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 110,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lucien Agoumé",
+          "ParticiantId": 971790,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2693,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 110,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sevilla",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Javi Rueda",
+          "ParticiantId": 1310440,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1404,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 112,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            72,
+            62,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Marc Bartra",
+          "ParticiantId": 195305,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1978,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 113,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mauro Arambarri",
+          "ParticiantId": 625340,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.92,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3255,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 114,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Getafe",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Adrián De La Fuente",
+          "ParticiantId": 952528,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2710,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 115,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "José Gayà",
+          "ParticiantId": 391058,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2461,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 116,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Jon Aramburu",
+          "ParticiantId": 1249284,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2778,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 117,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Luis Rioja",
+          "ParticiantId": 638070,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2636,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 117,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            72,
+            83,
+            78,
+            87,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Sergio Herrera",
+          "ParticiantId": 683762,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.9,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 3285,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 119,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Griezmann",
+          "ParticiantId": 184138,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1468,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 120,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ronald Araujo",
+          "ParticiantId": 921253,
+          "TeamId": 8634,
+          "TeamColor": "#971e48",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1061,
+          "MatchesPlayed": 24,
+          "StatValueCount": 19,
+          "Rank": 120,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Barcelona",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Víctor Muñoz",
+          "ParticiantId": 1553105,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2668,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 120,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Román",
+          "ParticiantId": 1359911,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1310,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 123,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Tenaglia",
+          "ParticiantId": 860314,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.89,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 3239,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 124,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            34,
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Álex Baena",
+          "ParticiantId": 942372,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1572,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 125,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            78,
+            87,
+            86,
+            106,
+            76,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ante Budimir",
+          "ParticiantId": 251269,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.88,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2953,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 126,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Osasuna",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marc Aguado",
+          "ParticiantId": 1392232,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2514,
+          "MatchesPlayed": 35,
+          "StatValueCount": 33,
+          "Rank": 127,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Soler",
+          "ParticiantId": 708890,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2325,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 128,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            76,
+            66,
+            85,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Jorge de Frutos",
+          "ParticiantId": 797901,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.88,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2483,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 129,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sergi Cardona",
+          "ParticiantId": 1059657,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1965,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 130,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Johan Mojica",
+          "ParticiantId": 474673,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2725,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 130,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Mallorca",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Raúl Asencio",
+          "ParticiantId": 1580528,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1706,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 130,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ferrán Jutglà",
+          "ParticiantId": 1102732,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.88,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1663,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 133,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            105,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Álex Moreno",
+          "ParticiantId": 477588,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.88,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2558,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 134,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sergi Altimira",
+          "ParticiantId": 1310480,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1182,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 135,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Rubén Garcia",
+          "ParticiantId": 384413,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2247,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 135,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            83,
+            72,
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Oso",
+          "ParticiantId": 1575945,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1409,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 135,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            59,
+            38,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Iván Martin",
+          "ParticiantId": 967871,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2538,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 138,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ionuț Radu",
+          "ParticiantId": 681213,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.86,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 3420,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 139,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Daley Blind",
+          "ParticiantId": 161012,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 140,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Girona",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Pep Chavarría",
+          "ParticiantId": 988805,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2681,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 141,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Guedes",
+          "ParticiantId": 536455,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1832,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 141,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            87,
+            78,
+            72,
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "José Ángel Carmona",
+          "ParticiantId": 1281461,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2564,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 143,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            32,
+            33,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Catena",
+          "ParticiantId": 814663,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3073,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 144,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Vitor Reis",
+          "ParticiantId": 1580952,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3138,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 144,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Girona",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Óscar Mingueza",
+          "ParticiantId": 952095,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1967,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 146,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            72,
+            78,
+            68,
+            49,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Filip Ugrinic",
+          "ParticiantId": 800615,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1507,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 147,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Sivera",
+          "ParticiantId": 530468,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.85,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3420,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 148,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ilaix Moriba",
+          "ParticiantId": 1109046,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2488,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 149,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Paulo Gazzaniga",
+          "ParticiantId": 278285,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.84,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3103,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 150,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Girona",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Brahim Díaz",
+          "ParticiantId": 750027,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.84,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1252,
+          "MatchesPlayed": 30,
+          "StatValueCount": 26,
+          "Rank": 151,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            83,
+            104,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Iván Romero",
+          "ParticiantId": 1209441,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2278,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 152,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            115,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jonny Otto",
+          "ParticiantId": 360918,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2998,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 153,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            32,
+            33,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Robin Le Normand",
+          "ParticiantId": 609516,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1783,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 154,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Pau Navarro",
+          "ParticiantId": 1531887,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1924,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 155,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Pacha Espino",
+          "ParticiantId": 526968,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1480,
+          "MatchesPlayed": 30,
+          "StatValueCount": 25,
+          "Rank": 156,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            38,
+            87,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Flavien Boyomo",
+          "ParticiantId": 1187734,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2545,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 156,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Osasuna",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Álvaro Garcia",
+          "ParticiantId": 474658,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2105,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 158,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "André Silva",
+          "ParticiantId": 388523,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1853,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 159,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Elche",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Francés",
+          "ParticiantId": 1112511,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1103,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 159,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tyrhys Dolan",
+          "ParticiantId": 1181101,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2431,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 161,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Espanyol",
+          "Positions": [
+            87,
+            72,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Martínez",
+          "ParticiantId": 923298,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1865,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 162,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            66,
+            86,
+            76,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Óscar Valentín",
+          "ParticiantId": 956622,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2113,
+          "MatchesPlayed": 33,
+          "StatValueCount": 31,
+          "Rank": 163,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Pere Milla",
+          "ParticiantId": 593129,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1986,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 163,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            87,
+            78,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Torró",
+          "ParticiantId": 303879,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2307,
+          "MatchesPlayed": 34,
+          "StatValueCount": 32,
+          "Rank": 163,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Nobel Mendy",
+          "ParticiantId": 1428427,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1804,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 166,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Matías Moreno",
+          "ParticiantId": 1605748,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2256,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 167,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Levante",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jon Olasagasti",
+          "ParticiantId": 1131957,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1729,
+          "MatchesPlayed": 33,
+          "StatValueCount": 30,
+          "Rank": 167,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            84,
+            76,
+            78,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Leo Román",
+          "ParticiantId": 1187702,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 169,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Domingos Duarte",
+          "ParticiantId": 566425,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2928,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 170,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Getafe",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jesús Areso",
+          "ParticiantId": 1037537,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1504,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 170,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Odysseas Vlachodimos",
+          "ParticiantId": 304355,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.79,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 172,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Sevilla",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Borja Iglesias",
+          "ParticiantId": 609505,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1902,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 173,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Martim Neto",
+          "ParticiantId": 1226189,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1352,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 174,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Elche",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Moi Gómez",
+          "ParticiantId": 262592,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1196,
+          "MatchesPlayed": 26,
+          "StatValueCount": 22,
+          "Rank": 174,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            76,
+            85,
+            66,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Kervin Arriaga",
+          "ParticiantId": 839750,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1526,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 174,
+          "ParticipantCountryCode": "HON",
+          "TeamName": "Levante",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Sørloth",
+          "ParticiantId": 440330,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.79,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1981,
+          "MatchesPlayed": 35,
+          "StatValueCount": 33,
+          "Rank": 177,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Torre",
+          "ParticiantId": 1233404,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1603,
+          "MatchesPlayed": 35,
+          "StatValueCount": 29,
+          "Rank": 178,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            85,
+            106,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Marc Roca",
+          "ParticiantId": 640220,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2025,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 179,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jon Gorrotxategi",
+          "ParticiantId": 1323827,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2215,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 180,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            65,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Diego Rico",
+          "ParticiantId": 488718,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1753,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 181,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Iago Aspas",
+          "ParticiantId": 174472,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.78,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1130,
+          "MatchesPlayed": 32,
+          "StatValueCount": 23,
+          "Rank": 182,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            103,
+            84,
+            105,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Igor Zubeldia",
+          "ParticiantId": 698653,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2082,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 183,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Valentín Gómez",
+          "ParticiantId": 1338016,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1875,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 184,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Real Betis",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Víctor García",
+          "ParticiantId": 977618,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1040,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 184,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            83,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Dani Parejo",
+          "ParticiantId": 75307,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1390,
+          "MatchesPlayed": 32,
+          "StatValueCount": 28,
+          "Rank": 184,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mikel Jauregizar",
+          "ParticiantId": 1553099,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2843,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 187,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Nacho Vidal",
+          "ParticiantId": 640238,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2272,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 188,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Fran Beltrán",
+          "ParticiantId": 785511,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1544,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 188,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Aimar Oroz",
+          "ParticiantId": 1054786,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2152,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 188,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            85,
+            76,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Javi López",
+          "ParticiantId": 1159181,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1712,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 188,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Natan",
+          "ParticiantId": 1188375,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2810,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 188,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Real Betis",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Clemens Riedel",
+          "ParticiantId": 1279557,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1397,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 188,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Espanyol",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Rafa Mir",
+          "ParticiantId": 640492,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1809,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 194,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            104,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Álvarez",
+          "ParticiantId": 1308414,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1337,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 195,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            107,
+            78,
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Víctor Chust",
+          "ParticiantId": 1192393,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.76,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2165,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 196,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Carl Starfelt",
+          "ParticiantId": 497662,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1492,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 197,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Leandro Cabrera",
+          "ParticiantId": 169586,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3330,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 198,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Espanyol",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Juanlu Sánchez",
+          "ParticiantId": 1158512,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1993,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 198,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            51,
+            32,
+            83,
+            71,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Omar Mascarell",
+          "ParticiantId": 359191,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2245,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 200,
+          "ParticipantCountryCode": "EQG",
+          "TeamName": "Mallorca",
+          "Positions": [
+            66,
+            76,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Gorka Guruzeta",
+          "ParticiantId": 711231,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2371,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 200,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Isi Palazón",
+          "ParticiantId": 638010,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2262,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 202,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            85,
+            73,
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Chidera Ejuke",
+          "ParticiantId": 837270,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 923,
+          "MatchesPlayed": 27,
+          "StatValueCount": 22,
+          "Rank": 203,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Sevilla",
+          "Positions": [
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Raíllo",
+          "ParticiantId": 640231,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2070,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 203,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Abdelkabir Abqar",
+          "ParticiantId": 956921,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1440,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 203,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Getafe",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Sow",
+          "ParticiantId": 707970,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2195,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 206,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Sevilla",
+          "Positions": [
+            77,
+            66,
+            83,
+            78,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Thiago Almada",
+          "ParticiantId": 955271,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1312,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 207,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            78,
+            85,
+            87,
+            77,
+            106,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Manu Morlanes",
+          "ParticiantId": 784241,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1773,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 207,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Sánchez",
+          "ParticiantId": 1052330,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2818,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 207,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Boyé",
+          "ParticiantId": 561164,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.73,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1959,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 210,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Javi Rodríguez",
+          "ParticiantId": 1435439,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2561,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 211,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Omar El Hilali",
+          "ParticiantId": 1208708,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2828,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 211,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Espanyol",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Duje Ćaleta-Car",
+          "ParticiantId": 557799,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2150,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 213,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Beñat Turrientes",
+          "ParticiantId": 1210647,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1347,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 214,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Ibánez",
+          "ParticiantId": 1238154,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2247,
+          "MatchesPlayed": 37,
+          "StatValueCount": 36,
+          "Rank": 215,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Rodríguez",
+          "ParticiantId": 115591,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1546,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 215,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Real Betis",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tajon Buchanan",
+          "ParticiantId": 1026135,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1821,
+          "MatchesPlayed": 34,
+          "StatValueCount": 32,
+          "Rank": 217,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Villarreal",
+          "Positions": [
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Thierry Correia",
+          "ParticiantId": 992052,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1394,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 218,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            32,
+            71,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Martin Valjent",
+          "ParticiantId": 521846,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3309,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 219,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Mallorca",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Djené",
+          "ParticiantId": 421365,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2585,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 219,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Getafe",
+          "Positions": [
+            33,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Kiko",
+          "ParticiantId": 175311,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2020,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 219,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            51,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Álvarez",
+          "ParticiantId": 1209980,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1897,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 219,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            85,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Nemanja Gudelj",
+          "ParticiantId": 178753,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2348,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 219,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Sevilla",
+          "Positions": [
+            35,
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Franco Mastantuono",
+          "ParticiantId": 1607566,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1037,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 219,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Luka Sučić",
+          "ParticiantId": 959597,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1018,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 225,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            85,
+            104,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Gerard Gumbau",
+          "ParticiantId": 522234,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1171,
+          "MatchesPlayed": 28,
+          "StatValueCount": 21,
+          "Rank": 226,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            66,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "César Tárrega",
+          "ParticiantId": 1311985,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2597,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 227,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dani Calvo",
+          "ParticiantId": 545905,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1609,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 227,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Abel Bretones",
+          "ParticiantId": 1323398,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1619,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 229,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            38,
+            59,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Vladyslav Vanat",
+          "ParticiantId": 1231648,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1960,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 230,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Girona",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Etta Eyong",
+          "ParticiantId": 1392779,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1668,
+          "MatchesPlayed": 33,
+          "StatValueCount": 28,
+          "Rank": 230,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Levante",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Fernando Calero",
+          "ParticiantId": 839232,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2150,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 232,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Akor Adams",
+          "ParticiantId": 958640,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.68,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2059,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 233,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Sevilla",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Alex Berenguer",
+          "ParticiantId": 574629,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2164,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 234,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            83,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "José Copete",
+          "ParticiantId": 896402,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1760,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 234,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Gonzalo García",
+          "ParticiantId": 1413847,
+          "TeamId": 8633,
+          "TeamColor": "#085098",
+          "StatValue": 6.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 952,
+          "MatchesPlayed": 30,
+          "StatValueCount": 22,
+          "Rank": 236,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Madrid",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Renato Veiga",
+          "ParticiantId": 1343750,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2478,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 237,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Villarreal",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Sánchez",
+          "ParticiantId": 50047,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1298,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 237,
+          "ParticipantCountryCode": "CHI",
+          "TeamName": "Sevilla",
+          "Positions": [
+            106,
+            85,
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Nelson Deossa",
+          "ParticiantId": 1315711,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 736,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 237,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Real Betis",
+          "Positions": [
+            64,
+            77,
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Abderrahman Rebbach",
+          "ParticiantId": 1200941,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1492,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 240,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            79,
+            59,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Lemar",
+          "ParticiantId": 468931,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1259,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 240,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Girona",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Peque Fernández",
+          "ParticiantId": 1132607,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 978,
+          "MatchesPlayed": 26,
+          "StatValueCount": 19,
+          "Rank": 240,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            85,
+            75,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Iñaki Williams",
+          "ParticiantId": 604105,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.65,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2168,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 243,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            83,
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Léo Pétrot",
+          "ParticiantId": 708457,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1568,
+          "MatchesPlayed": 32,
+          "StatValueCount": 23,
+          "Rank": 244,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Elche",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Batista Mendy",
+          "ParticiantId": 1078729,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1619,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 244,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sevilla",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jorge Herrando",
+          "ParticiantId": 1098365,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1598,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 244,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ilyas Chaira",
+          "ParticiantId": 1169595,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2458,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 244,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            87,
+            83,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Rincón",
+          "ParticiantId": 1427819,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1741,
+          "MatchesPlayed": 33,
+          "StatValueCount": 30,
+          "Rank": 248,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jon Pacheco",
+          "ParticiantId": 1112072,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1734,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 248,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Colombatto",
+          "ParticiantId": 686460,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2069,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 248,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Alberto Reina",
+          "ParticiantId": 1323510,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2480,
+          "MatchesPlayed": 37,
+          "StatValueCount": 35,
+          "Rank": 248,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            85,
+            76,
+            104,
+            64,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ayoze Pérez",
+          "ParticiantId": 479020,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1122,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 252,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Villarreal",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Youssef Enríquez",
+          "ParticiantId": 1403692,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1332,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 253,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            38,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Rahim Alhassane",
+          "ParticiantId": 1333066,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1710,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 254,
+          "ParticipantCountryCode": "NIG",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Alex Remiro",
+          "ParticiantId": 616539,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3330,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 255,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Urko González",
+          "ParticiantId": 1187767,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2629,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 255,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "David Carmo",
+          "ParticiantId": 954962,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1787,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 257,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Andoni Gorosabel",
+          "ParticiantId": 839893,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1358,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 257,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Iker Losada",
+          "ParticiantId": 1082930,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 898,
+          "MatchesPlayed": 23,
+          "StatValueCount": 19,
+          "Rank": 257,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            87,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Largie Ramazani",
+          "ParticiantId": 1077915,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1224,
+          "MatchesPlayed": 27,
+          "StatValueCount": 22,
+          "Rank": 257,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            87,
+            83,
+            78,
+            72,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Williot Swedberg",
+          "ParticiantId": 1272740,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1268,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 257,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            107,
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Oihan Sancet",
+          "ParticiantId": 950545,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1803,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 262,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Díaz",
+          "ParticiantId": 715069,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1869,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 263,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            73,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jeremy Toljan",
+          "ParticiantId": 443966,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3173,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 263,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Levante",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Denis Suárez",
+          "ParticiantId": 282281,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1406,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 265,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Jan Virgili",
+          "ParticiantId": 1690093,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1797,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 266,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            87,
+            78,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Carles Aleñá",
+          "ParticiantId": 637756,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1995,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 267,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            78,
+            77,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Vivian",
+          "ParticiantId": 940743,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2563,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 268,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Duro",
+          "ParticiantId": 929838,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1981,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 269,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Santi Cazorla",
+          "ParticiantId": 37436,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 925,
+          "MatchesPlayed": 28,
+          "StatValueCount": 23,
+          "Rank": 270,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kike García",
+          "ParticiantId": 183353,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1727,
+          "MatchesPlayed": 37,
+          "StatValueCount": 34,
+          "Rank": 271,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Diego López",
+          "ParticiantId": 1284434,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1762,
+          "MatchesPlayed": 34,
+          "StatValueCount": 30,
+          "Rank": 272,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            83,
+            72,
+            104,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Robert Navarro",
+          "ParticiantId": 1011117,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1294,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 273,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Alejandro Rego",
+          "ParticiantId": 1425769,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1265,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 273,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Arnaut Danjuma",
+          "ParticiantId": 704151,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1627,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 273,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            78,
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Costas",
+          "ParticiantId": 479217,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2064,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 276,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jon Guridi",
+          "ParticiantId": 678192,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1240,
+          "MatchesPlayed": 28,
+          "StatValueCount": 23,
+          "Rank": 276,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            77,
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Joseph",
+          "ParticiantId": 1344677,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.56,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1703,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 278,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            83,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Mendoza",
+          "ParticiantId": 1419969,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1231,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 279,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            74,
+            66,
+            84,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Haissem Hassan",
+          "ParticiantId": 971787,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1943,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 280,
+          "ParticipantCountryCode": "EGY",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Pol Lozano",
+          "ParticiantId": 750031,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2171,
+          "MatchesPlayed": 33,
+          "StatValueCount": 31,
+          "Rank": 280,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kareem Tunde",
+          "ParticiantId": 1875615,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1144,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 280,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            83,
+            88,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Joel Roca",
+          "ParticiantId": 1326043,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1469,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 283,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Gil",
+          "ParticiantId": 970692,
+          "TeamId": 7732,
+          "TeamColor": "#CF152D",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1586,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 284,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Girona",
+          "Positions": [
+            87,
+            103,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Víctor Parada",
+          "ParticiantId": 1056071,
+          "TeamId": 9866,
+          "TeamColor": "#0351A3",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2151,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 285,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Deportivo Alavés",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Roberto Fernández",
+          "ParticiantId": 1252373,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2387,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 286,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Durán",
+          "ParticiantId": 1322858,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1424,
+          "MatchesPlayed": 30,
+          "StatValueCount": 28,
+          "Rank": 287,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            105,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Adrià Pedrosa",
+          "ParticiantId": 927646,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1084,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 288,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Elche",
+          "Positions": [
+            38,
+            59,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Raúl García",
+          "ParticiantId": 1094778,
+          "TeamId": 8371,
+          "TeamColor": "#af1428",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1013,
+          "MatchesPlayed": 36,
+          "StatValueCount": 30,
+          "Rank": 288,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Osasuna",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Conor Gallagher",
+          "ParticiantId": 966027,
+          "TeamId": 9906,
+          "TeamColor": "#C63527",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 665,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 290,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Atlético Madrid",
+          "Positions": [
+            85,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jesus Vázquez",
+          "ParticiantId": 1220187,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 962,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 290,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            38,
+            79,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Ilias Akhomach",
+          "ParticiantId": 1311915,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 893,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 290,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Beltrán",
+          "ParticiantId": 974755,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1366,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 293,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Fran Pérez",
+          "ParticiantId": 1284430,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1234,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 294,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Riquelme",
+          "ParticiantId": 1072200,
+          "TeamId": 8603,
+          "TeamColor": "#009048",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 295,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Betis",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Umar Sadiq",
+          "ParticiantId": 590494,
+          "TeamId": 10267,
+          "TeamColor": "#ff671f",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1054,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 296,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Valencia CF",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Partey",
+          "ParticiantId": 434325,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 923,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 296,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Villarreal",
+          "Positions": [
+            76,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás Fonseca",
+          "ParticiantId": 950599,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1019,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 296,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Alemão",
+          "ParticiantId": 924300,
+          "TeamId": 8370,
+          "TeamColor": "#EB3A32",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1132,
+          "MatchesPlayed": 26,
+          "StatValueCount": 21,
+          "Rank": 296,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Rayo Vallecano",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Kwasi Sibo",
+          "ParticiantId": 948745,
+          "TeamId": 8670,
+          "TeamColor": "#0032A0",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1686,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 300,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Real Oviedo",
+          "Positions": [
+            64,
+            74,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Isaac Romero",
+          "ParticiantId": 1130991,
+          "TeamId": 8302,
+          "TeamColor": "#C90F20",
+          "StatValue": 6.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1490,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 301,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sevilla",
+          "Positions": [
+            115,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jofre Carreras",
+          "ParticiantId": 1184777,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 921,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 302,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Marín",
+          "ParticiantId": 1293912,
+          "TeamId": 8560,
+          "TeamColor": "#0056B3",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1494,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 303,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Real Sociedad",
+          "Positions": [
+            83,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Mario Martín",
+          "ParticiantId": 1321605,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2134,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 304,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            73,
+            104,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Adrián Liso",
+          "ParticiantId": 1541825,
+          "TeamId": 8305,
+          "TeamColor": "#084888",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1709,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 305,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Getafe",
+          "Positions": [
+            104,
+            78,
+            72,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ramón Terrats",
+          "ParticiantId": 1202587,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1023,
+          "MatchesPlayed": 29,
+          "StatValueCount": 22,
+          "Rank": 306,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Espanyol",
+          "Positions": [
+            78,
+            85,
+            73,
+            87,
+            104,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Roger Brugué",
+          "ParticiantId": 1286471,
+          "TeamId": 8581,
+          "TeamColor": "#335686",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1007,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 307,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Levante",
+          "Positions": [
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jones El-Abdellaoui",
+          "ParticiantId": 1379196,
+          "TeamId": 9910,
+          "TeamColor": "#67ade0",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 668,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 308,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Celta de Vigo",
+          "Positions": [
+            72,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Grady Diangana",
+          "ParticiantId": 654091,
+          "TeamId": 10268,
+          "TeamColor": "#00662D",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 929,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 309,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Elche",
+          "Positions": [
+            73,
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Sánchez",
+          "ParticiantId": 1055327,
+          "TeamId": 8661,
+          "TeamColor": "#c2071f",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1060,
+          "MatchesPlayed": 30,
+          "StatValueCount": 24,
+          "Rank": 309,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mallorca",
+          "Positions": [
+            83,
+            72,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Unai Gómez",
+          "ParticiantId": 1436270,
+          "TeamId": 8315,
+          "TeamColor": "#E2001A",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 932,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 311,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Athletic Club",
+          "Positions": [
+            85,
+            115,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tani Oluwaseyi",
+          "ParticiantId": 1338740,
+          "TeamId": 10205,
+          "TeamColor": "#e19d00",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 892,
+          "MatchesPlayed": 27,
+          "StatValueCount": 20,
+          "Rank": 312,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Villarreal",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Charles Pickel",
+          "ParticiantId": 743720,
+          "TeamId": 8558,
+          "TeamColor": "#1954B2",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 693,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 313,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Espanyol",
+          "Positions": [
+            66,
+            74,
+            85
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "LaLiga"
+}

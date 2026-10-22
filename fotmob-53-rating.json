@@ -1,0 +1,5404 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Cristian Cásseres",
+          "ParticiantId": 845943,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 8.47,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 1,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Florian Thauvin",
+          "ParticiantId": 254308,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 8.16,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 607,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 2,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            84,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Lassine Sinayoko",
+          "ParticiantId": 923196,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 3,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Paris FC",
+          "Positions": [
+            115,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Lamine Camara",
+          "ParticiantId": 1436305,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 3,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Monaco",
+          "Positions": [
+            64,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Zachary Athekame",
+          "ParticiantId": 1595629,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 5,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Lyon",
+          "Positions": [
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Estéban Lepaul",
+          "ParticiantId": 1280225,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.77,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 543,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 6,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Maxime Lopez",
+          "ParticiantId": 614207,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.71,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 562,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 7,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Adil Bourabaa",
+          "ParticiantId": 1900516,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 7.65,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 398,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 8,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Le Mans",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Eric Dier",
+          "ParticiantId": 361315,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 9,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Monaco",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Casper Tengstedt",
+          "ParticiantId": 1102240,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 7.62,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 316,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 10,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ilan Kebbal",
+          "ParticiantId": 999690,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 549,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 11,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Paris FC",
+          "Positions": [
+            83,
+            72,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kamory Doumbia",
+          "ParticiantId": 1310270,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.6,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 568,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 12,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Brest",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Vítinha",
+          "ParticiantId": 1061249,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 496,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 13,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            75,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Vanderson",
+          "ParticiantId": 1207992,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 576,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 14,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Paris Brunner",
+          "ParticiantId": 1412956,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.56,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 390,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 15,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Monaco",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Flávio Nazinho",
+          "ParticiantId": 1239590,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 620,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 16,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Monaco",
+          "Positions": [
+            38,
+            79,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ernest Nuamah",
+          "ParticiantId": 1338390,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.51,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 378,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 17,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Lyon",
+          "Positions": [
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Danny Namaso",
+          "ParticiantId": 817724,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 7.49,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 573,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 18,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Auxerre",
+          "Positions": [
+            86,
+            107,
+            105,
+            103,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Clauss",
+          "ParticiantId": 715301,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 608,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 19,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Nice",
+          "Positions": [
+            62,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Jeffrey De Lange",
+          "ParticiantId": 687868,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 19,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Marseille",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gessime Yassine",
+          "ParticiantId": 1603755,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 607,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 21,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            83,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Lopes",
+          "ParticiantId": 167035,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 7.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 22,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Angers",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Berke Özer",
+          "ParticiantId": 815912,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 23,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Lille",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Pierre-Emile Højbjerg",
+          "ParticiantId": 266523,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 24,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Marseille",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandr Golovin",
+          "ParticiantId": 586388,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 24,
+          "ParticipantCountryCode": "RUS",
+          "TeamName": "Monaco",
+          "Positions": [
+            85,
+            87,
+            78,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Amine Gouiri",
+          "ParticiantId": 844437,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 601,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 26,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Marseille",
+          "Positions": [
+            115,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Nuno Mendes",
+          "ParticiantId": 1158945,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 214,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 27,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Pierre Lees-Melou",
+          "ParticiantId": 660462,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 28,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Cameron Archer",
+          "ParticiantId": 1086647,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 434,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 29,
+          "ParticipantCountryCode": "JAM",
+          "TeamName": "Auxerre",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Greif",
+          "ParticiantId": 651910,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 30,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Lyon",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Jørgensen",
+          "ParticiantId": 1481910,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 31,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            73,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ismaëlo Ganiou",
+          "ParticiantId": 1406645,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 32,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            35,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Hrádecky",
+          "ParticiantId": 66757,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.41,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 33,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Monaco",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marquinhos",
+          "ParticiantId": 267365,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 34,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Fabián Ruiz",
+          "ParticiantId": 605654,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 326,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 35,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Romain Faivre",
+          "ParticiantId": 904021,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 392,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 35,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Auxerre",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Niakhaté",
+          "ParticiantId": 592102,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 37,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Lyon",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Corentin Tolisso",
+          "ParticiantId": 473852,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 500,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 38,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lyon",
+          "Positions": [
+            85,
+            77,
+            66,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Magnetti",
+          "ParticiantId": 812415,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 38,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Nathaniel Adjei",
+          "ParticiantId": 1351065,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 615,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 40,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Lorient",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Bradley Locko",
+          "ParticiantId": 1285784,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 41,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kévin Danois",
+          "ParticiantId": 1305543,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 41,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Auxerre",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Santos",
+          "ParticiantId": 1397857,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.31,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 472,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 43,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Lille",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Amine Harit",
+          "ParticiantId": 780815,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 568,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 44,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Marseille",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Stanis Idumbo",
+          "ParticiantId": 1366936,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 44,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Monaco",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Alexsandro Ribeiro",
+          "ParticiantId": 1186553,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 46,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Lille",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Joris Chotard",
+          "ParticiantId": 1079548,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 603,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 46,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Adrien Thomasson",
+          "ParticiantId": 317062,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 485,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 48,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            66,
+            76,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Amine Sbaï",
+          "ParticiantId": 1242587,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 606,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 48,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Angers",
+          "Positions": [
+            87,
+            106,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ruben Aguilar",
+          "ParticiantId": 561046,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 50,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Adama Camara",
+          "ParticiantId": 1513317,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 51,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Paris FC",
+          "Positions": [
+            32,
+            76,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Valentin Rongier",
+          "ParticiantId": 562719,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 569,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 52,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Dilane Bakwa",
+          "ParticiantId": 1079539,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.26,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 328,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 53,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            83,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Himad Abdelli",
+          "ParticiantId": 956659,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.25,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 549,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 54,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Marseille",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Arsène Kouassi",
+          "ParticiantId": 1640832,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 55,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Lorient",
+          "Positions": [
+            68,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Florian Sotoca",
+          "ParticiantId": 612699,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 55,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Emerson",
+          "ParticiantId": 267371,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 55,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Marseille",
+          "Positions": [
+            38,
+            68,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jean-Victor Makengo",
+          "ParticiantId": 699461,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 58,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lorient",
+          "Positions": [
+            84,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "João Neves",
+          "ParticiantId": 1342757,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 451,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 58,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Lionel Mpasi-Nzau",
+          "ParticiantId": 912286,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 269,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 58,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Le Havre",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Noah Cadiou",
+          "ParticiantId": 1097446,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.23,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 61,
+          "ParticipantCountryCode": "GLP",
+          "TeamName": "Lorient",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Abdelmonem",
+          "ParticiantId": 1179331,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 512,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 62,
+          "ParticipantCountryCode": "EGY",
+          "TeamName": "Nice",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Louis Mafouta",
+          "ParticiantId": 807955,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 585,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 63,
+          "ParticipantCountryCode": "CTA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Calodat",
+          "ParticiantId": 1317318,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 383,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 63,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            59,
+            88,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Pathé Mboup",
+          "ParticiantId": 1514456,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 65,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Brest",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ferrán Torres",
+          "ParticiantId": 881771,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 66,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            115,
+            103,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Désiré Doué",
+          "ParticiantId": 1339208,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 355,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 67,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            103,
+            87,
+            105,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Timothy Weah",
+          "ParticiantId": 889536,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 527,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 68,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Marseille",
+          "Positions": [
+            32,
+            62,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Rouault",
+          "ParticiantId": 1079554,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 69,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Dembélé",
+          "ParticiantId": 692984,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 238,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 70,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            105,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Khvicha Kvaratskhelia",
+          "ParticiantId": 900433,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 377,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            107,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Matthieu Udol",
+          "ParticiantId": 660326,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 468,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 72,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            68,
+            78,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Hákon Arnar Haraldsson",
+          "ParticiantId": 1044470,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 494,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 73,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Lille",
+          "Positions": [
+            85,
+            64,
+            106,
+            74,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Diego Coppola",
+          "ParticiantId": 1321562,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 73,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ludovic Ajorque",
+          "ParticiantId": 471153,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 73,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Xavier Mandza",
+          "ParticiantId": 2116938,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 73,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Nice",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Sadibou Sané",
+          "ParticiantId": 1523208,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 77,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Monaco",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dembo Sylla",
+          "ParticiantId": 1399999,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 612,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Lorient",
+          "Positions": [
+            72,
+            62,
+            82,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Hernández",
+          "ParticiantId": 504606,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 296,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 78,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Nabil Bentaleb",
+          "ParticiantId": 500520,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Lille",
+          "Positions": [
+            66,
+            75,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Edan Diop",
+          "ParticiantId": 1385897,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 78,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            87,
+            78,
+            77,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Montassar Talbi",
+          "ParticiantId": 846392,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 82,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Lorient",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Pablo Pagis",
+          "ParticiantId": 1331097,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 524,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 82,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Maghnes Akliouche",
+          "ParticiantId": 1305618,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 84,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            83,
+            84,
+            104,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Mbappé",
+          "ParticiantId": 1426809,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 353,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 85,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Trapp",
+          "ParticiantId": 145550,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 85,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Paris FC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Loïs Openda",
+          "ParticiantId": 747767,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.12,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 87,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Lyon",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Pavel Šulc",
+          "ParticiantId": 1037539,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 417,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 88,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Lyon",
+          "Positions": [
+            105,
+            85,
+            83,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mark McKenzie",
+          "ParticiantId": 924485,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 88,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Mahdi Camara",
+          "ParticiantId": 770321,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 418,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 90,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            73,
+            86,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "CJ Egan-Riley",
+          "ParticiantId": 1187227,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 615,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 90,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Marseille",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin André",
+          "ParticiantId": 148830,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 284,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 90,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Szymański",
+          "ParticiantId": 765466,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 317,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 93,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Rennes",
+          "Positions": [
+            84,
+            73,
+            83,
+            72,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Igor Paixão",
+          "ParticiantId": 1265963,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 457,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 94,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Marseille",
+          "Positions": [
+            87,
+            68,
+            86,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Mbwana Samatta",
+          "ParticiantId": 437329,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 608,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 95,
+          "ParticipantCountryCode": "TAN",
+          "TeamName": "Le Havre",
+          "Positions": [
+            115,
+            107,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Simon Ebonog",
+          "ParticiantId": 1469758,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 614,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 95,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Amoura",
+          "ParticiantId": 1134206,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 368,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 95,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Nice",
+          "Positions": [
+            115,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Branco van den Boomen",
+          "ParticiantId": 505059,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 95,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Angers",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Niels Nkounkou",
+          "ParticiantId": 1104441,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 403,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 99,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Nice",
+          "Positions": [
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Sofiane Diop",
+          "ParticiantId": 953812,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 99,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Nice",
+          "Positions": [
+            85,
+            87,
+            78,
+            106,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Pape Demba Diop",
+          "ParticiantId": 1417802,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 479,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 99,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Robin Risser",
+          "ParticiantId": 1390336,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 102,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jeyland Mitchell",
+          "ParticiantId": 1340071,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 102,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Ngoy",
+          "ParticiantId": 1252070,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 102,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Lille",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Amir Richardson",
+          "ParticiantId": 1255860,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 614,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 105,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Le Havre",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Egil Selvik",
+          "ParticiantId": 631757,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 106,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brest",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Abdallah Sima",
+          "ParticiantId": 1189856,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 384,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 107,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Lens",
+          "Positions": [
+            86,
+            105,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Niko Sigur",
+          "ParticiantId": 1494508,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 244,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 108,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            32,
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Merwan Ifnaou",
+          "ParticiantId": 1523321,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 326,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 108,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Panos Katseris",
+          "ParticiantId": 1427808,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 108,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Lorient",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Reynolds",
+          "ParticiantId": 924446,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 221,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 111,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Rennes",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gautier Lloris",
+          "ParticiantId": 420731,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 112,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mahamadou Nagida",
+          "ParticiantId": 1553514,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 349,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 113,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Rennes",
+          "Positions": [
+            38,
+            32,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Digne",
+          "ParticiantId": 210111,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 113,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Mille",
+          "ParticiantId": 1342983,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 113,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            84,
+            64,
+            73,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Ayase Ueda",
+          "ParticiantId": 942393,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 227,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 116,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Lille",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Denis Zakaria",
+          "ParticiantId": 598355,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 116,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Monaco",
+          "Positions": [
+            66,
+            35,
+            32,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Christ Tapé",
+          "ParticiantId": 1666482,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 116,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Toulouse",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Oso",
+          "ParticiantId": 1575945,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 119,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            59,
+            38,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Brice Samba",
+          "ParticiantId": 279714,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 119,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rassoul Ndiaye",
+          "ParticiantId": 1073905,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 407,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 119,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Le Havre",
+          "Positions": [
+            85,
+            64,
+            77,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Matvey Safonov",
+          "ParticiantId": 800880,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 122,
+          "ParticipantCountryCode": "RUS",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Anis Ouzenadji",
+          "ParticiantId": 1797614,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 123,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Guillaume Restes",
+          "ParticiantId": 1524210,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 124,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Kalulu",
+          "ParticiantId": 1610106,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 468,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 124,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Angers",
+          "Positions": [
+            59,
+            38,
+            78,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Nanasi",
+          "ParticiantId": 1156569,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 380,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 124,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            107,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Coulibaly",
+          "ParticiantId": 1524548,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 211,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 124,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            64,
+            83,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Rasmus Nicolaisen",
+          "ParticiantId": 656491,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 355,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 128,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Giroud",
+          "ParticiantId": 46469,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 128,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Hamari Traoré",
+          "ParticiantId": 426892,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 410,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 128,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Paris FC",
+          "Positions": [
+            32,
+            38,
+            37,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Ahmed Touba",
+          "ParticiantId": 792653,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 128,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Le Havre",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Maurits Kjærgaard",
+          "ParticiantId": 1070404,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 132,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lille",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Franjo Ivanović",
+          "ParticiantId": 1406419,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 224,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 132,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lens",
+          "Positions": [
+            115,
+            86,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gauthier Hein",
+          "ParticiantId": 763974,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 558,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 134,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Nice",
+          "Positions": [
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Rayan Bamba",
+          "ParticiantId": 1632788,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 471,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 135,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            86,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Axel Tuanzebe",
+          "ParticiantId": 690149,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 136,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Auxerre",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Yacine Titraoui",
+          "ParticiantId": 1288907,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 361,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 136,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Lens",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Achraf Hakimi",
+          "ParticiantId": 770881,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 408,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 136,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ismaël Doukouré",
+          "ParticiantId": 1178332,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 250,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 136,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            36,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Przemysław Frankowski",
+          "ParticiantId": 402419,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 459,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 140,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Rennes",
+          "Positions": [
+            32,
+            71,
+            51,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Filip Jörgensen",
+          "ParticiantId": 1200984,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giovanni Reyna",
+          "ParticiantId": 1071179,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 425,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Mads Bidstrup",
+          "ParticiantId": 1081025,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 534,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lyon",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Avom",
+          "ParticiantId": 1565010,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 144,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Lorient",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Abdelhamid Aït Boudlal",
+          "ParticiantId": 1581722,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 144,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Rennes",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Felix Bacher",
+          "ParticiantId": 951498,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 551,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 144,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Lyon",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mamady Diambou",
+          "ParticiantId": 1231909,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 121,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 147,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Brest",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Mika Godts",
+          "ParticiantId": 1396372,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 147,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Michał Skóras",
+          "ParticiantId": 954190,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 149,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Lens",
+          "Positions": [
+            68,
+            62,
+            87,
+            78,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Elye Wahi",
+          "ParticiantId": 1213430,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 149,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Nice",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Youssouf Ndayishimiye",
+          "ParticiantId": 1057703,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 149,
+          "ParticipantCountryCode": "BDI",
+          "TeamName": "Nice",
+          "Positions": [
+            35,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Khalis Merah",
+          "ParticiantId": 1793640,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 70,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 152,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lyon",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Mama Baldé",
+          "ParticiantId": 541933,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 237,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 152,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Brest",
+          "Positions": [
+            83,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Kocik",
+          "ParticiantId": 722531,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 441,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 152,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rémy Lascary",
+          "ParticiantId": 1401248,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 152,
+          "ParticipantCountryCode": "GLP",
+          "TeamName": "Auxerre",
+          "Positions": [
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Charlie Cresswell",
+          "ParticiantId": 1186444,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 156,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Rennes",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Carlens Arcus",
+          "ParticiantId": 634110,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 420,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 156,
+          "ParticipantCountryCode": "HAI",
+          "TeamName": "Angers",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Beraldo",
+          "ParticiantId": 1255209,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 156,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            75,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Souleymane Sagnan",
+          "ParticiantId": 1727044,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 246,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 159,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Lens",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Yvon Mvogo",
+          "ParticiantId": 274787,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 160,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Lorient",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Angel Gomes",
+          "ParticiantId": 848667,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 469,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 161,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Marseille",
+          "Positions": [
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Warren Zaïre-Emery",
+          "ParticiantId": 1367615,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 503,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 161,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            73,
+            32,
+            64,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dermane Karim",
+          "ParticiantId": 1276315,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 444,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 163,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Troyes",
+          "Positions": [
+            86,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kenny Lala",
+          "ParticiantId": 279461,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 562,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 163,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Rafik Messali",
+          "ParticiantId": 1640973,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 163,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Toulouse",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tochukwu Nnadi",
+          "ParticiantId": 1353104,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 141,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 163,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Marseille",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lamine Sy",
+          "ParticiantId": 1334805,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 167,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Auxerre",
+          "Positions": [
+            32,
+            51,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Willian Pacho",
+          "ParticiantId": 1137670,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 167,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ngal Ayel Mukau",
+          "ParticiantId": 1428153,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 400,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 167,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Lille",
+          "Positions": [
+            83,
+            73,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Niklas Schmidt",
+          "ParticiantId": 637754,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 167,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Toulouse",
+          "Positions": [
+            66,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Romain Perraud",
+          "ParticiantId": 815465,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 518,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 171,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Kaïl Boudache",
+          "ParticiantId": 1896949,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 288,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 171,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Lyon",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Luca Koleosho",
+          "ParticiantId": 1368318,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 171,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Samir Chergui",
+          "ParticiantId": 1039219,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 422,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 174,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Paris FC",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Axel Witsel",
+          "ParticiantId": 39591,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 174,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Nice",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Otávio",
+          "ParticiantId": 1190113,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 174,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Sousa",
+          "ParticiantId": 1701117,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 447,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 177,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Matthis Abline",
+          "ParticiantId": 1250492,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 177,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            107,
+            106,
+            103,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Amine El Ouazzani",
+          "ParticiantId": 1123505,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 502,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 179,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Angers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Adrien Monfray",
+          "ParticiantId": 465719,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jacen Russell-Rowe",
+          "ParticiantId": 1106866,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 463,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Toulouse",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Mousa Tamari",
+          "ParticiantId": 813055,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 396,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "JOR",
+          "TeamName": "Rennes",
+          "Positions": [
+            79,
+            103,
+            88,
+            105,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kyllian Antonio",
+          "ParticiantId": 1685514,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 183,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Geoffrey Kondogbia",
+          "ParticiantId": 214972,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 204,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 183,
+          "ParticipantCountryCode": "CTA",
+          "TeamName": "Marseille",
+          "Positions": [
+            64,
+            36,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Abner",
+          "ParticiantId": 1060604,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 451,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 185,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Lyon",
+          "Positions": [
+            38,
+            68,
+            87,
+            63,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Ouziad",
+          "ParticiantId": 2156004,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 400,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 185,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Maronnier",
+          "ParticiantId": 1330942,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 407,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 185,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Sidibé",
+          "ParticiantId": 242156,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 226,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 188,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            33,
+            62,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Tousart",
+          "ParticiantId": 612277,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 316,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 188,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            34,
+            75,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Bretelle",
+          "ParticiantId": 1523312,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 404,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 190,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            65,
+            75,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ludovic Blas",
+          "ParticiantId": 693171,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 275,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 191,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            82,
+            72,
+            73,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Camara",
+          "ParticiantId": 1178325,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 484,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 191,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Angers",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gabin Bernardeau",
+          "ParticiantId": 1668294,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 436,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 191,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lorient",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Dário Essugo",
+          "ParticiantId": 1239595,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 258,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 194,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Alexandre Lauray",
+          "ParticiantId": 1039807,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 358,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 194,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Andrija Bulatović",
+          "ParticiantId": 1634789,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 264,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 194,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Lens",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Oppegård",
+          "ParticiantId": 1203189,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 385,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 194,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Auxerre",
+          "Positions": [
+            68,
+            78,
+            87,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Genesis Antwi",
+          "ParticiantId": 1647186,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 619,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 198,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ayumu Seko",
+          "ParticiantId": 857120,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 511,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 198,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Le Havre",
+          "Positions": [
+            34,
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Issa Soumaré",
+          "ParticiantId": 1103837,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 200,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Rennes",
+          "Positions": [
+            106,
+            107,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Raphaël Le Guen",
+          "ParticiantId": 1699556,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 200,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Amo-Ameyaw",
+          "ParticiantId": 1418073,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 244,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 202,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            83,
+            72,
+            84,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ilyas Azizi",
+          "ParticiantId": 1751857,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 203,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Picard",
+          "ParticiantId": 1411553,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 337,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 203,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            78,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Christ Makosso",
+          "ParticiantId": 1474555,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 395,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 205,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "Auxerre",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Noah Nartey",
+          "ParticiantId": 1368710,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 203,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 205,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lyon",
+          "Positions": [
+            77,
+            85,
+            104,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Jim Allevinah",
+          "ParticiantId": 1011026,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 207,
+          "ParticipantCountryCode": "GAB",
+          "TeamName": "Angers",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Yéhvann Diouf",
+          "ParticiantId": 766574,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 208,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Nice",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Harold Voyer",
+          "ParticiantId": 1311670,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 527,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 209,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Zabi",
+          "ParticiantId": 1709839,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 68,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 209,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Paris FC",
+          "Positions": [
+            64,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Boulaye Dia",
+          "ParticiantId": 972120,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 211,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Rennes",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Théo Le Bris",
+          "ParticiantId": 1292354,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 273,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 211,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lorient",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Jean-Clair Todibo",
+          "ParticiantId": 955214,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 213,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Isak Steiner Jensen",
+          "ParticiantId": 1202070,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 152,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 214,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lorient",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nayef Aguerd",
+          "ParticiantId": 617310,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 418,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 215,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Marseille",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Michaël Cuisance",
+          "ParticiantId": 861445,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 390,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 215,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Dro Fernández",
+          "ParticiantId": 1682313,
+          "TeamId": 9847,
+          "TeamColor": "#273F6D",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 151,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 217,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Paris Saint-Germain",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Tanner Tessmann",
+          "ParticiantId": 1057433,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 141,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 218,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Lyon",
+          "Positions": [
+            64,
+            73,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Renaud Ripart",
+          "ParticiantId": 348420,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 219,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            115,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Timothée Pembélé",
+          "ParticiantId": 1108603,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 219,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            34,
+            62,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Buadés",
+          "ParticiantId": 874319,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 249,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 221,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            86,
+            51,
+            88,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Mathys Detourbet",
+          "ParticiantId": 1709473,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 133,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 222,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monaco",
+          "Positions": [
+            87,
+            82,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Moses Simon",
+          "ParticiantId": 467486,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 143,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 222,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            87,
+            78,
+            116
+          ]
+        },
+        {
+          "ParticipantName": "Tyler Morton",
+          "ParticiantId": 1113724,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 443,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 222,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Lyon",
+          "Positions": [
+            66,
+            75,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Sota Nakamura",
+          "ParticiantId": 1714197,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 294,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 225,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Le Havre",
+          "Positions": [
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Koffi",
+          "ParticiantId": 1816726,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 151,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 225,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jacobo Ortega",
+          "ParticiantId": 1677224,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 336,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 227,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Kandet Diawara",
+          "ParticiantId": 1108031,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 318,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 227,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Troyes",
+          "Positions": [
+            88,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Conrad Harder",
+          "ParticiantId": 1482294,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 229,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Diop",
+          "ParticiantId": 1387237,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 229,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "Auxerre",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Habibou Mouhamadou Diallo",
+          "ParticiantId": 601145,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 187,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 231,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Le Mans",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sion Oppong",
+          "ParticiantId": 1717493,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 119,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 232,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Toulouse",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Koné",
+          "ParticiantId": 1888816,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 334,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 233,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Lorient",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Rabillard",
+          "ParticiantId": 717270,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 233,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Vossah",
+          "ParticiantId": 1791727,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 266,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 235,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Başar Önal",
+          "ParticiantId": 1347229,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 211,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 235,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Lille",
+          "Positions": [
+            68,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lilian Rao-Lisoa",
+          "ParticiantId": 1431818,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 235,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Angers",
+          "Positions": [
+            83,
+            32,
+            71,
+            51,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Prosper Peter",
+          "ParticiantId": 1748405,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 253,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 238,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Angers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Naouirou Ahamada",
+          "ParticiantId": 1192854,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 446,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 238,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Auxerre",
+          "Positions": [
+            73,
+            64,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Clément Akpa",
+          "ParticiantId": 1388678,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 617,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 238,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Auxerre",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Iron Gomis",
+          "ParticiantId": 1030945,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 344,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 241,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahima Baldé",
+          "ParticiantId": 1282665,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lorient",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Timothé Nkada",
+          "ParticiantId": 1038058,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 174,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 243,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            105,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Coulibaly",
+          "ParticiantId": 1763598,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 244,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Nice",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Noa Boissé",
+          "ParticiantId": 1668295,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 418,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 244,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Yohou",
+          "ParticiantId": 660565,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 376,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 246,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Yassin Belkhdim",
+          "ParticiantId": 1347791,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 246,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Angers",
+          "Positions": [
+            83,
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Osame Sahraoui",
+          "ParticiantId": 988160,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 115,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 248,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Lille",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Piedfort",
+          "ParticiantId": 1441582,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 474,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 248,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Auxerre",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Dame Gueye",
+          "ParticiantId": 725256,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 403,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 248,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Le Mans",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Josh Maja",
+          "ParticiantId": 791805,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 400,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 248,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Elias Jelert",
+          "ParticiantId": 1305787,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 248,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Le Havre",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Jean Vercruysse",
+          "ParticiantId": 1244864,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 384,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 253,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Mans",
+          "Positions": [
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Quentin Merlin",
+          "ParticiantId": 1233931,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 231,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 253,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Rennes",
+          "Positions": [
+            38,
+            71,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Odsonne Édouard",
+          "ParticiantId": 637746,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 255,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Rayan Fofana",
+          "ParticiantId": 1586559,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 255,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Le Havre",
+          "Positions": [
+            105,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Harouna Djibirin",
+          "ParticiantId": 1832893,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 111,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 255,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Angers",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Julián Vignolo",
+          "ParticiantId": 1611220,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 185,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 258,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Toulouse",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jérémy Le Douaron",
+          "ParticiantId": 917808,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 285,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 259,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            86,
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Thorgan Hazard",
+          "ParticiantId": 264190,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 259,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Lens",
+          "Positions": [
+            85,
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ismaïl Diallo",
+          "ParticiantId": 1668299,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 159,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 261,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Gaëtan Perrin",
+          "ParticiantId": 708435,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 132,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 262,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lille",
+          "Positions": [
+            87,
+            83,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Michel Diaz",
+          "ParticiantId": 1401205,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 262,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Troyes",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Høgsberg",
+          "ParticiantId": 1436942,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 198,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 262,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            34,
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Verdonk",
+          "ParticiantId": 622137,
+          "TeamId": 8639,
+          "TeamColor": "#E01D13",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 122,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 262,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Lille",
+          "Positions": [
+            38,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Rudy Matondo",
+          "ParticiantId": 1738340,
+          "TeamId": 6379,
+          "TeamColor": "#0C1C3D",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 194,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 262,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Paris FC",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Aristide Zossou",
+          "ParticiantId": 1679978,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 127,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 267,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Auxerre",
+          "Positions": [
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Mouhamed Diop",
+          "ParticiantId": 1321149,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 569,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 268,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Troyes",
+          "Positions": [
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Amadou Haidara",
+          "ParticiantId": 688830,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 269,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Lens",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Anis Soubeir",
+          "ParticiantId": 2130847,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 81,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 269,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Monaco",
+          "Positions": [
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Mendy",
+          "ParticiantId": 1254147,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.3,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 124,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 271,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Nice",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Giovani Versini",
+          "ParticiantId": 1441955,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 149,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 272,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brest",
+          "Positions": [
+            82,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Souleymane Faye",
+          "ParticiantId": 1107257,
+          "TeamId": 8689,
+          "TeamColor": "#F05330",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 74,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 273,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Lorient",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Yasser Larouci",
+          "ParticiantId": 1068902,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 274,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Le Mans",
+          "Positions": [
+            38,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Bermont",
+          "ParticiantId": 1573544,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 176,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 275,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Angers",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Boende",
+          "ParticiantId": 1427018,
+          "TeamId": 8521,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 195,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 276,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Brest",
+          "Positions": [
+            85,
+            77,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mezian Mesloub Soares",
+          "ParticiantId": 1980586,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 127,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 276,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Hidalgo",
+          "ParticiantId": 1362516,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 209,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 276,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Toulouse",
+          "Positions": [
+            84,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Eliezer Mayenda",
+          "ParticiantId": 1391052,
+          "TeamId": 9851,
+          "TeamColor": "#E13327",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 118,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 279,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Rennes",
+          "Positions": [
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Keito Nakamura",
+          "ParticiantId": 887704,
+          "TeamId": 9748,
+          "TeamColor": "#0160A0",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 65,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 280,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Lyon",
+          "Positions": [
+            87,
+            68,
+            115,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Lefort",
+          "ParticiantId": 492116,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 509,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 280,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "Angers",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Beach",
+          "ParticiantId": 1335765,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 282,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Troyes",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Junior Mwanga",
+          "ParticiantId": 1362622,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 356,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 283,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            73,
+            34,
+            65,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Elikya Legros",
+          "ParticiantId": 1690114,
+          "TeamId": 8583,
+          "TeamColor": "#055DC6",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 155,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 283,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Auxerre",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Keyliane Abdallah",
+          "ParticiantId": 1638922,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 283,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Marseille",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gauthier Gallon",
+          "ParticiantId": 348409,
+          "TeamId": 9746,
+          "TeamColor": "#6fb0d8",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 361,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 283,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Le Havre",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Fabio Baldé",
+          "ParticiantId": 1666019,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 89,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 283,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nathan N'Goumou",
+          "ParticiantId": 979759,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 154,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 288,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Nice",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Billal Brahimi",
+          "ParticiantId": 961770,
+          "TeamId": 8682,
+          "TeamColor": "#D60000",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 96,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 288,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Le Mans",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Usman Simbakoli",
+          "ParticiantId": 1169692,
+          "TeamId": 8121,
+          "TeamColor": "#000000",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 65,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 290,
+          "ParticipantCountryCode": "CTA",
+          "TeamName": "Angers",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Gradit",
+          "ParticiantId": 513072,
+          "TeamId": 8588,
+          "TeamColor": "#d89f00",
+          "StatValue": 6.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 153,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 291,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lens",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Noah Donkor",
+          "ParticiantId": 1844131,
+          "TeamId": 10242,
+          "TeamColor": "#2A50A1",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 292,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Troyes",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Seny Koumbassa",
+          "ParticiantId": 1791729,
+          "TeamId": 9941,
+          "TeamColor": "#5b417b",
+          "StatValue": 6.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 287,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 293,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Toulouse",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ali Abdi",
+          "ParticiantId": 566187,
+          "TeamId": 9831,
+          "TeamColor": "#181818",
+          "StatValue": 6.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 294,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Nice",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Karim Coulibaly",
+          "ParticiantId": 1643851,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 6.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 294,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Neal Maupay",
+          "ParticiantId": 391064,
+          "TeamId": 8592,
+          "TeamColor": "#0A60A8",
+          "StatValue": 6.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 142,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 294,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Marseille",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Folarin Balogun",
+          "ParticiantId": 982677,
+          "TeamId": 9829,
+          "TeamColor": "#C80C13",
+          "StatValue": 5.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 70,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 297,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Monaco",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Samir El Mourabet",
+          "ParticiantId": 1598170,
+          "TeamId": 9848,
+          "TeamColor": "#294A92",
+          "StatValue": 5.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 167,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 298,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Strasbourg",
+          "Positions": [
+            64,
+            74
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Ligue 1"
+}

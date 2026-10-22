@@ -1,0 +1,5380 @@
+{
+  "TopLists": [
+    {
+      "StatName": "mins_played",
+      "Title": "Minutes played",
+      "Subtitle": "Total matches",
+      "LocalizedTitleId": "minutes_played",
+      "LocalizedSubtitleId": "penalty_conceded_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Adam Jakubech",
+          "ParticiantId": 623747,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Pauschek",
+          "ParticiantId": 250987,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            38,
+            32,
+            34,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Martin Vantruba",
+          "ParticiantId": 761720,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Karhan",
+          "ParticiantId": 1250274,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Rene Lampreht",
+          "ParticiantId": 1580394,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 990.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 990,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Erik Daniel",
+          "ParticiantId": 293482,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 984.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 984,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 6,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kristóf Domonkos",
+          "ParticiantId": 861991,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 971.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 971,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 7,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Kostka",
+          "ParticiantId": 681290,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 965.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 965,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 8,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            72,
+            32,
+            62,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Luka",
+          "ParticiantId": 1235618,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 960.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 960,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 9,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ben Cottrell",
+          "ParticiantId": 1098815,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 932.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 932,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 10,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            74,
+            66,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Šikula",
+          "ParticiantId": 1383058,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 930.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 930,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 11,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            32,
+            51,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lubomir Willweber",
+          "ParticiantId": 620153,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 926.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 926,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 12,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Krisztián Bari",
+          "ParticiantId": 1104440,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 925.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 925,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 13,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Marin Laušić",
+          "ParticiantId": 1310450,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 921.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 921,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 14,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Ján Bernát",
+          "ParticiantId": 1027324,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 907.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 907,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 15,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            104,
+            78,
+            88,
+            95
+          ]
+        },
+        {
+          "ParticipantName": "Ondřej Deml",
+          "ParticiantId": 1418570,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 901.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 901,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 16,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            78,
+            68,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Dávid Sípos",
+          "ParticiantId": 862124,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Filip Lichý",
+          "ParticiantId": 1133804,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            64,
+            73,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Filipe",
+          "ParticiantId": 1614873,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Krajcírik",
+          "ParticiantId": 857652,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mikulás Bakaľa",
+          "ParticiantId": 977781,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 900.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 900,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 17,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Selecký",
+          "ParticiantId": 1280244,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 896.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 896,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 22,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            78,
+            38,
+            59,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Róbert Pillár",
+          "ParticiantId": 202622,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 894.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 894,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 23,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Timotej Kudlička",
+          "ParticiantId": 1167249,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 893.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 893,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 24,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            83,
+            115,
+            107,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Marek Ujlaky",
+          "ParticiantId": 1243551,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 893.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 893,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 25,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Klemen Nemanič",
+          "ParticiantId": 940339,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 890.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 890,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 26,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Matej Madlenák",
+          "ParticiantId": 805459,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 887.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 887,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 27,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Adam Krčík",
+          "ParticiantId": 1280243,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 875.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 875,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 28,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Vincent Chyla",
+          "ParticiantId": 1602178,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 875.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 875,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 28,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            76,
+            66,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Sebastián Kósa",
+          "ParticiantId": 1159230,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 874.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 874,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 30,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Osman Kakay",
+          "ParticiantId": 722751,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 862.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 862,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 31,
+          "ParticipantCountryCode": "SLE",
+          "TeamName": "FC Košice",
+          "Positions": [
+            62,
+            72,
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Sula",
+          "ParticiantId": 1042012,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 860.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 860,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 32,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Köstl",
+          "ParticiantId": 741859,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 859.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 859,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 33,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Luterán",
+          "ParticiantId": 1223058,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 859.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 859,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 33,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            33,
+            32,
+            74,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Bzdyl",
+          "ParticiantId": 1610892,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 855.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 855,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 35,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Žilina",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jan Hladík",
+          "ParticiantId": 664527,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 854.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 854,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 36,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            104,
+            103,
+            95
+          ]
+        },
+        {
+          "ParticipantName": "Luka Lemishko",
+          "ParticiantId": 1611858,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 852.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 852,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 37,
+          "ParticipantCountryCode": "CYP",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            78,
+            38,
+            83,
+            106,
+            71,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Richard Križan",
+          "ParticiantId": 862127,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 850.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 850,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 38,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Filip Souček",
+          "ParticiantId": 1050182,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 844.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 844,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 39,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            76,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Kružliak",
+          "ParticiantId": 524684,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 830.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 830,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 40,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Luka Khorkheli",
+          "ParticiantId": 1345360,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 828.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 828,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 41,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Peter Kovácik",
+          "ParticiantId": 1383060,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 826.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 826,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 42,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            72,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Šimon Šmehyl",
+          "ParticiantId": 407788,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 823.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 823,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 43,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            38,
+            32,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Žan Trontelj",
+          "ParticiantId": 1154277,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 820.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 820,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 44,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            32,
+            62,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Erik Sabo",
+          "ParticiantId": 250451,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 806.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 806,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 45,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            34,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Giorgi Gagua",
+          "ParticiantId": 1208119,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 805.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 805,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 46,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            106,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Polydefkis Volanakis",
+          "ParticiantId": 1321089,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 802.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 802,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 47,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Mikulaj",
+          "ParticiantId": 1553482,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 801.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 801,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 48,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            86,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Špiriak",
+          "ParticiantId": 861989,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 799.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 799,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 49,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Elvis Mashike Sukisa",
+          "ParticiantId": 556867,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 794.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 794,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 50,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tornike Dzotsenidze",
+          "ParticiantId": 1118866,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 793.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 793,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 51,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Pavek",
+          "ParticiantId": 1664988,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 792.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 792,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 52,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            32,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Eynel Soares",
+          "ParticiantId": 955789,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 791.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 791,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 53,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Trenčín",
+          "Positions": [
+            88,
+            103,
+            84,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Martin Chrien",
+          "ParticiantId": 412362,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 789.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 789,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 54,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            105,
+            103,
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ammar Ramadan",
+          "ParticiantId": 1155424,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 788.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 788,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 55,
+          "ParticipantCountryCode": "SYR",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ján Minárik",
+          "ParticiantId": 796573,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 787.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 787,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 56,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Tomas Marusin",
+          "ParticiantId": 1578119,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 783.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 783,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 57,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Adam Morong",
+          "ParticiantId": 298181,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 781.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 781,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 58,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            38,
+            87,
+            83,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Damián Bariš",
+          "ParticiantId": 467591,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 779.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 779,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 59,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            64,
+            84,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "David Richtarech",
+          "ParticiantId": 588464,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 778.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 778,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 60,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Žák",
+          "ParticiantId": 1313054,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 773.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 773,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 61,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Komárno",
+          "Positions": [
+            85,
+            106,
+            74,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Filip Blažek",
+          "ParticiantId": 752357,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 770.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 770,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 62,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Kristián Koštrna",
+          "ParticiantId": 769353,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 760.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 760,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 63,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            32,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Matej Trusa",
+          "ParticiantId": 1022838,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 751.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 751,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 64,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Miroslav Kácer",
+          "ParticiantId": 340815,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 749.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 749,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 65,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Vojtěch Hranoš",
+          "ParticiantId": 1552490,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 746.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 746,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 66,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            78,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandre Narimanidze",
+          "ParticiantId": 1661578,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 745.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 745,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 67,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Žilina",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Branislav Pindroch",
+          "ParticiantId": 250390,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 736.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 736,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 68,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Filip Trello",
+          "ParticiantId": 1664209,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 733.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 733,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 69,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Timotej Hranica",
+          "ParticiantId": 1552487,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 721.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 721,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 70,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Andrija Katić",
+          "ParticiantId": 1658233,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 720.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 71,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Trenčín",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Hroššo",
+          "ParticiantId": 72445,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 720.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 71,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Matus Kira",
+          "ParticiantId": 657901,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 720.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 71,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tadeás Hájovsky",
+          "ParticiantId": 1575790,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 719.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 719,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 74,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            84,
+            73,
+            65,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Aleksa Maraš",
+          "ParticiantId": 1310467,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 713.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 713,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 75,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "FC Košice",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Andy Masaryk",
+          "ParticiantId": 1385879,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 705.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 705,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 76,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            106,
+            83,
+            72,
+            84,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "René Paraj",
+          "ParticiantId": 1011150,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 696.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 696,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 77,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            37,
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Skovajsa",
+          "ParticiantId": 431530,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 694.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 694,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 78,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            38,
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Levan Nonikashvili",
+          "ParticiantId": 679364,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 690.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 690,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 79,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Sylvestr",
+          "ParticiantId": 92433,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 687.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 687,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 80,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lukáš Domaniský",
+          "ParticiantId": 1623778,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 682.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 682,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 81,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Juanmi Carrion",
+          "ParticiantId": 852163,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 679.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 679,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 82,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Markus Poom",
+          "ParticiantId": 841927,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 677.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 677,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 83,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "Trenčín",
+          "Positions": [
+            75,
+            65,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Julien Bationo",
+          "ParticiantId": 1844076,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 676.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 676,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 84,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Lukáš Šimko",
+          "ParticiantId": 894967,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 664.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 664,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 85,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            32,
+            88,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Michal Faško",
+          "ParticiantId": 250393,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 657.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 657,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 86,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Michal Ďuriš",
+          "ParticiantId": 72403,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 655.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 655,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 87,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Samsondin Ouro",
+          "ParticiantId": 1269276,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 649.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 649,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 88,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            74,
+            64,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Roman Begala",
+          "ParticiantId": 923185,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 640.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 640,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 89,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Kevor Palumets",
+          "ParticiantId": 1178610,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 634.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 634,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 90,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "FC Košice",
+          "Positions": [
+            76,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Kozlovský",
+          "ParticiantId": 949877,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 630.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 91,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "David Gallovic",
+          "ParticiantId": 1055690,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 626.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 626,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 92,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Wimmer",
+          "ParticiantId": 264221,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 598.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 93,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Prince Owusu",
+          "ParticiantId": 2091129,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 597.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 94,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Pablo González",
+          "ParticiantId": 316738,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 596.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 95,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Trenčín",
+          "Positions": [
+            85,
+            107,
+            77,
+            72,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Lavrincík",
+          "ParticiantId": 1233664,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 593.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 593,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 96,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Adam Ravas",
+          "ParticiantId": 1679967,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 589.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 589,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 97,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            86,
+            65,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Svetozar Marković",
+          "ParticiantId": 922722,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 580.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 580,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 98,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Marko Roginić",
+          "ParticiantId": 1079866,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 575.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 575,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 99,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Žilina",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Róbert Polievka",
+          "ParticiantId": 555381,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 572.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 572,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 100,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Miroslav Sovic",
+          "ParticiantId": 1515628,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 553.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 101,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Adam Tučný",
+          "ParticiantId": 1159232,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 551.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 551,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 102,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            107,
+            78,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Alabi Adewale",
+          "ParticiantId": 1211263,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 547.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 547,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 103,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Marek Okál",
+          "ParticiantId": 1845192,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 545.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 545,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 104,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            37,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Petr Pudhorocký",
+          "ParticiantId": 1344891,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 540.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 105,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            66,
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Takác",
+          "ParticiantId": 862024,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 540.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 106,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Franck Bahi",
+          "ParticiantId": 1515531,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 540.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 106,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Philip Obinna",
+          "ParticiantId": 1901623,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 538.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 538,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 108,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Považanec",
+          "ParticiantId": 173376,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 531.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 109,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tommy Piling",
+          "ParticiantId": 1323476,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 529.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 529,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 110,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            64,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Peter Guinari",
+          "ParticiantId": 1289166,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 528.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 528,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 111,
+          "ParticipantCountryCode": "CTA",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Kenan Bajrič",
+          "ParticiantId": 315814,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 526.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 112,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            34,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Daiki Matsuoka",
+          "ParticiantId": 1023982,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 525.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 525,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 113,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Bálint Csóka",
+          "ParticiantId": 1379422,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 524.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 524,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 114,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Iľko",
+          "ParticiantId": 1135381,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 516.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 516,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 115,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Filip Kiss",
+          "ParticiantId": 176718,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 514.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 514,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 116,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            64,
+            74,
+            37,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Matej Čurma",
+          "ParticiantId": 538321,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 513.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            32,
+            33,
+            72,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Jovanovic",
+          "ParticiantId": 2020221,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 490.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 490,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 118,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Trenčín",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "César Blackman",
+          "ParticiantId": 888966,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 489.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 489,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 119,
+          "ParticipantCountryCode": "PAN",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            32,
+            62,
+            72,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Martin Černek",
+          "ParticiantId": 1382992,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 480.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 480,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 120,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tobiás Paliscák",
+          "ParticiantId": 1676861,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 473.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 121,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Ján Krivák",
+          "ParticiantId": 728421,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 470.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 122,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Alen Mustafić",
+          "ParticiantId": 949092,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 467.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 123,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            85,
+            32,
+            73,
+            66,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Tigran Barseghyan",
+          "ParticiantId": 552700,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 465.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 465,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 124,
+          "ParticipantCountryCode": "ARM",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            103,
+            84,
+            72,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Danek",
+          "ParticiantId": 1021789,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 464.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 464,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 125,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            104,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Radek Šiler",
+          "ParticiantId": 1621148,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 460.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 460,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Danylo Ignatenko",
+          "ParticiantId": 630472,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 453.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 453,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 127,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Peter Pokorný",
+          "ParticiantId": 951951,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 453.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 453,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 128,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Paur",
+          "ParticiantId": 275655,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 451.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 451,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 129,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            76,
+            115,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Kazeem Bolaji",
+          "ParticiantId": 1337105,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 450.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 130,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Richard Ludha",
+          "ParticiantId": 964343,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 450.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 131,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Adam Hanes",
+          "ParticiantId": 1258531,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 447.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 447,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 132,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Balša Mrvaljević",
+          "ParticiantId": 1683591,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 433.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 133,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            87,
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Karlo Miljanic",
+          "ParticiantId": 1589636,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 432.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 134,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Martin Šimko",
+          "ParticiantId": 1548366,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 428.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 428,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 135,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            36,
+            65,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dani Homet",
+          "ParticiantId": 1213968,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 425.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 425,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 136,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Žilina",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Martin Bacík",
+          "ParticiantId": 1790998,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 422.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 422,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 137,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            104,
+            103,
+            84,
+            77,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Philip Azango",
+          "ParticiantId": 858406,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 422.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 422,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 137,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            83,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Maksym Khyminets",
+          "ParticiantId": 1617137,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 420.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 420,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 139,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Giorgi Moistsrapishvili",
+          "ParticiantId": 1067267,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 420.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 420,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 140,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            76,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kai Brosnan",
+          "ParticiantId": 1415493,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 417.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 417,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 141,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            107,
+            106,
+            103,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "František Kósa",
+          "ParticiantId": 1574205,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 406.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 142,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Arevalo",
+          "ParticiantId": 1055689,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 404.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 404,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 143,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Suleiman Camara",
+          "ParticiantId": 1206542,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 398.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 398,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 144,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            87,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Artur Gajdoš",
+          "ParticiantId": 1201843,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 397.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 397,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 145,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            86,
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Dylann Kam",
+          "ParticiantId": 1679906,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 390.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 390,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 146,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Trenčín",
+          "Positions": [
+            103,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Andraž Šporar",
+          "ParticiantId": 338136,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 386.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 386,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 147,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Regő Szánthó",
+          "ParticiantId": 929807,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 376.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 376,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 148,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            107,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Milan Rehuš",
+          "ParticiantId": 1664689,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 374.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 374,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 149,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Bojan Damjanović",
+          "ParticiantId": 1512792,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 371.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 150,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "FC Košice",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Loïc Bessilé",
+          "ParticiantId": 979756,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 368.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 368,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 151,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Trenčín",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Popović",
+          "ParticiantId": 1072191,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 360.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 152,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nikolas Kubala",
+          "ParticiantId": 2130440,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 358.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 358,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 153,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Adrian Sivicek",
+          "ParticiantId": 2091152,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 357.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 154,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alexej Maroš",
+          "ParticiantId": 1557209,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 350.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 350,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 155,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            103,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Matěj Koubek",
+          "ParticiantId": 988150,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 348.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 348,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 156,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            106,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Martin Gjorgievski",
+          "ParticiantId": 1379839,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 345.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 345,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 157,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Erik Riška",
+          "ParticiantId": 1382993,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 339.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 339,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 158,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Abdul Zubairu",
+          "ParticiantId": 825955,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 338.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 338,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 159,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Abbati Abdullahi",
+          "ParticiantId": 1712184,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 326.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 326,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 160,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Toth",
+          "ParticiantId": 1246935,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 322.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 322,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 161,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            84,
+            32,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Fallou Diongue",
+          "ParticiantId": 1965801,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 320.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 320,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 162,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Xavier Adang",
+          "ParticiantId": 1481496,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 315.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 315,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 163,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Žilina",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Mojžiš",
+          "ParticiantId": 922809,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 314.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 314,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 164,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Adam Griger",
+          "ParticiantId": 1174724,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 312.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 312,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 165,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Poltak",
+          "ParticiantId": 1759394,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 311.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 166,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Martin Mikovič",
+          "ParticiantId": 199840,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 311.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 167,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Martin Trnovský",
+          "ParticiantId": 954969,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 308.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 308,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 168,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ganbold Ganbayar",
+          "ParticiantId": 1058380,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 306.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 306,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 169,
+          "ParticipantCountryCode": "MGL",
+          "TeamName": "Komárno",
+          "Positions": [
+            88,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Alioune Sylla",
+          "ParticiantId": 1463768,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 305.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 305,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 170,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            104,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Magda",
+          "ParticiantId": 696453,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 300.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 300,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 171,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Roman Potočný",
+          "ParticiantId": 250527,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 300.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 300,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 171,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lorent Mehmeti",
+          "ParticiantId": 1441362,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 299.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 299,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 173,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            106,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Tibor Slebodnik",
+          "ParticiantId": 1055693,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 288.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 288,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 174,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Andrei Florea",
+          "ParticiantId": 1684565,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 287.0,
+          "SubStatValue": 11.0,
+          "MinutesPlayed": 287,
+          "MatchesPlayed": 11,
+          "StatValueCount": 11,
+          "Rank": 175,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Žilina",
+          "Positions": [
+            76,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Kido Taylor-Hart",
+          "ParticiantId": 1113917,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 279.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 176,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            107,
+            85,
+            78,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Rahim Ibrahim",
+          "ParticiantId": 1239580,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 278.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 278,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 177,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            77,
+            64,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Nino Marcelli",
+          "ParticiantId": 1449716,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 274.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 178,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            107,
+            115,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Luka Silagadze",
+          "ParticiantId": 1056506,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 272.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 272,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 179,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            107,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Jevoš",
+          "ParticiantId": 1751834,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 272.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 272,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 180,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Cristian Martínez",
+          "ParticiantId": 727101,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 271.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 271,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 181,
+          "ParticipantCountryCode": "PAN",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            64,
+            84,
+            73,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Filip Mielke",
+          "ParticiantId": 1397849,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 182,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Trefil",
+          "ParticiantId": 1119075,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 182,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tae-Rang Park",
+          "ParticiantId": 1786122,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 182,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Taylor Moore",
+          "ParticiantId": 609841,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 270.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 182,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "FC Košice",
+          "Positions": [
+            35,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Palán",
+          "ParticiantId": 1789611,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 265.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 265,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 186,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Komárno",
+          "Positions": [
+            38,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Simon Fasko",
+          "ParticiantId": 1417761,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 265.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 265,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 187,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Cruz",
+          "ParticiantId": 1045565,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 264.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 264,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 188,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            38,
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Rastislav Korba",
+          "ParticiantId": 1587495,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 260.0,
+          "SubStatValue": 10.0,
+          "MinutesPlayed": 260,
+          "MatchesPlayed": 10,
+          "StatValueCount": 10,
+          "Rank": 189,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Clement Ansah",
+          "ParticiantId": 1677130,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 255.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 255,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 190,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Trenčín",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Baleja",
+          "ParticiantId": 1668188,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 255.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 255,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 190,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Filip Dlubáč",
+          "ParticiantId": 1383064,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 252.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 192,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Komárno",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alasana Yirajang",
+          "ParticiantId": 1614857,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 247.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 193,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            107,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Stefánik",
+          "ParticiantId": 275457,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 245.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 245,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 194,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Roman Čerepkai",
+          "ParticiantId": 1338948,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 243.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 243,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 195,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            106,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Martin Mášík",
+          "ParticiantId": 940600,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 242.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 242,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 196,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Martin Bednár",
+          "ParticiantId": 661109,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 242.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 242,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 197,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            34,
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Papa Diouf",
+          "ParticiantId": 1901625,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 240.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 240,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 198,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Trenčín",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Martin Koscelník",
+          "ParticiantId": 657918,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 239.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 239,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 199,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Leoni",
+          "ParticiantId": 532485,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 233.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 233,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 200,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Komárno",
+          "Positions": [
+            38,
+            88,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Maik Gomes",
+          "ParticiantId": 1764428,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 225.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 201,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            51,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Ridwan Sanusi",
+          "ParticiantId": 1280730,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 225.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 202,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Trenčín",
+          "Positions": [
+            78,
+            68,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Milan Dimun",
+          "ParticiantId": 591813,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 222.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 222,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 203,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            66,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Ďatko",
+          "ParticiantId": 1042009,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 209.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 209,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 204,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Manasse Kianga",
+          "ParticiantId": 1959190,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 207.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 207,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 205,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Kahvić",
+          "ParticiantId": 1418746,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 206.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 206,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 206,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "FC Košice",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Martin Junas",
+          "ParticiantId": 465248,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 201.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 201,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 207,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Simen Kristiansen Juklerød",
+          "ParticiantId": 360570,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 199.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 199,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 208,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nándor Tamás",
+          "ParticiantId": 1018960,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 197.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 209,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Komárno",
+          "Positions": [
+            72,
+            83,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Marián Chobot",
+          "ParticiantId": 952053,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 191.0,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 191,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 210,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Mulder",
+          "ParticiantId": 1203489,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 182.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 182,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 211,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Trenčín",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Johan Albin",
+          "ParticiantId": 1340909,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 212,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Žilina",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Dąbrowski",
+          "ParticiantId": 841811,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 212,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "FC Košice",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Matus Slavicek",
+          "ParticiantId": 1235621,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 212,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Radek Kejval",
+          "ParticiantId": 1788865,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 180.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 212,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Fedor Kasana",
+          "ParticiantId": 1816342,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 173.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 216,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Matús Rusnák",
+          "ParticiantId": 959815,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 173.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 217,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Adam Balaz",
+          "ParticiantId": 2091149,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 169.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 169,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 218,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Martin Rýzek",
+          "ParticiantId": 1637664,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 163.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 163,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 219,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Andriy Gavrylenko",
+          "ParticiantId": 1558920,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 160.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 160,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 220,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Komárno",
+          "Positions": [
+            78,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Martin Jenčuš",
+          "ParticiantId": 1693542,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 160.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 160,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 220,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Tijmen Wildeboer",
+          "ParticiantId": 1184447,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 154.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 154,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 222,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Martin Boďa",
+          "ParticiantId": 1176598,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 150.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 223,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Taras Kacharaba",
+          "ParticiantId": 560570,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 150.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 224,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Praisegod Okechukwu",
+          "ParticiantId": 1789007,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 149.0,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 149,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 225,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Yunusa Muritala",
+          "ParticiantId": 1238152,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 146.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 146,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 226,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Komárno",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Christian Bayemi",
+          "ParticiantId": 1419992,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 145.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 227,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Komárno",
+          "Positions": [
+            82,
+            106,
+            86,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Nikita Mihhailov",
+          "ParticiantId": 949314,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 142.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 142,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Libor Holík",
+          "ParticiantId": 696422,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 136.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 136,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 229,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Rhyan Modesto",
+          "ParticiantId": 1653515,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 133.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 133,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 230,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ephraim Eshele",
+          "ParticiantId": 1621157,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 129.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 129,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 231,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Jurij Medveděv",
+          "ParticiantId": 629539,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 125.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 125,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 232,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            64,
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Mensah",
+          "ParticiantId": 1610684,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 121.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 121,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 233,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dávid Bukovský",
+          "ParticiantId": 1664210,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 118.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 118,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 234,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Uroš Kabić",
+          "ParticiantId": 1283007,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 115.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 115,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 235,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            82,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Tsotne Kapanadze",
+          "ParticiantId": 1178810,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 113.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 113,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 236,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Francis Momoh",
+          "ParticiantId": 933974,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 108.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 108,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 237,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kenan Bilalović",
+          "ParticiantId": 1416594,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 99.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 99,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 238,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Žilina",
+          "Positions": [
+            83,
+            104,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Vasilios Theofanopoulos",
+          "ParticiantId": 1793840,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 97.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 97,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 239,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Abdoulaye Gueye",
+          "ParticiantId": 1747800,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 94.0,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 94,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 240,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Adam Krizan",
+          "ParticiantId": 2100494,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 92.0,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 92,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 241,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Boye",
+          "ParticiantId": 1483847,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 92.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 92,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 242,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Trenčín",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dávid Húska",
+          "ParticiantId": 1393471,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Filip Kaša",
+          "ParticiantId": 352908,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Žilina",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Badžgoň",
+          "ParticiantId": 1515139,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Žilina",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Melos Bajrami",
+          "ParticiantId": 1231086,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Michal Tomič",
+          "ParticiantId": 822997,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sahmkou Camara",
+          "ParticiantId": 1513367,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 90.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 243,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Maxim Mateás",
+          "ParticiantId": 1645651,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 86.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 86,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 249,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Zirkzee",
+          "ParticiantId": 2188814,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 86.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 86,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 250,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Trenčín",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Noa Cervantes",
+          "ParticiantId": 1324374,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 83.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 83,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 251,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kristián Vallo",
+          "ParticiantId": 729722,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 80.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 80,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 252,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marek Zsigmund",
+          "ParticiantId": 880875,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 79.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 79,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 253,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Prekop",
+          "ParticiantId": 1638855,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 78.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 78,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 254,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Orestis Kalemi",
+          "ParticiantId": 1901868,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 73.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 255,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Michal Gulíšek",
+          "ParticiantId": 1832761,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 72.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 72,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 256,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Marko Kelemen",
+          "ParticiantId": 1067138,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 67.0,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 67,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 257,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Tomasz Walczak",
+          "ParticiantId": 1300098,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 67.0,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 67,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 258,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dimitri Jepihhin",
+          "ParticiantId": 1508084,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 66.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 66,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 259,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "Trenčín",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Škrbo",
+          "ParticiantId": 1275650,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 63.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 63,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 260,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            72,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mykola Kukharevych",
+          "ParticiantId": 1178468,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 62.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 62,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 261,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Pa Assan Corr",
+          "ParticiantId": 1781485,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 60.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 60,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 262,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Samson Tijani",
+          "ParticiantId": 1106905,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 59.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 59,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 263,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            65,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Gruber",
+          "ParticiantId": 557345,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 51.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 51,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 264,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            85,
+            104,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Nwadike",
+          "ParticiantId": 1109472,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 47.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 265,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Martin Nagy",
+          "ParticiantId": 265721,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 46.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 46,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 266,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Hilary Gong",
+          "ParticiantId": 835046,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 267,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "José López",
+          "ParticiantId": 1019125,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 267,
+          "ParticipantCountryCode": "MEX",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kristián Stručka",
+          "ParticiantId": 1840539,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 45.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 45,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 267,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Tomáš Buchvaldek",
+          "ParticiantId": 1727956,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 40.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 40,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 270,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Michal Duraj",
+          "ParticiantId": 1901630,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 33.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 33,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 271,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Fabiš",
+          "ParticiantId": 862131,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 32.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 32,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 272,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Roman Procházka",
+          "ParticiantId": 114987,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 31.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 31,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 273,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Veselovský",
+          "ParticiantId": 1068734,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 30.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 30,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 274,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Matús Tomásko",
+          "ParticiantId": 1820841,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 28.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 28,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 275,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Udvaros",
+          "ParticiantId": 1789588,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 27.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 27,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 276,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Nikita Vlasenko",
+          "ParticiantId": 1211256,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 26.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 26,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 277,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Komárno",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gia Nadareishvili",
+          "ParticiantId": 1804796,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 25.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 25,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 278,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Trenčín",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Mário Hollý",
+          "ParticiantId": 940599,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 25.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 25,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 278,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Davit Hakobyan",
+          "ParticiantId": 1688902,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 23.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 23,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 280,
+          "ParticipantCountryCode": "ARM",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Traore",
+          "ParticiantId": 1729633,
+          "TeamId": 6022,
+          "TeamColor": "#0B7330",
+          "StatValue": 21.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 21,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 281,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Žilina",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Jenno Campagne",
+          "ParticiantId": 1288500,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 19.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 19,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 282,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Trenčín",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Leo Hofstädter",
+          "ParticiantId": 2093218,
+          "TeamId": 6019,
+          "TeamColor": "#43B1E6",
+          "StatValue": 16.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 16,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 283,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Slovan Bratislava",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Filip Slovak",
+          "ParticiantId": 2356755,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 15.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 15,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 284,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Jan Mirko",
+          "ParticiantId": 1988582,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 14.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 14,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 285,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Joao Miranda",
+          "ParticiantId": 1958892,
+          "TeamId": 2169,
+          "TeamColor": "#EC1B23",
+          "StatValue": 13.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 13,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 286,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Dukla Banská Bystrica",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Leonardo Lukačević",
+          "ParticiantId": 795808,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 12.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 12,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 287,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Košice",
+          "Positions": [
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Konney",
+          "ParticiantId": 2264320,
+          "TeamId": 4662,
+          "TeamColor": "#BF0000",
+          "StatValue": 12.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 12,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 288,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Spartak Trnava",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Saidy Saibo",
+          "ParticiantId": 1842882,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 11.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 11,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 289,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            1
+          ]
+        },
+        {
+          "ParticipantName": "Viliam Vrabel",
+          "ParticiantId": 1988588,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 11.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 11,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 289,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Amoafo",
+          "ParticiantId": 2130333,
+          "TeamId": 2437,
+          "TeamColor": "#BF143A",
+          "StatValue": 9.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 9,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 291,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Zeleziarne Podbrezová",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Oleg Zahradnik",
+          "ParticiantId": 2100726,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 9.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 9,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 291,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Dario Grgić",
+          "ParticiantId": 1370501,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 6.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 6,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 293,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Štefan Gerec",
+          "ParticiantId": 253844,
+          "TeamId": 10186,
+          "TeamColor": "#D85F28",
+          "StatValue": 5.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 5,
+          "MatchesPlayed": 2,
+          "StatValueCount": 2,
+          "Rank": 294,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Ružomberok",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Taiga Seguchi",
+          "ParticiantId": 1718261,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 5.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 5,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 295,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "FC Košice",
+          "Positions": [
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Podhorín",
+          "ParticiantId": 657909,
+          "TeamId": 555292,
+          "TeamColor": "#005F48",
+          "StatValue": 4.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 4,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 296,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "MFK Skalica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Denis Adamkovič",
+          "ParticiantId": 1690105,
+          "TeamId": 6496,
+          "TeamColor": "#640000",
+          "StatValue": 3.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 297,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Trenčín",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Pavol Šafranko",
+          "ParticiantId": 728422,
+          "TeamId": 103598,
+          "TeamColor": "#d3a100",
+          "StatValue": 3.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 297,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "DAC 1904 Dunajská Streda",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lubomir Malik",
+          "ParticiantId": 2100713,
+          "TeamId": 9899,
+          "TeamColor": "#00369d",
+          "StatValue": 1.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 299,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Zemplín Michalovce",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Okiki Akinwande",
+          "ParticiantId": 2222318,
+          "TeamId": 611956,
+          "TeamColor": "#652C90",
+          "StatValue": 1.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 299,
+          "ParticipantCountryCode": "NIG",
+          "TeamName": "Komárno",
+          "Positions": [
+            3
+          ]
+        },
+        {
+          "ParticipantName": "Tomas Husarcik",
+          "ParticiantId": 2091178,
+          "TeamId": 969268,
+          "TeamColor": "#dc9f00",
+          "StatValue": 1.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1,
+          "MatchesPlayed": 1,
+          "StatValueCount": 1,
+          "Rank": 299,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "FC Košice",
+          "Positions": [
+            3
+          ]
+        }
+      ],
+      "StatFormat": "number",
+      "SubstatFormat": "number",
+      "StatDecimals": 0,
+      "SubstatDecimals": 0,
+      "Order": 5,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "1. liga"
+}

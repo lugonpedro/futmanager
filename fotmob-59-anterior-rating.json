@@ -1,0 +1,3970 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Zlatko Tripić",
+          "ParticiantId": 279191,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 8.12,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 1938,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 1,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            107,
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Berg",
+          "ParticiantId": 530635,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 8.06,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 2292,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 2,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            75,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jens Petter Hauge",
+          "ParticiantId": 741397,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.78,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2227,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 3,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Odin Lurås Bjørtuft",
+          "ParticiantId": 917774,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2265,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 4,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Håkon Evjen",
+          "ParticiantId": 632870,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2213,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 5,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik André Bjørkan",
+          "ParticiantId": 630228,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.48,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2464,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 6,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Franklin Uchenna",
+          "ParticiantId": 1297924,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 7.47,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1439,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 7,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Joe Bell",
+          "ParticiantId": 848345,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2541,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 8,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "Viking FK",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Zinedin Smajlović",
+          "ParticiantId": 1457854,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2274,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 9,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Guddal",
+          "ParticiantId": 1250673,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2587,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 10,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Waarts Høgh",
+          "ParticiantId": 934960,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.43,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2070,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 11,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Felix Horn Myhre",
+          "ParticiantId": 632885,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.41,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2088,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 12,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Ole Blomberg",
+          "ParticiantId": 1086551,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.39,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1207,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 13,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            103,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Edvin Austbø",
+          "ParticiantId": 1367620,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1847,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 14,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            88,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Ole Kristian Selnæs",
+          "ParticiantId": 255963,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 7.36,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1826,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 15,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Emil Breivik",
+          "ParticiantId": 962795,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.36,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2498,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 16,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            64,
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Henrik Falchener",
+          "ParticiantId": 1110550,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2578,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 17,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Sjøvold",
+          "ParticiantId": 1281021,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.35,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2598,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 18,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Mathias Tønnessen",
+          "ParticiantId": 1376713,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.35,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2428,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 18,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Emil Kornvig",
+          "ParticiantId": 945841,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.35,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2510,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 20,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Brann",
+          "Positions": [
+            73,
+            86,
+            103,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Ruben Yttergård Jenssen",
+          "ParticiantId": 28115,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.34,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 21,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Maxwell Woledzi",
+          "ParticiantId": 1069403,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.33,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2498,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 22,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Fidel Brice Ambina",
+          "ParticiantId": 1458877,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2126,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 23,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            74,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Abubacarr Sedi Kinteh",
+          "ParticiantId": 1734316,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1647,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 24,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Tromsø",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Mats Møller Dæhli",
+          "ParticiantId": 214123,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1901,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 25,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Filip Ottosson",
+          "ParticiantId": 1016606,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2691,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 26,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Joachim Soltvedt",
+          "ParticiantId": 538644,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1757,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 27,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Samukele Kabini",
+          "ParticiantId": 1680659,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1505,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 28,
+          "ParticipantCountryCode": "RSA",
+          "TeamName": "Molde",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ulrik Saltnes",
+          "ParticiantId": 310763,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.25,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1609,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 29,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Sverre Hakami Sandal",
+          "ParticiantId": 1280596,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.25,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2177,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 30,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Martin Roseth",
+          "ParticiantId": 633595,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.23,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1443,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 31,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Elias Hadaya",
+          "ParticiantId": 1049254,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.23,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1799,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 32,
+          "ParticipantCountryCode": "SYR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Vegard Østraat Erlien",
+          "ParticiantId": 841973,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.22,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2097,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 33,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Auklend",
+          "ParticiantId": 1160076,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1159,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 34,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            73,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Dino Islamović",
+          "ParticiantId": 557587,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2155,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 35,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Henrik Rørvik Bjørdal",
+          "ParticiantId": 440313,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 7.21,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1829,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 36,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            72,
+            73,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Adrian Pereira",
+          "ParticiantId": 842247,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1710,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 37,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Martin Linnes",
+          "ParticiantId": 195955,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1392,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 38,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Haitam Aleesami",
+          "ParticiantId": 215158,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1392,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 38,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Elias Sørensen",
+          "ParticiantId": 961340,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 7.19,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1765,
+          "MatchesPlayed": 28,
+          "StatValueCount": 25,
+          "Rank": 40,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Seland Karlsbakk",
+          "ParticiantId": 1099476,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 7.19,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2361,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 41,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Peter Christiansen",
+          "ParticiantId": 955759,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.18,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2107,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 42,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Viking FK",
+          "Positions": [
+            105,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Ieltsin Camões",
+          "ParticiantId": 1448017,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.18,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1532,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 43,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Tromsø",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Sandberg",
+          "ParticiantId": 127723,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2430,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 44,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Maslø Dunsby",
+          "ParticiantId": 938028,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.17,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1989,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 45,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Simen Hestnes",
+          "ParticiantId": 630365,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.17,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2261,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 45,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Luc Mares",
+          "ParticiantId": 664223,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 7.17,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2340,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 45,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "HamKam",
+          "Positions": [
+            75,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Leo Cornic",
+          "ParticiantId": 942362,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.15,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2597,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 48,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            71,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Emil Konradsen Ceïde",
+          "ParticiantId": 848951,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 7.15,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2284,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 49,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            107,
+            78,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Vetle Skjærvik",
+          "ParticiantId": 935100,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.15,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2460,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 50,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Oskar Öhlenschlaeger",
+          "ParticiantId": 1436939,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.15,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2135,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 51,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            73,
+            103,
+            104,
+            72,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Eggert Guðmundsson",
+          "ParticiantId": 1088860,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.13,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2085,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 52,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Brann",
+          "Positions": [
+            77,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Kristoffer Haugen",
+          "ParticiantId": 313128,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2103,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 53,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sander Tangvik",
+          "ParticiantId": 1145714,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 7.11,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 54,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jens Hjertø-Dahl",
+          "ParticiantId": 1377949,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2383,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 55,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            77,
+            86,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Stian Kristiansen",
+          "ParticiantId": 843275,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2565,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 56,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Cheng",
+          "ParticiantId": 1160062,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1953,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 57,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "David Edvardsson",
+          "ParticiantId": 1231795,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.1,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2046,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 58,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Tromsø",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Pallesen Knudsen",
+          "ParticiantId": 601990,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.1,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1243,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 59,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Vinícius Nogueira",
+          "ParticiantId": 1441441,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2169,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 60,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Aimar Sher",
+          "ParticiantId": 1042511,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1612,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 61,
+          "ParticipantCountryCode": "IRQ",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Marko Lawk Farji",
+          "ParticiantId": 1162514,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 7.08,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2342,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 62,
+          "ParticipantCountryCode": "IRQ",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Runar Robinsønn Norheim",
+          "ParticiantId": 1186437,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 7.07,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1318,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 63,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            38,
+            72,
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Anders Bærtelsen",
+          "ParticiantId": 935392,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1392,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 64,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Viking FK",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Stefán Sigurðarson",
+          "ParticiantId": 1044355,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.07,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2037,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 65,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Evangelos Patoulidis",
+          "ParticiantId": 1073446,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2153,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 66,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Magnus Bech Riisnæs",
+          "ParticiantId": 1126421,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.06,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 843,
+          "MatchesPlayed": 18,
+          "StatValueCount": 16,
+          "Rank": 67,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Johannes Nuñez",
+          "ParticiantId": 537936,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1105,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 68,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Ayoub Aleesami",
+          "ParticiantId": 842136,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1838,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 69,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Nikita Haikin",
+          "ParticiantId": 625360,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 70,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Anton Ekeroth",
+          "ParticiantId": 1231591,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 7.06,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2333,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 71,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "HamKam",
+          "Positions": [
+            79,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Tobias Berglie",
+          "ParticiantId": 934688,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1982,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 72,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Sørli",
+          "ParticiantId": 532090,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1359,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 72,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Håkon Hoseth",
+          "ParticiantId": 632875,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1422,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 72,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            72,
+            62,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Fischer",
+          "ParticiantId": 1075429,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 75,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Bjørshol",
+          "ParticiantId": 538580,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 784,
+          "MatchesPlayed": 17,
+          "StatValueCount": 15,
+          "Rank": 76,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Eirik Hestad",
+          "ParticiantId": 375712,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1468,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 77,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thore Pedersen",
+          "ParticiantId": 444485,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 78,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            36,
+            73,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Axel Kryger",
+          "ParticiantId": 631758,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1625,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 79,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            33,
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Eivind Helland",
+          "ParticiantId": 1503574,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2504,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 80,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ulrik Fredriksen",
+          "ParticiantId": 839973,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2678,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 81,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Leonard Owusu",
+          "ParticiantId": 1128263,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2463,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 81,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Eirik Haugan",
+          "ParticiantId": 544208,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2365,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 83,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Magnus Wolff Eikrem",
+          "ParticiantId": 185389,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1627,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 84,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Per Kristian Bråtveit",
+          "ParticiantId": 360107,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2219,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 85,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kristoffer Askildsen",
+          "ParticiantId": 964535,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1550,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 86,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Rocco Shein",
+          "ParticiantId": 1177437,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1595,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 87,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            77,
+            66,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Carl Lange",
+          "ParticiantId": 843658,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.98,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2260,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 88,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            76,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Niklas Castro",
+          "ParticiantId": 630366,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 980,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 89,
+          "ParticipantCountryCode": "CHI",
+          "TeamName": "Brann",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Carson Pedersen",
+          "ParticiantId": 1169328,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2107,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 90,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Filip Thorvaldsen",
+          "ParticiantId": 1460786,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1308,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 90,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            104,
+            72,
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nicklas Strunck",
+          "ParticiantId": 921261,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2369,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 92,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Menno Koch",
+          "ParticiantId": 352402,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2604,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 93,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Karlstrøm",
+          "ParticiantId": 555863,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2520,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 94,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kristian Lien",
+          "ParticiantId": 1039900,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.94,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2297,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 95,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Duarte Moreira",
+          "ParticiantId": 1525381,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2375,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 96,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Henrik Heggheim",
+          "ParticiantId": 1163230,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1909,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 97,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jonas Lange Hjorth",
+          "ParticiantId": 1047489,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2187,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 98,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Alfred Scriven",
+          "ParticiantId": 920315,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2186,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 98,
+          "ParticipantCountryCode": "KEN",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "David Tufekčić",
+          "ParticiantId": 1283353,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2166,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 98,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Eirik Saunes",
+          "ParticiantId": 736686,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2497,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 101,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            37,
+            38,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Mamour N'diaye",
+          "ParticiantId": 1478010,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.91,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 102,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Iver Fossum",
+          "ParticiantId": 375732,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1607,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 103,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Ulrik Yttergård Jenssen",
+          "ParticiantId": 429581,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1519,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 104,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Niklas Ødegård",
+          "ParticiantId": 1283254,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.9,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1979,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 105,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            77,
+            86,
+            64,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Santeri Väänänen",
+          "ParticiantId": 942032,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.9,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1572,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 105,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tomás Nemcík",
+          "ParticiantId": 1184783,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.9,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1967,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 107,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Eirik Wichne",
+          "ParticiantId": 614516,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2033,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 108,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ruben Kristensen Alte",
+          "ParticiantId": 1172556,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1589,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 109,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            88,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Sander Mørk",
+          "ParticiantId": 965796,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1422,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 109,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ian Hoffmann",
+          "ParticiantId": 1179879,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1966,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 111,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            32,
+            71,
+            59,
+            51,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Tore André Sørås",
+          "ParticiantId": 739727,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1909,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 112,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Vegar Eggen Hedenstad",
+          "ParticiantId": 108994,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1536,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 113,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Haugaard",
+          "ParticiantId": 188971,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 6.87,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 114,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Tromsø",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gustav Valsvik",
+          "ParticiantId": 189026,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 115,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mohanad Jeahze",
+          "ParticiantId": 772089,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1336,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 116,
+          "ParticipantCountryCode": "IRQ",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sander Christiansen",
+          "ParticiantId": 1174725,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1977,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 117,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ulrik Mathisen",
+          "ParticiantId": 940963,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1417,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 117,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            103,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Emil Ødegaard",
+          "ParticiantId": 629821,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 119,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Bård Finne",
+          "ParticiantId": 313825,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1571,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 120,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            103,
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Brunstad Fet",
+          "ParticiantId": 540975,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 958,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 121,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Gustav Granath",
+          "ParticiantId": 1015654,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2106,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 122,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "HamKam",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Emil Holten",
+          "ParticiantId": 562958,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1215,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 123,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Hickson Gyedu",
+          "ParticiantId": 633572,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2100,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 124,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Denzel De Roeve",
+          "ParticiantId": 1232229,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1433,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 125,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Brann",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marius Berntsen Olsen",
+          "ParticiantId": 1272907,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2145,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 126,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Harald Tangen",
+          "ParticiantId": 860269,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1301,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 127,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Eid",
+          "ParticiantId": 736684,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2066,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 127,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            72,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Helmersen",
+          "ParticiantId": 615292,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 499,
+          "MatchesPlayed": 21,
+          "StatValueCount": 15,
+          "Rank": 127,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jens Husebø",
+          "ParticiantId": 842246,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1750,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 130,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Rakneberg",
+          "ParticiantId": 1255833,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2064,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 130,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Ardraa",
+          "ParticiantId": 1532883,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2130,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 130,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            87,
+            85,
+            83,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Vetle Walle Egeli",
+          "ParticiantId": 1256210,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1136,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 130,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Isak Dybvik Määttä",
+          "ParticiantId": 1037037,
+          "TeamId": 8402,
+          "TeamColor": "#e09d00",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 735,
+          "MatchesPlayed": 24,
+          "StatValueCount": 19,
+          "Rank": 134,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bodø/Glimt",
+          "Positions": [
+            38,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jesper Taaje",
+          "ParticiantId": 634067,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.78,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2187,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 135,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Lars Erik Sødal",
+          "ParticiantId": 1254213,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.77,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2060,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 136,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            73,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Isak Helstad Amundsen",
+          "ParticiantId": 1136680,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 842,
+          "MatchesPlayed": 16,
+          "StatValueCount": 15,
+          "Rank": 137,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sander Svendsen",
+          "ParticiantId": 440647,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1330,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 138,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            85,
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Metcalfe",
+          "ParticiantId": 1136261,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1947,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 138,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            75,
+            71,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Alwande Roaldsøy",
+          "ParticiantId": 1506448,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.76,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1650,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 140,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Aksel Baran Potur",
+          "ParticiantId": 1251332,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1226,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 141,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Heine Åsen Larsen",
+          "ParticiantId": 1295653,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1601,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 142,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            106,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Jarl",
+          "ParticiantId": 842658,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1377,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 143,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Dan Ulvestad",
+          "ParticiantId": 201976,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2684,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 144,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Sørløkk",
+          "ParticiantId": 538279,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1737,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 145,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            78,
+            59,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Viðar Ari Jónsson",
+          "ParticiantId": 536981,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1337,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 146,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "HamKam",
+          "Positions": [
+            71,
+            51,
+            79,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Petter Strand",
+          "ParticiantId": 530659,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1483,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 147,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Snorre Nilsen",
+          "ParticiantId": 662946,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1465,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 148,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            71,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Kiil Olsen",
+          "ParticiantId": 1047528,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2287,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 148,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mathias Dyngeland",
+          "ParticiantId": 354136,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.73,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 150,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Loris Mettler",
+          "ParticiantId": 1299490,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1434,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 151,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Rezan Çorlu",
+          "ParticiantId": 560778,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1472,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 151,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            104,
+            83,
+            73,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Gard Simenstad",
+          "ParticiantId": 739798,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1451,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 153,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Konradsen Ceïde",
+          "ParticiantId": 848952,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2100,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 154,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Kristensen Dahl",
+          "ParticiantId": 937340,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2323,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 155,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jo Inge Berget",
+          "ParticiantId": 97323,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1093,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 156,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Elias Hagen",
+          "ParticiantId": 937834,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1181,
+          "MatchesPlayed": 30,
+          "StatValueCount": 23,
+          "Rank": 157,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Sanel Bojadzic",
+          "ParticiantId": 842236,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1420,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 158,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Japhet Sery Larsen",
+          "ParticiantId": 1052987,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1440,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 159,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Brann",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Peter Reinhardsen",
+          "ParticiantId": 952249,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1021,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 160,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Claus Niyukuri",
+          "ParticiantId": 1126471,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1340,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 160,
+          "ParticipantCountryCode": "BDI",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Julian Bakkeli Gonstad",
+          "ParticiantId": 1298879,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1003,
+          "MatchesPlayed": 25,
+          "StatValueCount": 19,
+          "Rank": 160,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Simen Kvia-Egeskog",
+          "ParticiantId": 1267374,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1175,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 163,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Tshiembe",
+          "ParticiantId": 847591,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1021,
+          "MatchesPlayed": 19,
+          "StatValueCount": 17,
+          "Rank": 163,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jóannes Bjartalíd",
+          "ParticiantId": 833474,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 805,
+          "MatchesPlayed": 17,
+          "StatValueCount": 15,
+          "Rank": 163,
+          "ParticipantCountryCode": "FRO",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            104,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Mame Mor Ndiaye",
+          "ParticiantId": 1047917,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 20,
+          "StatValueCount": 15,
+          "Rank": 166,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Wilfred George Igor",
+          "ParticiantId": 1526794,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2038,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 166,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Stian Stray Molde",
+          "ParticiantId": 534791,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1858,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 166,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Halldor Stenevik",
+          "ParticiantId": 690289,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1184,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 169,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sander Hestetun Kilen",
+          "ParticiantId": 1500344,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.66,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2069,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 170,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            107,
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Segadal Hansen",
+          "ParticiantId": 1376699,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1553,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 171,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Simen Rafn",
+          "ParticiantId": 157888,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1013,
+          "MatchesPlayed": 24,
+          "StatValueCount": 17,
+          "Rank": 172,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            33,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Caleb Zady Sery",
+          "ParticiantId": 962131,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 887,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 173,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Molde",
+          "Positions": [
+            87,
+            72,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Adrian Sæther",
+          "ParticiantId": 1280650,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.64,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1955,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 174,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Haahr",
+          "ParticiantId": 1021118,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2326,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 175,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Sjølstad",
+          "ParticiantId": 245649,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1832,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 176,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Lasse Qvigstad",
+          "ParticiantId": 1303296,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1666,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 177,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            73,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sory Diarra",
+          "ParticiantId": 1181409,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1509,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 178,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Madiodio Dia",
+          "ParticiantId": 1562733,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2048,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 178,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Herman Stengel",
+          "ParticiantId": 202716,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2575,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 180,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            64,
+            85,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Gulbrandsen",
+          "ParticiantId": 120432,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1277,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 180,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lars-Christopher Vilsvik",
+          "ParticiantId": 191740,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2073,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 182,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Troy Nyhammer",
+          "ParticiantId": 1377921,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1361,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 183,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mustapha Isah",
+          "ParticiantId": 1411367,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1659,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 184,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            106,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Jalal Abdullai",
+          "ParticiantId": 1509545,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 887,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 185,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Molde",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Amund Wichne",
+          "ParticiantId": 627567,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.59,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1440,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 186,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Robin Dzabic",
+          "ParticiantId": 1245539,
+          "TeamId": 8609,
+          "TeamColor": "#104070",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 767,
+          "MatchesPlayed": 21,
+          "StatValueCount": 15,
+          "Rank": 187,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Sandefjord",
+          "Positions": [
+            83,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Noah Holm",
+          "ParticiantId": 1186576,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1488,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 187,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Moustafa Zeidan",
+          "ParticiantId": 767777,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 886,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 189,
+          "ParticipantCountryCode": "PLE",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mads Sande",
+          "ParticiantId": 632929,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 800,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 189,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brann",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Victor Halvorsen",
+          "ParticiantId": 1377069,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1450,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 191,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            74,
+            65,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Henrik Langaas Skogvold",
+          "ParticiantId": 1256204,
+          "TeamId": 8417,
+          "TeamColor": "#f13c26",
+          "StatValue": 6.57,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1994,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 192,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fredrikstad",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Bent Sørmo",
+          "ParticiantId": 519903,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 968,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 193,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jan de Boer",
+          "ParticiantId": 1029166,
+          "TeamId": 8531,
+          "TeamColor": "#EF4941",
+          "StatValue": 6.56,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2577,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 194,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Bryne FK",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alie Conteh",
+          "ParticiantId": 1368621,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1055,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 195,
+          "ParticipantCountryCode": "SLE",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Kreshnik Krasniqi",
+          "ParticiantId": 643967,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1314,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 195,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Johan Bakke",
+          "ParticiantId": 1183556,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1181,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 197,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Frederik Flex",
+          "ParticiantId": 1726606,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 719,
+          "MatchesPlayed": 20,
+          "StatValueCount": 15,
+          "Rank": 198,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Amin Nouri",
+          "ParticiantId": 73563,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1084,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 199,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Herman Haugen",
+          "ParticiantId": 1019527,
+          "TeamId": 8478,
+          "TeamColor": "#132847",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 19,
+          "StatValueCount": 16,
+          "Rank": 199,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Viking FK",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Morten Konradsen",
+          "ParticiantId": 315265,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1301,
+          "MatchesPlayed": 16,
+          "StatValueCount": 16,
+          "Rank": 201,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Leite",
+          "ParticiantId": 538725,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1303,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 201,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            75,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alioune Ndour",
+          "ParticiantId": 854130,
+          "TeamId": 8605,
+          "TeamColor": "#0C2340",
+          "StatValue": 6.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 974,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 203,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Kristiansund",
+          "Positions": [
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Mehnert",
+          "ParticiantId": 728888,
+          "TeamId": 8180,
+          "TeamColor": "#084878",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1147,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 204,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Strømsgodset",
+          "Positions": [
+            83,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "William Osnes-Ringen",
+          "ParticiantId": 1527083,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 774,
+          "MatchesPlayed": 21,
+          "StatValueCount": 15,
+          "Rank": 205,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Alagie Sanyang",
+          "ParticiantId": 633403,
+          "TeamId": 8509,
+          "TeamColor": "#102763",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 867,
+          "MatchesPlayed": 19,
+          "StatValueCount": 17,
+          "Rank": 205,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Sarpsborg 08",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Njie",
+          "ParticiantId": 441624,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1216,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 205,
+          "ParticipantCountryCode": "SOM",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Moses Mawa",
+          "ParticiantId": 743392,
+          "TeamId": 8448,
+          "TeamColor": "#009040",
+          "StatValue": 6.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1685,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 208,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "HamKam",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Håkon Sjåtil",
+          "ParticiantId": 1280717,
+          "TeamId": 8007,
+          "TeamColor": "#283090",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1243,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 209,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Vålerenga",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Schneider",
+          "ParticiantId": 1280719,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1035,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 209,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Emil Rohd",
+          "ParticiantId": 1404398,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1364,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 211,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Teodor Berg Haltvik",
+          "ParticiantId": 1047036,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1021,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 212,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            105,
+            103,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Sander Håvik Innvær",
+          "ParticiantId": 1353091,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1012,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 213,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            79,
+            59,
+            71,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Ole Christian Sæter",
+          "ParticiantId": 1049398,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 20,
+          "StatValueCount": 15,
+          "Rank": 214,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Parfait Bizoza",
+          "ParticiantId": 937165,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2007,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 214,
+          "ParticipantCountryCode": "BDI",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            64,
+            36,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Bjørn Martin Kristensen",
+          "ParticiantId": 1250878,
+          "TeamId": 2305,
+          "TeamColor": "#E60000",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 940,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 214,
+          "ParticipantCountryCode": "PHI",
+          "TeamName": "KFUM Oslo",
+          "Positions": [
+            105,
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Mads Kristian Hansen",
+          "ParticiantId": 1104712,
+          "TeamId": 8468,
+          "TeamColor": "#DE1215",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 718,
+          "MatchesPlayed": 24,
+          "StatValueCount": 20,
+          "Rank": 217,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Brann",
+          "Positions": [
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Braut",
+          "ParticiantId": 1344554,
+          "TeamId": 8608,
+          "TeamColor": "#EB131C",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 548,
+          "MatchesPlayed": 29,
+          "StatValueCount": 23,
+          "Rank": 217,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Tromsø",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Milian Granaas",
+          "ParticiantId": 1381031,
+          "TeamId": 9917,
+          "TeamColor": "#0D47A0",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 913,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 219,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Molde",
+          "Positions": [
+            85,
+            87,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Erlend Dahl Reitan",
+          "ParticiantId": 630280,
+          "TeamId": 8422,
+          "TeamColor": "#000000",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1052,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 219,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Rosenborg",
+          "Positions": [
+            33,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Fischer",
+          "ParticiantId": 1436893,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1976,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 221,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Hope",
+          "ParticiantId": 1451071,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1106,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 222,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Libo Séoné",
+          "ParticiantId": 1498307,
+          "TeamId": 8512,
+          "TeamColor": "#002968",
+          "StatValue": 5.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 650,
+          "MatchesPlayed": 16,
+          "StatValueCount": 15,
+          "Rank": 223,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "FK Haugesund",
+          "Positions": [
+            105
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Eliteserien"
+}

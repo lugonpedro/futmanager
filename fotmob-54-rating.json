@@ -1,0 +1,5245 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Michael Olise",
+          "ParticiantId": 1029063,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.55,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 483,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 1,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bayern München",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Harry Kane",
+          "ParticiantId": 194165,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 2,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bayern München",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Pavlović",
+          "ParticiantId": 1473580,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 457,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 3,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Marco Grüll",
+          "ParticiantId": 1024292,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 8.15,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 535,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 4,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            87,
+            83,
+            106,
+            86,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Nico Schlotterbeck",
+          "ParticiantId": 1002058,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 8.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 347,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 5,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Mittelstädt",
+          "ParticiantId": 614384,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 8.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 438,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 6,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            38,
+            68,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Patrik Schick",
+          "ParticiantId": 540097,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 8.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 434,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 6,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Alphonso Davies",
+          "ParticiantId": 751202,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 8,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Bayern München",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Joshua Kimmich",
+          "ParticiantId": 460632,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 475,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 9,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Waldemar Anton",
+          "ParticiantId": 664970,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 10,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Finn Dahmen",
+          "ParticiantId": 926445,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 11,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dayot Upamecano",
+          "ParticiantId": 658554,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 12,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bayern München",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Rieder",
+          "ParticiantId": 1161211,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 13,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            84,
+            66,
+            103,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Hennes Behrens",
+          "ParticiantId": 1678681,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 14,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Aleix García",
+          "ParticiantId": 642551,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 534,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 15,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Nusa",
+          "ParticiantId": 1248482,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 466,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 16,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Tah",
+          "ParticiantId": 469700,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 17,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Matthias Ginter",
+          "ParticiantId": 303912,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 18,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Luis Díaz",
+          "ParticiantId": 860914,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 19,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Bayern München",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Phillip Tietz",
+          "ParticiantId": 686315,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 539,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 20,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Niclas Füllkrug",
+          "ParticiantId": 276791,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 21,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Caci",
+          "ParticiantId": 771401,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 22,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            71,
+            82,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Sheraldo Becker",
+          "ParticiantId": 495222,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 22,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Svensson",
+          "ParticiantId": 1209228,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 24,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            68,
+            79,
+            62,
+            37,
+            38,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Loris Karius",
+          "ParticiantId": 287894,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 25,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kaishu Sano",
+          "ParticiantId": 1033111,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 529,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 26,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Maza",
+          "ParticiantId": 1457626,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 510,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 27,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            85,
+            64,
+            77,
+            83,
+            105,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Yuito Suzuki",
+          "ParticiantId": 1134467,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 387,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 28,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Igor Matanović",
+          "ParticiantId": 1210893,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 479,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 29,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Gutiérrez",
+          "ParticiantId": 942379,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.57,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 30,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            38,
+            68,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Felix Nmecha",
+          "ParticiantId": 966019,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.56,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 31,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Eggestein",
+          "ParticiantId": 602523,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.56,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 31,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Younes Ebnoutalib",
+          "ParticiantId": 1447050,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 7.53,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 33,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Equi Fernández",
+          "ParticiantId": 1199959,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 370,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 34,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jobe Bellingham",
+          "ParticiantId": 1287373,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 460,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 34,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Noll",
+          "ParticiantId": 1257826,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 36,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jordy Makengo",
+          "ParticiantId": 1281108,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 37,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Derry Scherhant",
+          "ParticiantId": 1302666,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 474,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 38,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Petkov",
+          "ParticiantId": 1093782,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 39,
+          "ParticipantCountryCode": "BUL",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            83,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Joane Gadou",
+          "ParticiantId": 1479742,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 40,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Youri Regeer",
+          "ParticiantId": 1111980,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 409,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 41,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            75,
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Hasan Kuruçay",
+          "ParticiantId": 794619,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 496,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 42,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Can Uzun",
+          "ParticiantId": 1367924,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 7.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 43,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            86,
+            78,
+            107,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Serhou Guirassy",
+          "ParticiantId": 448540,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 44,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Bambasé Conté",
+          "ParticiantId": 1338957,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 429,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 45,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Michael Gregoritsch",
+          "ParticiantId": 198316,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 346,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 46,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Laurin Curda",
+          "ParticiantId": 1426060,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 517,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 47,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Maarten Vandevoordt",
+          "ParticiantId": 972200,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 48,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tjark Scheller",
+          "ParticiantId": 1415373,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 535,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 49,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ismael Saibari",
+          "ParticiantId": 1180288,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 304,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 49,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Bayern München",
+          "Positions": [
+            85,
+            115,
+            107,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Adam Daghim",
+          "ParticiantId": 1353000,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 442,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 51,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            83,
+            104,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Lienhart",
+          "ParticiantId": 643724,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 519,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 52,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Chris Führich",
+          "ParticiantId": 892679,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 53,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            87,
+            68,
+            86,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Nkunku",
+          "ParticiantId": 704523,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 358,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 54,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Burkardt",
+          "ParticiantId": 947901,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 491,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 55,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Min-Jae Kim",
+          "ParticiantId": 828159,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 296,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 56,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Bayern München",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Felix Keidel",
+          "ParticiantId": 1366338,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 522,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 57,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            64,
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Franck Honorat",
+          "ParticiantId": 501543,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 238,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 57,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            83,
+            84,
+            104,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Borna Sosa",
+          "ParticiantId": 622091,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 206,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 57,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Arthur",
+          "ParticiantId": 1353457,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 392,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 57,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Katić",
+          "ParticiantId": 725655,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.25,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 507,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 61,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jeff Chabot",
+          "ParticiantId": 867080,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 506,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 62,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Linton Maina",
+          "ParticiantId": 930035,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 403,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 63,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Florian Neuhaus",
+          "ParticiantId": 764507,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 64,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            77,
+            86,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Bredlow",
+          "ParticiantId": 522236,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 64,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Konrad Laimer",
+          "ParticiantId": 526827,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 239,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 66,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Bayern München",
+          "Positions": [
+            32,
+            38,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ezechiel Banzuzi",
+          "ParticiantId": 1310001,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 448,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 66,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Pinckert",
+          "ParticiantId": 1280560,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 66,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Nadiem Amiri",
+          "ParticiantId": 614449,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 530,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 66,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            77,
+            95,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Josha Vagnoman",
+          "ParticiantId": 928454,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 70,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            32,
+            62,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Brajan Gruda",
+          "ParticiantId": 1430151,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 71,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            103,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Claude-Maurice",
+          "ParticiantId": 689065,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 72,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            86,
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Diaby",
+          "ParticiantId": 923498,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 350,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 72,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            83,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Beier",
+          "ParticiantId": 1047667,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 421,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 74,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            84,
+            68,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Yussuf Poulsen",
+          "ParticiantId": 266527,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 74,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Yannik Engelhardt",
+          "ParticiantId": 1269497,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.17,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 498,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 76,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Lennart Karl",
+          "ParticiantId": 1737700,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 162,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 77,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mitchell Weiser",
+          "ParticiantId": 298823,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 99,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 77,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            53
+          ]
+        },
+        {
+          "ParticipantName": "Kenan Karaman",
+          "ParticiantId": 469763,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 356,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 79,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Robin Fellhauer",
+          "ParticiantId": 1185609,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 468,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 80,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            62,
+            64,
+            84,
+            68,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Neil El Aynaoui",
+          "ParticiantId": 1274060,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 403,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 80,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Timo Becker",
+          "ParticiantId": 785739,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 80,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Adam Hložek",
+          "ParticiantId": 969870,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.13,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 375,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 83,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            115,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Danny da Costa",
+          "ParticiantId": 240537,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 262,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 84,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            33,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Julian Ryerson",
+          "ParticiantId": 659272,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 413,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 85,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            62,
+            32,
+            71,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Arijon Ibrahimović",
+          "ParticiantId": 1327150,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 85,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            86,
+            83,
+            78,
+            104,
+            62,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Castañeda",
+          "ParticiantId": 1362492,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 87,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            66,
+            76,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Brackelmann",
+          "ParticiantId": 1300329,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 88,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jan-Niklas Beste",
+          "ParticiantId": 864157,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 418,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 89,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Kristof",
+          "ParticiantId": 1285926,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 89,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Wouter Burger",
+          "ParticiantId": 947884,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 89,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            66,
+            76,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Leon Avdullahu",
+          "ParticiantId": 1478148,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 530,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 89,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            64,
+            74,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Phillipp Mwene",
+          "ParticiantId": 423812,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.09,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 524,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 93,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            79,
+            38,
+            62,
+            88,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Gregor Kobel",
+          "ParticiantId": 764018,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 94,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marvin Schwäbe",
+          "ParticiantId": 573465,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 94,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Angelo Stiller",
+          "ParticiantId": 1071186,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 96,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Robert Andrich",
+          "ParticiantId": 411851,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 127,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 97,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            35,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Adil Aouchiche",
+          "ParticiantId": 1047664,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 411,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 97,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            87,
+            64,
+            77,
+            86,
+            78,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Chuki",
+          "ParticiantId": 1315344,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 479,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 97,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            85,
+            104,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Tidiam Gomis",
+          "ParticiantId": 1482733,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 300,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 100,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mattes Hansen",
+          "ParticiantId": 1515976,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 494,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 100,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            37,
+            62,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Treu",
+          "ParticiantId": 1281090,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 430,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 100,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            32,
+            83,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Afonso Moreira",
+          "ParticiantId": 1367047,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 474,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 103,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            87,
+            106,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Maurice Krattenmacher",
+          "ParticiantId": 1412933,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 250,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 103,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Rohr",
+          "ParticiantId": 1077911,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 103,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Ridle Baku",
+          "ParticiantId": 883087,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 321,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 103,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marcel Sabitzer",
+          "ParticiantId": 215151,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 144,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 103,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            64,
+            87,
+            73,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Noahkai Banks",
+          "ParticiantId": 1641063,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 103,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Raphael Obermair",
+          "ParticiantId": 784225,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 109,
+          "ParticipantCountryCode": "PHI",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Francis Onyeka",
+          "ParticiantId": 1603681,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 154,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 110,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            85,
+            115,
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Vladimír Coufal",
+          "ParticiantId": 307317,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 519,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 110,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            32,
+            62,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Willi Orbán",
+          "ParticiantId": 278856,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 110,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Schwolow",
+          "ParticiantId": 248437,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 110,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tom Krauß",
+          "ParticiantId": 992060,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 483,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 114,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            76,
+            66,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marius Wolf",
+          "ParticiantId": 556029,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 114,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            62,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Jano ter Horst",
+          "ParticiantId": 1520469,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 116,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            32,
+            33,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Tom Bischof",
+          "ParticiantId": 1286183,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 148,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 117,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            38,
+            66,
+            73,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Han-Noah Massengo",
+          "ParticiantId": 978680,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 497,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Neuer",
+          "ParticiantId": 27299,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 117,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Deman",
+          "ParticiantId": 969856,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            38,
+            68,
+            37,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Thijs Dallinga",
+          "ParticiantId": 885085,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 153,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 121,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Facundo Medina",
+          "ParticiantId": 812652,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 122,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Eren Dinkçi",
+          "ParticiantId": 1146376,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 367,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 123,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            84,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mario Götze",
+          "ParticiantId": 177714,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 172,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 123,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            85,
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jae-Sung Lee",
+          "ParticiantId": 523749,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 123,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            77,
+            86,
+            82,
+            105,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "David Raum",
+          "ParticiantId": 806669,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ludovit Reis",
+          "ParticiantId": 869326,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 492,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Soufian El-Faouzi",
+          "ParticiantId": 1249185,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Nathaniel Brown",
+          "ParticiantId": 1395447,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 126,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            38,
+            68,
+            78,
+            85,
+            32,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Jarell Quansah",
+          "ParticiantId": 1107620,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 458,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 126,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ellyes Skhiri",
+          "ParticiantId": 574642,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 295,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 131,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            66,
+            75,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Castello Lukeba",
+          "ParticiantId": 1253852,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 343,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 131,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lasse Günther",
+          "ParticiantId": 1245692,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 492,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 133,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Robin Gosens",
+          "ParticiantId": 518346,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 412,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 134,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Fisnik Asllani",
+          "ParticiantId": 1219540,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 135,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Fábio Vieira",
+          "ParticiantId": 1025462,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 320,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 135,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            103,
+            84,
+            76,
+            64,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Łukasz Poręba",
+          "ParticiantId": 962113,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 135,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Saïd El Mala",
+          "ParticiantId": 1613676,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 138,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            107,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ritsu Doan",
+          "ParticiantId": 629805,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 401,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 139,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            83,
+            62,
+            84,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Bolin",
+          "ParticiantId": 1351569,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 140,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            85,
+            72,
+            107,
+            77,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mats Rots",
+          "ParticiantId": 1445416,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 297,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 141,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Albert Grønbæk",
+          "ParticiantId": 1133381,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 349,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 142,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            86,
+            64,
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Jamal Musiala",
+          "ParticiantId": 1156141,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 148,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 142,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Josip Stanišić",
+          "ParticiantId": 950824,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 294,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 142,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Bayern München",
+          "Positions": [
+            32,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Karl Hein",
+          "ParticiantId": 982692,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 145,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Robin Koch",
+          "ParticiantId": 628201,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 146,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Joey Veerman",
+          "ParticiantId": 792429,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 206,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 146,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Andrija Maksimović",
+          "ParticiantId": 1482209,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 138,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 148,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            75,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Amos Pieper",
+          "ParticiantId": 765998,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 458,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 148,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jahmai Simpson-Pusey",
+          "ParticiantId": 1463271,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 150,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Bilal El Khannouss",
+          "ParticiantId": 1340895,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 283,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 151,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            85,
+            83,
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "András Schäfer",
+          "ParticiantId": 836726,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 364,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 151,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Edmond Tapsoba",
+          "ParticiantId": 789914,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 153,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Vidović",
+          "ParticiantId": 1276453,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 485,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 153,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            107,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Rômulo",
+          "ParticiantId": 1314412,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 203,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 153,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Cole Campbell",
+          "ParticiantId": 1288195,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 156,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Steffen Tigges",
+          "ParticiantId": 706500,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 231,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 157,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Dariusz Stalmach",
+          "ParticiantId": 1276988,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 108,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 157,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Anton Kade",
+          "ParticiantId": 1310103,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 163,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 159,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            84,
+            62,
+            105,
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Karetsas",
+          "ParticiantId": 1536436,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 160,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            83,
+            84,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Koki Machida",
+          "ParticiantId": 727817,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 275,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 161,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lilian Brassier",
+          "ParticiantId": 1073941,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 161,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Wimmer",
+          "ParticiantId": 1073498,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 207,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 161,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            83,
+            87,
+            72,
+            84,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Tim Lemperle",
+          "ParticiantId": 1124825,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 335,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 164,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Mokwa",
+          "ParticiantId": 1459758,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 409,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 164,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Josip Juranović",
+          "ParticiantId": 622373,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 254,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 166,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            32,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Tim Skarke",
+          "ParticiantId": 658440,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 263,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 166,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Albert Sambi Lokonga",
+          "ParticiantId": 901495,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 166,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Fábio Silva",
+          "ParticiantId": 1050158,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 164,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 169,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Nwaneri",
+          "ParticiantId": 1254234,
+          "TeamId": 9789,
+          "TeamColor": "#d8a000",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 310,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 169,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Borussia Dortmund",
+          "Positions": [
+            84,
+            73,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Noël Aséko",
+          "ParticiantId": 1596359,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 196,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 169,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            95,
+            74,
+            64,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Finn Jeltsch",
+          "ParticiantId": 1487877,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 468,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 172,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Posch",
+          "ParticiantId": 557325,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 448,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 172,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            35,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Rocco Reitz",
+          "ParticiantId": 1174726,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 171,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 174,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            64,
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mikey Moore",
+          "ParticiantId": 1407250,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 316,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 174,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            87,
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Luca Sirch",
+          "ParticiantId": 1097361,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 176,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Livan Burcu",
+          "ParticiantId": 1520506,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 215,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 177,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Noah Atubolu",
+          "ParticiantId": 1281100,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.76,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 178,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Maxime Estève",
+          "ParticiantId": 1250443,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 179,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Henrichs",
+          "ParticiantId": 681383,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 160,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 179,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marco Friedl",
+          "ParticiantId": 767789,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 181,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Chrislain Matsima",
+          "ParticiantId": 1178512,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 181,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Martin Adeline",
+          "ParticiantId": 1324082,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 267,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 181,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            84,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Mert Kömür",
+          "ParticiantId": 1453218,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 139,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 184,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            86,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Farès Chaïbi",
+          "ParticiantId": 1345875,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 185,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            77,
+            64,
+            87,
+            86,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Junior Dina Ebimbe",
+          "ParticiantId": 1040889,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 282,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 185,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            87,
+            85,
+            51,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Raphael Onyedika",
+          "ParticiantId": 1126768,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 187,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Ísak Jóhannesson",
+          "ParticiantId": 1000428,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 386,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 188,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Janik Haberer",
+          "ParticiantId": 304354,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 273,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 189,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            62,
+            71,
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Warmed Omari",
+          "ParticiantId": 1202595,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 287,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 189,
+          "ParticipantCountryCode": "COM",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Ozan Kabak",
+          "ParticiantId": 845990,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 451,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 189,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Marius Bülter",
+          "ParticiantId": 626890,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 295,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 192,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            105,
+            84,
+            103,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Woo-Yeong Jeong",
+          "ParticiantId": 949673,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 372,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 192,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            84,
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jan Thielmann",
+          "ParticiantId": 1119643,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 147,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 194,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            72,
+            103,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Satoshi Tanaka",
+          "ParticiantId": 1155066,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 417,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 194,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            66,
+            76,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Seiwald",
+          "ParticiantId": 1024672,
+          "TeamId": 178475,
+          "TeamColor": "#DD0741",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 280,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 196,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RB Leipzig",
+          "Positions": [
+            75,
+            64,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Ullrich",
+          "ParticiantId": 1398483,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 415,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 196,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Luka Lochoshvili",
+          "ParticiantId": 784175,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 528,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 198,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Laurin Ulrich",
+          "ParticiantId": 1367587,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 462,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 199,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Jan Gyamerah",
+          "ParticiantId": 458602,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 344,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 199,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Alessio Castro-Montes",
+          "ParticiantId": 748620,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 199,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            32,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ragnar Ache",
+          "ParticiantId": 772193,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 202,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Keita Kosugi",
+          "ParticiantId": 1627706,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 202,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Stefano Marino",
+          "ParticiantId": 1321553,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 351,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 204,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            105,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Christian Kofane",
+          "ParticiantId": 1705081,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 134,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 205,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Mio Backhaus",
+          "ParticiantId": 1352996,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 206,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás Capaldo",
+          "ParticiantId": 1018564,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 207,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Grischa Prömel",
+          "ParticiantId": 625175,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 382,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 208,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Gideon Mensah",
+          "ParticiantId": 771630,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 334,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 209,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Fabio Gruber",
+          "ParticiantId": 1362417,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 209,
+          "ParticipantCountryCode": "PER",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Cyriaque Irié",
+          "ParticiantId": 1526221,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 87,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 211,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Rani Khedira",
+          "ParticiantId": 304348,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 211,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Kübler",
+          "ParticiantId": 307209,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 213,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tom Rothe",
+          "ParticiantId": 1282582,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 213,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Patson Daka",
+          "ParticiantId": 644459,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 215,
+          "ParticipantCountryCode": "ZAM",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            115,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Zakaria El Ouahdi",
+          "ParticiantId": 1287871,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 268,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 215,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            32,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Leopold Querfeld",
+          "ParticiantId": 1199947,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 217,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Tom Baack",
+          "ParticiantId": 658444,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 56,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 218,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            76,
+            65,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Frederik Rønnow",
+          "ParticiantId": 186557,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 218,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Scally",
+          "ParticiantId": 959696,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 437,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 220,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            62,
+            71,
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Kacper Potulski",
+          "ParticiantId": 1800401,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 440,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 221,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Felix Uduokhai",
+          "ParticiantId": 767800,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 221,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Vincenzo Grifo",
+          "ParticiantId": 400625,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 66,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 221,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Malik Tillman",
+          "ParticiantId": 1126058,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 179,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 224,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            84,
+            66,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Louis Lemke",
+          "ParticiantId": 1899791,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 262,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 224,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Baumann",
+          "ParticiantId": 178778,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 226,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Sander",
+          "ParticiantId": 951918,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 227,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            33,
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Elias Baum",
+          "ParticiantId": 1421821,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 228,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Keisuke Goto",
+          "ParticiantId": 1436730,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Sebulonsen",
+          "ParticiantId": 936140,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 199,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 228,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            33,
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Heuer Fernandes",
+          "ParticiantId": 406501,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 231,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Deniz Undav",
+          "ParticiantId": 661519,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 408,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 232,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Zeno Van Den Bosch",
+          "ParticiantId": 1231677,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 379,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 233,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Ansgar Knauff",
+          "ParticiantId": 1175708,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 138,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 234,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            115,
+            103,
+            86,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Robin Hranác",
+          "ParticiantId": 1225995,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 154,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 234,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Ribeiro",
+          "ParticiantId": 1343749,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 187,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 234,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mathieu Nguefack",
+          "ParticiantId": 1975572,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 134,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 234,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Wael Mohya",
+          "ParticiantId": 1793874,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 298,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 238,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            86,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Michel Aebischer",
+          "ParticiantId": 792756,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 466,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 238,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            75,
+            66,
+            72,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ermedin Demirović",
+          "ParticiantId": 840241,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 356,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 240,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ramon Hendriks",
+          "ParticiantId": 1125187,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "David Møller Wolfe",
+          "ParticiantId": 1049679,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 431,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 242,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            38,
+            68,
+            79,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Mark Flekken",
+          "ParticiantId": 330643,
+          "TeamId": 8178,
+          "TeamColor": "#cf1e1e",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 242,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Bayer 04 Leverkusen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Latte Lath",
+          "ParticiantId": 783585,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 290,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 242,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jamie Leweling",
+          "ParticiantId": 1074968,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 237,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 242,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            87,
+            83,
+            62,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Wöber",
+          "ParticiantId": 701149,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 180,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 242,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Paul Okon-Engstler",
+          "ParticiantId": 1527363,
+          "TeamId": 8722,
+          "TeamColor": "#E21718",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 133,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 242,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "1. FC Köln",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dženan Pejčinović",
+          "ParticiantId": 1366602,
+          "TeamId": 10269,
+          "TeamColor": "#D30029",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 295,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 242,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "VfB Stuttgart",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Isac Lidberg",
+          "ParticiantId": 655095,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 267,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 242,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Albian Hajdari",
+          "ParticiantId": 1186015,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 312,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 250,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Noah Darvich",
+          "ParticiantId": 1479921,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 259,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 251,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            83,
+            85,
+            72,
+            87,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Aljoscha Kemlein",
+          "ParticiantId": 1403332,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 228,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 252,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            66,
+            75,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Chukwubuike Adamu",
+          "ParticiantId": 882163,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 230,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 252,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Young-Woo Seol",
+          "ParticiantId": 1132818,
+          "TeamId": 8406,
+          "TeamColor": "#B93733",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 126,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 254,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "FC Augsburg",
+          "Positions": [
+            32,
+            62,
+            38,
+            86,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ransford Königsdörffer",
+          "ParticiantId": 1121170,
+          "TeamId": 9905,
+          "TeamColor": "#B8121C",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 137,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 254,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "1. FSV Mainz 05",
+          "Positions": [
+            105,
+            84,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Nicolai Remberg",
+          "ParticiantId": 1188890,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 401,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 256,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Moritz Nicolas",
+          "ParticiantId": 784146,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 257,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Höler",
+          "ParticiantId": 556524,
+          "TeamId": 8358,
+          "TeamColor": "#BD1C2C",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 86,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 257,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sport-Club Freiburg",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Hee-Chan Hwang",
+          "ParticiantId": 620026,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 71,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 259,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            106,
+            86,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Serge Gnabry",
+          "ParticiantId": 385437,
+          "TeamId": 9823,
+          "TeamColor": "#C60428",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 67,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 260,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Bayern München",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Noel Futkeu",
+          "ParticiantId": 1138725,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 129,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 261,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dejan Ljubičić",
+          "ParticiantId": 861668,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 185,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 262,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            83,
+            85,
+            73,
+            72,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Nnamdi Collins",
+          "ParticiantId": 1176780,
+          "TeamId": 9810,
+          "TeamColor": "#000000",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 263,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eintracht Frankfurt",
+          "Positions": [
+            33,
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Terem Moffi",
+          "ParticiantId": 885005,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 203,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 264,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nicholas Mickelson",
+          "ParticiantId": 633721,
+          "TeamId": 8232,
+          "TeamColor": "#141414",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 48,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 265,
+          "ParticipantCountryCode": "THA",
+          "TeamName": "SV 07 Elversberg",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Robin Hack",
+          "ParticiantId": 884919,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 234,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 265,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Rayan Philippe",
+          "ParticiantId": 1079892,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 115,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 267,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            103,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Sebastiaan Bornauw",
+          "ParticiantId": 922892,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 267,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Marin Ljubičić",
+          "ParticiantId": 1242198,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 217,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 267,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Sylla",
+          "ParticiantId": 860056,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 287,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 267,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jan Leszczyński",
+          "ParticiantId": 1660228,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 183,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 271,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Edin Džeko",
+          "ParticiantId": 15403,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 167,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 272,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Andrej Kramarić",
+          "ParticiantId": 173461,
+          "TeamId": 8226,
+          "TeamColor": "#005098",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 77,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 273,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "TSG 1899 Hoffenheim",
+          "Positions": [
+            83,
+            85,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Stöger",
+          "ParticiantId": 276739,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 274,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            73,
+            64,
+            86,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Daiki Hashioka",
+          "ParticiantId": 878296,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 6.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 200,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 275,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marvin Pieringer",
+          "ParticiantId": 956913,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 391,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 276,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            104,
+            95,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Cedric Itten",
+          "ParticiantId": 726956,
+          "TeamId": 8697,
+          "TeamColor": "#007642",
+          "StatValue": 6.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 81,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 277,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "SV Werder Bremen",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Batista Meier",
+          "ParticiantId": 950822,
+          "TeamId": 8460,
+          "TeamColor": "#004A99",
+          "StatValue": 6.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 49,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 277,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SC Paderborn 07",
+          "Positions": [
+            106,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Vitalie Becker",
+          "ParticiantId": 1659420,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 6.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 118,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 279,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Shuto Machino",
+          "ParticiantId": 915111,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 5.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 116,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 280,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            105,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Otto Stange",
+          "ParticiantId": 1576487,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 5.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 121,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 281,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Trimmel",
+          "ParticiantId": 166733,
+          "TeamId": 8149,
+          "TeamColor": "#E30613",
+          "StatValue": 5.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 114,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 281,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "1. FC Union Berlin",
+          "Positions": [
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Tim Kleindienst",
+          "ParticiantId": 442728,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 5.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 219,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 283,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Torunarigha",
+          "ParticiantId": 700074,
+          "TeamId": 9790,
+          "TeamColor": "#005AAA",
+          "StatValue": 5.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 284,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Hamburger SV",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Diks",
+          "ParticiantId": 566158,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 5.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 285,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            37,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ron Schallenberg",
+          "ParticiantId": 820974,
+          "TeamId": 10189,
+          "TeamColor": "#083890",
+          "StatValue": 5.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 95,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 286,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Schalke 04",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Ko Itakura",
+          "ParticiantId": 620917,
+          "TeamId": 9788,
+          "TeamColor": "#417E37",
+          "StatValue": 4.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 354,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 287,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Borussia Mönchengladbach",
+          "Positions": [
+            34,
+            75
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Bundesliga"
+}

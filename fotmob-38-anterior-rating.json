@@ -1,0 +1,3055 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Otar Kiteishvili",
+          "ParticiantId": 652954,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.58,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2018,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 1,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            85,
+            76,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Moses Usor",
+          "ParticiantId": 1366348,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.49,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2273,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 2,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "LASK",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Tomi Horvat",
+          "ParticiantId": 978170,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.46,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1427,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 3,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            85,
+            83,
+            63,
+            74,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Melayro Bogarde",
+          "ParticiantId": 1108604,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.42,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2275,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 4,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "LASK",
+          "Positions": [
+            64,
+            75,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Kerim Alajbegović",
+          "ParticiantId": 1684401,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.37,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1912,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 5,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            87,
+            85,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Sascha Horvath",
+          "ParticiantId": 426726,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.36,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2513,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 6,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "LASK",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Greil",
+          "ParticiantId": 951250,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.33,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2288,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 7,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            107,
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Matthäus Taferner",
+          "ParticiantId": 881492,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 7.33,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2199,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 8,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Tae-Seok Lee",
+          "ParticiantId": 1107251,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 7.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2577,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 9,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            68,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jannik Schuster",
+          "ParticiantId": 1572340,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1707,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 10,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dejan Zukić",
+          "ParticiantId": 1053284,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.31,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2482,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 11,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            85,
+            103,
+            73,
+            105,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Mads Bidstrup",
+          "ParticiantId": 1081025,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2027,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 12,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Romeo Amané",
+          "ParticiantId": 1338495,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 7.29,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2620,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 13,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Valentino Müller",
+          "ParticiantId": 655692,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 7.28,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 14,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Ouédraogo",
+          "ParticiantId": 1512829,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2486,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 15,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            78,
+            38,
+            68,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Abubakr Barry",
+          "ParticiantId": 1220043,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2419,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 15,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            64,
+            74,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Ante Bajić",
+          "ParticiantId": 951245,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 7.27,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2377,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 17,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            103,
+            62,
+            72,
+            84,
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Italiano",
+          "ParticiantId": 889093,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 7.26,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2065,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 18,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            86,
+            51,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Andrés Andrade",
+          "ParticiantId": 688449,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.26,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2697,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 19,
+          "ParticipantCountryCode": "PAN",
+          "TeamName": "LASK",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Modou Kéba Cissé",
+          "ParticiantId": 1714552,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2271,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 20,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "LASK",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Saša Kalajdžić",
+          "ParticiantId": 858198,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.24,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1323,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 21,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "LASK",
+          "Positions": [
+            104,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Boris Matić",
+          "ParticiantId": 1663147,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.24,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1761,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 22,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            62,
+            32,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Matthias Seidl",
+          "ParticiantId": 1276078,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 7.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2207,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 23,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            64,
+            76,
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Baumgartner",
+          "ParticiantId": 459283,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2144,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 23,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Nenad Cvetković",
+          "ParticiantId": 934854,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 7.22,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2511,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 25,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Petar Ratkov",
+          "ParticiantId": 1302821,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.2,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1129,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 26,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Yusuf Maart",
+          "ParticiantId": 849991,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2433,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 27,
+          "ParticipantCountryCode": "RSA",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Adeniran",
+          "ParticiantId": 1188855,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2068,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 27,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "LASK",
+          "Positions": [
+            106,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Frans Krätzig",
+          "ParticiantId": 1459265,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1914,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 27,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            38,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Lainer",
+          "ParticiantId": 195206,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2082,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 27,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Schöpf",
+          "ParticiantId": 461357,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1804,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 31,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Emir Karić",
+          "ParticiantId": 642153,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2305,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 32,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Reinhold Ranftl",
+          "ParticiantId": 447085,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2830,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 33,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            62,
+            72,
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Pomer",
+          "ParticiantId": 803558,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2260,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 34,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            68,
+            78,
+            38,
+            74,
+            88,
+            72,
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Bendegúz Bolla",
+          "ParticiantId": 888904,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 7.17,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2388,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 35,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            32,
+            71,
+            62,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nikki Havenaar",
+          "ParticiantId": 430838,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2681,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 36,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            33,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Jørgensen",
+          "ParticiantId": 1029360,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2756,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 37,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "LASK",
+          "Positions": [
+            62,
+            71,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Tom Hülsmann",
+          "ParticiantId": 1518139,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 7.14,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2684,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 38,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dejan Stojanović",
+          "ParticiantId": 197952,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.13,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 2835,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 39,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Soumaïla Diabaté",
+          "ParticiantId": 1429598,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.13,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1690,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 40,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jon Gorenc Stankovič",
+          "ParticiantId": 446392,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2582,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 41,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            64,
+            74,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Vesel Demaku",
+          "ParticiantId": 919376,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.12,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1703,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 42,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jeyland Mitchell",
+          "ParticiantId": 1340071,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1231,
+          "MatchesPlayed": 19,
+          "StatValueCount": 17,
+          "Rank": 43,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "René Renner",
+          "ParticiantId": 557831,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2309,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 44,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            68,
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Leitner",
+          "ParticiantId": 274591,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 7.1,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 45,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Wimmer",
+          "ParticiantId": 951288,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.1,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 45,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Spendlhofer",
+          "ParticiantId": 446363,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2414,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 47,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Nikolas Polster",
+          "ParticiantId": 1184793,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 7.09,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 48,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Maurits Kjærgaard",
+          "ParticiantId": 1070404,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1334,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 49,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jamie Lawrence",
+          "ParticiantId": 1189794,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2852,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 50,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Mike-Steven Bähre",
+          "ParticiantId": 614961,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2676,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 51,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Ingolitsch",
+          "ParticiantId": 619695,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 7.06,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2504,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 52,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            72,
+            62,
+            32,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Donovan Pines",
+          "ParticiantId": 1025947,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2638,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 53,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Marco Boras",
+          "ParticiantId": 1249635,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 7.05,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2618,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 54,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Paul-Friedrich Koller",
+          "ParticiantId": 1002670,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2650,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 55,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Wilfinger",
+          "ParticiantId": 1385166,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 55,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            37,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Alemão",
+          "ParticiantId": 1437941,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 7.03,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1949,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 57,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "LASK",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Briedl",
+          "ParticiantId": 1234640,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2212,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 58,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            66,
+            77,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Sota Kitano",
+          "ParticiantId": 1338846,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.02,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1518,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 59,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            85,
+            73,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Joane Gadou",
+          "ParticiantId": 1479742,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1574,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 60,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Böckle",
+          "ParticiantId": 1185195,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2499,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 60,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            78,
+            68,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thorsten Schriebl",
+          "ParticiantId": 951278,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1344,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 62,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            82,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Steurer",
+          "ParticiantId": 706973,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 62,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nikolai Baden",
+          "ParticiantId": 861933,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.99,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1808,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 64,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            84,
+            103,
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Beres Owusu",
+          "ParticiantId": 1585596,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 65,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Kainz",
+          "ParticiantId": 264845,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2251,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 65,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            77,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Simon Seidl",
+          "ParticiantId": 1385123,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.98,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2438,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 67,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            86,
+            72,
+            62,
+            64,
+            107,
+            105,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Manfred Fischer",
+          "ParticiantId": 658636,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2741,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 68,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            84,
+            103,
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Jungwirth",
+          "ParticiantId": 1156883,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 69,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "LASK",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kingstone Mutandwa",
+          "ParticiantId": 1498718,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.96,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2139,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 70,
+          "ParticipantCountryCode": "ZAM",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Edmund Baidoo",
+          "ParticiantId": 1632055,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1471,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 71,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            83,
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Johannes Eggestein",
+          "ParticiantId": 638127,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2333,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 71,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Yorbe Vertessen",
+          "ParticiantId": 940453,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1529,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 73,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            115,
+            87,
+            85,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Jannes-Kilian Horn",
+          "ParticiantId": 710328,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1578,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 73,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            38,
+            78,
+            68,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Martin Moormann",
+          "ParticiantId": 1199118,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1598,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 75,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Serge Raux Yao",
+          "ParticiantId": 1072820,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2552,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 76,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jürgen Heil",
+          "ParticiantId": 861777,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.94,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2215,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 77,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            51,
+            32,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Dominic Vincze",
+          "ParticiantId": 1295825,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2054,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 78,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            33,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Benedikt Zech",
+          "ParticiantId": 176791,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2597,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 79,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Maranda",
+          "ParticiantId": 731314,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2775,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 79,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Wiesinger",
+          "ParticiantId": 459258,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2457,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 81,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Dragović",
+          "ParticiantId": 128106,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2422,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 82,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Niklas Hedl",
+          "ParticiantId": 1160392,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.89,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2340,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 83,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tin Plavotić",
+          "ParticiantId": 822495,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1752,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 84,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Ramiz Harakaté",
+          "ParticiantId": 1667728,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.89,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2401,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 85,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Michael Sollbauer",
+          "ParticiantId": 167116,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2747,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 86,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Rossdorfer",
+          "ParticiantId": 1515126,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1141,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 86,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            32,
+            68,
+            64,
+            78,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nico Maier",
+          "ParticiantId": 1062761,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.88,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1416,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 88,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            85,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Yann Massombo",
+          "ParticiantId": 1697790,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2496,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 89,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            103,
+            84,
+            104,
+            64,
+            87,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Markuš",
+          "ParticiantId": 1284330,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2829,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 90,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            75,
+            65,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Luca Pazourek",
+          "ParticiantId": 1315098,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1132,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 90,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            59,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Shon Weissman",
+          "ParticiantId": 821240,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2287,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 92,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            105,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Aleksa Terzić",
+          "ParticiantId": 992025,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1000,
+          "MatchesPlayed": 21,
+          "StatValueCount": 16,
+          "Rank": 92,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            38,
+            32,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Elias Havel",
+          "ParticiantId": 1231904,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2311,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 94,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Petter Nosakhare Dahl",
+          "ParticiantId": 1280257,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1229,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 95,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Schlager",
+          "ParticiantId": 450739,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 95,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Arjan Malić",
+          "ParticiantId": 1515122,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1038,
+          "MatchesPlayed": 18,
+          "StatValueCount": 16,
+          "Rank": 97,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Alem Pašić",
+          "ParticiantId": 951303,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1994,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 98,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            33,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Van Wyk",
+          "ParticiantId": 1260840,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1888,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 99,
+          "ParticipantCountryCode": "RSA",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            87,
+            106,
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "George Bello",
+          "ParticiantId": 953995,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2259,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 100,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "LASK",
+          "Positions": [
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Filip Milojević",
+          "ParticiantId": 1663202,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1752,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 101,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            33,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Moussa Kounfolo Yeo",
+          "ParticiantId": 1394109,
+          "TeamId": 10013,
+          "TeamColor": "#F13032",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 951,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 102,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "FC Red Bull Salzburg",
+          "Positions": [
+            87,
+            103,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Kang-Hee Lee",
+          "ParticiantId": 1149438,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1477,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 103,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            64,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Mark Grosse",
+          "ParticiantId": 765229,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.79,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1222,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 104,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Moritz Wels",
+          "ParticiantId": 1291593,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2462,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 105,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            86,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Wohlmuth",
+          "ParticiantId": 1165206,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1621,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 106,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            62,
+            33,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Kryštof Daněk",
+          "ParticiantId": 1118147,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1372,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 106,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "LASK",
+          "Positions": [
+            85,
+            73,
+            105,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ange Ahoussou",
+          "ParticiantId": 1333743,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1626,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 106,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            35,
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Jonas Mayer",
+          "ParticiantId": 1406604,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1960,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 109,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            66,
+            74,
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Hennig",
+          "ParticiantId": 1487881,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1957,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 110,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Ismaila Coulibaly",
+          "ParticiantId": 1035202,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1068,
+          "MatchesPlayed": 21,
+          "StatValueCount": 17,
+          "Rank": 111,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "LASK",
+          "Positions": [
+            64,
+            75,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Jäger",
+          "ParticiantId": 276153,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2049,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 111,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            37,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Marco Sulzner",
+          "ParticiantId": 1156880,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.76,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1671,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 113,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            64,
+            74,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Simon Pirkl",
+          "ParticiantId": 521065,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2146,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 114,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            68,
+            73,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Nikolaus Wurmbrand",
+          "ParticiantId": 1663487,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1862,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 115,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            84,
+            83,
+            107,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "David Kubatta",
+          "ParticiantId": 1323005,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1700,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 116,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Filip Rózga",
+          "ParticiantId": 1484822,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 814,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 116,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            78,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ercan Kara",
+          "ParticiantId": 1072519,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1175,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 118,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Johannes Naschberger",
+          "ParticiantId": 1184073,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1979,
+          "MatchesPlayed": 30,
+          "StatValueCount": 28,
+          "Rank": 119,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            62,
+            72,
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Koch",
+          "ParticiantId": 941702,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1786,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 120,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            84,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Janis Antiste",
+          "ParticiantId": 1131220,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1527,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 121,
+          "ParticipantCountryCode": "MTQ",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            115,
+            86,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Simon Piesinger",
+          "ParticiantId": 240242,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1732,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 122,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            35,
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Hödl",
+          "ParticiantId": 1587610,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1536,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 123,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            62,
+            76,
+            87,
+            83,
+            78,
+            72,
+            85,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Sanel Šaljić",
+          "ParticiantId": 1385055,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1083,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 124,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Markus Pink",
+          "ParticiantId": 167119,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1255,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 125,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Cheick Diabaté",
+          "ParticiantId": 1583236,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1347,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 126,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Adam Stejskal",
+          "ParticiantId": 967060,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 127,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Angelo Gattermayer",
+          "ParticiantId": 1257631,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1730,
+          "MatchesPlayed": 28,
+          "StatValueCount": 25,
+          "Rank": 128,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            106,
+            84,
+            83,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Bajlicz",
+          "ParticiantId": 1385516,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1391,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 129,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            66,
+            82,
+            85,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Christoph Lang",
+          "ParticiantId": 1232205,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 750,
+          "MatchesPlayed": 27,
+          "StatValueCount": 19,
+          "Rank": 130,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "LASK",
+          "Positions": [
+            106,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Philipp Maybach",
+          "ParticiantId": 1670148,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1079,
+          "MatchesPlayed": 23,
+          "StatValueCount": 19,
+          "Rank": 130,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Maderner",
+          "ParticiantId": 459138,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1350,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 130,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Şahin-Radlinger",
+          "ParticiantId": 176431,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.64,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 133,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ronivaldo",
+          "ParticiantId": 429945,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.63,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1577,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 134,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Christian Lichtenberger",
+          "ParticiantId": 951310,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1074,
+          "MatchesPlayed": 30,
+          "StatValueCount": 24,
+          "Rank": 135,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Hofleitner",
+          "ParticiantId": 1514694,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1343,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 136,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Maurice Malone",
+          "ParticiantId": 934742,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1914,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 137,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            106,
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Cvetko",
+          "ParticiantId": 768312,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1130,
+          "MatchesPlayed": 24,
+          "StatValueCount": 19,
+          "Rank": 138,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Seedy Jatta",
+          "ParticiantId": 1233202,
+          "TeamId": 10014,
+          "TeamColor": "#000000",
+          "StatValue": 6.54,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1816,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 139,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "SK Puntigamer Sturm Graz",
+          "Positions": [
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Murat Şatin",
+          "ParticiantId": 882146,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1482,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 140,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            86,
+            64,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Frieser",
+          "ParticiantId": 459264,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1241,
+          "MatchesPlayed": 27,
+          "StatValueCount": 21,
+          "Rank": 140,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            71,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Goiginger",
+          "ParticiantId": 557330,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1168,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 142,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            85,
+            103,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Damjan Kovacevic",
+          "ParticiantId": 1512828,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1320,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 143,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            51,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Donis Avdijaj",
+          "ParticiantId": 520348,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 907,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 143,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            107,
+            106,
+            86,
+            67
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Agyemang",
+          "ParticiantId": 1357730,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 918,
+          "MatchesPlayed": 24,
+          "StatValueCount": 19,
+          "Rank": 145,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Marlon Mustapha",
+          "ParticiantId": 1175942,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1322,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 145,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Sabitzer",
+          "ParticiantId": 814457,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1342,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 147,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ludwig Vraa-Jensen",
+          "ParticiantId": 1436842,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1621,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 148,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Baier",
+          "ParticiantId": 1482721,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.49,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 149,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Srdjan Hrstić",
+          "ParticiantId": 1290727,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1085,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 150,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            105,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Fofana",
+          "ParticiantId": 916593,
+          "TeamId": 2433,
+          "TeamColor": "#004494",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 907,
+          "MatchesPlayed": 24,
+          "StatValueCount": 20,
+          "Rank": 151,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "FC Blau Weiß Linz",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Peter Kiedl",
+          "ParticiantId": 1385273,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 919,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 152,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Gulliksen",
+          "ParticiantId": 1093003,
+          "TeamId": 10015,
+          "TeamColor": "#01653D",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1020,
+          "MatchesPlayed": 23,
+          "StatValueCount": 18,
+          "Rank": 153,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "SK Rapid Wien",
+          "Positions": [
+            85,
+            73,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ademola Ola-Adebomi",
+          "ParticiantId": 1236382,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1316,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 154,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "David Atanga",
+          "ParticiantId": 610346,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 701,
+          "MatchesPlayed": 18,
+          "StatValueCount": 16,
+          "Rank": 154,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Meierhofer",
+          "ParticiantId": 723669,
+          "TeamId": 10012,
+          "TeamColor": "#CD1316",
+          "StatValue": 6.39,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 156,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Grazer AK 1902",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marco Hoffmann",
+          "ParticiantId": 1663164,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1879,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 157,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Kelvin Boateng",
+          "ParticiantId": 1160111,
+          "TeamId": 10011,
+          "TeamColor": "#484090",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 609,
+          "MatchesPlayed": 20,
+          "StatValueCount": 16,
+          "Rank": 158,
+          "ParticipantCountryCode": "UGA",
+          "TeamName": "FK Austria Wien",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Fridrikas",
+          "ParticiantId": 824191,
+          "TeamId": 10056,
+          "TeamColor": "#004386",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 995,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 159,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "TSV Prolactal Hartberg",
+          "Positions": [
+            104,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Martin Rasner",
+          "ParticiantId": 459261,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 801,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 160,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            74,
+            65,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Diawara",
+          "ParticiantId": 1119118,
+          "TeamId": 10008,
+          "TeamColor": "#030305",
+          "StatValue": 6.26,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1814,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 161,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "CASHPOINT SCR Altach",
+          "Positions": [
+            105,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Anselm",
+          "ParticiantId": 883480,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 727,
+          "MatchesPlayed": 19,
+          "StatValueCount": 16,
+          "Rank": 162,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Erik Kojzek",
+          "ParticiantId": 1664568,
+          "TeamId": 1954,
+          "TeamColor": "#1E1E1C",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 999,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 163,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "RZ Pellets WAC",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Joris Boguo",
+          "ParticiantId": 1789053,
+          "TeamId": 10017,
+          "TeamColor": "#007848",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 535,
+          "MatchesPlayed": 22,
+          "StatValueCount": 18,
+          "Rank": 164,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SV Guntamatic Ried",
+          "Positions": [
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Maximilian Entrup",
+          "ParticiantId": 687328,
+          "TeamId": 9977,
+          "TeamColor": "#101010",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 621,
+          "MatchesPlayed": 23,
+          "StatValueCount": 16,
+          "Rank": 164,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "LASK",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Hinterseer",
+          "ParticiantId": 176831,
+          "TeamId": 1583,
+          "TeamColor": "#009848",
+          "StatValue": 6.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 818,
+          "MatchesPlayed": 28,
+          "StatValueCount": 25,
+          "Rank": 166,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "WSG Swarovski Tirol",
+          "Positions": [
+            105
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Bundesliga"
+}

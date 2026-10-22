@@ -1,0 +1,4637 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Marco Asensio",
+          "ParticiantId": 498033,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.81,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1878,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 1,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Victor Osimhen",
+          "ParticiantId": 687681,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.76,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1711,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 2,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Orkun Kökcü",
+          "ParticiantId": 935409,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.72,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2481,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 3,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            86,
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Leroy Sané",
+          "ParticiantId": 530859,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.49,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2286,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 4,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Paul Onuachu",
+          "ParticiantId": 412357,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.46,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2522,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 5,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Yunus Akgün",
+          "ParticiantId": 845991,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.46,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1825,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 6,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            85,
+            83,
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Talisca",
+          "ParticiantId": 450011,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.44,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 1956,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 7,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Barış Alper Yılmaz",
+          "ParticiantId": 890232,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.43,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2318,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 8,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            87,
+            115,
+            83,
+            32,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Eldor Shomurodov",
+          "ParticiantId": 619513,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.43,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2928,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 9,
+          "ParticipantCountryCode": "UZB",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Uğurcan Çakir",
+          "ParticiantId": 603669,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.36,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 10,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Christ Inao Oulaï",
+          "ParticiantId": 1666494,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2077,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 11,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            64,
+            74,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Sara",
+          "ParticiantId": 902710,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.34,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1840,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 12,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kerem Aktürkoglu",
+          "ParticiantId": 1117570,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.34,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1959,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 12,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ernest Muçi",
+          "ParticiantId": 1121511,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1857,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 14,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            85,
+            103,
+            87,
+            77,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Muhammed Şengezer",
+          "ParticiantId": 814153,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.33,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 15,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Oleksandr Zubkov",
+          "ParticiantId": 655636,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.32,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2182,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 16,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Emirhan Topçu",
+          "ParticiantId": 873855,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.3,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1742,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 17,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mateusz Lis",
+          "ParticiantId": 630036,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.29,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 18,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Göztepe",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nélson Semedo",
+          "ParticiantId": 470834,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1942,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 19,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Torreira",
+          "ParticiantId": 592909,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.28,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2224,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 20,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Mustafa Eskihellaç",
+          "ParticiantId": 889717,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.26,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2324,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 21,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            38,
+            87,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Arseniy Batahov",
+          "ParticiantId": 1037491,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.25,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2115,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 22,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Alexandru Maxim",
+          "ParticiantId": 298923,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 7.25,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2692,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 23,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            86,
+            106,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Milan Škriniar",
+          "ParticiantId": 309328,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2115,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 24,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Florent Hadërgjonaj",
+          "ParticiantId": 492132,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 7.24,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2212,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 25,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Qazim Laçi",
+          "ParticiantId": 613262,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 7.24,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2693,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 26,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            85,
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Václav Cerny",
+          "ParticiantId": 623540,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2005,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 27,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Carlo Holse",
+          "ParticiantId": 862716,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 7.22,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2608,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 28,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            84,
+            103,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Velho",
+          "ParticiantId": 863848,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 7.21,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2070,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 29,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tim Jabol-Folcarelli",
+          "ParticiantId": 1244808,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2330,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 30,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Dorgeles Nene",
+          "ParticiantId": 1230287,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.2,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1465,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 31,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Fred",
+          "ParticiantId": 322049,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.2,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1470,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 32,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            85,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Amine Harit",
+          "ParticiantId": 780815,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1566,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 33,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ahmet Oğuz",
+          "ParticiantId": 511399,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2144,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 34,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Abdülkerim Bardakci",
+          "ParticiantId": 291399,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2546,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 35,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Eren Elmalı",
+          "ParticiantId": 1041660,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1524,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 36,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            38,
+            68,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Abbosbek Fayzullayev",
+          "ParticiantId": 1249993,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1108,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 37,
+          "ParticipantCountryCode": "UZB",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            83,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Roland Sallai",
+          "ParticiantId": 583601,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2353,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 37,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            32,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Wagner Pina",
+          "ParticiantId": 1460591,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.15,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2444,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 39,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "El Bilal Touré",
+          "ParticiantId": 1054114,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.15,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1648,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 39,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            88,
+            115,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Rick van Drongelen",
+          "ParticiantId": 690302,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2822,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 41,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Yusuf Sarı",
+          "ParticiantId": 863858,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.15,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1467,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 42,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Junior Olaïtan",
+          "ParticiantId": 1264368,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.15,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2103,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 42,
+          "ParticipantCountryCode": "BEN",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            84,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Opéri",
+          "ParticiantId": 802462,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1824,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 44,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ivo Grbić",
+          "ParticiantId": 539546,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 7.14,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 45,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Arda Kurtulan",
+          "ParticiantId": 1301081,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.13,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2437,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 46,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Göztepe",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kacper Kozłowski",
+          "ParticiantId": 1051411,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 7.12,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2653,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 47,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            83,
+            73,
+            84,
+            88,
+            72,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ilkay Gündogan",
+          "ParticiantId": 178818,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1389,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 48,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            64,
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Wilfred Ndidi",
+          "ParticiantId": 533228,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2000,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 49,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            65,
+            75,
+            55
+          ]
+        },
+        {
+          "ParticipantName": "Hrvoje Smolčić",
+          "ParticiantId": 1077685,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2229,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 49,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ramzi Safuri",
+          "ParticiantId": 529869,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 7.11,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1793,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 49,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            85,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ertuğrul Taşkıran",
+          "ParticiantId": 178899,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 7.11,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 52,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ismail Yüksek",
+          "ParticiantId": 1183589,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1764,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 53,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            64,
+            75,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Davinson Sánchez",
+          "ParticiantId": 643533,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2424,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 54,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Savić",
+          "ParticiantId": 178955,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1757,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 54,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Allan Godói",
+          "ParticiantId": 1304343,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1854,
+          "MatchesPlayed": 27,
+          "StatValueCount": 22,
+          "Rank": 56,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Samet Akaydin",
+          "ParticiantId": 424380,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 7.07,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2571,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 57,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Drissa Camara",
+          "ParticiantId": 967759,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 7.07,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1741,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 57,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            84,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Dennis",
+          "ParticiantId": 1614804,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2472,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 59,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Yhoan Andzouana",
+          "ParticiantId": 692810,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2615,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 60,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            32,
+            71,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Archie Brown",
+          "ParticiantId": 1113704,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1535,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 60,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            38,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Calegari",
+          "ParticiantId": 1070331,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1620,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 62,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Léo Duarte",
+          "ParticiantId": 750056,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2305,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 63,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ozan Tufan",
+          "ParticiantId": 358936,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1430,
+          "MatchesPlayed": 25,
+          "StatValueCount": 19,
+          "Rank": 63,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            66,
+            32,
+            84,
+            73,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "İrfan Kahveci",
+          "ParticiantId": 316544,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 7.03,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1653,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 65,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            83,
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Zeki Yavru",
+          "ParticiantId": 362307,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 7.03,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2017,
+          "MatchesPlayed": 28,
+          "StatValueCount": 25,
+          "Rank": 65,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Levent Mercan",
+          "ParticiantId": 1080172,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1161,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 67,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jackson Muleka",
+          "ParticiantId": 938682,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2230,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 68,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            115,
+            87,
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Amin Cherni",
+          "ParticiantId": 1514625,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3002,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 69,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Göztepe",
+          "Positions": [
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Enis Bardhi",
+          "ParticiantId": 592783,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2062,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 69,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            85,
+            87,
+            77,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Crespo",
+          "ParticiantId": 850288,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 7.0,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1103,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 71,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Lászlo Bénes",
+          "ParticiantId": 629112,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2581,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 72,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            66,
+            86,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Ümit Akdağ",
+          "ParticiantId": 1366373,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2624,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 72,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Ederson",
+          "ParticiantId": 363364,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2132,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 74,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Juan",
+          "ParticiantId": 1118178,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 7.0,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2588,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 75,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Dimitrios Goutas",
+          "ParticiantId": 282615,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2907,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 76,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ruan",
+          "ParticiantId": 1402068,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2251,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 77,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            68,
+            78,
+            72,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Djaló",
+          "ParticiantId": 866358,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1463,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 77,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mauro Icardi",
+          "ParticiantId": 282770,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1313,
+          "MatchesPlayed": 31,
+          "StatValueCount": 24,
+          "Rank": 77,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Rhaldney",
+          "ParticiantId": 1185467,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1083,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 77,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Felipe Augusto",
+          "ParticiantId": 1267102,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 6.98,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2202,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 81,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            115,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Bayo",
+          "ParticiantId": 891373,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.98,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2349,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 82,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Miguel Cardoso",
+          "ParticiantId": 673749,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2854,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 83,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            87,
+            106,
+            84,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jayden Oosterwolde",
+          "ParticiantId": 1174351,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2626,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 83,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kévin Rodrigues",
+          "ParticiantId": 319827,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2289,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 85,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            38,
+            79,
+            68,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Tammy Abraham",
+          "ParticiantId": 749661,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1252,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 86,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sam Larsson",
+          "ParticiantId": 318809,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1567,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 87,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            104,
+            85,
+            87,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Melih İbrahimoğlu",
+          "ParticiantId": 1098065,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2284,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 87,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            64,
+            84,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Kerem Demirbay",
+          "ParticiantId": 331540,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2184,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 89,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            66,
+            75,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Adil Demirbağ",
+          "ParticiantId": 704664,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2088,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 90,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Rıdvan Yılmaz",
+          "ParticiantId": 992071,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2088,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 91,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Fidan Aliti",
+          "ParticiantId": 521203,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2674,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 91,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Taha Altıkardeş",
+          "ParticiantId": 1315351,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1378,
+          "MatchesPlayed": 28,
+          "StatValueCount": 17,
+          "Rank": 91,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Göztepe",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Novatus Miroshi",
+          "ParticiantId": 1284559,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2254,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 94,
+          "ParticipantCountryCode": "TAN",
+          "TeamName": "Göztepe",
+          "Positions": [
+            66,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Logi Tómasson",
+          "ParticiantId": 796756,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.94,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2259,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 95,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            38,
+            59,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Ntcham",
+          "ParticiantId": 671159,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1610,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 96,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            66,
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "André Onana",
+          "ParticiantId": 611491,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 6.94,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2527,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 97,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mortadha Ben Ouanes",
+          "ParticiantId": 712132,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2277,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 98,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            87,
+            85,
+            83,
+            77,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Kazımcan Karataş",
+          "ParticiantId": 1108328,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1139,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 99,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ersin Destanoğlu",
+          "ParticiantId": 903133,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2250,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 100,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Héliton",
+          "ParticiantId": 1283759,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2871,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 100,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Maestro",
+          "ParticiantId": 1525007,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1425,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 102,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Adem Arous",
+          "ParticiantId": 1797902,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1672,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 102,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Olawoyin",
+          "ParticiantId": 1042086,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2038,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 104,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            84,
+            73,
+            64,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Janvier",
+          "ParticiantId": 684938,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1532,
+          "MatchesPlayed": 26,
+          "StatValueCount": 21,
+          "Rank": 105,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Valentin Mihăilă",
+          "ParticiantId": 890266,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1302,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 105,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            88,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mert Müldür",
+          "ParticiantId": 904098,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1214,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 105,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            32,
+            38,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Julián",
+          "ParticiantId": 282680,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.91,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 108,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Massadio Haïdara",
+          "ParticiantId": 240236,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1817,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 109,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Bahadir Han Güngördü",
+          "ParticiantId": 712040,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.9,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1980,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 110,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Kemen",
+          "ParticiantId": 625164,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2298,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 111,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            64,
+            85,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Modibo Sagnan",
+          "ParticiantId": 884272,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1499,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 112,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jerome Opoku",
+          "ParticiantId": 873227,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2740,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 113,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Bartuğ Elmaz",
+          "ParticiantId": 1216728,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1138,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 113,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            66,
+            76,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Efkan Bekiroğlu",
+          "ParticiantId": 678812,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1066,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 115,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Göztepe",
+          "Positions": [
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ianis Hagi",
+          "ParticiantId": 645107,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.87,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1404,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 116,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            84,
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nuno Lima",
+          "ParticiantId": 1282423,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2825,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 117,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Cengiz Ünder",
+          "ParticiantId": 603477,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1174,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 118,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Uğurcan Yazğılı",
+          "ParticiantId": 891469,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2004,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 119,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Cláudio Winck",
+          "ParticiantId": 267368,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2301,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 119,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Ogulcan Ülgün",
+          "ParticiantId": 820089,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1619,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 119,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            84,
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mehmet Umut Nayir",
+          "ParticiantId": 411605,
+          "TeamId": 9752,
+          "TeamColor": "#6e2330",
+          "StatValue": 6.86,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2057,
+          "MatchesPlayed": 32,
+          "StatValueCount": 30,
+          "Rank": 122,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Trabzonspor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Luis Pérez",
+          "ParticiantId": 766957,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1656,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 123,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            32,
+            71,
+            62,
+            33,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Veysel Sarı",
+          "ParticiantId": 178893,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1926,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 123,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Bünyamin Balci",
+          "ParticiantId": 1005366,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2351,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 123,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Malcom Bokélé",
+          "ParticiantId": 1258137,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2649,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 126,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Göztepe",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Musaba",
+          "ParticiantId": 1033114,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2024,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 127,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            88,
+            83,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Serginho",
+          "ParticiantId": 891748,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2195,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 127,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            106,
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Yalçin Kayan",
+          "ParticiantId": 955627,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1721,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 129,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            85,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Mario Lemina",
+          "ParticiantId": 421786,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1683,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 129,
+          "ParticipantCountryCode": "GAB",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            66,
+            34,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Tayfur Bingöl",
+          "ParticiantId": 364204,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.84,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2129,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 131,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            107,
+            85,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Ballet",
+          "ParticiantId": 1097796,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.83,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1717,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 132,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            83,
+            84,
+            106,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Petković",
+          "ParticiantId": 424875,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1337,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 133,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Habib Keïta",
+          "ParticiantId": 1245179,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2052,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 134,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Jovanović",
+          "ParticiantId": 425980,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.83,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1575,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 135,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Gökhan Sazdagi",
+          "ParticiantId": 602095,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1575,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 136,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Casper Højer Nielsen",
+          "ParticiantId": 394360,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2715,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 136,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Loide Augusto",
+          "ParticiantId": 1240979,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1163,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 136,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            82,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Felipe",
+          "ParticiantId": 535789,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.83,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1710,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 139,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Luccas Claro",
+          "ParticiantId": 263928,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.82,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1417,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 140,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Franco Tongya",
+          "ParticiantId": 1051047,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2281,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 141,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            86,
+            87,
+            78,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Lungoyi",
+          "ParticiantId": 852048,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 29,
+          "StatValueCount": 25,
+          "Rank": 142,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            87,
+            79,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Tom Dele-Bashiru",
+          "ParticiantId": 872963,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2362,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 143,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            65,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Davie Selke",
+          "ParticiantId": 501568,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1204,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 144,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Taha Şahin",
+          "ParticiantId": 1339581,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1787,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 144,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Anfernee Dijksteel",
+          "ParticiantId": 798661,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2687,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 146,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            34,
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Deian Sorescu",
+          "ParticiantId": 783806,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1556,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 147,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            62,
+            32,
+            71,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Metehan Mimaroğlu",
+          "ParticiantId": 389181,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1968,
+          "MatchesPlayed": 32,
+          "StatValueCount": 30,
+          "Rank": 148,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Celil Yüksel",
+          "ParticiantId": 908589,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1154,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 148,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            66,
+            75,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "João Mendes",
+          "ParticiantId": 874318,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1505,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 148,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            85,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Emre Akbaba",
+          "ParticiantId": 464462,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 986,
+          "MatchesPlayed": 23,
+          "StatValueCount": 19,
+          "Rank": 151,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Ismail Jakobs",
+          "ParticiantId": 906945,
+          "TeamId": 8637,
+          "TeamColor": "#8D072A",
+          "StatValue": 6.79,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1299,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 152,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Galatasaray",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Marko Jevtović",
+          "ParticiantId": 463591,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1177,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 153,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Umut Meraş",
+          "ParticiantId": 707668,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1829,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 154,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Göktan Gürpüz",
+          "ParticiantId": 1183141,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1939,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 155,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            83,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Guilherme",
+          "ParticiantId": 310289,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1860,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 156,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Marius Mouandilmadji",
+          "ParticiantId": 953517,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.78,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2048,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 157,
+          "ParticipantCountryCode": "CHA",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Atakan Çankaya",
+          "ParticiantId": 885223,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1530,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 158,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            32,
+            34,
+            64,
+            84,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Ömer Ali Sahiner",
+          "ParticiantId": 303187,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1842,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 159,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sander van de Streek",
+          "ParticiantId": 304668,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2347,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 160,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            115,
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Makoumbou",
+          "ParticiantId": 915238,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2240,
+          "MatchesPlayed": 32,
+          "StatValueCount": 30,
+          "Rank": 161,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            65,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Cherif Ndiaye",
+          "ParticiantId": 819972,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1421,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 162,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Mithat Pala",
+          "ParticiantId": 1183742,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.76,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1943,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 163,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            32,
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Botond Balogh",
+          "ParticiantId": 1117306,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1657,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 164,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Onur Bulut",
+          "ParticiantId": 317713,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 973,
+          "MatchesPlayed": 18,
+          "StatValueCount": 17,
+          "Rank": 165,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Furkan Soyalp",
+          "ParticiantId": 390642,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1806,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 165,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            64,
+            84,
+            73,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Melih Kabasakal",
+          "ParticiantId": 718867,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1510,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 167,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Andri Fannar Baldursson",
+          "ParticiantId": 937034,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2720,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 167,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Soner Dikmen",
+          "ParticiantId": 511404,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2158,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 169,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Sékou Koïta",
+          "ParticiantId": 690411,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1732,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 170,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            115,
+            85,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Umut Bozok",
+          "ParticiantId": 791915,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2099,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 171,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Milot Rashica",
+          "ParticiantId": 660165,
+          "TeamId": 10188,
+          "TeamColor": "#000000",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 974,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 172,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Beşiktaş",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ui-Jo Hwang",
+          "ParticiantId": 433677,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2470,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 173,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            86,
+            107,
+            105,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Gaïus Makouta",
+          "ParticiantId": 773062,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2673,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 174,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lubomír Šatka",
+          "ParticiantId": 541825,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2146,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 174,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yahia Fofana",
+          "ParticiantId": 873566,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.73,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2430,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 176,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giannis Papanikolaou",
+          "ParticiantId": 784847,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1839,
+          "MatchesPlayed": 30,
+          "StatValueCount": 26,
+          "Rank": 177,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Çagtay Kurukalıp",
+          "ParticiantId": 977421,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1271,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 177,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Show",
+          "ParticiantId": 859042,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2319,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 177,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            75,
+            65,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Nicholas Opoku",
+          "ParticiantId": 850934,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2432,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 177,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Robin Yalçin",
+          "ParticiantId": 335444,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1624,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 177,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            34,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Žan Žužek",
+          "ParticiantId": 540903,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2743,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 182,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            36,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Gianniotis",
+          "ParticiantId": 380858,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.7,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 183,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Oğuz Aydın",
+          "ParticiantId": 1092015,
+          "TeamId": 8695,
+          "TeamColor": "#002D72",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 640,
+          "MatchesPlayed": 21,
+          "StatValueCount": 17,
+          "Rank": 184,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fenerbahçe",
+          "Positions": [
+            87,
+            83,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Okan Kocuk",
+          "ParticiantId": 305148,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2790,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 185,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jesper Ceesay",
+          "ParticiantId": 1214147,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2138,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 186,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            64,
+            75,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Bilal Bayazıt",
+          "ParticiantId": 873568,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2520,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 187,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "German Onugkha",
+          "ParticiantId": 889153,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.69,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1889,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 188,
+          "ParticipantCountryCode": "RUS",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Umut Günes",
+          "ParticiantId": 844473,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2014,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 189,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Fousseni Diabaté",
+          "ParticiantId": 643654,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1977,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 190,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            85,
+            88,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Serdar Dursun",
+          "ParticiantId": 317267,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1526,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 191,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Janderson",
+          "ParticiantId": 1463351,
+          "TeamId": 1925,
+          "TeamColor": "#C80000",
+          "StatValue": 6.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2472,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 191,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Göztepe",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Deniz Türüc",
+          "ParticiantId": 352023,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1518,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 191,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Semih Güler",
+          "ParticiantId": 603529,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2141,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 194,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Zafer Görgen",
+          "ParticiantId": 932744,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.66,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1800,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 195,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lionel Carole",
+          "ParticiantId": 210437,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1902,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 196,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Storm",
+          "ParticiantId": 465726,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1624,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 196,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Brnić",
+          "ParticiantId": 1186010,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 930,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 198,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ali Sowe",
+          "ParticiantId": 447367,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.64,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2289,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 199,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Nihad Mujakić",
+          "ParticiantId": 857436,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2202,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 200,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nuno da Costa",
+          "ParticiantId": 671326,
+          "TeamId": 1933,
+          "TeamColor": "#FC5000",
+          "StatValue": 6.63,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 899,
+          "MatchesPlayed": 26,
+          "StatValueCount": 20,
+          "Rank": 201,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Başakşehir",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Matías Kranevitter",
+          "ParticiantId": 412762,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1778,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 202,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Pereira",
+          "ParticiantId": 660010,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2618,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 203,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Thalisson",
+          "ParticiantId": 815997,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2529,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 204,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            38,
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ogün Özcicek",
+          "ParticiantId": 1289513,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1172,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 205,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Kazeem Olaigbe",
+          "ParticiantId": 1109486,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2042,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 205,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Tayyip Talha Sanuç",
+          "ParticiantId": 820537,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1336,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 205,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Dario Šarić",
+          "ParticiantId": 773438,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1398,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 208,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            84,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Hüseyin Türkmen",
+          "ParticiantId": 904248,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1430,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 209,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Arda Kızıldağ",
+          "ParticiantId": 1079065,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1766,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 210,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "İbrahim Kaya",
+          "ParticiantId": 1300869,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1155,
+          "MatchesPlayed": 30,
+          "StatValueCount": 26,
+          "Rank": 210,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            107,
+            103,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Karol Linetty",
+          "ParticiantId": 361403,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1524,
+          "MatchesPlayed": 25,
+          "StatValueCount": 23,
+          "Rank": 212,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kenneth Paal",
+          "ParticiantId": 564816,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2882,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 213,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            38,
+            66,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Denis Drăguș",
+          "ParticiantId": 875305,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1202,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 214,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            106,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Stefano Denswil",
+          "ParticiantId": 305132,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2722,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 214,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Attila Mocsi",
+          "ParticiantId": 863118,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.57,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1746,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 216,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ramazan Civelek",
+          "ParticiantId": 603320,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2149,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 217,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            38,
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Esgaio",
+          "ParticiantId": 300918,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2178,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 217,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Taylan Antalyalı",
+          "ParticiantId": 449999,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1298,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 217,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Dorukhan Toköz",
+          "ParticiantId": 643168,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1344,
+          "MatchesPlayed": 26,
+          "StatValueCount": 22,
+          "Rank": 217,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            64,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Talha Ülvan",
+          "ParticiantId": 1393698,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.54,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1106,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 221,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jin-Ho Jo",
+          "ParticiantId": 1514516,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1101,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 222,
+          "ParticipantCountryCode": "KOR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            65,
+            84,
+            32,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Arif Boşluk",
+          "ParticiantId": 1430145,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1134,
+          "MatchesPlayed": 25,
+          "StatValueCount": 19,
+          "Rank": 223,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Berkay Özcan",
+          "ParticiantId": 777103,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2376,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 223,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            85,
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Morten Bjørlo",
+          "ParticiantId": 635465,
+          "TeamId": 8622,
+          "TeamColor": "#008050",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1326,
+          "MatchesPlayed": 28,
+          "StatValueCount": 25,
+          "Rank": 225,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Konyaspor",
+          "Positions": [
+            64,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Doğukan Sinik",
+          "ParticiantId": 750187,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 838,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 226,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            87,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Barış Kalaycı",
+          "ParticiantId": 1721085,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1306,
+          "MatchesPlayed": 29,
+          "StatValueCount": 22,
+          "Rank": 226,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            87,
+            78,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Godfried Frimpong",
+          "ParticiantId": 934495,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2197,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 228,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Youssef Bennasser",
+          "ParticiantId": 662076,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1476,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 228,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            66,
+            34,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "M'Baye Niang",
+          "ParticiantId": 46241,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1740,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 228,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Opoku",
+          "ParticiantId": 820748,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1235,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 231,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            82,
+            32,
+            62,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Abdülkadir Ömür",
+          "ParticiantId": 704138,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1323,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 231,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            83,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Güven Yalcin",
+          "ParticiantId": 950417,
+          "TeamId": 4678,
+          "TeamColor": "#EF7F1A",
+          "StatValue": 6.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 996,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 233,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Alanyaspor",
+          "Positions": [
+            105,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Josafat Mendes",
+          "ParticiantId": 1284496,
+          "TeamId": 9750,
+          "TeamColor": "#DE0102",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1214,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 234,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Samsunspor",
+          "Positions": [
+            32,
+            83,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Mateusz Łęgowski",
+          "ParticiantId": 1229761,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1565,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 235,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            84,
+            77,
+            66,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Cafú",
+          "ParticiantId": 361768,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1324,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 236,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            64,
+            76,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Fall",
+          "ParticiantId": 493468,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1168,
+          "MatchesPlayed": 20,
+          "StatValueCount": 17,
+          "Rank": 236,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            83,
+            115,
+            72,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Serdar Gürler",
+          "ParticiantId": 186919,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1288,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 236,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            82,
+            88,
+            32,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Matěj Hanousek",
+          "ParticiantId": 438162,
+          "TeamId": 7800,
+          "TeamColor": "#A60832",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1355,
+          "MatchesPlayed": 22,
+          "StatValueCount": 19,
+          "Rank": 239,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Gençlerbirliği",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Mané",
+          "ParticiantId": 493196,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1044,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 239,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            83,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Darko Churlinov",
+          "ParticiantId": 833697,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1053,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 241,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            87,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Lautaro Giannetti",
+          "ParticiantId": 315235,
+          "TeamId": 1931,
+          "TeamColor": "#C01018",
+          "StatValue": 6.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1793,
+          "MatchesPlayed": 29,
+          "StatValueCount": 25,
+          "Rank": 241,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Antalyaspor",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Çukur",
+          "ParticiantId": 1279914,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1536,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 243,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Agyei",
+          "ParticiantId": 627223,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2129,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 244,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            83,
+            105,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Prince Ampem",
+          "ParticiantId": 1187260,
+          "TeamId": 4681,
+          "TeamColor": "#e99700",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 633,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 245,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Eyüpspor",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Myenty Abena",
+          "ParticiantId": 523380,
+          "TeamId": 4081,
+          "TeamColor": "#a21f21",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1925,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 245,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Gazisehir Gaziantep",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Altin Zeqiri",
+          "ParticiantId": 1056370,
+          "TeamId": 2166,
+          "TeamColor": "#002D73",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 689,
+          "MatchesPlayed": 23,
+          "StatValueCount": 18,
+          "Rank": 245,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Caykur Rizespor",
+          "Positions": [
+            88,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jure Balkovec",
+          "ParticiantId": 281866,
+          "TeamId": 2088,
+          "TeamColor": "#B41D2C",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1513,
+          "MatchesPlayed": 17,
+          "StatValueCount": 17,
+          "Rank": 248,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Fatih Karagümrük",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Indrit Tuci",
+          "ParticiantId": 1106881,
+          "TeamId": 10182,
+          "TeamColor": "#AE0E21",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 780,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 249,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Kayserispor",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Pape Guèye",
+          "ParticiantId": 848568,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1551,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 250,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Boende",
+          "ParticiantId": 1427018,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1192,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 251,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            85,
+            77,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ali Kol",
+          "ParticiantId": 997497,
+          "TeamId": 4685,
+          "TeamColor": "#243781",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 706,
+          "MatchesPlayed": 24,
+          "StatValueCount": 17,
+          "Rank": 252,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Kasımpaşa",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Rigoberto Rivas",
+          "ParticiantId": 850311,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1176,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 253,
+          "ParticipantCountryCode": "HON",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            103,
+            87,
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Can Keleş",
+          "ParticiantId": 1073569,
+          "TeamId": 1569,
+          "TeamColor": "#005E2A",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 852,
+          "MatchesPlayed": 24,
+          "StatValueCount": 20,
+          "Rank": 254,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Kocaelispor",
+          "Positions": [
+            83
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Süper Lig"
+}

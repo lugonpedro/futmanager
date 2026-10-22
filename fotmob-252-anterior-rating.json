@@ -1,0 +1,2615 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Miha Zajc",
+          "ParticiantId": 396949,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.71,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 1641,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 1,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            77,
+            64,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Dion Drena Beljo",
+          "ParticiantId": 1186606,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.68,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2617,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 2,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Adriano Jagušić",
+          "ParticiantId": 1515990,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 7.65,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 1724,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 3,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Josip Mišić",
+          "ParticiantId": 344093,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.58,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2656,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 4,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Sergi Domínguez",
+          "ParticiantId": 1665435,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.52,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2575,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 5,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Rokas Pukštas",
+          "ParticiantId": 1377897,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.5,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2456,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 6,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            85,
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Iker Pozo",
+          "ParticiantId": 891065,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 7.49,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2713,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 7,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Dantas",
+          "ParticiantId": 955554,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 7.39,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 2487,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 8,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            64,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Luka Stojković",
+          "ParticiantId": 1358149,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.36,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1814,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 9,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Scott McKenna",
+          "ParticiantId": 551805,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.33,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2627,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 10,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Toni Fruk",
+          "ParticiantId": 1300358,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 7.29,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2130,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 11,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            85,
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Iker Almena",
+          "ParticiantId": 1526557,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1522,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 12,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Stjepan Radeljić",
+          "ParticiantId": 653982,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 7.25,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1978,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 13,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Aleksa Latković",
+          "ParticiantId": 1419949,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 7.22,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2492,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 14,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            83,
+            115,
+            84,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ante Oreč",
+          "ParticiantId": 1178132,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2338,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 15,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            32,
+            71,
+            62,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Marko Pajač",
+          "ParticiantId": 274221,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 7.18,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2547,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 16,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            68,
+            38,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Marijan Čabraja",
+          "ParticiantId": 949493,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2661,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 17,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Žan Trontelj",
+          "ParticiantId": 1154277,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 7.17,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2960,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 18,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            32,
+            62,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Vidović",
+          "ParticiantId": 1276453,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1381,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 19,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            107,
+            84,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Niko Galešić",
+          "ParticiantId": 1190350,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1406,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 20,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ante Rebić",
+          "ParticiantId": 265725,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1827,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 21,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Niko Sigur",
+          "ParticiantId": 1494508,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.13,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2225,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 22,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            32,
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Dario Marešić",
+          "ParticiantId": 764741,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.12,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3013,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 23,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Filip Krovinović",
+          "ParticiantId": 443518,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.12,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2140,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 24,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            66,
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Goda",
+          "ParticiantId": 861642,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1588,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 25,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Perez Vinlöf",
+          "ParticiantId": 1628516,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.12,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1638,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 26,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Nasraoui",
+          "ParticiantId": 1520102,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1307,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 27,
+          "ParticipantCountryCode": "TUN",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ismaël Bennacer",
+          "ParticiantId": 609624,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.1,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 969,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 28,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            66,
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Frane Maglica",
+          "ParticiantId": 583584,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1954,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 29,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Josip Mitrović",
+          "ParticiantId": 1067391,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2344,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 30,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Moris Valinčić",
+          "ParticiantId": 1494521,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1924,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 30,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Zvonimir Šarlija",
+          "ParticiantId": 645575,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2210,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 32,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Michele Šego",
+          "ParticiantId": 921593,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.07,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2051,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 33,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ljuban Crepulja",
+          "ParticiantId": 460003,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 7.07,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1839,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 33,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Marko Livaja",
+          "ParticiantId": 206242,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 7.06,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 1738,
+          "MatchesPlayed": 26,
+          "StatValueCount": 24,
+          "Rank": 35,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Robin González",
+          "ParticiantId": 1788277,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 7.04,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2942,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 36,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            85,
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Iúri Tavares",
+          "ParticiantId": 1325353,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 7.04,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2065,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 36,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ante Majstorović",
+          "ParticiantId": 464334,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2678,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 38,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ante Kavelj",
+          "ParticiantId": 1525752,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3105,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 39,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Lisica",
+          "ParticiantId": 1302796,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1431,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 40,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            103,
+            32,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Mamut",
+          "ParticiantId": 767490,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1567,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 41,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Monsef Bakrar",
+          "ParticiantId": 1229109,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1512,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 42,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            103,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Filip Krušelj",
+          "ParticiantId": 1515986,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2226,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 43,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            32,
+            62,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Stjepan Lončar",
+          "ParticiantId": 763305,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2781,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 44,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            85,
+            74,
+            83,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Roko Brajković",
+          "ParticiantId": 1417103,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1298,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 45,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Arbër Hoxha",
+          "ParticiantId": 857618,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1816,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 45,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            107,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jurica Pršir",
+          "ParticiantId": 1186011,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2601,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 47,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            84,
+            83,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Nail Omerović",
+          "ParticiantId": 1510990,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.98,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2695,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 48,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            87,
+            86,
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jakov Puljić",
+          "ParticiantId": 308350,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2741,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 49,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Guillamón",
+          "ParticiantId": 1120936,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1376,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 50,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Marko Vešović",
+          "ParticiantId": 249204,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2010,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 51,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            62,
+            32,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Luka Škaričić",
+          "ParticiantId": 1510853,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1677,
+          "MatchesPlayed": 23,
+          "StatValueCount": 22,
+          "Rank": 51,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Josip Radošević",
+          "ParticiantId": 298940,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2835,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 53,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Fran Karačić",
+          "ParticiantId": 653965,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1561,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 54,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Tomislav Duvnjak",
+          "ParticiantId": 1510865,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.95,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2599,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 54,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Blaž Bošković",
+          "ParticiantId": 1178633,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2457,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 56,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            66,
+            86,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Roko Jurišić",
+          "ParticiantId": 1202918,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1231,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 56,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            38,
+            36,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Emil Frederiksen",
+          "ParticiantId": 952676,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2243,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 58,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            83,
+            87,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Advan Kadušić",
+          "ParticiantId": 782400,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2048,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 59,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            32,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Bogojević",
+          "ParticiantId": 796704,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.9,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1606,
+          "MatchesPlayed": 26,
+          "StatValueCount": 23,
+          "Rank": 60,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            68,
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ante Šuto",
+          "ParticiantId": 1607998,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.89,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1259,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 61,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            83,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Mejía",
+          "ParticiantId": 1258611,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1693,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 62,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Eniss Shabani",
+          "ParticiantId": 1338988,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2163,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 63,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            66,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Adrion Pajaziti",
+          "ParticiantId": 1130562,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1968,
+          "MatchesPlayed": 31,
+          "StatValueCount": 27,
+          "Rank": 63,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Raul Kumar",
+          "ParticiantId": 1639143,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1715,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 65,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Matej Vuk",
+          "ParticiantId": 1077687,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1702,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 66,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            83,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ville Koski",
+          "ParticiantId": 1056461,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1506,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 67,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Luka Mamić",
+          "ParticiantId": 1532189,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2101,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 68,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Toni Silić",
+          "ParticiantId": 1510855,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1890,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 69,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Lovro Banovec",
+          "ParticiantId": 1511026,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2394,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 70,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            87,
+            85,
+            66,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Franko Kolić",
+          "ParticiantId": 1607176,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3150,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 71,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Zelenika",
+          "ParticiantId": 273562,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.85,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2880,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 72,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kerim Çalhanoğlu",
+          "ParticiantId": 1211252,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1339,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 73,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Denis Kolinger",
+          "ParticiantId": 307028,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2693,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 74,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Tino Jukić",
+          "ParticiantId": 1779869,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2338,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 75,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jakov Filipović",
+          "ParticiantId": 767488,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3027,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 76,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Šimun Hrgović",
+          "ParticiantId": 1466684,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2237,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 77,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Justas Lasickas",
+          "ParticiantId": 652962,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1541,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 77,
+          "ParticipantCountryCode": "LTU",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            38,
+            32,
+            68,
+            78,
+            83,
+            88,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Cheikh Mbacke Diop",
+          "ParticiantId": 1712222,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1754,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 79,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ilija Nestorovski",
+          "ParticiantId": 196236,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.82,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1768,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 80,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Kovačić",
+          "ParticiantId": 428816,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2968,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 81,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Smail Prevljak",
+          "ParticiantId": 554930,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.81,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2521,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 82,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Anel Husic",
+          "ParticiantId": 1258242,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1500,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 83,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Leon Belcar",
+          "ParticiantId": 1511013,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.8,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2142,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 84,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            64,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Tomislav Božić",
+          "ParticiantId": 94260,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2319,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 85,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Marcel Heister",
+          "ParticiantId": 384440,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2105,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 86,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            38,
+            68,
+            37,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Ćubelić",
+          "ParticiantId": 1284461,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2311,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 87,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Marko Malenica",
+          "ParticiantId": 445243,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.78,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2700,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 88,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mladen Devetak",
+          "ParticiantId": 1093756,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2360,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 89,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "David Čolina",
+          "ParticiantId": 845557,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1952,
+          "MatchesPlayed": 29,
+          "StatValueCount": 26,
+          "Rank": 90,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            38,
+            37,
+            83,
+            77,
+            62,
+            66,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Akere",
+          "ParticiantId": 1381686,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 977,
+          "MatchesPlayed": 18,
+          "StatValueCount": 18,
+          "Rank": 91,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mario Marina",
+          "ParticiantId": 847154,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1571,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 92,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Boršić",
+          "ParticiantId": 861967,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2331,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 92,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Aleks Stojaković",
+          "ParticiantId": 1791802,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2615,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 94,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            105,
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Luka Jelenić",
+          "ParticiantId": 1202919,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2361,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 95,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Stefan Perić",
+          "ParticiantId": 491737,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2358,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 96,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Abdoulie Sanyang",
+          "ParticiantId": 1080763,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 843,
+          "MatchesPlayed": 26,
+          "StatValueCount": 22,
+          "Rank": 97,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Maurić",
+          "ParticiantId": 1510864,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.71,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1825,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 98,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            66,
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Domagoj Bukvić",
+          "ParticiantId": 1470053,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1919,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 99,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            83,
+            84,
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Dario Melnjak",
+          "ParticiantId": 460004,
+          "TeamId": 10154,
+          "TeamColor": "#034EA2",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 897,
+          "MatchesPlayed": 22,
+          "StatValueCount": 18,
+          "Rank": 100,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Hajduk Split",
+          "Positions": [
+            38,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dusan Vukovic",
+          "ParticiantId": 1649995,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1654,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 101,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            86,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Merveil Ndockyt",
+          "ParticiantId": 650209,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 915,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 101,
+          "ParticipantCountryCode": "CGO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            83,
+            77,
+            85,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Marino Bulat",
+          "ParticiantId": 1511020,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1890,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 103,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Vinko Rozić",
+          "ParticiantId": 1388360,
+          "TeamId": 6038,
+          "TeamColor": "#087828",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1577,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 104,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Istra 1961",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Marko Soldo",
+          "ParticiantId": 1508344,
+          "TeamId": 10156,
+          "TeamColor": "#183888",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 690,
+          "MatchesPlayed": 23,
+          "StatValueCount": 19,
+          "Rank": 104,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Dinamo Zagreb",
+          "Positions": [
+            74,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Roberto Punčec",
+          "ParticiantId": 158898,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1331,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 106,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Domagoj Pavičić",
+          "ParticiantId": 384188,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.65,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1932,
+          "MatchesPlayed": 32,
+          "StatValueCount": 30,
+          "Rank": 107,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Amer Gojak",
+          "ParticiantId": 527683,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1585,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 108,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            87,
+            83,
+            78,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Filip Čuić",
+          "ParticiantId": 1439702,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1633,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 109,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ante Jurič",
+          "ParticiantId": 1516401,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1104,
+          "MatchesPlayed": 26,
+          "StatValueCount": 22,
+          "Rank": 109,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Marko Dabro",
+          "ParticiantId": 427054,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1059,
+          "MatchesPlayed": 21,
+          "StatValueCount": 18,
+          "Rank": 111,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            105,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Martin Zlomislić",
+          "ParticiantId": 857661,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 112,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mario Tadić",
+          "ParticiantId": 767511,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1508,
+          "MatchesPlayed": 22,
+          "StatValueCount": 18,
+          "Rank": 112,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Arnel Jakupović",
+          "ParticiantId": 766730,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2179,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 114,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Canjuga",
+          "ParticiantId": 1516457,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 896,
+          "MatchesPlayed": 21,
+          "StatValueCount": 19,
+          "Rank": 114,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Emin Hasić",
+          "ParticiantId": 1329499,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1340,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 116,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Leonard Zuta",
+          "ParticiantId": 307890,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1393,
+          "MatchesPlayed": 19,
+          "StatValueCount": 18,
+          "Rank": 116,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Oleksandr Petrusenko",
+          "ParticiantId": 1109291,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1483,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 118,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Luka Dajčer",
+          "ParticiantId": 1658262,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1371,
+          "MatchesPlayed": 23,
+          "StatValueCount": 18,
+          "Rank": 119,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dejan Petrovič",
+          "ParticiantId": 646626,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1395,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 119,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Alen Jurilj",
+          "ParticiantId": 583583,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1203,
+          "MatchesPlayed": 20,
+          "StatValueCount": 18,
+          "Rank": 121,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Jakov-Anton Vasilj",
+          "ParticiantId": 1270127,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.6,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1369,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 122,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Davor Matijaš",
+          "ParticiantId": 940678,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.6,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3240,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 123,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Adu-Adjei",
+          "ParticiantId": 1427857,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1555,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 124,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            115,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Renan Guedes",
+          "ParticiantId": 1043709,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1552,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 125,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ante Erceg",
+          "ParticiantId": 206388,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1035,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 126,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Josip Posavec",
+          "ParticiantId": 655544,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2970,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 127,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Šimun Mikolčić",
+          "ParticiantId": 1520835,
+          "TeamId": 10157,
+          "TeamColor": "#005197",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1206,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 128,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Osijek",
+          "Positions": [
+            64,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Matija Subotić",
+          "ParticiantId": 1710216,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2056,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 128,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mario Mladenovski",
+          "ParticiantId": 1100692,
+          "TeamId": 10165,
+          "TeamColor": "#1469A5",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1398,
+          "MatchesPlayed": 22,
+          "StatValueCount": 18,
+          "Rank": 128,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "NK Varaždin",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Luka Vrzić",
+          "ParticiantId": 1637449,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1210,
+          "MatchesPlayed": 29,
+          "StatValueCount": 24,
+          "Rank": 131,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Mario Tičinović",
+          "ParticiantId": 114216,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1736,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 131,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kristijan Čabrajić",
+          "ParticiantId": 1663533,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1446,
+          "MatchesPlayed": 19,
+          "StatValueCount": 19,
+          "Rank": 133,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            38,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kristijan Pavičić",
+          "ParticiantId": 1788272,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1902,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 134,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ognjen Bakić",
+          "ParticiantId": 1384266,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1205,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 135,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            83,
+            64,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Vito Čaić",
+          "ParticiantId": 1561067,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1811,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 136,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            36,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Mirko Sušak",
+          "ParticiantId": 1663529,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 921,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 137,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            84,
+            83,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Katić",
+          "ParticiantId": 1714788,
+          "TeamId": 175388,
+          "TeamColor": "#205088",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1116,
+          "MatchesPlayed": 20,
+          "StatValueCount": 19,
+          "Rank": 138,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lokomotiva Zagreb",
+          "Positions": [
+            64,
+            75,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Leš",
+          "ParticiantId": 1187636,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1640,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 139,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Šimun Butić",
+          "ParticiantId": 1645957,
+          "TeamId": 45228,
+          "TeamColor": "#009BE2",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1215,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 139,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "NK Vukovar '91",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Osman Hadžikić",
+          "ParticiantId": 488207,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2544,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 141,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Duje Čop",
+          "ParticiantId": 75445,
+          "TeamId": 10162,
+          "TeamColor": "#53b2e3",
+          "StatValue": 6.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 937,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 142,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Rijeka",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Fiolić",
+          "ParticiantId": 539204,
+          "TeamId": 206560,
+          "TeamColor": "#D02422",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 633,
+          "MatchesPlayed": 22,
+          "StatValueCount": 19,
+          "Rank": 143,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "HNK Gorica",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Igor Lepinjica",
+          "ParticiantId": 1663553,
+          "TeamId": 1581,
+          "TeamColor": "#005090",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1074,
+          "MatchesPlayed": 27,
+          "StatValueCount": 21,
+          "Rank": 144,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Slaven Belupo Koprivnica",
+          "Positions": [
+            85,
+            104
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "HNL"
+}

@@ -1,0 +1,5389 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Anis Hadj Moussa",
+          "ParticiantId": 1576876,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 8.23,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 706,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 1,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gjivai Zechiël",
+          "ParticiantId": 1523822,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 8.12,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 764,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 2,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            73,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Peer Koopmeiners",
+          "ParticiantId": 915415,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 805,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 3,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Thom van Bergen",
+          "ParticiantId": 1412105,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 805,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 4,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ro-Zangelo Daal",
+          "ParticiantId": 1352213,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.91,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 740,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 5,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            87,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Julian Brandt",
+          "ParticiantId": 516846,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 6,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Ajax",
+          "Positions": [
+            86,
+            77,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Luciano Valente",
+          "ParticiantId": 1256180,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 704,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 6,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            66,
+            77,
+            85,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Søren Tengstedt",
+          "ParticiantId": 1060542,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 7.76,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 766,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 8,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "David van der Werff",
+          "ParticiantId": 1695991,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 735,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 9,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            83,
+            85,
+            72,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Guus Til",
+          "ParticiantId": 774947,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.74,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 708,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 10,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            85,
+            115,
+            73,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Irakli Yegoian",
+          "ParticiantId": 1434603,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 7.71,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 795,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 11,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Excelsior",
+          "Positions": [
+            77,
+            64,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Mauro Júnior",
+          "ParticiantId": 873556,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 749,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 12,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "PSV",
+          "Positions": [
+            38,
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Givairo Read",
+          "ParticiantId": 1351133,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 751,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 12,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Steven Berghuis",
+          "ParticiantId": 209786,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 14,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ayase Ueda",
+          "ParticiantId": 942393,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 308,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 15,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Daouda Weidmann",
+          "ParticiantId": 1382346,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.66,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 16,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Twente",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Mathis Suray",
+          "ParticiantId": 1192848,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 7.65,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 766,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 17,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            87,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Younes Taha",
+          "ParticiantId": 1298600,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.64,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 557,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 18,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "FC Twente",
+          "Positions": [
+            85,
+            83,
+            104,
+            87,
+            78,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thilo Kehrer",
+          "ParticiantId": 604088,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 353,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 19,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Ajax",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Tjaronn Chery",
+          "ParticiantId": 117541,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.62,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 20,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            84,
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Trenskow",
+          "ParticiantId": 1188247,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.61,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 778,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 21,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Oscar Gloukh",
+          "ParticiantId": 1337911,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.6,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 22,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Ajax",
+          "Positions": [
+            85,
+            107,
+            77,
+            103,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Sergiño Dest",
+          "ParticiantId": 892816,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.59,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 719,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 23,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "PSV",
+          "Positions": [
+            32,
+            38,
+            83,
+            72,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Wout Weghorst",
+          "ParticiantId": 351999,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 788,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 24,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ramiz Zerrouki",
+          "ParticiantId": 1074967,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 797,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 25,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "FC Twente",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Max Bruns",
+          "ParticiantId": 1209260,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 455,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 25,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Melle Meulensteen",
+          "ParticiantId": 864893,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 7.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 691,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 27,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            64,
+            34,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Rosa",
+          "ParticiantId": 1357723,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 28,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Ajax",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Billy van Duijl",
+          "ParticiantId": 1362137,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 7.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 29,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Chávez",
+          "ParticiantId": 1432212,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 714,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 30,
+          "ParticipantCountryCode": "MEX",
+          "TeamName": "AZ",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Victor Edvardsen",
+          "ParticiantId": 658222,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 7.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 764,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 31,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            85,
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mattijs Branderhorst",
+          "ParticiantId": 245395,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 32,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Milan Zonneveld",
+          "ParticiantId": 1291881,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 584,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 32,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Ronald Koeman",
+          "ParticiantId": 369295,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 7.46,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 34,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Thomas",
+          "ParticiantId": 496356,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 7.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 604,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 35,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nacho Ferri",
+          "ParticiantId": 1382019,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 415,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 36,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Édouard Michut",
+          "ParticiantId": 1173785,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 700,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 37,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Ruben van Bommel",
+          "ParticiantId": 1359970,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 38,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ilyès Hamache",
+          "ParticiantId": 1280182,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 7.43,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 649,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 39,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            87,
+            78,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Aske Adelgaard",
+          "ParticiantId": 1391319,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 491,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 40,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FC Twente",
+          "Positions": [
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Perišić",
+          "ParticiantId": 163670,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.43,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 511,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 41,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "PSV",
+          "Positions": [
+            87,
+            83,
+            78,
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Bart van Rooij",
+          "ParticiantId": 956726,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 784,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 42,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Mika Mármol",
+          "ParticiantId": 1225450,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 781,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 43,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sondre Ørjasæter",
+          "ParticiantId": 1353293,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 586,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 43,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FC Twente",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tolu Arokodare",
+          "ParticiantId": 1072864,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 45,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Ajax",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Schouten",
+          "ParticiantId": 1329774,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 46,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            36,
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Sem Steijn",
+          "ParticiantId": 947898,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 189,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 47,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Charles Vanhoutte",
+          "ParticiantId": 952057,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 48,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jorthy Mokio",
+          "ParticiantId": 1617161,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 613,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 49,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Ajax",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Sven Mijnans",
+          "ParticiantId": 1035643,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 416,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 50,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            85,
+            77,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kodai Sano",
+          "ParticiantId": 1337282,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 657,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 51,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "PSV",
+          "Positions": [
+            64,
+            85,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Lutsharel Geertruida",
+          "ParticiantId": 881640,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 348,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 52,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            34,
+            32,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Brynjólfur Willumsson",
+          "ParticiantId": 937032,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 682,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 53,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Bouwman",
+          "ParticiantId": 1640681,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 53,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dave Kwakman",
+          "ParticiantId": 1389199,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 582,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 55,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            66,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Wouter Goes",
+          "ParticiantId": 1307387,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 784,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 55,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Youri Baas",
+          "ParticiantId": 1214036,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 654,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 57,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Joris van Overeem",
+          "ParticiantId": 422121,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 338,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 57,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            66,
+            74,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Gaoussou Diarra",
+          "ParticiantId": 1675966,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 413,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Anton Gaaei",
+          "ParticiantId": 1329665,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 57,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Ajax",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Noah Fernandez",
+          "ParticiantId": 1699551,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 346,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 61,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "PSV",
+          "Positions": [
+            66,
+            75,
+            83,
+            38,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Artem Stepanov",
+          "ParticiantId": 1684420,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 436,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 62,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jeremiah St. Juste",
+          "ParticiantId": 611831,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 619,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 63,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mohammed Ihattaren",
+          "ParticiantId": 1015183,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.29,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 578,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 64,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            83,
+            85,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Mexx Meerdink",
+          "ParticiantId": 1321125,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.28,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 742,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 65,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tika de Jonge",
+          "ParticiantId": 1256176,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 794,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 66,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Braude",
+          "ParticiantId": 1526603,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 677,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 67,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Oussama Targhalline",
+          "ParticiantId": 1228273,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 68,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Kees Smit",
+          "ParticiantId": 1417581,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 343,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 69,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            75,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Juho Kilo",
+          "ParticiantId": 1300344,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 70,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            65,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Armando Obispo",
+          "ParticiantId": 794244,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 772,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 71,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "PSV",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Levi Smans",
+          "ParticiantId": 1285774,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.19,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 340,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 72,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Linday",
+          "ParticiantId": 1608454,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 530,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 73,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Pelle Clement",
+          "ParticiantId": 637741,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 758,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 74,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            66,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tyrone Owusu",
+          "ParticiantId": 1290453,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 755,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 75,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            66,
+            84,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Rafik El Arguioui",
+          "ParticiantId": 1344244,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 804,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 76,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            73,
+            85,
+            115,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tygo Land",
+          "ParticiantId": 1426704,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 556,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 76,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Darko Nejašmić",
+          "ParticiantId": 1052861,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 560,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tsuyoshi Watanabe",
+          "ParticiantId": 1023887,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 581,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Nolhan Courtens",
+          "ParticiantId": 1553437,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 78,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Stefán Sigurðarson",
+          "ParticiantId": 1044355,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 7.17,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 560,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 81,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Owen Wijndal",
+          "ParticiantId": 798062,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 304,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 82,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Isaac Babadi",
+          "ParticiantId": 1252642,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 7.16,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 83,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Sofyan Amrabat",
+          "ParticiantId": 593116,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 353,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 84,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Ajax",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Dolberg",
+          "ParticiantId": 640742,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 329,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 85,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Ajax",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Paul Wanner",
+          "ParticiantId": 1327149,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 86,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "PSV",
+          "Positions": [
+            64,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Robin Pröpper",
+          "ParticiantId": 298933,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 695,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 86,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Perr Schuurs",
+          "ParticiantId": 726127,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 188,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 88,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Uriël van Aalst",
+          "ParticiantId": 1697245,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 798,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 88,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            85,
+            77,
+            106,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Davy Klaassen",
+          "ParticiantId": 298448,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 88,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ajax",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ruud Nijstad",
+          "ParticiantId": 1709029,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 88,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Abdelnor Soualhia",
+          "ParticiantId": 1792483,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 92,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Telstar",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Descotte",
+          "ParticiantId": 1116199,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.1,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 536,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 93,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            106,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Elijah Dijkstra",
+          "ParticiantId": 1466557,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 748,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 94,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Stengs",
+          "ParticiantId": 800624,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 95,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Flamingo",
+          "ParticiantId": 1386551,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 522,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 96,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PSV",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Mbayo",
+          "ParticiantId": 1022702,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 684,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 97,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            83,
+            72,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Pepi",
+          "ParticiantId": 1036401,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 435,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 97,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "PSV",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Deveron Fonville",
+          "ParticiantId": 1335315,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 99,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            37,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Ivo Pinto",
+          "ParticiantId": 163815,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 759,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 100,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            32,
+            51,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Amir Bouhamdi",
+          "ParticiantId": 1834912,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 198,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 100,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "PSV",
+          "Positions": [
+            87,
+            115,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Weslley Pinto",
+          "ParticiantId": 1383534,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 344,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 102,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "AZ",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Shiloh Zand",
+          "ParticiantId": 1522438,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 103,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Noé Lebreton",
+          "ParticiantId": 1366049,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 610,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 103,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            86,
+            66,
+            68,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Dylan Vente",
+          "ParticiantId": 750026,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 755,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 105,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Evan Rottier",
+          "ParticiantId": 1183486,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 704,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 105,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            85,
+            104,
+            75,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ayoni Santos",
+          "ParticiantId": 1678727,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 323,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 105,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "PSV",
+          "Positions": [
+            85,
+            75,
+            87,
+            83,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Brouwer",
+          "ParticiantId": 1294800,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 792,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 108,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Binder",
+          "ParticiantId": 1195326,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 345,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 108,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lennard Hartjes",
+          "ParticiantId": 1276311,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 789,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 110,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            75,
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Shunsuke Mito",
+          "ParticiantId": 1227814,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 423,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 110,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Esmir Bajraktarević",
+          "ParticiantId": 1346860,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 110,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "PSV",
+          "Positions": [
+            83,
+            72,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dani de Wit",
+          "ParticiantId": 813428,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 775,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 113,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            85,
+            73,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Dušan Tadić",
+          "ParticiantId": 94267,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 620,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 113,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            85,
+            104,
+            107,
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Yoann Cathline",
+          "ParticiantId": 1234634,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 564,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 115,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Daan Rots",
+          "ParticiantId": 1203490,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 116,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Julius Dirksen",
+          "ParticiantId": 1218553,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 478,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Daniël van Vianen",
+          "ParticiantId": 1301320,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 117,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Noach Shenkman",
+          "ParticiantId": 1825940,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 226,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 117,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Marko Pjaca",
+          "ParticiantId": 307235,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 454,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 120,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "FC Twente",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lushendry Martes",
+          "ParticiantId": 1804213,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.94,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 792,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 121,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            32,
+            34,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Caio Henrique",
+          "ParticiantId": 769525,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 488,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 122,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Ajax",
+          "Positions": [
+            38,
+            37,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Dirk Proper",
+          "ParticiantId": 1097467,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 410,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 123,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Storm",
+          "ParticiantId": 1386070,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 714,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 123,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Aymen Sliti",
+          "ParticiantId": 1553362,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 514,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 123,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ringo Meerveld",
+          "ParticiantId": 1080660,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 501,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 123,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Matisse Didden",
+          "ParticiantId": 1236045,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 564,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 127,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Thijs Jansen",
+          "ParticiantId": 1201749,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 128,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Evert Linthorst",
+          "ParticiantId": 935623,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 707,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 129,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Nicky Souren",
+          "ParticiantId": 867309,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 129,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jens Toornstra",
+          "ParticiantId": 188557,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 367,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 129,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lars Unnerstall",
+          "ParticiantId": 210822,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 132,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Twente",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Syb van Ottele",
+          "ParticiantId": 1180218,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 456,
+          "MatchesPlayed": 9,
+          "StatValueCount": 7,
+          "Rank": 132,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            34,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Rick Meissen",
+          "ParticiantId": 1217654,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 132,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            36,
+            32,
+            65,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Guth",
+          "ParticiantId": 1166329,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 546,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 132,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Thijs Oosting",
+          "ParticiantId": 932541,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 602,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 136,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            85,
+            73,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Valdemar Byskov",
+          "ParticiantId": 1332217,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 137,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "AZ",
+          "Positions": [
+            85,
+            64,
+            74,
+            103,
+            79,
+            107,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Sam Kersten",
+          "ParticiantId": 782557,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 766,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 137,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Maas Willemsen",
+          "ParticiantId": 1389300,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 806,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 137,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Javi López",
+          "ParticiantId": 1159181,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 140,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Geiger",
+          "ParticiantId": 784495,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 248,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 141,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            86,
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Devid Eugene Bouah",
+          "ParticiantId": 921598,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 397,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 141,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Ole Romeny",
+          "ParticiantId": 915365,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 315,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 143,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Jorg Schreuders",
+          "ParticiantId": 1419385,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 765,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 143,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            87,
+            32,
+            78,
+            72,
+            83,
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Cedric Hatenboer",
+          "ParticiantId": 1603786,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 143,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jamiro Monteiro",
+          "ParticiantId": 680905,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 146,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            66,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Etienne Vaessen",
+          "ParticiantId": 665170,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 147,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dean James",
+          "ParticiantId": 1180694,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 702,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 148,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jordy Clasie",
+          "ParticiantId": 209384,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 149,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Marc ter Stegen",
+          "ParticiantId": 184554,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 720,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 149,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Ajax",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marvin Peersman",
+          "ParticiantId": 180784,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 797,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 151,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Telstar",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Mitchell van Bergen",
+          "ParticiantId": 709734,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 326,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 151,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Koen Kostons",
+          "ParticiantId": 782561,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 667,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 151,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Yannick Eduardo",
+          "ParticiantId": 1554760,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 665,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 154,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lequincio Zeefuik",
+          "ParticiantId": 1250495,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 641,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 155,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Luca Oyen",
+          "ParticiantId": 1067741,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 8,
+          "StatValueCount": 5,
+          "Rank": 155,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Sommer",
+          "ParticiantId": 1129028,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 799,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 155,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            66,
+            86,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Vasilios Zagaritis",
+          "ParticiantId": 1085390,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 155,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sem Valk",
+          "ParticiantId": 1257074,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 159,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Maxence Rivera",
+          "ParticiantId": 1124454,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 539,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 159,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Bas Kuipers",
+          "ParticiantId": 467480,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 161,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Pascal Mulder",
+          "ParticiantId": 1585703,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 793,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 162,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Davy van den Berg",
+          "ParticiantId": 1075819,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 463,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 163,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            76,
+            84,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Stijn van Gassel",
+          "ParticiantId": 510425,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 163,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Adrian Blake",
+          "ParticiantId": 1365253,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 163,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Simon Janssen",
+          "ParticiantId": 947896,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 163,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Bram Nuytinck",
+          "ParticiantId": 178758,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 251,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 167,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Marco Rente",
+          "ParticiantId": 798011,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 297,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 168,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            32,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Fabian Kvam",
+          "ParticiantId": 1685344,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 345,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 169,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Brás",
+          "ParticiantId": 1525033,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 285,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 169,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Tjark Ernst",
+          "ParticiantId": 1336731,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 171,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Alfons Sampsted",
+          "ParticiantId": 635947,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 692,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 171,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ángel Alarcon",
+          "ParticiantId": 1403694,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 592,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 173,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Tjoe-A-On",
+          "ParticiantId": 1075242,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 755,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 174,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Willem II",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nigel Thomas",
+          "ParticiantId": 1012783,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 259,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 174,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            83,
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Iwan Henstra",
+          "ParticiantId": 1541465,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 376,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 176,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Adam Tahaui",
+          "ParticiantId": 1667708,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 177,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            85,
+            75,
+            83,
+            62,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Gonzalo Crettaz",
+          "ParticiantId": 1082954,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 585,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 178,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nils Rossen",
+          "ParticiantId": 1329268,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 760,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 178,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            64,
+            74,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Jan Plug",
+          "ParticiantId": 1553374,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 178,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Julian Baas",
+          "ParticiantId": 1180499,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 464,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 178,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jari De Busser",
+          "ParticiantId": 824747,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 182,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "AZ",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Abdellah Ouazane",
+          "ParticiantId": 1795819,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 317,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 182,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Ajax",
+          "Positions": [
+            85,
+            73,
+            87,
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Marius Broholm",
+          "ParticiantId": 1276934,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 184,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 182,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Kilian Nikièma",
+          "ParticiantId": 1313190,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 185,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "David Garden",
+          "ParticiantId": 1406446,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 186,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Kers",
+          "ParticiantId": 1896583,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 249,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 186,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Mathieu Maertens",
+          "ParticiantId": 497572,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 310,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 186,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            84,
+            104,
+            64,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Eric da Silva Moreira",
+          "ParticiantId": 1487909,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 444,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 186,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Excelsior",
+          "Positions": [
+            32,
+            72,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Devin Haen",
+          "ParticiantId": 1236033,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 190,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kaj Sierhuis",
+          "ParticiantId": 813429,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 258,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 190,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Morgan Costarelli",
+          "ParticiantId": 1690090,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 190,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Tsigankov",
+          "ParticiantId": 564847,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 205,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 193,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Ajax",
+          "Positions": [
+            83,
+            71,
+            85,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Bernt Klaverboer",
+          "ParticiantId": 1435849,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 194,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Simon Graves",
+          "ParticiantId": 923488,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 194,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jasper Dahlhaus",
+          "ParticiantId": 1184695,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 529,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 196,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            38,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Clement Bischoff",
+          "ParticiantId": 1436850,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 478,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 196,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            68,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Filip Thorvaldsen",
+          "ParticiantId": 1460786,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 196,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "FC Twente",
+          "Positions": [
+            104,
+            72,
+            103,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Zagré",
+          "ParticiantId": 949807,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 742,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 199,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            38,
+            59,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Marvin Young",
+          "ParticiantId": 1668089,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 799,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 199,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Elias Sørensen",
+          "ParticiantId": 961340,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 347,
+          "MatchesPlayed": 8,
+          "StatValueCount": 6,
+          "Rank": 201,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Waem",
+          "ParticiantId": 1182584,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 529,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 201,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Casper Terho",
+          "ParticiantId": 1087574,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 424,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 201,
+          "ParticipantCountryCode": "FIN",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Kasey Bos",
+          "ParticiantId": 1613323,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 170,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 201,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Excelsior",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gerald Alders",
+          "ParticiantId": 1531392,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 596,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 201,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            62,
+            38,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Twigt",
+          "ParticiantId": 1196739,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 206,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Philip Brittijn",
+          "ParticiantId": 1285451,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 799,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 207,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            64,
+            73,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Ágúst Thorsteinsson",
+          "ParticiantId": 1284359,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 208,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Excelsior",
+          "Positions": [
+            83,
+            107,
+            105,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thijmen Blokzijl",
+          "ParticiantId": 1256173,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 209,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Matěj Kovár",
+          "ParticiantId": 1077903,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 210,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "PSV",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Yassin Oukili",
+          "ParticiantId": 1119702,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 230,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 211,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Cissoko",
+          "ParticiantId": 1282156,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 354,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 212,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Matěj Sín",
+          "ParticiantId": 1335046,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 204,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 212,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            77,
+            85,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jaden Slory",
+          "ParticiantId": 1370583,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 744,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 212,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Jasper Schendelaar",
+          "ParticiantId": 873529,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.57,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 215,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Robin van Cruijsen",
+          "ParticiantId": 1797591,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 350,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 216,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            73,
+            85,
+            64,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Aertssen",
+          "ParticiantId": 1327791,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 789,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 216,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Hidde ter Avest",
+          "ParticiantId": 574234,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 218,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Tonny Vilhena",
+          "ParticiantId": 304000,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 380,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 218,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Casper Widell",
+          "ParticiantId": 1159831,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 735,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 218,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Excelsior",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Finn de Bruin",
+          "ParticiantId": 1599289,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 176,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 221,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Jamal Amofa",
+          "ParticiantId": 1069658,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 465,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 221,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Valentin Sulzbacher",
+          "ParticiantId": 1357944,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 88,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 223,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Excelsior",
+          "Positions": [
+            65,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ismaël Baouf",
+          "ParticiantId": 1572671,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 762,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 224,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Thijs Kraaijeveld",
+          "ParticiantId": 1553376,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 189,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 224,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            36,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ayoub Oufkir",
+          "ParticiantId": 1656600,
+          "TeamId": 10229,
+          "TeamColor": "#CB0008",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 9,
+          "StatValueCount": 4,
+          "Rank": 224,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "AZ",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Linssen",
+          "ParticiantId": 147594,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 547,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 227,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Emre Mor",
+          "ParticiantId": 683333,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 227,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Nikolas Panayiotou",
+          "ParticiantId": 988798,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 229,
+          "ParticipantCountryCode": "CYP",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Damian van der Haar",
+          "ParticiantId": 1328885,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 378,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 229,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nick Verschuren",
+          "ParticiantId": 1562023,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 573,
+          "MatchesPlayed": 9,
+          "StatValueCount": 7,
+          "Rank": 231,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Niklas Vesterlund",
+          "ParticiantId": 1022438,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 654,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 231,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Teo Quintero",
+          "ParticiantId": 1045822,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 107,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 233,
+          "ParticipantCountryCode": "VEN",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            38,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Filip Kostić",
+          "ParticiantId": 281012,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 147,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 234,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "PSV",
+          "Positions": [
+            38,
+            68,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Eser Gürbüz",
+          "ParticiantId": 1708116,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 349,
+          "MatchesPlayed": 8,
+          "StatValueCount": 6,
+          "Rank": 234,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Othniël Raterink",
+          "ParticiantId": 1444577,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 493,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 236,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Thomas van den Belt",
+          "ParticiantId": 955203,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 216,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 236,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Maxime Delanghe",
+          "ParticiantId": 1034810,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 236,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Willem II",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Justin Hubner",
+          "ParticiantId": 1213683,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 236,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            37,
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Milan Hokke",
+          "ParticiantId": 1553389,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 240,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            34,
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Erik Flataker",
+          "ParticiantId": 1255835,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 241,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 241,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nesto Groen",
+          "ParticiantId": 1553368,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 104,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Excelsior",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Rui Mendes",
+          "ParticiantId": 953929,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 536,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 241,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Telstar",
+          "Positions": [
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Márk Csinger",
+          "ParticiantId": 1436365,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 483,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 244,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Joris Kramer",
+          "ParticiantId": 629493,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 244,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Ondrejka",
+          "ParticiantId": 1109476,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 244,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            107,
+            106,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Sydney van Hooijdonk",
+          "ParticiantId": 949481,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 199,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 247,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ilano Silva Timas",
+          "ParticiantId": 1665413,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 223,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 248,
+          "ParticipantCountryCode": "CPV",
+          "TeamName": "Excelsior",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jan Žambůrek",
+          "ParticiantId": 1024959,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 218,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 248,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Yassir Salah Rahmouni",
+          "ParticiantId": 1794261,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 176,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 248,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Wouter Prins",
+          "ParticiantId": 1552425,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 490,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 251,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Emirhan Demircan",
+          "ParticiantId": 1579433,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 139,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 252,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Telstar",
+          "Positions": [
+            87,
+            78,
+            106,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Siebe Horemans",
+          "ParticiantId": 770402,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 725,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 252,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Daryl van Mieghem",
+          "ParticiantId": 277609,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 442,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 254,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Giovanni van Zwam",
+          "ParticiantId": 1252057,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 254,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Alireza Jahanbakhsh",
+          "ParticiantId": 466890,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 94,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 256,
+          "ParticipantCountryCode": "IRN",
+          "TeamName": "Excelsior",
+          "Positions": [
+            83,
+            87,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Jonas Jensen-Abbew",
+          "ParticiantId": 1243931,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 364,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 256,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Leonardo",
+          "ParticiantId": 1174663,
+          "TeamId": 8593,
+          "TeamColor": "#C2002F",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 192,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 258,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Ajax",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Filip Bednarek",
+          "ParticiantId": 243490,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 258,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jalen Hawkings",
+          "ParticiantId": 1159196,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 384,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 258,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            83,
+            77,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Tobias van den Elshout",
+          "ParticiantId": 1692856,
+          "TeamId": 10235,
+          "TeamColor": "#D8232A",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 59,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 261,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Feyenoord",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nick de Groot",
+          "ParticiantId": 1285136,
+          "TeamId": 6422,
+          "TeamColor": "#00684B",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 142,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 261,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Fortuna Sittard",
+          "Positions": [
+            38,
+            59,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Finn Stam",
+          "ParticiantId": 1282595,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 261,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Jetten",
+          "ParticiantId": 1665409,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 325,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 264,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            38,
+            88,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Martins Indi",
+          "ParticiantId": 212511,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 641,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 264,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sami Bouhoudane",
+          "ParticiantId": 1623572,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 406,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 264,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Kristian Hlynsson",
+          "ParticiantId": 1098086,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 131,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 267,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "FC Twente",
+          "Positions": [
+            85,
+            73,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jesse Bal",
+          "ParticiantId": 1483075,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 294,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 268,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Thibo Baeten",
+          "ParticiantId": 1047663,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 9,
+          "StatValueCount": 7,
+          "Rank": 268,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Sherel Floranus",
+          "ParticiantId": 671327,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 423,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 268,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            38,
+            37,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Elvis van der Laan",
+          "ParticiantId": 1720296,
+          "TeamId": 8674,
+          "TeamColor": "#008850",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 172,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 271,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "FC Groningen",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jelani Seedorf",
+          "ParticiantId": 1393996,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 272,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nökkvi Thorisson",
+          "ParticiantId": 1044472,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 457,
+          "MatchesPlayed": 8,
+          "StatValueCount": 8,
+          "Rank": 273,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Telstar",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Sékou Sylla",
+          "ParticiantId": 1282284,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 471,
+          "MatchesPlayed": 9,
+          "StatValueCount": 8,
+          "Rank": 274,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            38,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Per van Loon",
+          "ParticiantId": 1667951,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 321,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 275,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            38,
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Skye Vink",
+          "ParticiantId": 1403394,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 238,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 275,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            105,
+            64,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Michael Brouwer",
+          "ParticiantId": 351869,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 275,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mats Lemmens",
+          "ParticiantId": 1381282,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 196,
+          "MatchesPlayed": 8,
+          "StatValueCount": 6,
+          "Rank": 278,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Willem II",
+          "Positions": [
+            36,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Gabriël Reiziger",
+          "ParticiantId": 1701453,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 134,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 278,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Alwande Roaldsøy",
+          "ParticiantId": 1506448,
+          "TeamId": 8614,
+          "TeamColor": "#E50020",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 76,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 280,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sparta Rotterdam",
+          "Positions": [
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Kasper Boogaard",
+          "ParticiantId": 1609512,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 348,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 280,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Jeff Hardeveld",
+          "ParticiantId": 521195,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 518,
+          "MatchesPlayed": 8,
+          "StatValueCount": 7,
+          "Rank": 282,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            68,
+            78,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Oskar Siira Sivertsen",
+          "ParticiantId": 1139499,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 102,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 282,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Man",
+          "ParticiantId": 805767,
+          "TeamId": 8640,
+          "TeamColor": "#E00000",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 284,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "PSV",
+          "Positions": [
+            83,
+            72,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Prince Aning",
+          "ParticiantId": 1381588,
+          "TeamId": 6414,
+          "TeamColor": "#0076BF",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 110,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 284,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Telstar",
+          "Positions": [
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Vennegoor of Hesselink",
+          "ParticiantId": 1607488,
+          "TeamId": 8611,
+          "TeamColor": "#CA0216",
+          "StatValue": 6.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 75,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 286,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Twente",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Maxim Dekker",
+          "ParticiantId": 1286065,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 287,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Willem II",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Almugera Kabar",
+          "ParticiantId": 1479919,
+          "TeamId": 8464,
+          "TeamColor": "#ED1C24",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 222,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 287,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "N.E.C.",
+          "Positions": [
+            37,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Ciranni",
+          "ParticiantId": 689296,
+          "TeamId": 8525,
+          "TeamColor": "#242C51",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 238,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 289,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Willem II",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Illaijh de Ruijter",
+          "ParticiantId": 1690581,
+          "TeamId": 10217,
+          "TeamColor": "#008135",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 198,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 289,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "ADO Den Haag",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Nick Viergever",
+          "ParticiantId": 164246,
+          "TeamId": 6413,
+          "TeamColor": "#0154A1",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 291,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "PEC Zwolle",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sem van Duijn",
+          "ParticiantId": 1370090,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 292,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            105,
+            103,
+            84,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Guus Offerhaus",
+          "ParticiantId": 1604509,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 6.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 293,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            35,
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Lanroy Machine",
+          "ParticiantId": 1752228,
+          "TeamId": 10228,
+          "TeamColor": "#004F9F",
+          "StatValue": 5.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 101,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 294,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "sc Heerenveen",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Mario Domínguez",
+          "ParticiantId": 1358338,
+          "TeamId": 10218,
+          "TeamColor": "#101010",
+          "StatValue": 5.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 105,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 295,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Excelsior",
+          "Positions": [
+            2
+          ]
+        },
+        {
+          "ParticipantName": "Kjetil Haug",
+          "ParticiantId": 760747,
+          "TeamId": 6433,
+          "TeamColor": "#C10230",
+          "StatValue": 5.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 810,
+          "MatchesPlayed": 9,
+          "StatValueCount": 9,
+          "Rank": 296,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Go Ahead Eagles",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rik Mulders",
+          "ParticiantId": 1082599,
+          "TeamId": 7788,
+          "TeamColor": "#0032A1",
+          "StatValue": 5.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 110,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 297,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "SC Cambuur",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Vasilios Barkas",
+          "ParticiantId": 480788,
+          "TeamId": 9908,
+          "TeamColor": "#E40521",
+          "StatValue": 5.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 298,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "FC Utrecht",
+          "Positions": [
+            11
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Eredivisie"
+}

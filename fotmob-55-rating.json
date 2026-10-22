@@ -1,0 +1,6425 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Nico Paz",
+          "ParticiantId": 1347574,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 8.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 571,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 1,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Como",
+          "Positions": [
+            85,
+            105,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Paulo Dybala",
+          "ParticiantId": 325916,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 496,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 2,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Roma",
+          "Positions": [
+            86,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Christos Mandas",
+          "ParticiantId": 915156,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.92,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 3,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Lazio",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giacomo Calò",
+          "ParticiantId": 746829,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 599,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 4,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Locatelli",
+          "ParticiantId": 624166,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 5,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Juventus",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Mattia Zaccagni",
+          "ParticiantId": 541555,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 6,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Nuno Tavares",
+          "ParticiantId": 957118,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 504,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 7,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Lazio",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Emanuele Lulli",
+          "ParticiantId": 1800491,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 401,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 8,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Roma",
+          "Positions": [
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Donyell Malen",
+          "ParticiantId": 660301,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.7,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 398,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 9,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Roma",
+          "Positions": [
+            105,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jacobo Ramón",
+          "ParticiantId": 1413963,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 616,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 10,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Como",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yann Aurel Bisseck",
+          "ParticiantId": 889535,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 459,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 11,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Internazionale",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Thuram",
+          "ParticiantId": 621562,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.68,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 369,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 12,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Giorgi Kvernadze",
+          "ParticiantId": 1342748,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.68,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 601,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 12,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Frosinone",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Adrien Rabiot",
+          "ParticiantId": 352879,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.67,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 14,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Milan",
+          "Positions": [
+            77,
+            66,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Assane Diao",
+          "ParticiantId": 1434889,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.67,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 427,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 15,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Como",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Lautaro Martínez",
+          "ParticiantId": 690230,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.66,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 352,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 16,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Internazionale",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Diego Moreira",
+          "ParticiantId": 1342754,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 17,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Milan",
+          "Positions": [
+            83,
+            68,
+            78,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Gustavo Varela",
+          "ParticiantId": 1585676,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.63,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 509,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 18,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Monza",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Hakan Çalhanoglu",
+          "ParticiantId": 304733,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.61,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 209,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 19,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Internazionale",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Augusto",
+          "ParticiantId": 940829,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 265,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 20,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            37,
+            79,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Manu Koné",
+          "ParticiantId": 1016132,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 411,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 21,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Roma",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Palmisani",
+          "ParticiantId": 1289655,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.56,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 22,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mario Hermoso",
+          "ParticiantId": 671203,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 506,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 23,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Roma",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Barella",
+          "ParticiantId": 541820,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.53,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 24,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            73,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Akanji",
+          "ParticiantId": 521318,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 503,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 25,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Internazionale",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Marco Carnesecchi",
+          "ParticiantId": 1013021,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 26,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Raimondo",
+          "ParticiantId": 1256534,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.48,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 571,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 27,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Maldini",
+          "ParticiantId": 1072054,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 7.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 28,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Matias Soulé",
+          "ParticiantId": 1280082,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.47,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 28,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Roma",
+          "Positions": [
+            84,
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Elia Caprile",
+          "ParticiantId": 958422,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 7.47,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 30,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Cristante",
+          "ParticiantId": 299799,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 424,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 31,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Roma",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Cristian Volpato",
+          "ParticiantId": 1308909,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 193,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 32,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Noel Törnqvist",
+          "ParticiantId": 1122424,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 33,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Monza",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dany Mota",
+          "ParticiantId": 737339,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 211,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 34,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Monza",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Mancini",
+          "ParticiantId": 588687,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 35,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Roma",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Kevin De Bruyne",
+          "ParticiantId": 169200,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.42,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 389,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 36,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Napoli",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Yan Couto",
+          "ParticiantId": 1109171,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 37,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Como",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Federico Dimarco",
+          "ParticiantId": 605224,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 458,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 38,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            79,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Gabriele Bracaglia",
+          "ParticiantId": 1396091,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 586,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 38,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Gleison Bremer",
+          "ParticiantId": 857269,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.38,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 40,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Da Cunha",
+          "ParticiantId": 1076647,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 41,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Como",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Andy Diouf",
+          "ParticiantId": 1254297,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 41,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            71,
+            77,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Piotr Zieliński",
+          "ParticiantId": 362212,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 431,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 43,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Internazionale",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Chukwueze",
+          "ParticiantId": 688300,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.35,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 524,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 44,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Milan",
+          "Positions": [
+            87,
+            62,
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nahuel Molina",
+          "ParticiantId": 726345,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 298,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 45,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Roma",
+          "Positions": [
+            32,
+            51,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Stanislav Lobotka",
+          "ParticiantId": 308517,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.34,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 599,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 46,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Napoli",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Francesco Pio Esposito",
+          "ParticiantId": 1367618,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.34,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 410,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 46,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Kenneth Taylor",
+          "ParticiantId": 970565,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 580,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 48,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Lazio",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Kaiki",
+          "ParticiantId": 1459564,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.32,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 251,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 49,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Como",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Reda Belahyane",
+          "ParticiantId": 1388071,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 503,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 50,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Lazio",
+          "Positions": [
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Christian Pulisic",
+          "ParticiantId": 688295,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 267,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 50,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Milan",
+          "Positions": [
+            104,
+            107,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mario Gila",
+          "ParticiantId": 1106074,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 605,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 50,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Milan",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Strahinja Pavlović",
+          "ParticiantId": 1048023,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 53,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Milan",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Darryl Bakola",
+          "ParticiantId": 1641041,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 54,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Edon Zhegrova",
+          "ParticiantId": 862616,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.3,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 55,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Juventus",
+          "Positions": [
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nemanja Matić",
+          "ParticiantId": 115067,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 544,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 56,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Juan Miranda",
+          "ParticiantId": 873956,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 486,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 56,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Bologna",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Wesley",
+          "ParticiantId": 1320176,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 56,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Roma",
+          "Positions": [
+            68,
+            79,
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jurgen Ekkelenkamp",
+          "ParticiantId": 934156,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 7.3,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 615,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 59,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Udinese",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Pierre Kalulu",
+          "ParticiantId": 1131217,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 60,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Douglas Luiz",
+          "ParticiantId": 787350,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 576,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 61,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Domenico Berardi",
+          "ParticiantId": 364520,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 393,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 61,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mile Svilar",
+          "ParticiantId": 768474,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 63,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Roma",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Petar Sučić",
+          "ParticiantId": 1382000,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 64,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Internazionale",
+          "Positions": [
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Josip Šutalo",
+          "ParticiantId": 1186228,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 294,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 65,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Lazio",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Hainaut",
+          "ParticiantId": 1290968,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 65,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Venezia",
+          "Positions": [
+            71,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Leonardo Balerdi",
+          "ParticiantId": 958464,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.24,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 299,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 67,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Roma",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Mike Maignan",
+          "ParticiantId": 466439,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 68,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Milan",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Franco Mastantuono",
+          "ParticiantId": 1607566,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 7.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 536,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 69,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Oyono",
+          "ParticiantId": 1235421,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "GAB",
+          "TeamName": "Frosinone",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Danilho Doekhi",
+          "ParticiantId": 724196,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 323,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 71,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Lazio",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Amir Rrahmani",
+          "ParticiantId": 544693,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 71,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Napoli",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Gabriel",
+          "ParticiantId": 1574492,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 421,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 73,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Lecce",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Bastoni",
+          "ParticiantId": 805451,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 73,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Jean Butez",
+          "ParticiantId": 560939,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 73,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Como",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nicolás González",
+          "ParticiantId": 841672,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 355,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 76,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Juventus",
+          "Positions": [
+            78,
+            85,
+            68,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Davide Frattesi",
+          "ParticiantId": 815431,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 536,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 76,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Gabriele Calvani",
+          "ParticiantId": 1415326,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 524,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 78,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Vasilije Adžić",
+          "ParticiantId": 1382375,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.18,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 79,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Romano Floriani Mussolini",
+          "ParticiantId": 1307957,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 583,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 80,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            32,
+            79,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Francisco Conceição",
+          "ParticiantId": 1185336,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 80,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Juventus",
+          "Positions": [
+            83,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Henrikh Mkhitaryan",
+          "ParticiantId": 73167,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 163,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 80,
+          "ParticipantCountryCode": "ARM",
+          "TeamName": "Internazionale",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Pavard",
+          "ParticiantId": 611223,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 208,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 83,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Busio",
+          "ParticiantId": 924431,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 314,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 83,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Venezia",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Emil Holm",
+          "ParticiantId": 1014630,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 83,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Bologna",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Martin Baturina",
+          "ParticiantId": 1215064,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.15,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 86,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Como",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Franck Kessié",
+          "ParticiantId": 579747,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 245,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 87,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Atalanta",
+          "Positions": [
+            73,
+            64,
+            84,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Romano Schmid",
+          "ParticiantId": 749488,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 538,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 87,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Frosinone",
+          "Positions": [
+            85,
+            88,
+            83,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Romano",
+          "ParticiantId": 1705649,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 616,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 89,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            75,
+            67
+          ]
+        },
+        {
+          "ParticipantName": "Jay Robinson",
+          "ParticiantId": 1453338,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 321,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 90,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Monza",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Oliver Provstgaard",
+          "ParticiantId": 1333331,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.14,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 600,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 91,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lazio",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Patrizio Masini",
+          "ParticiantId": 1189223,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 92,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Rafik Belghali",
+          "ParticiantId": 1231029,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 264,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 92,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Torino",
+          "Positions": [
+            71,
+            32,
+            51,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Ché Adams",
+          "ParticiantId": 599353,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 320,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 94,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Torino",
+          "Positions": [
+            106,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Saelemaekers",
+          "ParticiantId": 921341,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 185,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 94,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Milan",
+          "Positions": [
+            71,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Álex Valle",
+          "ParticiantId": 1384881,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 388,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 96,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Como",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Giovanni Di Lorenzo",
+          "ParticiantId": 414906,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 96,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            32,
+            33,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Cancellieri",
+          "ParticiantId": 1146500,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 293,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 96,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Marten de Roon",
+          "ParticiantId": 198559,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 212,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 96,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Roma",
+          "Positions": [
+            64,
+            37,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Mora",
+          "ParticiantId": 1525065,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 234,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 96,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Roma",
+          "Positions": [
+            77,
+            86,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Niccolò Pisilli",
+          "ParticiantId": 1451196,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 243,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 101,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Roma",
+          "Positions": [
+            66,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Koni De Winter",
+          "ParticiantId": 1200630,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 610,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 101,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Milan",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Lassana Coulibaly",
+          "ParticiantId": 664587,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 7.09,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 581,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 103,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Lecce",
+          "Positions": [
+            85,
+            73,
+            66,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Gonçalo Ramos",
+          "ParticiantId": 940087,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 104,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Milan",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Adam Obert",
+          "ParticiantId": 1289961,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 621,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 104,
+          "ParticipantCountryCode": "SVK",
+          "TeamName": "Cagliari",
+          "Positions": [
+            38,
+            79,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Giorgio Cittadini",
+          "ParticiantId": 1327513,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 446,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 104,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Pietro Comuzzo",
+          "ParticiantId": 1529222,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 515,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 107,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Torino",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Zeki Çelik",
+          "ParticiantId": 867225,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 565,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 107,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Juventus",
+          "Positions": [
+            62,
+            33,
+            72,
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Luka Modrić",
+          "ParticiantId": 31097,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 431,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 107,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Milan",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Armand Laurienté",
+          "ParticiantId": 935769,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 107,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            107,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jhon Lucumí",
+          "ParticiantId": 860913,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 480,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 111,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Juventus",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Trevoh Chalobah",
+          "ParticiantId": 793907,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 464,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 111,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Como",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Evan N'Dicka",
+          "ParticiantId": 787242,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 367,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 111,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Roma",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Wladimiro Falcone",
+          "ParticiantId": 362200,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 114,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lecce",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Randal Kolo Muani",
+          "ParticiantId": 823825,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 629,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 115,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Juventus",
+          "Positions": [
+            115,
+            83,
+            87,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Eray Cömert",
+          "ParticiantId": 705484,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 315,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 116,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Torino",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Luis Milla",
+          "ParticiantId": 638090,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 365,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Como",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tijjani Noslin",
+          "ParticiantId": 1282285,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 7.05,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 327,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 117,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Lazio",
+          "Positions": [
+            105,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Benoît Badiashile",
+          "ParticiantId": 955376,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 119,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Napoli",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Filip Stanković",
+          "ParticiantId": 1130600,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 7.04,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 120,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Venezia",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Fagioli",
+          "ParticiantId": 951712,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 121,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Ricardo Mangas",
+          "ParticiantId": 824655,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 121,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Monza",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Máximo Perrone",
+          "ParticiantId": 1336582,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 383,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 123,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Como",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Ebenezer Akinsanmiro",
+          "ParticiantId": 1481909,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 437,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 124,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Monza",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Milutin Osmajić",
+          "ParticiantId": 936603,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 125,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Genoa",
+          "Positions": [
+            104,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Oumar Solet",
+          "ParticiantId": 866708,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 398,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 126,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Udinese",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Alieu Njie",
+          "ParticiantId": 1607014,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 127,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            107,
+            72,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Rafa Marín",
+          "ParticiantId": 1313884,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 127,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Napoli",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Michel Ndary Adopo",
+          "ParticiantId": 936164,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 129,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            73,
+            63,
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Samuele Birindelli",
+          "ParticiantId": 799497,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 130,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            62,
+            33,
+            68,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Morten Frendrup",
+          "ParticiantId": 921543,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 130,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Genoa",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Billy Gilmour",
+          "ParticiantId": 942549,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 264,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 130,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Napoli",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Cher Ndour",
+          "ParticiantId": 1246009,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 567,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 130,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            77,
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Ferguson",
+          "ParticiantId": 888921,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 134,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Bologna",
+          "Positions": [
+            66,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Rolando Mandragora",
+          "ParticiantId": 577911,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 451,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 135,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Torino",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Pape Sarr",
+          "ParticiantId": 1107280,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 241,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 136,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Juventus",
+          "Positions": [
+            66,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Raoul Bellanova",
+          "ParticiantId": 902651,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 136,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            62,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Hassane Kamara",
+          "ParticiantId": 488415,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 557,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 138,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Udinese",
+          "Positions": [
+            79,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Maduka Okoye",
+          "ParticiantId": 1091193,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 139,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Udinese",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Junior Messias",
+          "ParticiantId": 1003368,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 350,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 139,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Genoa",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Adrián Bernabé",
+          "ParticiantId": 951714,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 280,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 139,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Parma",
+          "Positions": [
+            73,
+            63
+          ]
+        },
+        {
+          "ParticipantName": "Weston McKennie",
+          "ParticiantId": 848266,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 139,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Juventus",
+          "Positions": [
+            85,
+            62,
+            73,
+            83,
+            64,
+            72,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Yerry Mina",
+          "ParticiantId": 496042,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 143,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Cagliari",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Charles De Ketelaere",
+          "ParticiantId": 1095432,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 143,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Atalanta",
+          "Positions": [
+            84,
+            115,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Anastasios Douvikas",
+          "ParticiantId": 873270,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 497,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 145,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Como",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sebastiano Esposito",
+          "ParticiantId": 1030212,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 269,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 145,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            106,
+            107,
+            86,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mariano Troilo",
+          "ParticiantId": 1520184,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 147,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Parma",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Farès Ghedjemis",
+          "ParticiantId": 1523327,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 346,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 147,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Frosinone",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Alex Meret",
+          "ParticiantId": 577912,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 149,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kian Fitz-Jim",
+          "ParticiantId": 1218556,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 384,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 149,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Torino",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Cambiaghi",
+          "ParticiantId": 1044029,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 513,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 151,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Daniele Ghilardi",
+          "ParticiantId": 1386006,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 144,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 152,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Roma",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Tommaso Pobega",
+          "ParticiantId": 790732,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 390,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 153,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Yunus Musah",
+          "ParticiantId": 1137272,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 154,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Milan",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Antonio Vergara",
+          "ParticiantId": 1320863,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 130,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 154,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            84,
+            74,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Josep Martínez",
+          "ParticiantId": 772168,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 156,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Internazionale",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marc-Oliver Kempf",
+          "ParticiantId": 355356,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 207,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 156,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Como",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Federico Bernardeschi",
+          "ParticiantId": 414245,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 463,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 156,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            83,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Politano",
+          "ParticiantId": 415539,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 373,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 156,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            103,
+            62,
+            72,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Éderson",
+          "ParticiantId": 957203,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 160,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Bragança",
+          "ParticiantId": 1014980,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 277,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 160,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Torino",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lazar Samardžić",
+          "ParticiantId": 1050178,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 362,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 160,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Atalanta",
+          "Positions": [
+            84,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Krstović",
+          "ParticiantId": 833638,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 163,
+          "ParticipantCountryCode": "MNE",
+          "TeamName": "Atalanta",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Juan Rodríguez",
+          "ParticiantId": 1621219,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 530,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 164,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Cagliari",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Simon Sohm",
+          "ParticiantId": 975242,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 409,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 164,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Venezia",
+          "Positions": [
+            77,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "John Yeboah",
+          "ParticiantId": 845368,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 535,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 166,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Venezia",
+          "Positions": [
+            104,
+            72,
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Andrea Colpani",
+          "ParticiantId": 937462,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 280,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 166,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            84,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Arijanet Murić",
+          "ParticiantId": 760752,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 168,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Fisayo Dele-Bashiru",
+          "ParticiantId": 1091907,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 105,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 169,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Lazio",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Harry Winks",
+          "ParticiantId": 528453,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 588,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 169,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Cagliari",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Fedde Leysen",
+          "ParticiantId": 1203195,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 171,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Giacomo Raspadori",
+          "ParticiantId": 951743,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 179,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 172,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            86,
+            107,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Emanuele Valeri",
+          "ParticiantId": 867789,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 173,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Parma",
+          "Positions": [
+            79,
+            38,
+            68,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Oumar Ngom",
+          "ParticiantId": 1332538,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 395,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 173,
+          "ParticipantCountryCode": "MTN",
+          "TeamName": "Lecce",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Antonino Gallo",
+          "ParticiantId": 879065,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 173,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lecce",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Saúl Coco",
+          "ParticiantId": 941953,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 580,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 173,
+          "ParticipantCountryCode": "EQG",
+          "TeamName": "Torino",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Noa Lang",
+          "ParticiantId": 837341,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 255,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 173,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Napoli",
+          "Positions": [
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Cas Odenthal",
+          "ParticiantId": 1079501,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 244,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 173,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Konan N’Dri",
+          "ParticiantId": 1027594,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.85,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 306,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 179,
+          "ParticipantCountryCode": "NIG",
+          "TeamName": "Lecce",
+          "Positions": [
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Jesper Karlström",
+          "ParticiantId": 322003,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Udinese",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Rasmus Højlund",
+          "ParticiantId": 1199272,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 460,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Napoli",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Gaetano",
+          "ParticiantId": 1012842,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 182,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            75,
+            86,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Akor Adams",
+          "ParticiantId": 958640,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 586,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 182,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Venezia",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Alessio Cacciamani",
+          "ParticiantId": 1746591,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 542,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 182,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Torino",
+          "Positions": [
+            79,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Danilo Veiga",
+          "ParticiantId": 1306664,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 185,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Lecce",
+          "Positions": [
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Nicola Zalewski",
+          "ParticiantId": 1053714,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 164,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 185,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Atalanta",
+          "Positions": [
+            86,
+            68,
+            78,
+            103,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Pervis Estupinán",
+          "ParticiantId": 688278,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 340,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 185,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Milan",
+          "Positions": [
+            79,
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Eddy Kouadio",
+          "ParticiantId": 1676901,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 612,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 188,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Torbjørn Heggem",
+          "ParticiantId": 935550,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 189,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bologna",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Gustav Isaksen",
+          "ParticiantId": 1016093,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 329,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 189,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Lazio",
+          "Positions": [
+            103,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kerim Alajbegović",
+          "ParticiantId": 1684401,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.79,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 319,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 189,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Juventus",
+          "Positions": [
+            87,
+            85,
+            78,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jonathan Rowe",
+          "ParticiantId": 1113694,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 339,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 192,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Atalanta",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Theate",
+          "ParticiantId": 1173250,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 192,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Bologna",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Deiola",
+          "ParticiantId": 449283,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 497,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 192,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            77,
+            34,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Ilario Monterisi",
+          "ParticiantId": 1117058,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 341,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 192,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jay Idzes",
+          "ParticiantId": 937412,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 261,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 192,
+          "ParticipantCountryCode": "IDN",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kristian Thorstvedt",
+          "ParticiantId": 921921,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 309,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 192,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Álex Jiménez",
+          "ParticiantId": 1526689,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 441,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 198,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Paul Mendy",
+          "ParticiantId": 1902196,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 520,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 199,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Cagliari",
+          "Positions": [
+            115,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Alisson Santos",
+          "ParticiantId": 1355552,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 216,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 199,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Napoli",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Mërgim Vojvoda",
+          "ParticiantId": 560945,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 591,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 201,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Udinese",
+          "Positions": [
+            62,
+            83,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Alphadjo Cissè",
+          "ParticiantId": 1445650,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 243,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 201,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Milan",
+          "Positions": [
+            86,
+            106,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Castro",
+          "ParticiantId": 1282008,
+          "TeamId": 8686,
+          "TeamColor": "#96092B",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 195,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 201,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Roma",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Curtis Jones",
+          "ParticiantId": 933768,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 152,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 201,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Internazionale",
+          "Positions": [
+            66,
+            32,
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Toma Bašić",
+          "ParticiantId": 651435,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 304,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 205,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Venezia",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Simone Cinquegrano",
+          "ParticiantId": 1735847,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 206,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Kialonda Gaspar",
+          "ParticiantId": 1206806,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 426,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 206,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "Lecce",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Davide Zappacosta",
+          "ParticiantId": 244811,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 302,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 208,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            62,
+            68,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Maxence Caqueret",
+          "ParticiantId": 846000,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 248,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 208,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Como",
+          "Positions": [
+            66,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Giovanni Simeone",
+          "ParticiantId": 469615,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 516,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 210,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Torino",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Eivind Helland",
+          "ParticiantId": 1503574,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 300,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 211,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Bologna",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Ardian Ismajli",
+          "ParticiantId": 750880,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 388,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 211,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Torino",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ange-Yoan Bonny",
+          "ParticiantId": 1199383,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 129,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 213,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Internazionale",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Scott McTominay",
+          "ParticiantId": 843099,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 265,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 213,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Napoli",
+          "Positions": [
+            66,
+            77,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Amar Fatah",
+          "ParticiantId": 1311977,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 215,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Lecce",
+          "Positions": [
+            107,
+            103,
+            86,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Mikael Egill Ellertsson",
+          "ParticiantId": 942193,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 215,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Genoa",
+          "Positions": [
+            77,
+            62,
+            72,
+            68,
+            38,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Giorgio Scalvini",
+          "ParticiantId": 1202358,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 517,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 215,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Jacopo Fazzini",
+          "ParticiantId": 1329487,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.7,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 247,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 218,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            87,
+            78,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Juan Jesus",
+          "ParticiantId": 197352,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 291,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 219,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Venezia",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Zé Pedro",
+          "ParticiantId": 957107,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 561,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 220,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Cagliari",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Riccardo Orsolini",
+          "ParticiantId": 661761,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 177,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 220,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Sow",
+          "ParticiantId": 707970,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 220,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Genoa",
+          "Positions": [
+            77,
+            66,
+            83,
+            78,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Teun Koopmeiners",
+          "ParticiantId": 866516,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 137,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 223,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Juventus",
+          "Positions": [
+            37,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Alfonso Pedraza",
+          "ParticiantId": 629594,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 131,
+          "MatchesPlayed": 6,
+          "StatValueCount": 3,
+          "Rank": 224,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Lazio",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jakub Piotrowski",
+          "ParticiantId": 689987,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 191,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 224,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Udinese",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Michael Folorunsho",
+          "ParticiantId": 822440,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 226,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            77,
+            64,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Keinan Davis",
+          "ParticiantId": 724368,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 369,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 227,
+          "ParticipantCountryCode": "JAM",
+          "TeamName": "Udinese",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Leo Østigard",
+          "ParticiantId": 740944,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 606,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 228,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Genoa",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Idrissa Gueye",
+          "ParticiantId": 1532261,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 176,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Udinese",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Christ Inao Oulaï",
+          "ParticiantId": 1666494,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 168,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 228,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            64,
+            74,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Kike Pérez",
+          "ParticiantId": 888167,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 600,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 228,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Venezia",
+          "Positions": [
+            73,
+            82,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "David Romero",
+          "ParticiantId": 1233748,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 285,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 228,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Parma",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Eljif Elmas",
+          "ParticiantId": 741049,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 203,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 233,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Atalanta",
+          "Positions": [
+            86,
+            64,
+            107,
+            76,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Josh Doig",
+          "ParticiantId": 1130330,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 569,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 233,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Kieron Bowie",
+          "ParticiantId": 982617,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 357,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 233,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Pellegrino",
+          "ParticiantId": 1224237,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 233,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Christian Ordóñez",
+          "ParticiantId": 1393542,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 215,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 233,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Parma",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Richie Sagrado",
+          "ParticiantId": 1388039,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 244,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 233,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Venezia",
+          "Positions": [
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Albert Guðmundsson",
+          "ParticiantId": 665188,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 110,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 239,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Lazio",
+          "Positions": [
+            107,
+            106,
+            84,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Thierry Correia",
+          "ParticiantId": 992052,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 193,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 239,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Venezia",
+          "Positions": [
+            32,
+            71,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Ivan Ilić",
+          "ParticiantId": 1036182,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Lecce",
+          "Positions": [
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Luis Henrique",
+          "ParticiantId": 1114635,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 209,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 241,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Internazionale",
+          "Positions": [
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Mandela Keita",
+          "ParticiantId": 1239749,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 615,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 243,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Parma",
+          "Positions": [
+            75,
+            65
+          ]
+        },
+        {
+          "ParticipantName": "Leonardo Spinazzola",
+          "ParticiantId": 215242,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 467,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 244,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            68,
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Foe Ondoa",
+          "ParticiantId": 1577900,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 313,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 244,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Monza",
+          "Positions": [
+            74,
+            64,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Enrico Del Prato",
+          "ParticiantId": 935380,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 246,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Parma",
+          "Positions": [
+            33,
+            71,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Perri",
+          "ParticiantId": 637656,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 246,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Torino",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Santiago Pierotti",
+          "ParticiantId": 1039403,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.57,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 453,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 248,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Lecce",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Seydou Fini",
+          "ParticiantId": 1445163,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 206,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 249,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Cutrone",
+          "ParticiantId": 639671,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 201,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 249,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            104,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Jamil Siebert",
+          "ParticiantId": 1185260,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 482,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 251,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Lecce",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "John Stones",
+          "ParticiantId": 263653,
+          "TeamId": 8636,
+          "TeamColor": "#010E80",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 99,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 251,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Internazionale",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jesús Rodríguez",
+          "ParticiantId": 1624039,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 175,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 251,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Como",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Kulenović",
+          "ParticiantId": 823113,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 110,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 254,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Torino",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Frank Anguissa",
+          "ParticiantId": 612863,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 238,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 254,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Napoli",
+          "Positions": [
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Jérémie Boga",
+          "ParticiantId": 643229,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 107,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 256,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Juventus",
+          "Positions": [
+            87,
+            106,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Stephan El Shaarawy",
+          "ParticiantId": 161328,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 182,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 256,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Genoa",
+          "Positions": [
+            86,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Edoardo Corvi",
+          "ParticiantId": 1117310,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.53,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 258,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Parma",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Raphael Kofler",
+          "ParticiantId": 1396084,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 68,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 259,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Cagliari",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Sebastian Otoa",
+          "ParticiantId": 1404077,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 259,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Genoa",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Guglielmo Vicario",
+          "ParticiantId": 538501,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 629,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 261,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Juventus",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Davide Bartesaghi",
+          "ParticiantId": 1385856,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 125,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 262,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Milan",
+          "Positions": [
+            79,
+            38,
+            68,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Odilon Kossounou",
+          "ParticiantId": 1014496,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 262,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Atalanta",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Moise Kean",
+          "ParticiantId": 747926,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 160,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 264,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Como",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Pontus Almqvist",
+          "ParticiantId": 822589,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 86,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 264,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Parma",
+          "Positions": [
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Radu Drăgușin",
+          "ParticiantId": 1203661,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 264,
+          "ParticipantCountryCode": "ROU",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Joël Monteiro",
+          "ParticiantId": 1187691,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 229,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 267,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Lecce",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ruben Loftus-Cheek",
+          "ParticiantId": 604982,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 268,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Milan",
+          "Positions": [
+            84,
+            73,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Simone Lontani",
+          "ParticiantId": 1843609,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 392,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 268,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Parma",
+          "Positions": [
+            106,
+            107,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Kingsley Ehizibue",
+          "ParticiantId": 586474,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 268,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Genoa",
+          "Positions": [
+            71,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Duje Ćaleta-Car",
+          "ParticiantId": 557799,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 271,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Adam Bakoune",
+          "ParticiantId": 1425693,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 187,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 271,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Kristensen",
+          "ParticiantId": 1190029,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 271,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Atalanta",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Niccolò Fortini",
+          "ParticiantId": 1642351,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 267,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 271,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Torino",
+          "Positions": [
+            32,
+            71,
+            79,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Ardon Jashari",
+          "ParticiantId": 1163219,
+          "TeamId": 8564,
+          "TeamColor": "#CF2C27",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 107,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 271,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Milan",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Bernasconi",
+          "ParticiantId": 1191093,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 271,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            68,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Omari Forson",
+          "ParticiantId": 1190023,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 277,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Monza",
+          "Positions": [
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Atta",
+          "ParticiantId": 1428426,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 335,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 278,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            86,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ridgeciano Haps",
+          "ParticiantId": 414232,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 328,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 278,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Venezia",
+          "Positions": [
+            79,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Youssef Maleh",
+          "ParticiantId": 789243,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 278,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Lecce",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Aleksa Terzić",
+          "ParticiantId": 992025,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 75,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 278,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Frosinone",
+          "Positions": [
+            38,
+            32,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "Justin Bijlow",
+          "ParticiantId": 721533,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 282,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Genoa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Vlašić",
+          "ParticiantId": 557677,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 537,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 282,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Torino",
+          "Positions": [
+            85,
+            73,
+            104,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Emirhan İlkhan",
+          "ParticiantId": 1301633,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 99,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 282,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Torino",
+          "Positions": [
+            75,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Roberto Piccoli",
+          "ParticiantId": 1017401,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 285,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Lloyd Kelly",
+          "ParticiantId": 819215,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 151,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 286,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Juventus",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Mario Pašalić",
+          "ParticiantId": 446266,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 237,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 286,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Atalanta",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nesta Elphege",
+          "ParticiantId": 1460253,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 174,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 288,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Parma",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "James Abankwah",
+          "ParticiantId": 1269329,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 496,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 289,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Udinese",
+          "Positions": [
+            33,
+            32,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Andrea Pinamonti",
+          "ParticiantId": 750030,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 144,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 290,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Amorim",
+          "ParticiantId": 1469120,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 120,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 290,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Genoa",
+          "Positions": [
+            76,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Wilfried Gnonto",
+          "ParticiantId": 1107286,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 193,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 290,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            107,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Andrea Carboni",
+          "ParticiantId": 1123969,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 576,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 290,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Gianluca Scamacca",
+          "ParticiantId": 721089,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 294,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Atalanta",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Diego Carlos",
+          "ParticiantId": 570434,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 351,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 295,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Parma",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "El Bilal Touré",
+          "ParticiantId": 1054114,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 526,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 296,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Parma",
+          "Positions": [
+            88,
+            115,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Gvidas Gineitis",
+          "ParticiantId": 1421505,
+          "TeamId": 9804,
+          "TeamColor": "#80110B",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 312,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 296,
+          "ParticipantCountryCode": "LTU",
+          "TeamName": "Torino",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Samuele Ricci",
+          "ParticiantId": 941656,
+          "TeamId": 10171,
+          "TeamColor": "#005ea9",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 72,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 296,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Como",
+          "Positions": [
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Marco Brescianini",
+          "ParticiantId": 950596,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 148,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 299,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            77,
+            67,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Unai Gómez",
+          "ParticiantId": 1436270,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 302,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 299,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Udinese",
+          "Positions": [
+            85,
+            115,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Drobnič",
+          "ParticiantId": 1891769,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 301,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Parma",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Vakoun Issouf Bayo",
+          "ParticiantId": 644738,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 92,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 301,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Udinese",
+          "Positions": [
+            105,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Nadir Zortea",
+          "ParticiantId": 1080669,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 351,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 303,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Bologna",
+          "Positions": [
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Matías Moreno",
+          "ParticiantId": 1605748,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 329,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 304,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Venezia",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sead Kolašinac",
+          "ParticiantId": 304345,
+          "TeamId": 8524,
+          "TeamColor": "#004ca6",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 304,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Atalanta",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Giorgi Chakvetadze",
+          "ParticiantId": 837847,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 216,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 306,
+          "ParticipantCountryCode": "GEO",
+          "TeamName": "Udinese",
+          "Positions": [
+            78,
+            85,
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Valde",
+          "ParticiantId": 1712399,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 351,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 306,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Armel Bella-Kotchap",
+          "ParticiantId": 951765,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 196,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 308,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Venezia",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Pote",
+          "ParticiantId": 875133,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 117,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 308,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Cichella",
+          "ParticiantId": 1670272,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 310,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Rafael Obrador",
+          "ParticiantId": 1167529,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 61,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 311,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            68,
+            79,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Alieu Fadera",
+          "ParticiantId": 1159233,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 162,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 311,
+          "ParticipantCountryCode": "GAM",
+          "TeamName": "Cagliari",
+          "Positions": [
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Moro",
+          "ParticiantId": 641595,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 106,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 311,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Bologna",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Yukinari Sugawara",
+          "ParticiantId": 924610,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.3,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 97,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 311,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Cagliari",
+          "Positions": [
+            32,
+            62,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Alessio Zerbin",
+          "ParticiantId": 850295,
+          "TeamId": 9891,
+          "TeamColor": "#d5a300",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 112,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 315,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Frosinone",
+          "Positions": [
+            71,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Colombo",
+          "ParticiantId": 1050163,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 321,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 316,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Genoa",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Alessandro Marcandalli",
+          "ParticiantId": 1436436,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 555,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 316,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Genoa",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "David Neres",
+          "ParticiantId": 793066,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 131,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 316,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Napoli",
+          "Positions": [
+            84,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Manuel Lazzari",
+          "ParticiantId": 662205,
+          "TeamId": 8543,
+          "TeamColor": "#75acd4",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 39,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 319,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Lazio",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Artem Dovbyk",
+          "ParticiantId": 655696,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 319,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Bologna",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Bertola",
+          "ParticiantId": 1258292,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 82,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 321,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Udinese",
+          "Positions": [
+            33,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Redouane Halhal",
+          "ParticiantId": 1298186,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 316,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 321,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Venezia",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Andrea Cambiaso",
+          "ParticiantId": 1078846,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 73,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 323,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Juventus",
+          "Positions": [
+            68,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Joël Schingtienne",
+          "ParticiantId": 1352744,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 475,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 323,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Venezia",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Paco Esteban",
+          "ParticiantId": 1417101,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 143,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 325,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Lecce",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Johan Vásquez",
+          "ParticiantId": 914103,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 325,
+          "ParticipantCountryCode": "MEX",
+          "TeamName": "Genoa",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Tommaso Baldanzi",
+          "ParticiantId": 1200591,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 324,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 327,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Genoa",
+          "Positions": [
+            84,
+            75,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Beto",
+          "ParticiantId": 1079485,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 174,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 327,
+          "ParticipantCountryCode": "GNB",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Łukasz Skorupski",
+          "ParticiantId": 178732,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 329,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Bologna",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Carlos",
+          "ParticiantId": 1166344,
+          "TeamId": 8529,
+          "TeamColor": "#B51F2B",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 98,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 329,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Cagliari",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Ebosse",
+          "ParticiantId": 769167,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 537,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 329,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Udinese",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Willem Geubbels",
+          "ParticiantId": 883824,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 226,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 332,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Lecce",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Franz-Ethan Meichtry",
+          "ParticiantId": 1677025,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 332,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Genoa",
+          "Positions": [
+            82,
+            72,
+            95
+          ]
+        },
+        {
+          "ParticipantName": "Viery",
+          "ParticiantId": 1501917,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 363,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 332,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Luca Lipani",
+          "ParticiantId": 1369279,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 175,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 335,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Matija Frigan",
+          "ParticiantId": 1190371,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 106,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 336,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Parma",
+          "Positions": [
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Sascha Britschgi",
+          "ParticiantId": 1693531,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 332,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 337,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Parma",
+          "Positions": [
+            71,
+            38,
+            32,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Albion Rrahmani",
+          "ParticiantId": 1379468,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 107,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 338,
+          "ParticipantCountryCode": "KVX",
+          "TeamName": "Venezia",
+          "Positions": [
+            105,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Vítinha",
+          "ParticiantId": 1215057,
+          "TeamId": 10233,
+          "TeamColor": "#CB1111",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 282,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 339,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Genoa",
+          "Positions": [
+            106,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Lion Lauberbach",
+          "ParticiantId": 866165,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 47,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 339,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Venezia",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Nick Woltemade",
+          "ParticiantId": 1106563,
+          "TeamId": 9885,
+          "TeamColor": "#000001",
+          "StatValue": 6.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 123,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 341,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Juventus",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Oier Zarraga",
+          "ParticiantId": 1106916,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 162,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 341,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Udinese",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Mikel Amondarain",
+          "ParticiantId": 1661207,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 95,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 343,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Bologna",
+          "Positions": [
+            64,
+            74,
+            84,
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thórir Helgason",
+          "ParticiantId": 939593,
+          "TeamId": 7881,
+          "TeamColor": "#101010",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 344,
+          "ParticipantCountryCode": "ISL",
+          "TeamName": "Venezia",
+          "Positions": [
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Štulić",
+          "ParticiantId": 1178314,
+          "TeamId": 9888,
+          "TeamColor": "#e12300",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 261,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 344,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Lecce",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jens Odgaard",
+          "ParticiantId": 689680,
+          "TeamId": 9857,
+          "TeamColor": "#102880",
+          "StatValue": 6.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 259,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 344,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Bologna",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Lucca",
+          "ParticiantId": 1212630,
+          "TeamId": 9875,
+          "TeamColor": "#12A0D7",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 170,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 347,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Napoli",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Lennon Miller",
+          "ParticiantId": 1399969,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 254,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 347,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Udinese",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "David de Gea",
+          "ParticiantId": 182917,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 349,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Giovanni Fabbian",
+          "ParticiantId": 1276505,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 185,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 349,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Parma",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Dodô",
+          "ParticiantId": 750734,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 6.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 121,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 351,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            32,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Vincent Sierro",
+          "ParticiantId": 634310,
+          "TeamId": 10167,
+          "TeamColor": "#000000",
+          "StatValue": 6.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 252,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 351,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Parma",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Lorenzo Lucchesi",
+          "ParticiantId": 1524139,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 6.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 454,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 353,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Monza",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Benja Domínguez",
+          "ParticiantId": 1316088,
+          "TeamId": 7943,
+          "TeamColor": "#009A44",
+          "StatValue": 6.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 107,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 354,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Sassuolo",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Christian Kabasele",
+          "ParticiantId": 149219,
+          "TeamId": 8600,
+          "TeamColor": "#101010",
+          "StatValue": 5.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 213,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 355,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Udinese",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Luca Ranieri",
+          "ParticiantId": 935406,
+          "TeamId": 8535,
+          "TeamColor": "#5F259F",
+          "StatValue": 5.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 309,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 356,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Fiorentina",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Demba Thiam",
+          "ParticiantId": 955947,
+          "TeamId": 6504,
+          "TeamColor": "#e10032",
+          "StatValue": 5.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 357,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Monza",
+          "Positions": [
+            11
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Serie A"
+}

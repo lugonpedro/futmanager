@@ -1,0 +1,6012 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Erling Haaland",
+          "ParticiantId": 737066,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 8.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 620,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 1,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Rayan Cherki",
+          "ParticiantId": 1104053,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 8.04,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 395,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 2,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Manchester City",
+          "Positions": [
+            85,
+            83,
+            88,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Morgan Rogers",
+          "ParticiantId": 883080,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 613,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 3,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            85,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Henderson",
+          "ParticiantId": 156008,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 4,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Pascal Groß",
+          "ParticiantId": 167008,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.79,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 611,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 5,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            64,
+            77,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Maxim De Cuyper",
+          "ParticiantId": 1134871,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 583,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 6,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            38,
+            87,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "João Pedro",
+          "ParticiantId": 1021382,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 7,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Chelsea",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Declan Rice",
+          "ParticiantId": 654096,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.73,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 594,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 8,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Bukayo Saka",
+          "ParticiantId": 961995,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 598,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 9,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "James Tarkowski",
+          "ParticiantId": 243138,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.69,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 10,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Cody Gakpo",
+          "ParticiantId": 806552,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.69,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 11,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            87,
+            115,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Belloumi",
+          "ParticiantId": 1231090,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 7.68,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 514,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 12,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Hull City",
+          "Positions": [
+            83,
+            72,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Johan Manzambi",
+          "ParticiantId": 1520063,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 7.66,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 257,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 13,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            66,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Marc Guéhi",
+          "ParticiantId": 844425,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.65,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 14,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Cole Palmer",
+          "ParticiantId": 1096353,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.62,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 621,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 15,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Alex Scott",
+          "ParticiantId": 1233655,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 7.58,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 446,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 16,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Kiernan Dewsbury-Hall",
+          "ParticiantId": 886016,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.57,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 17,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            85,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Diego Gómez",
+          "ParticiantId": 1354561,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.55,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 614,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 18,
+          "ParticipantCountryCode": "PAR",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            83,
+            76,
+            87,
+            85,
+            66,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Elliot Anderson",
+          "ParticiantId": 1089691,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 518,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 19,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Fernandes",
+          "ParticiantId": 422685,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.53,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 20,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Manchester United",
+          "Positions": [
+            85,
+            66,
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Elanga",
+          "ParticiantId": 1050166,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 235,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 21,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            103,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Martin Ødegaard",
+          "ParticiantId": 534670,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.5,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 561,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 22,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Arsenal",
+          "Positions": [
+            73,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kobbie Mainoo",
+          "ParticiantId": 1292810,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 447,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 23,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester United",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Malick Junior Yalcouyé",
+          "ParticiantId": 1602352,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.49,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 269,
+          "MatchesPlayed": 7,
+          "StatValueCount": 4,
+          "Rank": 23,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Neto",
+          "ParticiantId": 843040,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 508,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 25,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Chelsea",
+          "Positions": [
+            83,
+            87,
+            62,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Evanilson",
+          "ParticiantId": 1098096,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 594,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 25,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Tavernier",
+          "ParticiantId": 789630,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 578,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 27,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            87,
+            85,
+            83,
+            66,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jérémy Jacquet",
+          "ParticiantId": 1473534,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 595,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 27,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Liverpool",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Florian Wirtz",
+          "ParticiantId": 1152455,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.46,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 559,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 27,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Liverpool",
+          "Positions": [
+            85,
+            87,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Vitaliy Mykolenko",
+          "ParticiantId": 874025,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 30,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Everton",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Mbeumo",
+          "ParticiantId": 923312,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 31,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "Manchester United",
+          "Positions": [
+            115,
+            83,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Joško Gvardiol",
+          "ParticiantId": 1070712,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 488,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 32,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Manchester City",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jérémy Doku",
+          "ParticiantId": 942368,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 126,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 32,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Manchester City",
+          "Positions": [
+            87,
+            83,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "David Raya",
+          "ParticiantId": 562727,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.44,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 34,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Olivier Boscagli",
+          "ParticiantId": 613715,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 586,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 35,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Alexander Isak",
+          "ParticiantId": 690107,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 494,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 35,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Liverpool",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Hall",
+          "ParticiantId": 1197655,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 629,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 37,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Luka Vušković",
+          "ParticiantId": 1413996,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.4,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 38,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ben White",
+          "ParticiantId": 776151,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 444,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 39,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Charalampos Kostoulas",
+          "ParticiantId": 1561249,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.4,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 487,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 40,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Semenyo",
+          "ParticiantId": 933576,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 41,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Manchester City",
+          "Positions": [
+            83,
+            87,
+            104,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "James Justin",
+          "ParticiantId": 710158,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 619,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 41,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Leeds United",
+          "Positions": [
+            33,
+            68,
+            62,
+            79,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Vitaly Janelt",
+          "ParticiantId": 688273,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.38,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 43,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Brentford",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Youri Tielemans",
+          "ParticiantId": 465960,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 547,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 44,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Manchester United",
+          "Positions": [
+            66,
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Gianluigi Donnarumma",
+          "ParticiantId": 618878,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.36,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 45,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Manchester City",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tarik Muharemović",
+          "ParticiantId": 1250485,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 46,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Leeds United",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Jan Paul van Hecke",
+          "ParticiantId": 974618,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.36,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 46,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Virgil van Dijk",
+          "ParticiantId": 209405,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 48,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Emiliano Martínez",
+          "ParticiantId": 268375,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 525,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 49,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Iliman Ndiaye",
+          "ParticiantId": 965764,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 533,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 49,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Manchester City",
+          "Positions": [
+            83,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Schade",
+          "ParticiantId": 1083796,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.34,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 545,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 51,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Brentford",
+          "Positions": [
+            87,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Anton Stach",
+          "ParticiantId": 881735,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.32,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 52,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Leeds United",
+          "Positions": [
+            73,
+            84,
+            64,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Daichi Kamada",
+          "ParticiantId": 621515,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 7.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 613,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 53,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            66,
+            76,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "James Trafford",
+          "ParticiantId": 1187213,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.31,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 54,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Leeds United",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Morgan Gibbs-White",
+          "ParticiantId": 789502,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 7.31,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 55,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            85,
+            78,
+            75,
+            104,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Noni Madueke",
+          "ParticiantId": 1084981,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 56,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Kristoffer Ajer",
+          "ParticiantId": 552718,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 57,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Brentford",
+          "Positions": [
+            34,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Marcus Rashford",
+          "ParticiantId": 696365,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 356,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 57,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester United",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Alex Iwobi",
+          "ParticiantId": 604785,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 7.27,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 588,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 59,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Fulham",
+          "Positions": [
+            66,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Granit Xhaka",
+          "ParticiantId": 207236,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 60,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Sunderland",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Abdukodir Khusanov",
+          "ParticiantId": 1362998,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 283,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 60,
+          "ParticipantCountryCode": "UZB",
+          "TeamName": "Manchester City",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Dominik Szoboszlai",
+          "ParticiantId": 846005,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 473,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 60,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Liverpool",
+          "Positions": [
+            64,
+            85,
+            83,
+            32,
+            87,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Chema Andrés",
+          "ParticiantId": 1586552,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 290,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 63,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Harvey Barnes",
+          "ParticiantId": 760359,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 7.25,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 629,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 64,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            87,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Tzolakis",
+          "ParticiantId": 1072068,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 7.25,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 65,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Hull City",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Fernández",
+          "ParticiantId": 1137705,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 393,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 66,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            85,
+            66,
+            77,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Murillo",
+          "ParticiantId": 1458711,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 628,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 67,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Dunk",
+          "ParticiantId": 201690,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 479,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 67,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Diogo Dalot",
+          "ParticiantId": 751550,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.23,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 469,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 69,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Manchester United",
+          "Positions": [
+            32,
+            68,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Yasin Ayari",
+          "ParticiantId": 1168311,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 503,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 70,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel",
+          "ParticiantId": 795179,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 70,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Joshua King",
+          "ParticiantId": 1422593,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 7.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 581,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 72,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Fulham",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Dominic Calvert-Lewin",
+          "ParticiantId": 612150,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.21,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 601,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 73,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Leeds United",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Zion Suzuki",
+          "ParticiantId": 1053679,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 74,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Cunha",
+          "ParticiantId": 863098,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 505,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 74,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Manchester United",
+          "Positions": [
+            115,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Caoimhín Kelleher",
+          "ParticiantId": 776689,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 76,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Brentford",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Sávio",
+          "ParticiantId": 1174337,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.2,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 331,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 76,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Matheus Nunes",
+          "ParticiantId": 955529,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 379,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 78,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sandro Tonali",
+          "ParticiantId": 867414,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 609,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 79,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Bart Verbruggen",
+          "ParticiantId": 1131987,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 7.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 79,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rúben Dias",
+          "ParticiantId": 614006,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 81,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Neco Williams",
+          "ParticiantId": 1078788,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 81,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            38,
+            32,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Jefferson Lerma",
+          "ParticiantId": 466672,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 160,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 83,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            66,
+            33,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Harry Maguire",
+          "ParticiantId": 255610,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 83,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester United",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "James McAtee",
+          "ParticiantId": 1107648,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 7.15,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 593,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 85,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            66,
+            73,
+            83,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Luke Shaw",
+          "ParticiantId": 362694,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 425,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 86,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester United",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Nobel Mendy",
+          "ParticiantId": 1428427,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 343,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 86,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Hull City",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Christos Tzolis",
+          "ParticiantId": 1157237,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 365,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 88,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Arsenal",
+          "Positions": [
+            87,
+            86,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Mohammed Kudus",
+          "ParticiantId": 891743,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 7.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 89,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            83,
+            85,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Enzo Le Fée",
+          "ParticiantId": 1049999,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 7.11,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 610,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 90,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sunderland",
+          "Positions": [
+            85,
+            87,
+            78,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Alexis Mac Allister",
+          "ParticiantId": 831489,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 488,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 91,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Liverpool",
+          "Positions": [
+            66,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Riccardo Calafiori",
+          "ParticiantId": 1105912,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 590,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 91,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Exequiel Palacios",
+          "ParticiantId": 693599,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 394,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 91,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Thierno Barry",
+          "ParticiantId": 1398392,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 595,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 94,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Everton",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jarrad Branthwaite",
+          "ParticiantId": 1030829,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 94,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Ampadu",
+          "ParticiantId": 780432,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 7.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 94,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Leeds United",
+          "Positions": [
+            75,
+            64,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Walter Benítez",
+          "ParticiantId": 448897,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 97,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jordan Pickford",
+          "ParticiantId": 303919,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 97,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Tyrick Mitchell",
+          "ParticiantId": 1120224,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 7.07,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 601,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 99,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "James Garner",
+          "ParticiantId": 950474,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 510,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 100,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            66,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Bruno Guimarães",
+          "ParticiantId": 850354,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 217,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 101,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Arsenal",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Bradley Barcola",
+          "ParticiantId": 1297165,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 348,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 101,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Liverpool",
+          "Positions": [
+            107,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Boubacar Kamara",
+          "ParticiantId": 816325,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 7.06,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 101,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Nicolas Jackson",
+          "ParticiantId": 1197347,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 469,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 104,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            115,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Phil Foden",
+          "ParticiantId": 815006,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 296,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 105,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            85,
+            83,
+            88,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Roméo Lavia",
+          "ParticiantId": 1190867,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 281,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 105,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Chelsea",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Keane Lewis-Potter",
+          "ParticiantId": 1010426,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 553,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 105,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Brentford",
+          "Positions": [
+            38,
+            103,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Moisés Caicedo",
+          "ParticiantId": 1137668,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 175,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 105,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Chelsea",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Wesley Fofana",
+          "ParticiantId": 917802,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 315,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 109,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Chelsea",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kai Havertz",
+          "ParticiantId": 749736,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 567,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 110,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Arsenal",
+          "Positions": [
+            115,
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Víctor Muñoz",
+          "ParticiantId": 1553105,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 428,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 111,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Liverpool",
+          "Positions": [
+            87,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ezri Konsa",
+          "ParticiantId": 710159,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 111,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Brian Brobbey",
+          "ParticiantId": 940446,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 7.0,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 401,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 113,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sunderland",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Leny Yoro",
+          "ParticiantId": 1358581,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 171,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 114,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Manchester United",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Collins",
+          "ParticiantId": 961306,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 197,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 114,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Brentford",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Bobby Thomas",
+          "ParticiantId": 1161885,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 114,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Coventry City",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mamadou Sangaré",
+          "ParticiantId": 1185211,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 7.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 405,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 114,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Brentford",
+          "Positions": [
+            64,
+            74,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Archie Gray",
+          "ParticiantId": 1323305,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 490,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 118,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            66,
+            32,
+            74,
+            62,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Xaver Schlager",
+          "ParticiantId": 620027,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 118,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Saša Lukić",
+          "ParticiantId": 556972,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 493,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 118,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "David Affengruber",
+          "ParticiantId": 1073980,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 118,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Fulham",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jack Rudoni",
+          "ParticiantId": 1030830,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 471,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 122,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Coventry City",
+          "Positions": [
+            85,
+            103,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Anan Khalaili",
+          "ParticiantId": 1477878,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 560,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 123,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            62,
+            72,
+            32,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Regan Slater",
+          "ParticiantId": 807930,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 588,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 123,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hull City",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Jannik Schuster",
+          "ParticiantId": 1572340,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 298,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 125,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Brentford",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Senne Lammens",
+          "ParticiantId": 1178602,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 125,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Manchester United",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jaka Bijol",
+          "ParticiantId": 861805,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 168,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 127,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Leeds United",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Jaidon Anthony",
+          "ParticiantId": 1171140,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 432,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 128,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Brentford",
+          "Positions": [
+            87,
+            83,
+            86,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Andrew Robertson",
+          "ParticiantId": 357880,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 436,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 129,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            38,
+            68,
+            79
+          ]
+        },
+        {
+          "ParticipantName": "Julio Enciso",
+          "ParticiantId": 1073742,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 564,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 129,
+          "ParticipantCountryCode": "PAR",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            85,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Justin Kluivert",
+          "ParticiantId": 794253,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 326,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 129,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lukás Hornícek",
+          "ParticiantId": 1186978,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 132,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Antonee Robinson",
+          "ParticiantId": 662428,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 521,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 132,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Fulham",
+          "Positions": [
+            38,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nordi Mukiele",
+          "ParticiantId": 602304,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 134,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sunderland",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Emiliano Buendía",
+          "ParticiantId": 610184,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 134,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            87,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Harrison Armstrong",
+          "ParticiantId": 1559637,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 609,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 136,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            64,
+            77,
+            84,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Maxence Lacroix",
+          "ParticiantId": 950485,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 544,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 136,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Chelsea",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Dara O'Shea",
+          "ParticiantId": 789578,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 138,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Abdul Fatawu",
+          "ParticiantId": 1265626,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 376,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 139,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Adam Wharton",
+          "ParticiantId": 1296650,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 617,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 140,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Igor Thiago",
+          "ParticiantId": 1302005,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 623,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Brentford",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Shea Charles",
+          "ParticiantId": 1281452,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 465,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Fulham",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mateo Kovačić",
+          "ParticiantId": 239219,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 92,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 141,
+          "ParticipantCountryCode": "CRO",
+          "TeamName": "Manchester City",
+          "Positions": [
+            66,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Semi Ajayi",
+          "ParticiantId": 410836,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 604,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 141,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Hull City",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Micky van de Ven",
+          "ParticiantId": 1097466,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 466,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 141,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Adrien Truffert",
+          "ParticiantId": 1177358,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 624,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 146,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Gabriel Gudmundsson",
+          "ParticiantId": 744494,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 431,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 146,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Leeds United",
+          "Positions": [
+            68,
+            79,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "César Palacios",
+          "ParticiantId": 1403691,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 234,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 146,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fulham",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Michael Kayode",
+          "ParticiantId": 1429912,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 477,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 146,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Brentford",
+          "Positions": [
+            32,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Merlin Röhl",
+          "ParticiantId": 1210384,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 341,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 150,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Everton",
+          "Positions": [
+            32,
+            83,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Quinten Timber",
+          "ParticiantId": 970563,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 389,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 150,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            66,
+            85,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Timothy Castagne",
+          "ParticiantId": 465750,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.89,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 500,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 150,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Fulham",
+          "Positions": [
+            32,
+            38,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ferdi Kadıoğlu",
+          "ParticiantId": 774448,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 514,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 153,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            38,
+            32,
+            83,
+            62,
+            59
+          ]
+        },
+        {
+          "ParticipantName": "John McGinn",
+          "ParticiantId": 356406,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.88,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 571,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 154,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            83,
+            85,
+            87,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Jack Grealish",
+          "ParticiantId": 312765,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 155,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Reinildo",
+          "ParticiantId": 600524,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 523,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 155,
+          "ParticipantCountryCode": "MOZ",
+          "TeamName": "Sunderland",
+          "Positions": [
+            38,
+            59,
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Yéremi Pino",
+          "ParticiantId": 1047676,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 455,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 155,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            86,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Nico Elvedi",
+          "ParticiantId": 517346,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 502,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 155,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Leeds United",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ola Aina",
+          "ParticiantId": 682548,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 392,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 159,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            32,
+            62,
+            71,
+            38,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Issa Diop",
+          "ParticiantId": 696443,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 159,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Calvin Bassey",
+          "ParticiantId": 877401,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 159,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Fulham",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Matteo Ruggeri",
+          "ParticiantId": 1051097,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 158,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 159,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Willock",
+          "ParticiantId": 860975,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 402,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 163,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            85,
+            73,
+            66,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Ayyoub Bouaddi",
+          "ParticiantId": 1561552,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 122,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 163,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Manchester City",
+          "Positions": [
+            66,
+            76,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Abdoul Ouattara",
+          "ParticiantId": 1343053,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 311,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 163,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            32,
+            38,
+            66,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ainsley Maitland-Niles",
+          "ParticiantId": 604089,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 310,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 163,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            32,
+            62,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Nikola Milenković",
+          "ParticiantId": 766611,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 167,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Jorrel Hato",
+          "ParticiantId": 1413846,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 349,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 167,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Chelsea",
+          "Positions": [
+            38,
+            36,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ao Tanaka",
+          "ParticiantId": 935728,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 410,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 169,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Leeds United",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Jayden Bogle",
+          "ParticiantId": 789646,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 545,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 169,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Leeds United",
+          "Positions": [
+            62,
+            71,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Reece James",
+          "ParticiantId": 807729,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 292,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 169,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Sven Botman",
+          "ParticiantId": 956682,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 172,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "James Maddison",
+          "ParticiantId": 493165,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 144,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 173,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            86
+          ]
+        },
+        {
+          "ParticipantName": "James Hill",
+          "ParticiantId": 959407,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 174,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Oscar Bobb",
+          "ParticiantId": 1113790,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 502,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 174,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fulham",
+          "Positions": [
+            83,
+            87,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Mikkel Damsgaard",
+          "ParticiantId": 888912,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 299,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 174,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Brentford",
+          "Positions": [
+            85,
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Miloš Kerkez",
+          "ParticiantId": 1195281,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 566,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 177,
+          "ParticipantCountryCode": "HUN",
+          "TeamName": "Liverpool",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Sidiki Cherif",
+          "ParticiantId": 1524069,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 168,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 177,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Alisson Becker",
+          "ParticiantId": 319784,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 179,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Liverpool",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Giles",
+          "ParticiantId": 933635,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hull City",
+          "Positions": [
+            38,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ronald Araujo",
+          "ParticiantId": 921253,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 405,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Liverpool",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Miley",
+          "ParticiantId": 1296763,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 548,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            32,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Noah Okafor",
+          "ParticiantId": 915797,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 448,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 180,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Leeds United",
+          "Positions": [
+            86,
+            106,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Ousmane Diomande",
+          "ParticiantId": 1425182,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.81,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 344,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 180,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "John Egan",
+          "ParticiantId": 295062,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 618,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 185,
+          "ParticipantCountryCode": "IRL",
+          "TeamName": "Hull City",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Brandon Thomas-Asante",
+          "ParticiantId": 776184,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 396,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 185,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            87,
+            104,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nico González",
+          "ParticiantId": 1280132,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 347,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 187,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Nico O'Reilly",
+          "ParticiantId": 1300526,
+          "TeamId": 8456,
+          "TeamColor": "#69A8D8",
+          "StatValue": 6.8,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 292,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 188,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Manchester City",
+          "Positions": [
+            38,
+            65,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Myles Lewis-Skelly",
+          "ParticiantId": 1406436,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 336,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 189,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            66,
+            38,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Dango Ouattara",
+          "ParticiantId": 1250253,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 248,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 189,
+          "ParticipantCountryCode": "BFA",
+          "TeamName": "Brentford",
+          "Positions": [
+            83,
+            107,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Emersonn",
+          "ParticiantId": 1320949,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.78,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 470,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 191,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jack Clarke",
+          "ParticiantId": 914402,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 200,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 192,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Levi Colwill",
+          "ParticiantId": 1096400,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 522,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 192,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Ballard",
+          "ParticiantId": 974268,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 450,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 194,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Sunderland",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Nilson Angulo",
+          "ParticiantId": 1287010,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 391,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 195,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Sunderland",
+          "Positions": [
+            87,
+            78,
+            83,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Noah Sadiki",
+          "ParticiantId": 1359649,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 592,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 195,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Sunderland",
+          "Positions": [
+            66,
+            76,
+            86,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Yoane Wissa",
+          "ParticiantId": 666857,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 609,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 195,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Georginio Rutter",
+          "ParticiantId": 956925,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 125,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 198,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Tyrique George",
+          "ParticiantId": 1424875,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 371,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 198,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            87,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Tyrone Mings",
+          "ParticiantId": 419664,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 441,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 200,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Leif Davis",
+          "ParticiantId": 980381,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.74,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 200,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Wan-Bissaka",
+          "ParticiantId": 760320,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 202,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            32,
+            62,
+            72,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Josh Acheampong",
+          "ParticiantId": 1400216,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 401,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 203,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Chelsea",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Jair Cunha",
+          "ParticiantId": 1391209,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 203,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Malo Gusto",
+          "ParticiantId": 1197250,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 276,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 203,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Chelsea",
+          "Positions": [
+            32,
+            62,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Omar Marmoush",
+          "ParticiantId": 839204,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 452,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 203,
+          "ParticipantCountryCode": "EGY",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Tyler Adams",
+          "ParticiantId": 729769,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 461,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 207,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Sander Berge",
+          "ParticiantId": 540963,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 532,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 207,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Fulham",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Noussair Mazraoui",
+          "ParticiantId": 775539,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 143,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 209,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Manchester United",
+          "Positions": [
+            38,
+            32,
+            33,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Meunier",
+          "ParticiantId": 277771,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 433,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 209,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sunderland",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Destiny Udogie",
+          "ParticiantId": 1052898,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 211,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Gravenberch",
+          "ParticiantId": 956683,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.68,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 254,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 211,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Gonzalo García",
+          "ParticiantId": 1413847,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 599,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 213,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Fulham",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Amar Dedić",
+          "ParticiantId": 958010,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 359,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 213,
+          "ParticipantCountryCode": "BIH",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "António Silva",
+          "ParticiantId": 1292092,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 213,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kjell Scherpen",
+          "ParticiantId": 796398,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 213,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Oli McBurnie",
+          "ParticiantId": 509151,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 622,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 213,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Hull City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Elliot Stroud",
+          "ParticiantId": 1272349,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 279,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 213,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Hull City",
+          "Positions": [
+            78,
+            107,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Trai Hume",
+          "ParticiantId": 1067763,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 387,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 219,
+          "ParticipantCountryCode": "NIR",
+          "TeamName": "Sunderland",
+          "Positions": [
+            83,
+            51,
+            32,
+            38,
+            72,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Rayan",
+          "ParticiantId": 1478295,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 617,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 219,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            83,
+            115,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Dan Ndoye",
+          "ParticiantId": 1022649,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 466,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 219,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            83,
+            87,
+            84,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Jeremie Frimpong",
+          "ParticiantId": 966018,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 201,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 222,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Liverpool",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Christie",
+          "ParticiantId": 439369,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.65,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 266,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 222,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            66,
+            85,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jay Dasilva",
+          "ParticiantId": 759814,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.65,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 625,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 224,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Coventry City",
+          "Positions": [
+            38,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Zian Flemming",
+          "ParticiantId": 873559,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 91,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 225,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Mbaye",
+          "ParticiantId": 1593857,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 77,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 225,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            103,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Liam Delap",
+          "ParticiantId": 1113903,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 225,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Murphy",
+          "ParticiantId": 521148,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 241,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 225,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            103,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Christian Walton",
+          "ParticiantId": 512013,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 225,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mateus Fernandes",
+          "ParticiantId": 1356312,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.64,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 225,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            76,
+            66,
+            85,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Andrey Santos",
+          "ParticiantId": 1372921,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 173,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 231,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Manchester United",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Joachim Andersen",
+          "ParticiantId": 503659,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 232,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Fulham",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Edward Nketiah",
+          "ParticiantId": 860920,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 212,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 232,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            84,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Brennan Johnson",
+          "ParticiantId": 1076756,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 312,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 232,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Everton",
+          "Positions": [
+            83,
+            84,
+            107,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Conor Gallagher",
+          "ParticiantId": 966027,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 229,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 232,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            85,
+            73,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Alysson Edward",
+          "ParticiantId": 1656860,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 136,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 236,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Pep Chavarría",
+          "ParticiantId": 988805,
+          "TeamId": 8455,
+          "TeamColor": "#051495",
+          "StatValue": 6.6,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 298,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 237,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Chelsea",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Yehor Yarmoliuk",
+          "ParticiantId": 1157236,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 330,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 238,
+          "ParticipantCountryCode": "UKR",
+          "TeamName": "Brentford",
+          "Positions": [
+            64,
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ross Barkley",
+          "ParticiantId": 215384,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 333,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 238,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Gourna-Douath",
+          "ParticiantId": 1137106,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 139,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 240,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Hull City",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Matt Grimes",
+          "ParticiantId": 478357,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 617,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 240,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Coventry City",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Bernd Leno",
+          "ParticiantId": 215168,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 240,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Fulham",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mathias Jensen",
+          "ParticiantId": 650616,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.55,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 135,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 243,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Brentford",
+          "Positions": [
+            85,
+            66,
+            77,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Pascal Struijk",
+          "ParticiantId": 796974,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 156,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 244,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Matz Sels",
+          "ParticiantId": 181069,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 244,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Dominic Solanke",
+          "ParticiantId": 591734,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.53,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 352,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 244,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Tatsuhiro Sakamoto",
+          "ParticiantId": 1025603,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 138,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 247,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Coventry City",
+          "Positions": [
+            83,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Daizen Maeda",
+          "ParticiantId": 728765,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 414,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 247,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            115,
+            87,
+            86,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Pedro Porro",
+          "ParticiantId": 941573,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 199,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 247,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            32,
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Dorgu",
+          "ParticiantId": 1526560,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 171,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 250,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Manchester United",
+          "Positions": [
+            87,
+            38,
+            68,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Antonín Kinský",
+          "ParticiantId": 1341475,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.51,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 251,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Hayden Hackney",
+          "ParticiantId": 982394,
+          "TeamId": 8668,
+          "TeamColor": "#00359C",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 150,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 252,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Everton",
+          "Positions": [
+            66,
+            74,
+            85,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Igor Jesus",
+          "ParticiantId": 1082102,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 256,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 253,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Florentino",
+          "ParticiantId": 793255,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 164,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 253,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Matty Cash",
+          "ParticiantId": 729731,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 478,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 253,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            32,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Chris Richards",
+          "ParticiantId": 950829,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 256,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Hickey",
+          "ParticiantId": 1002039,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 217,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 257,
+          "ParticipantCountryCode": "SCO",
+          "TeamName": "Brentford",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jørgen Strand Larsen",
+          "ParticiantId": 821100,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 445,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 257,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Daniel Muñoz",
+          "ParticiantId": 859282,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 439,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 257,
+          "ParticipantCountryCode": "COL",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            62,
+            72,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Sangaré",
+          "ParticiantId": 795371,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 145,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 260,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Lewie Coyle",
+          "ParticiantId": 709148,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 531,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 260,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hull City",
+          "Positions": [
+            32,
+            62,
+            38,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Frank Onyeka",
+          "ParticiantId": 856685,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 358,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 260,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            64,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Bazoumana Touré",
+          "ParticiantId": 1624586,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 114,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 260,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            87,
+            79,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Ellis Simms",
+          "ParticiantId": 982284,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 117,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 260,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Coventry City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lisandro Martínez",
+          "ParticiantId": 847983,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 495,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 265,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Manchester United",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Bentancur",
+          "ParticiantId": 620618,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 384,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 265,
+          "ParticipantCountryCode": "URU",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            64,
+            75,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Cook",
+          "ParticiantId": 562724,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 260,
+          "MatchesPlayed": 7,
+          "StatValueCount": 6,
+          "Rank": 265,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Malick Diouf",
+          "ParticiantId": 1451265,
+          "TeamId": 9937,
+          "TeamColor": "#C00808",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 142,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 268,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Brentford",
+          "Positions": [
+            38,
+            78,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Trey Nyoni",
+          "ParticiantId": 1436258,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 120,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 268,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Liverpool",
+          "Positions": [
+            64,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Milan van Ewijk",
+          "ParticiantId": 1074750,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 268,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Coventry City",
+          "Positions": [
+            32,
+            82,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Hidemasa Morita",
+          "ParticiantId": 915102,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 75,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 271,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Hull City",
+          "Positions": [
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Malick Thiaw",
+          "ParticiantId": 1137407,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 271,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mikel Merino",
+          "ParticiantId": 574645,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 106,
+          "MatchesPlayed": 7,
+          "StatValueCount": 5,
+          "Rank": 273,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            73,
+            115,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Chuba Akpom",
+          "ParticiantId": 413158,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 109,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 273,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            85,
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Caleb Yirenkyi",
+          "ParticiantId": 1615927,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 404,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 275,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            73,
+            37,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Harry Wilson",
+          "ParticiantId": 494417,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 165,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 275,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Leeds United",
+          "Positions": [
+            83,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Dean Henderson",
+          "ParticiantId": 719330,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.4,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 270,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 275,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Loum Tchaouna",
+          "ParticiantId": 1283034,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 213,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 278,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            83,
+            107,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Matias Fernandez-Pardo",
+          "ParticiantId": 1444231,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 305,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 278,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            115,
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Matt Crooks",
+          "ParticiantId": 280507,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 337,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 278,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hull City",
+          "Positions": [
+            66,
+            85,
+            74,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Sean Steur",
+          "ParticiantId": 1643770,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 225,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 278,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Jaden Philogene-Bidace",
+          "ParticiantId": 1089645,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 115,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 282,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Sessegnon",
+          "ParticiantId": 773991,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 152,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 283,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Fulham",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Ethan Pinnock",
+          "ParticiantId": 711357,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.37,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 462,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 283,
+          "ParticipantCountryCode": "JAM",
+          "TeamName": "Coventry City",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Mathys Tel",
+          "ParticiantId": 1288111,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.35,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 262,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 285,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            87,
+            105,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Jurriën Timber",
+          "ParticiantId": 942381,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 156,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 286,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Arsenal",
+          "Positions": [
+            32,
+            34,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rio Ngumoha",
+          "ParticiantId": 1597668,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 153,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 286,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Liverpool",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Tim Iroegbunam",
+          "ParticiantId": 1203512,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 288,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Hull City",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Benjamin Šeško",
+          "ParticiantId": 1073977,
+          "TeamId": 10260,
+          "TeamColor": "#C70101",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 76,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 289,
+          "ParticipantCountryCode": "SVN",
+          "TeamName": "Manchester United",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "João Gomes",
+          "ParticiantId": 1174672,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.32,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 288,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 289,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Malick Fofana",
+          "ParticiantId": 1364069,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 116,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 291,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sunderland",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Eberechi Eze",
+          "ParticiantId": 818975,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 130,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 292,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Arsenal",
+          "Positions": [
+            85,
+            87,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Takehiro Tomiyasu",
+          "ParticiantId": 664444,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 190,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 292,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            33,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Herrington",
+          "ParticiantId": 1686118,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 242,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 294,
+          "ParticipantCountryCode": "AUS",
+          "TeamName": "Hull City",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Sorba Thomas",
+          "ParticiantId": 812982,
+          "TeamId": 8667,
+          "TeamColor": "#ED8B00",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 274,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 294,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Hull City",
+          "Positions": [
+            87,
+            32,
+            78,
+            83,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Osman",
+          "ParticiantId": 1215410,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 40,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 294,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ian Maatsen",
+          "ParticiantId": 966026,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 330,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 294,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Lukas Nmecha",
+          "ParticiantId": 861197,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.28,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 91,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 294,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Leeds United",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Ephron Mason-Clark",
+          "ParticiantId": 798654,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 307,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 299,
+          "ParticipantCountryCode": "JAM",
+          "TeamName": "Coventry City",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Axel Disasi",
+          "ParticiantId": 696646,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.27,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 140,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 299,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Adam Smith",
+          "ParticiantId": 160447,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 597,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 301,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Robin Roefs",
+          "ParticiantId": 1125720,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 302,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Sunderland",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Wilson Isidor",
+          "ParticiantId": 887703,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 207,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 302,
+          "ParticipantCountryCode": "HAI",
+          "TeamName": "Sunderland",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "William Osula",
+          "ParticiantId": 1258092,
+          "TeamId": 10261,
+          "TeamColor": "#141413",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 102,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 302,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Newcastle United",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Kevin",
+          "ParticiantId": 1318400,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.25,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 75,
+          "MatchesPlayed": 5,
+          "StatValueCount": 4,
+          "Rank": 302,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fulham",
+          "Positions": [
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Victor Nilsson Lindelöf",
+          "ParticiantId": 258269,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 306,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            34,
+            64,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Habib Diarra",
+          "ParticiantId": 1285866,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 6.23,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 59,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 306,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Sunderland",
+          "Positions": [
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Brenden Aaronson",
+          "ParticiantId": 952322,
+          "TeamId": 8463,
+          "TeamColor": "#0060AA",
+          "StatValue": 6.21,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 214,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 308,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Leeds United",
+          "Positions": [
+            84,
+            103,
+            73,
+            78,
+            106,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "George Hemmings",
+          "ParticiantId": 1607333,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 6.19,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 299,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 309,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            64,
+            87,
+            76,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Larsson",
+          "ParticiantId": 1339269,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 40,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 310,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Fulham",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Aurèle Amenda",
+          "ParticiantId": 1257648,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 360,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 310,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Coventry City",
+          "Positions": [
+            33,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "David Brooks",
+          "ParticiantId": 674014,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 310,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            83,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Costinha",
+          "ParticiantId": 1079456,
+          "TeamId": 10204,
+          "TeamColor": "#0850A0",
+          "StatValue": 6.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 90,
+          "MatchesPlayed": 6,
+          "StatValueCount": 5,
+          "Rank": 310,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Brighton and Hove Albion",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Viktor Gyökeres",
+          "ParticiantId": 664500,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.15,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 80,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 314,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Arsenal",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Martín Zubimendi",
+          "ParticiantId": 1031325,
+          "TeamId": 9825,
+          "TeamColor": "#bd0510",
+          "StatValue": 6.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 89,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 315,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Arsenal",
+          "Positions": [
+            64,
+            75,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Emile Smith Rowe",
+          "ParticiantId": 889534,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.12,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 41,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 316,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Fulham",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Honest Ahanor",
+          "ParticiantId": 1669629,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 161,
+          "MatchesPlayed": 3,
+          "StatValueCount": 3,
+          "Rank": 317,
+          "ParticipantCountryCode": "ITA",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Bergvall",
+          "ParticiantId": 1386775,
+          "TeamId": 8586,
+          "TeamColor": "#132257",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 144,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 317,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Tottenham Hotspur",
+          "Positions": [
+            74,
+            66,
+            85,
+            78,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Djordje Petrović",
+          "ParticiantId": 1067256,
+          "TeamId": 8678,
+          "TeamColor": "#D71921",
+          "StatValue": 6.09,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 317,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Bournemouth",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Taiwo Awoniyi",
+          "ParticiantId": 643717,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.08,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 264,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 320,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Coventry City",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jaydee Canvot",
+          "ParticiantId": 1664722,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 540,
+          "MatchesPlayed": 6,
+          "StatValueCount": 6,
+          "Rank": 321,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            37,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Carl Rushworth",
+          "ParticiantId": 1187236,
+          "TeamId": 8669,
+          "TeamColor": "#65b0e4",
+          "StatValue": 6.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 630,
+          "MatchesPlayed": 7,
+          "StatValueCount": 7,
+          "Rank": 321,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Coventry City",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Jacob Greaves",
+          "ParticiantId": 1079103,
+          "TeamId": 9902,
+          "TeamColor": "#0333A0",
+          "StatValue": 6.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 447,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 323,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Ipswich Town",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rodrigo Muniz",
+          "ParticiantId": 1128945,
+          "TeamId": 9879,
+          "TeamColor": "#000000",
+          "StatValue": 6.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 52,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 324,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Fulham",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Lewis Koumas",
+          "ParticiantId": 1364042,
+          "TeamId": 8650,
+          "TeamColor": "#911712",
+          "StatValue": 6.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 108,
+          "MatchesPlayed": 5,
+          "StatValueCount": 3,
+          "Rank": 325,
+          "ParticipantCountryCode": "WAL",
+          "TeamName": "Liverpool",
+          "Positions": [
+            115,
+            87,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Dwight McNeil",
+          "ParticiantId": 939542,
+          "TeamId": 9826,
+          "TeamColor": "#0055A5",
+          "StatValue": 6.0,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 131,
+          "MatchesPlayed": 4,
+          "StatValueCount": 3,
+          "Rank": 326,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Crystal Palace",
+          "Positions": [
+            83,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Chris Wood",
+          "ParticiantId": 169719,
+          "TeamId": 10203,
+          "TeamColor": "#C8102E",
+          "StatValue": 5.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 85,
+          "MatchesPlayed": 6,
+          "StatValueCount": 4,
+          "Rank": 327,
+          "ParticipantCountryCode": "NZL",
+          "TeamName": "Nottingham Forest",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Pau Torres",
+          "ParticiantId": 792645,
+          "TeamId": 10252,
+          "TeamColor": "#7D1142",
+          "StatValue": 5.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 202,
+          "MatchesPlayed": 4,
+          "StatValueCount": 4,
+          "Rank": 328,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Aston Villa",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Danso",
+          "ParticiantId": 754126,
+          "TeamId": 8472,
+          "TeamColor": "#DC0814",
+          "StatValue": 5.44,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 377,
+          "MatchesPlayed": 5,
+          "StatValueCount": 5,
+          "Rank": 329,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Sunderland",
+          "Positions": [
+            34
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "Premier League"
+}

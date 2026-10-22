@@ -1,0 +1,4150 @@
+{
+  "TopLists": [
+    {
+      "StatName": "rating",
+      "Title": "FotMob rating",
+      "Subtitle": "Player of the Match",
+      "LocalizedTitleId": "rating_title",
+      "LocalizedSubtitleId": "rating_subtitle",
+      "StatList": [
+        {
+          "ParticipantName": "Christos Tzolis",
+          "ParticiantId": 1157237,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 8.07,
+          "SubStatValue": 14.0,
+          "MinutesPlayed": 3072,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 1,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            87,
+            86,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Nilson Angulo",
+          "ParticiantId": 1287010,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 7.6,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1902,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 2,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            87,
+            78,
+            83,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ross Sykes",
+          "ParticiantId": 768266,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.6,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2622,
+          "MatchesPlayed": 32,
+          "StatValueCount": 30,
+          "Rank": 3,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Anan Khalaili",
+          "ParticiantId": 1477878,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.55,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3099,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 4,
+          "ParticipantCountryCode": "ISR",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            62,
+            72,
+            32,
+            82
+          ]
+        },
+        {
+          "ParticipantName": "Ryotaro Ito",
+          "ParticiantId": 727838,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.54,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2838,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 5,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Hans Vanaken",
+          "ParticiantId": 203666,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.5,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3366,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 6,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            85,
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Heynen",
+          "ParticiantId": 659493,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.48,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3603,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 7,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            66,
+            74,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Christian Burgess",
+          "ParticiantId": 332300,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.45,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3147,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 8,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Rihito Yamamoto",
+          "ParticiantId": 1030836,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.44,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3290,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 9,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Mac Allister",
+          "ParticiantId": 728290,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.39,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2930,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 10,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Brandon Mechele",
+          "ParticiantId": 445873,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.38,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 3435,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 11,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Daan Heymans",
+          "ParticiantId": 768505,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.37,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2355,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 12,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            85,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Thorgan Hazard",
+          "ParticiantId": 264190,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 7.37,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2722,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 13,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            85,
+            115,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Carlos Forbs",
+          "ParticiantId": 1186529,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.37,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2816,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 14,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            83,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Gary Magnée",
+          "ParticiantId": 1075033,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 7.36,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2889,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 15,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            32,
+            62,
+            71,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Fredrik Hammar",
+          "ParticiantId": 883719,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 7.35,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3366,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 16,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Mechelen",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Zakaria El Ouahdi",
+          "ParticiantId": 1287871,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.35,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2996,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 17,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            32,
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Flávio Nazinho",
+          "ParticiantId": 1239590,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 7.35,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2554,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 18,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            38,
+            79,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Adem Zorgane",
+          "ParticiantId": 972406,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.33,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2968,
+          "MatchesPlayed": 37,
+          "StatValueCount": 36,
+          "Rank": 19,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            64,
+            74,
+            82,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nacho Mirás",
+          "ParticiantId": 1317534,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 7.31,
+          "SubStatValue": 9.0,
+          "MinutesPlayed": 2925,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 20,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mechelen",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Edan Diop",
+          "ParticiantId": 1385897,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 7.29,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2607,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 21,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            87,
+            78,
+            77,
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Myron van Brederode",
+          "ParticiantId": 1199124,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 7.29,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2840,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 21,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Mechelen",
+          "Positions": [
+            85,
+            107,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Marcos Peano",
+          "ParticiantId": 787458,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 7.28,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 23,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Michał Skóras",
+          "ParticiantId": 954190,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 7.28,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2697,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 24,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            87,
+            62,
+            68,
+            83,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Parfait Guiagon",
+          "ParticiantId": 1186770,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 7.27,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2555,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 25,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            87,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Visar Musliu",
+          "ParticiantId": 308469,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2519,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 26,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Aleksandar Stanković",
+          "ParticiantId": 1410437,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.26,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3076,
+          "MatchesPlayed": 39,
+          "StatValueCount": 38,
+          "Rank": 27,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Nicolò Tresoldi",
+          "ParticiantId": 1334552,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.26,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2500,
+          "MatchesPlayed": 40,
+          "StatValueCount": 38,
+          "Rank": 28,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Leo Kokubo",
+          "ParticiantId": 1155621,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.26,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3420,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 29,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Yacine Titraoui",
+          "ParticiantId": 1288907,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 7.25,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2904,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 30,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Joris Kayembe Ditu",
+          "ParticiantId": 500932,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.24,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2105,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 31,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            38,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Anosike Ementa",
+          "ParticiantId": 1267276,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 7.22,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2616,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 32,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Jeppe Erenbjerg",
+          "ParticiantId": 1013281,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 7.21,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2774,
+          "MatchesPlayed": 35,
+          "StatValueCount": 33,
+          "Rank": 33,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            85,
+            103,
+            73,
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Doğucan Haspolat",
+          "ParticiantId": 776258,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 7.2,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3395,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 34,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Arthur Piedfort",
+          "ParticiantId": 1441582,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 7.2,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2989,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 35,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Guilherme Smith",
+          "ParticiantId": 1307981,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.18,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1539,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 36,
+          "ParticipantCountryCode": "BRA",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            68,
+            78,
+            86,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Junya Ito",
+          "ParticiantId": 604044,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.17,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1785,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 37,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            83,
+            107,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Kjell Scherpen",
+          "ParticiantId": 796398,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.17,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2835,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 38,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Abdoulaye Sissako",
+          "ParticiantId": 764779,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3349,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 39,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Siquet",
+          "ParticiantId": 1202888,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.16,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1285,
+          "MatchesPlayed": 31,
+          "StatValueCount": 20,
+          "Rank": 39,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Kamiel van de Perre",
+          "ParticiantId": 1417095,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.14,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2209,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 41,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Anouar Ait El Hadj",
+          "ParticiantId": 1073471,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2653,
+          "MatchesPlayed": 38,
+          "StatValueCount": 36,
+          "Rank": 42,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            86,
+            107,
+            103,
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Rob Schoofs",
+          "ParticiantId": 215415,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.14,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1996,
+          "MatchesPlayed": 36,
+          "StatValueCount": 30,
+          "Rank": 43,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            66,
+            77,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Kyriani Sabbe",
+          "ParticiantId": 1227590,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1652,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 44,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            32,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Matte Smets",
+          "ParticiantId": 1390101,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 7.14,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3509,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 44,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Fedde Leysen",
+          "ParticiantId": 1203195,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.13,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1872,
+          "MatchesPlayed": 27,
+          "StatValueCount": 23,
+          "Rank": 46,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Mauricio Benítez",
+          "ParticiantId": 1402347,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 7.11,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1497,
+          "MatchesPlayed": 27,
+          "StatValueCount": 20,
+          "Rank": 47,
+          "ParticipantCountryCode": "ARG",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            64,
+            74,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Joaquin Seys",
+          "ParticiantId": 1489449,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.1,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2976,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 48,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Praet",
+          "ParticiantId": 282012,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2525,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 49,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            64,
+            75,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Brent Gabriël",
+          "ParticiantId": 1034773,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 7.1,
+          "SubStatValue": 7.0,
+          "MinutesPlayed": 3240,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 50,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Hugo Vetlesen",
+          "ParticiantId": 837064,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.1,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1289,
+          "MatchesPlayed": 25,
+          "StatValueCount": 20,
+          "Rank": 51,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            85,
+            83,
+            73,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Matthieu Epolo",
+          "ParticiantId": 1257080,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 7.09,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2610,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 52,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Joseph Opoku",
+          "ParticiantId": 1683874,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 7.08,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2458,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 53,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            107,
+            83,
+            106,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Ludwig Augustinsson",
+          "ParticiantId": 281857,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2073,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 54,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Rein Van Helden",
+          "ParticiantId": 1342516,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 7.08,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2120,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 54,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            34,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Ilias Sebaoui",
+          "ParticiantId": 1307959,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.07,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3272,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 56,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            87,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Davy Roef",
+          "ParticiantId": 245599,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 7.07,
+          "SubStatValue": 8.0,
+          "MinutesPlayed": 3720,
+          "MatchesPlayed": 41,
+          "StatValueCount": 41,
+          "Rank": 57,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Nacho Ferri",
+          "ParticiantId": 1382019,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 7.06,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2910,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 58,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Wagane Faye",
+          "ParticiantId": 1096756,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 7.06,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2304,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 59,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Jordi Liongola",
+          "ParticiantId": 947065,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 7.05,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2618,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 60,
+          "ParticipantCountryCode": "BDI",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            62,
+            68,
+            71
+          ]
+        },
+        {
+          "ParticipantName": "Anthony Valencia",
+          "ParticiantId": 1353364,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 7.05,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1325,
+          "MatchesPlayed": 23,
+          "StatValueCount": 21,
+          "Rank": 61,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            84,
+            62,
+            66,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Hannes van der Bruggen",
+          "ParticiantId": 232299,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2569,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 62,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            65,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Mathis Servais",
+          "ParticiantId": 1215608,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 7.04,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2796,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 63,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Mechelen",
+          "Positions": [
+            68,
+            66,
+            78,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Josué Homawoo",
+          "ParticiantId": 1022929,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 7.04,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2183,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 64,
+          "ParticipantCountryCode": "TOG",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Tibe De Vlieger",
+          "ParticiantId": 1553506,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 7.03,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1683,
+          "MatchesPlayed": 25,
+          "StatValueCount": 22,
+          "Rank": 65,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            64,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Noah Mbamba",
+          "ParticiantId": 1225704,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 7.03,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2701,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 66,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            66,
+            73,
+            85,
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Vincent Janssen",
+          "ParticiantId": 467022,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 7.03,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3088,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 67,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Pieter Gerkens",
+          "ParticiantId": 465746,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2836,
+          "MatchesPlayed": 35,
+          "StatValueCount": 34,
+          "Rank": 68,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            74,
+            82,
+            85,
+            66,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Nordin Jackers",
+          "ParticiantId": 526227,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 7.02,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1801,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 69,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Allahyar Sayyadmanesh",
+          "ParticiantId": 887680,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 7.02,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 2233,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 70,
+          "ParticipantCountryCode": "IRN",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            83,
+            87,
+            85,
+            115,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Keisuke Goto",
+          "ParticiantId": 1436730,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.02,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2885,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 71,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Sami Lahssaini",
+          "ParticiantId": 950968,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 7.02,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2770,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 72,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            64,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Aiham Ousou",
+          "ParticiantId": 956576,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 7.01,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3395,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 73,
+          "ParticipantCountryCode": "SYR",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Louis Patris",
+          "ParticiantId": 1178319,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1439,
+          "MatchesPlayed": 34,
+          "StatValueCount": 25,
+          "Rank": 74,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            62,
+            86,
+            72,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Robert-Jan Vanwesemael",
+          "ParticiantId": 1596061,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 7.01,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3077,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 74,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            32,
+            83,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Konstantinos Karetsas",
+          "ParticiantId": 1536436,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.99,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2247,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 76,
+          "ParticipantCountryCode": "GRE",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            83,
+            84,
+            72,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Yllan Okou",
+          "ParticiantId": 1320866,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2710,
+          "MatchesPlayed": 33,
+          "StatValueCount": 30,
+          "Rank": 77,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Joel Ordóñez",
+          "ParticiantId": 1354085,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.99,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2668,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 77,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Étienne Camara",
+          "ParticiantId": 1222191,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.99,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3034,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 79,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            66,
+            74
+          ]
+        },
+        {
+          "ParticipantName": "Andreas Jungdal",
+          "ParticiantId": 1183740,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.98,
+          "SubStatValue": 5.0,
+          "MinutesPlayed": 3600,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 80,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Rafiki Saïd",
+          "ParticiantId": 1177313,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.98,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2756,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 81,
+          "ParticipantCountryCode": "COM",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            107,
+            86,
+            106,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Atsuki Ito",
+          "ParticiantId": 1227813,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.98,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2178,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 82,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            64,
+            72,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Christopher Scott",
+          "ParticiantId": 1161288,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.98,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2198,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 83,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            85,
+            78,
+            66,
+            76,
+            82,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Siebe Schrijvers",
+          "ParticiantId": 354494,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2121,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 84,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Kévin Van Den Kerkhof",
+          "ParticiantId": 820792,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.97,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2117,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 84,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            32,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Jarne Steuckers",
+          "ParticiantId": 1224465,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.97,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1491,
+          "MatchesPlayed": 30,
+          "StatValueCount": 25,
+          "Rank": 86,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            83,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Thérence Koudou",
+          "ParticiantId": 1451226,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.97,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3060,
+          "MatchesPlayed": 37,
+          "StatValueCount": 37,
+          "Rank": 87,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Mechelen",
+          "Positions": [
+            62,
+            72,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Tiago Araújo",
+          "ParticiantId": 1185329,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.97,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2813,
+          "MatchesPlayed": 35,
+          "StatValueCount": 33,
+          "Rank": 88,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            38,
+            68,
+            79,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Emin Bayram",
+          "ParticiantId": 1114123,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3322,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 89,
+          "ParticipantCountryCode": "TUR",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yannick Cappelle",
+          "ParticiantId": 1595635,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2016,
+          "MatchesPlayed": 30,
+          "StatValueCount": 28,
+          "Rank": 90,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            38,
+            68
+          ]
+        },
+        {
+          "ParticipantName": "Ousseynou Niang",
+          "ParticiantId": 848573,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.96,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1611,
+          "MatchesPlayed": 27,
+          "StatValueCount": 25,
+          "Rank": 91,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            68,
+            78,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Tobe Leysen",
+          "ParticiantId": 1092104,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.96,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2859,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 92,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Patrick Pflücke",
+          "ParticiantId": 562906,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.96,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2649,
+          "MatchesPlayed": 41,
+          "StatValueCount": 38,
+          "Rank": 93,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            85,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Noë Dussenne",
+          "ParticiantId": 202471,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1877,
+          "MatchesPlayed": 23,
+          "StatValueCount": 23,
+          "Rank": 94,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Ali Maamar",
+          "ParticiantId": 1693008,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1363,
+          "MatchesPlayed": 25,
+          "StatValueCount": 21,
+          "Rank": 94,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Shogo Taniguchi",
+          "ParticiantId": 523731,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.96,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2955,
+          "MatchesPlayed": 38,
+          "StatValueCount": 37,
+          "Rank": 94,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Takahiro Akimoto",
+          "ParticiantId": 1134833,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.95,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2710,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 97,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            68,
+            37,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Taishi Brandon Nozawa",
+          "ParticiantId": 1134460,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.95,
+          "SubStatValue": 6.0,
+          "MinutesPlayed": 2654,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 98,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Mujaid Sadick",
+          "ParticiantId": 939427,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.95,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3014,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 99,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Mathias Delorge",
+          "ParticiantId": 1280741,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.94,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1383,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 100,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            66,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Wilfried Kanga",
+          "ParticiantId": 797800,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.94,
+          "SubStatValue": 4.0,
+          "MinutesPlayed": 2836,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 101,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Łukasz Łakomy",
+          "ParticiantId": 1116774,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.94,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2119,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 102,
+          "ParticipantCountryCode": "POL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            66,
+            73,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Adnane Abid",
+          "ParticiantId": 1336018,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2114,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 103,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            83,
+            107,
+            84,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Colin Coosemans",
+          "ParticiantId": 208699,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.93,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 3420,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 104,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Marlon Fossey",
+          "ParticiantId": 1180280,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.93,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1469,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 105,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            32,
+            51,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Reynolds",
+          "ParticiantId": 924446,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.93,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3494,
+          "MatchesPlayed": 39,
+          "StatValueCount": 39,
+          "Rank": 106,
+          "ParticipantCountryCode": "USA",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            32,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Maksim Paskotši",
+          "ParticiantId": 1176726,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.93,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1813,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 107,
+          "ParticipantCountryCode": "EST",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kerim Mrabti",
+          "ParticiantId": 528409,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2300,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 108,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "Mechelen",
+          "Positions": [
+            85,
+            74,
+            103,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Promise David",
+          "ParticiantId": 1252132,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1493,
+          "MatchesPlayed": 24,
+          "StatValueCount": 24,
+          "Rank": 108,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Abdelkahar Kadri",
+          "ParticiantId": 1120987,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.92,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2076,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 108,
+          "ParticipantCountryCode": "ALG",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            85,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Laurent Lemoine",
+          "ParticiantId": 659995,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1670,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 111,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Henry Lawrence",
+          "ParticiantId": 1077976,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2433,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 111,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            37,
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Casper Nielsen",
+          "ParticiantId": 352898,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.92,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1878,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 111,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            73,
+            64,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Roman Květ",
+          "ParticiantId": 802213,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.91,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2552,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 114,
+          "ParticipantCountryCode": "CZE",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            73,
+            85,
+            106,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Yaimar Medina",
+          "ParticiantId": 1391753,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1533,
+          "MatchesPlayed": 27,
+          "StatValueCount": 24,
+          "Rank": 115,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            38,
+            87,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Ibe Hautekiet",
+          "ParticiantId": 1047662,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2947,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 115,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Arbnor Muja",
+          "ParticiantId": 857141,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.91,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 1855,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 117,
+          "ParticipantCountryCode": "ALB",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Pape Moussa Fall",
+          "ParticiantId": 1595632,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.91,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1771,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 118,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Tobias Mohr",
+          "ParticiantId": 725835,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2288,
+          "MatchesPlayed": 38,
+          "StatValueCount": 35,
+          "Rank": 119,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            38,
+            68,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Farouck Adekami",
+          "ParticiantId": 1679130,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.91,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1140,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 119,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            68,
+            106,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Redouane Halhal",
+          "ParticiantId": 1298186,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2849,
+          "MatchesPlayed": 33,
+          "StatValueCount": 33,
+          "Rank": 121,
+          "ParticipantCountryCode": "MAR",
+          "TeamName": "Mechelen",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Nathan De Cat",
+          "ParticiantId": 1664759,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.9,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2739,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 121,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            66,
+            85,
+            75,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Daam Foulon",
+          "ParticiantId": 928692,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.9,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2290,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 123,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            68,
+            79,
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Lion Lauberbach",
+          "ParticiantId": 866165,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1872,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 124,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Mechelen",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Claes",
+          "ParticiantId": 1417102,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2784,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 124,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Bjorn Meijer",
+          "ParticiantId": 1256178,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1023,
+          "MatchesPlayed": 27,
+          "StatValueCount": 20,
+          "Rank": 124,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Raul Florucz",
+          "ParticiantId": 1506829,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.89,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1214,
+          "MatchesPlayed": 24,
+          "StatValueCount": 22,
+          "Rank": 124,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            104,
+            84,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Zeno Van Den Bosch",
+          "ParticiantId": 1231677,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3071,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 128,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Isa Sakamoto",
+          "ParticiantId": 1308624,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.88,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3021,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 128,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            85,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Tommy St. Jago",
+          "ParticiantId": 895268,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2282,
+          "MatchesPlayed": 28,
+          "StatValueCount": 27,
+          "Rank": 130,
+          "ParticipantCountryCode": "CUW",
+          "TeamName": "Mechelen",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Christiaan Ravych",
+          "ParticiantId": 1336773,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2243,
+          "MatchesPlayed": 27,
+          "StatValueCount": 26,
+          "Rank": 130,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Marco Ilaimaharitra",
+          "ParticiantId": 496285,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.87,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2445,
+          "MatchesPlayed": 31,
+          "StatValueCount": 30,
+          "Rank": 130,
+          "ParticipantCountryCode": "MAD",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Bryan Goncalves",
+          "ParticiantId": 820076,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.87,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2113,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 133,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Malcolm Viltard",
+          "ParticiantId": 1211284,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.86,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2568,
+          "MatchesPlayed": 34,
+          "StatValueCount": 34,
+          "Rank": 134,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            77,
+            66,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Marley Aké",
+          "ParticiantId": 1078258,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1746,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 135,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            107,
+            68,
+            78,
+            67,
+            83,
+            106,
+            86,
+            77
+          ]
+        },
+        {
+          "ParticipantName": "Emmanuel Kakou",
+          "ParticiantId": 1640208,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1733,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 136,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Kevin Rodríguez",
+          "ParticiantId": 1421270,
+          "TeamId": 7978,
+          "TeamColor": "#daa000",
+          "StatValue": 6.86,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1825,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 136,
+          "ParticipantCountryCode": "ECU",
+          "TeamName": "Union Saint-Gilloise",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Thibo Somers",
+          "ParticiantId": 1106599,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.86,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 2434,
+          "MatchesPlayed": 32,
+          "StatValueCount": 32,
+          "Rank": 138,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            72,
+            62,
+            86,
+            32,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Yuto Tsunashima",
+          "ParticiantId": 1437306,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2727,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 139,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Wilguens Paugain",
+          "ParticiantId": 1394254,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.85,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1281,
+          "MatchesPlayed": 24,
+          "StatValueCount": 21,
+          "Rank": 139,
+          "ParticipantCountryCode": "HAI",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            62,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahim Karamoko",
+          "ParticiantId": 998289,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.84,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2178,
+          "MatchesPlayed": 31,
+          "StatValueCount": 29,
+          "Rank": 141,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            34,
+            74,
+            66,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Mardochée Nzita",
+          "ParticiantId": 1080644,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3007,
+          "MatchesPlayed": 38,
+          "StatValueCount": 38,
+          "Rank": 142,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Fabio Ferraro",
+          "ParticiantId": 1307394,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.84,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2531,
+          "MatchesPlayed": 29,
+          "StatValueCount": 29,
+          "Rank": 142,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            59,
+            79,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Aurélien Scheidler",
+          "ParticiantId": 846963,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.84,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 3266,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 144,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Youssef Maziz",
+          "ParticiantId": 814619,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.83,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2096,
+          "MatchesPlayed": 36,
+          "StatValueCount": 35,
+          "Rank": 145,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            86,
+            77,
+            107
+          ]
+        },
+        {
+          "ParticipantName": "Raphael Onyedika",
+          "ParticiantId": 1126768,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1995,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 146,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            66,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Lucas Hey",
+          "ParticiantId": 1258287,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.83,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2514,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 146,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Bruny Nsimba",
+          "ParticiantId": 1173031,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1816,
+          "MatchesPlayed": 28,
+          "StatValueCount": 28,
+          "Rank": 148,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Josimar Alcócer",
+          "ParticiantId": 1296660,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.82,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2722,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 149,
+          "ParticipantCountryCode": "CRC",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            87,
+            78,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Bernier",
+          "ParticiantId": 945883,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.82,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2374,
+          "MatchesPlayed": 38,
+          "StatValueCount": 37,
+          "Rank": 150,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Siebe van der Heyden",
+          "ParticiantId": 768432,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.81,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3075,
+          "MatchesPlayed": 36,
+          "StatValueCount": 36,
+          "Rank": 151,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            37,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Saliba",
+          "ParticiantId": 1216798,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.8,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2319,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 152,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            64,
+            74,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Djibril Lamego",
+          "ParticiantId": 1785914,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2553,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 153,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Ibrahima Sory Bangoura",
+          "ParticiantId": 1436275,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.78,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1514,
+          "MatchesPlayed": 28,
+          "StatValueCount": 23,
+          "Rank": 153,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            64,
+            76
+          ]
+        },
+        {
+          "ParticipantName": "Enric Llansana",
+          "ParticiantId": 1033342,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.78,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1709,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 155,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            66,
+            75
+          ]
+        },
+        {
+          "ParticipantName": "Aaron Bibout",
+          "ParticiantId": 1463600,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.77,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1165,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 156,
+          "ParticipantCountryCode": "CMR",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Napoleon Romsaas",
+          "ParticiantId": 1281232,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1740,
+          "MatchesPlayed": 37,
+          "StatValueCount": 34,
+          "Rank": 157,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Lawrence Agyekum",
+          "ParticiantId": 1246235,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.77,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1887,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 157,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            72,
+            83,
+            85,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Tristan Degreef",
+          "ParticiantId": 1520067,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1884,
+          "MatchesPlayed": 34,
+          "StatValueCount": 29,
+          "Rank": 159,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            83,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Jakob Kiilerich Rask",
+          "ParticiantId": 861215,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2291,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 159,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Roggerio Nyakossi",
+          "ParticiantId": 1270037,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.76,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2241,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 159,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Taiga Hata",
+          "ParticiantId": 1134461,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2444,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 162,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            38,
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Max Dean",
+          "ParticiantId": 1187331,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1177,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 163,
+          "ParticipantCountryCode": "ENG",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            104,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Collins Sor",
+          "ParticiantId": 1054011,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.75,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1131,
+          "MatchesPlayed": 28,
+          "StatValueCount": 24,
+          "Rank": 164,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            87,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Henok Teklab",
+          "ParticiantId": 1190950,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.75,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1638,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 165,
+          "ParticipantCountryCode": "GER",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            68,
+            78,
+            86,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Benoît Nyssen",
+          "ParticiantId": 948441,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.75,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1743,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 166,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            32,
+            72,
+            62
+          ]
+        },
+        {
+          "ParticipantName": "Cheick Keita",
+          "ParticiantId": 1406567,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.74,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3440,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 167,
+          "ParticipantCountryCode": "MLI",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            36
+          ]
+        },
+        {
+          "ParticipantName": "Maxence Maisonneuve",
+          "ParticiantId": 1699067,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.73,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2295,
+          "MatchesPlayed": 31,
+          "StatValueCount": 28,
+          "Rank": 168,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Leonardo Lopes",
+          "ParticiantId": 604396,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.73,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2452,
+          "MatchesPlayed": 37,
+          "StatValueCount": 33,
+          "Rank": 169,
+          "ParticipantCountryCode": "POR",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            66,
+            77,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Simen Kristiansen Juklerød",
+          "ParticiantId": 360570,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 854,
+          "MatchesPlayed": 22,
+          "StatValueCount": 20,
+          "Rank": 170,
+          "ParticipantCountryCode": "NOR",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Marsoni Sambu",
+          "ParticiantId": 526553,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.72,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2013,
+          "MatchesPlayed": 29,
+          "StatValueCount": 28,
+          "Rank": 171,
+          "ParticipantCountryCode": "ANG",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            51,
+            32,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Thibaud Verlinden",
+          "ParticiantId": 789532,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1463,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 172,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            68,
+            78,
+            103,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Lewin Blum",
+          "ParticiantId": 1270001,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1776,
+          "MatchesPlayed": 32,
+          "StatValueCount": 31,
+          "Rank": 172,
+          "ParticipantCountryCode": "SUI",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "José Marsà",
+          "ParticiantId": 1300670,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.72,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2594,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 172,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Mechelen",
+          "Positions": [
+            37,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Matties Volckaert",
+          "ParticiantId": 1844330,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.71,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2231,
+          "MatchesPlayed": 26,
+          "StatValueCount": 25,
+          "Rank": 175,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            35,
+            32,
+            62,
+            72,
+            83
+          ]
+        },
+        {
+          "ParticipantName": "Ilay Camara",
+          "ParticiantId": 1473998,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1310,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 176,
+          "ParticipantCountryCode": "SEN",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            32
+          ]
+        },
+        {
+          "ParticipantName": "Steve Ngoura",
+          "ParticiantId": 1393483,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.71,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2091,
+          "MatchesPlayed": 34,
+          "StatValueCount": 33,
+          "Rank": 176,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Anton Tanghe",
+          "ParticiantId": 1110599,
+          "TeamId": 10000,
+          "TeamColor": "#ba011a",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1664,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 178,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "SV Zulte Waregem",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Yari Verschaeren",
+          "ParticiantId": 988793,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.7,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1393,
+          "MatchesPlayed": 28,
+          "StatValueCount": 26,
+          "Rank": 178,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            85,
+            76,
+            67
+          ]
+        },
+        {
+          "ParticipantName": "Gyrano Kerk",
+          "ParticiantId": 519134,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.69,
+          "SubStatValue": 3.0,
+          "MinutesPlayed": 2095,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 180,
+          "ParticipantCountryCode": "SUR",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            106,
+            103,
+            86,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Oumar Diakité",
+          "ParticiantId": 1328540,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1427,
+          "MatchesPlayed": 25,
+          "StatValueCount": 24,
+          "Rank": 181,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Mihajlo Cvetković",
+          "ParticiantId": 1480699,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1625,
+          "MatchesPlayed": 29,
+          "StatValueCount": 27,
+          "Rank": 181,
+          "ParticipantCountryCode": "SRB",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            115,
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Gustav Mortensen",
+          "ParticiantId": 1257304,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.69,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1736,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 181,
+          "ParticipantCountryCode": "DEN",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            38,
+            68,
+            78
+          ]
+        },
+        {
+          "ParticipantName": "Luc Marijnissen",
+          "ParticiantId": 1199227,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.68,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 3059,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 184,
+          "ParticipantCountryCode": "NED",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            33,
+            51
+          ]
+        },
+        {
+          "ParticipantName": "Joël Ito",
+          "ParticiantId": 1688868,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2340,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 185,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            85,
+            77,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Ewoud Pletinckx",
+          "ParticiantId": 965823,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.67,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 3538,
+          "MatchesPlayed": 40,
+          "StatValueCount": 40,
+          "Rank": 185,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            33
+          ]
+        },
+        {
+          "ParticipantName": "Marco Kana",
+          "ParticiantId": 1076974,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.66,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2043,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 187,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            36,
+            77,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Luc De Fougerolles",
+          "ParticiantId": 1399943,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1655,
+          "MatchesPlayed": 27,
+          "StatValueCount": 27,
+          "Rank": 188,
+          "ParticipantCountryCode": "CAN",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Romeo Vermant",
+          "ParticiantId": 1178453,
+          "TeamId": 8342,
+          "TeamColor": "#0572FF",
+          "StatValue": 6.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1317,
+          "MatchesPlayed": 35,
+          "StatValueCount": 31,
+          "Rank": 189,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Club Brugge",
+          "Positions": [
+            115,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Ryan Merlen",
+          "ParticiantId": 1609381,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.63,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 948,
+          "MatchesPlayed": 33,
+          "StatValueCount": 26,
+          "Rank": 190,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            64,
+            85,
+            73
+          ]
+        },
+        {
+          "ParticipantName": "Mory Konaté",
+          "ParticiantId": 869780,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.63,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2002,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 191,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Mechelen",
+          "Positions": [
+            35,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Robin Mirisola",
+          "ParticiantId": 1560046,
+          "TeamId": 9987,
+          "TeamColor": "#005098",
+          "StatValue": 6.62,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1299,
+          "MatchesPlayed": 30,
+          "StatValueCount": 27,
+          "Rank": 192,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KRC Genk",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Hyllarion Goore",
+          "ParticiantId": 1666324,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.61,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1427,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 193,
+          "ParticipantCountryCode": "CIV",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            106,
+            107,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Killian Sardella",
+          "ParticiantId": 1076975,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.6,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2036,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 194,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            32,
+            34
+          ]
+        },
+        {
+          "ParticipantName": "Óscar Gil",
+          "ParticiantId": 1083082,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.59,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 2325,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 195,
+          "ParticipantCountryCode": "ESP",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            62,
+            72,
+            86
+          ]
+        },
+        {
+          "ParticipantName": "Thierry Lutonda",
+          "ParticiantId": 1073472,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.58,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1730,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 196,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            59,
+            66,
+            78,
+            88
+          ]
+        },
+        {
+          "ParticipantName": "Martin Delavallée",
+          "ParticiantId": 1381103,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1890,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 197,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            11
+          ]
+        },
+        {
+          "ParticipantName": "Wouter George",
+          "ParticiantId": 1188386,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1178,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 197,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            74,
+            64
+          ]
+        },
+        {
+          "ParticipantName": "Seiji Kimura",
+          "ParticiantId": 1122594,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.56,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1839,
+          "MatchesPlayed": 21,
+          "StatValueCount": 21,
+          "Rank": 197,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            36,
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Jerry Afriyie",
+          "ParticiantId": 1695011,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.55,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 2497,
+          "MatchesPlayed": 31,
+          "StatValueCount": 31,
+          "Rank": 200,
+          "ParticipantCountryCode": "GHA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Oluwaseun Adewumi",
+          "ParticiantId": 1355089,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1585,
+          "MatchesPlayed": 32,
+          "StatValueCount": 29,
+          "Rank": 201,
+          "ParticipantCountryCode": "AUT",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            104,
+            83,
+            72,
+            88,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Dante Vanzeir",
+          "ParticiantId": 693675,
+          "TeamId": 9984,
+          "TeamColor": "#00521f",
+          "StatValue": 6.54,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 950,
+          "MatchesPlayed": 20,
+          "StatValueCount": 20,
+          "Rank": 201,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Cercle Brugge",
+          "Positions": [
+            104,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Mathieu Maertens",
+          "ParticiantId": 497572,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.53,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1269,
+          "MatchesPlayed": 35,
+          "StatValueCount": 29,
+          "Rank": 203,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            84,
+            104,
+            64,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Takuma Ominami",
+          "ParticiantId": 727828,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1706,
+          "MatchesPlayed": 22,
+          "StatValueCount": 22,
+          "Rank": 204,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            37
+          ]
+        },
+        {
+          "ParticipantName": "Kaito Matsuzawa",
+          "ParticiantId": 1515636,
+          "TeamId": 9997,
+          "TeamColor": "#204888",
+          "StatValue": 6.52,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 692,
+          "MatchesPlayed": 32,
+          "StatValueCount": 25,
+          "Rank": 204,
+          "ParticipantCountryCode": "JPN",
+          "TeamName": "Sint-Truidense VV",
+          "Positions": [
+            83,
+            87
+          ]
+        },
+        {
+          "ParticipantName": "Birger Verstraete",
+          "ParticiantId": 294252,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.51,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1712,
+          "MatchesPlayed": 26,
+          "StatValueCount": 26,
+          "Rank": 206,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Samuel Gueulette",
+          "ParticiantId": 1500007,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.5,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1261,
+          "MatchesPlayed": 29,
+          "StatValueCount": 23,
+          "Rank": 207,
+          "ParticipantCountryCode": "RWA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            75,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Dennis Eckert",
+          "ParticiantId": 892709,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.49,
+          "SubStatValue": 2.0,
+          "MinutesPlayed": 1987,
+          "MatchesPlayed": 35,
+          "StatValueCount": 35,
+          "Rank": 208,
+          "ParticipantCountryCode": "IRN",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            105,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Sory Kaba",
+          "ParticiantId": 822026,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.49,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1595,
+          "MatchesPlayed": 30,
+          "StatValueCount": 29,
+          "Rank": 209,
+          "ParticipantCountryCode": "GUI",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Adriano Bertaccini",
+          "ParticiantId": 1073421,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.48,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1575,
+          "MatchesPlayed": 33,
+          "StatValueCount": 29,
+          "Rank": 210,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            83,
+            115,
+            87,
+            85
+          ]
+        },
+        {
+          "ParticipantName": "Nathan Rôdes",
+          "ParticiantId": 848646,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.47,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1984,
+          "MatchesPlayed": 33,
+          "StatValueCount": 27,
+          "Rank": 211,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            64,
+            74,
+            35
+          ]
+        },
+        {
+          "ParticipantName": "Momodou Sonko",
+          "ParticiantId": 1355206,
+          "TeamId": 9991,
+          "TeamColor": "#004898",
+          "StatValue": 6.46,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 840,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 212,
+          "ParticipantCountryCode": "SWE",
+          "TeamName": "KAA Gent",
+          "Positions": [
+            86,
+            87,
+            78,
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Marwan Al-Sahafi",
+          "ParticiantId": 1399713,
+          "TeamId": 9988,
+          "TeamColor": "#DB2823",
+          "StatValue": 6.45,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1323,
+          "MatchesPlayed": 24,
+          "StatValueCount": 23,
+          "Rank": 213,
+          "ParticipantCountryCode": "KSA",
+          "TeamName": "Royal Antwerp",
+          "Positions": [
+            83,
+            107,
+            106,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Benito Raman",
+          "ParticiantId": 289248,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.43,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1050,
+          "MatchesPlayed": 29,
+          "StatValueCount": 23,
+          "Rank": 214,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Mechelen",
+          "Positions": [
+            105,
+            103
+          ]
+        },
+        {
+          "ParticipantName": "Chukwubuikem Ikwuemesi",
+          "ParticiantId": 1297995,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.42,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1820,
+          "MatchesPlayed": 34,
+          "StatValueCount": 31,
+          "Rank": 215,
+          "ParticipantCountryCode": "NGA",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            105
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Henry",
+          "ParticiantId": 600190,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.42,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 1360,
+          "MatchesPlayed": 21,
+          "StatValueCount": 20,
+          "Rank": 216,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "David Toshevski",
+          "ParticiantId": 1104389,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.41,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1491,
+          "MatchesPlayed": 25,
+          "StatValueCount": 25,
+          "Rank": 217,
+          "ParticipantCountryCode": "MKD",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            106
+          ]
+        },
+        {
+          "ParticipantName": "Mario Stroeykens",
+          "ParticiantId": 1219672,
+          "TeamId": 8635,
+          "TeamColor": "#3F2B72",
+          "StatValue": 6.41,
+          "SubStatValue": 1.0,
+          "MinutesPlayed": 800,
+          "MatchesPlayed": 23,
+          "StatValueCount": 20,
+          "Rank": 218,
+          "ParticipantCountryCode": "COD",
+          "TeamName": "RSC Anderlecht",
+          "Positions": [
+            83,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Thomas Van den Keybus",
+          "ParticiantId": 1126079,
+          "TeamId": 10001,
+          "TeamColor": "#006098",
+          "StatValue": 6.39,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1117,
+          "MatchesPlayed": 32,
+          "StatValueCount": 27,
+          "Rank": 219,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "KVC Westerlo",
+          "Positions": [
+            38
+          ]
+        },
+        {
+          "ParticipantName": "Owen Maës",
+          "ParticiantId": 1330701,
+          "TeamId": 1218969,
+          "TeamColor": "#297642",
+          "StatValue": 6.38,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1274,
+          "MatchesPlayed": 22,
+          "StatValueCount": 21,
+          "Rank": 220,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "RAAL La Louvière",
+          "Positions": [
+            73,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Kyan Vaesen",
+          "ParticiantId": 1110376,
+          "TeamId": 1773,
+          "TeamColor": "#009530",
+          "StatValue": 6.34,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 826,
+          "MatchesPlayed": 32,
+          "StatValueCount": 22,
+          "Rank": 221,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Oud-Heverlee Leuven",
+          "Positions": [
+            105,
+            84
+          ]
+        },
+        {
+          "ParticipantName": "Antoine Colassin",
+          "ParticiantId": 1127251,
+          "TeamId": 9986,
+          "TeamColor": "#000000",
+          "StatValue": 6.33,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 613,
+          "MatchesPlayed": 29,
+          "StatValueCount": 20,
+          "Rank": 222,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "Sporting de Charleroi",
+          "Positions": [
+            115
+          ]
+        },
+        {
+          "ParticipantName": "Bill Antonio",
+          "ParticiantId": 1313003,
+          "TeamId": 8203,
+          "TeamColor": "#E42313",
+          "StatValue": 6.31,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1159,
+          "MatchesPlayed": 33,
+          "StatValueCount": 32,
+          "Rank": 223,
+          "ParticipantCountryCode": "ZIM",
+          "TeamName": "Mechelen",
+          "Positions": [
+            62,
+            72
+          ]
+        },
+        {
+          "ParticipantName": "Nayel Mehssatou",
+          "ParticiantId": 1275688,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.29,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1045,
+          "MatchesPlayed": 29,
+          "StatValueCount": 21,
+          "Rank": 224,
+          "ParticipantCountryCode": "CHI",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            76,
+            66
+          ]
+        },
+        {
+          "ParticipantName": "Mohamed Berte",
+          "ParticiantId": 1257872,
+          "TeamId": 7947,
+          "TeamColor": "#1E67B4",
+          "StatValue": 6.26,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 951,
+          "MatchesPlayed": 28,
+          "StatValueCount": 22,
+          "Rank": 225,
+          "ParticipantCountryCode": "BEL",
+          "TeamName": "FCV Dender EH",
+          "Positions": [
+            104
+          ]
+        },
+        {
+          "ParticipantName": "Timothé Nkada",
+          "ParticiantId": 1038058,
+          "TeamId": 9985,
+          "TeamColor": "#E82820",
+          "StatValue": 6.22,
+          "SubStatValue": 0.0,
+          "MinutesPlayed": 1240,
+          "MatchesPlayed": 30,
+          "StatValueCount": 30,
+          "Rank": 226,
+          "ParticipantCountryCode": "FRA",
+          "TeamName": "Standard Liège",
+          "Positions": [
+            105,
+            87
+          ]
+        }
+      ],
+      "StatFormat": "fraction",
+      "SubstatFormat": "number",
+      "StatDecimals": 2,
+      "SubstatDecimals": 0,
+      "Order": 4,
+      "Category": "Top Stat",
+      "LocalizedCategoryId": "top_stats"
+    }
+  ],
+  "LeagueName": "First Division A"
+}
