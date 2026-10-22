@@ -222,6 +222,10 @@ export function LeagueView(props: {
   }, [room.id, mineSlot, watched, played, navigate])
 
   const byId = useMemo(() => draftPlayers(loaded?.pool ?? [], loaded?.picks ?? []), [loaded])
+  const primes = useMemo(
+    () => new Set([...byId.values()].filter((p) => p.prime).map((p) => p.id)),
+    [byId],
+  )
   const slug = roomPageSlug(props.page)
   const frame = (status: string, children: ReactNode, mine?: DraftTeam, marked = NONE) => (
     <RoomLayout room={room} page={slug} mine={mine} status={status} marked={marked}>
@@ -311,6 +315,7 @@ export function LeagueView(props: {
           slot={mine.slot}
           round={room.round!.no}
           pack={room.pack}
+          primes={primes}
         />
       ) : (
         <Note>
