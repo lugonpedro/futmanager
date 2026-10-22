@@ -421,7 +421,8 @@ const positionOf = (m: Member) => {
  * lists at another club moves with his rating; a newcomer is rated from the
  * club's level at his position and his FotMob average. When a position is
  * full, the place goes to him over a pack player FotMob's squad page doesn't
- * list, or else over one with no minutes in either source and no higher rating.
+ * list, then over one with no minutes in either source and no higher rating,
+ * and last over the lowest rated of the position if that one is below him.
  */
 type Added = { club: PackClub; player: PackPlayer; source: string }
 type Dropped = { club: PackClub; player: PackPlayer; reason: string }
@@ -461,14 +462,16 @@ for (const [index, club] of pack.clubes.entries()) {
       elsewhere?.player.nota ?? Math.max(MIN_RATING, Math.min(MAX_RATING, Math.round(level + lift)))
     if (taken.length >= SQUAD_SHAPE[position]) {
       // First someone the club's squad page no longer lists, then someone
-      // still there but without minutes, as long as he isn't rated higher.
+      // still there but without minutes, as long as he isn't rated higher,
+      // and last the weakest of the position if he is rated lower.
       const byRating = (a: Row, b: Row) => a.player.nota - b.player.nota
       const gone = taken.filter((r) => r.memberId === undefined).sort(byRating)
       const idle = taken
         .filter((r) => r.memberId !== undefined && !r.fotmob && !r.cartola)
         .filter((r) => r.player.nota <= nota)
         .sort(byRating)
-      const out = gone[0] ?? idle[0]
+      const weaker = taken.filter((r) => r.player.nota < nota).sort(byRating)
+      const out = gone[0] ?? idle[0] ?? weaker[0]
       if (!out) {
         full.push({ club, name: member.name })
         continue
@@ -477,7 +480,12 @@ for (const [index, club] of pack.clubes.entries()) {
       dropped.push({
         club,
         player: out.player,
-        reason: out === gone[0] ? 'fora do elenco no FotMob' : 'sem minutos',
+        reason:
+          out === gone[0]
+            ? 'fora do elenco no FotMob'
+            : out === idle[0]
+              ? 'sem minutos'
+              : `nota menor que a de ${member.name}`,
       })
     }
     if (elsewhere) {
