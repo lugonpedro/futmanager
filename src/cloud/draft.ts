@@ -273,6 +273,8 @@ export function watchRoom(
     market?: () => void
     /** Someone joined, left, changed their team or marked "Pronto" in the waiting room. */
     members?: () => void
+    /** Someone asked to speed up the round shown live, or it sped up. */
+    speed?: () => void
   },
 ): () => void {
   const db = client()
@@ -315,6 +317,19 @@ export function watchRoom(
       { event: '*', schema: 'public', table: 'room_members', filter: `room_id=eq.${room}` },
       () => on.members?.(),
     )
+  }
+  if (on.speed) {
+    channel
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'room_speedups', filter: `room_id=eq.${room}` },
+        () => on.speed?.(),
+      )
+      .on(
+        'postgres_changes',
+        { event: 'UPDATE', schema: 'public', table: 'room_rounds', filter: `room_id=eq.${room}` },
+        () => on.speed?.(),
+      )
   }
   if (on.market) {
     for (const table of ['room_rosters', 'room_trades', 'room_feed', 'room_squads']) {

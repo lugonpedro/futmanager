@@ -94,6 +94,7 @@ const MESSAGES: Record<string, string> = {
   'ja-abriu': 'As cartas desta escolha já foram abertas.',
   vaga: 'Essa vaga já está preenchida.',
   carta: 'Escolha uma das cartas abertas.',
+  rodada: 'Essa rodada não existe.',
 }
 
 /** The player's message for a failed call; anything unexpected gets a generic one. */

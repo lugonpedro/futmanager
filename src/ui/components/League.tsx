@@ -37,8 +37,10 @@ import {
   loadPlayedRound,
   loadRoundReplays,
   loadRoundResults,
+  loadSpeedUp,
   rematchRoom,
   setRoomReady,
+  speedUpRound,
 } from '../../cloud/roomLeague.ts'
 import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
@@ -46,7 +48,14 @@ import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import type { RoomMatchLine, RoomSummary, TeamSheet } from '../../engine/room/summary.ts'
 import { draftPlayers } from '../draft.ts'
-import { LIVE, markRoundSeen, roundOver, roundTimeline, seenRound } from '../liveRound.ts'
+import {
+  LIVE,
+  liveElapsed,
+  markRoundSeen,
+  roundOver,
+  roundTimeline,
+  seenRound,
+} from '../liveRound.ts'
 import { describeOptions } from '../room.ts'
 import { roomPageSlug, type RoomPageSlug } from '../roomPages.ts'
 import {
@@ -108,6 +117,9 @@ export function LeagueView(props: {
   /** The team whose squad is open, from the table. */
   const [squadOf, setSquadOf] = useState<string>()
   const [live, setLive] = useState<Live>()
+  /** Who asked to speed up the round shown live, and when it sped up. */
+  const [speed, setSpeed] = useState<{ round: number; asked: number[]; spedAt?: number }>()
+  const [speedTick, setSpeedTick] = useState(0)
   /** The last round checked for being live, so its results don't show before that is known. */
   const [checked, setChecked] = useState(0)
 
@@ -160,6 +172,7 @@ export function LeagueView(props: {
       room: () => void reload(),
       round: () => void loadSummary(),
       market: () => setMarketTick((t) => t + 1),
+      speed: () => setSpeedTick((t) => t + 1),
     })
     return () => {
       live = false
@@ -178,7 +191,8 @@ export function LeagueView(props: {
         const timeline = now ? roundTimeline(now.replays) : []
         // Never further off than the lead: a device clock behind the server's would make the wait long.
         const kickOff = Math.min(now?.playedAt.getTime() ?? 0, Date.now()) + LIVE.leadMs
-        if (!now || !before || roundOver(timeline, Date.now() - kickOff)) {
+        const spedAt = now?.spedAt && Math.min(now.spedAt.getTime(), Date.now())
+        if (!now || !before || roundOver(timeline, liveElapsed(kickOff, Date.now(), spedAt))) {
           markRoundSeen(room.id, played)
         } else {
           setLive({
@@ -196,6 +210,29 @@ export function LeagueView(props: {
       on = false
     }
   }, [room.id, played])
+
+  // Asking to speed up the round shown live, and it speeding up once everyone asked.
+  const liveRound = live?.round
+  useEffect(() => {
+    if (liveRound === undefined) return
+    let on = true
+    loadSpeedUp(room.id, liveRound)
+      .then(({ asked, spedAt }) => {
+        if (!on) return
+        // The first time seen sticks: a device clock behind the server's would push it back.
+        setSpeed((now) => ({
+          round: liveRound,
+          asked,
+          spedAt:
+            (now?.round === liveRound ? now.spedAt : undefined) ??
+            (spedAt && Math.min(spedAt.getTime(), Date.now())),
+        }))
+      })
+      .catch(() => undefined)
+    return () => {
+      on = false
+    }
+  }, [room.id, liveRound, speedTick])
 
   // After a round (once it was watched or skipped), the toasts of the team's new injuries and bans.
   const navigate = useNavigate()
@@ -272,6 +309,21 @@ export function LeagueView(props: {
     markRoundSeen(room.id, live!.round)
     setLive(undefined)
   }
+  const liveSpeed = speed?.round === live?.round ? speed : undefined
+  const speedUp = () => {
+    const round = live!.round
+    setSpeed((now) => ({
+      round,
+      spedAt: now?.round === round ? now.spedAt : undefined,
+      asked: [...new Set([...(now?.round === round ? now.asked : []), mine!.slot])],
+    }))
+    speedUpRound(room.id, round)
+      .then(() => setSpeedTick((t) => t + 1))
+      .catch((error) => {
+        toast.error(error instanceof Error ? error.message : String(error))
+        setSpeedTick((t) => t + 1)
+      })
+  }
 
   if (watching) {
     return frame(
@@ -302,6 +354,10 @@ export function LeagueView(props: {
         timeline={live.timeline}
         teamOf={teamOf}
         mine={mine}
+        spedAt={liveSpeed?.spedAt}
+        asked={liveSpeed?.asked ?? []}
+        people={teams.filter((t) => !t.robot && t.userId).length}
+        onSpeedUp={mine && speedUp}
         onDone={doneWatching}
       />
     )

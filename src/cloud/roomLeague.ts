@@ -86,10 +86,12 @@ export async function loadRoundResults(
 export async function loadPlayedRound(
   room: number,
   round: number,
-): Promise<{ playedAt: Date; summary: RoomSummary; replays: MatchReplay[] } | undefined> {
+): Promise<
+  { playedAt: Date; spedAt?: Date; summary: RoomSummary; replays: MatchReplay[] } | undefined
+> {
   const { data, error } = await client()
     .from('room_rounds')
-    .select('played_at, summary, replays')
+    .select('played_at, sped_at, summary, replays')
     .eq('room_id', room)
     .eq('round', round)
     .maybeSingle()
@@ -97,7 +99,37 @@ export async function loadPlayedRound(
   if (!data) return undefined
   return {
     playedAt: new Date(data.played_at),
+    spedAt: data.sped_at ? new Date(data.sped_at) : undefined,
     summary: data.summary as RoomSummary,
     replays: data.replays ? await unpackJson<MatchReplay[]>(data.replays) : [],
   }
+}
+
+/** Who asked to speed up a round shown live, and when it sped up, once everyone had. */
+export async function loadSpeedUp(
+  room: number,
+  round: number,
+): Promise<{ asked: number[]; spedAt?: Date }> {
+  const [asked, played] = await Promise.all([
+    client().from('room_speedups').select('slot').eq('room_id', room).eq('round', round),
+    client()
+      .from('room_rounds')
+      .select('sped_at')
+      .eq('room_id', room)
+      .eq('round', round)
+      .maybeSingle(),
+  ])
+  if (asked.error) throw roomError(asked.error)
+  if (played.error) throw roomError(played.error)
+  return {
+    asked: (asked.data as { slot: number }[]).map((row) => row.slot),
+    spedAt: played.data?.sped_at ? new Date(played.data.sped_at) : undefined,
+  }
+}
+
+/** Asks for the round to go faster; true when that made everyone ask. */
+export async function speedUpRound(room: number, round: number): Promise<boolean> {
+  const { data, error } = await client().rpc('room_speed_up', { room, round })
+  if (error) throw roomError(error)
+  return data === true
 }
