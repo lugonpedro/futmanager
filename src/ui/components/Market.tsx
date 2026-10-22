@@ -27,10 +27,11 @@ import { POSITIONS, type Position } from '../../engine/model/types.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
 import { ROOM_LIMITS } from '../../engine/room/types.ts'
 import { confirm } from '../confirm.ts'
-import { moveInQueue, searchKey } from '../draft.ts'
+import { moveInQueue, searchKey, type DraftPlayer } from '../draft.ts'
 import { POSITION_NAMES, POSITION_ORDER } from '../format.ts'
 import { feedLine, freePlayers, squadIds, tradesOpen } from '../roomMarket.ts'
 import { Choices } from './Choices.tsx'
+import { TradeCompare } from './TradeCompare.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -53,6 +54,8 @@ export function MarketView(props: {
   mine?: DraftTeam
   pool: PoolPlayer[]
   rosters: RosterEntry[]
+  /** The drafted players, prime cards boosted, for comparing a trade. */
+  drafted: ReadonlyMap<string, DraftPlayer>
   /** Changes whenever the market changes on the server. */
   tick: number
 }) {
@@ -114,6 +117,7 @@ export function MarketView(props: {
             teams={props.teams}
             mine={mine}
             byId={byId}
+            drafted={props.drafted}
             rosters={rosters}
             trades={loaded.trades}
             teamName={teamName}
@@ -426,6 +430,7 @@ function Trades(props: {
   teams: DraftTeam[]
   mine?: DraftTeam
   byId: ReadonlyMap<string, PoolPlayer>
+  drafted: ReadonlyMap<string, DraftPlayer>
   rosters: RosterEntry[]
   trades: RoomTrade[]
   teamName: (slot: number) => string
@@ -433,6 +438,11 @@ function Trades(props: {
 }) {
   const { room, mine, byId, trades, teamName } = props
   const [busy, setBusy] = useState(false)
+  const [comparing, setComparing] = useState<{
+    partner: number
+    receive: string[]
+    give: string[]
+  }>()
   if (!mine) return <p className="text-sm text-muted-foreground">Só quem tem time troca.</p>
   const open = tradesOpen(room)
   const names = (ids: string[]) => ids.map((id) => label(byId.get(id))).join(', ')
@@ -485,6 +495,16 @@ function Trades(props: {
                 >
                   Recusar
                 </Button>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="ml-auto"
+                  onClick={() =>
+                    setComparing({ partner: t.fromSlot, receive: t.give, give: t.take })
+                  }
+                >
+                  Comparar
+                </Button>
               </div>
             </div>
           ))}
@@ -501,6 +521,13 @@ function Trades(props: {
               <p className="min-w-0 flex-1">
                 Para <strong>{teamName(t.toSlot)}</strong>: {names(t.give)} por {names(t.take)}.
               </p>
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={() => setComparing({ partner: t.toSlot, receive: t.take, give: t.give })}
+              >
+                Comparar
+              </Button>
               <Button
                 size="sm"
                 variant="ghost"
@@ -527,6 +554,19 @@ function Trades(props: {
           onPropose={(to, give, take) =>
             run(() => proposeTrade(room.id, to, give, take), 'Proposta enviada.')
           }
+          onCompare={(partner, give, take) => setComparing({ partner, receive: take, give })}
+        />
+      )}
+      {comparing && (
+        <TradeCompare
+          room={room}
+          mine={mine.slot}
+          partner={comparing.partner}
+          partnerName={teamName(comparing.partner)}
+          receive={comparing.receive}
+          give={comparing.give}
+          drafted={props.drafted}
+          onClose={() => setComparing(undefined)}
         />
       )}
     </div>
@@ -541,6 +581,7 @@ function TradeForm(props: {
   rosters: RosterEntry[]
   busy: boolean
   onPropose: (to: number, give: string[], take: string[]) => Promise<void>
+  onCompare: (to: number, give: string[], take: string[]) => void
 }) {
   const partners = props.teams.filter((t) => !t.robot && t.userId && t.slot !== props.mine.slot)
   const [to, setTo] = useState<number | undefined>(partners[0]?.slot)
@@ -605,6 +646,13 @@ function TradeForm(props: {
           }}
         >
           Propor troca
+        </Button>
+        <Button
+          variant="outline"
+          disabled={!ready}
+          onClick={() => props.onCompare(to!, give, take)}
+        >
+          Comparar
         </Button>
         <p className="text-xs text-muted-foreground">
           De 1 a {max} jogadores de cada lado, o mesmo número dos dois, e cada elenco com{' '}

@@ -390,6 +390,7 @@ export function LeagueView(props: {
         mine={mine}
         pool={loaded.pool}
         rosters={loaded.rosters}
+        drafted={byId}
         tick={marketTick}
       />
     ) : (
