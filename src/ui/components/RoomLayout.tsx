@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { ArrowLeftIcon, BookOpenIcon, MenuIcon } from 'lucide-react'
+import { ArrowLeftIcon, MenuIcon } from 'lucide-react'
 import { Link, NavLink } from 'react-router'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -150,12 +150,6 @@ function Sidebar(props: {
       <Separator />
       <div className="mt-auto flex flex-col gap-1">
         <ThemeToggle withLabel />
-        <Button asChild variant="ghost" className="justify-start">
-          <Link to="/aprenda/draft" onClick={props.onNavigate}>
-            <BookOpenIcon />
-            Aprenda
-          </Link>
-        </Button>
         <Button asChild variant="ghost" className="justify-start">
           <Link to="/salas" onClick={props.onNavigate}>
             <ArrowLeftIcon />

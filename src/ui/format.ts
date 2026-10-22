@@ -382,3 +382,10 @@ export const tenths = new Intl.NumberFormat('pt-BR', {
 /** "Fulano (suspenso)" or "Fulano (lesionado)", for a player out of the next match. */
 export const absentName = (game: GameState, playerId: string) =>
   `${game.world.players[playerId].name} (${game.season.suspensions[playerId] ? 'suspenso' : 'lesionado'})`
+
+/** "a, b e c", or "a, b ou c". */
+export function listText(items: readonly (string | number)[], and = 'e'): string {
+  const words = items.map(String)
+  if (words.length <= 1) return words.join('')
+  return `${words.slice(0, -1).join(', ')} ${and} ${words.at(-1)}`
+}

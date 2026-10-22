@@ -18,7 +18,6 @@ import {
 } from '../../../engine/progression/training.ts'
 import { useGame, useGameStore } from '../../../store/game.ts'
 import { Choices } from '../../components/Choices.tsx'
-import { LearnLink } from '../../components/LearnLink.tsx'
 import { INTENSITY_NAMES, SQUAD_FOCUS_NAMES } from '../../format.ts'
 
 const SQUAD_FOCUSES = Object.keys(SQUAD_FOCUS_NAMES) as SquadFocus[]
@@ -49,7 +48,6 @@ export function TrainingPanel(props: { onPickOneByOne: () => void }) {
     <Card className="gap-3">
       <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2">
         <CardTitle>Treino</CardTitle>
-        <LearnLink tab="carreira" section="treino" />
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
