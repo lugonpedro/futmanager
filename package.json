@@ -14,6 +14,7 @@
     "preview": "vite preview",
     "balance": "node --experimental-strip-types --no-warnings scripts/balance.ts",
     "pack:performance": "node --experimental-strip-types --no-warnings scripts/pack-performance.ts",
+    "pack:fetch-champions": "node --experimental-strip-types --no-warnings scripts/fetch-champions.ts",
     "room": "node --experimental-strip-types --no-warnings scripts/room.ts",
     "learn:shots": "npm run build && node --experimental-strip-types --no-warnings scripts/learn-shots.ts"
   },
