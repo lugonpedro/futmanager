@@ -12,7 +12,7 @@ export const LIVE = {
   /** The shortest play, as the "Normal" speed of the replays. */
   unitMs: PLAY_SPEEDS.Normal,
   /** From the round being played to the kick-off, for the pages to load it. */
-  leadMs: 5_000,
+  leadMs: 3_000,
   /** The break after the 45th minute. */
   halftimeMs: 8_000,
 }
