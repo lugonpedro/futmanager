@@ -21,7 +21,7 @@ const TIER_CLASSES: Record<CardTier, string> = {
   prime: 'from-violet-950 via-purple-600 to-violet-950 text-violet-50',
 }
 
-/** Initials for the portrait spot: we have no photos, and never use real ones. */
+/** Initials for the portrait spot when the player has no club to show the crest of. */
 const initials = (name: string) =>
   name
     .split(' ')
@@ -43,7 +43,7 @@ export function Stars(props: { value: number; className?: string }) {
 
 /**
  * A player's card, upright: overall and position in the corner, the club
- * crest, the name, six face numbers in two columns, feet and styles. The
+ * crest in the portrait spot (initials for a free agent), the name, six face numbers in two columns, feet and styles. The
  * colour follows the overall band, or marks the round's best XI and the
  * player of the season. Without a game, `club` gives the crest.
  */
@@ -76,11 +76,14 @@ export function PlayerCard(props: {
         <div className="flex flex-col items-center leading-none">
           <span className="text-4xl font-black tabular-nums">{player.overall}</span>
           <span className="text-sm font-bold">{player.position}</span>
-          {club && <ClubCrest club={club} className="mt-1 size-7" />}
         </div>
-        <div className="mt-1 flex size-20 items-center justify-center rounded-full bg-current/10 text-2xl font-black tracking-tight">
-          <span className="opacity-80">{initials(player.name)}</span>
-        </div>
+        {club ? (
+          <ClubCrest club={club} className="mt-1 h-20 w-[4.2rem] drop-shadow-md" />
+        ) : (
+          <div className="mt-1 flex size-20 items-center justify-center rounded-full bg-current/10 text-2xl font-black tracking-tight">
+            <span className="opacity-80">{initials(player.name)}</span>
+          </div>
+        )}
       </div>
       <figcaption className="mt-1 w-full truncate border-b border-current/30 pb-1 text-center text-base font-extrabold uppercase">
         {player.name}
