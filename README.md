@@ -4,12 +4,11 @@ Jogo de gerenciamento de futebol no browser, inspirado no Brasfoot. Nome provis�
 
 ## Documentação
 
-- [Plano do MVP](docs/01-plano-mvp.md): escopo, stack, estrutura e fases
-- [Plano pós-MVP](docs/02-plano-pos-mvp.md): fases 8 em diante (menus, campo 2D, calendário, cartas, editor, contas, ligas)
-- [Melhorias antes das ligas](docs/03-melhorias.md) e [tela de partida](docs/04-partida.md)
-- [Jogo online](docs/05-online.md), [página Aprenda](docs/06-aprenda.md), [melhorias da carreira](docs/07-melhorias-carreira.md), [login por código](docs/08-login-por-codigo.md) e [responsividade](docs/09-responsividade.md)
-- [Novo plano de melhorias](docs/12-melhorias.md): o que já foi feito dos planos antigos e o que vem agora
-- [Pesquisa](docs/00-pesquisa.md): features do Brasfoot, escolha de stack e monetização
+- [O jogo hoje](docs/18-o-jogo-hoje.md): o que a Carreira, o Draft com amigos e a plataforma têm agora
+- [Ideias para o futuro](docs/19-ideias.md): o que ainda não foi feito, o que está em andamento e o que já foi descartado
+- [Operação do servidor](docs/20-operacao.md): Supabase, login por código, Mercado Pago, avisos e domínio
+
+Os planos de cada etapa (00 a 15) saíram da pasta e continuam no histórico do git.
 
 ## Rodando
 
@@ -66,7 +65,7 @@ Para montar o servidor:
 
 1. Crie um projeto no Supabase e rode `supabase/migrations/*.sql` no SQL Editor (ou `npx supabase link` e `npx supabase db push`).
 2. Em Authentication > URL Configuration, use o endereço do jogo como Site URL e acrescente `https://<seu-dominio>/conta` (e as prévias da Vercel, se quiser) em Redirect URLs.
-3. O login é por um código de 6 dígitos no e-mail: os modelos "Magic Link" e "Confirm signup" em Authentication > Emails precisam mostrar `{{ .Token }}`. O passo a passo está em [`docs/08-login-por-codigo.md`](docs/08-login-por-codigo.md).
+3. O login é por um código de 6 dígitos no e-mail: os modelos "Magic Link" e "Confirm signup" em Authentication > Emails precisam mostrar `{{ .Token }}`. O passo a passo está em [`docs/20-operacao.md`](docs/20-operacao.md#login-por-código).
 
 Para testar no próprio computador, `npx supabase start` sobe tudo em Docker; os e-mails com o código aparecem no Mailpit em `http://127.0.0.1:54324`.
 
