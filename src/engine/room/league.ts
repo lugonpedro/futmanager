@@ -110,9 +110,11 @@ export function startLeague(state: RoomState): RoomState {
     createRng(mixSeed(state.seed, 'calendario')),
     roundDates(state.today, 2 * half),
   )
-  // A third leg plays the first half again; the ids and dates follow on.
-  const legs = state.options.legs === 3 ? [...schedule, ...schedule.slice(0, half)] : schedule
-  const rounds = legs.slice(0, state.options.legs === 1 ? half : legs.length)
+  // Past two legs the schedule starts over, home and away as in the first; the ids and dates follow on.
+  const rounds = Array.from(
+    { length: state.options.legs * half },
+    (_, r) => schedule[r % schedule.length],
+  )
   const dates = roundDates(state.today, rounds.length)
   const fixtures = rounds.map((round, r) =>
     round.map((f, i) => ({

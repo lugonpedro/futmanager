@@ -189,6 +189,11 @@ describe('league', () => {
     const three = league({ legs: 3 })
     expect(three.fixtures).toHaveLength(21)
     expect(new Set(three.fixtures.flat().map((f) => f.id)).size).toBe(84)
+    const four = league({ legs: 4 })
+    expect(four.fixtures).toHaveLength(28)
+    const pairs = (round: number) => four.fixtures[round].map((f) => [f.homeId, f.awayId])
+    expect(pairs(14)).toEqual(pairs(0))
+    expect(new Set(four.fixtures.flat().map((f) => f.id)).size).toBe(112)
   })
 
   it('plays a whole league the same way from the same seeds', () => {

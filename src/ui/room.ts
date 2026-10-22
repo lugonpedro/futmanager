@@ -34,7 +34,8 @@ export const DRAFT_ORDER_HINTS: Record<DraftOrder, string> = {
 export const LEGS_LABELS: Record<RoomOptions['legs'], string> = {
   1: 'Só ida',
   2: 'Ida e volta',
-  3: 'Dois returnos',
+  3: 'Três turnos',
+  4: 'Quatro turnos',
 }
 
 export const INJURY_LABELS: Record<InjuryRule, string> = {

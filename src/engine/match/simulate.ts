@@ -35,13 +35,15 @@ export const MAX_SUBSTITUTIONS = 5
  * produce: about 2.5 goals a game and the home side winning about 45%.
  */
 export const BALANCE = {
-  /** Points added to every sector of the home side. */
-  homeAdvantage: 9,
+  /** Points added to every sector of the home side: worth about 45% of home wins. */
+  homeAdvantage: 5.5,
   /**
    * Points of difference between two sectors that make one e times "better" than
    * the other. Using differences, not ratios, keeps Série B as balanced as Série A.
+   * At 70 a side 30 points better wins about 85% of the time, and 10 points better
+   * about 55% (docs/17-balanceamento-partidas.md).
    */
-  strengthScale: 115,
+  strengthScale: 70,
   /** How sharply a midfield edge turns into possession: share = edge^k / (edge^k + 1). */
   possessionPower: 1,
   /** Chance per minute that the side in possession creates a shot, at equal strength. */
@@ -51,7 +53,7 @@ export const BALANCE = {
   qualityPower: 0.3,
   onTarget: 0.4,
   /** Chance that a shot on target beats the keeper, at equal strength. */
-  conversion: 0.27,
+  conversion: 0.26,
   yellowPerMinute: 0.019,
   redPerMinute: 0.0003,
   injuryPerMinute: 0.0012,

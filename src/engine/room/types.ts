@@ -25,7 +25,7 @@ export type RoomOptions = {
   /** Picks after the 11th are made automatically, for a quicker draft. */
   autoReserves: boolean
   /** 1 only the first half, 2 home and away, 3 a third leg on top (no longer offered). */
-  legs: 1 | 2 | 3
+  legs: 1 | 2 | 3 | 4
   injuries: InjuryRule
   trades: TradeRule
 }
