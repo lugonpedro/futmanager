@@ -16,6 +16,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const CHAMPIONS = 42
+/** FotMob keeps the qualifying rounds, play-offs included, in a competition of their own. */
+const QUALIFICATION = 10611
 const STATS = ['rating', 'mins_played']
 /** The league phase starts in mid-September; the qualifying play-offs end in late August. */
 const LEAGUE_PHASE_START = '2026-09-10'
@@ -99,8 +101,9 @@ for (const block of champions.table ?? []) {
   for (const table of tables) for (const row of table?.all ?? []) tableIds.add(Number(row.id))
 }
 // Knocked out in the qualifying play-offs: played in late August, not in the table.
+const qualification = await leaguePage(QUALIFICATION)
 const knockedOut = new Set<number>()
-for (const match of champions.fixtures?.allMatches ?? []) {
+for (const match of qualification?.fixtures?.allMatches ?? []) {
   const time = match.status?.utcTime ?? ''
   if (time < PLAYOFFS_START || time >= LEAGUE_PHASE_START) continue
   for (const id of [match.home.id, match.away.id].map(Number)) {

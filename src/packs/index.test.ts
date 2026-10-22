@@ -4,7 +4,7 @@ import { applyPack, packSlots } from '../engine/pack/pack.ts'
 import { newGame } from '../engine/season/season.ts'
 import { MARKET } from '../engine/transfer/market.ts'
 import { BUILT_IN_PACKS } from './index.ts'
-import { overallFromRating, withOveralls } from './ratings.ts'
+import { CHAMPIONS_LINE, overallFromRating, withOveralls } from './ratings.ts'
 import raw from './brasileirao-2026.json?raw'
 
 describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
@@ -67,12 +67,47 @@ describe('the Brasileirão 2026 ratings', () => {
   })
 })
 
+describe('the Champions League 2026/27 ratings', () => {
+  const average = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length
+
+  it('keep each division as strong as a generated one', async () => {
+    const pack = await BUILT_IN_PACKS.find((p) => p.id === 'champions-2026')!.load()
+    const { world } = applyPack(generateWorld(3), pack)
+    const strength = (division: number) =>
+      average(
+        Object.values(world.clubs)
+          .filter((c) => c.division === division)
+          .flatMap((c) => c.playerIds.map((id) => world.players[id].overall)),
+      )
+    expect(strength(1)).toBeGreaterThan(62)
+    expect(strength(1)).toBeLessThan(72)
+    expect(strength(2)).toBeGreaterThan(39)
+    expect(strength(2)).toBeLessThan(55)
+  })
+
+  it('put the strongest clubs first', async () => {
+    const pack = await BUILT_IN_PACKS.find((p) => p.id === 'champions-2026')!.load()
+    const best = (club: (typeof pack.clubs)[number]) =>
+      average(
+        club
+          .players!.map((p) => p.overall!)
+          .sort((a, b) => b - a)
+          .slice(0, 16),
+      )
+    const first = pack.clubs.slice(0, 20).map(best)
+    const second = pack.clubs.slice(20).map(best)
+    expect(Math.min(...first)).toBeGreaterThanOrEqual(Math.max(...second))
+  })
+})
+
 describe('pack ratings', () => {
   it('turn the EA FC-like scale into overalls on one fixed line', () => {
     expect(overallFromRating(83)).toBe(92)
     expect(overallFromRating(70)).toBe(66)
     expect(overallFromRating(55)).toBe(36)
     expect(overallFromRating(95)).toBe(99)
+    expect(overallFromRating(90, CHAMPIONS_LINE)).toBe(88)
+    expect(overallFromRating(80, CHAMPIONS_LINE)).toBe(63)
   })
 
   it('give every player of the Brasileirão a rating and keep overalls already set', () => {

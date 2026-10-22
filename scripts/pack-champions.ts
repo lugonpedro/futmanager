@@ -42,12 +42,15 @@ const FOTMOB_WEIGHT = 0.6
 const FOTMOB_FULL_MINUTES = 1800
 const LAST_SEASON_WEIGHT = 0.5
 const MIN_GROUP = 5
+/** How far under his peers a player without a market value starts. */
+const VALUELESS_GAP = 3
 const MAX_STEP = 7
 const MIN_RATING = 50
 const MAX_RATING = 90
 
 type Position = 'G' | 'Z' | 'L' | 'M' | 'A'
-type PackPlayer = { nome: string; posicao: Position; idade?: number; nota: number }
+/** No name keeps the generated player, at this position and rating. */
+type PackPlayer = { nome?: string; posicao: Position; idade?: number; nota: number }
 type PackClub = {
   nome: string
   sigla: string
@@ -60,6 +63,7 @@ type FotmobMember = {
   id: number
   name: string
   age?: number
+  positionIds?: string | null
   positionIdsDesc?: string | null
   transferValue?: number | null
 }
@@ -72,7 +76,8 @@ type FotmobTeam = {
     primaryLeagueId?: number
     sportsTeamJSONLD?: { location?: { address?: { addressLocality?: string } } }
   }
-  squad: { squad: { title: string; members: FotmobMember[] }[] }
+  /** Null for the few clubs FotMob has no squad page for. */
+  squad: { squad: { title: string; members: FotmobMember[] }[] | null }
 }
 type FotmobLeague = {
   table?: {
@@ -83,7 +88,16 @@ type FotmobLeague = {
   }[]
 }
 type FotmobRank = {
-  TopLists: { StatList: { ParticiantId: number; StatValue: number; MinutesPlayed?: number }[] }[]
+  TopLists: {
+    StatList: {
+      ParticiantId: number
+      ParticipantName: string
+      TeamId: number
+      StatValue: number
+      MinutesPlayed?: number
+      Positions?: number[]
+    }[]
+  }[]
 }
 
 const args = process.argv.slice(2)
@@ -104,7 +118,66 @@ const clamp = (x: number) => Math.max(MIN_RATING, Math.min(MAX_RATING, Math.roun
  * Club names as Brazilians say them, and the short names and colours FotMob
  * doesn't give. Keyed by FotMob team id.
  */
-const CLUBS: Record<number, Partial<Omit<PackClub, 'jogadores'>>> = {}
+const CLUBS: Record<number, Partial<Omit<PackClub, 'jogadores'>>> = {
+  8456: { nome: 'Manchester City', sigla: 'MCI', cidade: 'Manchester' },
+  9825: { sigla: 'ARS', cidade: 'Londres' },
+  8633: { sigla: 'RMA', cores: ['#ffffff', '#085098'] },
+  8634: { sigla: 'BAR', cores: ['#a50044', '#004d98'] },
+  9823: { nome: 'Bayern de Munique', sigla: 'BAY', cidade: 'Munique' },
+  9847: {
+    nome: 'Paris Saint-Germain',
+    sigla: 'PSG',
+    cidade: 'Paris',
+    cores: ['#004170', '#da291c'],
+  },
+  8650: { sigla: 'LIV', cores: ['#c8102e', '#ffffff'] },
+  10260: {
+    nome: 'Manchester United',
+    sigla: 'MUN',
+    cidade: 'Manchester',
+    cores: ['#da291c', '#000000'],
+  },
+  8636: { nome: 'Inter de Milão', sigla: 'INT', cidade: 'Milão', cores: ['#010e80', '#000000'] },
+  9906: { nome: 'Atlético de Madrid', sigla: 'ATM', cores: ['#cb3524', '#ffffff'] },
+  10252: { sigla: 'AVL', cores: ['#670e36', '#95bfe5'] },
+  10171: { sigla: 'COM' },
+  9789: { nome: 'Borussia Dortmund', sigla: 'BVB', cores: ['#fde100', '#000000'] },
+  8686: { sigla: 'ROM', cores: ['#8e1f2f', '#f0bc42'] },
+  178475: { sigla: 'RBL' },
+  9875: { sigla: 'NAP', cidade: 'Nápoles' },
+  10269: { nome: 'Stuttgart', sigla: 'VFB' },
+  8637: { sigla: 'GAL', cidade: 'Istambul', cores: ['#a90432', '#fdb912'] },
+  9768: { nome: 'Sporting', sigla: 'SCP', cidade: 'Lisboa', cores: ['#008057', '#ffffff'] },
+  9773: { nome: 'Porto', sigla: 'POR', cores: ['#003b8e', '#ffffff'] },
+  10205: { sigla: 'VIL', cores: ['#ffe667', '#005187'] },
+  8603: { nome: 'Betis', sigla: 'BET', cidade: 'Sevilha' },
+  8695: { sigla: 'FEN', cidade: 'Istambul', cores: ['#002d72', '#fff200'] },
+  9748: { sigla: 'OL', cidade: 'Lyon', cores: ['#ffffff', '#0160a0'] },
+  8640: { nome: 'PSV', sigla: 'PSV' },
+  8639: { sigla: 'LOSC', cidade: 'Lille', cores: ['#e01d13', '#20325f'] },
+  8588: { sigla: 'RCL', cores: ['#fdd100', '#e30613'] },
+  10235: { sigla: 'FEY', cidade: 'Roterdã', cores: ['#d8232a', '#000000'] },
+  8342: { nome: 'Club Brugge', sigla: 'BRU', cidade: 'Bruges', cores: ['#0572ff', '#000000'] },
+  9925: { sigla: 'CEL', cores: ['#007838', '#ffffff'] },
+  7787: { nome: 'Slavia Praga', sigla: 'SLA', cidade: 'Praga', cores: ['#d82333', '#ffffff'] },
+  8563: { nome: 'AEK Atenas', sigla: 'AEK', cidade: 'Atenas', cores: ['#ffd200', '#000000'] },
+  8464: { nome: 'NEC', sigla: 'NEC', cores: ['#ed1c24', '#00a650'] },
+  8402: { sigla: 'BOD', cores: ['#ffde00', '#000000'] },
+  951893: { nome: 'Sabah', sigla: 'SAB', cidade: 'Baku', cores: ['#101010', '#ffffff'] },
+  9728: {
+    nome: 'Shakhtar Donetsk',
+    sigla: 'SHK',
+    cidade: 'Donetsk',
+    cores: ['#f0602b', '#000000'],
+  },
+  10156: { sigla: 'DIN', cores: ['#183888', '#ffffff'] },
+  8478: { sigla: 'VIK', cores: ['#132847', '#ffffff'] },
+  9977: { sigla: 'LASK', cores: ['#101010', '#ffffff'] },
+  6019: { nome: 'Slovan Bratislava', sigla: 'SLO', cores: ['#43b1e6', '#ffffff'] },
+  9754: { nome: 'Hapoel Beer Sheva', sigla: 'HBS', cidade: 'Berseba' },
+  8632: { nome: 'Levski Sofia', sigla: 'LEV', cidade: 'Sófia' },
+  4622: { nome: 'Celje', sigla: 'CLJ' },
+}
 
 // --- Sources ---------------------------------------------------------------
 
@@ -115,6 +188,8 @@ const CLUBS: Record<number, Partial<Omit<PackClub, 'jogadores'>>> = {}
 type Seasonal = { source: string; recency: number }
 const ratings = new Map<number, (Seasonal & { value: number; minutes: number })[]>()
 const minutes = new Map<number, Map<string, number>>()
+/** Who each ranking lists, and at which club, for clubs without a squad page. */
+const listed = new Map<number, { name: string; teamId: number; positions?: number[] }>()
 for (const file of files) {
   const match = /^fotmob-(\d+(?:-anterior)?)-(rating|mins_played)\.json$/.exec(file)
   if (!match) continue
@@ -122,6 +197,7 @@ for (const file of files) {
   const recency = source.endsWith('-anterior') ? LAST_SEASON_WEIGHT : 1
   for (const row of readJson<FotmobRank>(file).TopLists[0]?.StatList ?? []) {
     const id = row.ParticiantId
+    listed.set(id, { name: row.ParticipantName, teamId: row.TeamId, positions: row.Positions })
     const played = stat === 'rating' ? (row.MinutesPlayed ?? 0) : row.StatValue
     const own = minutes.get(id) ?? new Map<string, number>()
     own.set(source, Math.max(own.get(source) ?? 0, played))
@@ -203,7 +279,25 @@ const MIN_KEEPERS = 2
 type Member = FotmobMember & { group: string; position: Position }
 type Row = { member: Member; player: PackPlayer; base: number; target?: number; weight: number }
 
+/** FotMob's numeric position ids, read off the squad pages that carry both. */
+const POSITION_NAMES = new Map<string, string>()
+for (const team of teams.values()) {
+  for (const m of (team.squad.squad ?? []).flatMap((g) => g.members)) {
+    const names = m.positionIdsDesc?.split(',') ?? []
+    m.positionIds?.split(',').forEach((id, i) => names[i] && POSITION_NAMES.set(id, names[i]))
+  }
+}
+
 const membersOf = (team: FotmobTeam): Member[] => {
+  // No squad page: whoever the rankings list at the club, without age or value.
+  if (!team.squad.squad) {
+    return [...listed.entries()]
+      .filter(([, l]) => l.teamId === team.details.id)
+      .map(([id, l]) => {
+        const name = POSITION_NAMES.get(String(l.positions?.[0] ?? ''))
+        return { id, name: l.name, group: 'unknown', position: FOTMOB_POSITION[name ?? ''] ?? 'M' }
+      })
+  }
   const seen = new Set<number>()
   return team.squad.squad
     .filter((g) => g.title !== 'coach')
@@ -273,6 +367,7 @@ function fromValue(value: number, age: number | undefined, position: Position) {
   )
 }
 
+const bestSixteen = (notas: number[]) => [...notas].sort((a, b) => b - a).slice(0, 16)
 type Club = { team: FotmobTeam; rows: Row[]; strength: number }
 const allClubs: Club[] = [...teams.values()].map((team) => {
   const rows: Row[] = pickSquad(team).map(({ member, position }) => {
@@ -293,15 +388,28 @@ const allClubs: Club[] = [...teams.values()].map((team) => {
   })
   // No market value: a little under the squad's level at his position.
   const valued = rows.filter((r) => !Number.isNaN(r.base))
-  for (const row of rows.filter((r) => Number.isNaN(r.base))) {
+  for (const row of valued.length ? rows.filter((r) => Number.isNaN(r.base)) : []) {
     const peers = valued.filter((r) => r.player.posicao === row.player.posicao)
-    row.base = average((peers.length ? peers : valued).map((r) => r.base)) - 3
-    if (Number.isNaN(row.base)) row.base = MIN_RATING
+    row.base = average((peers.length ? peers : valued).map((r) => r.base)) - VALUELESS_GAP
   }
-  for (const row of rows) row.player.nota = clamp(row.base)
   return { team, rows, strength: 0 }
 })
+/**
+ * A club with no market value at all (no squad page) has only the regulars
+ * the rankings list, who start at the level of the best 16 of the weakest
+ * third of the league phase, and the Champions League ratings
+ * take it from there.
+ */
+const levels = allClubs
+  .filter((c) => leaguePhase.has(c.team.details.id) && c.rows.some((r) => !Number.isNaN(r.base)))
+  .map((c) => average(bestSixteen(c.rows.map((r) => r.base))))
+  .sort((a, b) => a - b)
+const weakLevel = average(levels.slice(0, Math.ceil(levels.length / 3)))
 const rows = allClubs.flatMap((c) => c.rows)
+for (const row of rows) {
+  if (Number.isNaN(row.base)) row.base = weakLevel - VALUELESS_GAP
+  row.player.nota = clamp(row.base)
+}
 
 /**
  * The performance target, as in the Brasileirão: in each league, season and
@@ -366,8 +474,7 @@ for (const club of allClubs) {
 
 /** A club's strength: the average of its best 16. */
 for (const club of allClubs) {
-  const best = club.rows.map((r) => r.player.nota).sort((a, b) => b - a)
-  club.strength = average(best.slice(0, 16))
+  club.strength = average(bestSixteen(club.rows.map((r) => r.player.nota)))
 }
 const byStrength = (a: Club, b: Club) => b.strength - a.strength
 const inLeague = allClubs.filter((c) => leaguePhase.has(c.team.details.id))
@@ -390,6 +497,20 @@ const shortName = (name: string) =>
     .filter((w) => w.length > 2 && !['FC', 'CF', 'AFC', 'SC', 'AC', 'CLUB'].includes(w))[0]
     ?.slice(0, 3) ?? 'CLB'
 
+/**
+ * The game wants two keepers. FotMob lists one at a few clubs: the second is
+ * left to the generated one, a little under the first.
+ */
+const missingKeepers = (squad: Row[]): PackPlayer[] => {
+  const keepers = squad.filter((r) => r.player.posicao === 'G')
+  const level = Math.min(...keepers.map((r) => r.player.nota), MAX_RATING)
+  return Array.from({ length: Math.max(0, MIN_KEEPERS - keepers.length) }, () => ({
+    posicao: 'G',
+    nota: clamp(level - BENCH_GAP),
+  }))
+}
+const BENCH_GAP = 6
+
 const packClubs: PackClub[] = chosen.map(({ team, rows: squad }) => {
   const { details } = team
   const override = CLUBS[details.id] ?? {}
@@ -401,12 +522,10 @@ const packClubs: PackClub[] = chosen.map(({ team, rows: squad }) => {
     sigla: override.sigla ?? shortName(nome),
     ...((override.cidade ?? city) ? { cidade: override.cidade ?? city } : {}),
     cores: override.cores ?? [color.toLowerCase(), contrast(color)],
-    jogadores: squad
-      .map((r) => r.player)
-      .sort(
-        (a, b) =>
-          POSITION_ORDER.indexOf(a.posicao) - POSITION_ORDER.indexOf(b.posicao) || b.nota - a.nota,
-      ),
+    jogadores: [...squad.map((r) => r.player), ...missingKeepers(squad)].sort(
+      (a, b) =>
+        POSITION_ORDER.indexOf(a.posicao) - POSITION_ORDER.indexOf(b.posicao) || b.nota - a.nota,
+    ),
   }
 })
 
@@ -475,7 +594,7 @@ if (write) {
   // Same layout as the Brasileirão file: one player per line.
   const text = JSON.stringify(pack, null, 2)
     .replace(/"cores": \[\s*("[^"]*"),\s*("[^"]*")\s*\]/g, '"cores": [$1, $2]')
-    .replace(/\{\s*("nome": [^{}[\]]*?"nota": \d+)\s*\}/g, (_, body: string) => {
+    .replace(/\{\s*("(?:nome|posicao)": [^{}[\]]*?"nota": \d+)\s*\}/g, (_, body: string) => {
       return `{ ${body.replace(/,\s+/g, ', ')} }`
     })
   writeFileSync(PACK, `${text}\n`)

@@ -1,6 +1,6 @@
 import { parsePackFile } from '../engine/pack/file.ts'
 import type { DataPack } from '../engine/pack/pack.ts'
-import { withOveralls } from './ratings.ts'
+import { BRASILEIRAO_LINE, CHAMPIONS_LINE, type RatingLine, withOveralls } from './ratings.ts'
 
 /**
  * Packs that come with the game, kept apart from the engine so a name can be
@@ -15,8 +15,9 @@ export type BuiltInPack = {
 }
 
 /** A pack file whose players carry a rating on the EA FC-like scale (`nota`). */
-const fromRatedFile = (load: () => Promise<{ default: string }>, file: string) => async () =>
-  parsePackFile(JSON.stringify(withOveralls(JSON.parse((await load()).default))), file).pack
+const fromRatedFile =
+  (load: () => Promise<{ default: string }>, file: string, line: RatingLine) => async () =>
+    parsePackFile(JSON.stringify(withOveralls(JSON.parse((await load()).default), line)), file).pack
 
 export const BUILT_IN_PACKS: BuiltInPack[] = [
   {
@@ -24,6 +25,21 @@ export const BUILT_IN_PACKS: BuiltInPack[] = [
     name: 'Brasileirão 2026',
     description:
       'Os clubes das Séries A e B de 2026 e os jogadores dos elencos, com nome, idade, posição e força baseada nas notas do início de 2026.',
-    load: fromRatedFile(() => import('./brasileirao-2026.json?raw'), 'brasileirao-2026.json'),
+    load: fromRatedFile(
+      () => import('./brasileirao-2026.json?raw'),
+      'brasileirao-2026.json',
+      BRASILEIRAO_LINE,
+    ),
+  },
+  {
+    id: 'champions-2026',
+    name: 'Champions League 2026/27',
+    description:
+      'Os 36 clubes da fase de liga e os 4 mais fortes eliminados nos play-offs, com os elencos e a força tirados do FotMob em outubro de 2026. Os 20 mais fortes ficam na primeira divisão.',
+    load: fromRatedFile(
+      () => import('./champions-2026.json?raw'),
+      'champions-2026.json',
+      CHAMPIONS_LINE,
+    ),
   },
 ]
