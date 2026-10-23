@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import type { DraftTeam } from '../../cloud/draft.ts'
+import { serverNow } from '../../cloud/serverClock.ts'
 import type { MatchView } from '../../store/matchView.ts'
 import {
   playMinute,
@@ -47,7 +48,7 @@ export function RoomLiveRound(props: {
 }) {
   const { replays, kickOff, timeline, teamOf, spedAt } = props
   const [states] = useState(() => replays.map(replayMatch))
-  const [elapsed, setElapsed] = useState(() => liveElapsed(kickOff, Date.now(), spedAt))
+  const [elapsed, setElapsed] = useState(() => liveElapsed(kickOff, serverNow(), spedAt))
   const [view, setView] = useState<MatchView>('Só texto')
   const onPitch = view === 'Campo'
   const [chosen, setChosen] = useState(() => {
@@ -62,7 +63,7 @@ export function RoomLiveRound(props: {
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>
     const step = () => {
-      const at = Date.now()
+      const at = serverNow()
       const now = liveElapsed(kickOff, at, spedAt)
       const minutes = minutesAt(timeline, now)
       for (const state of states) while (state.minute < minutes) playMinute(state)
