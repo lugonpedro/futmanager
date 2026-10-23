@@ -20,6 +20,7 @@ import {
   type DraftTeam,
   type LiveClock,
 } from '../../cloud/draft.ts'
+import { serverNow } from '../../cloud/serverClock.ts'
 import type { Room } from '../../cloud/rooms.ts'
 import { FORMATION_LINES } from '../../engine/match/roles.ts'
 import type { Formation, World } from '../../engine/model/types.ts'
@@ -346,7 +347,7 @@ function Clock(props: {
   onTicked: () => Promise<void>
 }) {
   const { room, mine } = props
-  const [now, setNow] = useState(() => Date.now())
+  const [now, setNow] = useState(() => serverNow())
   const ticking = useRef(false)
   const slot = slotOnTheClock(room)
   const team = props.teams.find((t) => t.slot === slot)
@@ -360,7 +361,7 @@ function Clock(props: {
   useYourTurnAlert(myTurn && !mine?.auto)
 
   useEffect(() => {
-    const timer = setInterval(() => setNow(Date.now()), 250)
+    const timer = setInterval(() => setNow(serverNow()), 250)
     return () => clearInterval(timer)
   }, [])
 
@@ -368,7 +369,7 @@ function Clock(props: {
   const { onTicked } = props
   useEffect(() => {
     if (slot === undefined || !deadline) return
-    const due = deadline.getTime() - Date.now()
+    const due = deadline.getTime() - serverNow()
     let retry: ReturnType<typeof setInterval> | undefined
     const tick = () => {
       if (ticking.current) return

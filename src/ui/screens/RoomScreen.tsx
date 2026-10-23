@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { cloudEnabled } from '../../cloud/client.ts'
 import { startDraftNow, watchRoom } from '../../cloud/draft.ts'
+import { syncServerClock } from '../../cloud/serverClock.ts'
 import {
   deleteRoom,
   leaveRoom,
@@ -66,6 +67,8 @@ export function RoomScreen() {
   useEffect(() => {
     if (!cloudEnabled || !ready || !user || !Number.isInteger(id)) return
     reload()
+    // The draft's clock and the live round count by the server's clock.
+    void syncServerClock()
     // Until the room goes live (D3), coming back to the tab is when it catches up.
     const onFocus = () => document.visibilityState === 'visible' && reload()
     document.addEventListener('visibilitychange', onFocus)

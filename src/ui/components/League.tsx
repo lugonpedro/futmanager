@@ -42,6 +42,7 @@ import {
   setRoomReady,
   speedUpRound,
 } from '../../cloud/roomLeague.ts'
+import { serverNow, syncServerClock } from '../../cloud/serverClock.ts'
 import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
@@ -185,14 +186,18 @@ export function LeagueView(props: {
   useEffect(() => {
     if (played === 0 || seenRound(room.id) >= played) return
     let on = true
-    Promise.all([loadPlayedRound(room.id, played), loadPlayedRound(room.id, played - 1)])
+    Promise.all([
+      loadPlayedRound(room.id, played),
+      loadPlayedRound(room.id, played - 1),
+      syncServerClock(),
+    ])
       .then(([now, before]) => {
         if (!on) return
         const timeline = now ? roundTimeline(now.replays) : []
-        // Never further off than the lead: a device clock behind the server's would make the wait long.
-        const kickOff = Math.min(now?.playedAt.getTime() ?? 0, Date.now()) + LIVE.leadMs
-        const spedAt = now?.spedAt && Math.min(now.spedAt.getTime(), Date.now())
-        if (!now || !before || roundOver(timeline, liveElapsed(kickOff, Date.now(), spedAt))) {
+        // By the server's clock; never further off than the lead, should it not have been measured.
+        const kickOff = Math.min(now?.playedAt.getTime() ?? 0, serverNow()) + LIVE.leadMs
+        const spedAt = now?.spedAt && Math.min(now.spedAt.getTime(), serverNow())
+        if (!now || !before || roundOver(timeline, liveElapsed(kickOff, serverNow(), spedAt))) {
           markRoundSeen(room.id, played)
         } else {
           setLive({
@@ -225,7 +230,7 @@ export function LeagueView(props: {
           asked,
           spedAt:
             (now?.round === liveRound ? now.spedAt : undefined) ??
-            (spedAt && Math.min(spedAt.getTime(), Date.now())),
+            (spedAt && Math.min(spedAt.getTime(), serverNow())),
         }))
       })
       .catch(() => undefined)
