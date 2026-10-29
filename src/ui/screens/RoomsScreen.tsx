@@ -16,6 +16,8 @@ import { Pager } from '../components/Pager.tsx'
 import { RoomBasicsFields, RoomPage, Note } from '../components/RoomParts.tsx'
 import {
   checkRoomDraft,
+  DEFAULT_ROOM_PACK,
+  packName,
   readRoomInviteCode,
   STATUS_LABELS,
   type RoomOptionsDraft,
@@ -122,7 +124,7 @@ function RoomList(props: { rooms: Room[] }) {
             <span className="flex min-w-0 flex-1 flex-col">
               <span className="truncate font-medium">{room.name}</span>
               <span className="truncate text-xs text-muted-foreground">
-                {STATUS_LABELS[room.status]}
+                {STATUS_LABELS[room.status]} · {packName(room.pack)}
               </span>
             </span>
             <span className="text-xs text-muted-foreground">
@@ -202,6 +204,7 @@ function NewRoom() {
   const [open, setOpen] = useState(false)
   const [draft, setDraft] = useState<RoomOptionsDraft>(() => ({
     name: '',
+    pack: DEFAULT_ROOM_PACK,
     options: DEFAULT_ROOM_OPTIONS,
   }))
   const [busy, setBusy] = useState(false)
@@ -227,7 +230,7 @@ function NewRoom() {
     }
     setBusy(true)
     try {
-      const id = await createRoom(draft.name, draft.options, team)
+      const id = await createRoom(draft.name, draft.pack, draft.options, team)
       navigate(`/sala/${id}`)
     } catch (error) {
       if (messageOf(error) === PASS_NEEDED) {
@@ -254,8 +257,9 @@ function NewRoom() {
       <CardHeader>
         <CardTitle>Nova sala</CardTitle>
         <CardDescription>
-          Dê um nome e escolha quantos times. O seu time e as outras regras dá para mudar depois, na
-          sala de espera. Depois é só mandar o convite; as vagas que ninguém pegar viram robôs.
+          Dê um nome e escolha os jogadores e quantos times. O seu time e as outras regras dá para
+          mudar depois, na sala de espera. Depois é só mandar o convite; as vagas que ninguém pegar
+          viram robôs.
         </CardDescription>
       </CardHeader>
       <CardContent>

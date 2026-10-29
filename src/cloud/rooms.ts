@@ -229,15 +229,17 @@ export async function loadRoom(
   }
 }
 
-/** Creates a room with the player's team in it; returns its id. */
+/** Creates a room of a pack with the player's team in it; returns its id. */
 export async function createRoom(
   name: string,
+  pack: string,
   options: RoomOptions,
   team: TeamIdentity,
 ): Promise<number> {
   const { data, error } = await client().rpc('create_room', {
     room_name: name,
-    options,
+    // The database reads the pack from the options, next to the rules.
+    options: { ...options, pack },
     draft_at: null,
     ...teamArgs(team),
   })
@@ -245,12 +247,17 @@ export async function createRoom(
   return (data as { room_id: number }[])[0].room_id
 }
 
-/** Changes a waiting room's name and options; only its owner can. */
-export async function updateRoom(id: number, name: string, options: RoomOptions): Promise<void> {
+/** Changes a waiting room's name, pack and options; only its owner can. */
+export async function updateRoom(
+  id: number,
+  name: string,
+  pack: string,
+  options: RoomOptions,
+): Promise<void> {
   const { error } = await client().rpc('update_room', {
     room: id,
     room_name: name,
-    options,
+    options: { ...options, pack },
     draft_at: null,
   })
   if (error) throw roomError(error)

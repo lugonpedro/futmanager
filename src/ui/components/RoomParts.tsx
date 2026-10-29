@@ -14,6 +14,7 @@ import {
   DRAFT_ORDER_LABELS,
   INJURY_LABELS,
   LEGS_LABELS,
+  ROOM_PACKS,
   TRADE_LABELS,
   type RoomOptionsDraft,
 } from '../room.ts'
@@ -159,12 +160,31 @@ export function RoomBasicsFields(props: {
           placeholder="Liga dos amigos"
         />
       </Field>
+      <PackOption value={value.pack} onChange={(pack) => props.onChange({ ...value, pack })} />
       <TeamsOption
         options={value.options}
         people={1}
         onChange={(teams) => props.onChange({ ...value, options: { ...value.options, teams } })}
       />
     </div>
+  )
+}
+
+/** The pack of players the draft deals from, with what it has under the choice. */
+export function PackOption(props: { value: string; onChange: (pack: string) => void }) {
+  return (
+    <Option label="Jogadores" hint={ROOM_PACKS.find((p) => p.id === props.value)?.description}>
+      <Choices
+        ariaLabel="Jogadores"
+        options={offered(
+          ROOM_PACKS.map((p) => p.id),
+          props.value,
+        )}
+        value={props.value}
+        label={(id) => ROOM_PACKS.find((p) => p.id === id)?.name ?? id}
+        onChange={props.onChange}
+      />
+    </Option>
   )
 }
 
