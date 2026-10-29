@@ -3,7 +3,15 @@ import { BUILT_IN_PACKS } from '../../packs/index.ts'
 import { advanceDraft, roomPhase } from './draft.ts'
 import { startDraft } from './start.ts'
 import { checkLineup } from './league.ts'
-import { leagueFromDraft, playSavedRound, roomSummary, slimReplay, teamSheet } from './summary.ts'
+import {
+  leagueFromDraft,
+  playSavedRound,
+  replayMatchesLine,
+  replaysMatchLines,
+  roomSummary,
+  slimReplay,
+  teamSheet,
+} from './summary.ts'
 import { DEFAULT_ROOM_OPTIONS } from './types.ts'
 
 const pack = await BUILT_IN_PACKS[0].load()
@@ -96,6 +104,27 @@ describe('saved lineups', () => {
     expect(sheet.suspended).toEqual({ [banned]: 1 })
     expect(sheet.yellows).toEqual({ [booked]: 2 })
     expect(new Set(sheet.out)).toEqual(new Set([hurt, banned]))
+  })
+
+  it('replays every match of a round as the server recorded it', () => {
+    let state = league
+    for (let seed = 11; roomPhase(state) === 'liga'; seed++) {
+      const played = playSavedRound(state, {}, seed)
+      // As the page gets them: slimmed and through JSON.
+      const replays = JSON.parse(JSON.stringify(played.replays.map(slimReplay)))
+      expect(replaysMatchLines(replays, roomSummary(played.state).last)).toBe(true)
+      state = played.state
+    }
+  })
+
+  it('tells a replay that no longer plays out as recorded', () => {
+    const played = playSavedRound(league, {}, 3)
+    const [line] = roomSummary(played.state).last
+    const replay = played.replays.find((r) => r.input.home.club.id === line.homeId)!
+    expect(replayMatchesLine(replay, line)).toBe(true)
+    const wrong = { ...line, homeGoals: line.homeGoals + 1 }
+    expect(replayMatchesLine(replay, wrong)).toBe(false)
+    expect(replaysMatchLines(played.replays, [wrong])).toBe(false)
   })
 
   it('keeps only the players a replay needs', () => {

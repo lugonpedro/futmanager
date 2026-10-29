@@ -47,7 +47,13 @@ import { loadRosters, type RosterEntry } from '../../cloud/roomMarket.ts'
 import { PASS_NEEDED, type Room } from '../../cloud/rooms.ts'
 import type { MatchReplay as Replay } from '../../engine/match/simulate.ts'
 import type { PoolPlayer } from '../../engine/room/start.ts'
-import type { RoomMatchLine, RoomSummary, TeamSheet } from '../../engine/room/summary.ts'
+import {
+  replayMatchesLine,
+  replaysMatchLines,
+  type RoomMatchLine,
+  type RoomSummary,
+  type TeamSheet,
+} from '../../engine/room/summary.ts'
 import { draftPlayers } from '../draft.ts'
 import {
   LIVE,
@@ -81,6 +87,10 @@ import { RoomTeamSquad } from './RoomTeamSquad.tsx'
 import { Note, TeamCrest } from './RoomParts.tsx'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
+
+/** When the page's engine is not the one that played the round, so its replays would be wrong. */
+const OUTDATED =
+  'Esta versão do jogo está diferente da do servidor, então os jogos não podem ser mostrados. Atualize a página; os resultados abaixo são os oficiais.'
 
 /** The round being shown live, and the table as it stood before it, so nothing gives it away. */
 type Live = {
@@ -197,7 +207,15 @@ export function LeagueView(props: {
         // By the server's clock; never further off than the lead, should it not have been measured.
         const kickOff = Math.min(now?.playedAt.getTime() ?? 0, serverNow()) + LIVE.leadMs
         const spedAt = now?.spedAt && Math.min(now.spedAt.getTime(), serverNow())
-        if (!now || !before || roundOver(timeline, liveElapsed(kickOff, serverNow(), spedAt))) {
+        // A page whose engine differs from the server's would act out other matches.
+        const faithful = !now || replaysMatchLines(now.replays, now.summary.last)
+        if (!faithful) toast.warning(OUTDATED)
+        if (
+          !now ||
+          !before ||
+          !faithful ||
+          roundOver(timeline, liveElapsed(kickOff, serverNow(), spedAt))
+        ) {
           markRoundSeen(room.id, played)
         } else {
           setLive({
@@ -297,6 +315,7 @@ export function LeagueView(props: {
         (r) => r.input.home.club.id === match.homeId && r.input.away.club.id === match.awayId,
       )
       if (!replay) throw new Error('Esse jogo não está guardado.')
+      if (!replayMatchesLine(replay, match)) throw new Error(OUTDATED)
       setWatching({ replay, title: `${room.name} · rodada ${round}` })
       window.scrollTo({ top: 0 })
     } catch (error) {

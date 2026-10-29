@@ -1,6 +1,7 @@
 import { dropUnknownDuties } from '../match/lineup.ts'
-import type { MatchReplay } from '../match/simulate.ts'
+import { simulateMatch, type MatchReplay } from '../match/simulate.ts'
 import type { Lineup, Player } from '../model/types.ts'
+import { createRng } from '../rng.ts'
 import { conditionOn, formOf } from '../season/form.ts'
 import { makePick, roomPhase } from './draft.ts'
 import { primePlayer } from './prime.ts'
@@ -144,6 +145,34 @@ export function slimReplay(replay: MatchReplay): MatchReplay {
   }
   return { ...replay, input: { ...replay.input, players } }
 }
+
+/**
+ * Whether playing the replay again gives the match the server recorded. A
+ * page whose engine differs from the server's (a page open since before a
+ * release, or functions not published again after one) would act out a
+ * different match from the same seed.
+ */
+export function replayMatchesLine(replay: MatchReplay, line: RoomMatchLine): boolean {
+  const { home, away } = replay.input
+  if (home.club.id !== line.homeId || away.club.id !== line.awayId) return false
+  const result = simulateMatch(replay.input, createRng(replay.seed))
+  return result.homeGoals === line.homeGoals && result.awayGoals === line.awayGoals
+}
+
+/** Whether every replay of a round plays out as the server recorded it. */
+export const replaysMatchLines = (
+  replays: readonly MatchReplay[],
+  lines: readonly RoomMatchLine[],
+): boolean =>
+  replays.length === lines.length &&
+  replays.every((replay) =>
+    lines.some(
+      (line) =>
+        line.homeId === replay.input.home.club.id &&
+        line.awayId === replay.input.away.club.id &&
+        replayMatchesLine(replay, line),
+    ),
+  )
 
 export function roomSummary(state: RoomState): RoomSummary {
   const played = state.round - 1
