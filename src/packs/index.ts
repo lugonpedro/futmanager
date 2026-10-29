@@ -1,6 +1,6 @@
 import { parsePackFile } from '../engine/pack/file.ts'
 import type { DataPack } from '../engine/pack/pack.ts'
-import { BRASILEIRAO_LINE, CHAMPIONS_LINE, type RatingLine, withOveralls } from './ratings.ts'
+import { PACK_LINES, type RatingLine, withOveralls } from './ratings.ts'
 
 /**
  * Packs that come with the game, kept apart from the engine so a name can be
@@ -28,7 +28,7 @@ export const BUILT_IN_PACKS: BuiltInPack[] = [
     load: fromRatedFile(
       () => import('./brasileirao-2026.json?raw'),
       'brasileirao-2026.json',
-      BRASILEIRAO_LINE,
+      PACK_LINES['brasileirao-2026'],
     ),
   },
   {
@@ -39,7 +39,7 @@ export const BUILT_IN_PACKS: BuiltInPack[] = [
     load: fromRatedFile(
       () => import('./champions-2026.json?raw'),
       'champions-2026.json',
-      CHAMPIONS_LINE,
+      PACK_LINES['champions-2026'],
     ),
   },
 ]

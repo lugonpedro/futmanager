@@ -4,8 +4,12 @@ import { applyPack, packSlots } from '../engine/pack/pack.ts'
 import { newGame } from '../engine/season/season.ts'
 import { MARKET } from '../engine/transfer/market.ts'
 import { BUILT_IN_PACKS } from './index.ts'
-import { CHAMPIONS_LINE, overallFromRating, withOveralls } from './ratings.ts'
+import { CHAMPIONS_LINE, overallFromRating, PACK_LINES, withOveralls } from './ratings.ts'
+import { parsePackFile } from '../engine/pack/file.ts'
 import raw from './brasileirao-2026.json?raw'
+
+// The files as room-draft imports them, parsed JSON rather than text.
+const PACK_FILES = import.meta.glob<unknown>('./*.json', { eager: true, import: 'default' })
 
 describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
   it('names every club of both divisions and fits their squads', async () => {
@@ -24,6 +28,14 @@ describe.each(BUILT_IN_PACKS)('the $name pack', (built) => {
     expect(report.warnings).toEqual([])
     const names = new Set(pack.clubs.map((c) => c.name))
     expect(names.size).toBe(pack.clubs.length)
+  })
+
+  it('is rated the same by the room-draft function, which reads the file and the line itself', async () => {
+    const file = PACK_FILES[`./${built.id}.json`]
+    const line = PACK_LINES[built.id]
+    expect(line).toBeDefined()
+    const server = parsePackFile(JSON.stringify(withOveralls(file, line)), `${built.id}.json`).pack
+    expect(server).toEqual(await built.load())
   })
 
   it('starts a career with its names', async () => {

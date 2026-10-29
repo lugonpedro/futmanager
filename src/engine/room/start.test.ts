@@ -60,21 +60,26 @@ describe('startDraft', () => {
     expect(done.picks).toHaveLength(8 * DEFAULT_ROOM_OPTIONS.squadSize)
   })
 
-  it('fills the biggest room, 18 squads of 20, with keepers for all and players to spare', () => {
-    const options = { ...DEFAULT_ROOM_OPTIONS, teams: 18, squadSize: 20 as const }
-    const { state, pool } = startDraft(8, pack, [], options)
-    expect(new Set(state.teams.map((t) => t.shortName)).size).toBe(18)
-    expect(state.teams.every((t) => !/^R\d/.test(t.shortName))).toBe(true)
-    const done = advanceDraft(state, { auto: new Set(), queues: {} })
-    expect(done.picks).toHaveLength(18 * 20)
-    const byId = new Map(pool.map((p) => [p.id, p]))
-    for (const squad of Object.values(done.squads)) {
-      expect(squad.filter((id) => byId.get(id)?.position === 'G').length).toBeGreaterThanOrEqual(2)
-    }
-    // The cards still free: the pool less what was picked, never the pack's own free agents.
-    const picked = new Set(done.picks.map((p) => p.playerId))
-    const left = pool.filter((p) => !picked.has(p.id))
-    for (const position of ['G', 'Z', 'L', 'M', 'A'] as const)
-      expect(left.filter((p) => p.position === position).length).toBeGreaterThan(20)
-  })
+  it.each(BUILT_IN_PACKS)(
+    'fills the biggest room of the $name pack, 18 squads of 20, with keepers for all and players to spare',
+    async (built) => {
+      const options = { ...DEFAULT_ROOM_OPTIONS, teams: 18, squadSize: 20 as const }
+      const { state, pool } = startDraft(8, await built.load(), [], options)
+      expect(new Set(state.teams.map((t) => t.shortName)).size).toBe(18)
+      expect(state.teams.every((t) => !/^R\d/.test(t.shortName))).toBe(true)
+      const done = advanceDraft(state, { auto: new Set(), queues: {} })
+      expect(done.picks).toHaveLength(18 * 20)
+      const byId = new Map(pool.map((p) => [p.id, p]))
+      for (const squad of Object.values(done.squads)) {
+        expect(squad.filter((id) => byId.get(id)?.position === 'G').length).toBeGreaterThanOrEqual(
+          2,
+        )
+      }
+      // The cards still free: the pool less what was picked, never the pack's own free agents.
+      const picked = new Set(done.picks.map((p) => p.playerId))
+      const left = pool.filter((p) => !picked.has(p.id))
+      for (const position of ['G', 'Z', 'L', 'M', 'A'] as const)
+        expect(left.filter((p) => p.position === position).length).toBeGreaterThan(20)
+    },
+  )
 })

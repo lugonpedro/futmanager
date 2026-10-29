@@ -6,13 +6,19 @@
 // before anything is built from it, and the order is set only once.
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import brasileirao from '../../../src/packs/brasileirao-2026.json' with { type: 'json' }
+import champions from '../../../src/packs/champions-2026.json' with { type: 'json' }
 import { packJson } from '../../../src/cloud/codec.ts'
 import { parsePackFile } from '../../../src/engine/pack/file.ts'
 import { startDraft } from '../../../src/engine/room/start.ts'
-import { withOveralls } from '../../../src/packs/ratings.ts'
+import { PACK_LINES, withOveralls } from '../../../src/packs/ratings.ts'
 import type { RoomOptions } from '../../../src/engine/room/types.ts'
 
-const PACKS: Record<string, unknown> = { 'brasileirao-2026': brasileirao }
+// The packs a room can choose (rooms_pack_check), rated as the app rates them
+// (BUILT_IN_PACKS in src/packs/index.ts), so a player is the same on both sides.
+const PACKS: Record<string, unknown> = {
+  'brasileirao-2026': brasileirao,
+  'champions-2026': champions,
+}
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -89,7 +95,7 @@ Deno.serve(async (req) => {
       .single()
     if (roomError) throw roomError
     const pack = parsePackFile(
-      JSON.stringify(withOveralls(PACKS[options.pack])),
+      JSON.stringify(withOveralls(PACKS[options.pack], PACK_LINES[options.pack])),
       `${options.pack}.json`,
     ).pack
     const roomOptions: RoomOptions = {

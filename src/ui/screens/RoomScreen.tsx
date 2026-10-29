@@ -27,13 +27,20 @@ import {
 } from '../../cloud/rooms.ts'
 import { checkTeamIdentity, type TeamIdentity } from '../../engine/room/team.ts'
 import { useAccountStore } from '../../store/account.ts'
-import { Note, RoomPage, RoomRulesFields, TeamCrest, TeamFields } from '../components/RoomParts.tsx'
+import {
+  Note,
+  PackOption,
+  RoomPage,
+  RoomRulesFields,
+  TeamCrest,
+  TeamFields,
+} from '../components/RoomParts.tsx'
 import { DeleteRoomButton } from '../components/DeleteRoomButton.tsx'
 import { DraftView } from '../components/Draft.tsx'
 import { LeagueView } from '../components/League.tsx'
 import { RoomNotices } from '../components/RoomNotices.tsx'
 import { confirm } from '../confirm.ts'
-import { describeOptions, roomInviteLink, STATUS_LABELS } from '../room.ts'
+import { describeOptions, packName, roomInviteLink, STATUS_LABELS } from '../room.ts'
 
 const messageOf = (error: unknown) => (error instanceof Error ? error.message : String(error))
 
@@ -345,7 +352,7 @@ function WaitingRoom(props: BodyProps) {
           </CardHeader>
           <CardContent>
             <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-muted-foreground">
-              {describeOptions(room.options).map((line) => (
+              {[packName(room.pack), ...describeOptions(room.options)].map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
@@ -432,15 +439,16 @@ function MyTeam(props: { roomId: number; team: TeamIdentity; onSaved: () => Prom
 
 function EditRoom(props: { room: Room; people: number; onSaved: () => Promise<void> }) {
   const { room } = props
+  const [pack, setPack] = useState(room.pack)
   const [options, setOptions] = useState(room.options)
   const [busy, setBusy] = useState(false)
-  const changed = JSON.stringify(options) !== JSON.stringify(room.options)
+  const changed = pack !== room.pack || JSON.stringify(options) !== JSON.stringify(room.options)
 
   const save = async () => {
     setBusy(true)
     try {
       // The name stays as the room was created.
-      await updateRoom(room.id, room.name, options)
+      await updateRoom(room.id, room.name, pack, options)
       await props.onSaved()
       toast.success('Regras salvas.')
     } catch (error) {
@@ -459,6 +467,7 @@ function EditRoom(props: { room: Room; people: number; onSaved: () => Promise<vo
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
+        <PackOption value={pack} onChange={setPack} />
         <RoomRulesFields value={options} onChange={setOptions} people={props.people} />
         <Button className="self-end" onClick={save} disabled={busy || !changed}>
           Salvar regras

@@ -1,5 +1,6 @@
 import type { RoomStatus } from '../cloud/rooms.ts'
 import type { DraftOrder, InjuryRule, RoomOptions, TradeRule } from '../engine/room/types.ts'
+import { BUILT_IN_PACKS } from '../packs/index.ts'
 
 /** The page a friend opens to join the room. */
 export const roomInviteLink = (origin: string, code: string) => `${origin}/sala/convite/${code}`
@@ -66,9 +67,17 @@ export function describeOptions(options: RoomOptions): string[] {
   ]
 }
 
+/** The packs a room can draft from, the first one by default (rooms_pack_check in the database). */
+export const ROOM_PACKS = BUILT_IN_PACKS
+export const DEFAULT_ROOM_PACK = ROOM_PACKS[0].id
+
+/** A pack's name as the room shows it; its id if the game no longer has it. */
+export const packName = (id: string) => ROOM_PACKS.find((p) => p.id === id)?.name ?? id
+
 /** What the room form holds while the owner fills it in. */
 export type RoomOptionsDraft = {
   name: string
+  pack: string
   options: RoomOptions
 }
 

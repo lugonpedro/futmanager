@@ -20,6 +20,12 @@ export const BRASILEIRAO_LINE: RatingLine = { slope: 2, offset: -74 }
  */
 export const CHAMPIONS_LINE: RatingLine = { slope: 2.5, offset: -137 }
 
+/** Each built-in pack's line, by its id, for the app and the room-draft function alike. */
+export const PACK_LINES: Record<string, RatingLine> = {
+  'brasileirao-2026': BRASILEIRAO_LINE,
+  'champions-2026': CHAMPIONS_LINE,
+}
+
 export const overallFromRating = (rating: number, line = BRASILEIRAO_LINE) =>
   Math.min(99, Math.max(1, Math.round(line.slope * rating + line.offset)))
 
